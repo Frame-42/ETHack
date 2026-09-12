@@ -1,0 +1,997 @@
+ticker,year,scope1_t,n_facilities,match_confidence,revenue_musd,co2_intensity,company,gics_sector,gics_sub_industry
+AAPL,2018,230912.39,1,0.9,265595.0,0.8694154257422015,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+AAPL,2019,275849.27999999997,1,0.9,260174.0,1.0602492178311436,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+AAPL,2020,921353.7680000002,3,0.9666666666666667,274515.0,3.3562966249567423,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+AAPL,2021,941238.326,3,0.9666666666666667,365817.0,2.5729759032521726,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+AAPL,2022,852385.696,3,0.9666666666666667,394328.0,2.1616159542309954,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+AAPL,2023,913076.7819999999,3,0.9666666666666667,383285.0,2.382239800670519,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+ABBV,2018,154504.092,2,1.0,32753.0,4.717250083961774,AbbVie,Health Care,Biotechnology
+ABBV,2019,154325.934,2,1.0,33266.0,4.639149101184393,AbbVie,Health Care,Biotechnology
+ABBV,2020,128416.176,2,1.0,45804.0,2.803601781503799,AbbVie,Health Care,Biotechnology
+ABBV,2021,128081.35,2,1.0,56197.0,2.2791492428421445,AbbVie,Health Care,Biotechnology
+ABBV,2022,106306.57800000001,2,1.0,58054.0,1.8311671547180213,AbbVie,Health Care,Biotechnology
+ABBV,2023,99777.824,2,1.0,54318.0,1.8369200633307559,AbbVie,Health Care,Biotechnology
+ABT,2018,114188.668,4,1.0,30578.0,3.734340637059324,Abbott Laboratories,Health Care,Health Care Equipment
+ABT,2019,113542.67199999999,4,1.0,31904.0,3.558885155466399,Abbott Laboratories,Health Care,Health Care Equipment
+ABT,2020,111891.528,4,1.0,34608.0,3.233111650485437,Abbott Laboratories,Health Care,Health Care Equipment
+ABT,2021,135897.736,5,1.0,43075.0,3.154909715612304,Abbott Laboratories,Health Care,Health Care Equipment
+ABT,2022,138440.828,5,1.0,43653.0,3.1713932146702404,Abbott Laboratories,Health Care,Health Care Equipment
+ABT,2023,134386.892,5,1.0,40109.0,3.3505420728514794,Abbott Laboratories,Health Care,Health Care Equipment
+ADI,2018,47632.628378999994,2,1.0,6224.689,7.652210155238277,Analog Devices,Information Technology,Semiconductors
+ADI,2019,51711.290576,2,1.0,5991.065,8.631402025516332,Analog Devices,Information Technology,Semiconductors
+ADI,2020,45912.222379,2,1.0,5603.056,8.1941394801337,Analog Devices,Information Technology,Semiconductors
+ADI,2021,125755.58882,3,1.0,7318.286,17.183748875078127,Analog Devices,Information Technology,Semiconductors
+ADI,2022,137478.719763,3,1.0,12013.953,11.443254336270503,Analog Devices,Information Technology,Semiconductors
+ADI,2023,117771.628108,3,1.0,12305.539,9.570619223424508,Analog Devices,Information Technology,Semiconductors
+ADM,2018,12341043.802,18,1.0,64341.0,191.8068385943644,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services
+ADM,2019,12388842.804000001,19,1.0,64656.0,191.61164940608762,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services
+ADM,2020,11271635.582,19,1.0,64355.0,175.14778310931553,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services
+ADM,2021,11235810.822,19,1.0,85249.0,131.79991345353025,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services
+ADM,2022,11371895.922,19,1.0,27606.0,411.93566333405784,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services
+ADM,2023,10585367.606,19,1.0,25691.0,412.0262973804056,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services
+AEE,2018,33318758.386386197,19,0.994736842105263,6291.0,5296.257890062979,Ameren,Utilities,Multi-Utilities
+AEE,2019,28426950.2797236,19,0.994736842105263,5910.0,4809.974666619898,Ameren,Utilities,Multi-Utilities
+AEE,2020,29566101.14308,18,0.9972222222222222,5794.0,5102.882489313082,Ameren,Utilities,Multi-Utilities
+AEE,2021,28088791.7104,17,1.0,6394.0,4392.9921348764465,Ameren,Utilities,Multi-Utilities
+AEE,2022,24863597.130400002,17,1.0,7957.0,3124.745146462235,Ameren,Utilities,Multi-Utilities
+AEE,2023,19790344.651600003,17,1.0,7500.0,2638.7126202133336,Ameren,Utilities,Multi-Utilities
+AEP,2018,107235335.92424554,83,0.9993975903614458,16195.7,6621.222665537491,American Electric Power,Utilities,Electric Utilities
+AEP,2019,106085790.01604792,83,0.9993975903614458,15561.4,6817.239452494501,American Electric Power,Utilities,Electric Utilities
+AEP,2020,89954463.66153814,83,0.9993975903614458,14918.5,6029.725754032787,American Electric Power,Utilities,Electric Utilities
+AEP,2021,99991959.14549041,84,0.9994047619047619,16792.0,5954.737919574226,American Electric Power,Utilities,Electric Utilities
+AEP,2022,99044363.573904,83,0.9993975903614458,19391.7,5107.56476089791,American Electric Power,Utilities,Electric Utilities
+AEP,2023,83500920.7208936,79,0.9993670886075949,19456.0,4291.78252060514,American Electric Power,Utilities,Electric Utilities
+AES,2018,21809286.128879998,18,1.0,10736.0,2031.4163681892696,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+AES,2019,19586036.164,17,1.0,10189.0,1922.2726630680147,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+AES,2020,16834812.390159998,18,1.0,9660.0,1742.734201879917,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+AES,2021,19500129.538,18,1.0,11141.0,1750.3033424288662,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+AES,2022,19517551.346,18,1.0,12617.0,1546.9248907030199,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+AES,2023,15564412.834,18,1.0,12668.0,1228.6401037259236,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+ALB,2018,295958.73,5,1.0,3374.95,87.69277470777345,Albemarle Corporation,Materials,Specialty Chemicals
+ALB,2019,300141.22000000003,5,1.0,3589.427,83.61814295150731,Albemarle Corporation,Materials,Specialty Chemicals
+ALB,2020,297095.734,5,1.0,3128.909,94.95186149549251,Albemarle Corporation,Materials,Specialty Chemicals
+ALB,2021,290355.86199999996,5,1.0,3327.957,87.24748006058972,Albemarle Corporation,Materials,Specialty Chemicals
+ALB,2022,297765.492,5,1.0,7320.104,40.67776796613819,Albemarle Corporation,Materials,Specialty Chemicals
+ALB,2023,290882.972,5,1.0,9617.203,30.246109185799657,Albemarle Corporation,Materials,Specialty Chemicals
+AMGN,2018,25065.296,2,1.0,23747.0,1.0555142123215564,Amgen,Health Care,Biotechnology
+AMGN,2019,35993.516,2,1.0,23362.0,1.540686413834432,Amgen,Health Care,Biotechnology
+AMGN,2020,49616.696,2,1.0,25424.0,1.9515692259282569,Amgen,Health Care,Biotechnology
+AMGN,2021,41579.632,2,1.0,25979.0,1.6005093344624504,Amgen,Health Care,Biotechnology
+AMGN,2022,36979.00399999999,2,1.0,26323.0,1.4048172320784102,Amgen,Health Care,Biotechnology
+AMGN,2023,61780.352,2,1.0,28190.0,2.191569776516495,Amgen,Health Care,Biotechnology
+AMT,2019,72548.797134,1,1.0,527.2,137.6115271889226,American Tower,Real Estate,Telecom Tower REITs
+AMT,2020,79275.10121,1,1.0,495.7,159.9255622553964,American Tower,Real Estate,Telecom Tower REITs
+AMT,2021,97337.0118229,1,1.0,717.2,135.718086758087,American Tower,Real Estate,Telecom Tower REITs
+AMT,2022,92663.9052403,1,1.0,840.7,110.22232097097655,American Tower,Real Estate,Telecom Tower REITs
+AMT,2023,56222.9985493,1,1.0,747.3,75.23484350234176,American Tower,Real Estate,Telecom Tower REITs
+APA,2018,2199146.1133103934,23,0.95,,,APA Corporation,Energy,Oil & Gas Exploration & Production
+APA,2019,3489879.2628296693,24,0.9499999999999998,,,APA Corporation,Energy,Oil & Gas Exploration & Production
+APA,2020,2670112.7204367896,26,0.95,,,APA Corporation,Energy,Oil & Gas Exploration & Production
+APA,2021,2412401.9800206,35,0.9842857142857143,,,APA Corporation,Energy,Oil & Gas Exploration & Production
+APA,2022,1998499.8394646,35,0.9842857142857143,,,APA Corporation,Energy,Oil & Gas Exploration & Production
+APA,2023,1342264.3092278,34,0.9838235294117648,,,APA Corporation,Energy,Oil & Gas Exploration & Production
+APD,2018,12523837.754,26,0.95,8930.2,1402.4140281292691,Air Products,Materials,Industrial Gases
+APD,2019,12683847.954,26,0.95,8918.9,1422.13142360605,Air Products,Materials,Industrial Gases
+APD,2020,11606324.656,27,0.95,8856.3,1310.5162038323003,Air Products,Materials,Industrial Gases
+APD,2021,12455740.833999999,30,0.95,10323.0,1206.6008751331976,Air Products,Materials,Industrial Gases
+APD,2022,13342137.824000001,31,0.95,12698.6,1050.677856141622,Air Products,Materials,Industrial Gases
+APD,2023,14072905.322,32,0.95,12600.0,1116.897247777778,Air Products,Materials,Industrial Gases
+ARES,2019,387175.3138400001,1,1.0,1765.438,219.30836078072414,Ares Management,Financials,Asset Management & Custody Banks
+ARES,2020,369742.53820000007,1,1.0,1764.046,209.59914775465043,Ares Management,Financials,Asset Management & Custody Banks
+ARES,2021,1309322.0672000002,1,1.0,4212.091,310.84847578079393,Ares Management,Financials,Asset Management & Custody Banks
+ARES,2022,1485114.0960000001,1,1.0,3055.443,486.05524501684374,Ares Management,Financials,Asset Management & Custody Banks
+ARES,2023,1454174.0512,1,1.0,3631.884,400.39110588333773,Ares Management,Financials,Asset Management & Custody Banks
+ATO,2018,948565.774,12,1.0,3115.546,304.4621308752944,Atmos Energy,Utilities,Gas Utilities
+ATO,2019,936696.84,14,1.0,2901.848,322.7932131524463,Atmos Energy,Utilities,Gas Utilities
+ATO,2020,879252.56,14,1.0,2821.137,311.6660268537118,Atmos Energy,Utilities,Gas Utilities
+ATO,2021,760242.162,14,1.0,3407.49,223.109139571943,Atmos Energy,Utilities,Gas Utilities
+ATO,2022,754296.436,14,1.0,4201.662,179.5233495697655,Atmos Energy,Utilities,Gas Utilities
+ATO,2023,737121.0920000001,14,1.0,4275.357,172.41158855272204,Atmos Energy,Utilities,Gas Utilities
+AVGO,2018,172334.225758,1,1.0,20848.0,8.26622341509977,Broadcom,Information Technology,Semiconductors
+AVGO,2019,182824.213364,1,1.0,22597.0,8.090640941894941,Broadcom,Information Technology,Semiconductors
+AVGO,2020,139671.188379,1,1.0,23888.0,5.846918468645345,Broadcom,Information Technology,Semiconductors
+AVGO,2021,125323.092167,1,1.0,27450.0,4.565504268378871,Broadcom,Information Technology,Semiconductors
+AVGO,2022,78584.46874299999,1,1.0,33203.0,2.366788204168298,Broadcom,Information Technology,Semiconductors
+AVGO,2023,34457.051985,1,1.0,35819.0,0.9619769391942823,Broadcom,Information Technology,Semiconductors
+AXP,2018,966821.290976,19,1.0,26607.0,36.33710267884391,American Express,Financials,Consumer Finance
+AXP,2019,1099334.336984,23,1.0,28159.0,39.04024777101459,American Express,Financials,Consumer Finance
+AXP,2020,3626.74,1,1.0,21974.0,0.16504687357786474,American Express,Financials,Consumer Finance
+AXP,2021,765.2,1,1.0,27716.0,0.027608601529802282,American Express,Financials,Consumer Finance
+AXP,2022,0.0,1,1.0,34219.0,0.0,American Express,Financials,Consumer Finance
+AXP,2023,0.0,1,1.0,37218.0,0.0,American Express,Financials,Consumer Finance
+AZO,2018,0.0,1,1.0,11221.077,0.0,AutoZone,Consumer Discretionary,Automotive Retail
+AZO,2019,0.0,1,1.0,11863.743,0.0,AutoZone,Consumer Discretionary,Automotive Retail
+AZO,2020,0.0,1,1.0,12631.967,0.0,AutoZone,Consumer Discretionary,Automotive Retail
+AZO,2021,0.0,1,1.0,14629.585,0.0,AutoZone,Consumer Discretionary,Automotive Retail
+AZO,2022,0.0,1,1.0,16252.23,0.0,AutoZone,Consumer Discretionary,Automotive Retail
+AZO,2023,0.0,1,1.0,17457.209,0.0,AutoZone,Consumer Discretionary,Automotive Retail
+BA,2018,161902.016,4,1.0,101127.0,1.6009771475471437,Boeing,Industrials,Aerospace & Defense
+BA,2019,174933.376,4,1.0,76559.0,2.284948549484711,Boeing,Industrials,Aerospace & Defense
+BA,2020,154943.39400000003,4,1.0,58158.0,2.6641802331579494,Boeing,Industrials,Aerospace & Defense
+BA,2021,156991.05800000002,4,1.0,62286.0,2.520487075747359,Boeing,Industrials,Aerospace & Defense
+BA,2022,158302.1,4,1.0,66608.0,2.3766229281767957,Boeing,Industrials,Aerospace & Defense
+BA,2023,151144.822,4,1.0,77794.0,1.9428853382008893,Boeing,Industrials,Aerospace & Defense
+BAC,2018,38234.056,1,1.0,91020.0,0.4200621401889694,Bank of America,Financials,Diversified Banks
+BALL,2018,49170.075999999994,1,0.9,11635.0,4.226048646325741,Ball Corporation,Materials,"Metal, Glass & Plastic Containers"
+BALL,2019,99478.86200000001,1,0.9,11474.0,8.669937423740631,Ball Corporation,Materials,"Metal, Glass & Plastic Containers"
+BALL,2020,44226.689999999995,1,0.9,11781.0,3.7540692640692637,Ball Corporation,Materials,"Metal, Glass & Plastic Containers"
+BALL,2021,43578.683999999994,1,0.9,13811.0,3.1553605097386135,Ball Corporation,Materials,"Metal, Glass & Plastic Containers"
+BALL,2022,49176.654,1,0.9,13372.0,3.6775840562369133,Ball Corporation,Materials,"Metal, Glass & Plastic Containers"
+BALL,2023,63499.238000000005,1,0.9,12062.0,5.264403747305588,Ball Corporation,Materials,"Metal, Glass & Plastic Containers"
+BAX,2018,0.0,1,0.9,11099.0,0.0,Baxter International,Health Care,Health Care Equipment
+BAX,2019,0.0,1,0.9,11362.0,0.0,Baxter International,Health Care,Health Care Equipment
+BAX,2020,0.0,1,0.9,11673.0,0.0,Baxter International,Health Care,Health Care Equipment
+BAX,2021,0.0,1,0.9,12146.0,0.0,Baxter International,Health Care,Health Care Equipment
+BAX,2022,39606.0,2,0.95,10057.0,3.9381525305757186,Baxter International,Health Care,Health Care Equipment
+BAX,2023,43203.836,2,0.95,10360.0,4.170254440154441,Baxter International,Health Care,Health Care Equipment
+BF-B,2018,58824.412000000004,2,1.0,3324.0,17.696874849578823,Brown–Forman,Consumer Staples,Distillers & Vintners
+BF-B,2019,57437.848,2,1.0,3363.0,17.079348201011,Brown–Forman,Consumer Staples,Distillers & Vintners
+BF-B,2020,56994.348000000005,2,1.0,3461.0,16.46759549263219,Brown–Forman,Consumer Staples,Distillers & Vintners
+BF-B,2021,70601.04400000001,2,1.0,3933.0,17.950939232138317,Brown–Forman,Consumer Staples,Distillers & Vintners
+BF-B,2022,94436.99200000001,2,1.0,4228.0,22.336090823084202,Brown–Forman,Consumer Staples,Distillers & Vintners
+BF-B,2023,90072.76,2,1.0,4178.0,21.558822403063665,Brown–Forman,Consumer Staples,Distillers & Vintners
+BG,2018,557336.352,11,0.9090909090909091,,,Bunge Global,Consumer Staples,Agricultural Products & Services
+BG,2019,574336.7339999999,11,0.9090909090909091,,,Bunge Global,Consumer Staples,Agricultural Products & Services
+BG,2020,579121.868,11,0.9090909090909091,,,Bunge Global,Consumer Staples,Agricultural Products & Services
+BG,2021,558239.5,11,0.9090909090909091,16811.0,33.20679911962406,Bunge Global,Consumer Staples,Agricultural Products & Services
+BG,2022,578866.108,11,0.9090909090909091,21074.0,27.46825984625605,Bunge Global,Consumer Staples,Agricultural Products & Services
+BG,2023,564616.524,11,0.9090909090909091,17831.0,31.664882732320116,Bunge Global,Consumer Staples,Agricultural Products & Services
+BIIB,2018,30257.787999999997,1,0.9,13452.9,2.24916471541452,Biogen,Health Care,Biotechnology
+BIIB,2019,29570.338,1,1.0,14377.9,2.0566520841012945,Biogen,Health Care,Biotechnology
+BIIB,2020,27100.996,1,1.0,13444.6,2.0157532392187196,Biogen,Health Care,Biotechnology
+BIIB,2021,29388.44,1,1.0,10981.7,2.6761284682699396,Biogen,Health Care,Biotechnology
+BIIB,2022,29755.04,1,1.0,10173.4,2.9247881730788134,Biogen,Health Care,Biotechnology
+BIIB,2023,28268.192,1,1.0,9835.6,2.8740688925942495,Biogen,Health Care,Biotechnology
+BLK,2021,183815.40911999997,1,1.0,,,BlackRock,Financials,Asset Management & Custody Banks
+BLK,2022,246869.93898,1,1.0,17873.0,13.812451126279864,BlackRock,Financials,Asset Management & Custody Banks
+BLK,2023,187749.8994,1,1.0,17859.0,10.512901024693432,BlackRock,Financials,Asset Management & Custody Banks
+BMY,2018,110217.16,3,1.0,22561.0,4.885295864545012,Bristol Myers Squibb,Health Care,Pharmaceuticals
+BMY,2019,84259.166,3,1.0,26145.0,3.2227640466628418,Bristol Myers Squibb,Health Care,Pharmaceuticals
+BMY,2020,83474.864,3,1.0,42518.0,1.9632829389905453,Bristol Myers Squibb,Health Care,Pharmaceuticals
+BMY,2021,90192.85800000001,3,1.0,46385.0,1.9444401854047646,Bristol Myers Squibb,Health Care,Pharmaceuticals
+BMY,2022,91669.248,3,1.0,46159.0,1.9859452761108345,Bristol Myers Squibb,Health Care,Pharmaceuticals
+BMY,2023,95102.73999999999,3,1.0,45006.0,2.11311247389237,Bristol Myers Squibb,Health Care,Pharmaceuticals
+BRK-B,2018,60270741.5907606,87,0.981609195402299,175445.0,343.53068819721625,Berkshire Hathaway,Financials,Multi-Sector Holdings
+BRK-B,2019,65096443.8814436,106,0.9985849056603773,176512.0,368.7933051659015,Berkshire Hathaway,Financials,Multi-Sector Holdings
+BRK-B,2020,59043845.323457204,140,0.9985714285714287,166733.0,354.1221313324729,Berkshire Hathaway,Financials,Multi-Sector Holdings
+BRK-B,2021,64442193.1758448,141,0.9989361702127659,191252.0,336.94912040577253,Berkshire Hathaway,Financials,Multi-Sector Holdings
+BRK-B,2022,58772317.6808222,143,0.9986013986013986,207771.0,282.87064932460356,Berkshire Hathaway,Financials,Multi-Sector Holdings
+BRK-B,2023,53683295.2897898,143,0.9986013986013986,254906.0,210.6003597003986,Berkshire Hathaway,Financials,Multi-Sector Holdings
+BRO,2018,76383.798,5,1.0,2014.246,37.92178214577564,Brown & Brown,Financials,Insurance Brokers
+BRO,2019,154449.696,6,1.0,2392.171,64.56465528593066,Brown & Brown,Financials,Insurance Brokers
+BRO,2020,76171.30799999999,5,1.0,2613.4,29.14644065202418,Brown & Brown,Financials,Insurance Brokers
+BRO,2021,74679.318,5,1.0,3051.4,24.47378842498525,Brown & Brown,Financials,Insurance Brokers
+BRO,2022,78471.35800000001,5,1.0,3573.0,21.96231682059894,Brown & Brown,Financials,Insurance Brokers
+BRO,2023,80462.456,5,1.0,4257.0,18.901211181583275,Brown & Brown,Financials,Insurance Brokers
+BX,2023,59808.84716966261,1,1.0,8022.841,7.454821449117913,Blackstone Inc.,Financials,Asset Management & Custody Banks
+CAG,2019,123699.984,3,0.9499999999999998,,,,,
+CAG,2020,140014.87199999997,3,0.9499999999999998,,,,,
+CAG,2021,143519.708,3,0.9499999999999998,,,,,
+CAG,2022,158389.452,3,0.9499999999999998,,,,,
+CAG,2023,112660.176,3,0.9499999999999998,,,,,
+CARR,2018,0.0,4,1.0,18914.0,0.0,Carrier Global,Industrials,Building Products
+CARR,2019,0.0,3,1.0,18608.0,0.0,Carrier Global,Industrials,Building Products
+CARR,2020,0.0,5,1.0,17456.0,0.0,Carrier Global,Industrials,Building Products
+CARR,2021,0.0,5,1.0,20613.0,0.0,Carrier Global,Industrials,Building Products
+CARR,2022,0.0,5,1.0,17288.0,0.0,Carrier Global,Industrials,Building Products
+CARR,2023,0.0,5,1.0,18951.0,0.0,Carrier Global,Industrials,Building Products
+CASY,2019,141812.49599999998,1,1.0,9175.296,15.455904201891686,Casey's,Consumer Staples,Food Retail
+CASY,2020,125863.89,1,1.0,8707.189,14.455169171129741,Casey's,Consumer Staples,Food Retail
+CASY,2021,138543.21000000002,1,1.0,12952.594,10.696174835712448,Casey's,Consumer Staples,Food Retail
+CASY,2022,142322.332,1,1.0,15094.475,9.428769930719684,Casey's,Consumer Staples,Food Retail
+CASY,2023,174035.038,1,1.0,14862.913,11.709349169977648,Casey's,Consumer Staples,Food Retail
+CAT,2018,641040.844,8,1.0,54722.0,11.714499543145354,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment
+CAT,2019,596462.326,8,1.0,53800.0,11.08666033457249,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment
+CAT,2020,459261.132,8,1.0,41748.0,11.000793618855992,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment
+CAT,2021,471626.776,8,1.0,50971.0,9.252845264954582,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment
+CAT,2022,479805.40599999996,8,1.0,59427.0,8.073862150201087,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment
+CAT,2023,456901.738,8,1.0,67060.0,6.813327438115121,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment
+CE,2018,1549686.332,3,0.9499999999999998,,,,,
+CE,2019,2100703.33,3,0.9499999999999998,,,,,
+CE,2020,1918463.578,3,0.9499999999999998,,,,,
+CE,2021,1744938.726,3,0.9499999999999998,,,,,
+CE,2022,1735293.608,3,0.9499999999999998,,,,,
+CE,2023,1710685.8420000002,3,0.9499999999999998,,,,,
+CEG,2018,39269834.56251856,61,0.9508196721311475,,,Constellation Energy,Utilities,Electric Utilities
+CEG,2019,0.0,14,0.95,,,Constellation Energy,Utilities,Electric Utilities
+CEG,2020,0.0,14,0.95,17603.0,0.0,Constellation Energy,Utilities,Electric Utilities
+CEG,2021,0.0,14,0.95,17254.0,0.0,Constellation Energy,Utilities,Electric Utilities
+CEG,2022,8247705.788000001,24,0.9708333333333333,21571.0,382.3515733160262,Constellation Energy,Utilities,Electric Utilities
+CEG,2023,8941320.546,24,0.9708333333333333,20841.0,429.0255048222254,Constellation Energy,Utilities,Electric Utilities
+CF,2018,19032392.101999998,5,1.0,4429.0,4297.221066154888,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CF,2019,20066538.552,5,1.0,4590.0,4371.794891503268,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CF,2020,19602923.076,5,1.0,4124.0,4753.376109602328,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CF,2021,18009892.984,6,1.0,6538.0,2754.648666870603,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CF,2022,19793269.476,6,1.0,11186.0,1769.4680382621134,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CF,2023,20579424.174000002,7,1.0,6631.0,3103.5174444276886,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CMS,2018,16562548.9335152,16,1.0,6502.0,2547.3006664895724,CMS Energy,Utilities,Multi-Utilities
+CMS,2019,16819955.566754,16,1.0,6403.0,2626.886704162736,CMS Energy,Utilities,Multi-Utilities
+CMS,2020,14755702.7438016,16,1.0,6238.0,2365.454110901186,CMS Energy,Utilities,Multi-Utilities
+CMS,2021,17341661.5795372,16,1.0,7075.0,2451.118244457555,CMS Energy,Utilities,Multi-Utilities
+CMS,2022,17469578.754212,17,1.0,8320.0,2099.7089848812498,CMS Energy,Utilities,Multi-Utilities
+CMS,2023,16989121.6012564,18,1.0,7261.0,2339.777110763862,CMS Energy,Utilities,Multi-Utilities
+CNP,2018,450402.20999999996,10,1.0,6282.0,71.69726361031518,CenterPoint Energy,Utilities,Multi-Utilities
+CNP,2019,434033.35,10,1.0,7511.0,57.78636000532552,CenterPoint Energy,Utilities,Multi-Utilities
+CNP,2020,4133964.654,15,1.0,7350.0,562.4441706122449,CenterPoint Energy,Utilities,Multi-Utilities
+CNP,2021,6153357.5148,15,1.0,8256.0,745.3194664244186,CenterPoint Energy,Utilities,Multi-Utilities
+CNP,2022,4840271.1912,13,1.0,9327.0,518.9526311997427,CenterPoint Energy,Utilities,Multi-Utilities
+CNP,2023,4233525.3872,13,1.0,8612.0,491.58446205294933,CenterPoint Energy,Utilities,Multi-Utilities
+COF,2019,0.0,2,1.0,3820.0,0.0,Capital One,Financials,Consumer Finance
+COF,2020,0.0,2,1.0,3737.0,0.0,Capital One,Financials,Consumer Finance
+COF,2021,0.0,2,1.0,4780.0,0.0,Capital One,Financials,Consumer Finance
+COF,2022,0.0,2,1.0,5417.0,0.0,Capital One,Financials,Consumer Finance
+COF,2023,0.0,2,1.0,5645.0,0.0,Capital One,Financials,Consumer Finance
+COO,2018,13920587.236000001,10,1.0,2532.8,5496.125724889451,Cooper Companies (The),Health Care,Health Care Supplies
+COO,2019,164318.45,7,1.0,2653.4,61.92750810281149,Cooper Companies (The),Health Care,Health Care Supplies
+COO,2020,159973.196,7,1.0,2430.9,65.80821753260109,Cooper Companies (The),Health Care,Health Care Supplies
+COO,2021,99308.19399999999,5,1.0,2922.5,33.98056253207869,Cooper Companies (The),Health Care,Health Care Supplies
+COO,2022,101242.704,5,1.0,3308.4,30.601712005803407,Cooper Companies (The),Health Care,Health Care Supplies
+COO,2023,59945.578,4,1.0,3593.2,16.68306189468997,Cooper Companies (The),Health Care,Health Care Supplies
+COP,2018,8089018.7137244,41,0.9991589571068125,36417.0,222.12205051828542,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+COP,2019,9331727.8785272,39,0.9991158267020336,32567.0,286.5393766244112,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+COP,2020,7968453.2334004,37,0.9990680335507921,13662.0,583.2567144927829,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+COP,2021,9663827.477121834,37,0.9990680335507921,34590.0,279.3821184481594,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+COP,2022,9474336.709002208,37,0.9990680335507921,61049.0,155.19233253619564,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+COP,2023,9034704.8357512,30,0.9988505747126436,48522.0,186.19811293333333,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+CPB,2018,219160.466,5,0.95,,,,,
+CPB,2019,197536.854,4,0.95,,,,,
+CPB,2020,218949.92599999998,4,0.95,,,,,
+CPB,2021,221698.86599999998,4,0.95,,,,,
+CPB,2022,209528.712,4,0.95,,,,,
+CPB,2023,206162.12399999998,4,0.95,,,,,
+CRH,2018,4246858.494,6,1.0,,,CRH plc,Materials,Construction Materials
+CRH,2019,4794781.46,10,1.0,,,CRH plc,Materials,Construction Materials
+CRH,2020,4777118.987,10,1.0,,,CRH plc,Materials,Construction Materials
+CRH,2021,5084897.864,10,1.0,29206.0,174.10456289803466,CRH plc,Materials,Construction Materials
+CRH,2022,5196805.374,10,1.0,32723.0,158.81200910674448,CRH plc,Materials,Construction Materials
+CRH,2023,4652545.73,10,1.0,34949.0,133.12385847949872,CRH plc,Materials,Construction Materials
+CSGP,2018,0.0,1,0.923076923076923,1191.832,0.0,CoStar Group,Real Estate,Real Estate Services
+CSGP,2019,0.0,1,0.923076923076923,1399.719,0.0,CoStar Group,Real Estate,Real Estate Services
+CSGP,2020,0.0,1,0.923076923076923,1659.019,0.0,CoStar Group,Real Estate,Real Estate Services
+CSGP,2021,0.0,1,0.923076923076923,1944.1,0.0,CoStar Group,Real Estate,Real Estate Services
+CSGP,2022,0.0,1,0.923076923076923,2182.4,0.0,CoStar Group,Real Estate,Real Estate Services
+CSGP,2023,0.0,1,0.923076923076923,2455.0,0.0,CoStar Group,Real Estate,Real Estate Services
+CTRA,2018,2566691.51102,16,0.95,,,,,
+CTRA,2019,2776668.02042,16,0.95,,,,,
+CTRA,2020,1801644.86986,16,0.95,,,,,
+CTRA,2021,1519067.6958738738,15,0.95,,,,,
+CTRA,2022,1548524.870072072,15,0.95,,,,,
+CTRA,2023,1359407.44308,15,0.95,,,,,
+CTVA,2019,117616.75600000001,2,1.0,13846.0,8.494637873754153,Corteva,Materials,Fertilizers & Agricultural Chemicals
+CTVA,2020,97647.23199999999,2,1.0,14217.0,6.86834296968418,Corteva,Materials,Fertilizers & Agricultural Chemicals
+CTVA,2021,93611.848,2,1.0,15655.0,5.979677291600128,Corteva,Materials,Fertilizers & Agricultural Chemicals
+CTVA,2022,90619.16,2,1.0,17455.0,5.191587510741908,Corteva,Materials,Fertilizers & Agricultural Chemicals
+CTVA,2023,82753.74,2,1.0,17226.0,4.804002089864159,Corteva,Materials,Fertilizers & Agricultural Chemicals
+CVX,2018,23660854.69371656,87,0.9988505747126437,158902.0,148.90218306702596,Chevron Corporation,Energy,Integrated Oil & Gas
+CVX,2019,23201958.659137663,89,1.0,139865.0,165.88823979650135,Chevron Corporation,Energy,Integrated Oil & Gas
+CVX,2020,22910302.14119537,95,1.0,94471.0,242.51148120794076,Chevron Corporation,Energy,Integrated Oil & Gas
+CVX,2021,22257976.210127927,94,1.0,155606.0,143.04060389784408,Chevron Corporation,Energy,Integrated Oil & Gas
+CVX,2022,20844338.739300754,97,1.0,235717.0,88.42950970570962,Chevron Corporation,Energy,Integrated Oil & Gas
+CVX,2023,21560559.85408879,90,1.0,196913.0,109.49282096199231,Chevron Corporation,Energy,Integrated Oil & Gas
+D,2018,28257266.5288,64,1.0,10891.0,2594.5520639794327,Dominion Energy,Utilities,Multi-Utilities
+D,2019,35745471.919,76,1.0,13745.0,2600.6163636958895,Dominion Energy,Utilities,Multi-Utilities
+D,2020,36006718.997,52,1.0,11551.0,3117.1949612154795,Dominion Energy,Utilities,Multi-Utilities
+D,2021,34294214.041,52,1.0,11661.0,2940.9325135923164,Dominion Energy,Utilities,Multi-Utilities
+D,2022,32973388.969,47,1.0,14552.0,2265.900836242441,Dominion Energy,Utilities,Multi-Utilities
+D,2023,29414584.6822,47,1.0,13487.0,2180.958306680507,Dominion Energy,Utilities,Multi-Utilities
+DAL,2018,1230173.1219999997,2,1.0,44438.0,27.682909266843687,Delta Air Lines,Industrials,Passenger Airlines
+DAL,2019,1501649.668,2,1.0,47007.0,31.945235135192632,Delta Air Lines,Industrials,Passenger Airlines
+DAL,2020,1179682.28,2,1.0,17095.0,69.00744545188653,Delta Air Lines,Industrials,Passenger Airlines
+DAL,2021,1381265.21,2,1.0,29899.0,46.197705943342584,Delta Air Lines,Industrials,Passenger Airlines
+DAL,2022,1313653.766,2,1.0,50582.0,25.970775493258472,Delta Air Lines,Industrials,Passenger Airlines
+DAL,2023,1256096.862,2,1.0,58048.0,21.638934364663726,Delta Air Lines,Industrials,Passenger Airlines
+DD,2018,3428955.44,21,0.9523809523809523,16378.0,209.3635022591281,DuPont,Industrials,Industrial Conglomerates
+DD,2019,1138806.7,20,0.9175000000000001,15436.0,73.77602358123866,DuPont,Industrials,Industrial Conglomerates
+DD,2020,573283.416,19,0.9184210526315789,11128.0,51.517201294033065,DuPont,Industrials,Industrial Conglomerates
+DD,2021,408240.212,16,0.921875,12566.0,32.487681999045044,DuPont,Industrials,Industrial Conglomerates
+DD,2022,206987.258,13,0.926923076923077,13017.0,15.901302757931935,DuPont,Industrials,Industrial Conglomerates
+DD,2023,195527.252,13,0.926923076923077,6614.0,29.562632597520413,DuPont,Industrials,Industrial Conglomerates
+DE,2018,64230.30799999999,3,1.0,37358.0,1.7193187001445471,Deere & Company,Industrials,Agricultural & Farm Machinery
+DE,2019,63353.212,3,1.0,39258.0,1.6137656528605635,Deere & Company,Industrials,Agricultural & Farm Machinery
+DE,2020,63013.964,3,1.0,35540.0,1.7730434440067528,Deere & Company,Industrials,Agricultural & Farm Machinery
+DE,2021,44661.832,3,1.0,44024.0,1.01448827912048,Deere & Company,Industrials,Agricultural & Farm Machinery
+DE,2022,52119.056000000004,3,1.0,52577.0,0.9912900317629383,Deere & Company,Industrials,Agricultural & Farm Machinery
+DE,2023,45075.880000000005,3,1.0,61251.0,0.7359207196617199,Deere & Company,Industrials,Agricultural & Farm Machinery
+DIS,2018,102276.40302000001,1,1.0,59434.0,1.7208399740889055,Walt Disney Company (The),Communication Services,Movies & Entertainment
+DIS,2019,107928.72881999999,1,1.0,69607.0,1.5505441811886733,Walt Disney Company (The),Communication Services,Movies & Entertainment
+DIS,2020,62788.433399999994,1,1.0,65388.0,0.9602439805468892,Walt Disney Company (The),Communication Services,Movies & Entertainment
+DIS,2021,85016.88953999999,1,1.0,67418.0,1.261041406449316,Walt Disney Company (The),Communication Services,Movies & Entertainment
+DIS,2022,100815.21845999999,1,1.0,82722.0,1.2187231747298177,Walt Disney Company (The),Communication Services,Movies & Entertainment
+DIS,2023,108269.89074,1,1.0,88898.0,1.2179114349029225,Walt Disney Company (The),Communication Services,Movies & Entertainment
+DOV,2018,92054.19399999999,3,1.0,6992.118,13.165423409616368,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components
+DOV,2019,82573.412,4,1.0,7136.397,11.57074249092364,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components
+DOV,2020,85343.572,4,1.0,6683.76,12.76879660550349,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components
+DOV,2021,89552.73599999999,4,1.0,7907.081,11.325637868133636,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components
+DOV,2022,123078.388,4,1.0,7844.174,15.690420431775227,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components
+DOV,2023,79990.788,4,1.0,7684.476,10.409400458795108,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components
+DOW,2018,14864562.94751,20,0.95,49604.0,299.6646026028143,Dow Inc.,Materials,Commodity Chemicals
+DOW,2019,16409522.62483,20,0.9974999999999999,42951.0,382.0521670003027,Dow Inc.,Materials,Commodity Chemicals
+DOW,2020,16885953.02462,19,0.9973684210526316,38542.0,438.1182352918894,Dow Inc.,Materials,Commodity Chemicals
+DOW,2021,16949579.735,19,0.9973684210526316,54968.0,308.35358272085574,Dow Inc.,Materials,Commodity Chemicals
+DOW,2022,16471991.6526,19,0.9973684210526316,56902.0,289.48001217180416,Dow Inc.,Materials,Commodity Chemicals
+DOW,2023,16645248.8045,19,0.9973684210526316,44622.0,373.0278518331765,Dow Inc.,Materials,Commodity Chemicals
+DTE,2018,34185351.075585,37,1.0,,,DTE Energy,Utilities,Multi-Utilities
+DTE,2019,30759877.585715998,40,1.0,,,DTE Energy,Utilities,Multi-Utilities
+DTE,2020,24613398.397142,42,1.0,,,DTE Energy,Utilities,Multi-Utilities
+DTE,2021,30651742.332518,42,1.0,,,DTE Energy,Utilities,Multi-Utilities
+DTE,2022,28056312.079556,39,1.0,,,DTE Energy,Utilities,Multi-Utilities
+DTE,2023,23423239.403256,39,1.0,,,DTE Energy,Utilities,Multi-Utilities
+DUK,2018,97383344.021504,52,1.0,23757.0,4099.143158711285,Duke Energy,Utilities,Electric Utilities
+DUK,2019,85957548.4561114,52,1.0,24348.0,3530.374094632471,Duke Energy,Utilities,Electric Utilities
+DUK,2020,75470660.8011122,52,1.0,23253.0,3245.6311358152584,Duke Energy,Utilities,Electric Utilities
+DUK,2021,78134701.72246979,52,1.0,24486.0,3190.994924547488,Duke Energy,Utilities,Electric Utilities
+DUK,2022,78479224.9183934,54,1.0,28675.0,2736.851784425228,Duke Energy,Utilities,Electric Utilities
+DUK,2023,72775625.1168672,54,1.0,28674.0,2538.035332247583,Duke Energy,Utilities,Electric Utilities
+DVN,2018,5231561.1497578,33,0.990909090909091,8439.0,619.9266678229411,Devon Energy,Energy,Oil & Gas Exploration & Production
+DVN,2019,5715675.0733268,31,0.9919354838709677,6674.0,856.4092108670662,Devon Energy,Energy,Oil & Gas Exploration & Production
+DVN,2020,5091910.2708898,29,0.9913793103448276,4673.0,1089.6448257842499,Devon Energy,Energy,Oil & Gas Exploration & Production
+DVN,2021,3995789.3714202736,26,0.9961538461538461,13750.0,290.6028633760199,Devon Energy,Energy,Oil & Gas Exploration & Production
+DVN,2022,4617975.776256472,27,0.9962962962962962,19827.0,232.9134905056979,Devon Energy,Energy,Oil & Gas Exploration & Production
+DVN,2023,4402834.4377427995,27,0.9962962962962962,15140.0,290.80808703717304,Devon Energy,Energy,Oil & Gas Exploration & Production
+ED,2018,2963666.548,9,1.0,11928.0,248.46299027498324,Consolidated Edison,Utilities,Multi-Utilities
+ED,2019,2815752.338,9,1.0,12144.0,231.86366419631094,Consolidated Edison,Utilities,Multi-Utilities
+ED,2020,2659411.7279999997,9,1.0,12026.0,221.13851056045232,Consolidated Edison,Utilities,Multi-Utilities
+ED,2021,2741623.1816000002,9,1.0,13456.0,203.74726379310346,Consolidated Edison,Utilities,Multi-Utilities
+ED,2022,2767956.7392,9,1.0,15455.0,179.09781554189584,Consolidated Edison,Utilities,Multi-Utilities
+ED,2023,2697527.378,9,1.0,14476.0,186.34480367504835,Consolidated Edison,Utilities,Multi-Utilities
+EIX,2018,879133.59404,9,0.9944444444444444,12657.0,69.4582913834242,Edison International,Utilities,Electric Utilities
+EIX,2019,1289892.83974056,9,1.0,12347.0,104.47014171382197,Edison International,Utilities,Electric Utilities
+EIX,2020,1296588.9233119201,9,1.0,13578.0,95.4918930116306,Edison International,Utilities,Electric Utilities
+EIX,2021,915916.99862884,9,1.0,14905.0,61.45031859301174,Edison International,Utilities,Electric Utilities
+EIX,2022,1597694.86811224,9,1.0,17220.0,92.7813512260302,Edison International,Utilities,Electric Utilities
+EIX,2023,1102588.89792864,9,1.0,16338.0,67.48616097004775,Edison International,Utilities,Electric Utilities
+EMN,2018,6444443.918,7,0.95,,,,,
+EMN,2019,6334831.148,9,0.9499999999999998,,,,,
+EMN,2020,6195163.172,9,0.9499999999999998,,,,,
+EMN,2021,6303701.814,9,0.9499999999999998,,,,,
+EMN,2022,6091691.9066538755,8,0.95,,,,,
+EMN,2023,6094463.184,8,0.95,,,,,
+EOG,2018,5291765.336,52,0.9985207100591715,17275.399,306.3179806150932,EOG Resources,Energy,Oil & Gas Exploration & Production
+EOG,2019,5406619.796,54,1.0,17380.0,311.0828421173763,EOG Resources,Energy,Oil & Gas Exploration & Production
+EOG,2020,4473308.996,54,1.0,11032.0,405.4848618564177,EOG Resources,Energy,Oil & Gas Exploration & Production
+EOG,2021,4994343.894,54,1.0,18642.0,267.908158673962,EOG Resources,Energy,Oil & Gas Exploration & Production
+EOG,2022,5087931.94,60,1.0,25702.0,197.95860010894094,EOG Resources,Energy,Oil & Gas Exploration & Production
+EOG,2023,5211851.17,60,1.0,24186.0,215.49041470272059,EOG Resources,Energy,Oil & Gas Exploration & Production
+EQT,2018,2336536.354,23,0.976086956521739,4709.384,496.144793883871,EQT Corporation,Energy,Oil & Gas Exploration & Production
+EQT,2019,2279384.1524,26,0.9730769230769231,3791.414,601.196322110959,EQT Corporation,Energy,Oil & Gas Exploration & Production
+EQT,2020,2356411.152,28,0.9696428571428571,2650.299,889.1114368605201,EQT Corporation,Energy,Oil & Gas Exploration & Production
+EQT,2021,2258203.4068,28,0.9696428571428571,6804.02,331.8925292400669,EQT Corporation,Energy,Oil & Gas Exploration & Production
+EQT,2022,1996516.5084,28,0.9696428571428571,12114.168,164.8083886900033,EQT Corporation,Energy,Oil & Gas Exploration & Production
+EQT,2023,1821595.6804,28,0.9696428571428571,5044.768,361.08611543682485,EQT Corporation,Energy,Oil & Gas Exploration & Production
+ES,2018,4330451.655525,27,0.9592592592592593,8448.201,512.5886156739169,Eversource Energy,Utilities,Electric Utilities
+ES,2019,5443941.2911,35,0.9571428571428572,8526.47,638.4753938147909,Eversource Energy,Utilities,Electric Utilities
+ES,2020,5890984.32935,36,0.9583333333333334,8904.43,661.57904878246,Eversource Energy,Utilities,Electric Utilities
+ES,2021,6681714.46815,36,0.9583333333333334,9863.085,677.4467084233787,Eversource Energy,Utilities,Electric Utilities
+ES,2022,5555153.53855,35,0.9585714285714285,12289.336,452.0304057558521,Eversource Energy,Utilities,Electric Utilities
+ES,2023,5311766.9183,35,0.9585714285714285,11910.705,445.96578609746444,Eversource Energy,Utilities,Electric Utilities
+ETR,2018,37726617.2560846,45,1.0,11009.452,3426.747966754803,Entergy,Utilities,Electric Utilities
+ETR,2019,36294210.1141116,46,1.0,10878.673,3336.2718149641596,Entergy,Utilities,Electric Utilities
+ETR,2020,34603246.672817595,51,1.0,10113.636,3421.444737858629,Entergy,Utilities,Electric Utilities
+ETR,2021,37184657.2777412,53,0.999056603773585,11742.896,3166.5661756470636,Entergy,Utilities,Electric Utilities
+ETR,2022,40301404.6297808,52,0.9990384615384615,13764.237,2927.9795625272072,Entergy,Utilities,Electric Utilities
+ETR,2023,38227811.3537876,52,0.9990384615384615,12147.412,3146.9922444210833,Entergy,Utilities,Electric Utilities
+EVRG,2018,17452705.54906,12,0.9499999999999998,4224.0,4131.795821273674,Evergy,Utilities,Electric Utilities
+EVRG,2019,26494543.088756,18,0.9888888888888889,5019.6,5278.218003178738,Evergy,Utilities,Electric Utilities
+EVRG,2020,23941981.365140002,18,0.9888888888888889,4781.6,5007.106693395516,Evergy,Utilities,Electric Utilities
+EVRG,2021,26427192.4248,18,0.9888888888888889,5329.1,4959.0348135332415,Evergy,Utilities,Electric Utilities
+EVRG,2022,27410174.409876004,18,0.9888888888888889,5589.2,4904.131970563945,Evergy,Utilities,Electric Utilities
+EVRG,2023,23149009.16598,18,0.9888888888888889,5345.1,4330.884205343211,Evergy,Utilities,Electric Utilities
+EXC,2018,8698311.09,25,1.0,35978.0,241.7674993051309,Exelon,Utilities,Electric Utilities
+EXC,2019,8591280.92364288,27,1.0,16725.0,513.6789789921004,Exelon,Utilities,Electric Utilities
+EXC,2020,7882591.443392,27,1.0,16663.0,473.0595597066555,Exelon,Utilities,Electric Utilities
+EXC,2021,8012958.8956,27,1.0,17938.0,446.70302684803215,Exelon,Utilities,Electric Utilities
+EXC,2022,322677.19279999996,17,1.0,19078.0,16.91357546912674,Exelon,Utilities,Electric Utilities
+EXC,2023,301249.6376,17,1.0,21727.0,13.865220122428315,Exelon,Utilities,Electric Utilities
+EXE,2018,2762293.89,66,0.95,10030.0,275.4031794616152,Expand Energy,Energy,Oil & Gas Exploration & Production
+EXE,2019,3356093.1319999998,66,0.95,8532.0,393.35362541022033,Expand Energy,Energy,Oil & Gas Exploration & Production
+EXE,2020,3160602.682,67,0.95,5240.0,603.1684507633588,Expand Energy,Energy,Oil & Gas Exploration & Production
+EXE,2021,2765522.47,67,0.95,5549.0,498.38213551991356,Expand Energy,Energy,Oil & Gas Exploration & Production
+EXE,2022,2711547.322,67,0.95,11743.0,230.90754679383463,Expand Energy,Energy,Oil & Gas Exploration & Production
+EXE,2023,1897947.6800000002,67,0.95,8721.0,217.62959293658986,Expand Energy,Energy,Oil & Gas Exploration & Production
+F,2018,662690.504,15,1.0,160338.0,4.1330845089747905,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+F,2019,633370.062,15,1.0,155900.0,4.062668774855677,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+F,2020,481112.43799999997,15,1.0,127144.0,3.783996397785188,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+F,2021,499182.316,15,1.0,136341.0,3.66127808949619,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+F,2022,559602.738,15,1.0,158057.0,3.540512207621301,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+F,2023,497625.124,15,1.0,176191.0,2.8243504151744414,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+FANG,2018,1561359.862,6,0.9583333333333334,2130.0,733.0327990610328,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+FANG,2019,4293898.528,6,0.9583333333333334,3887.0,1104.6818955492668,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+FANG,2020,2675317.136,6,0.9583333333333334,2756.0,970.7246502177068,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+FANG,2021,2543174.014,6,0.9583333333333334,6747.0,376.9340468356306,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+FANG,2022,2951400.514,6,0.9583333333333334,9566.0,308.53026489650847,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+FANG,2023,3224708.764,6,0.9583333333333334,8412.0,383.3462629576795,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+FCX,2018,616132.4838324,13,0.9153846153846155,18945.0,32.52216858444972,Freeport-McMoRan,Materials,Copper
+FCX,2019,449828.213046,12,0.9500000000000001,14348.0,31.351283317953722,Freeport-McMoRan,Materials,Copper
+FCX,2020,429068.125,12,0.9500000000000001,13894.0,30.881540593061754,Freeport-McMoRan,Materials,Copper
+FCX,2021,393890.04799999995,12,0.9500000000000001,22422.0,17.567123717777182,Freeport-McMoRan,Materials,Copper
+FCX,2022,463664.704,12,0.9500000000000001,23271.0,19.924571526793006,Freeport-McMoRan,Materials,Copper
+FCX,2023,468237.97400000005,12,0.9500000000000001,22703.0,20.62449781967141,Freeport-McMoRan,Materials,Copper
+FE,2018,32916248.536000002,20,0.95,10944.0,3007.698148391813,FirstEnergy,Utilities,Electric Utilities
+FE,2019,27852434.6272,19,0.9657894736842104,10805.0,2577.735735974086,FirstEnergy,Utilities,Electric Utilities
+FE,2020,14653820.263600001,16,0.959375,10701.0,1369.387932305392,FirstEnergy,Utilities,Electric Utilities
+FE,2021,15867084.901999999,16,0.959375,11112.0,1427.9234073074153,FirstEnergy,Utilities,Electric Utilities
+FE,2022,16618782.88,16,0.959375,12459.0,1333.8777494180913,FirstEnergy,Utilities,Electric Utilities
+FE,2023,15338451.138,16,0.959375,12870.0,1191.7988452214452,FirstEnergy,Utilities,Electric Utilities
+FIS,2018,0.0,1,1.0,8423.0,0.0,Fidelity National Information Services,Financials,Transaction & Payment Processing Services
+FIS,2019,0.0,1,1.0,10333.0,0.0,Fidelity National Information Services,Financials,Transaction & Payment Processing Services
+FIS,2020,0.0,1,1.0,12552.0,0.0,Fidelity National Information Services,Financials,Transaction & Payment Processing Services
+FIS,2021,0.0,1,1.0,9339.0,0.0,Fidelity National Information Services,Financials,Transaction & Payment Processing Services
+FIS,2022,0.0,1,1.0,9720.0,0.0,Fidelity National Information Services,Financials,Transaction & Payment Processing Services
+FIS,2023,0.0,1,1.0,9831.0,0.0,Fidelity National Information Services,Financials,Transaction & Payment Processing Services
+FOX,2018,86934.572,1,1.0,10153.0,8.562451689155914,Fox Corporation (Class B),Communication Services,Broadcasting
+GE,2018,1091006.40156,16,0.95,113543.0,9.608750883453846,GE Aerospace,Industrials,Aerospace & Defense
+GE,2019,789683.96462,15,0.95,90221.0,8.752773352323738,GE Aerospace,Industrials,Aerospace & Defense
+GE,2020,565669.89454,15,0.95,58025.0,9.7487271786299,GE Aerospace,Industrials,Aerospace & Defense
+GE,2021,417639.14594,14,0.95,56469.0,7.395901219075953,GE Aerospace,Industrials,Aerospace & Defense
+GE,2022,736567.96129,14,0.95,29139.0,25.277736411338754,GE Aerospace,Industrials,Aerospace & Defense
+GE,2023,272224.39280000003,13,0.95,35348.0,7.7012671947493505,GE Aerospace,Industrials,Aerospace & Defense
+GIS,2018,68812.338,3,1.0,16865.2,4.08013767995636,General Mills,Consumer Staples,Packaged Foods & Meats
+GIS,2019,69235.988,3,1.0,17626.6,3.9279264293737874,General Mills,Consumer Staples,Packaged Foods & Meats
+GIS,2020,82544.862,3,1.0,18127.0,4.553696805869697,General Mills,Consumer Staples,Packaged Foods & Meats
+GIS,2021,73949.576,3,1.0,18992.8,3.8935584010783035,General Mills,Consumer Staples,Packaged Foods & Meats
+GIS,2022,79095.03199999999,3,1.0,20094.2,3.9362120412855446,General Mills,Consumer Staples,Packaged Foods & Meats
+GIS,2023,70688.598,3,1.0,19857.2,3.5598472090727795,General Mills,Consumer Staples,Packaged Foods & Meats
+GLW,2018,704585.51737,26,0.9769230769230769,11290.0,62.40792890788308,Corning Inc.,Information Technology,Electronic Components
+GLW,2019,700773.09821,26,0.9769230769230769,11503.0,60.92089874032861,Corning Inc.,Information Technology,Electronic Components
+GLW,2020,682666.3662,26,0.9769230769230769,11303.0,60.396918181013895,Corning Inc.,Information Technology,Electronic Components
+GLW,2021,757600.58506,26,0.9769230769230769,14082.0,53.7992178000284,Corning Inc.,Information Technology,Electronic Components
+GLW,2022,745642.9745,26,0.9769230769230769,14189.0,52.55077697512157,Corning Inc.,Information Technology,Electronic Components
+GLW,2023,657907.4719,27,0.9777777777777777,12588.0,52.26465458373054,Corning Inc.,Information Technology,Electronic Components
+GM,2018,696776.7999999999,18,1.0,133045.0,5.237151339772257,General Motors,Consumer Discretionary,Automobile Manufacturers
+GM,2019,676788.7559999999,18,1.0,122697.0,5.515935646348321,General Motors,Consumer Discretionary,Automobile Manufacturers
+GM,2020,534438.476,18,1.0,108673.0,4.91785886098663,General Motors,Consumer Discretionary,Automobile Manufacturers
+GM,2021,544976.676,18,1.0,113590.0,4.797752231710538,General Motors,Consumer Discretionary,Automobile Manufacturers
+GM,2022,567991.594,18,1.0,143975.0,3.945070977600278,General Motors,Consumer Discretionary,Automobile Manufacturers
+GM,2023,572170.952,18,1.0,157658.0,3.629190729300131,General Motors,Consumer Discretionary,Automobile Manufacturers
+GOOG,2019,19992.485716000003,1,1.0,161857.0,0.1235194382448705,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services
+GOOG,2020,22577.100112,1,1.0,182527.0,0.12369183798561309,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services
+GOOG,2021,20966.469932000004,1,1.0,257637.0,0.08137988694170481,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services
+GOOG,2022,13487.373932,1,1.0,282836.0,0.04768619953612695,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services
+GOOG,2023,15853.469240000002,1,1.0,307394.0,0.05157377580564358,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services
+GOOGL,2018,21651.714284,1,0.95,136819.0,0.15825078595809064,Alphabet Inc. (Class A),Communication Services,Interactive Media & Services
+GS,2018,16646.847599999997,1,1.0,36616.0,0.4546331549049595,Goldman Sachs,Financials,Investment Banking & Brokerage
+GS,2019,16616.8176,1,1.0,36546.0,0.45468225250369393,Goldman Sachs,Financials,Investment Banking & Brokerage
+GS,2020,14344.836000000001,1,1.0,44560.0,0.3219218132854578,Goldman Sachs,Financials,Investment Banking & Brokerage
+GS,2021,13324.749600000001,1,1.0,59339.0,0.2245529853890359,Goldman Sachs,Financials,Investment Banking & Brokerage
+GS,2022,15861.54,1,1.0,47365.0,0.3348789190330413,Goldman Sachs,Financials,Investment Banking & Brokerage
+GS,2023,15642.091199999999,1,1.0,46254.0,0.3381781294590738,Goldman Sachs,Financials,Investment Banking & Brokerage
+HAL,2018,75304.032,2,0.9,23995.0,3.138321817045218,Halliburton,Energy,Oil & Gas Equipment & Services
+HAL,2019,79441.89600000001,2,1.0,22408.0,3.545247054623349,Halliburton,Energy,Oil & Gas Equipment & Services
+HAL,2020,69794.658,2,1.0,14445.0,4.831752024922118,Halliburton,Energy,Oil & Gas Equipment & Services
+HAL,2021,63723.246,2,1.0,15295.0,4.166279568486433,Halliburton,Energy,Oil & Gas Equipment & Services
+HAL,2022,49752.126,2,1.0,20297.0,2.4512058924964277,Halliburton,Energy,Oil & Gas Equipment & Services
+HAL,2023,53414.518,2,1.0,23018.0,2.3205542618820054,Halliburton,Energy,Oil & Gas Equipment & Services
+HES,2018,2841641.858549387,14,0.95,,,,,
+HES,2019,3578172.1982138027,14,0.95,,,,,
+HES,2020,2975325.147806654,14,0.95,,,,,
+HES,2021,2283106.6761364792,14,0.95,,,,,
+HES,2022,1573090.293670327,13,0.95,,,,,
+HES,2023,1458122.26156576,14,0.95,,,,,
+HII,2018,57499.79,1,1.0,8176.0,7.032753180039139,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+HII,2019,55379.852,1,1.0,8899.0,6.223154511742893,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+HII,2020,58398.06,1,1.0,9361.0,6.238442474094648,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+HII,2021,83062.38,1,1.0,9524.0,8.72137547249055,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+HII,2022,71823.93,1,1.0,10676.0,6.727606781566129,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+HII,2023,49706.725999999995,1,1.0,11454.0,4.339682730923695,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+HON,2018,867026.5418999998,9,0.9499999999999998,41802.0,20.741269362709915,Honeywell Technologies,Industrials,Industrial Conglomerates
+HON,2019,757095.4513000001,10,0.945,36709.0,20.624246133100876,Honeywell Technologies,Industrials,Industrial Conglomerates
+HON,2020,723723.2355000001,10,0.945,32637.0,22.174931381560807,Honeywell Technologies,Industrials,Industrial Conglomerates
+HON,2021,713795.359197,10,0.945,34392.0,20.754691765439638,Honeywell Technologies,Industrials,Industrial Conglomerates
+HON,2022,582799.3261000001,10,0.945,35466.0,16.432620709975755,Honeywell Technologies,Industrials,Industrial Conglomerates
+HON,2023,381602.9292,10,0.945,33009.0,11.560572243933473,Honeywell Technologies,Industrials,Industrial Conglomerates
+HPQ,2018,349750.20780000003,2,0.9,58472.0,5.981498970447394,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPQ,2019,350011.8036,3,0.9,58756.0,5.957039342365035,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPQ,2020,335624.429,3,0.9,56638.0,5.925781789611215,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPQ,2021,355605.5044,3,0.9,63460.0,5.603616520642924,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPQ,2022,348142.49460000003,3,0.9,62910.0,5.533977024320459,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPQ,2023,357133.7704,3,0.9,53718.0,6.648307278752001,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HRL,2018,50575.06,1,1.0,9545.7,5.298203379532144,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+HRL,2019,61277.02,1,1.0,9497.317,6.452034822045005,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+HRL,2020,58895.028,1,1.0,9608.462,6.1294958547996545,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+HRL,2021,65120.704000000005,1,1.0,11386.189,5.719271303155077,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+HRL,2022,60619.372,1,1.0,12458.806,4.8655843906711445,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+HRL,2023,58585.68,1,1.0,12110.01,4.837789564170468,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+HWM,2020,121121.35,3,1.0,5259.0,23.03125118843887,Howmet Aerospace,Industrials,Aerospace & Defense
+HWM,2021,111014.58600000001,3,1.0,4972.0,22.32795374094932,Howmet Aerospace,Industrials,Aerospace & Defense
+HWM,2022,116969.46200000001,3,1.0,5663.0,20.65503478721526,Howmet Aerospace,Industrials,Aerospace & Defense
+HWM,2023,124137.594,3,1.0,6640.0,18.69542078313253,Howmet Aerospace,Industrials,Aerospace & Defense
+IFF,2018,38374.052,1,1.0,3977.539,9.64768717541173,International Flavors & Fragrances,Materials,Specialty Chemicals
+IFF,2019,36254.367999999995,1,1.0,5140.0,7.053378988326847,International Flavors & Fragrances,Materials,Specialty Chemicals
+IFF,2020,57249.186,2,1.0,5084.0,11.260658143194336,International Flavors & Fragrances,Materials,Specialty Chemicals
+IFF,2021,247478.86599999998,5,1.0,11656.0,21.231886238846943,International Flavors & Fragrances,Materials,Specialty Chemicals
+IFF,2022,378029.132,7,1.0,12440.0,30.38819389067524,International Flavors & Fragrances,Materials,Specialty Chemicals
+IFF,2023,307088.216,7,1.0,11479.0,26.75217492812963,International Flavors & Fragrances,Materials,Specialty Chemicals
+INTC,2018,1544149.530148277,9,0.9833333333333333,70848.0,21.79524517485712,Intel,Information Technology,Semiconductors
+INTC,2019,1398143.3417721,8,0.98125,71965.0,19.42810174073647,Intel,Information Technology,Semiconductors
+INTC,2020,1646892.4564951,8,0.98125,77867.0,21.15006943243094,Intel,Information Technology,Semiconductors
+INTC,2021,1825900.7721035,8,0.98125,79024.0,23.105648563771766,Intel,Information Technology,Semiconductors
+INTC,2022,1443681.3987202,7,0.9857142857142858,63054.0,22.895952655187617,Intel,Information Technology,Semiconductors
+INTC,2023,1128104.6146605,7,0.9857142857142858,54228.0,20.802991345070815,Intel,Information Technology,Semiconductors
+IP,2018,8204943.14,61,1.0,23306.0,352.05282502359904,International Paper,Materials,Paper & Plastic Packaging Products & Materials
+IP,2019,8317863.09,60,1.0,18317.0,454.1061904241961,International Paper,Materials,Paper & Plastic Packaging Products & Materials
+IP,2020,8609821.33,59,1.0,17565.0,490.16916196982635,International Paper,Materials,Paper & Plastic Packaging Products & Materials
+IP,2021,8258994.462,57,1.0,19363.0,426.53485833806747,International Paper,Materials,Paper & Plastic Packaging Products & Materials
+IP,2022,7809995.9120000005,57,1.0,21161.0,369.07499229715046,International Paper,Materials,Paper & Plastic Packaging Products & Materials
+IP,2023,7710013.11,57,1.0,16033.0,480.88399613297577,International Paper,Materials,Paper & Plastic Packaging Products & Materials
+IR,2018,0.0,3,1.0,2689.8,0.0,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components
+IR,2019,0.0,3,1.0,2017.5,0.0,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components
+IR,2020,0.0,2,1.0,3973.2,0.0,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components
+IR,2021,0.0,2,1.0,5152.4,0.0,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components
+IR,2022,0.0,2,1.0,5916.3,0.0,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components
+IR,2023,0.0,1,1.0,6876.1,0.0,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components
+ITW,2018,9585.71124,1,1.0,14768.0,0.649086622426869,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components
+ITW,2019,9104.0432,1,1.0,14109.0,0.6452649514494294,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components
+ITW,2020,13372.613519999999,1,1.0,12574.0,1.06351308414188,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components
+ITW,2021,12134.68144,1,1.0,14455.0,0.8394798644067797,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components
+ITW,2022,24989.95492,1,1.0,15932.0,1.5685384710017576,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components
+ITW,2023,17549.74984,1,1.0,16107.0,1.0895728465884398,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components
+JCI,2018,56175.147999999994,2,1.0,23400.0,2.40064735042735,Johnson Controls,Industrials,Building Products
+JCI,2019,0.0,1,1.0,23968.0,0.0,Johnson Controls,Industrials,Building Products
+JCI,2020,0.0,1,1.0,22317.0,0.0,Johnson Controls,Industrials,Building Products
+JCI,2021,0.0,1,1.0,23668.0,0.0,Johnson Controls,Industrials,Building Products
+JCI,2022,0.0,1,1.0,20637.0,0.0,Johnson Controls,Industrials,Building Products
+JCI,2023,0.0,1,1.0,22331.0,0.0,Johnson Controls,Industrials,Building Products
+JNJ,2018,67369.5449,5,1.0,81581.0,0.8257994496267512,Johnson & Johnson,Health Care,Pharmaceuticals
+JNJ,2019,96743.3562,6,1.0,82059.0,1.1789487588198735,Johnson & Johnson,Health Care,Pharmaceuticals
+JNJ,2020,102151.34289999999,6,1.0,82584.0,1.2369386672963285,Johnson & Johnson,Health Care,Pharmaceuticals
+JNJ,2021,92766.3647,6,1.0,78740.0,1.178135187960376,Johnson & Johnson,Health Care,Pharmaceuticals
+JNJ,2022,91181.8018,6,1.0,79990.0,1.1399150118764845,Johnson & Johnson,Health Care,Pharmaceuticals
+JNJ,2023,91145.3959,6,1.0,85159.0,1.0702966908958538,Johnson & Johnson,Health Care,Pharmaceuticals
+KHC,2018,156625.71,5,1.0,26268.0,5.962605070808588,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+KHC,2019,136442.436,5,1.0,24977.0,5.46272314529367,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+KHC,2020,137824.032,5,1.0,26185.0,5.263472675195723,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+KHC,2021,135715.94,5,1.0,26042.0,5.211425389755012,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+KHC,2022,92284.952,5,1.0,26485.0,3.4844233339626207,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+KHC,2023,92176.752,5,1.0,26640.0,3.460088288288288,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+KKR,2018,16944.995,1,1.0,1841.326,9.20260453607889,KKR & Co.,Financials,Asset Management & Custody Banks
+KKR,2019,62292.932,1,1.0,1790.475,34.79128834527151,KKR & Co.,Financials,Asset Management & Custody Banks
+KKR,2020,84769.465,1,1.0,2006.791,42.24130215852074,KKR & Co.,Financials,Asset Management & Custody Banks
+KKR,2021,134377.88199999998,3,1.0,16226.04,8.281619051845057,KKR & Co.,Financials,Asset Management & Custody Banks
+KKR,2022,122999.10269999999,3,1.0,5704.18,21.56297709749692,KKR & Co.,Financials,Asset Management & Custody Banks
+KLAC,2018,31191.532,1,0.9,4036.701,7.726985971960767,KLA Corporation,Information Technology,Semiconductor Materials & Equipment
+KMB,2018,1072979.822,10,1.0,18486.0,58.04283360380828,Kimberly-Clark,Consumer Staples,Household Products
+KMB,2019,1111952.05,10,1.0,18450.0,60.268403794037944,Kimberly-Clark,Consumer Staples,Household Products
+KMB,2020,1044955.874,10,1.0,19140.0,54.59539571577847,Kimberly-Clark,Consumer Staples,Household Products
+KMB,2021,1055658.44,10,1.0,19440.0,54.30341769547325,Kimberly-Clark,Consumer Staples,Household Products
+KMB,2022,1096577.776,10,1.0,16952.0,64.68722133081643,Kimberly-Clark,Consumer Staples,Household Products
+KMB,2023,1030421.2660000001,10,1.0,17146.0,60.09688942027295,Kimberly-Clark,Consumer Staples,Household Products
+KMI,2018,10341201.39902,244,0.9993852459016394,13318.0,776.4830604460129,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+KMI,2019,11607894.70778,259,0.9984555984555985,12080.0,960.9184360745033,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+KMI,2020,12079885.1033,268,0.9996268656716417,10097.0,1196.383589511736,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+KMI,2021,11740156.0646322,280,0.999642857142857,16154.0,726.7646443377615,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+KMI,2022,11378591.0067014,281,0.9996441281138789,18128.0,627.6804394694065,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+KMI,2023,11825388.6862346,285,0.9996491228070175,13647.0,866.5192852813512,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+L,2018,3140640.146,43,1.0,3886.0,808.193552753474,Loews Corporation,Financials,Multi-line Insurance
+L,2019,3296116.134,44,1.0,3870.0,851.7095953488372,Loews Corporation,Financials,Multi-line Insurance
+L,2020,2571965.584,46,1.0,2820.0,912.0445333333332,Loews Corporation,Financials,Multi-line Insurance
+L,2021,2646368.876,48,1.0,2005.0,1319.8847261845387,Loews Corporation,Financials,Multi-line Insurance
+L,2022,2140049.054,49,1.0,2087.0,1025.418808816483,Loews Corporation,Financials,Multi-line Insurance
+L,2023,2049069.366,49,1.0,2360.0,868.2497313559322,Loews Corporation,Financials,Multi-line Insurance
+LII,2018,0.0,1,1.0,3883.9,0.0,Lennox International,Industrials,Building Products
+LII,2019,0.0,1,1.0,3807.2,0.0,Lennox International,Industrials,Building Products
+LII,2020,0.0,1,1.0,3634.1,0.0,Lennox International,Industrials,Building Products
+LII,2021,0.0,1,1.0,4194.1,0.0,Lennox International,Industrials,Building Products
+LII,2022,0.0,1,1.0,4718.4,0.0,Lennox International,Industrials,Building Products
+LII,2023,0.0,1,1.0,4981.9,0.0,Lennox International,Industrials,Building Products
+LIN,2018,10911404.418,29,0.9258620689655173,14836.0,735.468078862227,Linde plc,Materials,Industrial Gases
+LIN,2019,7983736.36,20,0.9375,28228.0,282.8303939350999,Linde plc,Materials,Industrial Gases
+LIN,2020,8154352.524,22,0.9659090909090909,27243.0,299.31918379033146,Linde plc,Materials,Industrial Gases
+LIN,2021,9451343.564,23,0.9847826086956522,30793.0,306.9315611989738,Linde plc,Materials,Industrial Gases
+LIN,2022,9799483.444,23,0.9847826086956522,33364.0,293.71428617671745,Linde plc,Materials,Industrial Gases
+LIN,2023,10074068.22,23,0.9847826086956522,32854.0,306.63140622146466,Linde plc,Materials,Industrial Gases
+LLY,2018,81534.0332,2,0.95,21493.3,3.793462762814459,Lilly (Eli),Health Care,Pharmaceuticals
+LLY,2019,24082.843999999997,1,0.9,22319.5,1.079004637200654,Lilly (Eli),Health Care,Pharmaceuticals
+LLY,2020,23322.406,1,0.95,24539.8,0.9503910382317704,Lilly (Eli),Health Care,Pharmaceuticals
+LLY,2021,22454.672,1,0.95,28318.4,0.792935759082434,Lilly (Eli),Health Care,Pharmaceuticals
+LLY,2022,40251.998,1,0.95,28541.4,1.4103021575676036,Lilly (Eli),Health Care,Pharmaceuticals
+LLY,2023,47574.076,1,0.95,34124.0,1.3941529715156489,Lilly (Eli),Health Care,Pharmaceuticals
+LMT,2018,122634.91199999998,4,1.0,53762.0,2.2810704958892893,Lockheed Martin,Industrials,Aerospace & Defense
+LMT,2019,114740.70999999999,4,1.0,59812.0,1.918356015515281,Lockheed Martin,Industrials,Aerospace & Defense
+LMT,2020,114075.418,4,1.0,65398.0,1.7443257897795041,Lockheed Martin,Industrials,Aerospace & Defense
+LMT,2021,118084.702,4,1.0,67044.0,1.7613015631525566,Lockheed Martin,Industrials,Aerospace & Defense
+LMT,2022,102743.324,4,1.0,65984.0,1.5570945077594567,Lockheed Martin,Industrials,Aerospace & Defense
+LMT,2023,95794.13399999999,4,1.0,67571.0,1.417681164996818,Lockheed Martin,Industrials,Aerospace & Defense
+LNT,2018,16923958.5642602,27,1.0,3534.0,4788.896028370175,Alliant Energy,Utilities,Electric Utilities
+LNT,2019,13730915.2553962,26,1.0,3648.0,3763.9570327292217,Alliant Energy,Utilities,Electric Utilities
+LNT,2020,12018305.2970296,26,1.0,3416.0,3518.239255570726,Alliant Energy,Utilities,Electric Utilities
+LNT,2021,15381271.5900352,26,1.0,3669.0,4192.224472617934,Alliant Energy,Utilities,Electric Utilities
+LNT,2022,13082344.0776604,26,1.0,4205.0,3111.140089812224,Alliant Energy,Utilities,Electric Utilities
+LNT,2023,13030631.687198,26,1.0,4027.0,3235.8161627012664,Alliant Energy,Utilities,Electric Utilities
+LUV,2018,40061.765999999996,1,1.0,21965.0,1.8238910084224902,Southwest Airlines,Industrials,Passenger Airlines
+LUV,2019,42300.297999999995,1,1.0,22428.0,1.8860485999643302,Southwest Airlines,Industrials,Passenger Airlines
+LUV,2020,40397.118,1,1.0,9048.0,4.464756631299735,Southwest Airlines,Industrials,Passenger Airlines
+LUV,2021,38164.568,1,1.0,15790.0,2.417008739708676,Southwest Airlines,Industrials,Passenger Airlines
+LUV,2022,35268.82,1,1.0,23814.0,1.4810120097421684,Southwest Airlines,Industrials,Passenger Airlines
+LUV,2023,34261.918000000005,1,1.0,26091.0,1.3131699819861258,Southwest Airlines,Industrials,Passenger Airlines
+LYB,2018,7830312.772000001,13,0.9655172413793103,38126.0,205.3798660231863,LyondellBasell,Materials,Specialty Chemicals
+LYB,2019,9110668.026,14,0.9832512315270936,33908.0,268.687862038457,LyondellBasell,Materials,Specialty Chemicals
+LYB,2020,7760790.401000001,15,0.984367816091954,26995.0,287.48992039266534,LyondellBasell,Materials,Specialty Chemicals
+LYB,2021,8339427.767,15,0.984367816091954,46173.0,180.61264736967493,LyondellBasell,Materials,Specialty Chemicals
+LYB,2022,8261408.4459999995,15,0.984367816091954,50451.0,163.75113369407939,LyondellBasell,Materials,Specialty Chemicals
+LYB,2023,8523906.445999999,15,0.984367816091954,33336.0,255.6967376409887,LyondellBasell,Materials,Specialty Chemicals
+MCHP,2018,504024.011773,4,1.0,5349.5,94.21890116328629,Microchip Technology,Information Technology,Semiconductors
+MCHP,2019,408359.47061099997,4,1.0,5274.2,77.42585996188996,Microchip Technology,Information Technology,Semiconductors
+MCHP,2020,329470.869183,4,1.0,5438.4,60.582316339916154,Microchip Technology,Information Technology,Semiconductors
+MCHP,2021,407320.122309,4,1.0,6820.9,59.71647763623569,Microchip Technology,Information Technology,Semiconductors
+MCHP,2022,417897.536461,4,1.0,8438.7,49.521553848460066,Microchip Technology,Information Technology,Semiconductors
+MCHP,2023,472938.201976,4,1.0,7634.4,61.94831315833596,Microchip Technology,Information Technology,Semiconductors
+MDLZ,2018,13247.400000000001,1,1.0,25938.0,0.510733287069165,Mondelez International,Consumer Staples,Packaged Foods & Meats
+MDLZ,2019,0.0,1,1.0,25868.0,0.0,Mondelez International,Consumer Staples,Packaged Foods & Meats
+MDLZ,2020,0.0,1,1.0,26581.0,0.0,Mondelez International,Consumer Staples,Packaged Foods & Meats
+MDLZ,2021,0.0,1,1.0,28720.0,0.0,Mondelez International,Consumer Staples,Packaged Foods & Meats
+MDLZ,2022,0.0,1,1.0,31496.0,0.0,Mondelez International,Consumer Staples,Packaged Foods & Meats
+MDLZ,2023,0.0,1,1.0,36016.0,0.0,Mondelez International,Consumer Staples,Packaged Foods & Meats
+MGM,2018,130246.06,1,1.0,11763.096,11.072430251355597,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+MGM,2019,138028.88,1,1.0,12899.672,10.700185245020183,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+MGM,2020,100925.81999999999,1,1.0,5162.082,19.551378687901508,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+MGM,2021,112944.124,1,1.0,9680.14,11.667612658494608,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+MGM,2022,113633.872,1,1.0,13127.485,8.656179915650256,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+MGM,2023,110103.336,1,1.0,16164.249,6.811534269238243,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+MLM,2018,3763179.79,4,1.0,4244.3,886.6432132507127,Martin Marietta Materials,Materials,Construction Materials
+MLM,2019,3939577.874,4,1.0,4739.1,831.2924129054039,Martin Marietta Materials,Materials,Construction Materials
+MLM,2020,3928503.108,4,1.0,4729.9,830.5678995327597,Martin Marietta Materials,Materials,Construction Materials
+MLM,2021,5198634.3100000005,6,1.0,5414.0,960.2205966014038,Martin Marietta Materials,Materials,Construction Materials
+MLM,2022,4635378.972,5,1.0,6161.0,752.3744476546016,Martin Marietta Materials,Materials,Construction Materials
+MLM,2023,3999044.1620000005,4,1.0,5851.0,683.4804583831824,Martin Marietta Materials,Materials,Construction Materials
+MMM,2018,1166836.604404,12,1.0,32765.0,35.612287636319245,3M,Industrials,Industrial Conglomerates
+MMM,2019,1212019.355115,12,1.0,32136.0,37.71531475961538,3M,Industrials,Industrial Conglomerates
+MMM,2020,1066631.228309,12,1.0,32184.0,33.14166133199726,3M,Industrials,Industrial Conglomerates
+MMM,2021,1113367.274187,12,1.0,35355.0,31.491083982095883,3M,Industrials,Industrial Conglomerates
+MMM,2022,1034537.637396,12,1.0,26161.0,39.54503411169298,3M,Industrials,Industrial Conglomerates
+MMM,2023,1007143.6889239999,12,1.0,24610.0,40.92416452352702,3M,Industrials,Industrial Conglomerates
+MO,2018,92514.75200000001,2,1.0,25364.0,3.647482731430374,Altria,Consumer Staples,Tobacco
+MO,2019,87832.068,2,1.0,25110.0,3.4978919952210275,Altria,Consumer Staples,Tobacco
+MO,2020,76442.01000000001,2,1.0,26153.0,2.9228772989714376,Altria,Consumer Staples,Tobacco
+MO,2021,75328.216,2,1.0,26013.0,2.895791181332411,Altria,Consumer Staples,Tobacco
+MO,2022,72567.758,2,1.0,25096.0,2.8916065508447564,Altria,Consumer Staples,Tobacco
+MO,2023,66467.196,2,1.0,24483.0,2.714830535473594,Altria,Consumer Staples,Tobacco
+MOS,2018,1642216.99,10,1.0,9587.3,171.29087334285984,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
+MOS,2019,1255351.092,10,1.0,8906.3,140.95091025453894,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
+MOS,2020,1493000.7939999998,10,1.0,8681.7,171.9710188096801,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
+MOS,2021,1342938.734,10,1.0,12357.4,108.67486154045349,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
+MOS,2022,1345898.668,10,1.0,19125.2,70.37305063476461,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
+MOS,2023,1584499.966,10,1.0,13696.1,115.68986543614605,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
+MPC,2018,37758316.491126396,115,0.9765217391304347,86086.0,438.6115801771066,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+MPC,2019,42438279.21153699,127,0.9807086614173228,111148.0,381.81774941102844,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+MPC,2020,35609213.5943834,127,0.9807086614173228,69779.0,510.31418613599226,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+MPC,2021,35507588.95198336,131,0.9801526717557252,119983.0,295.9384992205843,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+MPC,2022,36436824.97736929,131,0.9801526717557252,177453.0,205.33225686446153,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+MPC,2023,36089385.98237825,133,0.9796992481203008,148379.0,243.22435103605127,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+MRK,2018,410727.176,5,1.0,42294.0,9.711239797607226,Merck & Co.,Health Care,Pharmaceuticals
+MRK,2019,368932.926,5,1.0,39121.0,9.430559699394186,Merck & Co.,Health Care,Pharmaceuticals
+MRK,2020,365666.32,5,1.0,41518.0,8.80741654222265,Merck & Co.,Health Care,Pharmaceuticals
+MRK,2021,373974.924,5,1.0,48704.0,7.678525870565046,Merck & Co.,Health Care,Pharmaceuticals
+MRK,2022,374799.248,5,0.99,59283.0,6.32220447683147,Merck & Co.,Health Care,Pharmaceuticals
+MRK,2023,365529.70399999997,5,1.0,60115.0,6.080507427430757,Merck & Co.,Health Care,Pharmaceuticals
+MS,2018,111479.898,3,1.0,40107.0,2.7795621213254544,Morgan Stanley,Financials,Investment Banking & Brokerage
+MS,2019,0.0,2,1.0,41538.0,0.0,Morgan Stanley,Financials,Investment Banking & Brokerage
+MS,2020,0.0,2,1.0,48757.0,0.0,Morgan Stanley,Financials,Investment Banking & Brokerage
+MS,2021,0.0,2,1.0,59755.0,0.0,Morgan Stanley,Financials,Investment Banking & Brokerage
+MS,2022,0.0,2,1.0,53668.0,0.0,Morgan Stanley,Financials,Investment Banking & Brokerage
+MS,2023,0.0,2,1.0,54143.0,0.0,Morgan Stanley,Financials,Investment Banking & Brokerage
+MU,2018,516854.057879323,3,1.0,30391.0,17.006813131496923,Micron Technology,Information Technology,Semiconductors
+MU,2019,649697.873023,3,1.0,23406.0,27.757748996966587,Micron Technology,Information Technology,Semiconductors
+MU,2020,576747.2385482,3,1.0,21435.0,26.906799092521577,Micron Technology,Information Technology,Semiconductors
+MU,2021,311443.0330268,2,1.0,27705.0,11.241401661317452,Micron Technology,Information Technology,Semiconductors
+MU,2022,325147.6245568,2,1.0,30758.0,10.5711562701346,Micron Technology,Information Technology,Semiconductors
+MU,2023,303884.3484487,2,1.0,15540.0,19.55497737765122,Micron Technology,Information Technology,Semiconductors
+NEE,2018,4868997.93649744,17,0.9676470588235294,15400.0,316.1686971751584,NextEra Energy,Utilities,Multi-Utilities
+NEE,2019,44607559.89276704,34,0.9941176470588234,17500.0,2549.003422443831,NextEra Energy,Utilities,Multi-Utilities
+NEE,2020,42552748.826836,35,0.9942857142857142,17000.0,2503.1028721668235,NextEra Energy,Utilities,Multi-Utilities
+NEE,2021,41395397.80628,35,0.9942857142857142,18800.0,2201.8828620361705,NextEra Energy,Utilities,Multi-Utilities
+NEE,2022,41639437.930314,35,0.9942857142857142,23000.0,1810.4103447962607,NextEra Energy,Utilities,Multi-Utilities
+NEE,2023,42867507.677971,34,0.9941176470588234,24800.0,1728.5285354020564,NextEra Energy,Utilities,Multi-Utilities
+NEM,2018,1155081.4939999997,2,1.0,7253.0,159.25568647456222,Newmont,Materials,Gold
+NEM,2019,1114027.31892,2,1.0,9740.0,114.37652144969199,Newmont,Materials,Gold
+NEM,2020,616730.6915,3,1.0,11497.0,53.64274954335913,Newmont,Materials,Gold
+NEM,2021,713207.15851,3,1.0,12222.0,58.35437395761741,Newmont,Materials,Gold
+NEM,2022,679471.48731,3,1.0,11915.0,57.026562090642045,Newmont,Materials,Gold
+NEM,2023,567759.26746,3,1.0,11812.0,48.06631116322384,Newmont,Materials,Gold
+NI,2018,12361372.5592,15,1.0,4991.1,2476.6830075935163,NiSource,Utilities,Multi-Utilities
+NI,2019,9977356.690399999,15,1.0,5053.4,1974.3849072703526,NiSource,Utilities,Multi-Utilities
+NI,2020,6918113.076,14,1.0,4473.2,1546.569139765716,NiSource,Utilities,Multi-Utilities
+NI,2021,7808985.4251999995,14,1.0,4731.3,1650.4946685266204,NiSource,Utilities,Multi-Utilities
+NI,2022,5982209.1004,14,1.0,5738.6,1042.450963719374,NiSource,Utilities,Multi-Utilities
+NI,2023,5027591.002,14,1.0,5347.8,940.1232286173754,NiSource,Utilities,Multi-Utilities
+NOC,2018,122972.88200000001,4,1.0,30095.0,4.086156570858947,Northrop Grumman,Industrials,Aerospace & Defense
+NOC,2019,112717.91,4,1.0,33841.0,3.3308090777459296,Northrop Grumman,Industrials,Aerospace & Defense
+NOC,2020,76084.40400000001,3,1.0,36799.0,2.0675671621511458,Northrop Grumman,Industrials,Aerospace & Defense
+NOC,2021,99352.47,4,1.0,35667.0,2.7855572377828244,Northrop Grumman,Industrials,Aerospace & Defense
+NOC,2022,102901.802,4,1.0,36602.0,2.8113710179771596,Northrop Grumman,Industrials,Aerospace & Defense
+NOC,2023,110192.27799999999,4,1.0,39290.0,2.8045883939933822,Northrop Grumman,Industrials,Aerospace & Defense
+NRG,2018,39287627.266364,49,1.0,8148.0,4821.751014526755,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+NRG,2019,33406386.923636,44,1.0,7991.0,4180.501429562758,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+NRG,2020,25194701.124552,43,1.0,8690.0,2899.2751581762946,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+NRG,2021,31352196.791772,36,1.0,26777.0,1170.8629343007806,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+NRG,2022,32415366.511771996,36,1.0,31488.0,1029.4514263138972,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+NRG,2023,22461424.34004,36,1.0,28256.0,794.9258330988108,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+NSC,2018,15368.192,1,0.95,11458.0,1.3412630476522953,Norfolk Southern,Industrials,Rail Transportation
+NSC,2019,13966.848,1,0.95,11296.0,1.236441926345609,Norfolk Southern,Industrials,Rail Transportation
+NSC,2020,12121.503999999999,1,0.95,9789.0,1.2382780672183062,Norfolk Southern,Industrials,Rail Transportation
+NSC,2021,0.0,1,0.95,11142.0,0.0,Norfolk Southern,Industrials,Rail Transportation
+NSC,2022,0.0,1,0.95,12745.0,0.0,Norfolk Southern,Industrials,Rail Transportation
+NSC,2023,0.0,1,0.95,12156.0,0.0,Norfolk Southern,Industrials,Rail Transportation
+NTRS,2018,5419117.9384,25,1.0,3753.7,1443.6736921970323,Northern Trust,Financials,Asset Management & Custody Banks
+NTRS,2019,3987389.9704,25,1.0,3852.1,1035.1210950909895,Northern Trust,Financials,Asset Management & Custody Banks
+NTRS,2020,3173861.8398,25,1.0,3995.0,794.4585331163955,Northern Trust,Financials,Asset Management & Custody Banks
+NTRS,2021,4110429.1917999997,25,1.0,4361.1,942.5211968998645,Northern Trust,Financials,Asset Management & Custody Banks
+NTRS,2022,2778842.3488,16,1.0,4432.6,626.9102442810088,Northern Trust,Financials,Asset Management & Custody Banks
+NTRS,2023,2557381.1044,16,1.0,4361.8,586.3132432482003,Northern Trust,Financials,Asset Management & Custody Banks
+NUE,2018,5779559.61394,22,1.0,25067.279,230.5619055797799,Nucor,Materials,Steel
+NUE,2019,5554874.2794200005,22,1.0,22588.858,245.91213417783229,Nucor,Materials,Steel
+NUE,2020,5648350.36912,23,1.0,20139.658,280.45910060240345,Nucor,Materials,Steel
+NUE,2021,5744766.533779999,24,1.0,36483.939,157.46015071947136,Nucor,Materials,Steel
+NUE,2022,5329050.613580001,25,1.0,41512.0,128.37373804153017,Nucor,Materials,Steel
+NUE,2023,5497406.23368,26,1.0,34714.0,158.36279984098633,Nucor,Materials,Steel
+NWS,2018,0.0,2,1.0,9024.0,0.0,News Corp (Class B),Communication Services,Publishing
+NWS,2019,0.0,2,1.0,10074.0,0.0,News Corp (Class B),Communication Services,Publishing
+NWS,2020,0.0,2,1.0,9008.0,0.0,News Corp (Class B),Communication Services,Publishing
+NWS,2021,0.0,2,1.0,9358.0,0.0,News Corp (Class B),Communication Services,Publishing
+NWS,2022,0.0,2,1.0,8437.0,0.0,News Corp (Class B),Communication Services,Publishing
+NWS,2023,0.0,2,1.0,8012.0,0.0,News Corp (Class B),Communication Services,Publishing
+NXPI,2018,350983.376277,3,1.0,9407.0,37.310872358562776,NXP Semiconductors,Information Technology,Semiconductors
+NXPI,2019,297794.249967,3,1.0,8877.0,33.54672186177763,NXP Semiconductors,Information Technology,Semiconductors
+NXPI,2020,215472.6475477,3,1.0,8612.0,25.020047323235023,NXP Semiconductors,Information Technology,Semiconductors
+NXPI,2021,185441.2902786,2,1.0,11063.0,16.762296870523368,NXP Semiconductors,Information Technology,Semiconductors
+NXPI,2022,250411.93505,2,1.0,13205.0,18.9634180272624,NXP Semiconductors,Information Technology,Semiconductors
+NXPI,2023,151793.425308,2,1.0,13276.0,11.43367168635131,NXP Semiconductors,Information Technology,Semiconductors
+ODFL,2018,3619063.695,4,1.0,4043.695,894.9892845528656,Old Dominion,Industrials,Cargo Ground Transportation
+ODFL,2019,2627653.432,4,1.0,4109.111,639.4700537415514,Old Dominion,Industrials,Cargo Ground Transportation
+ODFL,2020,2317142.0870000003,4,1.0,4015.129,577.1027747800881,Old Dominion,Industrials,Cargo Ground Transportation
+ODFL,2021,2445355.7709999997,4,1.0,5256.328,465.2213048729074,Old Dominion,Industrials,Cargo Ground Transportation
+ODFL,2022,2183456.9850000003,4,1.0,6260.077,348.7907552894318,Old Dominion,Industrials,Cargo Ground Transportation
+ODFL,2023,2081715.861,4,1.0,5866.152,354.8690625473053,Old Dominion,Industrials,Cargo Ground Transportation
+OKE,2018,3226132.3726,38,0.9973684210526316,12593.196,256.1805893118792,Oneok,Energy,Oil & Gas Storage & Transportation
+OKE,2019,3808859.293,42,0.9964285714285714,10164.367,374.7266596139238,Oneok,Energy,Oil & Gas Storage & Transportation
+OKE,2020,3335150.5186,44,0.9965909090909091,8542.242,390.43034821537486,Oneok,Energy,Oil & Gas Storage & Transportation
+OKE,2021,3511353.861,45,0.9966666666666667,16540.0,212.29467116082225,Oneok,Energy,Oil & Gas Storage & Transportation
+OKE,2022,3812763.1406,54,0.9972222222222222,22387.0,170.31148169026667,Oneok,Energy,Oil & Gas Storage & Transportation
+OKE,2023,3886056.4206,56,0.9982142857142857,17677.0,219.83687393788537,Oneok,Energy,Oil & Gas Storage & Transportation
+OXY,2018,13064996.0491846,121,0.96900826446281,15560.0,839.6527023897557,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+OXY,2019,15873655.48453,123,0.9764227642276422,19192.0,827.0975137833473,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+OXY,2020,14861322.954458,121,0.9756198347107438,17130.0,867.561176559136,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+OXY,2021,13599907.730927315,123,0.9760162601626016,25959.0,523.8995235150551,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+OXY,2022,14087121.45816182,125,0.9763999999999999,36234.0,388.7818473853789,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+OXY,2023,15317522.890804,126,0.9761904761904762,23230.0,659.385402100904,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+PCG,2018,3152915.852,13,0.95,16759.0,188.13269598424728,PG&E Corporation,Utilities,Multi-Utilities
+PCG,2019,3269525.5884,13,0.95,17129.0,190.87661792282094,PG&E Corporation,Utilities,Multi-Utilities
+PCG,2020,3325553.7248000004,13,1.0,18469.0,180.06138528344798,PG&E Corporation,Utilities,Multi-Utilities
+PCG,2021,3161889.256,13,1.0,20642.0,153.17746613700223,PG&E Corporation,Utilities,Multi-Utilities
+PCG,2022,2785782.8592,13,0.9884615384615384,21680.0,128.49551933579335,PG&E Corporation,Utilities,Multi-Utilities
+PCG,2023,3254389.2656,13,0.9884615384615384,24428.0,133.22372955624692,PG&E Corporation,Utilities,Multi-Utilities
+PEG,2018,13104714.8244936,18,1.0,9696.0,1351.5588721631188,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2019,9210590.258,16,1.0,10076.0,914.111776300119,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2020,9175809.344,16,1.0,9603.0,955.5148749349162,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2021,9573770.4688,16,1.0,9722.0,984.7531854350957,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2022,514825.82560000004,7,1.0,9800.0,52.533247510204085,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2023,463035.34199999995,7,1.0,11237.0,41.206313250867666,Public Service Enterprise Group,Utilities,Electric Utilities
+PEP,2018,400694.908,10,1.0,64661.0,6.196856033776156,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
+PEP,2019,404761.992,10,1.0,67161.0,6.026741591101979,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
+PEP,2020,469217.58,11,1.0,70372.0,6.667674359120105,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
+PEP,2021,507103.116,12,1.0,79474.0,6.380742330825175,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
+PEP,2022,467068.72000000003,12,1.0,86392.0,5.406388554495787,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
+PEP,2023,317942.602,10,1.0,91471.0,3.47588418187185,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
+PFE,2018,253930.244,4,1.0,40825.0,6.219969234537661,Pfizer,Health Care,Pharmaceuticals
+PFE,2019,252419.188,4,1.0,40905.0,6.170863904168194,Pfizer,Health Care,Pharmaceuticals
+PFE,2020,278088.516,5,1.0,41651.0,6.676634798684305,Pfizer,Health Care,Pharmaceuticals
+PFE,2021,259956.966,5,1.0,73636.0,3.530297218751697,Pfizer,Health Care,Pharmaceuticals
+PFE,2022,258369.4,5,1.0,91793.0,2.8146961097251424,Pfizer,Health Care,Pharmaceuticals
+PFE,2023,225796.41,4,1.0,50914.0,4.434858977884275,Pfizer,Health Care,Pharmaceuticals
+PG,2018,1729523.73694,9,1.0,66832.0,25.878676935300454,Procter & Gamble,Consumer Staples,Personal Care Products
+PG,2019,1752006.006884,10,1.0,67684.0,25.885083725607235,Procter & Gamble,Consumer Staples,Personal Care Products
+PG,2020,1838618.282908,10,1.0,70950.0,25.914281647751938,Procter & Gamble,Consumer Staples,Personal Care Products
+PG,2021,1762280.9647320001,10,1.0,76118.0,23.151960964975434,Procter & Gamble,Consumer Staples,Personal Care Products
+PG,2022,1722790.5148939998,10,1.0,80187.0,21.48466104099168,Procter & Gamble,Consumer Staples,Personal Care Products
+PG,2023,1660556.136144,10,1.0,82006.0,20.24920293812648,Procter & Gamble,Consumer Staples,Personal Care Products
+PGR,2018,615304.1499999999,4,1.0,31979.0,19.240881515994868,Progressive Corporation,Financials,Property & Casualty Insurance
+PKG,2018,1517339.808,9,1.0,7014.6,216.31166538362842,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials
+PKG,2019,1609839.682,9,1.0,6964.3,231.15599299283488,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials
+PKG,2020,1531539.41,9,1.0,6658.2,230.02304076176745,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials
+PKG,2021,1686484.61,9,1.0,7730.3,218.16547999430813,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials
+PKG,2022,1472354.972,9,1.0,8478.0,173.66772493512622,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials
+PKG,2023,1498344.226,9,1.0,7802.4,192.03632548959297,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials
+PNW,2018,12464317.777112,11,0.9818181818181819,3691.247,3376.72276526388,Pinnacle West Capital,Utilities,Multi-Utilities
+PNW,2019,12629783.016604586,11,1.0,3471.209,3638.4392344582498,Pinnacle West Capital,Utilities,Multi-Utilities
+PNW,2020,11260444.8878768,11,1.0,3586.982,3139.253246288049,Pinnacle West Capital,Utilities,Multi-Utilities
+PNW,2021,11398193.5525274,11,1.0,3803.835,2996.50051922005,Pinnacle West Capital,Utilities,Multi-Utilities
+PNW,2022,12690343.914169168,11,1.0,4324.385,2934.600854033387,Pinnacle West Capital,Utilities,Multi-Utilities
+PNW,2023,10549462.589899998,11,1.0,4695.991,2246.4827104438655,Pinnacle West Capital,Utilities,Multi-Utilities
+POR,2018,6243239.2386799995,11,0.95,,,,,
+POR,2019,7656851.306655999,11,0.95,,,,,
+POR,2020,5962054.894164,11,0.95,,,,,
+POR,2021,5198017.114444,11,0.95,,,,,
+POR,2022,5043542.289632,11,0.95,,,,,
+POR,2023,6253145.022396,11,0.95,,,,,
+PPG,2018,43377.27,3,1.0,15374.0,2.821469363861064,PPG Industries,Materials,Specialty Chemicals
+PPG,2019,41808.682,3,1.0,15146.0,2.760377789515384,PPG Industries,Materials,Specialty Chemicals
+PPG,2020,33155.306,3,1.0,13834.0,2.3966536070550815,PPG Industries,Materials,Specialty Chemicals
+PPG,2021,101330.31,3,1.0,16802.0,6.030848113319843,PPG Industries,Materials,Specialty Chemicals
+PPG,2022,109908.678,3,1.0,15614.0,7.039110926091968,PPG Industries,Materials,Specialty Chemicals
+PPG,2023,198602.998,3,1.0,16242.0,12.227742765669252,PPG Industries,Materials,Specialty Chemicals
+PPL,2018,5152.8,1,1.0,7779.0,0.6623987659082144,PPL Corporation,Utilities,Electric Utilities
+PPL,2019,28493455.24,9,1.0,5541.0,5142.294755459303,PPL Corporation,Utilities,Electric Utilities
+PPL,2020,26970181.802,9,1.0,5429.0,4967.79918990606,PPL Corporation,Utilities,Electric Utilities
+PPL,2021,28346504.8116,9,1.0,5838.0,4855.516411716341,PPL Corporation,Utilities,Electric Utilities
+PPL,2022,28907123.6056,10,1.0,7786.0,3712.7053179553045,PPL Corporation,Utilities,Electric Utilities
+PPL,2023,26919146.4032,10,1.0,8290.0,3247.182919565742,PPL Corporation,Utilities,Electric Utilities
+PSX,2018,28028909.7637,57,1.0,111461.0,251.46831415203525,Phillips 66,Energy,Oil & Gas Refining & Marketing
+PSX,2019,29030633.83285,58,1.0,107293.0,270.57341888893035,Phillips 66,Energy,Oil & Gas Refining & Marketing
+PSX,2020,24716854.73565,58,1.0,64129.0,385.4239850247158,Phillips 66,Energy,Oil & Gas Refining & Marketing
+PSX,2021,26946065.7824,61,1.0,111476.0,241.7207809968065,Phillips 66,Energy,Oil & Gas Refining & Marketing
+PSX,2022,24921501.5494,61,1.0,169990.0,146.6056918018707,Phillips 66,Energy,Oil & Gas Refining & Marketing
+PSX,2023,31338847.363247335,100,1.0,147399.0,212.61234718856528,Phillips 66,Energy,Oil & Gas Refining & Marketing
+QCOM,2018,64571.85600000001,2,1.0,22611.0,2.855771792490381,Qualcomm,Information Technology,Semiconductors
+QCOM,2019,62144.22000000001,2,1.0,24273.0,2.560219997528118,Qualcomm,Information Technology,Semiconductors
+QCOM,2020,62487.216,2,1.0,23531.0,2.655527431898347,Qualcomm,Information Technology,Semiconductors
+QCOM,2021,62333.664000000004,2,1.0,33566.0,1.8570477268664722,Qualcomm,Information Technology,Semiconductors
+QCOM,2022,61074.468,2,1.0,44200.0,1.381775294117647,Qualcomm,Information Technology,Semiconductors
+QCOM,2023,48566.816000000006,2,1.0,35820.0,1.3558575097710779,Qualcomm,Information Technology,Semiconductors
+RSG,2018,9823503.7765,194,1.0,10040.9,978.3489305241562,Republic Services,Industrials,Environmental & Facilities Services
+RSG,2019,10361741.588,194,1.0,10299.4,1006.0529339573179,Republic Services,Industrials,Environmental & Facilities Services
+RSG,2020,10053218.589,193,1.0,10153.6,990.1137122793886,Republic Services,Industrials,Environmental & Facilities Services
+RSG,2021,10052098.7085,193,1.0,11295.0,889.9600450199202,Republic Services,Industrials,Environmental & Facilities Services
+RSG,2022,10821517.558,207,1.0,13511.0,800.9412743690326,Republic Services,Industrials,Environmental & Facilities Services
+RSG,2023,10721712.294,207,1.0,14965.0,716.4525421984631,Republic Services,Industrials,Environmental & Facilities Services
+RTX,2020,156351.208,4,0.9,56587.0,2.763023450615866,RTX Corporation,Industrials,Aerospace & Defense
+RTX,2021,173380.69,4,0.9,64388.0,2.692748493508107,RTX Corporation,Industrials,Aerospace & Defense
+RTX,2022,148676.422,4,0.9,67074.0,2.216602886364314,RTX Corporation,Industrials,Aerospace & Defense
+RTX,2023,172793.29,4,0.975,68920.0,2.507157428903076,RTX Corporation,Industrials,Aerospace & Defense
+SJM,2018,23006.564,1,0.9523809523809524,7838.0,2.935259504975759,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
+SJM,2019,23912.46,1,0.9523809523809524,7801.0,3.0653070119215484,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
+SJM,2020,23380.912,1,0.9523809523809524,8002.7,2.921627950566684,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
+SJM,2021,24395.307999999997,1,0.9523809523809524,7998.9,3.0498328520171523,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
+SJM,2022,22250.916,1,0.9523809523809524,8529.2,2.6087928527880693,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
+SJM,2023,0.0,1,0.9523809523809524,8178.7,0.0,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
+SO,2018,107012929.3432812,76,1.0,23495.0,4554.710761578259,Southern Company,Utilities,Electric Utilities
+SO,2019,94537482.68761663,104,1.0,21419.0,4413.720653980888,Southern Company,Utilities,Electric Utilities
+SO,2020,81667856.43817572,104,1.0,20375.0,4008.2383527939005,Southern Company,Utilities,Electric Utilities
+SO,2021,87648327.28744991,98,1.0,23113.0,3792.1657633128502,Southern Company,Utilities,Electric Utilities
+SO,2022,89812003.46184452,98,1.0,29279.0,3067.454607802333,Southern Company,Utilities,Electric Utilities
+SO,2023,81839114.5055144,98,1.0,25253.0,3240.76800797982,Southern Company,Utilities,Electric Utilities
+SRE,2018,13886499.054577673,20,0.985,9447.0,1469.9374462345372,Sempra,Utilities,Multi-Utilities
+SRE,2019,12043443.1808,21,0.9880952380952381,10141.0,1187.5991697860172,Sempra,Utilities,Multi-Utilities
+SRE,2020,13982389.713704,21,0.9904761904761905,10310.0,1356.1968684484966,Sempra,Utilities,Multi-Utilities
+SRE,2021,5483354.36776812,18,0.9972222222222222,11676.0,469.62610206989723,Sempra,Utilities,Multi-Utilities
+SRE,2022,5799701.3546345355,18,0.9972222222222222,13722.0,422.6571457975904,Sempra,Utilities,Multi-Utilities
+SRE,2023,5351909.778330039,18,0.9972222222222222,14848.0,360.446509855202,Sempra,Utilities,Multi-Utilities
+STLD,2018,24426792.20718,25,1.0,11801.609,2069.7849087510017,Steel Dynamics,Materials,Steel
+STLD,2019,24362831.403839998,25,1.0,10451.132,2331.118906912667,Steel Dynamics,Materials,Steel
+STLD,2020,19958199.202,25,1.0,9587.691,2081.6481467748595,Steel Dynamics,Materials,Steel
+STLD,2021,21839354.545999996,26,1.0,18408.85,1186.3508337565897,Steel Dynamics,Materials,Steel
+STLD,2022,21054503.332000002,27,1.0,22260.774,945.8118272078051,Steel Dynamics,Materials,Steel
+STLD,2023,22404681.22084,29,1.0,18795.316,1192.03535715175,Steel Dynamics,Materials,Steel
+SW,2018,6717052.68304,35,0.9485714285714284,,,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials
+SW,2019,6898630.25552,36,0.9486111111111111,,,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials
+SW,2020,6895817.83712,36,0.9486111111111111,,,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials
+SW,2021,7054762.86552,36,0.9486111111111111,,,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials
+SW,2022,6613916.25896,36,0.9486111111111111,13509.0,489.5933273343697,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials
+SW,2023,5923601.84088,35,0.9485714285714284,12093.0,489.83724806747705,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials
+SWKS,2018,40508.017379,2,1.0,3868.0,10.472600149689761,Skyworks Solutions,Information Technology,Semiconductors
+SWKS,2019,33708.065182,2,1.0,3376.8,9.982251001539918,Skyworks Solutions,Information Technology,Semiconductors
+SWKS,2020,32848.104590999996,2,1.0,3355.7,9.78874887236642,Skyworks Solutions,Information Technology,Semiconductors
+SWKS,2021,42201.42397,2,1.0,5109.1,8.26005049225891,Skyworks Solutions,Information Technology,Semiconductors
+SWKS,2022,35693.24597,2,1.0,5485.5,6.506835469875126,Skyworks Solutions,Information Technology,Semiconductors
+SWKS,2023,24116.71997,2,1.0,4772.4,5.053373558377336,Skyworks Solutions,Information Technology,Semiconductors
+T,2018,0.0,1,1.0,170756.0,0.0,AT&T,Communication Services,Integrated Telecommunication Services
+T,2019,0.0,1,1.0,181193.0,0.0,AT&T,Communication Services,Integrated Telecommunication Services
+T,2020,0.0,1,1.0,143050.0,0.0,AT&T,Communication Services,Integrated Telecommunication Services
+T,2021,0.0,1,1.0,134038.0,0.0,AT&T,Communication Services,Integrated Telecommunication Services
+T,2022,0.0,1,1.0,120741.0,0.0,AT&T,Communication Services,Integrated Telecommunication Services
+T,2023,0.0,1,1.0,122428.0,0.0,AT&T,Communication Services,Integrated Telecommunication Services
+TAP,2018,30258.136000000002,1,0.9,13338.0,2.2685662018293598,Molson Coors Beverage Company,Consumer Staples,Brewers
+TAP,2019,30167.336,1,1.0,13009.1,2.318941048958037,Molson Coors Beverage Company,Consumer Staples,Brewers
+TAP,2020,411297.402,6,1.0,11723.8,35.08226018867603,Molson Coors Beverage Company,Consumer Staples,Brewers
+TAP,2021,385290.02599999995,6,1.0,12449.9,30.94723861235833,Molson Coors Beverage Company,Consumer Staples,Brewers
+TAP,2022,372303.754,6,1.0,12807.5,29.06919804801874,Molson Coors Beverage Company,Consumer Staples,Brewers
+TAP,2023,377025.74,6,1.0,13884.6,27.15423850885153,Molson Coors Beverage Company,Consumer Staples,Brewers
+TGT,2018,0.0,1,1.0,75356.0,0.0,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail
+TGT,2019,0.0,1,1.0,78112.0,0.0,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail
+TGT,2020,0.0,1,1.0,93561.0,0.0,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail
+TGT,2021,0.0,1,1.0,106005.0,0.0,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail
+TGT,2022,0.0,1,1.0,109120.0,0.0,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail
+TGT,2023,0.0,1,1.0,107412.0,0.0,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail
+TMO,2020,25749.852,1,1.0,32218.0,0.7992380656775715,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services
+TMO,2021,26942.232,1,1.0,39211.0,0.6871090255285507,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services
+TMO,2022,28940.316,1,1.0,44915.0,0.6443352109540242,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services
+TMO,2023,28392.342,1,1.0,42857.0,0.6624901883006277,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services
+TRGP,2018,6380195.866149756,76,1.0,9350.9,682.3082127014252,Targa Resources,Energy,Oil & Gas Storage & Transportation
+TRGP,2019,7229944.398597171,79,1.0,7397.9,977.2968543231418,Targa Resources,Energy,Oil & Gas Storage & Transportation
+TRGP,2020,7548955.79908875,82,1.0,6874.1,1098.1736953330253,Targa Resources,Energy,Oil & Gas Storage & Transportation
+TRGP,2021,6784142.078443386,82,1.0,16093.1,421.5559512115991,Targa Resources,Energy,Oil & Gas Storage & Transportation
+TRGP,2022,7991300.285168226,85,1.0,19820.7,403.1795186430462,Targa Resources,Energy,Oil & Gas Storage & Transportation
+TRGP,2023,8471488.696985682,87,1.0,13521.0,626.5430587224083,Targa Resources,Energy,Oil & Gas Storage & Transportation
+TSLA,2018,22048.216,1,0.9,21461.268,1.0273491761996543,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+TSLA,2019,23612.812,1,1.0,24578.0,0.960729595573277,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+TSLA,2020,28075.544,1,1.0,31536.0,0.89026966007103,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+TSLA,2021,40381.348,1,1.0,53823.0,0.7502619326310314,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+TSLA,2022,45630.528,1,1.0,81462.0,0.5601449510201075,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+TSLA,2023,80515.196,2,1.0,96773.0,0.8320006200076467,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+TSN,2018,1863858.768,35,1.0,40052.0,46.535972435833415,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+TSN,2019,1835359.778,35,1.0,42405.0,43.281683244900364,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+TSN,2020,1951980.286,36,1.0,43185.0,45.200423434062756,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+TSN,2021,1923290.668,36,1.0,47049.0,40.87846007354035,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+TSN,2022,1880822.458,36,1.0,53282.0,35.2993967568785,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+TSN,2023,1874907.486,37,1.0,52881.0,35.45521994667272,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+TT,2020,0.0,1,1.0,12454.7,0.0,Trane Technologies,Industrials,Building Products
+TT,2021,0.0,1,1.0,14136.4,0.0,Trane Technologies,Industrials,Building Products
+TT,2022,0.0,1,1.0,15991.7,0.0,Trane Technologies,Industrials,Building Products
+TT,2023,0.0,2,1.0,17677.6,0.0,Trane Technologies,Industrials,Building Products
+TXN,2018,1090225.5926211001,6,1.0,15784.0,69.07156567543716,Texas Instruments,Information Technology,Semiconductors
+TXN,2019,967875.1092430999,6,1.0,14383.0,67.29299236898422,Texas Instruments,Information Technology,Semiconductors
+TXN,2020,915417.035588,6,1.0,14461.0,63.30247116990526,Texas Instruments,Information Technology,Semiconductors
+TXN,2021,1142553.5183359,7,1.0,18344.0,62.28486253466529,Texas Instruments,Information Technology,Semiconductors
+TXN,2022,1064891.4796763002,7,1.0,20028.0,53.17013579370382,Texas Instruments,Information Technology,Semiconductors
+TXN,2023,1057774.335383,7,1.0,17519.0,60.37869372584052,Texas Instruments,Information Technology,Semiconductors
+TXT,2018,43296.312,2,1.0,13972.0,3.0987912968794733,Textron,Industrials,Aerospace & Defense
+TXT,2019,66576.724,2,1.0,13630.0,4.884572560528246,Textron,Industrials,Aerospace & Defense
+TXT,2020,58038.454,2,1.0,11651.0,4.981413955883615,Textron,Industrials,Aerospace & Defense
+TXT,2021,57192.81999999999,2,1.0,12382.0,4.619029235987724,Textron,Industrials,Aerospace & Defense
+TXT,2022,59450.2,2,1.0,12869.0,4.619644105991141,Textron,Industrials,Aerospace & Defense
+TXT,2023,55579.572,2,1.0,13683.0,4.061943433457575,Textron,Industrials,Aerospace & Defense
+VLO,2018,23888366.162,26,1.0,117033.0,204.11649844061077,Valero Energy,Energy,Oil & Gas Refining & Marketing
+VLO,2019,23485398.143999998,29,1.0,108324.0,216.80696931427937,Valero Energy,Energy,Oil & Gas Refining & Marketing
+VLO,2020,21664469.344,29,1.0,64912.0,333.7513763864925,Valero Energy,Energy,Oil & Gas Refining & Marketing
+VLO,2021,22924978.548,29,1.0,113977.0,201.13688330101687,Valero Energy,Energy,Oil & Gas Refining & Marketing
+VLO,2022,23182768.272,29,1.0,176383.0,131.43425541010188,Valero Energy,Energy,Oil & Gas Refining & Marketing
+VLO,2023,23517862.268,29,1.0,144766.0,162.45432123564925,Valero Energy,Energy,Oil & Gas Refining & Marketing
+VST,2018,140086384.11028358,80,0.9493750000000001,9797.0,14298.90620703109,Vistra Corp.,Utilities,Electric Utilities
+VST,2019,123209376.0038002,82,0.949390243902439,11547.0,10670.249935377171,Vistra Corp.,Utilities,Electric Utilities
+VST,2020,105763494.6409128,81,0.9753086419753086,10850.0,9747.787524508092,Vistra Corp.,Utilities,Electric Utilities
+VST,2021,114124688.4184736,80,0.97625,17700.0,6447.722509518283,Vistra Corp.,Utilities,Electric Utilities
+VST,2022,109615583.9046464,80,0.97625,15631.0,7012.704491372682,Vistra Corp.,Utilities,Electric Utilities
+VST,2023,96800091.59904152,81,0.9759259259259259,13804.0,7012.466792164701,Vistra Corp.,Utilities,Electric Utilities
+VTRS,2021,27448.03,1,1.0,17813.6,1.5408468810347151,Viatris,Health Care,Pharmaceuticals
+VTRS,2022,28221.464,1,1.0,16218.1,1.7401214692226585,Viatris,Health Care,Pharmaceuticals
+VTRS,2023,26031.806,1,1.0,15388.4,1.6916512437940268,Viatris,Health Care,Pharmaceuticals
+WAB,2019,59700.075999999994,1,1.0,8200.0,7.280497073170731,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment
+WAB,2020,56168.988000000005,1,1.0,7556.0,7.433693488618317,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment
+WAB,2021,42422.53999999999,1,1.0,7822.0,5.423490155970339,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment
+WAB,2022,40785.896,1,1.0,8362.0,4.877528820856255,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment
+WAB,2023,35202.768,1,1.0,9677.0,3.6377769970032032,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment
+WEC,2018,24191353.03424,24,1.0,7679.5,3150.1208456592226,WEC Energy Group,Utilities,Electric Utilities
+WEC,2019,20016080.44984,26,1.0,7523.1,2660.616029275166,WEC Energy Group,Utilities,Electric Utilities
+WEC,2020,18219125.0896,26,1.0,7241.7,2515.863000345223,WEC Energy Group,Utilities,Electric Utilities
+WEC,2021,19836361.52856,26,1.0,8316.0,2385.3248591341994,WEC Energy Group,Utilities,Electric Utilities
+WEC,2022,18007795.13664,27,1.0,9597.4,1876.3201634442664,WEC Energy Group,Utilities,Electric Utilities
+WEC,2023,17942097.185119998,27,1.0,8893.0,2017.5528151489934,WEC Energy Group,Utilities,Electric Utilities
+WFC,2018,15724.382399999999,1,1.0,86408.0,0.18197831682251642,Wells Fargo,Financials,Diversified Banks
+WFC,2019,29976.377979999997,2,1.0,85063.0,0.35240207822437486,Wells Fargo,Financials,Diversified Banks
+WFC,2020,31980.13679,2,1.0,74264.0,0.43062771719810405,Wells Fargo,Financials,Diversified Banks
+WFC,2021,4813.18812,1,1.0,79166.0,0.06079867771518076,Wells Fargo,Financials,Diversified Banks
+WFC,2022,2911.887636,1,1.0,74368.0,0.039155115587349396,Wells Fargo,Financials,Diversified Banks
+WHR,2018,22027.768,3,0.9499999999999998,,,,,
+WHR,2019,22835.564,3,0.9499999999999998,,,,,
+WHR,2020,0.0,3,0.9499999999999998,,,,,
+WHR,2021,0.0,3,0.9499999999999998,,,,,
+WHR,2022,0.0,3,0.9499999999999998,,,,,
+WHR,2023,0.0,3,0.9499999999999998,,,,,
+WM,2018,16239181.194,292,1.0,14914.0,1088.8548473917124,Waste Management,Industrials,Environmental & Facilities Services
+WM,2019,15927479.859773,285,1.0,15455.0,1030.5713270639276,Waste Management,Industrials,Environmental & Facilities Services
+WM,2020,16804745.5,297,1.0,15218.0,1104.2676764357998,Waste Management,Industrials,Environmental & Facilities Services
+WM,2021,15733424.4,298,1.0,17931.0,877.4426635435838,Waste Management,Industrials,Environmental & Facilities Services
+WM,2022,14858365.166226,295,1.0,19698.0,754.3083138504417,Waste Management,Industrials,Environmental & Facilities Services
+WM,2023,14429168.964,294,1.0,20426.0,706.4118752570254,Waste Management,Industrials,Environmental & Facilities Services
+WMB,2018,9584515.123188,173,0.9502890173410405,8604.0,1113.9603815885635,Williams Companies,Energy,Oil & Gas Storage & Transportation
+WMB,2019,9957020.388146,175,0.9502857142857144,8140.0,1223.221177904914,Williams Companies,Energy,Oil & Gas Storage & Transportation
+WMB,2020,9271800.13558562,175,0.9502857142857144,7653.0,1211.5249099158002,Williams Companies,Energy,Oil & Gas Storage & Transportation
+WMB,2021,9086084.862390399,178,0.949438202247191,12784.0,710.738803378473,Williams Companies,Energy,Oil & Gas Storage & Transportation
+WMB,2022,9783012.9277428,183,0.9486338797814208,17773.0,550.4424085828391,Williams Companies,Energy,Oil & Gas Storage & Transportation
+WMB,2023,10090912.8062326,185,0.9481081081081082,11996.0,841.1897971184228,Williams Companies,Energy,Oil & Gas Storage & Transportation
+WY,2018,35633.090000000004,1,1.0,7476.0,4.7663309256286785,Weyerhaeuser,Real Estate,Timber REITs
+WY,2019,35995.442,1,1.0,6554.0,5.492133353677144,Weyerhaeuser,Real Estate,Timber REITs
+WY,2020,33020.176,1,1.0,7532.0,4.383985130111524,Weyerhaeuser,Real Estate,Timber REITs
+WY,2021,35530.356,1,1.0,10201.0,3.4830267620821487,Weyerhaeuser,Real Estate,Timber REITs
+WY,2022,36381.648,1,1.0,10184.0,3.572432050274941,Weyerhaeuser,Real Estate,Timber REITs
+WY,2023,41144.524,2,1.0,7674.0,5.361548605681522,Weyerhaeuser,Real Estate,Timber REITs
+XEL,2018,46923088.0558924,43,1.0,11537.0,4067.182807999688,Xcel Energy,Utilities,Multi-Utilities
+XEL,2019,43084156.1267166,43,1.0,,,Xcel Energy,Utilities,Multi-Utilities
+XEL,2020,35750399.0804798,43,1.0,,,Xcel Energy,Utilities,Multi-Utilities
+XEL,2021,38629182.6108728,43,1.0,,,Xcel Energy,Utilities,Multi-Utilities
+XEL,2022,37521757.7437154,44,1.0,,,Xcel Energy,Utilities,Multi-Utilities
+XEL,2023,36005568.0614756,44,1.0,,,Xcel Energy,Utilities,Multi-Utilities
+XOM,2018,44283426.11630614,178,0.9862359550561799,,,ExxonMobil,Energy,Integrated Oil & Gas
+XOM,2019,45124317.19918423,174,0.9612068965517241,,,ExxonMobil,Energy,Integrated Oil & Gas
+XOM,2020,43819001.075101845,174,0.9612068965517241,,,ExxonMobil,Energy,Integrated Oil & Gas
+XOM,2021,46502936.39295168,181,0.9607734806629834,,,ExxonMobil,Energy,Integrated Oil & Gas
+XOM,2022,45675142.12608484,180,0.9608333333333333,,,ExxonMobil,Energy,Integrated Oil & Gas
+XOM,2023,41638144.029844284,155,0.9625806451612903,,,ExxonMobil,Energy,Integrated Oil & Gas

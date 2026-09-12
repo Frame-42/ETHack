@@ -1,0 +1,10 @@
+.venv/
+.claude/
+__pycache__/
+*.pyc
+data/raw/
+data/out/*.parquet
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
