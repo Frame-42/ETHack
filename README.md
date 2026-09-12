@@ -3,8 +3,11 @@
 Ein branchenrelatives Ranking der 500 größten US-Börsenfirmen auf physisch
 gemessenen Emissionen, mit Unsicherheitsanalyse statt Schein-Präzision.
 
-**Bericht:** [`report/analyse_ranking.pdf`](report/analyse_ranking.pdf) — Methodik,
-Ergebnisse beider Datenperioden, zehn Schwachstellen und neun Verbesserungsvorschläge.
+**Berichte:**
+- [`report/analyse_ranking.pdf`](report/analyse_ranking.pdf) — Methodik, Ergebnisse
+  beider Datenperioden, zehn Schwachstellen und neun Verbesserungsvorschläge.
+- [`report/datenluecke.pdf`](report/datenluecke.pdf) — geprüfte kostenlose Quellen
+  gegen die Datenlücke: was sie schließen, was Sackgasse ist, was einen Account braucht.
 
 ## Die Grundidee
 
@@ -81,6 +84,24 @@ den Kombinationsraum auf.
 | Climate TRACE | REST, ohne Anmeldung | `Owners` leer → keine Firmenzuordnung |
 | SBTi | **kein API** (404) | nur über die Dashboard-Seite |
 
+Gefunden im Folgebericht, alles ohne Anmeldung außer wo vermerkt:
+
+| Quelle | bis FJ | Zugang | Bringt |
+|---|---|---|---|
+| EPA CAMPD | **2026** | Schlüssel nötig | Kraftwerks-CO₂ (CEMS), Eigentümer **und** Betreiber getrennt |
+| PUDL auf Zenodo | **2026** | frei | Public-Domain-Spiegel derselben CEMS-Daten |
+| PUDL SEC-Exhibit-21 | 2026 | frei | 916 290 Tochtereinträge, 478 von 500 Müttern — ersetzt `OVERRIDES` |
+| SBTi-Excel | **2026** | frei | Zielstatus + Zwischenziele für 241 Indexfirmen, 50 mit zurückgezogener Zusage |
+| SEC-Volltextsuche | **2026** | frei | 215 Indexfirmen mit Selbstauskunft, 80 % Extraktionsausbeute |
+| CARB SB 253 | ab 11/2026 | frei | Scope 1+2 verpflichtend, Scope 3 ab 2027 |
+
+Sackgassen (geprüft): CDP-Offenportal (nur Städte), iShares (nur Fondsaggregate),
+TPI (Lizenz untersagt automatisiertes Auslesen), Climate TRACE (`Owners` leer).
+
+**Accounts:** nur [EPA CAM API](https://www.epa.gov/power-sector/cam-api-portal)
+(wichtig) und [EIA](https://www.eia.gov/opendata/register.php) (nachrangig) —
+beide kostenlos. Schlüssel als `EPA_CAMD_API_KEY` setzen.
+
 Zwei Punkte, die man kennen muss:
 
 - Die EPA-Emissionstabelle mischt Direktemittenten, Kraftstoff-Lieferanten und
@@ -90,7 +111,8 @@ Zwei Punkte, die man kennen muss:
 - Für Geschäftsjahre ab 2024 gibt es **keine** freien Emissionsdaten auf
   Firmenebene. Der Rückwärtstest in `analysis.staleness_backtest` misst, was eine
   Fortschreibung kostet: Spearman 0,84, aber 37 % der Firmen verschieben sich um
-  mehr als zehn Perzentilpunkte.
+  mehr als zehn Perzentilpunkte. **Für den Stromsektor ist diese Lücke inzwischen
+  geschlossen** — siehe CAMPD oben.
 
 ## Ergebnis in einem Satz
 

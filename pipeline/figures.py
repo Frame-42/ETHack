@@ -316,3 +316,118 @@ def fig_greenwashing(gw: pd.DataFrame) -> str:
     ax.legend(loc="upper left", fontsize=7.5)
     _clean(ax, grid="both")
     return _save(fig, "greenwashing_achse")
+
+
+# ---------------------------------------------------------------------------
+# Grafiken zum Datenluecken-Bericht
+# ---------------------------------------------------------------------------
+
+
+def fig_quellenlage(quellen: pd.DataFrame) -> str:
+    """Wie weit reicht jede Quelle zeitlich -- und was kostet der Zugang?"""
+    d = quellen.sort_values("jahr_bis")
+    fig, ax = plt.subplots(figsize=(5.8, 3.2))
+    colors = [C1 if z == "frei" else C4 for z in d["zugang"]]
+    y = np.arange(len(d))
+    ax.barh(y, d["jahr_bis"] - 2018, left=2018, height=0.6, color=colors, zorder=3)
+    for i, (jahr, grenze) in enumerate(zip(d["jahr_bis"], d["grenze"])):
+        ax.text(jahr + 0.12, i, str(jahr), va="center", fontsize=7.5, color=INK_SOFT)
+    ax.set_yticks(y)
+    ax.set_yticklabels(d["quelle"], fontsize=8)
+    ax.axvline(2023.5, color=C8, linewidth=1.4, linestyle="--", zorder=4)
+    ax.text(2023.35, -0.95, "bisher endete hier alles", fontsize=7.2,
+            color=C8, va="center", ha="right")
+    ax.set_xlim(2018, 2027.4)
+    ax.set_ylim(-1.5, len(d) - 0.3)
+    ax.set_xlabel("letztes geliefertes Geschaeftsjahr")
+    ax.set_title("Die zeitliche Luecke ist schliessbar")
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{int(v)}"))
+    _clean(ax)
+    return _save(fig, "quellenlage")
+
+
+def fig_abdeckung_vorher_nachher(cov: pd.DataFrame) -> str:
+    """Abdeckung je Sektor, heute gegen erreichbar."""
+    d = cov.sort_values("union_pct")
+    y = np.arange(len(d))
+    fig, ax = plt.subplots(figsize=(5.8, 3.6))
+    ax.barh(y + 0.19, d["union_pct"], height=0.36, color=C3, zorder=3,
+            label="mit den neuen Quellen")
+    ax.barh(y - 0.19, d["epa_pct"], height=0.36, color=C1, zorder=3,
+            label="heute (nur EPA)")
+    for i, (a, b) in enumerate(zip(d["epa_pct"], d["union_pct"])):
+        ax.text(b + 1.5, i + 0.19, f"{b:.0f}", va="center", fontsize=7, color=INK_SOFT)
+        ax.text(a + 1.5, i - 0.19, f"{a:.0f}", va="center", fontsize=7, color=INK_SOFT)
+    ax.set_yticks(y)
+    ax.set_yticklabels(d["gics_sector"], fontsize=8)
+    ax.set_xlim(0, 112)
+    ax.set_xlabel("Anteil der Firmen mit Daten (%)")
+    ax.set_title("Wo die neuen Quellen wirklich greifen")
+    ax.legend(loc="lower right", fontsize=7.5)
+    _clean(ax)
+    return _save(fig, "abdeckung_vorher_nachher")
+
+
+def fig_komplementaritaet(cov: pd.DataFrame) -> str:
+    """EPA und SBTi decken gegenlaeufige Haelften des Index ab."""
+    d = cov.copy()
+    d["epa_p"] = d["epa"] / d["firmen"] * 100
+    d["sbti_p"] = d["sbti"] / d["firmen"] * 100
+    fig, ax = plt.subplots(figsize=(5.6, 3.6))
+    ax.plot([0, 100], [100, 0], color=INK_SOFT, linewidth=0.9, linestyle="--", zorder=2)
+    ax.scatter(d["epa_p"], d["sbti_p"], s=46, color=C1, alpha=0.85,
+               edgecolor="white", linewidth=0.8, zorder=4)
+    for _, r in d.iterrows():
+        lab = r["gics_sector"]
+        lab = {"Information Technology": "Info Tech",
+               "Communication Services": "Comm Services",
+               "Consumer Discretionary": "Cons Discr.",
+               "Consumer Staples": "Cons Staples"}.get(lab, lab)
+        off = {"Real Estate": (-40, -2), "Info Tech": (6, 5),
+               "Health Care": (7, -9), "Cons Discr.": (-38, -3),
+               "Comm Services": (6, -3), "Energy": (6, 2)}.get(lab, (5, 4))
+        ax.annotate(lab, (r["epa_p"], r["sbti_p"]), fontsize=6.8, color=INK,
+                    xytext=off, textcoords="offset points")
+    ax.set_xlabel("Abdeckung durch EPA-Anlagendaten (%)")
+    ax.set_ylabel("Abdeckung durch SBTi-Ziele (%)")
+    ax.set_title("Die beiden Quellen sind fast spiegelbildlich")
+    ax.set_xlim(-4, 104)
+    ax.set_ylim(-4, 90)
+    _clean(ax, grid="both")
+    return _save(fig, "komplementaritaet")
+
+
+def fig_datenart(stats: dict, n_total: int) -> str:
+    """Was die Abdeckung tatsaechlich ist -- Menge, Selbstauskunft oder nur Ziel."""
+    v = stats["vereinigung"]
+    gemessen = stats["ausgangslage"]["firmen_mit_emissionsdaten"]
+    selbst = v["davon_mit_emissionsmenge_erwartet"] - gemessen
+    nur_ziel = v["nur_zielstatus_ohne_menge"]
+    nichts = n_total - gemessen - selbst - nur_ziel
+    teile = [
+        ("gemessene Tonnen (EPA)", gemessen, C1),
+        ("selbstberichtet, zu extrahieren", selbst, C3),
+        ("nur Zielstatus, keine Menge", nur_ziel, C4),
+        ("weiterhin ohne Daten", nichts, "#C8CDD2"),
+    ]
+    fig, ax = plt.subplots(figsize=(5.8, 2.1))
+    left = 0
+    for label, val, color in teile:
+        ax.barh(0, val, left=left, height=0.5, color=color, zorder=3,
+                edgecolor="white", linewidth=1.6)
+        if val > 22:
+            ax.text(left + val / 2, 0, str(val), ha="center", va="center",
+                    fontsize=8.5, color="white", fontweight="bold")
+        left += val
+    ax.set_xlim(0, n_total)
+    ax.set_ylim(-1.15, 0.45)
+    ax.set_yticks([])
+    ax.set_xlabel(f"Firmen im S&P 500 (n = {n_total})")
+    ax.set_title("Abdeckung ist nicht gleich Abdeckung")
+    handles = [plt.Rectangle((0, 0), 1, 1, color=c) for _, _, c in teile]
+    ax.legend(handles, [t[0] for t in teile], fontsize=7, ncol=2,
+              loc="upper left", bbox_to_anchor=(0, 0.42), handlelength=1.1)
+    for side in ("top", "right", "left"):
+        ax.spines[side].set_visible(False)
+    ax.spines["bottom"].set_color(GRID)
+    return _save(fig, "datenart")
