@@ -295,3 +295,46 @@ th button.sort .arrow { font-size: 11px; opacity: 0.55; }
 th button.sort.on .arrow { opacity: 1; }
 th.num button.sort { justify-content: flex-end; }
 .pick { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-soft); }
+
+/* ------------------------------------------------------------ Vergleichstab */
+.compare { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 18px; align-items: start; }
+.picker {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  display: flex;
+  flex-direction: column;
+}
+.pickhead {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 10px 12px; background: var(--accent-soft); border-bottom: 1px solid var(--accent);
+}
+.pickhead .t { font-weight: 600; font-size: 14px; }
+.pickhead .h { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); display: inline-flex; gap: 8px; }
+.picker input[type="search"] { margin: 10px 12px 6px; min-width: 0; flex: none; }
+.picker ul { list-style: none; margin: 0; padding: 0 0 8px; overflow-y: auto; }
+.picker li label {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: baseline;
+  padding: 5px 12px; font-size: 13px; cursor: pointer;
+}
+.picker li label:hover { background: var(--surface-2); }
+.picker li label.on { background: var(--accent-soft); }
+.picker .cnt { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.linkbtn { all: unset; cursor: pointer; color: var(--accent); }
+.linkbtn:hover { text-decoration: underline; }
+.switch { display: inline-flex; border: 1px solid var(--rule); }
+.switch button {
+  all: unset; cursor: pointer; padding: 6px 11px; font-size: 13px; color: var(--ink-soft); background: var(--ground);
+}
+.switch button + button { border-left: 1px solid var(--rule); }
+.switch button.on { background: var(--accent); color: var(--surface); }
+.switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.grid .filters { position: static; }
+.bar { display: inline-block; width: 46px; height: 6px; margin-right: 8px; background: var(--surface-2); vertical-align: middle; }
+.bar span { display: block; height: 100%; background: var(--accent); }
+@media (max-width: 900px) {
+  .compare { grid-template-columns: 1fr; }
+  .picker { position: static; max-height: 320px; }
+}
