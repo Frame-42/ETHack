@@ -164,7 +164,7 @@ GROUPS: tuple[Group, ...] = (
         denominator="MWh Erzeugung, Tonne Abfall, Kubikmeter Wasser",
         level="hoch",
         coverage="hoch: EPA GHGRP deckt Kraftwerke und Deponien über der "
-        "25 000-Tonnen-Schwelle ab",
+        "25.000-Tonnen-Schwelle ab",
         sub_industries=(
             "Electric Utilities",
             "Multi-Utilities",
