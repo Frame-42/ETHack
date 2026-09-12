@@ -1,0 +1,9777 @@
+[
+  {
+    "name": "2 Sisters Food Group",
+    "path": "/company/2-sisters-food-group",
+    "id": "PT_00269"
+  },
+  {
+    "name": "3M",
+    "path": "/company/3m",
+    "id": "PT_00001"
+  },
+  {
+    "name": "A.P. Moller - Maersk",
+    "path": "/company/ap-moller-maersk",
+    "id": "PT_00003"
+  },
+  {
+    "name": "ABB",
+    "path": "/company/abb",
+    "id": "PT_00004"
+  },
+  {
+    "name": "AbbVie",
+    "path": "/company/abbvie",
+    "id": "PT_00006"
+  },
+  {
+    "name": "Abercrombie & Fitch",
+    "path": "/company/abercrombie-fitch",
+    "id": "PT_00007"
+  },
+  {
+    "name": "ABN AMRO",
+    "path": "/company/abn-amro",
+    "id": "PT_00008"
+  },
+  {
+    "name": "AboitizPower",
+    "path": "/company/aboitizpower",
+    "id": "PT_02370"
+  },
+  {
+    "name": "abrdn",
+    "path": "/company/abrdn",
+    "id": "PT_01656"
+  },
+  {
+    "name": "Absa Group",
+    "path": "/company/absa-group",
+    "id": "PT_00009"
+  },
+  {
+    "name": "Abuja Electricity Distribution Company",
+    "path": "/company/abuja-electricity-distribution-company",
+    "id": "PT_02834"
+  },
+  {
+    "name": "Acadian Asset Management Inc.",
+    "path": "/company/acadian-asset-management-inc",
+    "id": "PT_00278"
+  },
+  {
+    "name": "Accenture",
+    "path": "/company/accenture",
+    "id": "PT_00012"
+  },
+  {
+    "name": "ACCIONA",
+    "path": "/company/acciona",
+    "id": "PT_00013"
+  },
+  {
+    "name": "Ace Hardware",
+    "path": "/company/ace-hardware",
+    "id": "PT_02886"
+  },
+  {
+    "name": "Acea",
+    "path": "/company/acea",
+    "id": "PT_00015"
+  },
+  {
+    "name": "Acer",
+    "path": "/company/acer",
+    "id": "PT_00017"
+  },
+  {
+    "name": "Achmea",
+    "path": "/company/achmea",
+    "id": "PT_00018"
+  },
+  {
+    "name": "ACS Group",
+    "path": "/company/acs-group",
+    "id": "PT_00019"
+  },
+  {
+    "name": "Action",
+    "path": "/company/action",
+    "id": "PT_02863"
+  },
+  {
+    "name": "Adani Energy Solutions",
+    "path": "/company/adani-energy-solutions",
+    "id": "PT_02276"
+  },
+  {
+    "name": "Adani Ports",
+    "path": "/company/adani-ports",
+    "id": "PT_02228"
+  },
+  {
+    "name": "ADB",
+    "path": "/company/adb",
+    "id": "PT_02025"
+  },
+  {
+    "name": "Adeo",
+    "path": "/company/adeo",
+    "id": "PT_02861"
+  },
+  {
+    "name": "ADIA",
+    "path": "/company/adia",
+    "id": "PT_00010"
+  },
+  {
+    "name": "Adidas",
+    "path": "/company/adidas",
+    "id": "PT_00022"
+  },
+  {
+    "name": "Aditya Birla Fashion and Retail",
+    "path": "/company/aditya-birla-fashion-and-retail",
+    "id": "PT_02257"
+  },
+  {
+    "name": "ADM",
+    "path": "/company/adm",
+    "id": "PT_00131"
+  },
+  {
+    "name": "ADNOC",
+    "path": "/company/adnoc",
+    "id": "PT_00011"
+  },
+  {
+    "name": "Adobe",
+    "path": "/company/adobe",
+    "id": "PT_00024"
+  },
+  {
+    "name": "ADQ",
+    "path": "/company/adq",
+    "id": "PT_02815"
+  },
+  {
+    "name": "Advance Autoparts",
+    "path": "/company/advance-autoparts",
+    "id": "PT_02864"
+  },
+  {
+    "name": "Advent International",
+    "path": "/company/advent-international",
+    "id": "PT_00028"
+  },
+  {
+    "name": "Aegon",
+    "path": "/company/aegon",
+    "id": "PT_00030"
+  },
+  {
+    "name": "Aeon",
+    "path": "/company/aeon",
+    "id": "PT_00031"
+  },
+  {
+    "name": "AEP",
+    "path": "/company/aep",
+    "id": "PT_00090"
+  },
+  {
+    "name": "Aeroflot",
+    "path": "/company/aeroflot",
+    "id": "PT_00032"
+  },
+  {
+    "name": "AES",
+    "path": "/company/aes",
+    "id": "PT_00033"
+  },
+  {
+    "name": "AfDB",
+    "path": "/company/afdb",
+    "id": "PT_02026"
+  },
+  {
+    "name": "African Rainbow Minerals",
+    "path": "/company/african-rainbow-minerals",
+    "id": "PT_02374"
+  },
+  {
+    "name": "AGD Group",
+    "path": "/company/agd-group",
+    "id": "PT_00016"
+  },
+  {
+    "name": "AGL Energy",
+    "path": "/company/agl-energy",
+    "id": "PT_00040"
+  },
+  {
+    "name": "AGP",
+    "path": "/company/agp",
+    "id": "PT_00042"
+  },
+  {
+    "name": "Agricultural Bank of China",
+    "path": "/company/agricultural-bank-china",
+    "id": "PT_00044"
+  },
+  {
+    "name": "Agrifirm",
+    "path": "/company/agrifirm",
+    "id": "PT_00045"
+  },
+  {
+    "name": "Agropur",
+    "path": "/company/agropur",
+    "id": "PT_00046"
+  },
+  {
+    "name": "Ahold Delhaize",
+    "path": "/company/ahold-delhaize",
+    "id": "PT_00047"
+  },
+  {
+    "name": "AIA",
+    "path": "/company/aia",
+    "id": "PT_00048"
+  },
+  {
+    "name": "AIMCo",
+    "path": "/company/aimco",
+    "id": "PT_00062"
+  },
+  {
+    "name": "Air China",
+    "path": "/company/air-china",
+    "id": "PT_00050"
+  },
+  {
+    "name": "Air France-KLM",
+    "path": "/company/air-france-klm",
+    "id": "PT_00051"
+  },
+  {
+    "name": "Air Liquide",
+    "path": "/company/air-liquide",
+    "id": "PT_00052"
+  },
+  {
+    "name": "Air Products and Chemicals",
+    "path": "/company/air-products-and-chemicals",
+    "id": "PT_00054"
+  },
+  {
+    "name": "Air Selangor",
+    "path": "/company/air-selangor",
+    "id": "PT_02605"
+  },
+  {
+    "name": "Airbnb",
+    "path": "/company/airbnb",
+    "id": "PT_00055"
+  },
+  {
+    "name": "Airbus",
+    "path": "/company/airbus",
+    "id": "PT_00056"
+  },
+  {
+    "name": "AIS",
+    "path": "/company/ais",
+    "id": "PT_00026"
+  },
+  {
+    "name": "Ajinomoto Group",
+    "path": "/company/ajinomoto-group",
+    "id": "PT_00057"
+  },
+  {
+    "name": "Akamai",
+    "path": "/company/akamai",
+    "id": "PT_00058"
+  },
+  {
+    "name": "Akbank",
+    "path": "/company/akbank",
+    "id": "PT_02417"
+  },
+  {
+    "name": "Aker Solutions",
+    "path": "/company/aker-solutions",
+    "id": "PT_02188"
+  },
+  {
+    "name": "AkzoNobel",
+    "path": "/company/akzonobel",
+    "id": "PT_00059"
+  },
+  {
+    "name": "Alaska Air Group",
+    "path": "/company/alaska-air-group",
+    "id": "PT_00060"
+  },
+  {
+    "name": "Alaska Permanent Fund Corporation",
+    "path": "/company/alaska-permanent-fund-corporation",
+    "id": "PT_02673"
+  },
+  {
+    "name": "Albemarle Corporation",
+    "path": "/company/albemarle-corporation",
+    "id": "PT_02126"
+  },
+  {
+    "name": "Albertsons Companies",
+    "path": "/company/albertsons-companies",
+    "id": "PT_00063"
+  },
+  {
+    "name": "Alcoa",
+    "path": "/company/alcoa",
+    "id": "PT_00064"
+  },
+  {
+    "name": "Aldi Nord",
+    "path": "/company/aldi-nord",
+    "id": "PT_00065"
+  },
+  {
+    "name": "Aldi Süd",
+    "path": "/company/aldi-sud",
+    "id": "PT_00066"
+  },
+  {
+    "name": "Alecta",
+    "path": "/company/alecta",
+    "id": "PT_00067"
+  },
+  {
+    "name": "Alfamart",
+    "path": "/company/alfamart",
+    "id": "PT_02431"
+  },
+  {
+    "name": "Algérienne Des Eaux",
+    "path": "/company/algerienne-des-eaux",
+    "id": "PT_02702"
+  },
+  {
+    "name": "Alibaba",
+    "path": "/company/alibaba",
+    "id": "PT_00069"
+  },
+  {
+    "name": "Alicorp",
+    "path": "/company/alicorp",
+    "id": "PT_00070"
+  },
+  {
+    "name": "Allana Group",
+    "path": "/company/allana-group",
+    "id": "PT_00072"
+  },
+  {
+    "name": "Allianz Group",
+    "path": "/company/allianz-group",
+    "id": "PT_00073"
+  },
+  {
+    "name": "AllState",
+    "path": "/company/allstate",
+    "id": "PT_00074"
+  },
+  {
+    "name": "Almarai",
+    "path": "/company/almarai",
+    "id": "PT_02803"
+  },
+  {
+    "name": "Alpek",
+    "path": "/company/alpek",
+    "id": "PT_02090"
+  },
+  {
+    "name": "Alphabet",
+    "path": "/company/alphabet",
+    "id": "PT_00075"
+  },
+  {
+    "name": "Alpla",
+    "path": "/company/alpla",
+    "id": "PT_02211"
+  },
+  {
+    "name": "Alstom",
+    "path": "/company/alstom",
+    "id": "PT_00077"
+  },
+  {
+    "name": "Altice",
+    "path": "/company/altice",
+    "id": "PT_00078"
+  },
+  {
+    "name": "Amaggi Group",
+    "path": "/company/amaggi-group",
+    "id": "PT_00080"
+  },
+  {
+    "name": "Amazon",
+    "path": "/company/amazon",
+    "id": "PT_00081"
+  },
+  {
+    "name": "Amcor",
+    "path": "/company/amcor",
+    "id": "PT_00082"
+  },
+  {
+    "name": "AMD",
+    "path": "/company/amd",
+    "id": "PT_00027"
+  },
+  {
+    "name": "America Movil",
+    "path": "/company/america-movil",
+    "id": "PT_00085"
+  },
+  {
+    "name": "American Airlines Group",
+    "path": "/company/american-airlines-group",
+    "id": "PT_00086"
+  },
+  {
+    "name": "American Century",
+    "path": "/company/american-century",
+    "id": "PT_00087"
+  },
+  {
+    "name": "American Crystal",
+    "path": "/company/american-crystal",
+    "id": "PT_00088"
+  },
+  {
+    "name": "American Eagle Outfitters",
+    "path": "/company/american-eagle-outfitters",
+    "id": "PT_00089"
+  },
+  {
+    "name": "American Express",
+    "path": "/company/american-express",
+    "id": "PT_02904"
+  },
+  {
+    "name": "American International Group",
+    "path": "/company/american-international-group",
+    "id": "PT_00092"
+  },
+  {
+    "name": "American Tower",
+    "path": "/company/american-tower",
+    "id": "PT_00094"
+  },
+  {
+    "name": "American Water Works",
+    "path": "/company/american-water-works",
+    "id": "PT_00095"
+  },
+  {
+    "name": "Ameriprise Financial",
+    "path": "/company/ameriprise-financial",
+    "id": "PT_00096"
+  },
+  {
+    "name": "AMG",
+    "path": "/company/amg",
+    "id": "PT_00034"
+  },
+  {
+    "name": "Amgen",
+    "path": "/company/amgen",
+    "id": "PT_00097"
+  },
+  {
+    "name": "Amorepacific Group",
+    "path": "/company/amorepacific-group",
+    "id": "PT_00098"
+  },
+  {
+    "name": "AMP",
+    "path": "/company/amp",
+    "id": "PT_00099"
+  },
+  {
+    "name": "Amphenol",
+    "path": "/company/amphenol",
+    "id": "PT_00100"
+  },
+  {
+    "name": "Ampol",
+    "path": "/company/ampol",
+    "id": "PT_00303"
+  },
+  {
+    "name": "AmRest",
+    "path": "/company/amrest",
+    "id": "PT_02432"
+  },
+  {
+    "name": "Amtrak",
+    "path": "/company/amtrak",
+    "id": "PT_01234"
+  },
+  {
+    "name": "Amul",
+    "path": "/company/amul",
+    "id": "PT_00102"
+  },
+  {
+    "name": "ANA Holdings",
+    "path": "/company/ana-holdings",
+    "id": "PT_00104"
+  },
+  {
+    "name": "Analog Devices",
+    "path": "/company/analog-devices",
+    "id": "PT_00105"
+  },
+  {
+    "name": "Anbessa City Bus Service Enterprise",
+    "path": "/company/anbessa-city-bus-service-enterprise",
+    "id": "PT_02646"
+  },
+  {
+    "name": "Andreessen Horowitz",
+    "path": "/company/andreessen-horowitz",
+    "id": "PT_00106"
+  },
+  {
+    "name": "Anglo American",
+    "path": "/company/anglo-american",
+    "id": "PT_00109"
+  },
+  {
+    "name": "AngloGold Ashanti",
+    "path": "/company/anglogold-ashanti",
+    "id": "PT_02238"
+  },
+  {
+    "name": "Anheuser-Busch InBev",
+    "path": "/company/anheuser-busch-inbev",
+    "id": "PT_00110"
+  },
+  {
+    "name": "Anhui Conch Cement",
+    "path": "/company/anhui-conch-cement",
+    "id": "PT_00111"
+  },
+  {
+    "name": "Anima Holding",
+    "path": "/company/anima-holding",
+    "id": "PT_00113"
+  },
+  {
+    "name": "Ansteel",
+    "path": "/company/ansteel",
+    "id": "PT_00116"
+  },
+  {
+    "name": "Ant",
+    "path": "/company/ant",
+    "id": "PT_02052"
+  },
+  {
+    "name": "ANTA",
+    "path": "/company/anta",
+    "id": "PT_00117"
+  },
+  {
+    "name": "Antofagasta",
+    "path": "/company/antofagasta",
+    "id": "PT_02239"
+  },
+  {
+    "name": "ANZ Banking Group",
+    "path": "/company/anz-banking-group",
+    "id": "PT_00119"
+  },
+  {
+    "name": "Aon",
+    "path": "/company/aon",
+    "id": "PT_00120"
+  },
+  {
+    "name": "APA Corporation",
+    "path": "/company/apa-corporation",
+    "id": "PT_00121"
+  },
+  {
+    "name": "Apax Partners",
+    "path": "/company/apax-partners",
+    "id": "PT_00122"
+  },
+  {
+    "name": "APG",
+    "path": "/company/apg",
+    "id": "PT_00123"
+  },
+  {
+    "name": "Apollo Global Management",
+    "path": "/company/apollo-global-management",
+    "id": "PT_00124"
+  },
+  {
+    "name": "Apple",
+    "path": "/company/apple",
+    "id": "PT_00125"
+  },
+  {
+    "name": "Applied Materials",
+    "path": "/company/applied-materials",
+    "id": "PT_00126"
+  },
+  {
+    "name": "Aqualia",
+    "path": "/company/aqualia",
+    "id": "PT_02603"
+  },
+  {
+    "name": "Aramark",
+    "path": "/company/aramark",
+    "id": "PT_00127"
+  },
+  {
+    "name": "Arauco",
+    "path": "/company/arauco",
+    "id": "PT_02091"
+  },
+  {
+    "name": "Arbejdsmarkedets Tillaegspension",
+    "path": "/company/arbejdsmarkedets-tillaegspension",
+    "id": "PT_00128"
+  },
+  {
+    "name": "ArcelorMittal",
+    "path": "/company/arcelormittal",
+    "id": "PT_00130"
+  },
+  {
+    "name": "Arconic",
+    "path": "/company/arconic",
+    "id": "PT_00132"
+  },
+  {
+    "name": "Arcos Dorados",
+    "path": "/company/arcos-dorados",
+    "id": "PT_02433"
+  },
+  {
+    "name": "Ardagh Group",
+    "path": "/company/ardagh-group",
+    "id": "PT_00133"
+  },
+  {
+    "name": "Arkema",
+    "path": "/company/arkema",
+    "id": "PT_00135"
+  },
+  {
+    "name": "Arla Foods",
+    "path": "/company/arla-foods",
+    "id": "PT_00136"
+  },
+  {
+    "name": "Armani Group",
+    "path": "/company/armani-group",
+    "id": "PT_02912"
+  },
+  {
+    "name": "Artisan Partners",
+    "path": "/company/artisan-partners",
+    "id": "PT_00137"
+  },
+  {
+    "name": "AS Watson",
+    "path": "/company/watson",
+    "id": "PT_00435"
+  },
+  {
+    "name": "Asahi Group",
+    "path": "/company/asahi-group",
+    "id": "PT_00138"
+  },
+  {
+    "name": "Asahi Kasei Corporation",
+    "path": "/company/asahi-kasei-corporation",
+    "id": "PT_00140"
+  },
+  {
+    "name": "Asia Cement",
+    "path": "/company/asia-cement",
+    "id": "PT_00143"
+  },
+  {
+    "name": "Asia Pulp and Paper",
+    "path": "/company/asia-pulp-and-paper",
+    "id": "PT_02087"
+  },
+  {
+    "name": "ASICS",
+    "path": "/company/asics",
+    "id": "PT_00145"
+  },
+  {
+    "name": "ASML",
+    "path": "/company/asml",
+    "id": "PT_00146"
+  },
+  {
+    "name": "Asos",
+    "path": "/company/asos",
+    "id": "PT_00002"
+  },
+  {
+    "name": "Astellas Pharma",
+    "path": "/company/astellas-pharma",
+    "id": "PT_00151"
+  },
+  {
+    "name": "Astra Agro Lestari",
+    "path": "/company/astra-agro-lestari",
+    "id": "PT_02073"
+  },
+  {
+    "name": "AstraZeneca",
+    "path": "/company/astrazeneca",
+    "id": "PT_00152"
+  },
+  {
+    "name": "Asus",
+    "path": "/company/asus",
+    "id": "PT_00153"
+  },
+  {
+    "name": "AT&T",
+    "path": "/company/att",
+    "id": "PT_00154"
+  },
+  {
+    "name": "Atos",
+    "path": "/company/atos",
+    "id": "PT_02133"
+  },
+  {
+    "name": "Attijariwafa Bank",
+    "path": "/company/attijariwafa-bank",
+    "id": "PT_00156"
+  },
+  {
+    "name": "Aurobindo Pharma",
+    "path": "/company/aurobindo-pharma",
+    "id": "PT_00160"
+  },
+  {
+    "name": "Aurubis",
+    "path": "/company/aurubis",
+    "id": "PT_00162"
+  },
+  {
+    "name": "Austevoll Seafood",
+    "path": "/company/austevoll-seafood",
+    "id": "PT_00163"
+  },
+  {
+    "name": "Australian Retirement Trust",
+    "path": "/company/australian-retirement-trust",
+    "id": "PT_02660"
+  },
+  {
+    "name": "AustralianSuper",
+    "path": "/company/australiansuper",
+    "id": "PT_00164"
+  },
+  {
+    "name": "Autozone",
+    "path": "/company/autozone",
+    "id": "PT_02860"
+  },
+  {
+    "name": "Avalonbay Communities",
+    "path": "/company/avalonbay-communities",
+    "id": "PT_02428"
+  },
+  {
+    "name": "Averda",
+    "path": "/company/averda",
+    "id": "PT_02607"
+  },
+  {
+    "name": "Avery Dennison Corporation",
+    "path": "/company/avery-dennison-corporation",
+    "id": "PT_00166"
+  },
+  {
+    "name": "Aviva",
+    "path": "/company/aviva",
+    "id": "PT_00169"
+  },
+  {
+    "name": "Avolta",
+    "path": "/company/avolta",
+    "id": "PT_02920"
+  },
+  {
+    "name": "Avril Group",
+    "path": "/company/avril-group",
+    "id": "PT_00171"
+  },
+  {
+    "name": "Aware Super",
+    "path": "/company/aware-super",
+    "id": "PT_02054"
+  },
+  {
+    "name": "AXA",
+    "path": "/company/axa",
+    "id": "PT_00172"
+  },
+  {
+    "name": "Axiata",
+    "path": "/company/axiata",
+    "id": "PT_00173"
+  },
+  {
+    "name": "Axis Bank",
+    "path": "/company/axis-bank",
+    "id": "PT_00174"
+  },
+  {
+    "name": "Ayala Land",
+    "path": "/company/ayala-land",
+    "id": "PT_02576"
+  },
+  {
+    "name": "B&G Foods",
+    "path": "/company/bg-foods",
+    "id": "PT_00177"
+  },
+  {
+    "name": "Bachoco",
+    "path": "/company/bachoco",
+    "id": "PT_00178"
+  },
+  {
+    "name": "Bahria Town",
+    "path": "/company/bahria-town",
+    "id": "PT_02411"
+  },
+  {
+    "name": "BAIC",
+    "path": "/company/baic",
+    "id": "PT_00236"
+  },
+  {
+    "name": "Baidu",
+    "path": "/company/baidu",
+    "id": "PT_00179"
+  },
+  {
+    "name": "Baillie Gifford",
+    "path": "/company/baillie-gifford",
+    "id": "PT_00180"
+  },
+  {
+    "name": "Bain Capital",
+    "path": "/company/bain-capital",
+    "id": "PT_00182"
+  },
+  {
+    "name": "Balfour Beatty",
+    "path": "/company/balfour-beatty",
+    "id": "PT_00184"
+  },
+  {
+    "name": "Ball Corporation",
+    "path": "/company/ball-corporation",
+    "id": "PT_00185"
+  },
+  {
+    "name": "Banco Bradesco",
+    "path": "/company/banco-bradesco",
+    "id": "PT_00188"
+  },
+  {
+    "name": "Banco BTG Pactual",
+    "path": "/company/banco-btg-pactual",
+    "id": "PT_02916"
+  },
+  {
+    "name": "Banco Davivienda",
+    "path": "/company/banco-davivienda",
+    "id": "PT_00189"
+  },
+  {
+    "name": "Banco de Credito e Inversiones",
+    "path": "/company/banco-de-credito-e-inversiones",
+    "id": "PT_00190"
+  },
+  {
+    "name": "Banco del Estado de Chile",
+    "path": "/company/banco-del-estado-de-chile",
+    "id": "PT_00191"
+  },
+  {
+    "name": "Banco do Brasil",
+    "path": "/company/banco-do-brasil",
+    "id": "PT_00192"
+  },
+  {
+    "name": "Banco Santander",
+    "path": "/company/banco-santander",
+    "id": "PT_00193"
+  },
+  {
+    "name": "Bancolombia",
+    "path": "/company/bancolombia",
+    "id": "PT_00194"
+  },
+  {
+    "name": "Bangalore Electricity Supply Company",
+    "path": "/company/bangalore-electricity-supply-company",
+    "id": "PT_02608"
+  },
+  {
+    "name": "Bangalore Metro Rail Corporation",
+    "path": "/company/bangalore-metro-rail-corporation",
+    "id": "PT_02637"
+  },
+  {
+    "name": "Bangalore Metropolitan Transport Corp",
+    "path": "/company/bangalore-metropolitan-transport-corp",
+    "id": "PT_02449"
+  },
+  {
+    "name": "Bangkok Bank",
+    "path": "/company/bangkok-bank",
+    "id": "PT_00195"
+  },
+  {
+    "name": "Bangkok Expressway and Metro PCL",
+    "path": "/company/bangkok-expressway-and-metro-pcl",
+    "id": "PT_02450"
+  },
+  {
+    "name": "Bank Central Asia (BCA)",
+    "path": "/company/bank-central-asia-bca",
+    "id": "PT_00196"
+  },
+  {
+    "name": "Bank Mandiri",
+    "path": "/company/bank-mandiri",
+    "id": "PT_00197"
+  },
+  {
+    "name": "Bank Negara Indonesia",
+    "path": "/company/bank-negara-indonesia",
+    "id": "PT_00198"
+  },
+  {
+    "name": "Bank of Africa",
+    "path": "/company/bank-africa",
+    "id": "PT_00260"
+  },
+  {
+    "name": "Bank of America",
+    "path": "/company/bank-america",
+    "id": "PT_00199"
+  },
+  {
+    "name": "Bank of Baroda",
+    "path": "/company/bank-baroda",
+    "id": "PT_00201"
+  },
+  {
+    "name": "Bank of Beijing",
+    "path": "/company/bank-beijing",
+    "id": "PT_00202"
+  },
+  {
+    "name": "Bank of China",
+    "path": "/company/bank-china",
+    "id": "PT_00203"
+  },
+  {
+    "name": "Bank of Communications",
+    "path": "/company/bank-communications",
+    "id": "PT_00204"
+  },
+  {
+    "name": "Bank of India",
+    "path": "/company/bank-india",
+    "id": "PT_00205"
+  },
+  {
+    "name": "Bank of Nova Scotia",
+    "path": "/company/bank-nova-scotia",
+    "id": "PT_00208"
+  },
+  {
+    "name": "Bank of Shanghai",
+    "path": "/company/bank-shanghai",
+    "id": "PT_00209"
+  },
+  {
+    "name": "Bank Rakyat Indonesia (BRI)",
+    "path": "/company/bank-rakyat-indonesia-bri",
+    "id": "PT_00210"
+  },
+  {
+    "name": "Banque Centrale Populaire",
+    "path": "/company/banque-centrale-populaire",
+    "id": "PT_00212"
+  },
+  {
+    "name": "Banque Misr",
+    "path": "/company/banque-misr",
+    "id": "PT_00213"
+  },
+  {
+    "name": "Baowu",
+    "path": "/company/baowu",
+    "id": "PT_00352"
+  },
+  {
+    "name": "Barclays",
+    "path": "/company/barclays",
+    "id": "PT_00216"
+  },
+  {
+    "name": "Barilla",
+    "path": "/company/barilla",
+    "id": "PT_00217"
+  },
+  {
+    "name": "Barrick Gold",
+    "path": "/company/barrick-gold",
+    "id": "PT_02176"
+  },
+  {
+    "name": "Barry Callebaut",
+    "path": "/company/barry-callebaut",
+    "id": "PT_00219"
+  },
+  {
+    "name": "BASF",
+    "path": "/company/basf",
+    "id": "PT_00220"
+  },
+  {
+    "name": "Basra Oil Company",
+    "path": "/company/basra-oil-company",
+    "id": "PT_02142"
+  },
+  {
+    "name": "Bath & Body Works",
+    "path": "/company/bath-body-works",
+    "id": "PT_01045"
+  },
+  {
+    "name": "Bausch Health",
+    "path": "/company/bausch-health",
+    "id": "PT_00221"
+  },
+  {
+    "name": "Baxter International",
+    "path": "/company/baxter-international",
+    "id": "PT_00222"
+  },
+  {
+    "name": "Bayer",
+    "path": "/company/bayer",
+    "id": "PT_00223"
+  },
+  {
+    "name": "Bayerische Landesbank",
+    "path": "/company/bayerische-landesbank",
+    "id": "PT_00224"
+  },
+  {
+    "name": "BayWa",
+    "path": "/company/baywa",
+    "id": "PT_00226"
+  },
+  {
+    "name": "BBMG",
+    "path": "/company/bbmg",
+    "id": "PT_00229"
+  },
+  {
+    "name": "BBVA",
+    "path": "/company/bbva",
+    "id": "PT_00187"
+  },
+  {
+    "name": "BCE",
+    "path": "/company/bce",
+    "id": "PT_00230"
+  },
+  {
+    "name": "BCI",
+    "path": "/company/bci",
+    "id": "PT_00280"
+  },
+  {
+    "name": "Becamex",
+    "path": "/company/becamex",
+    "id": "PT_02358"
+  },
+  {
+    "name": "Beidahuang Group",
+    "path": "/company/beidahuang-group",
+    "id": "PT_00234"
+  },
+  {
+    "name": "Beiersdorf",
+    "path": "/company/beiersdorf",
+    "id": "PT_00235"
+  },
+  {
+    "name": "Beijing Construction Engineering",
+    "path": "/company/beijing-construction-engineering",
+    "id": "PT_02189"
+  },
+  {
+    "name": "Beijing MTR Corporation",
+    "path": "/company/beijing-mtr-corporation",
+    "id": "PT_02625"
+  },
+  {
+    "name": "Berkshire Hathaway",
+    "path": "/company/berkshire-hathaway",
+    "id": "PT_00242"
+  },
+  {
+    "name": "Berry Global",
+    "path": "/company/berry-global",
+    "id": "PT_00243"
+  },
+  {
+    "name": "Best Buy",
+    "path": "/company/best-buy",
+    "id": "PT_02868"
+  },
+  {
+    "name": "BESTSELLER",
+    "path": "/company/bestseller",
+    "id": "PT_00246"
+  },
+  {
+    "name": "BetAgro",
+    "path": "/company/betagro",
+    "id": "PT_00247"
+  },
+  {
+    "name": "Bezeq",
+    "path": "/company/bezeq",
+    "id": "PT_02065"
+  },
+  {
+    "name": "Bharat Petroleum",
+    "path": "/company/bharat-petroleum",
+    "id": "PT_00248"
+  },
+  {
+    "name": "Bharti Airtel",
+    "path": "/company/bharti-airtel",
+    "id": "PT_00250"
+  },
+  {
+    "name": "BHP",
+    "path": "/company/bhp",
+    "id": "PT_00251"
+  },
+  {
+    "name": "Bidcorp",
+    "path": "/company/bidcorp",
+    "id": "PT_00252"
+  },
+  {
+    "name": "Bigard",
+    "path": "/company/bigard",
+    "id": "PT_00777"
+  },
+  {
+    "name": "Biogen",
+    "path": "/company/biogen",
+    "id": "PT_00255"
+  },
+  {
+    "name": "BioMar",
+    "path": "/company/biomar",
+    "id": "PT_01551"
+  },
+  {
+    "name": "BlackRock",
+    "path": "/company/blackrock",
+    "id": "PT_00256"
+  },
+  {
+    "name": "Blackstone Group",
+    "path": "/company/blackstone-group",
+    "id": "PT_00257"
+  },
+  {
+    "name": "Block",
+    "path": "/company/block",
+    "id": "PT_02549"
+  },
+  {
+    "name": "Bloomin' Brands",
+    "path": "/company/bloomin-brands",
+    "id": "PT_00258"
+  },
+  {
+    "name": "Blue Diamond Growers",
+    "path": "/company/blue-diamond-growers",
+    "id": "PT_00259"
+  },
+  {
+    "name": "BMO",
+    "path": "/company/bmo",
+    "id": "PT_00206"
+  },
+  {
+    "name": "BMW",
+    "path": "/company/bmw",
+    "id": "PT_00261"
+  },
+  {
+    "name": "BNP Paribas",
+    "path": "/company/bnp-paribas",
+    "id": "PT_00262"
+  },
+  {
+    "name": "BNY Mellon",
+    "path": "/company/bny-mellon",
+    "id": "PT_00207"
+  },
+  {
+    "name": "BOE Technology Group",
+    "path": "/company/boe-technology-group",
+    "id": "PT_00264"
+  },
+  {
+    "name": "Boehringer Ingelheim",
+    "path": "/company/boehringer-ingelheim",
+    "id": "PT_00293"
+  },
+  {
+    "name": "Boeing",
+    "path": "/company/boeing",
+    "id": "PT_01775"
+  },
+  {
+    "name": "Boise Cascade Company",
+    "path": "/company/boise-cascade-company",
+    "id": "PT_00265"
+  },
+  {
+    "name": "Bolt",
+    "path": "/company/bolt",
+    "id": "PT_02279"
+  },
+  {
+    "name": "Bolton Group",
+    "path": "/company/bolton-group",
+    "id": "PT_02434"
+  },
+  {
+    "name": "Bombay Burmah",
+    "path": "/company/bombay-burmah",
+    "id": "PT_02678"
+  },
+  {
+    "name": "Bonduelle",
+    "path": "/company/bonduelle",
+    "id": "PT_00267"
+  },
+  {
+    "name": "Booking Holdings",
+    "path": "/company/booking-holdings",
+    "id": "PT_00268"
+  },
+  {
+    "name": "Boral",
+    "path": "/company/boral",
+    "id": "PT_00270"
+  },
+  {
+    "name": "Borealis",
+    "path": "/company/borealis",
+    "id": "PT_02179"
+  },
+  {
+    "name": "Boskalis",
+    "path": "/company/boskalis",
+    "id": "PT_02195"
+  },
+  {
+    "name": "Boston Properties",
+    "path": "/company/boston-properties",
+    "id": "PT_02684"
+  },
+  {
+    "name": "Bouygues Group",
+    "path": "/company/bouygues-group",
+    "id": "PT_00272"
+  },
+  {
+    "name": "BP",
+    "path": "/company/bp",
+    "id": "PT_00273"
+  },
+  {
+    "name": "BRF",
+    "path": "/company/brf",
+    "id": "PT_00274"
+  },
+  {
+    "name": "Bridgestone",
+    "path": "/company/bridgestone",
+    "id": "PT_00275"
+  },
+  {
+    "name": "Bridgewater Associates",
+    "path": "/company/bridgewater-associates",
+    "id": "PT_00276"
+  },
+  {
+    "name": "Brigade Enterprises Ltd",
+    "path": "/company/brigade-enterprises-ltd",
+    "id": "PT_02454"
+  },
+  {
+    "name": "Brinker International",
+    "path": "/company/brinker-international",
+    "id": "PT_02435"
+  },
+  {
+    "name": "Bristol Myers Squibb",
+    "path": "/company/bristol-myers-squibb",
+    "id": "PT_00279"
+  },
+  {
+    "name": "Britannia",
+    "path": "/company/britannia",
+    "id": "PT_02679"
+  },
+  {
+    "name": "British International Investment plc",
+    "path": "/company/british-international-investment-plc",
+    "id": "PT_00327"
+  },
+  {
+    "name": "BRK",
+    "path": "/company/brk",
+    "id": "PT_00486"
+  },
+  {
+    "name": "Broadcom",
+    "path": "/company/broadcom",
+    "id": "PT_00282"
+  },
+  {
+    "name": "Brookfield Asset Management",
+    "path": "/company/brookfield-asset-management",
+    "id": "PT_00283"
+  },
+  {
+    "name": "Brookfield Corporation",
+    "path": "/company/brookfield-corporation",
+    "id": "PT_02575"
+  },
+  {
+    "name": "Brown-Forman",
+    "path": "/company/brown-forman",
+    "id": "PT_02164"
+  },
+  {
+    "name": "BT Group",
+    "path": "/company/bt-group",
+    "id": "PT_00284"
+  },
+  {
+    "name": "BUA Cement",
+    "path": "/company/bua-cement",
+    "id": "PT_02372"
+  },
+  {
+    "name": "BUCG",
+    "path": "/company/bucg",
+    "id": "PT_02190"
+  },
+  {
+    "name": "Builders FirstSource",
+    "path": "/company/builders-firstsource",
+    "id": "PT_00285"
+  },
+  {
+    "name": "Bumi Serpong Damai",
+    "path": "/company/bumi-serpong-damai",
+    "id": "PT_02455"
+  },
+  {
+    "name": "Bumitama Agri",
+    "path": "/company/bumitama-agri",
+    "id": "PT_02436"
+  },
+  {
+    "name": "Bunge",
+    "path": "/company/bunge",
+    "id": "PT_00287"
+  },
+  {
+    "name": "Burberry",
+    "path": "/company/burberry",
+    "id": "PT_00288"
+  },
+  {
+    "name": "Bureau of Labor Funds",
+    "path": "/company/bureau-labor-funds",
+    "id": "PT_01047"
+  },
+  {
+    "name": "Burlington",
+    "path": "/company/burlington",
+    "id": "PT_02894"
+  },
+  {
+    "name": "Burns & McDonnell",
+    "path": "/company/burns-mcdonnell",
+    "id": "PT_02456"
+  },
+  {
+    "name": "Buzzi Unicem",
+    "path": "/company/buzzi-unicem",
+    "id": "PT_00289"
+  },
+  {
+    "name": "BYD",
+    "path": "/company/byd",
+    "id": "PT_00290"
+  },
+  {
+    "name": "Bytedance",
+    "path": "/company/bytedance",
+    "id": "PT_00291"
+  },
+  {
+    "name": "C&S Wholesale Grocers",
+    "path": "/company/cs-wholesale-grocers",
+    "id": "PT_00292"
+  },
+  {
+    "name": "C.H. Robinson Worldwide",
+    "path": "/company/ch-robinson-worldwide",
+    "id": "PT_00294"
+  },
+  {
+    "name": "Cabify",
+    "path": "/company/cabify",
+    "id": "PT_02306"
+  },
+  {
+    "name": "Caisse des Depots",
+    "path": "/company/caisse-des-depots",
+    "id": "PT_00296"
+  },
+  {
+    "name": "Caixa Econōmica Federal",
+    "path": "/company/caixa-economica-federal",
+    "id": "PT_00297"
+  },
+  {
+    "name": "Caixabank",
+    "path": "/company/caixabank",
+    "id": "PT_00298"
+  },
+  {
+    "name": "Calavo Growers",
+    "path": "/company/calavo-growers",
+    "id": "PT_00299"
+  },
+  {
+    "name": "Calcutta Electric Supply Corporation",
+    "path": "/company/calcutta-electric-supply-corporation",
+    "id": "PT_02590"
+  },
+  {
+    "name": "California Resources",
+    "path": "/company/california-resources",
+    "id": "PT_00301"
+  },
+  {
+    "name": "CalPERS",
+    "path": "/company/calpers",
+    "id": "PT_00300"
+  },
+  {
+    "name": "CalSTRS",
+    "path": "/company/calstrs",
+    "id": "PT_00302"
+  },
+  {
+    "name": "Cambridge Associates",
+    "path": "/company/cambridge-associates",
+    "id": "PT_00304"
+  },
+  {
+    "name": "Campbell's",
+    "path": "/company/campbells",
+    "id": "PT_00306"
+  },
+  {
+    "name": "Canadian Natural Resources",
+    "path": "/company/canadian-natural-resources",
+    "id": "PT_00309"
+  },
+  {
+    "name": "Canadian Solar",
+    "path": "/company/canadian-solar",
+    "id": "PT_00310"
+  },
+  {
+    "name": "Canadian Tire",
+    "path": "/company/canadian-tire",
+    "id": "PT_02900"
+  },
+  {
+    "name": "Canara Bank",
+    "path": "/company/canara-bank",
+    "id": "PT_00311"
+  },
+  {
+    "name": "Canon",
+    "path": "/company/canon",
+    "id": "PT_00312"
+  },
+  {
+    "name": "Capgemini",
+    "path": "/company/capgemini",
+    "id": "PT_02156"
+  },
+  {
+    "name": "Capital Group",
+    "path": "/company/capital-group",
+    "id": "PT_00313"
+  },
+  {
+    "name": "Capital One",
+    "path": "/company/capital-one",
+    "id": "PT_00314"
+  },
+  {
+    "name": "Cappa and D'Alberto",
+    "path": "/company/cappa-and-dalberto",
+    "id": "PT_02710"
+  },
+  {
+    "name": "Capri Holdings",
+    "path": "/company/capri-holdings",
+    "id": "PT_00315"
+  },
+  {
+    "name": "Cargill",
+    "path": "/company/cargill",
+    "id": "PT_00317"
+  },
+  {
+    "name": "Carlsberg",
+    "path": "/company/carlsberg",
+    "id": "PT_00318"
+  },
+  {
+    "name": "Carnival Corporation",
+    "path": "/company/carnival-corporation",
+    "id": "PT_00319"
+  },
+  {
+    "name": "Carozzi",
+    "path": "/company/carozzi",
+    "id": "PT_00320"
+  },
+  {
+    "name": "Carrefour",
+    "path": "/company/carrefour",
+    "id": "PT_00321"
+  },
+  {
+    "name": "Carter's",
+    "path": "/company/carters",
+    "id": "PT_00322"
+  },
+  {
+    "name": "Cathay Financial Holding",
+    "path": "/company/cathay-financial-holding",
+    "id": "PT_00324"
+  },
+  {
+    "name": "Cathay Pacific",
+    "path": "/company/cathay-pacific",
+    "id": "PT_02105"
+  },
+  {
+    "name": "CATL",
+    "path": "/company/catl",
+    "id": "PT_02187"
+  },
+  {
+    "name": "CBRE Group",
+    "path": "/company/cbre-group",
+    "id": "PT_00325"
+  },
+  {
+    "name": "CDP Group",
+    "path": "/company/cdp-group",
+    "id": "PT_02275"
+  },
+  {
+    "name": "Ceconomy",
+    "path": "/company/ceconomy",
+    "id": "PT_02867"
+  },
+  {
+    "name": "Celanese",
+    "path": "/company/celanese",
+    "id": "PT_00328"
+  },
+  {
+    "name": "Cementos Argos",
+    "path": "/company/cementos-argos",
+    "id": "PT_00783"
+  },
+  {
+    "name": "Cemex",
+    "path": "/company/cemex",
+    "id": "PT_00329"
+  },
+  {
+    "name": "Cencosud",
+    "path": "/company/cencosud",
+    "id": "PT_00330"
+  },
+  {
+    "name": "Cenovus Energy",
+    "path": "/company/cenovus-energy",
+    "id": "PT_00331"
+  },
+  {
+    "name": "Central Energy Fund",
+    "path": "/company/central-energy-fund",
+    "id": "PT_02145"
+  },
+  {
+    "name": "Central Japan Railway",
+    "path": "/company/central-japan-railway",
+    "id": "PT_00334"
+  },
+  {
+    "name": "Central Pattana",
+    "path": "/company/central-pattana",
+    "id": "PT_02462"
+  },
+  {
+    "name": "Central Retail",
+    "path": "/company/central-retail",
+    "id": "PT_00333"
+  },
+  {
+    "name": "Centrica",
+    "path": "/company/centrica",
+    "id": "PT_00336"
+  },
+  {
+    "name": "Century Aluminum",
+    "path": "/company/century-aluminum",
+    "id": "PT_02577"
+  },
+  {
+    "name": "Century Pacific Food",
+    "path": "/company/century-pacific-food",
+    "id": "PT_02437"
+  },
+  {
+    "name": "Cermaq",
+    "path": "/company/cermaq",
+    "id": "PT_02829"
+  },
+  {
+    "name": "CEZ Group",
+    "path": "/company/cez-group",
+    "id": "PT_00338"
+  },
+  {
+    "name": "CF Industries",
+    "path": "/company/cf-industries",
+    "id": "PT_00339"
+  },
+  {
+    "name": "CHALCO",
+    "path": "/company/chalco",
+    "id": "PT_00079"
+  },
+  {
+    "name": "Chanel",
+    "path": "/company/chanel",
+    "id": "PT_00340"
+  },
+  {
+    "name": "Changan Automobile",
+    "path": "/company/changan-automobile",
+    "id": "PT_00341"
+  },
+  {
+    "name": "Charles Schwab",
+    "path": "/company/charles-schwab",
+    "id": "PT_00342"
+  },
+  {
+    "name": "Charoen Pokphand Group",
+    "path": "/company/charoen-pokphand-group",
+    "id": "PT_00343"
+  },
+  {
+    "name": "Cheng Shin Rubber",
+    "path": "/company/cheng-shin-rubber",
+    "id": "PT_00345"
+  },
+  {
+    "name": "Chengdu Metro",
+    "path": "/company/chengdu-metro",
+    "id": "PT_02280"
+  },
+  {
+    "name": "Chery Holding Group",
+    "path": "/company/chery-holding-group",
+    "id": "PT_02152"
+  },
+  {
+    "name": "Chevron",
+    "path": "/company/chevron",
+    "id": "PT_00348"
+  },
+  {
+    "name": "Chevron Phillips",
+    "path": "/company/chevron-phillips",
+    "id": "PT_00349"
+  },
+  {
+    "name": "China Airlines",
+    "path": "/company/china-airlines",
+    "id": "PT_00351"
+  },
+  {
+    "name": "China Communications Construction",
+    "path": "/company/china-communications-construction",
+    "id": "PT_00353"
+  },
+  {
+    "name": "China Construction Bank",
+    "path": "/company/china-construction-bank",
+    "id": "PT_00354"
+  },
+  {
+    "name": "China Datang",
+    "path": "/company/china-datang",
+    "id": "PT_00359"
+  },
+  {
+    "name": "China Development Bank",
+    "path": "/company/china-development-bank",
+    "id": "PT_02023"
+  },
+  {
+    "name": "China Eastern Airlines",
+    "path": "/company/china-eastern-airlines",
+    "id": "PT_00360"
+  },
+  {
+    "name": "China Everbright Bank",
+    "path": "/company/china-everbright-bank",
+    "id": "PT_00364"
+  },
+  {
+    "name": "China Hongqiao",
+    "path": "/company/china-hongqiao",
+    "id": "PT_00370"
+  },
+  {
+    "name": "China Huadian",
+    "path": "/company/china-huadian",
+    "id": "PT_00371"
+  },
+  {
+    "name": "China Huaneng",
+    "path": "/company/china-huaneng",
+    "id": "PT_00372"
+  },
+  {
+    "name": "China International Marine Containers",
+    "path": "/company/china-international-marine-containers",
+    "id": "PT_00373"
+  },
+  {
+    "name": "China Investment Corporation",
+    "path": "/company/china-investment-corporation",
+    "id": "PT_00374"
+  },
+  {
+    "name": "China Life Insurance",
+    "path": "/company/china-life-insurance",
+    "id": "PT_00375"
+  },
+  {
+    "name": "China Mengniu Dairy",
+    "path": "/company/china-mengniu-dairy",
+    "id": "PT_00376"
+  },
+  {
+    "name": "China Merchants Bank",
+    "path": "/company/china-merchants-bank",
+    "id": "PT_02412"
+  },
+  {
+    "name": "China Merchants Ports",
+    "path": "/company/china-merchants-ports",
+    "id": "PT_02254"
+  },
+  {
+    "name": "China Merchants Shekou Industrial Zone Holdings",
+    "path": "/company/china-merchants-shekou-industrial-zone-holdings",
+    "id": "PT_02907"
+  },
+  {
+    "name": "China MinMetals",
+    "path": "/company/china-minmetals",
+    "id": "PT_02205"
+  },
+  {
+    "name": "China Minsheng Bank",
+    "path": "/company/china-minsheng-bank",
+    "id": "PT_00378"
+  },
+  {
+    "name": "China Mobile",
+    "path": "/company/china-mobile",
+    "id": "PT_00379"
+  },
+  {
+    "name": "China Overseas Land & Investment",
+    "path": "/company/china-overseas-land-investment",
+    "id": "PT_00386"
+  },
+  {
+    "name": "China Pacific Construction Group",
+    "path": "/company/china-pacific-construction-group",
+    "id": "PT_00387"
+  },
+  {
+    "name": "China Pacific Insurance",
+    "path": "/company/china-pacific-insurance",
+    "id": "PT_00388"
+  },
+  {
+    "name": "China Post Group",
+    "path": "/company/china-post-group",
+    "id": "PT_00391"
+  },
+  {
+    "name": "China Railway Construction",
+    "path": "/company/china-railway-construction",
+    "id": "PT_00392"
+  },
+  {
+    "name": "China Re Group",
+    "path": "/company/china-re-group",
+    "id": "PT_02663"
+  },
+  {
+    "name": "China Resources Building Materials Technology",
+    "path": "/company/china-resources-building-materials-technology",
+    "id": "PT_02125"
+  },
+  {
+    "name": "China Resources Holdings",
+    "path": "/company/china-resources-holdings",
+    "id": "PT_00393"
+  },
+  {
+    "name": "China Resources Land",
+    "path": "/company/china-resources-land",
+    "id": "PT_02124"
+  },
+  {
+    "name": "China Shanshui Cement",
+    "path": "/company/china-shanshui-cement",
+    "id": "PT_00395"
+  },
+  {
+    "name": "China Southern Airlines",
+    "path": "/company/china-southern-airlines",
+    "id": "PT_00396"
+  },
+  {
+    "name": "China State Construction",
+    "path": "/company/china-state-construction",
+    "id": "PT_00398"
+  },
+  {
+    "name": "China State Railway",
+    "path": "/company/china-state-railway",
+    "id": "PT_02268"
+  },
+  {
+    "name": "China Steel",
+    "path": "/company/china-steel",
+    "id": "PT_00400"
+  },
+  {
+    "name": "China Taiping Insurance",
+    "path": "/company/china-taiping-insurance",
+    "id": "PT_00401"
+  },
+  {
+    "name": "China Telecom",
+    "path": "/company/china-telecom",
+    "id": "PT_00402"
+  },
+  {
+    "name": "China Three Gorges",
+    "path": "/company/china-three-gorges",
+    "id": "PT_00403"
+  },
+  {
+    "name": "China Tianying",
+    "path": "/company/china-tianying",
+    "id": "PT_02281"
+  },
+  {
+    "name": "China Unicom",
+    "path": "/company/china-unicom",
+    "id": "PT_00405"
+  },
+  {
+    "name": "China Vanke",
+    "path": "/company/china-vanke",
+    "id": "PT_00406"
+  },
+  {
+    "name": "China Water Affairs Group",
+    "path": "/company/china-water-affairs-group",
+    "id": "PT_00408"
+  },
+  {
+    "name": "China Zheshang Bank",
+    "path": "/company/china-zheshang-bank",
+    "id": "PT_00410"
+  },
+  {
+    "name": "Chipotle Mexican Grill",
+    "path": "/company/chipotle-mexican-grill",
+    "id": "PT_00411"
+  },
+  {
+    "name": "CHN Energy",
+    "path": "/company/chn-energy",
+    "id": "PT_00363"
+  },
+  {
+    "name": "Chongqing Rail Transit",
+    "path": "/company/chongqing-rail-transit",
+    "id": "PT_02632"
+  },
+  {
+    "name": "Chongqing Water Group",
+    "path": "/company/chongqing-water-group",
+    "id": "PT_00415"
+  },
+  {
+    "name": "CHS",
+    "path": "/company/chs",
+    "id": "PT_00416"
+  },
+  {
+    "name": "Chubb",
+    "path": "/company/chubb",
+    "id": "PT_00417"
+  },
+  {
+    "name": "Chubu Electric Power",
+    "path": "/company/chubu-electric-power",
+    "id": "PT_00418"
+  },
+  {
+    "name": "Chugoku Electric Power",
+    "path": "/company/chugoku-electric-power",
+    "id": "PT_00419"
+  },
+  {
+    "name": "Chunghwa Telecom",
+    "path": "/company/chunghwa-telecom",
+    "id": "PT_00420"
+  },
+  {
+    "name": "CI Financial Corp",
+    "path": "/company/ci-financial-corp",
+    "id": "PT_00422"
+  },
+  {
+    "name": "CIBC",
+    "path": "/company/cibc",
+    "id": "PT_00308"
+  },
+  {
+    "name": "CIFI Holdings",
+    "path": "/company/cifi-holdings",
+    "id": "PT_00423"
+  },
+  {
+    "name": "CIMB",
+    "path": "/company/cimb",
+    "id": "PT_00425"
+  },
+  {
+    "name": "Ciputra Development",
+    "path": "/company/ciputra-development",
+    "id": "PT_02364"
+  },
+  {
+    "name": "Cisco",
+    "path": "/company/cisco",
+    "id": "PT_00427"
+  },
+  {
+    "name": "CITIC Bank",
+    "path": "/company/citic-bank",
+    "id": "PT_02808"
+  },
+  {
+    "name": "CITIC Pacific Special Steel",
+    "path": "/company/citic-pacific-special-steel",
+    "id": "PT_02241"
+  },
+  {
+    "name": "Citigroup",
+    "path": "/company/citigroup",
+    "id": "PT_00429"
+  },
+  {
+    "name": "Citizens Financial Group",
+    "path": "/company/citizens-financial-group",
+    "id": "PT_00430"
+  },
+  {
+    "name": "Citrix",
+    "path": "/company/citrix",
+    "id": "PT_00431"
+  },
+  {
+    "name": "Citrosuco",
+    "path": "/company/citrosuco",
+    "id": "PT_02075"
+  },
+  {
+    "name": "City Developments Limited",
+    "path": "/company/city-developments-limited",
+    "id": "PT_02351"
+  },
+  {
+    "name": "Cj Cheiljedang",
+    "path": "/company/cj-cheiljedang",
+    "id": "PT_02804"
+  },
+  {
+    "name": "CJ Corporation",
+    "path": "/company/cj-corporation",
+    "id": "PT_02854"
+  },
+  {
+    "name": "CJ Logistics",
+    "path": "/company/cj-logistics",
+    "id": "PT_00433"
+  },
+  {
+    "name": "CK Asset Holdings",
+    "path": "/company/ck-asset-holdings",
+    "id": "PT_00434"
+  },
+  {
+    "name": "CK Hutchison",
+    "path": "/company/ck-hutchison",
+    "id": "PT_02853"
+  },
+  {
+    "name": "Clark Construction",
+    "path": "/company/clark-construction",
+    "id": "PT_02711"
+  },
+  {
+    "name": "Clicks Group",
+    "path": "/company/clicks-group",
+    "id": "PT_02901"
+  },
+  {
+    "name": "Cloudflare",
+    "path": "/company/cloudflare",
+    "id": "PT_00439"
+  },
+  {
+    "name": "CLP Group",
+    "path": "/company/clp-group",
+    "id": "PT_00440"
+  },
+  {
+    "name": "CMA CGM",
+    "path": "/company/cma-cgm",
+    "id": "PT_00441"
+  },
+  {
+    "name": "CMB.TECH",
+    "path": "/company/cmbtech",
+    "id": "PT_02263"
+  },
+  {
+    "name": "CMOC",
+    "path": "/company/cmoc",
+    "id": "PT_02240"
+  },
+  {
+    "name": "CMPC",
+    "path": "/company/cmpc",
+    "id": "PT_00442"
+  },
+  {
+    "name": "CMS Energy",
+    "path": "/company/cms-energy",
+    "id": "PT_00443"
+  },
+  {
+    "name": "CNBM",
+    "path": "/company/cnbm",
+    "id": "PT_00381"
+  },
+  {
+    "name": "CNOOC",
+    "path": "/company/cnooc",
+    "id": "PT_00384"
+  },
+  {
+    "name": "CNPC",
+    "path": "/company/cnpc",
+    "id": "PT_00385"
+  },
+  {
+    "name": "Coamo Agroindustrial Cooperativa",
+    "path": "/company/coamo-agroindustrial-cooperativa",
+    "id": "PT_00446"
+  },
+  {
+    "name": "Coca-Cola Company",
+    "path": "/company/coca-cola-company",
+    "id": "PT_00447"
+  },
+  {
+    "name": "Codelco",
+    "path": "/company/codelco",
+    "id": "PT_02204"
+  },
+  {
+    "name": "COFCO",
+    "path": "/company/cofco",
+    "id": "PT_00448"
+  },
+  {
+    "name": "Cogent Communications",
+    "path": "/company/cogent-communications",
+    "id": "PT_00449"
+  },
+  {
+    "name": "Cognizant",
+    "path": "/company/cognizant",
+    "id": "PT_02155"
+  },
+  {
+    "name": "Coles Group",
+    "path": "/company/coles-group",
+    "id": "PT_00450"
+  },
+  {
+    "name": "Colgate-Palmolive",
+    "path": "/company/colgate-palmolive",
+    "id": "PT_00451"
+  },
+  {
+    "name": "Colruyt",
+    "path": "/company/colruyt",
+    "id": "PT_00452"
+  },
+  {
+    "name": "Columbia Sportswear",
+    "path": "/company/columbia-sportswear",
+    "id": "PT_00453"
+  },
+  {
+    "name": "Comac",
+    "path": "/company/comac",
+    "id": "PT_02725"
+  },
+  {
+    "name": "Comcast",
+    "path": "/company/comcast",
+    "id": "PT_00454"
+  },
+  {
+    "name": "ComfortDelGro",
+    "path": "/company/comfortdelgro",
+    "id": "PT_00455"
+  },
+  {
+    "name": "CommBank",
+    "path": "/company/commbank",
+    "id": "PT_00458"
+  },
+  {
+    "name": "Commerzbank",
+    "path": "/company/commerzbank",
+    "id": "PT_00457"
+  },
+  {
+    "name": "Compass Group",
+    "path": "/company/compass-group",
+    "id": "PT_00465"
+  },
+  {
+    "name": "Conad",
+    "path": "/company/conad",
+    "id": "PT_00466"
+  },
+  {
+    "name": "Conagra Brands",
+    "path": "/company/conagra-brands",
+    "id": "PT_00467"
+  },
+  {
+    "name": "ConocoPhillips",
+    "path": "/company/conocophillips",
+    "id": "PT_00469"
+  },
+  {
+    "name": "Consolidated Edison",
+    "path": "/company/consolidated-edison",
+    "id": "PT_00470"
+  },
+  {
+    "name": "Constellation Brands",
+    "path": "/company/constellation-brands",
+    "id": "PT_00471"
+  },
+  {
+    "name": "Constellation Energy",
+    "path": "/company/constellation-energy",
+    "id": "PT_02544"
+  },
+  {
+    "name": "Consultatio",
+    "path": "/company/consultatio",
+    "id": "PT_02467"
+  },
+  {
+    "name": "Continental",
+    "path": "/company/continental",
+    "id": "PT_00472"
+  },
+  {
+    "name": "Cooke",
+    "path": "/company/cooke",
+    "id": "PT_00474"
+  },
+  {
+    "name": "COOP Group",
+    "path": "/company/coop-group",
+    "id": "PT_00475"
+  },
+  {
+    "name": "Coöperatie The Greenery",
+    "path": "/company/cooperatie-greenery",
+    "id": "PT_00476"
+  },
+  {
+    "name": "Copersucar",
+    "path": "/company/copersucar",
+    "id": "PT_00477"
+  },
+  {
+    "name": "Corning",
+    "path": "/company/corning",
+    "id": "PT_00478"
+  },
+  {
+    "name": "Coromandel",
+    "path": "/company/coromandel",
+    "id": "PT_02811"
+  },
+  {
+    "name": "Corteva Agriscience",
+    "path": "/company/corteva-agriscience",
+    "id": "PT_00479"
+  },
+  {
+    "name": "COSCO Shipping",
+    "path": "/company/cosco-shipping",
+    "id": "PT_00358"
+  },
+  {
+    "name": "Cosmo Energy",
+    "path": "/company/cosmo-energy",
+    "id": "PT_00481"
+  },
+  {
+    "name": "Costco",
+    "path": "/company/costco",
+    "id": "PT_00482"
+  },
+  {
+    "name": "Cosun",
+    "path": "/company/cosun",
+    "id": "PT_00483"
+  },
+  {
+    "name": "Coteccons",
+    "path": "/company/coteccons",
+    "id": "PT_02919"
+  },
+  {
+    "name": "Coty",
+    "path": "/company/coty",
+    "id": "PT_00484"
+  },
+  {
+    "name": "Couche-Tard",
+    "path": "/company/couche-tard",
+    "id": "PT_00071"
+  },
+  {
+    "name": "Country Garden Holdings",
+    "path": "/company/country-garden-holdings",
+    "id": "PT_00485"
+  },
+  {
+    "name": "Coupang",
+    "path": "/company/coupang",
+    "id": "PT_02818"
+  },
+  {
+    "name": "Covea",
+    "path": "/company/covea",
+    "id": "PT_00487"
+  },
+  {
+    "name": "Covestro",
+    "path": "/company/covestro",
+    "id": "PT_00488"
+  },
+  {
+    "name": "Covivio",
+    "path": "/company/covivio",
+    "id": "PT_02685"
+  },
+  {
+    "name": "CPC",
+    "path": "/company/cpc",
+    "id": "PT_00489"
+  },
+  {
+    "name": "CPF",
+    "path": "/company/cpf",
+    "id": "PT_02832"
+  },
+  {
+    "name": "CPP Investments",
+    "path": "/company/cpp-investments",
+    "id": "PT_00307"
+  },
+  {
+    "name": "CR Beer",
+    "path": "/company/cr-beer",
+    "id": "PT_02807"
+  },
+  {
+    "name": "CREC",
+    "path": "/company/crec",
+    "id": "PT_02191"
+  },
+  {
+    "name": "Credicorp",
+    "path": "/company/credicorp",
+    "id": "PT_00787"
+  },
+  {
+    "name": "Crédit Agricole",
+    "path": "/company/credit-agricole",
+    "id": "PT_00490"
+  },
+  {
+    "name": "Credit Mutuel",
+    "path": "/company/credit-mutuel",
+    "id": "PT_00491"
+  },
+  {
+    "name": "CRH",
+    "path": "/company/crh",
+    "id": "PT_00493"
+  },
+  {
+    "name": "Crown Holdings",
+    "path": "/company/crown-holdings",
+    "id": "PT_00495"
+  },
+  {
+    "name": "CRRC Corporation",
+    "path": "/company/crrc-corporation",
+    "id": "PT_00496"
+  },
+  {
+    "name": "CSL",
+    "path": "/company/csl",
+    "id": "PT_00498"
+  },
+  {
+    "name": "CSSC Holdings",
+    "path": "/company/cssc-holdings",
+    "id": "PT_00399"
+  },
+  {
+    "name": "CTBC Financial",
+    "path": "/company/ctbc-financial",
+    "id": "PT_00499"
+  },
+  {
+    "name": "Currys",
+    "path": "/company/currys",
+    "id": "PT_02879"
+  },
+  {
+    "name": "Cushman & Wakefield",
+    "path": "/company/cushman-wakefield",
+    "id": "PT_00501"
+  },
+  {
+    "name": "Cutrale",
+    "path": "/company/cutrale",
+    "id": "PT_00412"
+  },
+  {
+    "name": "CVC Capital Partners",
+    "path": "/company/cvc-capital-partners",
+    "id": "PT_00502"
+  },
+  {
+    "name": "CVS Health",
+    "path": "/company/cvs-health",
+    "id": "PT_02857"
+  },
+  {
+    "name": "CXIG",
+    "path": "/company/cxig",
+    "id": "PT_02722"
+  },
+  {
+    "name": "Cyrela Brazil Realty",
+    "path": "/company/cyrela-brazil-realty",
+    "id": "PT_00503"
+  },
+  {
+    "name": "D. E. Shaw Group",
+    "path": "/company/d-e-shaw-group",
+    "id": "PT_00504"
+  },
+  {
+    "name": "D.R. Horton",
+    "path": "/company/dr-horton",
+    "id": "PT_00505"
+  },
+  {
+    "name": "Dabur",
+    "path": "/company/dabur",
+    "id": "PT_00506"
+  },
+  {
+    "name": "Daewoo Engineering & Construction",
+    "path": "/company/daewoo-engineering-construction",
+    "id": "PT_00509"
+  },
+  {
+    "name": "Dai-ichi Life Holdings",
+    "path": "/company/dai-ichi-life-holdings",
+    "id": "PT_00511"
+  },
+  {
+    "name": "Daiichi Sankyo",
+    "path": "/company/daiichi-sankyo",
+    "id": "PT_00512"
+  },
+  {
+    "name": "Daimler Truck",
+    "path": "/company/daimler-truck",
+    "id": "PT_02726"
+  },
+  {
+    "name": "Dairy Farmers of America",
+    "path": "/company/dairy-farmers-america",
+    "id": "PT_00515"
+  },
+  {
+    "name": "Daiso",
+    "path": "/company/daiso",
+    "id": "PT_02873"
+  },
+  {
+    "name": "Daito Trust Construction",
+    "path": "/company/daito-trust-construction",
+    "id": "PT_02085"
+  },
+  {
+    "name": "Daiwa House Group",
+    "path": "/company/daiwa-house-group",
+    "id": "PT_00516"
+  },
+  {
+    "name": "Dalmia Bharat",
+    "path": "/company/dalmia-bharat",
+    "id": "PT_00517"
+  },
+  {
+    "name": "Dangote Cement",
+    "path": "/company/dangote-cement",
+    "id": "PT_02102"
+  },
+  {
+    "name": "Dangote Industries",
+    "path": "/company/dangote-industries",
+    "id": "PT_00520"
+  },
+  {
+    "name": "Danish Agro",
+    "path": "/company/danish-agro",
+    "id": "PT_00521"
+  },
+  {
+    "name": "Danish Crown",
+    "path": "/company/danish-crown",
+    "id": "PT_00522"
+  },
+  {
+    "name": "Danone",
+    "path": "/company/danone",
+    "id": "PT_00523"
+  },
+  {
+    "name": "Danske Bank",
+    "path": "/company/danske-bank",
+    "id": "PT_00524"
+  },
+  {
+    "name": "Darden Restaurants",
+    "path": "/company/darden-restaurants",
+    "id": "PT_00525"
+  },
+  {
+    "name": "DBS",
+    "path": "/company/dbs",
+    "id": "PT_00527"
+  },
+  {
+    "name": "De Heus",
+    "path": "/company/de-heus",
+    "id": "PT_00529"
+  },
+  {
+    "name": "Decathlon",
+    "path": "/company/decathlon",
+    "id": "PT_00532"
+  },
+  {
+    "name": "Deichmann SE",
+    "path": "/company/deichmann-se",
+    "id": "PT_00535"
+  },
+  {
+    "name": "DekaBank",
+    "path": "/company/dekabank",
+    "id": "PT_00536"
+  },
+  {
+    "name": "Del Monte Pacific",
+    "path": "/company/del-monte-pacific",
+    "id": "PT_00537"
+  },
+  {
+    "name": "Delhi Metro",
+    "path": "/company/delhi-metro",
+    "id": "PT_02285"
+  },
+  {
+    "name": "Delivery Hero",
+    "path": "/company/delivery-hero",
+    "id": "PT_00538"
+  },
+  {
+    "name": "Dell",
+    "path": "/company/dell",
+    "id": "PT_00539"
+  },
+  {
+    "name": "Delong Steel",
+    "path": "/company/delong-steel",
+    "id": "PT_02578"
+  },
+  {
+    "name": "Delta Air Lines",
+    "path": "/company/delta-air-lines",
+    "id": "PT_00541"
+  },
+  {
+    "name": "DEME",
+    "path": "/company/deme",
+    "id": "PT_02192"
+  },
+  {
+    "name": "DESCO",
+    "path": "/company/desco",
+    "id": "PT_02592"
+  },
+  {
+    "name": "Designer Brands",
+    "path": "/company/designer-brands",
+    "id": "PT_00546"
+  },
+  {
+    "name": "Desjardins",
+    "path": "/company/desjardins",
+    "id": "PT_02167"
+  },
+  {
+    "name": "Deutsche Bahn",
+    "path": "/company/deutsche-bahn",
+    "id": "PT_00547"
+  },
+  {
+    "name": "Deutsche Bank",
+    "path": "/company/deutsche-bank",
+    "id": "PT_00548"
+  },
+  {
+    "name": "Deutsche Telekom",
+    "path": "/company/deutsche-telekom",
+    "id": "PT_00550"
+  },
+  {
+    "name": "Devon Energy",
+    "path": "/company/devon-energy",
+    "id": "PT_00551"
+  },
+  {
+    "name": "Dexco",
+    "path": "/company/dexco",
+    "id": "PT_02214"
+  },
+  {
+    "name": "DFC",
+    "path": "/company/dfc",
+    "id": "PT_01863"
+  },
+  {
+    "name": "Dhaka Power Distribution Company",
+    "path": "/company/dhaka-power-distribution-company",
+    "id": "PT_02609"
+  },
+  {
+    "name": "DHL Group",
+    "path": "/company/dhl-group",
+    "id": "PT_00549"
+  },
+  {
+    "name": "Diageo",
+    "path": "/company/diageo",
+    "id": "PT_00552"
+  },
+  {
+    "name": "DIC Corporation",
+    "path": "/company/dic-corporation",
+    "id": "PT_00553"
+  },
+  {
+    "name": "Dick's Sporting Goods",
+    "path": "/company/dicks-sporting-goods",
+    "id": "PT_02882"
+  },
+  {
+    "name": "DiDi Chuxing",
+    "path": "/company/didi-chuxing",
+    "id": "PT_00554"
+  },
+  {
+    "name": "Digicel",
+    "path": "/company/digicel",
+    "id": "PT_00556"
+  },
+  {
+    "name": "Digital Realty Trust",
+    "path": "/company/digital-realty-trust",
+    "id": "PT_00558"
+  },
+  {
+    "name": "Dimensional Fund Advisors",
+    "path": "/company/dimensional-fund-advisors",
+    "id": "PT_00559"
+  },
+  {
+    "name": "DLF",
+    "path": "/company/dlf",
+    "id": "PT_02286"
+  },
+  {
+    "name": "DLG Group",
+    "path": "/company/dlg-group",
+    "id": "PT_00564"
+  },
+  {
+    "name": "DMCI Homes",
+    "path": "/company/dmci-homes",
+    "id": "PT_02686"
+  },
+  {
+    "name": "DMK",
+    "path": "/company/dmk",
+    "id": "PT_00565"
+  },
+  {
+    "name": "DNB",
+    "path": "/company/dnb",
+    "id": "PT_00566"
+  },
+  {
+    "name": "Dodge & Cox",
+    "path": "/company/dodge-cox",
+    "id": "PT_00567"
+  },
+  {
+    "name": "Dole",
+    "path": "/company/dole",
+    "id": "PT_02153"
+  },
+  {
+    "name": "Dollar General",
+    "path": "/company/dollar-general",
+    "id": "PT_00569"
+  },
+  {
+    "name": "Dollar Tree",
+    "path": "/company/dollar-tree",
+    "id": "PT_02858"
+  },
+  {
+    "name": "Dominion Energy",
+    "path": "/company/dominion-energy",
+    "id": "PT_00570"
+  },
+  {
+    "name": "Domino's",
+    "path": "/company/dominos",
+    "id": "PT_02438"
+  },
+  {
+    "name": "Domtar",
+    "path": "/company/domtar",
+    "id": "PT_00571"
+  },
+  {
+    "name": "Dongfeng Motor Group",
+    "path": "/company/dongfeng-motor-group",
+    "id": "PT_00572"
+  },
+  {
+    "name": "Donghai Special Steel",
+    "path": "/company/donghai-special-steel",
+    "id": "PT_02579"
+  },
+  {
+    "name": "Dongwon Industries",
+    "path": "/company/dongwon-industries",
+    "id": "PT_00574"
+  },
+  {
+    "name": "DOW",
+    "path": "/company/dow",
+    "id": "PT_00577"
+  },
+  {
+    "name": "DP World",
+    "path": "/company/dp-world",
+    "id": "PT_02231"
+  },
+  {
+    "name": "Dr Reddy's Laboratories",
+    "path": "/company/dr-reddys-laboratories",
+    "id": "PT_00578"
+  },
+  {
+    "name": "Driscoll's",
+    "path": "/company/driscolls",
+    "id": "PT_00579"
+  },
+  {
+    "name": "DS Smith",
+    "path": "/company/ds-smith",
+    "id": "PT_00580"
+  },
+  {
+    "name": "dsm-firmenich",
+    "path": "/company/dsm-firmenich",
+    "id": "PT_02677"
+  },
+  {
+    "name": "DSV",
+    "path": "/company/dsv",
+    "id": "PT_00582"
+  },
+  {
+    "name": "Duke Energy",
+    "path": "/company/duke-energy",
+    "id": "PT_00583"
+  },
+  {
+    "name": "DuPont",
+    "path": "/company/dupont",
+    "id": "PT_00584"
+  },
+  {
+    "name": "DZ Bank Group",
+    "path": "/company/dz-bank-group",
+    "id": "PT_00585"
+  },
+  {
+    "name": "E Fund Management",
+    "path": "/company/e-fund-management",
+    "id": "PT_00586"
+  },
+  {
+    "name": "e&",
+    "path": "/company/e",
+    "id": "PT_00623"
+  },
+  {
+    "name": "E-Mart",
+    "path": "/company/e-mart",
+    "id": "PT_00618"
+  },
+  {
+    "name": "E. Leclerc",
+    "path": "/company/e-leclerc",
+    "id": "PT_00587"
+  },
+  {
+    "name": "E.ON",
+    "path": "/company/eon",
+    "id": "PT_00588"
+  },
+  {
+    "name": "Eastman Chemical",
+    "path": "/company/eastman-chemical",
+    "id": "PT_00590"
+  },
+  {
+    "name": "easyJet",
+    "path": "/company/easyjet",
+    "id": "PT_02911"
+  },
+  {
+    "name": "Eaton",
+    "path": "/company/eaton",
+    "id": "PT_00592"
+  },
+  {
+    "name": "eBay",
+    "path": "/company/ebay",
+    "id": "PT_00594"
+  },
+  {
+    "name": "EBRD",
+    "path": "/company/ebrd",
+    "id": "PT_02027"
+  },
+  {
+    "name": "Ebro Foods",
+    "path": "/company/ebro-foods",
+    "id": "PT_00595"
+  },
+  {
+    "name": "ECARU",
+    "path": "/company/ecaru",
+    "id": "PT_02709"
+  },
+  {
+    "name": "ECOM Agroindustrial",
+    "path": "/company/ecom-agroindustrial",
+    "id": "PT_00598"
+  },
+  {
+    "name": "Ecopetrol",
+    "path": "/company/ecopetrol",
+    "id": "PT_00599"
+  },
+  {
+    "name": "ED&F Man",
+    "path": "/company/edf-man",
+    "id": "PT_00601"
+  },
+  {
+    "name": "Edeka Zentrale",
+    "path": "/company/edeka-zentrale",
+    "id": "PT_00602"
+  },
+  {
+    "name": "Edenor",
+    "path": "/company/edenor",
+    "id": "PT_02594"
+  },
+  {
+    "name": "EDF",
+    "path": "/company/edf",
+    "id": "PT_00611"
+  },
+  {
+    "name": "Edmond de Rothschild Group",
+    "path": "/company/edmond-de-rothschild-group",
+    "id": "PT_00604"
+  },
+  {
+    "name": "EDP",
+    "path": "/company/edp",
+    "id": "PT_00605"
+  },
+  {
+    "name": "EFG International",
+    "path": "/company/efg-international",
+    "id": "PT_00606"
+  },
+  {
+    "name": "EGAT",
+    "path": "/company/egat",
+    "id": "PT_02130"
+  },
+  {
+    "name": "EGPC",
+    "path": "/company/egpc",
+    "id": "PT_00608"
+  },
+  {
+    "name": "Egyptian Holding Company for Water & Waste Water",
+    "path": "/company/egyptian-holding-company-water-waste-water",
+    "id": "PT_02610"
+  },
+  {
+    "name": "EIB",
+    "path": "/company/eib",
+    "id": "PT_02022"
+  },
+  {
+    "name": "Eiffage",
+    "path": "/company/eiffage",
+    "id": "PT_00609"
+  },
+  {
+    "name": "Eko Development",
+    "path": "/company/eko-development",
+    "id": "PT_02687"
+  },
+  {
+    "name": "El Corte Ingles",
+    "path": "/company/el-corte-ingles",
+    "id": "PT_00610"
+  },
+  {
+    "name": "Eletrobras",
+    "path": "/company/eletrobras",
+    "id": "PT_00613"
+  },
+  {
+    "name": "Eli Lilly and Company",
+    "path": "/company/eli-lilly-and-company",
+    "id": "PT_00614"
+  },
+  {
+    "name": "Elior Group",
+    "path": "/company/elior-group",
+    "id": "PT_00615"
+  },
+  {
+    "name": "Elisa",
+    "path": "/company/elisa",
+    "id": "PT_00616"
+  },
+  {
+    "name": "Elo Group",
+    "path": "/company/elo-group",
+    "id": "PT_02906"
+  },
+  {
+    "name": "Emaar Properties",
+    "path": "/company/emaar-properties",
+    "id": "PT_00617"
+  },
+  {
+    "name": "Emirates",
+    "path": "/company/emirates",
+    "id": "PT_02259"
+  },
+  {
+    "name": "Emirates Global Aluminium",
+    "path": "/company/emirates-global-aluminium",
+    "id": "PT_02580"
+  },
+  {
+    "name": "Empresas ICA",
+    "path": "/company/empresas-ica",
+    "id": "PT_02712"
+  },
+  {
+    "name": "EnBW",
+    "path": "/company/enbw",
+    "id": "PT_00627"
+  },
+  {
+    "name": "Enel",
+    "path": "/company/enel",
+    "id": "PT_00628"
+  },
+  {
+    "name": "ENEOS",
+    "path": "/company/eneos",
+    "id": "PT_00984"
+  },
+  {
+    "name": "ENGIE",
+    "path": "/company/engie",
+    "id": "PT_00630"
+  },
+  {
+    "name": "Eni",
+    "path": "/company/eni",
+    "id": "PT_00631"
+  },
+  {
+    "name": "ENOC",
+    "path": "/company/enoc",
+    "id": "PT_02147"
+  },
+  {
+    "name": "Enterprise Products Partners",
+    "path": "/company/enterprise-products-partners",
+    "id": "PT_02136"
+  },
+  {
+    "name": "EOG Resources",
+    "path": "/company/eog-resources",
+    "id": "PT_00633"
+  },
+  {
+    "name": "EPAL",
+    "path": "/company/epal",
+    "id": "PT_02471"
+  },
+  {
+    "name": "EPFO",
+    "path": "/company/epfo",
+    "id": "PT_00625"
+  },
+  {
+    "name": "EQT",
+    "path": "/company/eqt",
+    "id": "PT_02671"
+  },
+  {
+    "name": "Equinix",
+    "path": "/company/equinix",
+    "id": "PT_00634"
+  },
+  {
+    "name": "Equinor",
+    "path": "/company/equinor",
+    "id": "PT_00635"
+  },
+  {
+    "name": "Equity Residential",
+    "path": "/company/equity-residential",
+    "id": "PT_02473"
+  },
+  {
+    "name": "Eranove",
+    "path": "/company/eranove",
+    "id": "PT_00636"
+  },
+  {
+    "name": "Ericsson",
+    "path": "/company/ericsson",
+    "id": "PT_00637"
+  },
+  {
+    "name": "Erste Group Bank",
+    "path": "/company/erste-group-bank",
+    "id": "PT_00639"
+  },
+  {
+    "name": "Eskom",
+    "path": "/company/eskom",
+    "id": "PT_00640"
+  },
+  {
+    "name": "Essential Utilities",
+    "path": "/company/essential-utilities",
+    "id": "PT_02559"
+  },
+  {
+    "name": "Essity",
+    "path": "/company/essity",
+    "id": "PT_00642"
+  },
+  {
+    "name": "Ethio Telecom",
+    "path": "/company/ethio-telecom",
+    "id": "PT_00643"
+  },
+  {
+    "name": "Ethiopian Airlines",
+    "path": "/company/ethiopian-airlines",
+    "id": "PT_02260"
+  },
+  {
+    "name": "Ethiopian Electric Utility",
+    "path": "/company/ethiopian-electric-utility",
+    "id": "PT_02835"
+  },
+  {
+    "name": "EuroChem",
+    "path": "/company/eurochem",
+    "id": "PT_00646"
+  },
+  {
+    "name": "EUROGATE",
+    "path": "/company/eurogate",
+    "id": "PT_02232"
+  },
+  {
+    "name": "Eutelsat Group",
+    "path": "/company/eutelsat-group",
+    "id": "PT_00649"
+  },
+  {
+    "name": "Evergreen Marine Corporation",
+    "path": "/company/evergreen-marine-corporation",
+    "id": "PT_00650"
+  },
+  {
+    "name": "Evonik",
+    "path": "/company/evonik",
+    "id": "PT_00651"
+  },
+  {
+    "name": "Evraz",
+    "path": "/company/evraz",
+    "id": "PT_00653"
+  },
+  {
+    "name": "EW Group",
+    "path": "/company/ew-group",
+    "id": "PT_00654"
+  },
+  {
+    "name": "Expand Energy",
+    "path": "/company/expand-energy",
+    "id": "PT_02918"
+  },
+  {
+    "name": "Expeditors",
+    "path": "/company/expeditors",
+    "id": "PT_00657"
+  },
+  {
+    "name": "ExxonMobil",
+    "path": "/company/exxonmobil",
+    "id": "PT_00659"
+  },
+  {
+    "name": "Fairfax Financial",
+    "path": "/company/fairfax-financial",
+    "id": "PT_02661"
+  },
+  {
+    "name": "Falabella",
+    "path": "/company/falabella",
+    "id": "PT_02408"
+  },
+  {
+    "name": "Far EasTone",
+    "path": "/company/far-eastone",
+    "id": "PT_00665"
+  },
+  {
+    "name": "Fast Retailing",
+    "path": "/company/fast-retailing",
+    "id": "PT_00666"
+  },
+  {
+    "name": "FAW",
+    "path": "/company/faw",
+    "id": "PT_00367"
+  },
+  {
+    "name": "FCC Environment",
+    "path": "/company/fcc-environment",
+    "id": "PT_02840"
+  },
+  {
+    "name": "FCF",
+    "path": "/company/fcf",
+    "id": "PT_00661"
+  },
+  {
+    "name": "Federated Hermes",
+    "path": "/company/federated-hermes",
+    "id": "PT_02004"
+  },
+  {
+    "name": "FedEx",
+    "path": "/company/fedex",
+    "id": "PT_00670"
+  },
+  {
+    "name": "Ferrero",
+    "path": "/company/ferrero",
+    "id": "PT_00672"
+  },
+  {
+    "name": "FGV Holdings",
+    "path": "/company/fgv-holdings",
+    "id": "PT_00675"
+  },
+  {
+    "name": "Fidelity International",
+    "path": "/company/fidelity-international",
+    "id": "PT_00677"
+  },
+  {
+    "name": "Fidelity Investments",
+    "path": "/company/fidelity-investments",
+    "id": "PT_00678"
+  },
+  {
+    "name": "Fifth Third Bancorp",
+    "path": "/company/fifth-third-bancorp",
+    "id": "PT_00679"
+  },
+  {
+    "name": "Fincantieri",
+    "path": "/company/fincantieri",
+    "id": "PT_00682"
+  },
+  {
+    "name": "First Abu Dhabi Bank",
+    "path": "/company/first-abu-dhabi-bank",
+    "id": "PT_00685"
+  },
+  {
+    "name": "First Pacific",
+    "path": "/company/first-pacific",
+    "id": "PT_00687"
+  },
+  {
+    "name": "First Quantum Minerals",
+    "path": "/company/first-quantum-minerals",
+    "id": "PT_02242"
+  },
+  {
+    "name": "First Solar",
+    "path": "/company/first-solar",
+    "id": "PT_00688"
+  },
+  {
+    "name": "FirstGroup",
+    "path": "/company/firstgroup",
+    "id": "PT_00690"
+  },
+  {
+    "name": "FirstRand",
+    "path": "/company/firstrand",
+    "id": "PT_00691"
+  },
+  {
+    "name": "Fiserv",
+    "path": "/company/fiserv",
+    "id": "PT_02823"
+  },
+  {
+    "name": "Fletcher Building",
+    "path": "/company/fletcher-building",
+    "id": "PT_00693"
+  },
+  {
+    "name": "Florida State Board of Administration",
+    "path": "/company/florida-state-board-administration",
+    "id": "PT_00695"
+  },
+  {
+    "name": "Flour Mills of Nigeria",
+    "path": "/company/flour-mills-nigeria",
+    "id": "PT_00696"
+  },
+  {
+    "name": "FMC",
+    "path": "/company/fmc",
+    "id": "PT_00698"
+  },
+  {
+    "name": "FMO",
+    "path": "/company/fmo",
+    "id": "PT_00699"
+  },
+  {
+    "name": "Fnac Darty",
+    "path": "/company/fnac-darty",
+    "id": "PT_02878"
+  },
+  {
+    "name": "Fonterra",
+    "path": "/company/fonterra",
+    "id": "PT_00702"
+  },
+  {
+    "name": "Foot Locker",
+    "path": "/company/foot-locker",
+    "id": "PT_00704"
+  },
+  {
+    "name": "Ford",
+    "path": "/company/ford",
+    "id": "PT_00705"
+  },
+  {
+    "name": "ForFarmers",
+    "path": "/company/forfarmers",
+    "id": "PT_00707"
+  },
+  {
+    "name": "Formosa Petrochemical",
+    "path": "/company/formosa-petrochemical",
+    "id": "PT_00708"
+  },
+  {
+    "name": "Formosa Plastics Corporation",
+    "path": "/company/formosa-plastics-corporation",
+    "id": "PT_00709"
+  },
+  {
+    "name": "Fortescue",
+    "path": "/company/fortescue",
+    "id": "PT_02273"
+  },
+  {
+    "name": "Fortum",
+    "path": "/company/fortum",
+    "id": "PT_00711"
+  },
+  {
+    "name": "Foxconn",
+    "path": "/company/foxconn",
+    "id": "PT_00854"
+  },
+  {
+    "name": "Franklin Resources",
+    "path": "/company/franklin-resources",
+    "id": "PT_00714"
+  },
+  {
+    "name": "Frasers Group",
+    "path": "/company/frasers-group",
+    "id": "PT_02866"
+  },
+  {
+    "name": "Frasers Property",
+    "path": "/company/frasers-property",
+    "id": "PT_02339"
+  },
+  {
+    "name": "Freeport-McMoRan",
+    "path": "/company/freeport-mcmoran",
+    "id": "PT_00717"
+  },
+  {
+    "name": "FrieslandCampina",
+    "path": "/company/frieslandcampina",
+    "id": "PT_00719"
+  },
+  {
+    "name": "FRTIB",
+    "path": "/company/frtib",
+    "id": "PT_00668"
+  },
+  {
+    "name": "FS Group",
+    "path": "/company/fs-group",
+    "id": "PT_00674"
+  },
+  {
+    "name": "Fubon Financial",
+    "path": "/company/fubon-financial",
+    "id": "PT_00720"
+  },
+  {
+    "name": "Fufeng Group",
+    "path": "/company/fufeng-group",
+    "id": "PT_00721"
+  },
+  {
+    "name": "Fuji Oil Group",
+    "path": "/company/fuji-oil-group",
+    "id": "PT_00723"
+  },
+  {
+    "name": "Fujian Sunner Development",
+    "path": "/company/fujian-sunner-development",
+    "id": "PT_00724"
+  },
+  {
+    "name": "FUNO",
+    "path": "/company/funo",
+    "id": "PT_02476"
+  },
+  {
+    "name": "Future Fund",
+    "path": "/company/future-fund",
+    "id": "PT_00730"
+  },
+  {
+    "name": "G-III Apparel Group",
+    "path": "/company/g-iii-apparel-group",
+    "id": "PT_00748"
+  },
+  {
+    "name": "GAC Group",
+    "path": "/company/gac-group",
+    "id": "PT_00804"
+  },
+  {
+    "name": "GAIL",
+    "path": "/company/gail",
+    "id": "PT_02139"
+  },
+  {
+    "name": "Galp Energia",
+    "path": "/company/galp-energia",
+    "id": "PT_00731"
+  },
+  {
+    "name": "GAM",
+    "path": "/company/gam",
+    "id": "PT_00732"
+  },
+  {
+    "name": "Gamuda",
+    "path": "/company/gamuda",
+    "id": "PT_02561"
+  },
+  {
+    "name": "Ganfeng Lithium",
+    "path": "/company/ganfeng-lithium",
+    "id": "PT_02243"
+  },
+  {
+    "name": "Gap",
+    "path": "/company/gap",
+    "id": "PT_00733"
+  },
+  {
+    "name": "Gazprom",
+    "path": "/company/gazprom",
+    "id": "PT_00734"
+  },
+  {
+    "name": "GE Vernova",
+    "path": "/company/ge-vernova",
+    "id": "PT_02909"
+  },
+  {
+    "name": "Gecina",
+    "path": "/company/gecina",
+    "id": "PT_02429"
+  },
+  {
+    "name": "Geely Holding",
+    "path": "/company/geely-holding",
+    "id": "PT_01993"
+  },
+  {
+    "name": "Gemdale",
+    "path": "/company/gemdale",
+    "id": "PT_00737"
+  },
+  {
+    "name": "General Mills",
+    "path": "/company/general-mills",
+    "id": "PT_00739"
+  },
+  {
+    "name": "General Motors",
+    "path": "/company/general-motors",
+    "id": "PT_00740"
+  },
+  {
+    "name": "Generali",
+    "path": "/company/generali",
+    "id": "PT_00149"
+  },
+  {
+    "name": "Geode Capital Management",
+    "path": "/company/geode-capital-management",
+    "id": "PT_00743"
+  },
+  {
+    "name": "Georgia-Pacific",
+    "path": "/company/georgia-pacific",
+    "id": "PT_00746"
+  },
+  {
+    "name": "Gerdau",
+    "path": "/company/gerdau",
+    "id": "PT_01159"
+  },
+  {
+    "name": "GIC",
+    "path": "/company/gic",
+    "id": "PT_00747"
+  },
+  {
+    "name": "Gildan Activewear",
+    "path": "/company/gildan-activewear",
+    "id": "PT_00749"
+  },
+  {
+    "name": "Gilead Sciences",
+    "path": "/company/gilead-sciences",
+    "id": "PT_00750"
+  },
+  {
+    "name": "Givaudan",
+    "path": "/company/givaudan",
+    "id": "PT_00751"
+  },
+  {
+    "name": "Glencore",
+    "path": "/company/glencore",
+    "id": "PT_00752"
+  },
+  {
+    "name": "Glico",
+    "path": "/company/glico",
+    "id": "PT_00660"
+  },
+  {
+    "name": "GlobalFoundries",
+    "path": "/company/globalfoundries",
+    "id": "PT_00755"
+  },
+  {
+    "name": "Globe Telecom",
+    "path": "/company/globe-telecom",
+    "id": "PT_00756"
+  },
+  {
+    "name": "GNP",
+    "path": "/company/gnp",
+    "id": "PT_02813"
+  },
+  {
+    "name": "Go-Ahead Group",
+    "path": "/company/go-ahead-group",
+    "id": "PT_00757"
+  },
+  {
+    "name": "Godrej Consumer Products",
+    "path": "/company/godrej-consumer-products",
+    "id": "PT_00758"
+  },
+  {
+    "name": "Godrej Properties",
+    "path": "/company/godrej-properties",
+    "id": "PT_02290"
+  },
+  {
+    "name": "Gold Fields",
+    "path": "/company/gold-fields",
+    "id": "PT_02208"
+  },
+  {
+    "name": "Golden Agri-Resources",
+    "path": "/company/golden-agri-resources",
+    "id": "PT_00761"
+  },
+  {
+    "name": "Goldman Sachs",
+    "path": "/company/goldman-sachs",
+    "id": "PT_00762"
+  },
+  {
+    "name": "Goldwind",
+    "path": "/company/goldwind",
+    "id": "PT_01962"
+  },
+  {
+    "name": "Goodyear Tire & Rubber",
+    "path": "/company/goodyear-tire-rubber",
+    "id": "PT_00763"
+  },
+  {
+    "name": "GoTo",
+    "path": "/company/goto",
+    "id": "PT_02535"
+  },
+  {
+    "name": "GPIF",
+    "path": "/company/gpif",
+    "id": "PT_00764"
+  },
+  {
+    "name": "Grab",
+    "path": "/company/grab",
+    "id": "PT_00765"
+  },
+  {
+    "name": "Graham Packaging",
+    "path": "/company/graham-packaging",
+    "id": "PT_02842"
+  },
+  {
+    "name": "Graincorp",
+    "path": "/company/graincorp",
+    "id": "PT_00766"
+  },
+  {
+    "name": "Graphic Packaging International",
+    "path": "/company/graphic-packaging-international",
+    "id": "PT_00767"
+  },
+  {
+    "name": "Grasim Industries",
+    "path": "/company/grasim-industries",
+    "id": "PT_02202"
+  },
+  {
+    "name": "Great Eastern Shipping",
+    "path": "/company/great-eastern-shipping",
+    "id": "PT_00770"
+  },
+  {
+    "name": "Great Wall Motor Company",
+    "path": "/company/great-wall-motor-company",
+    "id": "PT_00771"
+  },
+  {
+    "name": "Greentown China Holdings",
+    "path": "/company/greentown-china-holdings",
+    "id": "PT_00774"
+  },
+  {
+    "name": "Greenyard",
+    "path": "/company/greenyard",
+    "id": "PT_00775"
+  },
+  {
+    "name": "Greystar",
+    "path": "/company/greystar",
+    "id": "PT_02688"
+  },
+  {
+    "name": "Grindrod",
+    "path": "/company/grindrod",
+    "id": "PT_02261"
+  },
+  {
+    "name": "Grit Group",
+    "path": "/company/grit-group",
+    "id": "PT_02689"
+  },
+  {
+    "name": "Group Five",
+    "path": "/company/group-five",
+    "id": "PT_02713"
+  },
+  {
+    "name": "Groupama Group",
+    "path": "/company/groupama-group",
+    "id": "PT_00776"
+  },
+  {
+    "name": "Groupe BPCE",
+    "path": "/company/groupe-bpce",
+    "id": "PT_00778"
+  },
+  {
+    "name": "Groupe Casino",
+    "path": "/company/groupe-casino",
+    "id": "PT_02072"
+  },
+  {
+    "name": "Groupe Pomona",
+    "path": "/company/groupe-pomona",
+    "id": "PT_02001"
+  },
+  {
+    "name": "Growthpoint Properties",
+    "path": "/company/growthpoint-properties",
+    "id": "PT_02481"
+  },
+  {
+    "name": "Gruma",
+    "path": "/company/gruma",
+    "id": "PT_00781"
+  },
+  {
+    "name": "Grupo Arcor",
+    "path": "/company/grupo-arcor",
+    "id": "PT_00782"
+  },
+  {
+    "name": "Grupo Aval",
+    "path": "/company/grupo-aval",
+    "id": "PT_00784"
+  },
+  {
+    "name": "Grupo Bimbo",
+    "path": "/company/grupo-bimbo",
+    "id": "PT_00785"
+  },
+  {
+    "name": "Grupo Comercial Chedraui",
+    "path": "/company/grupo-comercial-chedraui",
+    "id": "PT_02439"
+  },
+  {
+    "name": "Grupo Financiero Banorte",
+    "path": "/company/grupo-financiero-banorte",
+    "id": "PT_00788"
+  },
+  {
+    "name": "Grupo Lala",
+    "path": "/company/grupo-lala",
+    "id": "PT_00790"
+  },
+  {
+    "name": "Grupo Mexico",
+    "path": "/company/grupo-mexico",
+    "id": "PT_00792"
+  },
+  {
+    "name": "Grupo Nutresa",
+    "path": "/company/grupo-nutresa",
+    "id": "PT_00793"
+  },
+  {
+    "name": "Grupo Roggio",
+    "path": "/company/grupo-roggio",
+    "id": "PT_02316"
+  },
+  {
+    "name": "Gruppo Cremonini",
+    "path": "/company/gruppo-cremonini",
+    "id": "PT_00794"
+  },
+  {
+    "name": "Gruppo Veronesi",
+    "path": "/company/gruppo-veronesi",
+    "id": "PT_00795"
+  },
+  {
+    "name": "GS Engineering & Construction",
+    "path": "/company/gs-engineering-construction",
+    "id": "PT_00797"
+  },
+  {
+    "name": "GS Holdings",
+    "path": "/company/gs-holdings",
+    "id": "PT_02149"
+  },
+  {
+    "name": "GSK",
+    "path": "/company/gsk",
+    "id": "PT_00798"
+  },
+  {
+    "name": "GTT",
+    "path": "/company/gtt",
+    "id": "PT_00799"
+  },
+  {
+    "name": "Guangdong Haid Group",
+    "path": "/company/guangdong-haid-group",
+    "id": "PT_00800"
+  },
+  {
+    "name": "Guangdong Investment",
+    "path": "/company/guangdong-investment",
+    "id": "PT_00801"
+  },
+  {
+    "name": "Guangzhou Metro",
+    "path": "/company/guangzhou-metro",
+    "id": "PT_02624"
+  },
+  {
+    "name": "GUESS",
+    "path": "/company/guess",
+    "id": "PT_00806"
+  },
+  {
+    "name": "Guggenheim Partners",
+    "path": "/company/guggenheim-partners",
+    "id": "PT_00807"
+  },
+  {
+    "name": "Gujarat Gas",
+    "path": "/company/gujarat-gas",
+    "id": "PT_02563"
+  },
+  {
+    "name": "H&M",
+    "path": "/company/hm",
+    "id": "PT_00808"
+  },
+  {
+    "name": "Haitian",
+    "path": "/company/haitian",
+    "id": "PT_02805"
+  },
+  {
+    "name": "Halcyon Agri",
+    "path": "/company/halcyon-agri",
+    "id": "PT_02223"
+  },
+  {
+    "name": "Hamilton Lane",
+    "path": "/company/hamilton-lane",
+    "id": "PT_02668"
+  },
+  {
+    "name": "Hana Financial Group",
+    "path": "/company/hana-financial-group",
+    "id": "PT_00813"
+  },
+  {
+    "name": "Handelsbanken",
+    "path": "/company/handelsbanken",
+    "id": "PT_01705"
+  },
+  {
+    "name": "Hanesbrands",
+    "path": "/company/hanesbrands",
+    "id": "PT_00814"
+  },
+  {
+    "name": "Hankook Tire & Technology",
+    "path": "/company/hankook-tire-technology",
+    "id": "PT_00816"
+  },
+  {
+    "name": "Hankyu Hanshin Holdings",
+    "path": "/company/hankyu-hanshin-holdings",
+    "id": "PT_00817"
+  },
+  {
+    "name": "Hannover Re",
+    "path": "/company/hannover-re",
+    "id": "PT_02666"
+  },
+  {
+    "name": "Hanwa",
+    "path": "/company/hanwa",
+    "id": "PT_00818"
+  },
+  {
+    "name": "Hanwha",
+    "path": "/company/hanwha",
+    "id": "PT_02855"
+  },
+  {
+    "name": "Hanwha Life",
+    "path": "/company/hanwha-life",
+    "id": "PT_02676"
+  },
+  {
+    "name": "Hanwha Ocean",
+    "path": "/company/hanwha-ocean",
+    "id": "PT_00510"
+  },
+  {
+    "name": "Hanwha Solutions",
+    "path": "/company/hanwha-solutions",
+    "id": "PT_00819"
+  },
+  {
+    "name": "Hapag Lloyd",
+    "path": "/company/hapag-lloyd",
+    "id": "PT_00820"
+  },
+  {
+    "name": "Harim Holdings",
+    "path": "/company/harim-holdings",
+    "id": "PT_00821"
+  },
+  {
+    "name": "Harmony Gold",
+    "path": "/company/harmony-gold",
+    "id": "PT_02376"
+  },
+  {
+    "name": "Harvest Fund Management",
+    "path": "/company/harvest-fund-management",
+    "id": "PT_00822"
+  },
+  {
+    "name": "Harvey Norman",
+    "path": "/company/harvey-norman",
+    "id": "PT_02892"
+  },
+  {
+    "name": "Haseko Corporation",
+    "path": "/company/haseko-corporation",
+    "id": "PT_00823"
+  },
+  {
+    "name": "Hassan Allam Holdings",
+    "path": "/company/hassan-allam-holdings",
+    "id": "PT_02293"
+  },
+  {
+    "name": "HCL",
+    "path": "/company/hcl",
+    "id": "PT_00824"
+  },
+  {
+    "name": "HDFC Bank",
+    "path": "/company/hdfc-bank",
+    "id": "PT_00825"
+  },
+  {
+    "name": "Healthcare of Ontario Pension Plan",
+    "path": "/company/healthcare-ontario-pension-plan",
+    "id": "PT_00827"
+  },
+  {
+    "name": "Hebei Jingye Group",
+    "path": "/company/hebei-jingye-group",
+    "id": "PT_02582"
+  },
+  {
+    "name": "Heidelberg Materials",
+    "path": "/company/heidelberg-materials",
+    "id": "PT_00829"
+  },
+  {
+    "name": "Heineken",
+    "path": "/company/heineken",
+    "id": "PT_00831"
+  },
+  {
+    "name": "Helaba",
+    "path": "/company/helaba",
+    "id": "PT_01646"
+  },
+  {
+    "name": "Hellenic Energy",
+    "path": "/company/hellenic-energy",
+    "id": "PT_00832"
+  },
+  {
+    "name": "Henderson Land",
+    "path": "/company/henderson-land",
+    "id": "PT_02294"
+  },
+  {
+    "name": "Hengan International",
+    "path": "/company/hengan-international",
+    "id": "PT_00834"
+  },
+  {
+    "name": "Hengli Petrochemical",
+    "path": "/company/hengli-petrochemical",
+    "id": "PT_00835"
+  },
+  {
+    "name": "Henkel",
+    "path": "/company/henkel",
+    "id": "PT_00836"
+  },
+  {
+    "name": "Heraeus Holding",
+    "path": "/company/heraeus-holding",
+    "id": "PT_00839"
+  },
+  {
+    "name": "Hermes International",
+    "path": "/company/hermes-international",
+    "id": "PT_00841"
+  },
+  {
+    "name": "Hershey",
+    "path": "/company/hershey",
+    "id": "PT_01780"
+  },
+  {
+    "name": "Hess",
+    "path": "/company/hess",
+    "id": "PT_00843"
+  },
+  {
+    "name": "Hesteel",
+    "path": "/company/hesteel",
+    "id": "PT_00844"
+  },
+  {
+    "name": "HF Sinclair",
+    "path": "/company/hf-sinclair",
+    "id": "PT_02138"
+  },
+  {
+    "name": "Hindalco",
+    "path": "/company/hindalco",
+    "id": "PT_00847"
+  },
+  {
+    "name": "Hitachi",
+    "path": "/company/hitachi",
+    "id": "PT_00850"
+  },
+  {
+    "name": "HMM",
+    "path": "/company/hmm",
+    "id": "PT_00879"
+  },
+  {
+    "name": "Hoa Binh",
+    "path": "/company/hoa-binh",
+    "id": "PT_02680"
+  },
+  {
+    "name": "Holcim",
+    "path": "/company/holcim",
+    "id": "PT_01049"
+  },
+  {
+    "name": "Home Depot",
+    "path": "/company/home-depot",
+    "id": "PT_00853"
+  },
+  {
+    "name": "Honda Motor",
+    "path": "/company/honda-motor",
+    "id": "PT_00855"
+  },
+  {
+    "name": "Honeywell",
+    "path": "/company/honeywell",
+    "id": "PT_00856"
+  },
+  {
+    "name": "Hong Kong Monetary Authority",
+    "path": "/company/hong-kong-monetary-authority",
+    "id": "PT_00858"
+  },
+  {
+    "name": "Hongkong Land",
+    "path": "/company/hongkong-land",
+    "id": "PT_02564"
+  },
+  {
+    "name": "Hormel Foods",
+    "path": "/company/hormel-foods",
+    "id": "PT_00860"
+  },
+  {
+    "name": "Hornbach",
+    "path": "/company/hornbach",
+    "id": "PT_02893"
+  },
+  {
+    "name": "HP",
+    "path": "/company/hp",
+    "id": "PT_00863"
+  },
+  {
+    "name": "HPE",
+    "path": "/company/hpe",
+    "id": "PT_02166"
+  },
+  {
+    "name": "HSBC",
+    "path": "/company/hsbc",
+    "id": "PT_00864"
+  },
+  {
+    "name": "Hua Xia Bank",
+    "path": "/company/hua-xia-bank",
+    "id": "PT_00865"
+  },
+  {
+    "name": "Huawei",
+    "path": "/company/huawei",
+    "id": "PT_00867"
+  },
+  {
+    "name": "Huaxin Cement",
+    "path": "/company/huaxin-cement",
+    "id": "PT_02602"
+  },
+  {
+    "name": "Huayou Cobalt",
+    "path": "/company/huayou-cobalt",
+    "id": "PT_02253"
+  },
+  {
+    "name": "Hugo Boss",
+    "path": "/company/hugo-boss",
+    "id": "PT_00868"
+  },
+  {
+    "name": "Huishang Bank",
+    "path": "/company/huishang-bank",
+    "id": "PT_00869"
+  },
+  {
+    "name": "Huntsman Corporation",
+    "path": "/company/huntsman-corporation",
+    "id": "PT_00873"
+  },
+  {
+    "name": "Hutchison Ports",
+    "path": "/company/hutchison-ports",
+    "id": "PT_02230"
+  },
+  {
+    "name": "Hyundai Engineering and Construction",
+    "path": "/company/hyundai-engineering-and-construction",
+    "id": "PT_02123"
+  },
+  {
+    "name": "Hyundai Motor",
+    "path": "/company/hyundai-motor",
+    "id": "PT_00880"
+  },
+  {
+    "name": "Hyundai Steel",
+    "path": "/company/hyundai-steel",
+    "id": "PT_00881"
+  },
+  {
+    "name": "IADB",
+    "path": "/company/iadb",
+    "id": "PT_02024"
+  },
+  {
+    "name": "IAG",
+    "path": "/company/iag",
+    "id": "PT_00918"
+  },
+  {
+    "name": "Iberdrola",
+    "path": "/company/iberdrola",
+    "id": "PT_00882"
+  },
+  {
+    "name": "IBM",
+    "path": "/company/ibm",
+    "id": "PT_00883"
+  },
+  {
+    "name": "ICA Gruppen",
+    "path": "/company/ica-gruppen",
+    "id": "PT_00884"
+  },
+  {
+    "name": "ICBC",
+    "path": "/company/icbc",
+    "id": "PT_00900"
+  },
+  {
+    "name": "ICICI Bank",
+    "path": "/company/icici-bank",
+    "id": "PT_00885"
+  },
+  {
+    "name": "ICL",
+    "path": "/company/icl",
+    "id": "PT_00933"
+  },
+  {
+    "name": "Idemitsu Kosan",
+    "path": "/company/idemitsu-kosan",
+    "id": "PT_00886"
+  },
+  {
+    "name": "IFC",
+    "path": "/company/ifc",
+    "id": "PT_00919"
+  },
+  {
+    "name": "IFF",
+    "path": "/company/iff",
+    "id": "PT_00920"
+  },
+  {
+    "name": "IFFCO",
+    "path": "/company/iffco",
+    "id": "PT_00893"
+  },
+  {
+    "name": "IFM Investors",
+    "path": "/company/ifm-investors",
+    "id": "PT_02150"
+  },
+  {
+    "name": "IJM",
+    "path": "/company/ijm",
+    "id": "PT_02681"
+  },
+  {
+    "name": "Ikeja Electric",
+    "path": "/company/ikeja-electric",
+    "id": "PT_02612"
+  },
+  {
+    "name": "iliad Group",
+    "path": "/company/iliad-group",
+    "id": "PT_00890"
+  },
+  {
+    "name": "Ilim Timber",
+    "path": "/company/ilim-timber",
+    "id": "PT_02574"
+  },
+  {
+    "name": "Imabari Shipbuilding",
+    "path": "/company/imabari-shipbuilding",
+    "id": "PT_02848"
+  },
+  {
+    "name": "Implats",
+    "path": "/company/implats",
+    "id": "PT_02245"
+  },
+  {
+    "name": "Indian Oil",
+    "path": "/company/indian-oil",
+    "id": "PT_00894"
+  },
+  {
+    "name": "Indian Railways",
+    "path": "/company/indian-railways",
+    "id": "PT_00895"
+  },
+  {
+    "name": "IndiGo",
+    "path": "/company/indigo",
+    "id": "PT_00896"
+  },
+  {
+    "name": "Inditex",
+    "path": "/company/inditex",
+    "id": "PT_00899"
+  },
+  {
+    "name": "Indofood",
+    "path": "/company/indofood",
+    "id": "PT_02069"
+  },
+  {
+    "name": "Indorama Ventures",
+    "path": "/company/indorama-ventures",
+    "id": "PT_00897"
+  },
+  {
+    "name": "Industrial Bank",
+    "path": "/company/industrial-bank",
+    "id": "PT_00901"
+  },
+  {
+    "name": "INEOS",
+    "path": "/company/ineos",
+    "id": "PT_00902"
+  },
+  {
+    "name": "Infineon",
+    "path": "/company/infineon",
+    "id": "PT_02128"
+  },
+  {
+    "name": "Infosys",
+    "path": "/company/infosys",
+    "id": "PT_00905"
+  },
+  {
+    "name": "ING",
+    "path": "/company/ing",
+    "id": "PT_00906"
+  },
+  {
+    "name": "Inghams",
+    "path": "/company/inghams",
+    "id": "PT_00908"
+  },
+  {
+    "name": "Ingka Holding",
+    "path": "/company/ingka-holding",
+    "id": "PT_00909"
+  },
+  {
+    "name": "Ingredion",
+    "path": "/company/ingredion",
+    "id": "PT_00910"
+  },
+  {
+    "name": "Inpex",
+    "path": "/company/inpex",
+    "id": "PT_00912"
+  },
+  {
+    "name": "InRetail",
+    "path": "/company/inretail",
+    "id": "PT_00917"
+  },
+  {
+    "name": "Inspire Brands",
+    "path": "/company/inspire-brands",
+    "id": "PT_02440"
+  },
+  {
+    "name": "Intact Financial Corporation",
+    "path": "/company/intact-financial-corporation",
+    "id": "PT_02662"
+  },
+  {
+    "name": "Intel",
+    "path": "/company/intel",
+    "id": "PT_00913"
+  },
+  {
+    "name": "Inter RAO",
+    "path": "/company/inter-rao",
+    "id": "PT_00914"
+  },
+  {
+    "name": "InterCement",
+    "path": "/company/intercement",
+    "id": "PT_00915"
+  },
+  {
+    "name": "Interholco",
+    "path": "/company/interholco",
+    "id": "PT_02221"
+  },
+  {
+    "name": "International Container Terminal Services",
+    "path": "/company/international-container-terminal-services",
+    "id": "PT_02233"
+  },
+  {
+    "name": "International Distributions Services",
+    "path": "/company/international-distributions-services",
+    "id": "PT_01507"
+  },
+  {
+    "name": "International Paper",
+    "path": "/company/international-paper",
+    "id": "PT_00921"
+  },
+  {
+    "name": "Intersport",
+    "path": "/company/intersport",
+    "id": "PT_02859"
+  },
+  {
+    "name": "Intesa Sanpaolo",
+    "path": "/company/intesa-sanpaolo",
+    "id": "PT_00923"
+  },
+  {
+    "name": "Invesco",
+    "path": "/company/invesco",
+    "id": "PT_00926"
+  },
+  {
+    "name": "Investec",
+    "path": "/company/investec",
+    "id": "PT_00927"
+  },
+  {
+    "name": "Investment Corporation of Dubai",
+    "path": "/company/investment-corporation-dubai",
+    "id": "PT_00928"
+  },
+  {
+    "name": "Iridium Communications",
+    "path": "/company/iridium-communications",
+    "id": "PT_00930"
+  },
+  {
+    "name": "IRSA",
+    "path": "/company/irsa",
+    "id": "PT_02298"
+  },
+  {
+    "name": "Isbank",
+    "path": "/company/isbank",
+    "id": "PT_00931"
+  },
+  {
+    "name": "ISDB",
+    "path": "/company/isdb",
+    "id": "PT_02028"
+  },
+  {
+    "name": "Istanbul Metro",
+    "path": "/company/istanbul-metro",
+    "id": "PT_02489"
+  },
+  {
+    "name": "Itau Unibanco Holding",
+    "path": "/company/itau-unibanco-holding",
+    "id": "PT_02371"
+  },
+  {
+    "name": "Itochu",
+    "path": "/company/itochu",
+    "id": "PT_00936"
+  },
+  {
+    "name": "Itoham Yonekyu",
+    "path": "/company/itoham-yonekyu",
+    "id": "PT_00937"
+  },
+  {
+    "name": "J Power",
+    "path": "/company/j-power",
+    "id": "PT_02536"
+  },
+  {
+    "name": "J&T Express",
+    "path": "/company/jt-express",
+    "id": "PT_02270"
+  },
+  {
+    "name": "J. Crew Group",
+    "path": "/company/j-crew-group",
+    "id": "PT_00940"
+  },
+  {
+    "name": "J. Safra Sarasin",
+    "path": "/company/j-safra-sarasin",
+    "id": "PT_02021"
+  },
+  {
+    "name": "J.B. Hunt Transport Services",
+    "path": "/company/jb-hunt-transport-services",
+    "id": "PT_00941"
+  },
+  {
+    "name": "J.R. Simplot",
+    "path": "/company/jr-simplot",
+    "id": "PT_00943"
+  },
+  {
+    "name": "JAC Motors",
+    "path": "/company/jac-motors",
+    "id": "PT_02037"
+  },
+  {
+    "name": "James Hardie Industries",
+    "path": "/company/james-hardie-industries",
+    "id": "PT_00947"
+  },
+  {
+    "name": "Janus Henderson",
+    "path": "/company/janus-henderson",
+    "id": "PT_00948"
+  },
+  {
+    "name": "Japan Airlines",
+    "path": "/company/japan-airlines",
+    "id": "PT_00949"
+  },
+  {
+    "name": "Japan Pension Fund Association",
+    "path": "/company/japan-pension-fund-association",
+    "id": "PT_00950"
+  },
+  {
+    "name": "Japan Post Bank",
+    "path": "/company/japan-post-bank",
+    "id": "PT_02019"
+  },
+  {
+    "name": "Japan Post Insurance",
+    "path": "/company/japan-post-insurance",
+    "id": "PT_02020"
+  },
+  {
+    "name": "Jardine Matheson",
+    "path": "/company/jardine-matheson",
+    "id": "PT_00952"
+  },
+  {
+    "name": "JBS",
+    "path": "/company/jbs",
+    "id": "PT_00953"
+  },
+  {
+    "name": "JD Logistics",
+    "path": "/company/jd-logistics",
+    "id": "PT_02272"
+  },
+  {
+    "name": "JD Sports",
+    "path": "/company/jd-sports",
+    "id": "PT_02814"
+  },
+  {
+    "name": "JD.com",
+    "path": "/company/jdcom",
+    "id": "PT_00956"
+  },
+  {
+    "name": "JDE Peet’s",
+    "path": "/company/jde-peets",
+    "id": "PT_00945"
+  },
+  {
+    "name": "Jeronimo Martins",
+    "path": "/company/jeronimo-martins",
+    "id": "PT_00957"
+  },
+  {
+    "name": "JFE Holdings",
+    "path": "/company/jfe-holdings",
+    "id": "PT_00959"
+  },
+  {
+    "name": "Jiangsu Hengrui Medicine",
+    "path": "/company/jiangsu-hengrui-medicine",
+    "id": "PT_02413"
+  },
+  {
+    "name": "Jiangsu Zhongnan Construction Group",
+    "path": "/company/jiangsu-zhongnan-construction-group",
+    "id": "PT_02122"
+  },
+  {
+    "name": "Jiangxi Copper",
+    "path": "/company/jiangxi-copper",
+    "id": "PT_00961"
+  },
+  {
+    "name": "Jinke Property Group",
+    "path": "/company/jinke-property-group",
+    "id": "PT_02112"
+  },
+  {
+    "name": "Jio",
+    "path": "/company/jio",
+    "id": "PT_02039"
+  },
+  {
+    "name": "JiuQuan Iron and Steel Group",
+    "path": "/company/jiuquan-iron-and-steel-group",
+    "id": "PT_00968"
+  },
+  {
+    "name": "JK Holdings",
+    "path": "/company/jk-holdings",
+    "id": "PT_00969"
+  },
+  {
+    "name": "JLL",
+    "path": "/company/jll",
+    "id": "PT_00976"
+  },
+  {
+    "name": "JM Smucker",
+    "path": "/company/jm-smucker",
+    "id": "PT_00970"
+  },
+  {
+    "name": "Johnson & Johnson",
+    "path": "/company/johnson-johnson",
+    "id": "PT_00972"
+  },
+  {
+    "name": "Johnson Matthey",
+    "path": "/company/johnson-matthey",
+    "id": "PT_00974"
+  },
+  {
+    "name": "Jollibee",
+    "path": "/company/jollibee",
+    "id": "PT_00975"
+  },
+  {
+    "name": "JOYY",
+    "path": "/company/joyy",
+    "id": "PT_00977"
+  },
+  {
+    "name": "JP Morgan Chase",
+    "path": "/company/jp-morgan-chase",
+    "id": "PT_00978"
+  },
+  {
+    "name": "JSW Energy",
+    "path": "/company/jsw-energy",
+    "id": "PT_02300"
+  },
+  {
+    "name": "JSW Steel",
+    "path": "/company/jsw-steel",
+    "id": "PT_00979"
+  },
+  {
+    "name": "Juan Garcia Lax",
+    "path": "/company/juan-garcia-lax",
+    "id": "PT_00981"
+  },
+  {
+    "name": "Julius Baer",
+    "path": "/company/julius-baer",
+    "id": "PT_02018"
+  },
+  {
+    "name": "Julius Berger",
+    "path": "/company/julius-berger",
+    "id": "PT_02301"
+  },
+  {
+    "name": "Jumia",
+    "path": "/company/jumia",
+    "id": "PT_00982"
+  },
+  {
+    "name": "Juniper Networks",
+    "path": "/company/juniper-networks",
+    "id": "PT_00983"
+  },
+  {
+    "name": "JYSK",
+    "path": "/company/jysk",
+    "id": "PT_02871"
+  },
+  {
+    "name": "K+S",
+    "path": "/company/ks",
+    "id": "PT_00985"
+  },
+  {
+    "name": "K-Electric",
+    "path": "/company/k-electric",
+    "id": "PT_02409"
+  },
+  {
+    "name": "Kajima Corporation",
+    "path": "/company/kajima-corporation",
+    "id": "PT_00987"
+  },
+  {
+    "name": "Kakao",
+    "path": "/company/kakao",
+    "id": "PT_02821"
+  },
+  {
+    "name": "Kansai Electric Power",
+    "path": "/company/kansai-electric-power",
+    "id": "PT_00990"
+  },
+  {
+    "name": "Kao Corporation",
+    "path": "/company/kao-corporation",
+    "id": "PT_00991"
+  },
+  {
+    "name": "Kasikornbank",
+    "path": "/company/kasikornbank",
+    "id": "PT_00992"
+  },
+  {
+    "name": "KazMunayGaz",
+    "path": "/company/kazmunaygaz",
+    "id": "PT_01282"
+  },
+  {
+    "name": "KB Financial Group",
+    "path": "/company/kb-financial-group",
+    "id": "PT_00995"
+  },
+  {
+    "name": "KBC Groep",
+    "path": "/company/kbc-groep",
+    "id": "PT_00996"
+  },
+  {
+    "name": "KDDI",
+    "path": "/company/kddi",
+    "id": "PT_00157"
+  },
+  {
+    "name": "Kellanova",
+    "path": "/company/kellanova",
+    "id": "PT_00997"
+  },
+  {
+    "name": "Kenya Power",
+    "path": "/company/kenya-power",
+    "id": "PT_02596"
+  },
+  {
+    "name": "Keolis Group",
+    "path": "/company/keolis-group",
+    "id": "PT_02623"
+  },
+  {
+    "name": "Keppel Corporation",
+    "path": "/company/keppel-corporation",
+    "id": "PT_02302"
+  },
+  {
+    "name": "Kering",
+    "path": "/company/kering",
+    "id": "PT_00999"
+  },
+  {
+    "name": "Kernel Holding",
+    "path": "/company/kernel-holding",
+    "id": "PT_01000"
+  },
+  {
+    "name": "Kerry Group",
+    "path": "/company/kerry-group",
+    "id": "PT_01001"
+  },
+  {
+    "name": "Kesko",
+    "path": "/company/kesko",
+    "id": "PT_02887"
+  },
+  {
+    "name": "Keurig Dr Pepper",
+    "path": "/company/keurig-dr-pepper",
+    "id": "PT_01002"
+  },
+  {
+    "name": "Keva",
+    "path": "/company/keva",
+    "id": "PT_02674"
+  },
+  {
+    "name": "Kewpie Corporation",
+    "path": "/company/kewpie-corporation",
+    "id": "PT_01003"
+  },
+  {
+    "name": "KeyCorp",
+    "path": "/company/keycorp",
+    "id": "PT_01004"
+  },
+  {
+    "name": "Keyence Corporation",
+    "path": "/company/keyence-corporation",
+    "id": "PT_01005"
+  },
+  {
+    "name": "KfW",
+    "path": "/company/kfw",
+    "id": "PT_00534"
+  },
+  {
+    "name": "Kia",
+    "path": "/company/kia",
+    "id": "PT_02038"
+  },
+  {
+    "name": "Kikkoman Corporation",
+    "path": "/company/kikkoman-corporation",
+    "id": "PT_01006"
+  },
+  {
+    "name": "Kimberly-Clark",
+    "path": "/company/kimberly-clark",
+    "id": "PT_01007"
+  },
+  {
+    "name": "Kingfisher",
+    "path": "/company/kingfisher",
+    "id": "PT_02865"
+  },
+  {
+    "name": "Kinross Gold",
+    "path": "/company/kinross-gold",
+    "id": "PT_02203"
+  },
+  {
+    "name": "Kirin Holdings",
+    "path": "/company/kirin-holdings",
+    "id": "PT_01010"
+  },
+  {
+    "name": "KKR",
+    "path": "/company/kkr",
+    "id": "PT_01011"
+  },
+  {
+    "name": "Klabin",
+    "path": "/company/klabin",
+    "id": "PT_02212"
+  },
+  {
+    "name": "Kleiner Perkins Caufield & Byers",
+    "path": "/company/kleiner-perkins-caufield-byers",
+    "id": "PT_01013"
+  },
+  {
+    "name": "KLP",
+    "path": "/company/klp",
+    "id": "PT_01019"
+  },
+  {
+    "name": "KMTC",
+    "path": "/company/kmtc",
+    "id": "PT_02844"
+  },
+  {
+    "name": "Kobelco",
+    "path": "/company/kobelco",
+    "id": "PT_01014"
+  },
+  {
+    "name": "Koch Foods",
+    "path": "/company/koch-foods",
+    "id": "PT_01016"
+  },
+  {
+    "name": "Kohl's",
+    "path": "/company/kohls",
+    "id": "PT_01017"
+  },
+  {
+    "name": "Kolkata Metro",
+    "path": "/company/kolkata-metro",
+    "id": "PT_02635"
+  },
+  {
+    "name": "Kongsberg",
+    "path": "/company/kongsberg",
+    "id": "PT_02845"
+  },
+  {
+    "name": "Korea Electric Power Corporation",
+    "path": "/company/korea-electric-power-corporation",
+    "id": "PT_01022"
+  },
+  {
+    "name": "Korea Investment Corporation",
+    "path": "/company/korea-investment-corporation",
+    "id": "PT_01023"
+  },
+  {
+    "name": "Korea Shipbuilding & Offshore Engineering",
+    "path": "/company/korea-shipbuilding-offshore-engineering",
+    "id": "PT_01024"
+  },
+  {
+    "name": "Korean Air Lines",
+    "path": "/company/korean-air-lines",
+    "id": "PT_01025"
+  },
+  {
+    "name": "Kotak Mahindra Bank",
+    "path": "/company/kotak-mahindra-bank",
+    "id": "PT_01027"
+  },
+  {
+    "name": "KPC",
+    "path": "/company/kpc",
+    "id": "PT_01039"
+  },
+  {
+    "name": "KPN",
+    "path": "/company/kpn",
+    "id": "PT_01029"
+  },
+  {
+    "name": "Kraft Heinz",
+    "path": "/company/kraft-heinz",
+    "id": "PT_01030"
+  },
+  {
+    "name": "Kroger",
+    "path": "/company/kroger",
+    "id": "PT_01031"
+  },
+  {
+    "name": "Krung Thai Bank",
+    "path": "/company/krung-thai-bank",
+    "id": "PT_01032"
+  },
+  {
+    "name": "KT",
+    "path": "/company/kt",
+    "id": "PT_02044"
+  },
+  {
+    "name": "Kuaishou",
+    "path": "/company/kuaishou",
+    "id": "PT_02824"
+  },
+  {
+    "name": "Kuehne + Nagel",
+    "path": "/company/kuehne-nagel",
+    "id": "PT_01034"
+  },
+  {
+    "name": "Kuwait Investment Authority",
+    "path": "/company/kuwait-investment-authority",
+    "id": "PT_01037"
+  },
+  {
+    "name": "Kweichow Moutai",
+    "path": "/company/kweichow-moutai",
+    "id": "PT_01040"
+  },
+  {
+    "name": "KWS",
+    "path": "/company/kws",
+    "id": "PT_01041"
+  },
+  {
+    "name": "Kyocera",
+    "path": "/company/kyocera",
+    "id": "PT_01042"
+  },
+  {
+    "name": "Kyokuyo",
+    "path": "/company/kyokuyo",
+    "id": "PT_01043"
+  },
+  {
+    "name": "Kyushu Electric Power",
+    "path": "/company/kyushu-electric-power",
+    "id": "PT_01044"
+  },
+  {
+    "name": "L'Oreal",
+    "path": "/company/loreal",
+    "id": "PT_01093"
+  },
+  {
+    "name": "La Caisse",
+    "path": "/company/la-caisse",
+    "id": "PT_00295"
+  },
+  {
+    "name": "La Poste",
+    "path": "/company/la-poste",
+    "id": "PT_02419"
+  },
+  {
+    "name": "LACERA",
+    "path": "/company/lacera",
+    "id": "PT_02098"
+  },
+  {
+    "name": "Lactalis",
+    "path": "/company/lactalis",
+    "id": "PT_01048"
+  },
+  {
+    "name": "Lam Research",
+    "path": "/company/lam-research",
+    "id": "PT_01051"
+  },
+  {
+    "name": "Lamb Weston",
+    "path": "/company/lamb-weston",
+    "id": "PT_01052"
+  },
+  {
+    "name": "Land and Houses",
+    "path": "/company/land-and-houses",
+    "id": "PT_02340"
+  },
+  {
+    "name": "Land O'Lakes",
+    "path": "/company/land-olakes",
+    "id": "PT_01053"
+  },
+  {
+    "name": "LANXESS",
+    "path": "/company/lanxess",
+    "id": "PT_01056"
+  },
+  {
+    "name": "Larsen & Toubro",
+    "path": "/company/larsen-toubro",
+    "id": "PT_01057"
+  },
+  {
+    "name": "LATAM Airlines Group",
+    "path": "/company/latam-airlines-group",
+    "id": "PT_01059"
+  },
+  {
+    "name": "Lavazza",
+    "path": "/company/lavazza",
+    "id": "PT_02675"
+  },
+  {
+    "name": "Lazard",
+    "path": "/company/lazard",
+    "id": "PT_01060"
+  },
+  {
+    "name": "LBBW",
+    "path": "/company/lbbw",
+    "id": "PT_01054"
+  },
+  {
+    "name": "LDC Groupe",
+    "path": "/company/ldc-groupe",
+    "id": "PT_01061"
+  },
+  {
+    "name": "LEG Immobilien",
+    "path": "/company/leg-immobilien",
+    "id": "PT_02426"
+  },
+  {
+    "name": "Legal and General Group",
+    "path": "/company/legal-and-general-group",
+    "id": "PT_01063"
+  },
+  {
+    "name": "LendLease Group",
+    "path": "/company/lendlease-group",
+    "id": "PT_01067"
+  },
+  {
+    "name": "Lennar",
+    "path": "/company/lennar",
+    "id": "PT_01068"
+  },
+  {
+    "name": "Lenovo",
+    "path": "/company/lenovo",
+    "id": "PT_02040"
+  },
+  {
+    "name": "Les Mousquetaires",
+    "path": "/company/les-mousquetaires",
+    "id": "PT_01070"
+  },
+  {
+    "name": "Levi Strauss & Co.",
+    "path": "/company/levi-strauss-co",
+    "id": "PT_01071"
+  },
+  {
+    "name": "LG Chem",
+    "path": "/company/lg-chem",
+    "id": "PT_02180"
+  },
+  {
+    "name": "LG Electronics",
+    "path": "/company/lg-electronics",
+    "id": "PT_02042"
+  },
+  {
+    "name": "LGT Group",
+    "path": "/company/lgt-group",
+    "id": "PT_02017"
+  },
+  {
+    "name": "Liberty Global",
+    "path": "/company/liberty-global",
+    "id": "PT_01073"
+  },
+  {
+    "name": "Liberty Mutual",
+    "path": "/company/liberty-mutual",
+    "id": "PT_01074"
+  },
+  {
+    "name": "Life Insurance Corporation of India",
+    "path": "/company/life-insurance-corporation-india",
+    "id": "PT_01076"
+  },
+  {
+    "name": "Light Rail Transit Authority",
+    "path": "/company/light-rail-transit-authority",
+    "id": "PT_02636"
+  },
+  {
+    "name": "Limagrain",
+    "path": "/company/limagrain",
+    "id": "PT_01077"
+  },
+  {
+    "name": "Lincoln National",
+    "path": "/company/lincoln-national",
+    "id": "PT_01078"
+  },
+  {
+    "name": "Linde",
+    "path": "/company/linde",
+    "id": "PT_01079"
+  },
+  {
+    "name": "Lindt & Sprüngli",
+    "path": "/company/lindt-sprungli",
+    "id": "PT_01080"
+  },
+  {
+    "name": "Link REIT",
+    "path": "/company/link-reit",
+    "id": "PT_02496"
+  },
+  {
+    "name": "Liquid",
+    "path": "/company/liquid",
+    "id": "PT_02066"
+  },
+  {
+    "name": "Lloyds Banking Group",
+    "path": "/company/lloyds-banking-group",
+    "id": "PT_01084"
+  },
+  {
+    "name": "Loblaw",
+    "path": "/company/loblaw",
+    "id": "PT_02169"
+  },
+  {
+    "name": "Lodha",
+    "path": "/company/lodha",
+    "id": "PT_02497"
+  },
+  {
+    "name": "Logitech International",
+    "path": "/company/logitech-international",
+    "id": "PT_01087"
+  },
+  {
+    "name": "Lojas Renner",
+    "path": "/company/lojas-renner",
+    "id": "PT_01088"
+  },
+  {
+    "name": "Longfor Group Holdings",
+    "path": "/company/longfor-group-holdings",
+    "id": "PT_01090"
+  },
+  {
+    "name": "Lord Abbett",
+    "path": "/company/lord-abbett",
+    "id": "PT_01092"
+  },
+  {
+    "name": "LOTTE Chemical",
+    "path": "/company/lotte-chemical",
+    "id": "PT_02181"
+  },
+  {
+    "name": "Lotte Corporation",
+    "path": "/company/lotte-corporation",
+    "id": "PT_01094"
+  },
+  {
+    "name": "Lotte Shopping",
+    "path": "/company/lotte-shopping",
+    "id": "PT_02905"
+  },
+  {
+    "name": "Lotte Wellfood",
+    "path": "/company/lotte-wellfood",
+    "id": "PT_02810"
+  },
+  {
+    "name": "Louis Dreyfus",
+    "path": "/company/louis-dreyfus",
+    "id": "PT_01095"
+  },
+  {
+    "name": "Lowe's",
+    "path": "/company/lowes",
+    "id": "PT_01097"
+  },
+  {
+    "name": "LPP",
+    "path": "/company/lpp",
+    "id": "PT_01098"
+  },
+  {
+    "name": "Lufthansa",
+    "path": "/company/lufthansa",
+    "id": "PT_01101"
+  },
+  {
+    "name": "Lukoil",
+    "path": "/company/lukoil",
+    "id": "PT_01102"
+  },
+  {
+    "name": "Lululemon Athletica",
+    "path": "/company/lululemon-athletica",
+    "id": "PT_01103"
+  },
+  {
+    "name": "Lumen",
+    "path": "/company/lumen",
+    "id": "PT_00337"
+  },
+  {
+    "name": "LVMH",
+    "path": "/company/lvmh",
+    "id": "PT_01106"
+  },
+  {
+    "name": "Lyft",
+    "path": "/company/lyft",
+    "id": "PT_01107"
+  },
+  {
+    "name": "LyondellBasell",
+    "path": "/company/lyondellbasell",
+    "id": "PT_01108"
+  },
+  {
+    "name": "M Dias Branco",
+    "path": "/company/m-dias-branco",
+    "id": "PT_01109"
+  },
+  {
+    "name": "M&G",
+    "path": "/company/mg",
+    "id": "PT_01110"
+  },
+  {
+    "name": "Ma'aden",
+    "path": "/company/maaden",
+    "id": "PT_02249"
+  },
+  {
+    "name": "MAA",
+    "path": "/company/maa",
+    "id": "PT_02691"
+  },
+  {
+    "name": "Maanshan Iron & Steel",
+    "path": "/company/maanshan-iron-steel",
+    "id": "PT_01111"
+  },
+  {
+    "name": "Macquarie Group",
+    "path": "/company/macquarie-group",
+    "id": "PT_01112"
+  },
+  {
+    "name": "Macy's",
+    "path": "/company/macys",
+    "id": "PT_01113"
+  },
+  {
+    "name": "Maderacre",
+    "path": "/company/maderacre",
+    "id": "PT_02215"
+  },
+  {
+    "name": "Magazine Luiza",
+    "path": "/company/magazine-luiza",
+    "id": "PT_02883"
+  },
+  {
+    "name": "Magnit",
+    "path": "/company/magnit",
+    "id": "PT_01115"
+  },
+  {
+    "name": "Mahagenco",
+    "path": "/company/mahagenco",
+    "id": "PT_02304"
+  },
+  {
+    "name": "Mahindra and Mahindra",
+    "path": "/company/mahindra-and-mahindra",
+    "id": "PT_01116"
+  },
+  {
+    "name": "Malaysia Employees Provident Fund",
+    "path": "/company/malaysia-employees-provident-fund",
+    "id": "PT_01117"
+  },
+  {
+    "name": "Mallplaza",
+    "path": "/company/mallplaza",
+    "id": "PT_02509"
+  },
+  {
+    "name": "Man Group",
+    "path": "/company/man-group",
+    "id": "PT_02667"
+  },
+  {
+    "name": "Manulife",
+    "path": "/company/manulife",
+    "id": "PT_01119"
+  },
+  {
+    "name": "Mapfre",
+    "path": "/company/mapfre",
+    "id": "PT_02033"
+  },
+  {
+    "name": "Marathon Petroleum",
+    "path": "/company/marathon-petroleum",
+    "id": "PT_01121"
+  },
+  {
+    "name": "Marfrig",
+    "path": "/company/marfrig",
+    "id": "PT_01122"
+  },
+  {
+    "name": "Marks & Spencer",
+    "path": "/company/marks-spencer",
+    "id": "PT_01124"
+  },
+  {
+    "name": "Mars",
+    "path": "/company/mars",
+    "id": "PT_01126"
+  },
+  {
+    "name": "Martin Marietta",
+    "path": "/company/martin-marietta",
+    "id": "PT_01128"
+  },
+  {
+    "name": "Marubeni Corporation",
+    "path": "/company/marubeni-corporation",
+    "id": "PT_01129"
+  },
+  {
+    "name": "Marubeni-Itochu Steel",
+    "path": "/company/marubeni-itochu-steel",
+    "id": "PT_01130"
+  },
+  {
+    "name": "Massachusetts PRIM",
+    "path": "/company/massachusetts-prim",
+    "id": "PT_02059"
+  },
+  {
+    "name": "MassMutual",
+    "path": "/company/massmutual",
+    "id": "PT_01133"
+  },
+  {
+    "name": "Master Kong",
+    "path": "/company/master-kong",
+    "id": "PT_01788"
+  },
+  {
+    "name": "Mastercard",
+    "path": "/company/mastercard",
+    "id": "PT_02903"
+  },
+  {
+    "name": "MatsukiyoCocokara & Co.",
+    "path": "/company/matsukiyococokara-co",
+    "id": "PT_02874"
+  },
+  {
+    "name": "Maybank",
+    "path": "/company/maybank",
+    "id": "PT_01138"
+  },
+  {
+    "name": "Maynilad",
+    "path": "/company/maynilad",
+    "id": "PT_02614"
+  },
+  {
+    "name": "Mazda",
+    "path": "/company/mazda",
+    "id": "PT_01139"
+  },
+  {
+    "name": "McCain Foods",
+    "path": "/company/mccain-foods",
+    "id": "PT_01140"
+  },
+  {
+    "name": "McCormick",
+    "path": "/company/mccormick",
+    "id": "PT_01141"
+  },
+  {
+    "name": "McDonald's",
+    "path": "/company/mcdonalds",
+    "id": "PT_01142"
+  },
+  {
+    "name": "MediaTek",
+    "path": "/company/mediatek",
+    "id": "PT_01145"
+  },
+  {
+    "name": "Megaworld",
+    "path": "/company/megaworld",
+    "id": "PT_02307"
+  },
+  {
+    "name": "Megmilk Snow Brand",
+    "path": "/company/megmilk-snow-brand",
+    "id": "PT_01148"
+  },
+  {
+    "name": "Meiji",
+    "path": "/company/meiji",
+    "id": "PT_01149"
+  },
+  {
+    "name": "Meiji Yasuda Life Insurance",
+    "path": "/company/meiji-yasuda-life-insurance",
+    "id": "PT_01150"
+  },
+  {
+    "name": "Meituan",
+    "path": "/company/meituan",
+    "id": "PT_01151"
+  },
+  {
+    "name": "Meralco",
+    "path": "/company/meralco",
+    "id": "PT_02305"
+  },
+  {
+    "name": "MercadoLibre",
+    "path": "/company/mercadolibre",
+    "id": "PT_01153"
+  },
+  {
+    "name": "Mercadona",
+    "path": "/company/mercadona",
+    "id": "PT_01154"
+  },
+  {
+    "name": "Mercedes-Benz",
+    "path": "/company/mercedes-benz",
+    "id": "PT_02548"
+  },
+  {
+    "name": "Mercer",
+    "path": "/company/mercer",
+    "id": "PT_01127"
+  },
+  {
+    "name": "Merck",
+    "path": "/company/merck",
+    "id": "PT_01156"
+  },
+  {
+    "name": "Merck & Co",
+    "path": "/company/merck-co",
+    "id": "PT_01155"
+  },
+  {
+    "name": "Mesirow Financial",
+    "path": "/company/mesirow-financial",
+    "id": "PT_01157"
+  },
+  {
+    "name": "Meta",
+    "path": "/company/meta",
+    "id": "PT_00662"
+  },
+  {
+    "name": "Metallurgical Corporation of China",
+    "path": "/company/metallurgical-corporation-china",
+    "id": "PT_01158"
+  },
+  {
+    "name": "Metinvest",
+    "path": "/company/metinvest",
+    "id": "PT_01161"
+  },
+  {
+    "name": "Metlife",
+    "path": "/company/metlife",
+    "id": "PT_01162"
+  },
+  {
+    "name": "Metro AG",
+    "path": "/company/metro-ag",
+    "id": "PT_01163"
+  },
+  {
+    "name": "Metropolitan Electricity Authority",
+    "path": "/company/metropolitan-electricity-authority",
+    "id": "PT_02615"
+  },
+  {
+    "name": "Metropolitan Waterworks Authority",
+    "path": "/company/metropolitan-waterworks-authority",
+    "id": "PT_02616"
+  },
+  {
+    "name": "Metsä",
+    "path": "/company/metsa",
+    "id": "PT_01164"
+  },
+  {
+    "name": "Mewah",
+    "path": "/company/mewah",
+    "id": "PT_01165"
+  },
+  {
+    "name": "Meyer Group",
+    "path": "/company/meyer-group",
+    "id": "PT_02847"
+  },
+  {
+    "name": "MHP",
+    "path": "/company/mhp",
+    "id": "PT_01167"
+  },
+  {
+    "name": "Michelin",
+    "path": "/company/michelin",
+    "id": "PT_01168"
+  },
+  {
+    "name": "Michigan Retirement Systems",
+    "path": "/company/michigan-retirement-systems",
+    "id": "PT_01169"
+  },
+  {
+    "name": "Microchip Technology",
+    "path": "/company/microchip-technology",
+    "id": "PT_01170"
+  },
+  {
+    "name": "Micron Technology",
+    "path": "/company/micron-technology",
+    "id": "PT_01171"
+  },
+  {
+    "name": "Microsoft",
+    "path": "/company/microsoft",
+    "id": "PT_01172"
+  },
+  {
+    "name": "Migros",
+    "path": "/company/migros",
+    "id": "PT_01174"
+  },
+  {
+    "name": "MillerKnoll",
+    "path": "/company/millerknoll",
+    "id": "PT_02899"
+  },
+  {
+    "name": "Millicom",
+    "path": "/company/millicom",
+    "id": "PT_01175"
+  },
+  {
+    "name": "Minerva",
+    "path": "/company/minerva",
+    "id": "PT_01177"
+  },
+  {
+    "name": "Minnesota State Retirement System",
+    "path": "/company/minnesota-state-retirement-system",
+    "id": "PT_02011"
+  },
+  {
+    "name": "Mirae Asset Financial Group",
+    "path": "/company/mirae-asset-financial-group",
+    "id": "PT_01178"
+  },
+  {
+    "name": "MISC Group",
+    "path": "/company/misc-group",
+    "id": "PT_01179"
+  },
+  {
+    "name": "Mitr Phol Group",
+    "path": "/company/mitr-phol-group",
+    "id": "PT_01180"
+  },
+  {
+    "name": "Mitsubishi Corporation",
+    "path": "/company/mitsubishi-corporation",
+    "id": "PT_01181"
+  },
+  {
+    "name": "Mitsubishi Estate",
+    "path": "/company/mitsubishi-estate",
+    "id": "PT_01182"
+  },
+  {
+    "name": "Mitsubishi Motors Corporation",
+    "path": "/company/mitsubishi-motors-corporation",
+    "id": "PT_02009"
+  },
+  {
+    "name": "Mitsui",
+    "path": "/company/mitsui",
+    "id": "PT_01184"
+  },
+  {
+    "name": "Mitsui Fudosan",
+    "path": "/company/mitsui-fudosan",
+    "id": "PT_01185"
+  },
+  {
+    "name": "Mizuho",
+    "path": "/company/mizuho",
+    "id": "PT_01187"
+  },
+  {
+    "name": "Mobico Group",
+    "path": "/company/mobico-group",
+    "id": "PT_01227"
+  },
+  {
+    "name": "Moderna",
+    "path": "/company/moderna",
+    "id": "PT_02852"
+  },
+  {
+    "name": "Moeve",
+    "path": "/company/moeve",
+    "id": "PT_00463"
+  },
+  {
+    "name": "MOL Group",
+    "path": "/company/mol-group",
+    "id": "PT_01193"
+  },
+  {
+    "name": "Molinos",
+    "path": "/company/molinos",
+    "id": "PT_01194"
+  },
+  {
+    "name": "Molson Coors",
+    "path": "/company/molson-coors",
+    "id": "PT_01195"
+  },
+  {
+    "name": "Momentum Group",
+    "path": "/company/momentum-group",
+    "id": "PT_02058"
+  },
+  {
+    "name": "Mondelez International",
+    "path": "/company/mondelez-international",
+    "id": "PT_01196"
+  },
+  {
+    "name": "Mondi",
+    "path": "/company/mondi",
+    "id": "PT_01197"
+  },
+  {
+    "name": "Monster Beverage",
+    "path": "/company/monster-beverage",
+    "id": "PT_02163"
+  },
+  {
+    "name": "Morgan Properties",
+    "path": "/company/morgan-properties",
+    "id": "PT_02692"
+  },
+  {
+    "name": "Morgan Stanley",
+    "path": "/company/morgan-stanley",
+    "id": "PT_01200"
+  },
+  {
+    "name": "Mosaic",
+    "path": "/company/mosaic",
+    "id": "PT_01201"
+  },
+  {
+    "name": "Motheo",
+    "path": "/company/motheo",
+    "id": "PT_02914"
+  },
+  {
+    "name": "Motiva",
+    "path": "/company/motiva",
+    "id": "PT_00326"
+  },
+  {
+    "name": "Mowi",
+    "path": "/company/mowi",
+    "id": "PT_01202"
+  },
+  {
+    "name": "Mr Price",
+    "path": "/company/mr-price",
+    "id": "PT_01203"
+  },
+  {
+    "name": "MRT3",
+    "path": "/company/mrt3",
+    "id": "PT_02700"
+  },
+  {
+    "name": "MRTA",
+    "path": "/company/mrta",
+    "id": "PT_02708"
+  },
+  {
+    "name": "MRV Engenharia",
+    "path": "/company/mrv-engenharia",
+    "id": "PT_01204"
+  },
+  {
+    "name": "MS&AD Insurance",
+    "path": "/company/msad-insurance",
+    "id": "PT_01205"
+  },
+  {
+    "name": "MSC Cruises",
+    "path": "/company/msc-cruises",
+    "id": "PT_01206"
+  },
+  {
+    "name": "MSC Group",
+    "path": "/company/msc-group",
+    "id": "PT_01207"
+  },
+  {
+    "name": "MTA",
+    "path": "/company/mta",
+    "id": "PT_02645"
+  },
+  {
+    "name": "MTC Chennai",
+    "path": "/company/mtc-chennai",
+    "id": "PT_02501"
+  },
+  {
+    "name": "MTN",
+    "path": "/company/mtn",
+    "id": "PT_01208"
+  },
+  {
+    "name": "MTR",
+    "path": "/company/mtr",
+    "id": "PT_01209"
+  },
+  {
+    "name": "MTS",
+    "path": "/company/mts",
+    "id": "PT_01191"
+  },
+  {
+    "name": "Mubadala Investment Company",
+    "path": "/company/mubadala-investment-company",
+    "id": "PT_01210"
+  },
+  {
+    "name": "MUFG",
+    "path": "/company/mufg",
+    "id": "PT_01183"
+  },
+  {
+    "name": "Muller",
+    "path": "/company/muller",
+    "id": "PT_01211"
+  },
+  {
+    "name": "Multiplan",
+    "path": "/company/multiplan",
+    "id": "PT_02503"
+  },
+  {
+    "name": "Mumbai Metro One Private",
+    "path": "/company/mumbai-metro-one-private",
+    "id": "PT_02639"
+  },
+  {
+    "name": "Munich Re",
+    "path": "/company/munich-re",
+    "id": "PT_01212"
+  },
+  {
+    "name": "Murata Manufacturing",
+    "path": "/company/murata-manufacturing",
+    "id": "PT_01213"
+  },
+  {
+    "name": "Murugappa Group",
+    "path": "/company/murugappa-group",
+    "id": "PT_01214"
+  },
+  {
+    "name": "Musim Mas",
+    "path": "/company/musim-mas",
+    "id": "PT_01215"
+  },
+  {
+    "name": "Muyuan Foods",
+    "path": "/company/muyuan-foods",
+    "id": "PT_01216"
+  },
+  {
+    "name": "MWG",
+    "path": "/company/mwg",
+    "id": "PT_02876"
+  },
+  {
+    "name": "Naftogaz",
+    "path": "/company/naftogaz",
+    "id": "PT_02144"
+  },
+  {
+    "name": "Nairobi Water",
+    "path": "/company/nairobi-water",
+    "id": "PT_02618"
+  },
+  {
+    "name": "Nampak",
+    "path": "/company/nampak",
+    "id": "PT_01219"
+  },
+  {
+    "name": "Nan Ya Plastics Corporation",
+    "path": "/company/nan-ya-plastics-corporation",
+    "id": "PT_01220"
+  },
+  {
+    "name": "Nanjing Iron & Steel",
+    "path": "/company/nanjing-iron-steel",
+    "id": "PT_02119"
+  },
+  {
+    "name": "Naspers",
+    "path": "/company/naspers",
+    "id": "PT_01221"
+  },
+  {
+    "name": "National Australia Bank",
+    "path": "/company/national-australia-bank",
+    "id": "PT_01222"
+  },
+  {
+    "name": "National Bank of Canada",
+    "path": "/company/national-bank-canada",
+    "id": "PT_01223"
+  },
+  {
+    "name": "National Bank of Egypt",
+    "path": "/company/national-bank-egypt",
+    "id": "PT_01224"
+  },
+  {
+    "name": "National Development Fund",
+    "path": "/company/national-development-fund",
+    "id": "PT_01226"
+  },
+  {
+    "name": "National Grid",
+    "path": "/company/national-grid",
+    "id": "PT_01229"
+  },
+  {
+    "name": "National Oil Corporation of Libya",
+    "path": "/company/national-oil-corporation-libya",
+    "id": "PT_01232"
+  },
+  {
+    "name": "National Pension Service of Korea",
+    "path": "/company/national-pension-service-korea",
+    "id": "PT_01233"
+  },
+  {
+    "name": "Nationwide",
+    "path": "/company/nationwide",
+    "id": "PT_01236"
+  },
+  {
+    "name": "Natura & Co",
+    "path": "/company/natura-co",
+    "id": "PT_01237"
+  },
+  {
+    "name": "Naturgy",
+    "path": "/company/naturgy",
+    "id": "PT_01238"
+  },
+  {
+    "name": "NatWest Group",
+    "path": "/company/natwest-group",
+    "id": "PT_01504"
+  },
+  {
+    "name": "Navana Real Estate",
+    "path": "/company/navana-real-estate",
+    "id": "PT_02836"
+  },
+  {
+    "name": "Naver Corporation",
+    "path": "/company/naver-corporation",
+    "id": "PT_01239"
+  },
+  {
+    "name": "NCC",
+    "path": "/company/ncc",
+    "id": "PT_02837"
+  },
+  {
+    "name": "Nebras Energy",
+    "path": "/company/nebras-energy",
+    "id": "PT_02568"
+  },
+  {
+    "name": "NEC",
+    "path": "/company/nec",
+    "id": "PT_01241"
+  },
+  {
+    "name": "Nedbank Group",
+    "path": "/company/nedbank-group",
+    "id": "PT_01242"
+  },
+  {
+    "name": "Nepal Telecom",
+    "path": "/company/nepal-telecom",
+    "id": "PT_01243"
+  },
+  {
+    "name": "Neste",
+    "path": "/company/neste",
+    "id": "PT_01244"
+  },
+  {
+    "name": "Nestle",
+    "path": "/company/nestle",
+    "id": "PT_01245"
+  },
+  {
+    "name": "NetApp",
+    "path": "/company/netapp",
+    "id": "PT_01246"
+  },
+  {
+    "name": "NetEase",
+    "path": "/company/netease",
+    "id": "PT_01247"
+  },
+  {
+    "name": "Netflix",
+    "path": "/company/netflix",
+    "id": "PT_01248"
+  },
+  {
+    "name": "Neuberger",
+    "path": "/company/neuberger",
+    "id": "PT_01249"
+  },
+  {
+    "name": "New Balance",
+    "path": "/company/new-balance",
+    "id": "PT_01250"
+  },
+  {
+    "name": "New China Life Insurance",
+    "path": "/company/new-china-life-insurance",
+    "id": "PT_02062"
+  },
+  {
+    "name": "New Enterprise Associates",
+    "path": "/company/new-enterprise-associates",
+    "id": "PT_01251"
+  },
+  {
+    "name": "New Hope Group",
+    "path": "/company/new-hope-group",
+    "id": "PT_01252"
+  },
+  {
+    "name": "New World Development",
+    "path": "/company/new-world-development",
+    "id": "PT_01254"
+  },
+  {
+    "name": "New York Life Insurance",
+    "path": "/company/new-york-life-insurance",
+    "id": "PT_01256"
+  },
+  {
+    "name": "New York State Common Retirement Fund",
+    "path": "/company/new-york-state-common-retirement-fund",
+    "id": "PT_01257"
+  },
+  {
+    "name": "Newmont",
+    "path": "/company/newmont",
+    "id": "PT_02127"
+  },
+  {
+    "name": "Newrest",
+    "path": "/company/newrest",
+    "id": "PT_02165"
+  },
+  {
+    "name": "Next",
+    "path": "/company/next",
+    "id": "PT_01261"
+  },
+  {
+    "name": "Nextera Energy",
+    "path": "/company/nextera-energy",
+    "id": "PT_01262"
+  },
+  {
+    "name": "NGL Energy Partners",
+    "path": "/company/ngl-energy-partners",
+    "id": "PT_01263"
+  },
+  {
+    "name": "NH Foods",
+    "path": "/company/nh-foods",
+    "id": "PT_01264"
+  },
+  {
+    "name": "Nichirei",
+    "path": "/company/nichirei",
+    "id": "PT_01266"
+  },
+  {
+    "name": "Nike",
+    "path": "/company/nike",
+    "id": "PT_01270"
+  },
+  {
+    "name": "Nine Dragons Paper",
+    "path": "/company/nine-dragons-paper",
+    "id": "PT_01272"
+  },
+  {
+    "name": "Ninety One",
+    "path": "/company/ninety-one",
+    "id": "PT_02016"
+  },
+  {
+    "name": "Nintendo",
+    "path": "/company/nintendo",
+    "id": "PT_02043"
+  },
+  {
+    "name": "NIOC",
+    "path": "/company/nioc",
+    "id": "PT_01230"
+  },
+  {
+    "name": "Nippon Express",
+    "path": "/company/nippon-express",
+    "id": "PT_01273"
+  },
+  {
+    "name": "Nippon Life Insurance",
+    "path": "/company/nippon-life-insurance",
+    "id": "PT_01274"
+  },
+  {
+    "name": "Nippon Paint Holdings",
+    "path": "/company/nippon-paint-holdings",
+    "id": "PT_02182"
+  },
+  {
+    "name": "Nippon Paper Industries",
+    "path": "/company/nippon-paper-industries",
+    "id": "PT_01275"
+  },
+  {
+    "name": "Nippon Steel",
+    "path": "/company/nippon-steel",
+    "id": "PT_01276"
+  },
+  {
+    "name": "NISA Investment",
+    "path": "/company/nisa-investment",
+    "id": "PT_01279"
+  },
+  {
+    "name": "Nissan Motor",
+    "path": "/company/nissan-motor",
+    "id": "PT_01280"
+  },
+  {
+    "name": "Nisshin Oillio",
+    "path": "/company/nisshin-oillio",
+    "id": "PT_02830"
+  },
+  {
+    "name": "Nisshin Seifun",
+    "path": "/company/nisshin-seifun",
+    "id": "PT_01281"
+  },
+  {
+    "name": "Nissui",
+    "path": "/company/nissui",
+    "id": "PT_01277"
+  },
+  {
+    "name": "Nitori",
+    "path": "/company/nitori",
+    "id": "PT_02881"
+  },
+  {
+    "name": "NLMK",
+    "path": "/company/nlmk",
+    "id": "PT_01307"
+  },
+  {
+    "name": "NMDC Group",
+    "path": "/company/nmdc-group",
+    "id": "PT_02841"
+  },
+  {
+    "name": "NN Group",
+    "path": "/company/nn-group",
+    "id": "PT_01283"
+  },
+  {
+    "name": "NNPC",
+    "path": "/company/nnpc",
+    "id": "PT_01269"
+  },
+  {
+    "name": "Nokia",
+    "path": "/company/nokia",
+    "id": "PT_01286"
+  },
+  {
+    "name": "Nomad Foods",
+    "path": "/company/nomad-foods",
+    "id": "PT_02177"
+  },
+  {
+    "name": "Nomura Holdings",
+    "path": "/company/nomura-holdings",
+    "id": "PT_01287"
+  },
+  {
+    "name": "NongHyup",
+    "path": "/company/nonghyup",
+    "id": "PT_01289"
+  },
+  {
+    "name": "Nordea",
+    "path": "/company/nordea",
+    "id": "PT_01290"
+  },
+  {
+    "name": "Nordstrom",
+    "path": "/company/nordstrom",
+    "id": "PT_01292"
+  },
+  {
+    "name": "Nordzucker",
+    "path": "/company/nordzucker",
+    "id": "PT_01293"
+  },
+  {
+    "name": "Norfund",
+    "path": "/company/norfund",
+    "id": "PT_01294"
+  },
+  {
+    "name": "Norges Bank Investment Management",
+    "path": "/company/norges-bank-investment-management",
+    "id": "PT_01295"
+  },
+  {
+    "name": "Norgesgruppen",
+    "path": "/company/norgesgruppen",
+    "id": "PT_01296"
+  },
+  {
+    "name": "Norinchukin Bank",
+    "path": "/company/norinchukin-bank",
+    "id": "PT_01297"
+  },
+  {
+    "name": "Nornickel",
+    "path": "/company/nornickel",
+    "id": "PT_01298"
+  },
+  {
+    "name": "Norsk Hydro",
+    "path": "/company/norsk-hydro",
+    "id": "PT_01299"
+  },
+  {
+    "name": "North Carolina Retirement System",
+    "path": "/company/north-carolina-retirement-system",
+    "id": "PT_01300"
+  },
+  {
+    "name": "North China Construction Group",
+    "path": "/company/north-china-construction-group",
+    "id": "PT_02716"
+  },
+  {
+    "name": "Northern Trust",
+    "path": "/company/northern-trust",
+    "id": "PT_01301"
+  },
+  {
+    "name": "Northwestern Mutual",
+    "path": "/company/northwestern-mutual",
+    "id": "PT_01302"
+  },
+  {
+    "name": "Norwegian Cruise Line Holdings",
+    "path": "/company/norwegian-cruise-line-holdings",
+    "id": "PT_01303"
+  },
+  {
+    "name": "Novartis",
+    "path": "/company/novartis",
+    "id": "PT_01304"
+  },
+  {
+    "name": "Novatek",
+    "path": "/company/novatek",
+    "id": "PT_01305"
+  },
+  {
+    "name": "Novo Nordisk",
+    "path": "/company/novo-nordisk",
+    "id": "PT_01306"
+  },
+  {
+    "name": "Novonesis",
+    "path": "/company/novonesis",
+    "id": "PT_02849"
+  },
+  {
+    "name": "NRG Energy",
+    "path": "/company/nrg-energy",
+    "id": "PT_02540"
+  },
+  {
+    "name": "NS Groep",
+    "path": "/company/ns-groep",
+    "id": "PT_01310"
+  },
+  {
+    "name": "NTPC",
+    "path": "/company/ntpc",
+    "id": "PT_01312"
+  },
+  {
+    "name": "NTT",
+    "path": "/company/ntt",
+    "id": "PT_01278"
+  },
+  {
+    "name": "Nucor",
+    "path": "/company/nucor",
+    "id": "PT_01313"
+  },
+  {
+    "name": "Nueva Pescanova",
+    "path": "/company/nueva-pescanova",
+    "id": "PT_01314"
+  },
+  {
+    "name": "Nufarm",
+    "path": "/company/nufarm",
+    "id": "PT_01315"
+  },
+  {
+    "name": "Nutreco",
+    "path": "/company/nutreco",
+    "id": "PT_02074"
+  },
+  {
+    "name": "Nutrien",
+    "path": "/company/nutrien",
+    "id": "PT_01316"
+  },
+  {
+    "name": "Nvidia",
+    "path": "/company/nvidia",
+    "id": "PT_01317"
+  },
+  {
+    "name": "NVR",
+    "path": "/company/nvr",
+    "id": "PT_01318"
+  },
+  {
+    "name": "NXP Semiconductors",
+    "path": "/company/nxp-semiconductors",
+    "id": "PT_01319"
+  },
+  {
+    "name": "NYCERS",
+    "path": "/company/nycers",
+    "id": "PT_01255"
+  },
+  {
+    "name": "NYK Line",
+    "path": "/company/nyk-line",
+    "id": "PT_02271"
+  },
+  {
+    "name": "NYSTRS",
+    "path": "/company/nystrs",
+    "id": "PT_01258"
+  },
+  {
+    "name": "O'Reilly Automotive",
+    "path": "/company/oreilly-automotive",
+    "id": "PT_02862"
+  },
+  {
+    "name": "O-I",
+    "path": "/company/o-i",
+    "id": "PT_01330"
+  },
+  {
+    "name": "Obayashi Corporation",
+    "path": "/company/obayashi-corporation",
+    "id": "PT_01321"
+  },
+  {
+    "name": "Obb-Holding",
+    "path": "/company/obb-holding",
+    "id": "PT_02421"
+  },
+  {
+    "name": "Oberoi Realty",
+    "path": "/company/oberoi-realty",
+    "id": "PT_02312"
+  },
+  {
+    "name": "OBI",
+    "path": "/company/obi",
+    "id": "PT_02875"
+  },
+  {
+    "name": "OCBC",
+    "path": "/company/ocbc",
+    "id": "PT_01357"
+  },
+  {
+    "name": "Occidental Petroleum",
+    "path": "/company/occidental-petroleum",
+    "id": "PT_01323"
+  },
+  {
+    "name": "Ocean Network Express",
+    "path": "/company/ocean-network-express",
+    "id": "PT_02255"
+  },
+  {
+    "name": "Ocean Spray",
+    "path": "/company/ocean-spray",
+    "id": "PT_01324"
+  },
+  {
+    "name": "Oceaneering",
+    "path": "/company/oceaneering",
+    "id": "PT_02846"
+  },
+  {
+    "name": "OCI",
+    "path": "/company/oci",
+    "id": "PT_02809"
+  },
+  {
+    "name": "OCP",
+    "path": "/company/ocp",
+    "id": "PT_01325"
+  },
+  {
+    "name": "Octopus Energy",
+    "path": "/company/octopus-energy",
+    "id": "PT_02704"
+  },
+  {
+    "name": "OEC",
+    "path": "/company/oec",
+    "id": "PT_02415"
+  },
+  {
+    "name": "OeEB",
+    "path": "/company/oeeb",
+    "id": "PT_02029"
+  },
+  {
+    "name": "Oetker",
+    "path": "/company/oetker",
+    "id": "PT_01327"
+  },
+  {
+    "name": "Ohio Deferred Compensation",
+    "path": "/company/ohio-deferred-compensation",
+    "id": "PT_01328"
+  },
+  {
+    "name": "OJI Holdings",
+    "path": "/company/oji-holdings",
+    "id": "PT_01332"
+  },
+  {
+    "name": "Olam",
+    "path": "/company/olam",
+    "id": "PT_01334"
+  },
+  {
+    "name": "Old Dominion Freight Line",
+    "path": "/company/old-dominion-freight-line",
+    "id": "PT_02264"
+  },
+  {
+    "name": "Old Mutual",
+    "path": "/company/old-mutual",
+    "id": "PT_01335"
+  },
+  {
+    "name": "Omantel",
+    "path": "/company/omantel",
+    "id": "PT_01336"
+  },
+  {
+    "name": "OMV",
+    "path": "/company/omv",
+    "id": "PT_01339"
+  },
+  {
+    "name": "ONEE",
+    "path": "/company/onee",
+    "id": "PT_02705"
+  },
+  {
+    "name": "ONGC",
+    "path": "/company/ongc",
+    "id": "PT_01331"
+  },
+  {
+    "name": "Ontario Municipal Employees",
+    "path": "/company/ontario-municipal-employees",
+    "id": "PT_02060"
+  },
+  {
+    "name": "Ontario Teachers' Pension Plan Board",
+    "path": "/company/ontario-teachers-pension-plan-board",
+    "id": "PT_01340"
+  },
+  {
+    "name": "Ooredoo",
+    "path": "/company/ooredoo",
+    "id": "PT_01341"
+  },
+  {
+    "name": "OP Financial Group",
+    "path": "/company/op-financial-group",
+    "id": "PT_01342"
+  },
+  {
+    "name": "OPERS",
+    "path": "/company/opers",
+    "id": "PT_01329"
+  },
+  {
+    "name": "Oppo",
+    "path": "/company/oppo",
+    "id": "PT_00802"
+  },
+  {
+    "name": "Oracle",
+    "path": "/company/oracle",
+    "id": "PT_01343"
+  },
+  {
+    "name": "Orange",
+    "path": "/company/orange",
+    "id": "PT_01344"
+  },
+  {
+    "name": "Oregon Public Employees",
+    "path": "/company/oregon-public-employees",
+    "id": "PT_01345"
+  },
+  {
+    "name": "Origin Energy",
+    "path": "/company/origin-energy",
+    "id": "PT_01348"
+  },
+  {
+    "name": "ORIX Group",
+    "path": "/company/orix-group",
+    "id": "PT_01349"
+  },
+  {
+    "name": "Orkla",
+    "path": "/company/orkla",
+    "id": "PT_01350"
+  },
+  {
+    "name": "Orlen",
+    "path": "/company/orlen",
+    "id": "PT_01414"
+  },
+  {
+    "name": "Orsted",
+    "path": "/company/orsted",
+    "id": "PT_01351"
+  },
+  {
+    "name": "Osaka Metro",
+    "path": "/company/osaka-metro",
+    "id": "PT_02631"
+  },
+  {
+    "name": "OSI Group",
+    "path": "/company/osi-group",
+    "id": "PT_01353"
+  },
+  {
+    "name": "Otsuka",
+    "path": "/company/otsuka",
+    "id": "PT_01354"
+  },
+  {
+    "name": "Otto Group",
+    "path": "/company/otto-group",
+    "id": "PT_01355"
+  },
+  {
+    "name": "OUG Holdings",
+    "path": "/company/oug-holdings",
+    "id": "PT_01356"
+  },
+  {
+    "name": "Owens Corning",
+    "path": "/company/owens-corning",
+    "id": "PT_01358"
+  },
+  {
+    "name": "PACCAR",
+    "path": "/company/paccar",
+    "id": "PT_01360"
+  },
+  {
+    "name": "Pacific International Lines",
+    "path": "/company/pacific-international-lines",
+    "id": "PT_01363"
+  },
+  {
+    "name": "Pacific Mutual",
+    "path": "/company/pacific-mutual",
+    "id": "PT_01364"
+  },
+  {
+    "name": "Pacific Seafood",
+    "path": "/company/pacific-seafood",
+    "id": "PT_01365"
+  },
+  {
+    "name": "Pactiv Evergreen",
+    "path": "/company/pactiv-evergreen",
+    "id": "PT_02171"
+  },
+  {
+    "name": "Page Industries",
+    "path": "/company/page-industries",
+    "id": "PT_02406"
+  },
+  {
+    "name": "Palantir",
+    "path": "/company/palantir",
+    "id": "PT_02045"
+  },
+  {
+    "name": "Palm Hills Development",
+    "path": "/company/palm-hills-development",
+    "id": "PT_02367"
+  },
+  {
+    "name": "PalTel",
+    "path": "/company/paltel",
+    "id": "PT_01368"
+  },
+  {
+    "name": "Pampa Energia",
+    "path": "/company/pampa-energia",
+    "id": "PT_02313"
+  },
+  {
+    "name": "Panasonic Group",
+    "path": "/company/panasonic-group",
+    "id": "PT_01369"
+  },
+  {
+    "name": "Parlevliet & Van der Plas",
+    "path": "/company/parlevliet-van-der-plas",
+    "id": "PT_01371"
+  },
+  {
+    "name": "Payden & Rygel",
+    "path": "/company/payden-rygel",
+    "id": "PT_01372"
+  },
+  {
+    "name": "PayPal",
+    "path": "/company/paypal",
+    "id": "PT_01373"
+  },
+  {
+    "name": "PBF Energy",
+    "path": "/company/pbf-energy",
+    "id": "PT_01374"
+  },
+  {
+    "name": "PCA",
+    "path": "/company/pca",
+    "id": "PT_01366"
+  },
+  {
+    "name": "PCCW",
+    "path": "/company/pccw",
+    "id": "PT_01375"
+  },
+  {
+    "name": "PDD Holdings",
+    "path": "/company/pdd-holdings",
+    "id": "PT_01406"
+  },
+  {
+    "name": "PDO",
+    "path": "/company/pdo",
+    "id": "PT_01395"
+  },
+  {
+    "name": "PDVSA",
+    "path": "/company/pdvsa",
+    "id": "PT_01393"
+  },
+  {
+    "name": "Pemex",
+    "path": "/company/pemex",
+    "id": "PT_01394"
+  },
+  {
+    "name": "Pension Fund Association for Local Government Officials",
+    "path": "/company/pension-fund-association-local-government-officials",
+    "id": "PT_01380"
+  },
+  {
+    "name": "PepsiCo",
+    "path": "/company/pepsico",
+    "id": "PT_01384"
+  },
+  {
+    "name": "Perdue Farms",
+    "path": "/company/perdue-farms",
+    "id": "PT_01385"
+  },
+  {
+    "name": "Perfetti van Melle",
+    "path": "/company/perfetti-van-melle",
+    "id": "PT_01386"
+  },
+  {
+    "name": "Performance Food Group",
+    "path": "/company/performance-food-group",
+    "id": "PT_02441"
+  },
+  {
+    "name": "Pernod Ricard",
+    "path": "/company/pernod-ricard",
+    "id": "PT_01387"
+  },
+  {
+    "name": "Pertamina",
+    "path": "/company/pertamina",
+    "id": "PT_01388"
+  },
+  {
+    "name": "Perusahaan Listrik Negara",
+    "path": "/company/perusahaan-listrik-negara",
+    "id": "PT_01389"
+  },
+  {
+    "name": "Petrobras",
+    "path": "/company/petrobras",
+    "id": "PT_01392"
+  },
+  {
+    "name": "PETRONAS",
+    "path": "/company/petronas",
+    "id": "PT_01396"
+  },
+  {
+    "name": "PFA",
+    "path": "/company/pfa",
+    "id": "PT_02012"
+  },
+  {
+    "name": "Pfizer",
+    "path": "/company/pfizer",
+    "id": "PT_01397"
+  },
+  {
+    "name": "PG&E",
+    "path": "/company/pge",
+    "id": "PT_01362"
+  },
+  {
+    "name": "PGGM",
+    "path": "/company/pggm",
+    "id": "PT_01398"
+  },
+  {
+    "name": "Phillips 66",
+    "path": "/company/phillips-66",
+    "id": "PT_01401"
+  },
+  {
+    "name": "Phoenix Group",
+    "path": "/company/phoenix-group",
+    "id": "PT_02168"
+  },
+  {
+    "name": "PhosAgro",
+    "path": "/company/phosagro",
+    "id": "PT_01402"
+  },
+  {
+    "name": "PHW Group",
+    "path": "/company/phw-group",
+    "id": "PT_01403"
+  },
+  {
+    "name": "PICC",
+    "path": "/company/picc",
+    "id": "PT_01383"
+  },
+  {
+    "name": "Pick N Pay",
+    "path": "/company/pick-n-pay",
+    "id": "PT_01404"
+  },
+  {
+    "name": "Pictet",
+    "path": "/company/pictet",
+    "id": "PT_01405"
+  },
+  {
+    "name": "PIK Group",
+    "path": "/company/pik-group",
+    "id": "PT_02399"
+  },
+  {
+    "name": "Ping An Insurance",
+    "path": "/company/ping-insurance",
+    "id": "PT_01407"
+  },
+  {
+    "name": "Pirelli & C",
+    "path": "/company/pirelli-c",
+    "id": "PT_01409"
+  },
+  {
+    "name": "PLDT",
+    "path": "/company/pldt",
+    "id": "PT_01411"
+  },
+  {
+    "name": "PNC",
+    "path": "/company/pnc",
+    "id": "PT_01412"
+  },
+  {
+    "name": "Polska Grupa Energetyczna",
+    "path": "/company/polska-grupa-energetyczna",
+    "id": "PT_02538"
+  },
+  {
+    "name": "Poly Property",
+    "path": "/company/poly-property",
+    "id": "PT_02111"
+  },
+  {
+    "name": "Polyus",
+    "path": "/company/polyus",
+    "id": "PT_02248"
+  },
+  {
+    "name": "POSCO Holdings",
+    "path": "/company/posco-holdings",
+    "id": "PT_01416"
+  },
+  {
+    "name": "Post Holdings",
+    "path": "/company/post-holdings",
+    "id": "PT_01417"
+  },
+  {
+    "name": "Postal Savings Bank of China",
+    "path": "/company/postal-savings-bank-china",
+    "id": "PT_01418"
+  },
+  {
+    "name": "Power Assets",
+    "path": "/company/power-assets",
+    "id": "PT_02537"
+  },
+  {
+    "name": "Power Corporation",
+    "path": "/company/power-corporation",
+    "id": "PT_01421"
+  },
+  {
+    "name": "PPG Industries",
+    "path": "/company/ppg-industries",
+    "id": "PT_01424"
+  },
+  {
+    "name": "PPIH",
+    "path": "/company/ppih",
+    "id": "PT_02880"
+  },
+  {
+    "name": "PPL",
+    "path": "/company/ppl",
+    "id": "PT_02541"
+  },
+  {
+    "name": "Prada",
+    "path": "/company/prada",
+    "id": "PT_01425"
+  },
+  {
+    "name": "Precious Woods",
+    "path": "/company/precious-woods",
+    "id": "PT_02222"
+  },
+  {
+    "name": "Premium Food Group",
+    "path": "/company/premium-food-group",
+    "id": "PT_01803"
+  },
+  {
+    "name": "Prestige Estates",
+    "path": "/company/prestige-estates",
+    "id": "PT_02511"
+  },
+  {
+    "name": "Primark",
+    "path": "/company/primark",
+    "id": "PT_02812"
+  },
+  {
+    "name": "PRIMECAP",
+    "path": "/company/primecap",
+    "id": "PT_01428"
+  },
+  {
+    "name": "Primero TSL",
+    "path": "/company/primero-tsl",
+    "id": "PT_02729"
+  },
+  {
+    "name": "Principal Financial",
+    "path": "/company/principal-financial",
+    "id": "PT_01429"
+  },
+  {
+    "name": "Procter & Gamble",
+    "path": "/company/procter-gamble",
+    "id": "PT_01431"
+  },
+  {
+    "name": "Progressive",
+    "path": "/company/progressive",
+    "id": "PT_02669"
+  },
+  {
+    "name": "Prologis",
+    "path": "/company/prologis",
+    "id": "PT_01432"
+  },
+  {
+    "name": "Promigas",
+    "path": "/company/promigas",
+    "id": "PT_02566"
+  },
+  {
+    "name": "Proparco",
+    "path": "/company/proparco",
+    "id": "PT_01434"
+  },
+  {
+    "name": "Proximus",
+    "path": "/company/proximus",
+    "id": "PT_01435"
+  },
+  {
+    "name": "Prudential Financial",
+    "path": "/company/prudential-financial",
+    "id": "PT_01437"
+  },
+  {
+    "name": "Prudential plc",
+    "path": "/company/prudential-plc",
+    "id": "PT_01436"
+  },
+  {
+    "name": "Pruksa Holdings",
+    "path": "/company/pruksa-holdings",
+    "id": "PT_02693"
+  },
+  {
+    "name": "PSA International",
+    "path": "/company/psa-international",
+    "id": "PT_02235"
+  },
+  {
+    "name": "PSP Investments",
+    "path": "/company/psp-investments",
+    "id": "PT_01438"
+  },
+  {
+    "name": "PTT",
+    "path": "/company/ptt",
+    "id": "PT_01439"
+  },
+  {
+    "name": "Public Bank",
+    "path": "/company/public-bank",
+    "id": "PT_01440"
+  },
+  {
+    "name": "Public Institution for Social Security",
+    "path": "/company/public-institution-social-security",
+    "id": "PT_02013"
+  },
+  {
+    "name": "Public Investment Corporation",
+    "path": "/company/public-investment-corporation",
+    "id": "PT_01441"
+  },
+  {
+    "name": "Public Investment Fund",
+    "path": "/company/public-investment-fund",
+    "id": "PT_01442"
+  },
+  {
+    "name": "Publix Super Markets",
+    "path": "/company/publix-super-markets",
+    "id": "PT_01445"
+  },
+  {
+    "name": "PulteGroup",
+    "path": "/company/pultegroup",
+    "id": "PT_01446"
+  },
+  {
+    "name": "Puma",
+    "path": "/company/puma",
+    "id": "PT_01447"
+  },
+  {
+    "name": "Punjab National Bank",
+    "path": "/company/punjab-national-bank",
+    "id": "PT_01448"
+  },
+  {
+    "name": "Punjab Transport Company",
+    "path": "/company/punjab-transport-company",
+    "id": "PT_02495"
+  },
+  {
+    "name": "PVH",
+    "path": "/company/pvh",
+    "id": "PT_01449"
+  },
+  {
+    "name": "QAFCO",
+    "path": "/company/qafco",
+    "id": "PT_02801"
+  },
+  {
+    "name": "Qatar Airways Group",
+    "path": "/company/qatar-airways-group",
+    "id": "PT_01451"
+  },
+  {
+    "name": "Qatar Investment Authority",
+    "path": "/company/qatar-investment-authority",
+    "id": "PT_01452"
+  },
+  {
+    "name": "QatarEnergy",
+    "path": "/company/qatarenergy",
+    "id": "PT_01453"
+  },
+  {
+    "name": "Qatari Diar",
+    "path": "/company/qatari-diar",
+    "id": "PT_02366"
+  },
+  {
+    "name": "Qualcomm",
+    "path": "/company/qualcomm",
+    "id": "PT_01454"
+  },
+  {
+    "name": "Quanta Computer",
+    "path": "/company/quanta-computer",
+    "id": "PT_01455"
+  },
+  {
+    "name": "Rabobank",
+    "path": "/company/rabobank",
+    "id": "PT_01459"
+  },
+  {
+    "name": "Rakuten",
+    "path": "/company/rakuten",
+    "id": "PT_01460"
+  },
+  {
+    "name": "Ralph Lauren",
+    "path": "/company/ralph-lauren",
+    "id": "PT_01461"
+  },
+  {
+    "name": "Ramco Cements",
+    "path": "/company/ramco-cements",
+    "id": "PT_01463"
+  },
+  {
+    "name": "Rangs Properties",
+    "path": "/company/rangs-properties",
+    "id": "PT_02838"
+  },
+  {
+    "name": "RATP Group",
+    "path": "/company/ratp-group",
+    "id": "PT_02630"
+  },
+  {
+    "name": "Raymond James Financial",
+    "path": "/company/raymond-james-financial",
+    "id": "PT_01465"
+  },
+  {
+    "name": "RCL Foods",
+    "path": "/company/rcl-foods",
+    "id": "PT_01467"
+  },
+  {
+    "name": "RD Saude",
+    "path": "/company/rd-saude",
+    "id": "PT_02884"
+  },
+  {
+    "name": "Realty Income",
+    "path": "/company/realty-income",
+    "id": "PT_02515"
+  },
+  {
+    "name": "Reckitt",
+    "path": "/company/reckitt",
+    "id": "PT_01468"
+  },
+  {
+    "name": "Red Chamber",
+    "path": "/company/red-chamber",
+    "id": "PT_01469"
+  },
+  {
+    "name": "Redefine Properties",
+    "path": "/company/redefine-properties",
+    "id": "PT_02517"
+  },
+  {
+    "name": "Regeneron",
+    "path": "/company/regeneron",
+    "id": "PT_02850"
+  },
+  {
+    "name": "Regents of the University of California",
+    "path": "/company/regents-university-california",
+    "id": "PT_01470"
+  },
+  {
+    "name": "Regideso",
+    "path": "/company/regideso",
+    "id": "PT_02518"
+  },
+  {
+    "name": "Reinsurance Group of America",
+    "path": "/company/reinsurance-group-america",
+    "id": "PT_02670"
+  },
+  {
+    "name": "Reliance Industries",
+    "path": "/company/reliance-industries",
+    "id": "PT_01471"
+  },
+  {
+    "name": "Reliance Retail",
+    "path": "/company/reliance-retail",
+    "id": "PT_02053"
+  },
+  {
+    "name": "Reliance Steel & Aluminum",
+    "path": "/company/reliance-steel-aluminum",
+    "id": "PT_01472"
+  },
+  {
+    "name": "REMONDIS",
+    "path": "/company/remondis",
+    "id": "PT_01474"
+  },
+  {
+    "name": "Renaissance Technologies",
+    "path": "/company/renaissance-technologies",
+    "id": "PT_01475"
+  },
+  {
+    "name": "Renault",
+    "path": "/company/renault",
+    "id": "PT_01476"
+  },
+  {
+    "name": "Rendeavour",
+    "path": "/company/rendeavour",
+    "id": "PT_02694"
+  },
+  {
+    "name": "Renfe",
+    "path": "/company/renfe",
+    "id": "PT_01478"
+  },
+  {
+    "name": "Repsol",
+    "path": "/company/repsol",
+    "id": "PT_01480"
+  },
+  {
+    "name": "Republic Services",
+    "path": "/company/republic-services",
+    "id": "PT_01481"
+  },
+  {
+    "name": "Resona Holdings",
+    "path": "/company/resona-holdings",
+    "id": "PT_01482"
+  },
+  {
+    "name": "Resonac",
+    "path": "/company/resonac",
+    "id": "PT_01596"
+  },
+  {
+    "name": "Restaurant Brands International",
+    "path": "/company/restaurant-brands-international",
+    "id": "PT_01483"
+  },
+  {
+    "name": "Rewe Group",
+    "path": "/company/rewe-group",
+    "id": "PT_01484"
+  },
+  {
+    "name": "RGE",
+    "path": "/company/rge",
+    "id": "PT_02573"
+  },
+  {
+    "name": "Rio Tinto",
+    "path": "/company/rio-tinto",
+    "id": "PT_01489"
+  },
+  {
+    "name": "RiseSun Real Estate Development",
+    "path": "/company/risesun-real-estate-development",
+    "id": "PT_02095"
+  },
+  {
+    "name": "Rite Aid",
+    "path": "/company/rite-aid",
+    "id": "PT_02889"
+  },
+  {
+    "name": "Rizhao Steel",
+    "path": "/company/rizhao-steel",
+    "id": "PT_02585"
+  },
+  {
+    "name": "Robinsons Land",
+    "path": "/company/robinsons-land",
+    "id": "PT_02315"
+  },
+  {
+    "name": "Roche",
+    "path": "/company/roche",
+    "id": "PT_01492"
+  },
+  {
+    "name": "Rongsheng Petro Chemical",
+    "path": "/company/rongsheng-petro-chemical",
+    "id": "PT_01496"
+  },
+  {
+    "name": "Roquette",
+    "path": "/company/roquette",
+    "id": "PT_01497"
+  },
+  {
+    "name": "Rosneft",
+    "path": "/company/rosneft",
+    "id": "PT_01498"
+  },
+  {
+    "name": "Ross Stores",
+    "path": "/company/ross-stores",
+    "id": "PT_01499"
+  },
+  {
+    "name": "Rosseti",
+    "path": "/company/rosseti",
+    "id": "PT_01500"
+  },
+  {
+    "name": "Rossman",
+    "path": "/company/rossman",
+    "id": "PT_02898"
+  },
+  {
+    "name": "Rostelecom",
+    "path": "/company/rostelecom",
+    "id": "PT_01502"
+  },
+  {
+    "name": "Royal Bank of Canada",
+    "path": "/company/royal-bank-canada",
+    "id": "PT_01503"
+  },
+  {
+    "name": "Royal Caribbean Group",
+    "path": "/company/royal-caribbean-group",
+    "id": "PT_02175"
+  },
+  {
+    "name": "Royal London Group",
+    "path": "/company/royal-london-group",
+    "id": "PT_01506"
+  },
+  {
+    "name": "RusAgro",
+    "path": "/company/rusagro",
+    "id": "PT_02162"
+  },
+  {
+    "name": "Rusal",
+    "path": "/company/rusal",
+    "id": "PT_02084"
+  },
+  {
+    "name": "Russell Investments",
+    "path": "/company/russell-investments",
+    "id": "PT_01508"
+  },
+  {
+    "name": "Russian Railways",
+    "path": "/company/russian-railways",
+    "id": "PT_01501"
+  },
+  {
+    "name": "RWE",
+    "path": "/company/rwe",
+    "id": "PT_01509"
+  },
+  {
+    "name": "Ryanair Holdings",
+    "path": "/company/ryanair-holdings",
+    "id": "PT_01510"
+  },
+  {
+    "name": "Ryder System",
+    "path": "/company/ryder-system",
+    "id": "PT_01511"
+  },
+  {
+    "name": "S.F. Holding",
+    "path": "/company/sf-holding",
+    "id": "PT_01513"
+  },
+  {
+    "name": "SABESP",
+    "path": "/company/sabesp",
+    "id": "PT_00460"
+  },
+  {
+    "name": "SABIC",
+    "path": "/company/sabic",
+    "id": "PT_02186"
+  },
+  {
+    "name": "Safaricom",
+    "path": "/company/safaricom",
+    "id": "PT_01515"
+  },
+  {
+    "name": "Sagax",
+    "path": "/company/sagax",
+    "id": "PT_02430"
+  },
+  {
+    "name": "SAIC Motor",
+    "path": "/company/saic-motor",
+    "id": "PT_01518"
+  },
+  {
+    "name": "SAIL",
+    "path": "/company/sail",
+    "id": "PT_02601"
+  },
+  {
+    "name": "Sainsbury's",
+    "path": "/company/sainsburys",
+    "id": "PT_01519"
+  },
+  {
+    "name": "Saint-Gobain",
+    "path": "/company/saint-gobain",
+    "id": "PT_01520"
+  },
+  {
+    "name": "Saipem",
+    "path": "/company/saipem",
+    "id": "PT_02197"
+  },
+  {
+    "name": "Salesforce",
+    "path": "/company/salesforce",
+    "id": "PT_01521"
+  },
+  {
+    "name": "Salling Group",
+    "path": "/company/salling-group",
+    "id": "PT_01522"
+  },
+  {
+    "name": "SalMar",
+    "path": "/company/salmar",
+    "id": "PT_02787"
+  },
+  {
+    "name": "Salvatore Ferragamo",
+    "path": "/company/salvatore-ferragamo",
+    "id": "PT_01523"
+  },
+  {
+    "name": "Salzgitter",
+    "path": "/company/salzgitter",
+    "id": "PT_01524"
+  },
+  {
+    "name": "SAMA",
+    "path": "/company/sama",
+    "id": "PT_01525"
+  },
+  {
+    "name": "Samling",
+    "path": "/company/samling",
+    "id": "PT_02218"
+  },
+  {
+    "name": "Samruk-Kazyna",
+    "path": "/company/samruk-kazyna",
+    "id": "PT_01527"
+  },
+  {
+    "name": "Samsung C&T",
+    "path": "/company/samsung-ct",
+    "id": "PT_02380"
+  },
+  {
+    "name": "Samsung Electronics",
+    "path": "/company/samsung-electronics",
+    "id": "PT_01528"
+  },
+  {
+    "name": "Samsung Life Insurance",
+    "path": "/company/samsung-life-insurance",
+    "id": "PT_02035"
+  },
+  {
+    "name": "Sanepar",
+    "path": "/company/sanepar",
+    "id": "PT_00462"
+  },
+  {
+    "name": "Sanlam",
+    "path": "/company/sanlam",
+    "id": "PT_01532"
+  },
+  {
+    "name": "Sanofi",
+    "path": "/company/sanofi",
+    "id": "PT_01533"
+  },
+  {
+    "name": "Santos",
+    "path": "/company/santos",
+    "id": "PT_01534"
+  },
+  {
+    "name": "SAP",
+    "path": "/company/sap",
+    "id": "PT_01536"
+  },
+  {
+    "name": "Sappi",
+    "path": "/company/sappi",
+    "id": "PT_01537"
+  },
+  {
+    "name": "Saputo",
+    "path": "/company/saputo",
+    "id": "PT_01538"
+  },
+  {
+    "name": "Saras",
+    "path": "/company/saras",
+    "id": "PT_01539"
+  },
+  {
+    "name": "Sasol",
+    "path": "/company/sasol",
+    "id": "PT_01540"
+  },
+  {
+    "name": "Saudi Aramco",
+    "path": "/company/saudi-aramco",
+    "id": "PT_01541"
+  },
+  {
+    "name": "Saudi Electricity Company",
+    "path": "/company/saudi-electricity-company",
+    "id": "PT_01542"
+  },
+  {
+    "name": "Saudi National Bank",
+    "path": "/company/saudi-national-bank",
+    "id": "PT_01225"
+  },
+  {
+    "name": "Saur",
+    "path": "/company/saur",
+    "id": "PT_01544"
+  },
+  {
+    "name": "Savencia",
+    "path": "/company/savencia",
+    "id": "PT_01545"
+  },
+  {
+    "name": "Savola Group",
+    "path": "/company/savola-group",
+    "id": "PT_01546"
+  },
+  {
+    "name": "Sberbank",
+    "path": "/company/sberbank",
+    "id": "PT_01547"
+  },
+  {
+    "name": "SC Johnson",
+    "path": "/company/sc-johnson",
+    "id": "PT_01548"
+  },
+  {
+    "name": "Scania",
+    "path": "/company/scania",
+    "id": "PT_02727"
+  },
+  {
+    "name": "Schneider Electric",
+    "path": "/company/schneider-electric",
+    "id": "PT_01550"
+  },
+  {
+    "name": "Schneider National",
+    "path": "/company/schneider-national",
+    "id": "PT_02265"
+  },
+  {
+    "name": "Schreiber Foods",
+    "path": "/company/schreiber-foods",
+    "id": "PT_02003"
+  },
+  {
+    "name": "Schroders",
+    "path": "/company/schroders",
+    "id": "PT_01552"
+  },
+  {
+    "name": "Schwarz Group",
+    "path": "/company/schwarz-group",
+    "id": "PT_01553"
+  },
+  {
+    "name": "SD Guthrie",
+    "path": "/company/sd-guthrie",
+    "id": "PT_01606"
+  },
+  {
+    "name": "Seagate",
+    "path": "/company/seagate",
+    "id": "PT_01556"
+  },
+  {
+    "name": "Sealed Air",
+    "path": "/company/sealed-air",
+    "id": "PT_02172"
+  },
+  {
+    "name": "Seazen",
+    "path": "/company/seazen",
+    "id": "PT_02089"
+  },
+  {
+    "name": "SEB Group",
+    "path": "/company/seb-group",
+    "id": "PT_01618"
+  },
+  {
+    "name": "SEGRO",
+    "path": "/company/segro",
+    "id": "PT_02427"
+  },
+  {
+    "name": "SEI Investments",
+    "path": "/company/sei-investments",
+    "id": "PT_01558"
+  },
+  {
+    "name": "Sekisui House",
+    "path": "/company/sekisui-house",
+    "id": "PT_01559"
+  },
+  {
+    "name": "Sempra Energy",
+    "path": "/company/sempra-energy",
+    "id": "PT_01562"
+  },
+  {
+    "name": "Seoul Metro Corporation",
+    "path": "/company/seoul-metro-corporation",
+    "id": "PT_02628"
+  },
+  {
+    "name": "Sequoia Capital",
+    "path": "/company/sequoia-capital",
+    "id": "PT_01563"
+  },
+  {
+    "name": "ServiceNow",
+    "path": "/company/servicenow",
+    "id": "PT_02046"
+  },
+  {
+    "name": "SES",
+    "path": "/company/ses",
+    "id": "PT_01564"
+  },
+  {
+    "name": "Setia",
+    "path": "/company/setia",
+    "id": "PT_02341"
+  },
+  {
+    "name": "Seven & I Holdings",
+    "path": "/company/seven-i-holdings",
+    "id": "PT_01565"
+  },
+  {
+    "name": "Severstal",
+    "path": "/company/severstal",
+    "id": "PT_01567"
+  },
+  {
+    "name": "SG Holdings",
+    "path": "/company/sg-holdings",
+    "id": "PT_01568"
+  },
+  {
+    "name": "Shagang",
+    "path": "/company/shagang",
+    "id": "PT_00960"
+  },
+  {
+    "name": "Shandong Bohi",
+    "path": "/company/shandong-bohi",
+    "id": "PT_01570"
+  },
+  {
+    "name": "Shandong Iron & Steel Group",
+    "path": "/company/shandong-iron-steel-group",
+    "id": "PT_01572"
+  },
+  {
+    "name": "Shanghai Pudong Development Bank",
+    "path": "/company/shanghai-pudong-development-bank",
+    "id": "PT_01578"
+  },
+  {
+    "name": "Shanghai Zijiang Enterprise Group",
+    "path": "/company/shanghai-zijiang-enterprise-group",
+    "id": "PT_01580"
+  },
+  {
+    "name": "Shapoorji Pallonji & Co",
+    "path": "/company/shapoorji-pallonji-co",
+    "id": "PT_02198"
+  },
+  {
+    "name": "SHEIN",
+    "path": "/company/shein",
+    "id": "PT_02443"
+  },
+  {
+    "name": "Shell",
+    "path": "/company/shell",
+    "id": "PT_01505"
+  },
+  {
+    "name": "Shengjing Bank",
+    "path": "/company/shengjing-bank",
+    "id": "PT_01585"
+  },
+  {
+    "name": "ShenZhen YUTO Packaging Technology",
+    "path": "/company/shenzhen-yuto-packaging-technology",
+    "id": "PT_01587"
+  },
+  {
+    "name": "Shenzhou International",
+    "path": "/company/shenzhou-international",
+    "id": "PT_01588"
+  },
+  {
+    "name": "Sherwin-Williams",
+    "path": "/company/sherwin-williams",
+    "id": "PT_02184"
+  },
+  {
+    "name": "Shimamura Co. Ltd",
+    "path": "/company/shimamura-co-ltd",
+    "id": "PT_02826"
+  },
+  {
+    "name": "Shimao",
+    "path": "/company/shimao",
+    "id": "PT_02343"
+  },
+  {
+    "name": "Shimizu Corporation",
+    "path": "/company/shimizu-corporation",
+    "id": "PT_01589"
+  },
+  {
+    "name": "Shin-Etsu Chemical",
+    "path": "/company/shin-etsu-chemical",
+    "id": "PT_01590"
+  },
+  {
+    "name": "Shinhan Financial Group",
+    "path": "/company/shinhan-financial-group",
+    "id": "PT_01591"
+  },
+  {
+    "name": "Shinkin Central Bank",
+    "path": "/company/shinkin-central-bank",
+    "id": "PT_01592"
+  },
+  {
+    "name": "Shiseido Company",
+    "path": "/company/shiseido-company",
+    "id": "PT_01593"
+  },
+  {
+    "name": "Shopify",
+    "path": "/company/shopify",
+    "id": "PT_02820"
+  },
+  {
+    "name": "Shoprite Holdings",
+    "path": "/company/shoprite-holdings",
+    "id": "PT_01594"
+  },
+  {
+    "name": "Shougang",
+    "path": "/company/shougang",
+    "id": "PT_01595"
+  },
+  {
+    "name": "Shree Cement",
+    "path": "/company/shree-cement",
+    "id": "PT_01597"
+  },
+  {
+    "name": "Siam Cement",
+    "path": "/company/siam-cement",
+    "id": "PT_01599"
+  },
+  {
+    "name": "Siam City Cement",
+    "path": "/company/siam-city-cement",
+    "id": "PT_01600"
+  },
+  {
+    "name": "Siam Commercial Bank",
+    "path": "/company/siam-commercial-bank",
+    "id": "PT_01601"
+  },
+  {
+    "name": "Siat Group",
+    "path": "/company/siat-group",
+    "id": "PT_02225"
+  },
+  {
+    "name": "Sibanye Stillwater",
+    "path": "/company/sibanye-stillwater",
+    "id": "PT_02251"
+  },
+  {
+    "name": "Siemens Gamesa",
+    "path": "/company/siemens-gamesa",
+    "id": "PT_02086"
+  },
+  {
+    "name": "SIG",
+    "path": "/company/sig",
+    "id": "PT_01561"
+  },
+  {
+    "name": "Sigma",
+    "path": "/company/sigma",
+    "id": "PT_02068"
+  },
+  {
+    "name": "Sika",
+    "path": "/company/sika",
+    "id": "PT_02185"
+  },
+  {
+    "name": "Simon Property Group",
+    "path": "/company/simon-property-group",
+    "id": "PT_01607"
+  },
+  {
+    "name": "Singapore Airlines",
+    "path": "/company/singapore-airlines",
+    "id": "PT_01610"
+  },
+  {
+    "name": "Singtel",
+    "path": "/company/singtel",
+    "id": "PT_01611"
+  },
+  {
+    "name": "Sinochem Energy",
+    "path": "/company/sinochem-energy",
+    "id": "PT_02908"
+  },
+  {
+    "name": "Sinopec",
+    "path": "/company/sinopec",
+    "id": "PT_00389"
+  },
+  {
+    "name": "Sinotrans",
+    "path": "/company/sinotrans",
+    "id": "PT_01614"
+  },
+  {
+    "name": "SIPG",
+    "path": "/company/sipg",
+    "id": "PT_02236"
+  },
+  {
+    "name": "Sistema de Transporte Colectivo",
+    "path": "/company/sistema-de-transporte-colectivo",
+    "id": "PT_02322"
+  },
+  {
+    "name": "SITC",
+    "path": "/company/sitc",
+    "id": "PT_02843"
+  },
+  {
+    "name": "SK",
+    "path": "/company/sk",
+    "id": "PT_01617"
+  },
+  {
+    "name": "SK Hynix",
+    "path": "/company/sk-hynix",
+    "id": "PT_02005"
+  },
+  {
+    "name": "SK Innovation",
+    "path": "/company/sk-innovation",
+    "id": "PT_02117"
+  },
+  {
+    "name": "SK Telecom",
+    "path": "/company/sk-telecom",
+    "id": "PT_02006"
+  },
+  {
+    "name": "Skanska",
+    "path": "/company/skanska",
+    "id": "PT_01619"
+  },
+  {
+    "name": "Skechers",
+    "path": "/company/skechers",
+    "id": "PT_01620"
+  },
+  {
+    "name": "Skyworks",
+    "path": "/company/skyworks",
+    "id": "PT_02160"
+  },
+  {
+    "name": "SLJ Global",
+    "path": "/company/slj-global",
+    "id": "PT_02217"
+  },
+  {
+    "name": "SM Prime",
+    "path": "/company/sm-prime",
+    "id": "PT_02324"
+  },
+  {
+    "name": "SMBC Group",
+    "path": "/company/smbc-group",
+    "id": "PT_01689"
+  },
+  {
+    "name": "SMFB",
+    "path": "/company/smfb",
+    "id": "PT_01529"
+  },
+  {
+    "name": "Smurfit Westrock",
+    "path": "/company/smurfit-westrock",
+    "id": "PT_02910"
+  },
+  {
+    "name": "Snap",
+    "path": "/company/snap",
+    "id": "PT_01625"
+  },
+  {
+    "name": "SNCF Group",
+    "path": "/company/sncf-group",
+    "id": "PT_01626"
+  },
+  {
+    "name": "Sobey's",
+    "path": "/company/sobeys",
+    "id": "PT_02118"
+  },
+  {
+    "name": "Sobha",
+    "path": "/company/sobha",
+    "id": "PT_02524"
+  },
+  {
+    "name": "SOCAR",
+    "path": "/company/socar",
+    "id": "PT_01667"
+  },
+  {
+    "name": "Socfin Group",
+    "path": "/company/socfin-group",
+    "id": "PT_02226"
+  },
+  {
+    "name": "Societe des Transports Abidjanais",
+    "path": "/company/societe-des-transports-abidjanais",
+    "id": "PT_02643"
+  },
+  {
+    "name": "Societe Generale",
+    "path": "/company/societe-generale",
+    "id": "PT_01629"
+  },
+  {
+    "name": "Sodexo",
+    "path": "/company/sodexo",
+    "id": "PT_01630"
+  },
+  {
+    "name": "Sodiaal",
+    "path": "/company/sodiaal",
+    "id": "PT_01631"
+  },
+  {
+    "name": "Softbank Group",
+    "path": "/company/softbank-group",
+    "id": "PT_01632"
+  },
+  {
+    "name": "Solidcore Resources",
+    "path": "/company/solidcore-resources",
+    "id": "PT_02209"
+  },
+  {
+    "name": "Solvay",
+    "path": "/company/solvay",
+    "id": "PT_01634"
+  },
+  {
+    "name": "Sompo Holdings",
+    "path": "/company/sompo-holdings",
+    "id": "PT_02030"
+  },
+  {
+    "name": "Sonangol",
+    "path": "/company/sonangol",
+    "id": "PT_02131"
+  },
+  {
+    "name": "Sonatrach",
+    "path": "/company/sonatrach",
+    "id": "PT_01635"
+  },
+  {
+    "name": "Sonelgaz",
+    "path": "/company/sonelgaz",
+    "id": "PT_02839"
+  },
+  {
+    "name": "SONY",
+    "path": "/company/sony",
+    "id": "PT_01636"
+  },
+  {
+    "name": "Sony Financial Group",
+    "path": "/company/sony-financial-group",
+    "id": "PT_02063"
+  },
+  {
+    "name": "Soriana",
+    "path": "/company/soriana",
+    "id": "PT_01346"
+  },
+  {
+    "name": "South32",
+    "path": "/company/south32",
+    "id": "PT_01639"
+  },
+  {
+    "name": "Southern California Edison",
+    "path": "/company/southern-california-edison",
+    "id": "PT_02620"
+  },
+  {
+    "name": "Southern Co",
+    "path": "/company/southern-co",
+    "id": "PT_01640"
+  },
+  {
+    "name": "Southwest Airlines",
+    "path": "/company/southwest-airlines",
+    "id": "PT_01642"
+  },
+  {
+    "name": "SpaceX",
+    "path": "/company/spacex",
+    "id": "PT_01644"
+  },
+  {
+    "name": "SPAR",
+    "path": "/company/spar",
+    "id": "PT_02831"
+  },
+  {
+    "name": "Spark New Zealand",
+    "path": "/company/spark-new-zealand",
+    "id": "PT_01645"
+  },
+  {
+    "name": "SPIC",
+    "path": "/company/spic",
+    "id": "PT_01668"
+  },
+  {
+    "name": "SPML Infra",
+    "path": "/company/spml-infra",
+    "id": "PT_01647"
+  },
+  {
+    "name": "Spotify",
+    "path": "/company/spotify",
+    "id": "PT_01648"
+  },
+  {
+    "name": "SQM",
+    "path": "/company/sqm",
+    "id": "PT_01628"
+  },
+  {
+    "name": "SSA Marine",
+    "path": "/company/ssa-marine",
+    "id": "PT_02237"
+  },
+  {
+    "name": "SSAB",
+    "path": "/company/ssab",
+    "id": "PT_02586"
+  },
+  {
+    "name": "SSE",
+    "path": "/company/sse",
+    "id": "PT_01651"
+  },
+  {
+    "name": "SSP Group",
+    "path": "/company/ssp-group",
+    "id": "PT_01652"
+  },
+  {
+    "name": "St. James' Place",
+    "path": "/company/st-james-place",
+    "id": "PT_02056"
+  },
+  {
+    "name": "Stadler Rail",
+    "path": "/company/stadler-rail",
+    "id": "PT_02728"
+  },
+  {
+    "name": "Standard Bank",
+    "path": "/company/standard-bank",
+    "id": "PT_01654"
+  },
+  {
+    "name": "Standard Chartered",
+    "path": "/company/standard-chartered",
+    "id": "PT_01655"
+  },
+  {
+    "name": "Starbucks",
+    "path": "/company/starbucks",
+    "id": "PT_01660"
+  },
+  {
+    "name": "Starzen",
+    "path": "/company/starzen",
+    "id": "PT_01662"
+  },
+  {
+    "name": "State Bank of India",
+    "path": "/company/state-bank-india",
+    "id": "PT_01663"
+  },
+  {
+    "name": "State Farm Insurance",
+    "path": "/company/state-farm-insurance",
+    "id": "PT_01664"
+  },
+  {
+    "name": "State Grid Corporation of China",
+    "path": "/company/state-grid-corporation-china",
+    "id": "PT_01665"
+  },
+  {
+    "name": "State of Wisconsin Investment Board",
+    "path": "/company/state-wisconsin-investment-board",
+    "id": "PT_01666"
+  },
+  {
+    "name": "State Street",
+    "path": "/company/state-street",
+    "id": "PT_01669"
+  },
+  {
+    "name": "State Teachers Retirement System of Ohio",
+    "path": "/company/state-teachers-retirement-system-ohio",
+    "id": "PT_02014"
+  },
+  {
+    "name": "stc",
+    "path": "/company/stc",
+    "id": "PT_01543"
+  },
+  {
+    "name": "Steel Dynamics",
+    "path": "/company/steel-dynamics",
+    "id": "PT_01670"
+  },
+  {
+    "name": "Stellantis",
+    "path": "/company/stellantis",
+    "id": "PT_02151"
+  },
+  {
+    "name": "Stifel Financial Corp",
+    "path": "/company/stifel-financial-corp",
+    "id": "PT_01674"
+  },
+  {
+    "name": "STMicroelectronics",
+    "path": "/company/stmicroelectronics",
+    "id": "PT_02178"
+  },
+  {
+    "name": "Stockland",
+    "path": "/company/stockland",
+    "id": "PT_02915"
+  },
+  {
+    "name": "Stora Enso",
+    "path": "/company/stora-enso",
+    "id": "PT_01675"
+  },
+  {
+    "name": "Stripe",
+    "path": "/company/stripe",
+    "id": "PT_02067"
+  },
+  {
+    "name": "Subaru Corporation",
+    "path": "/company/subaru-corporation",
+    "id": "PT_01678"
+  },
+  {
+    "name": "Subsea 7",
+    "path": "/company/subsea-7",
+    "id": "PT_02199"
+  },
+  {
+    "name": "Subway",
+    "path": "/company/subway",
+    "id": "PT_01679"
+  },
+  {
+    "name": "Sucden",
+    "path": "/company/sucden",
+    "id": "PT_01680"
+  },
+  {
+    "name": "Sudatel",
+    "path": "/company/sudatel",
+    "id": "PT_01681"
+  },
+  {
+    "name": "Südzucker",
+    "path": "/company/sudzucker",
+    "id": "PT_01682"
+  },
+  {
+    "name": "SUEZ",
+    "path": "/company/suez",
+    "id": "PT_01683"
+  },
+  {
+    "name": "Suguna Foods",
+    "path": "/company/suguna-foods",
+    "id": "PT_01684"
+  },
+  {
+    "name": "Sumitomo Chemical",
+    "path": "/company/sumitomo-chemical",
+    "id": "PT_02002"
+  },
+  {
+    "name": "Sumitomo Corporation Group",
+    "path": "/company/sumitomo-corporation-group",
+    "id": "PT_01686"
+  },
+  {
+    "name": "Sumitomo Forestry",
+    "path": "/company/sumitomo-forestry",
+    "id": "PT_01687"
+  },
+  {
+    "name": "Sumitomo Life Insurance",
+    "path": "/company/sumitomo-life-insurance",
+    "id": "PT_01688"
+  },
+  {
+    "name": "Sumitomo Metal Mining",
+    "path": "/company/sumitomo-metal-mining",
+    "id": "PT_02121"
+  },
+  {
+    "name": "Sumitomo Mitsui Trust Holdings",
+    "path": "/company/sumitomo-mitsui-trust-holdings",
+    "id": "PT_01690"
+  },
+  {
+    "name": "Sumitomo Realty",
+    "path": "/company/sumitomo-realty",
+    "id": "PT_02120"
+  },
+  {
+    "name": "Sun Hung Kai Properties",
+    "path": "/company/sun-hung-kai-properties",
+    "id": "PT_01693"
+  },
+  {
+    "name": "Sun Life Financial",
+    "path": "/company/sun-life-financial",
+    "id": "PT_01694"
+  },
+  {
+    "name": "Sun Pharma",
+    "path": "/company/sun-pharma",
+    "id": "PT_01695"
+  },
+  {
+    "name": "Sunac",
+    "path": "/company/sunac",
+    "id": "PT_02344"
+  },
+  {
+    "name": "Suncor Energy",
+    "path": "/company/suncor-energy",
+    "id": "PT_01696"
+  },
+  {
+    "name": "Sunkist Growers",
+    "path": "/company/sunkist-growers",
+    "id": "PT_01697"
+  },
+  {
+    "name": "Sunshine Insurance Group",
+    "path": "/company/sunshine-insurance-group",
+    "id": "PT_02664"
+  },
+  {
+    "name": "Sunteck",
+    "path": "/company/sunteck",
+    "id": "PT_02526"
+  },
+  {
+    "name": "Suntory",
+    "path": "/company/suntory",
+    "id": "PT_01698"
+  },
+  {
+    "name": "Sunway",
+    "path": "/company/sunway",
+    "id": "PT_02695"
+  },
+  {
+    "name": "Sura Asset Management",
+    "path": "/company/sura-asset-management",
+    "id": "PT_01700"
+  },
+  {
+    "name": "Surgutneftegas",
+    "path": "/company/surgutneftegas",
+    "id": "PT_01701"
+  },
+  {
+    "name": "Suzano",
+    "path": "/company/suzano",
+    "id": "PT_01702"
+  },
+  {
+    "name": "Suzuki",
+    "path": "/company/suzuki",
+    "id": "PT_01703"
+  },
+  {
+    "name": "Svenska Cellulosa",
+    "path": "/company/svenska-cellulosa",
+    "id": "PT_01704"
+  },
+  {
+    "name": "Swedbank",
+    "path": "/company/swedbank",
+    "id": "PT_01707"
+  },
+  {
+    "name": "Swinerton",
+    "path": "/company/swinerton",
+    "id": "PT_02200"
+  },
+  {
+    "name": "Swire Properties",
+    "path": "/company/swire-properties",
+    "id": "PT_02106"
+  },
+  {
+    "name": "Swiss Life",
+    "path": "/company/swiss-life",
+    "id": "PT_01709"
+  },
+  {
+    "name": "Swiss Re",
+    "path": "/company/swiss-re",
+    "id": "PT_01710"
+  },
+  {
+    "name": "Swisscom",
+    "path": "/company/swisscom",
+    "id": "PT_01711"
+  },
+  {
+    "name": "Symrise",
+    "path": "/company/symrise",
+    "id": "PT_01712"
+  },
+  {
+    "name": "Syngenta Group",
+    "path": "/company/syngenta-group",
+    "id": "PT_02083"
+  },
+  {
+    "name": "Sysco",
+    "path": "/company/sysco",
+    "id": "PT_01713"
+  },
+  {
+    "name": "T&D Holdings",
+    "path": "/company/td-holdings",
+    "id": "PT_02036"
+  },
+  {
+    "name": "T. Rowe Price Group",
+    "path": "/company/t-rowe-price-group",
+    "id": "PT_01714"
+  },
+  {
+    "name": "Taiheiyo Cement",
+    "path": "/company/taiheiyo-cement",
+    "id": "PT_01715"
+  },
+  {
+    "name": "Taisei Corporation",
+    "path": "/company/taisei-corporation",
+    "id": "PT_01718"
+  },
+  {
+    "name": "Taiwan Power",
+    "path": "/company/taiwan-power",
+    "id": "PT_01721"
+  },
+  {
+    "name": "Takashimaya",
+    "path": "/company/takashimaya",
+    "id": "PT_02895"
+  },
+  {
+    "name": "Takeda",
+    "path": "/company/takeda",
+    "id": "PT_01724"
+  },
+  {
+    "name": "Talaat Moustafa Group",
+    "path": "/company/talaat-moustafa-group",
+    "id": "PT_02365"
+  },
+  {
+    "name": "Talanx Group",
+    "path": "/company/talanx-group",
+    "id": "PT_00826"
+  },
+  {
+    "name": "TANESCO",
+    "path": "/company/tanesco",
+    "id": "PT_01728"
+  },
+  {
+    "name": "Tanganda Tea Company",
+    "path": "/company/tanganda-tea-company",
+    "id": "PT_02442"
+  },
+  {
+    "name": "TANGEDCO",
+    "path": "/company/tangedco",
+    "id": "PT_02706"
+  },
+  {
+    "name": "Tapestry",
+    "path": "/company/tapestry",
+    "id": "PT_01729"
+  },
+  {
+    "name": "Targa Resources",
+    "path": "/company/targa-resources",
+    "id": "PT_01730"
+  },
+  {
+    "name": "Target",
+    "path": "/company/target",
+    "id": "PT_01731"
+  },
+  {
+    "name": "Tata Communications",
+    "path": "/company/tata-communications",
+    "id": "PT_02041"
+  },
+  {
+    "name": "Tata Group",
+    "path": "/company/tata-group",
+    "id": "PT_01732"
+  },
+  {
+    "name": "Tata Motors Passenger Vehicles",
+    "path": "/company/tata-motors-passenger-vehicles",
+    "id": "PT_02008"
+  },
+  {
+    "name": "Tata Power",
+    "path": "/company/tata-power",
+    "id": "PT_02325"
+  },
+  {
+    "name": "Tata Steel",
+    "path": "/company/tata-steel",
+    "id": "PT_02079"
+  },
+  {
+    "name": "Tate & Lyle",
+    "path": "/company/tate-lyle",
+    "id": "PT_01733"
+  },
+  {
+    "name": "Tatneft",
+    "path": "/company/tatneft",
+    "id": "PT_01734"
+  },
+  {
+    "name": "Taylor Farms",
+    "path": "/company/taylor-farms",
+    "id": "PT_01736"
+  },
+  {
+    "name": "Taylor Morrison",
+    "path": "/company/taylor-morrison",
+    "id": "PT_02913"
+  },
+  {
+    "name": "TCC Group Holdings",
+    "path": "/company/tcc-group-holdings",
+    "id": "PT_01719"
+  },
+  {
+    "name": "TCL",
+    "path": "/company/tcl",
+    "id": "PT_01737"
+  },
+  {
+    "name": "TCRS",
+    "path": "/company/tcrs",
+    "id": "PT_02096"
+  },
+  {
+    "name": "TCS",
+    "path": "/company/tcs",
+    "id": "PT_02817"
+  },
+  {
+    "name": "TCW Group",
+    "path": "/company/tcw-group",
+    "id": "PT_01738"
+  },
+  {
+    "name": "TD",
+    "path": "/company/td",
+    "id": "PT_01805"
+  },
+  {
+    "name": "TE Connectivity",
+    "path": "/company/te-connectivity",
+    "id": "PT_01740"
+  },
+  {
+    "name": "Teacher Retirement System of Texas",
+    "path": "/company/teacher-retirement-system-texas",
+    "id": "PT_01741"
+  },
+  {
+    "name": "TechnipFMC",
+    "path": "/company/technipfmc",
+    "id": "PT_02828"
+  },
+  {
+    "name": "Teck Resources",
+    "path": "/company/teck-resources",
+    "id": "PT_02207"
+  },
+  {
+    "name": "Teekay",
+    "path": "/company/teekay",
+    "id": "PT_02266"
+  },
+  {
+    "name": "Tehran Metro",
+    "path": "/company/tehran-metro",
+    "id": "PT_02633"
+  },
+  {
+    "name": "Tele2",
+    "path": "/company/tele2",
+    "id": "PT_01744"
+  },
+  {
+    "name": "Telecom Egypt",
+    "path": "/company/telecom-egypt",
+    "id": "PT_01746"
+  },
+  {
+    "name": "Telecom Italia",
+    "path": "/company/telecom-italia",
+    "id": "PT_01747"
+  },
+  {
+    "name": "Telefonica",
+    "path": "/company/telefonica",
+    "id": "PT_01748"
+  },
+  {
+    "name": "Telenor",
+    "path": "/company/telenor",
+    "id": "PT_01751"
+  },
+  {
+    "name": "Telia",
+    "path": "/company/telia",
+    "id": "PT_01753"
+  },
+  {
+    "name": "Telkom Indonesia",
+    "path": "/company/telkom-indonesia",
+    "id": "PT_01750"
+  },
+  {
+    "name": "Telstra",
+    "path": "/company/telstra",
+    "id": "PT_01756"
+  },
+  {
+    "name": "Temasek",
+    "path": "/company/temasek",
+    "id": "PT_01758"
+  },
+  {
+    "name": "Tenaga Nasional",
+    "path": "/company/tenaga-nasional",
+    "id": "PT_01759"
+  },
+  {
+    "name": "Tencent",
+    "path": "/company/tencent",
+    "id": "PT_01760"
+  },
+  {
+    "name": "Tereos",
+    "path": "/company/tereos",
+    "id": "PT_01761"
+  },
+  {
+    "name": "Ternium",
+    "path": "/company/ternium",
+    "id": "PT_01763"
+  },
+  {
+    "name": "Terrena",
+    "path": "/company/terrena",
+    "id": "PT_01764"
+  },
+  {
+    "name": "Tesco",
+    "path": "/company/tesco",
+    "id": "PT_01765"
+  },
+  {
+    "name": "Tesla",
+    "path": "/company/tesla",
+    "id": "PT_01766"
+  },
+  {
+    "name": "Tetra Laval",
+    "path": "/company/tetra-laval",
+    "id": "PT_01767"
+  },
+  {
+    "name": "Teva Pharmaceuticals",
+    "path": "/company/teva-pharmaceuticals",
+    "id": "PT_01768"
+  },
+  {
+    "name": "Texas Instruments",
+    "path": "/company/texas-instruments",
+    "id": "PT_01769"
+  },
+  {
+    "name": "TFG",
+    "path": "/company/tfg",
+    "id": "PT_01779"
+  },
+  {
+    "name": "Thai Union Group",
+    "path": "/company/thai-union-group",
+    "id": "PT_01774"
+  },
+  {
+    "name": "ThaiBev",
+    "path": "/company/thaibev",
+    "id": "PT_01771"
+  },
+  {
+    "name": "Thames Water",
+    "path": "/company/thames-water",
+    "id": "PT_00998"
+  },
+  {
+    "name": "The Arab Contractors",
+    "path": "/company/arab-contractors",
+    "id": "PT_02327"
+  },
+  {
+    "name": "The Carlyle Group",
+    "path": "/company/carlyle-group",
+    "id": "PT_01776"
+  },
+  {
+    "name": "The Clorox Company",
+    "path": "/company/clorox-company",
+    "id": "PT_01777"
+  },
+  {
+    "name": "The Crown Estate",
+    "path": "/company/crown-estate",
+    "id": "PT_02696"
+  },
+  {
+    "name": "The Estée Lauder Companies",
+    "path": "/company/estee-lauder-companies",
+    "id": "PT_01778"
+  },
+  {
+    "name": "The TJX Companies",
+    "path": "/company/tjx-companies",
+    "id": "PT_01781"
+  },
+  {
+    "name": "thyssenkrupp",
+    "path": "/company/thyssenkrupp",
+    "id": "PT_01784"
+  },
+  {
+    "name": "TIAA",
+    "path": "/company/tiaa",
+    "id": "PT_01785"
+  },
+  {
+    "name": "Tianqi Lithium",
+    "path": "/company/tianqi-lithium",
+    "id": "PT_02206"
+  },
+  {
+    "name": "Tiendas 3B",
+    "path": "/company/tiendas-3b",
+    "id": "PT_02888"
+  },
+  {
+    "name": "Tiger Brands",
+    "path": "/company/tiger-brands",
+    "id": "PT_01787"
+  },
+  {
+    "name": "Titan Cement",
+    "path": "/company/titan-cement",
+    "id": "PT_01789"
+  },
+  {
+    "name": "Tohoku Electric Power",
+    "path": "/company/tohoku-electric-power",
+    "id": "PT_01790"
+  },
+  {
+    "name": "Tokio Marine Holdings",
+    "path": "/company/tokio-marine-holdings",
+    "id": "PT_01791"
+  },
+  {
+    "name": "Tokyo Electric Power Company",
+    "path": "/company/tokyo-electric-power-company",
+    "id": "PT_01792"
+  },
+  {
+    "name": "Tokyo Electron",
+    "path": "/company/tokyo-electron",
+    "id": "PT_01793"
+  },
+  {
+    "name": "Tokyo Gas",
+    "path": "/company/tokyo-gas",
+    "id": "PT_02621"
+  },
+  {
+    "name": "Tokyo Metro",
+    "path": "/company/tokyo-metro",
+    "id": "PT_02627"
+  },
+  {
+    "name": "Tokyo Seika",
+    "path": "/company/tokyo-seika",
+    "id": "PT_01794"
+  },
+  {
+    "name": "Tokyo Water",
+    "path": "/company/tokyo-water",
+    "id": "PT_02707"
+  },
+  {
+    "name": "Tokyu Corporation",
+    "path": "/company/tokyu-corporation",
+    "id": "PT_01795"
+  },
+  {
+    "name": "Tokyu Fudosan",
+    "path": "/company/tokyu-fudosan",
+    "id": "PT_02347"
+  },
+  {
+    "name": "Toll Brothers",
+    "path": "/company/toll-brothers",
+    "id": "PT_01796"
+  },
+  {
+    "name": "Tongwei",
+    "path": "/company/tongwei",
+    "id": "PT_01802"
+  },
+  {
+    "name": "Toray Industries",
+    "path": "/company/toray-industries",
+    "id": "PT_01804"
+  },
+  {
+    "name": "Toshiba Tec",
+    "path": "/company/toshiba-tec",
+    "id": "PT_02154"
+  },
+  {
+    "name": "Tosoh",
+    "path": "/company/tosoh",
+    "id": "PT_01807"
+  },
+  {
+    "name": "TotalEnergies",
+    "path": "/company/totalenergies",
+    "id": "PT_01808"
+  },
+  {
+    "name": "Toyo Seikan",
+    "path": "/company/toyo-seikan",
+    "id": "PT_01810"
+  },
+  {
+    "name": "Toyota",
+    "path": "/company/toyota",
+    "id": "PT_01812"
+  },
+  {
+    "name": "TPG",
+    "path": "/company/tpg",
+    "id": "PT_01813"
+  },
+  {
+    "name": "TPI Polene",
+    "path": "/company/tpi-polene",
+    "id": "PT_01814"
+  },
+  {
+    "name": "Transcorp Power",
+    "path": "/company/transcorp-power",
+    "id": "PT_02329"
+  },
+  {
+    "name": "Transdev",
+    "path": "/company/transdev",
+    "id": "PT_01816"
+  },
+  {
+    "name": "Transport au Congo",
+    "path": "/company/transport-au-congo",
+    "id": "PT_02642"
+  },
+  {
+    "name": "Transport for London",
+    "path": "/company/transport-london",
+    "id": "PT_02644"
+  },
+  {
+    "name": "Transsion",
+    "path": "/company/transsion",
+    "id": "PT_01818"
+  },
+  {
+    "name": "Travelers",
+    "path": "/company/travelers",
+    "id": "PT_02031"
+  },
+  {
+    "name": "TreeHouse Foods",
+    "path": "/company/treehouse-foods",
+    "id": "PT_01819"
+  },
+  {
+    "name": "Trident Seafoods",
+    "path": "/company/trident-seafoods",
+    "id": "PT_01820"
+  },
+  {
+    "name": "Trina Solar",
+    "path": "/company/trina-solar",
+    "id": "PT_01821"
+  },
+  {
+    "name": "TRSGA",
+    "path": "/company/trsga",
+    "id": "PT_02010"
+  },
+  {
+    "name": "Truist",
+    "path": "/company/truist",
+    "id": "PT_02015"
+  },
+  {
+    "name": "Tsingshan Holding",
+    "path": "/company/tsingshan-holding",
+    "id": "PT_01823"
+  },
+  {
+    "name": "TSMC",
+    "path": "/company/tsmc",
+    "id": "PT_01722"
+  },
+  {
+    "name": "Tsuruha Holdings",
+    "path": "/company/tsuruha-holdings",
+    "id": "PT_02890"
+  },
+  {
+    "name": "TUI Group",
+    "path": "/company/tui-group",
+    "id": "PT_02174"
+  },
+  {
+    "name": "Turkish Airlines",
+    "path": "/company/turkish-airlines",
+    "id": "PT_01824"
+  },
+  {
+    "name": "Türkiye Petrol Rafinerileri",
+    "path": "/company/turkiye-petrol-rafinerileri",
+    "id": "PT_02140"
+  },
+  {
+    "name": "Türkiye Wealth Fund",
+    "path": "/company/turkiye-wealth-fund",
+    "id": "PT_02717"
+  },
+  {
+    "name": "TurkmenGaz",
+    "path": "/company/turkmengaz",
+    "id": "PT_01826"
+  },
+  {
+    "name": "Türk Telekom",
+    "path": "/company/turk-telekom",
+    "id": "PT_01825"
+  },
+  {
+    "name": "Twilio",
+    "path": "/company/twilio",
+    "id": "PT_02048"
+  },
+  {
+    "name": "Two Sigma Advisers",
+    "path": "/company/two-sigma-advisers",
+    "id": "PT_01829"
+  },
+  {
+    "name": "Tyson Foods",
+    "path": "/company/tyson-foods",
+    "id": "PT_01830"
+  },
+  {
+    "name": "U-Ming Marine",
+    "path": "/company/u-ming-marine",
+    "id": "PT_01837"
+  },
+  {
+    "name": "U.S. Steel",
+    "path": "/company/us-steel",
+    "id": "PT_01852"
+  },
+  {
+    "name": "Uber",
+    "path": "/company/uber",
+    "id": "PT_01831"
+  },
+  {
+    "name": "UBS",
+    "path": "/company/ubs",
+    "id": "PT_01832"
+  },
+  {
+    "name": "Uflex",
+    "path": "/company/uflex",
+    "id": "PT_01833"
+  },
+  {
+    "name": "UFP Industries",
+    "path": "/company/ufp-industries",
+    "id": "PT_01834"
+  },
+  {
+    "name": "Ulta Beauty",
+    "path": "/company/ulta-beauty",
+    "id": "PT_02896"
+  },
+  {
+    "name": "Ultrapar",
+    "path": "/company/ultrapar",
+    "id": "PT_01835"
+  },
+  {
+    "name": "UltraTech Cement",
+    "path": "/company/ultratech-cement",
+    "id": "PT_02104"
+  },
+  {
+    "name": "Umicore",
+    "path": "/company/umicore",
+    "id": "PT_01836"
+  },
+  {
+    "name": "Umios",
+    "path": "/company/umios",
+    "id": "PT_01131"
+  },
+  {
+    "name": "UNACEM",
+    "path": "/company/unacem",
+    "id": "PT_01842"
+  },
+  {
+    "name": "Under Armour",
+    "path": "/company/under-armour",
+    "id": "PT_01838"
+  },
+  {
+    "name": "Uni-President",
+    "path": "/company/uni-president",
+    "id": "PT_01846"
+  },
+  {
+    "name": "Unibail-Rodamco-Westfield",
+    "path": "/company/unibail-rodamco-westfield",
+    "id": "PT_02424"
+  },
+  {
+    "name": "Unicharm Corporation",
+    "path": "/company/unicharm-corporation",
+    "id": "PT_01839"
+  },
+  {
+    "name": "UniCredit",
+    "path": "/company/unicredit",
+    "id": "PT_01840"
+  },
+  {
+    "name": "Unilever",
+    "path": "/company/unilever",
+    "id": "PT_01841"
+  },
+  {
+    "name": "Union Bancaire Privee",
+    "path": "/company/union-bancaire-privee",
+    "id": "PT_01843"
+  },
+  {
+    "name": "Union Invivo",
+    "path": "/company/union-invivo",
+    "id": "PT_01844"
+  },
+  {
+    "name": "Uniper",
+    "path": "/company/uniper",
+    "id": "PT_02539"
+  },
+  {
+    "name": "United Airlines Holdings",
+    "path": "/company/united-airlines-holdings",
+    "id": "PT_01847"
+  },
+  {
+    "name": "United Parcel Service",
+    "path": "/company/united-parcel-service",
+    "id": "PT_01851"
+  },
+  {
+    "name": "United Utilities Group",
+    "path": "/company/united-utilities-group",
+    "id": "PT_01854"
+  },
+  {
+    "name": "Universal Robina",
+    "path": "/company/universal-robina",
+    "id": "PT_01856"
+  },
+  {
+    "name": "Universities Superannuation Scheme",
+    "path": "/company/universities-superannuation-scheme",
+    "id": "PT_01857"
+  },
+  {
+    "name": "UOB",
+    "path": "/company/uob",
+    "id": "PT_01850"
+  },
+  {
+    "name": "UPL",
+    "path": "/company/upl",
+    "id": "PT_01858"
+  },
+  {
+    "name": "UPM",
+    "path": "/company/upm",
+    "id": "PT_01859"
+  },
+  {
+    "name": "Urban Outfitters",
+    "path": "/company/urban-outfitters",
+    "id": "PT_01860"
+  },
+  {
+    "name": "Urbaser",
+    "path": "/company/urbaser",
+    "id": "PT_02094"
+  },
+  {
+    "name": "US Bancorp",
+    "path": "/company/us-bancorp",
+    "id": "PT_01861"
+  },
+  {
+    "name": "US Foods Holding",
+    "path": "/company/us-foods-holding",
+    "id": "PT_01862"
+  },
+  {
+    "name": "US Postal Service",
+    "path": "/company/us-postal-service",
+    "id": "PT_01864"
+  },
+  {
+    "name": "USAA",
+    "path": "/company/usaa",
+    "id": "PT_01865"
+  },
+  {
+    "name": "Va Tech Wabag",
+    "path": "/company/va-tech-wabag",
+    "id": "PT_01867"
+  },
+  {
+    "name": "Vale",
+    "path": "/company/vale",
+    "id": "PT_01868"
+  },
+  {
+    "name": "Valero Energy",
+    "path": "/company/valero-energy",
+    "id": "PT_01870"
+  },
+  {
+    "name": "Van Drie",
+    "path": "/company/van-drie",
+    "id": "PT_01871"
+  },
+  {
+    "name": "Vanguard Group",
+    "path": "/company/vanguard-group",
+    "id": "PT_01872"
+  },
+  {
+    "name": "Varo Energy",
+    "path": "/company/varo-energy",
+    "id": "PT_02135"
+  },
+  {
+    "name": "Vattenfall",
+    "path": "/company/vattenfall",
+    "id": "PT_01873"
+  },
+  {
+    "name": "Vedanta Resources",
+    "path": "/company/vedanta-resources",
+    "id": "PT_01875"
+  },
+  {
+    "name": "Veolia Environnement",
+    "path": "/company/veolia-environnement",
+    "id": "PT_01876"
+  },
+  {
+    "name": "VEON",
+    "path": "/company/veon",
+    "id": "PT_01877"
+  },
+  {
+    "name": "Verizon",
+    "path": "/company/verizon",
+    "id": "PT_01878"
+  },
+  {
+    "name": "Vertex",
+    "path": "/company/vertex",
+    "id": "PT_02851"
+  },
+  {
+    "name": "Vestas",
+    "path": "/company/vestas",
+    "id": "PT_01879"
+  },
+  {
+    "name": "VF Corporation",
+    "path": "/company/vf-corporation",
+    "id": "PT_01880"
+  },
+  {
+    "name": "Viasat",
+    "path": "/company/viasat",
+    "id": "PT_02816"
+  },
+  {
+    "name": "Vicat",
+    "path": "/company/vicat",
+    "id": "PT_01882"
+  },
+  {
+    "name": "Victoria's Secret",
+    "path": "/company/victorias-secret",
+    "id": "PT_02825"
+  },
+  {
+    "name": "Vietnam Electricity",
+    "path": "/company/vietnam-electricity",
+    "id": "PT_02330"
+  },
+  {
+    "name": "Vietnam Rubber Group",
+    "path": "/company/vietnam-rubber-group",
+    "id": "PT_02227"
+  },
+  {
+    "name": "Viettel",
+    "path": "/company/viettel",
+    "id": "PT_01884"
+  },
+  {
+    "name": "Vinamilk",
+    "path": "/company/vinamilk",
+    "id": "PT_01885"
+  },
+  {
+    "name": "VINCI",
+    "path": "/company/vinci",
+    "id": "PT_01886"
+  },
+  {
+    "name": "Vinhomes",
+    "path": "/company/vinhomes",
+    "id": "PT_02332"
+  },
+  {
+    "name": "Vion",
+    "path": "/company/vion",
+    "id": "PT_01887"
+  },
+  {
+    "name": "Virginia Retirement System",
+    "path": "/company/virginia-retirement-system",
+    "id": "PT_01888"
+  },
+  {
+    "name": "Visa",
+    "path": "/company/visa",
+    "id": "PT_02902"
+  },
+  {
+    "name": "Vista Equity Partners",
+    "path": "/company/vista-equity-partners",
+    "id": "PT_01890"
+  },
+  {
+    "name": "Vista Land",
+    "path": "/company/vista-land",
+    "id": "PT_02683"
+  },
+  {
+    "name": "Vistra",
+    "path": "/company/vistra",
+    "id": "PT_01891"
+  },
+  {
+    "name": "Viterra",
+    "path": "/company/viterra",
+    "id": "PT_02070"
+  },
+  {
+    "name": "Viva Energy",
+    "path": "/company/viva-energy",
+    "id": "PT_01893"
+  },
+  {
+    "name": "Vivo",
+    "path": "/company/vivo",
+    "id": "PT_00228"
+  },
+  {
+    "name": "VK",
+    "path": "/company/vk",
+    "id": "PT_02822"
+  },
+  {
+    "name": "Vodafone",
+    "path": "/company/vodafone",
+    "id": "PT_01896"
+  },
+  {
+    "name": "Voestalpine",
+    "path": "/company/voestalpine",
+    "id": "PT_01897"
+  },
+  {
+    "name": "Volkswagen",
+    "path": "/company/volkswagen",
+    "id": "PT_02007"
+  },
+  {
+    "name": "Volvo",
+    "path": "/company/volvo",
+    "id": "PT_02109"
+  },
+  {
+    "name": "Vonovia",
+    "path": "/company/vonovia",
+    "id": "PT_02547"
+  },
+  {
+    "name": "Vontobel Holding",
+    "path": "/company/vontobel-holding",
+    "id": "PT_01898"
+  },
+  {
+    "name": "Vornado Realty Trust",
+    "path": "/company/vornado-realty-trust",
+    "id": "PT_02698"
+  },
+  {
+    "name": "Votorantim Cimentos",
+    "path": "/company/votorantim-cimentos",
+    "id": "PT_02080"
+  },
+  {
+    "name": "Voya Financial",
+    "path": "/company/voya-financial",
+    "id": "PT_01900"
+  },
+  {
+    "name": "Walgreens Boots Alliance",
+    "path": "/company/walgreens-boots-alliance",
+    "id": "PT_02856"
+  },
+  {
+    "name": "Wallenius Wilhelmsen",
+    "path": "/company/wallenius-wilhelmsen",
+    "id": "PT_01904"
+  },
+  {
+    "name": "Walmart",
+    "path": "/company/walmart",
+    "id": "PT_01905"
+  },
+  {
+    "name": "Walsh",
+    "path": "/company/walsh",
+    "id": "PT_02682"
+  },
+  {
+    "name": "Walt Disney",
+    "path": "/company/walt-disney",
+    "id": "PT_01782"
+  },
+  {
+    "name": "Wan Hai Lines",
+    "path": "/company/wan-hai-lines",
+    "id": "PT_01907"
+  },
+  {
+    "name": "Wanhua Chemical",
+    "path": "/company/wanhua-chemical",
+    "id": "PT_01908"
+  },
+  {
+    "name": "Want Want China",
+    "path": "/company/want-want-china",
+    "id": "PT_01909"
+  },
+  {
+    "name": "Warburg Pincus",
+    "path": "/company/warburg-pincus",
+    "id": "PT_01910"
+  },
+  {
+    "name": "Warner Bros. Discovery",
+    "path": "/company/warner-bros-discovery",
+    "id": "PT_02897"
+  },
+  {
+    "name": "Wartsila",
+    "path": "/company/wartsila",
+    "id": "PT_01911"
+  },
+  {
+    "name": "Washington State Investment Board",
+    "path": "/company/washington-state-investment-board",
+    "id": "PT_01912"
+  },
+  {
+    "name": "Waste Connections",
+    "path": "/company/waste-connections",
+    "id": "PT_01913"
+  },
+  {
+    "name": "Waste Management Inc",
+    "path": "/company/waste-management-inc",
+    "id": "PT_02534"
+  },
+  {
+    "name": "Wayne-Sanderson Farms",
+    "path": "/company/wayne-sanderson-farms",
+    "id": "PT_01530"
+  },
+  {
+    "name": "WBHO",
+    "path": "/company/wbho",
+    "id": "PT_01941"
+  },
+  {
+    "name": "WEC Energy Group",
+    "path": "/company/wec-energy-group",
+    "id": "PT_02543"
+  },
+  {
+    "name": "Weibo",
+    "path": "/company/weibo",
+    "id": "PT_01608"
+  },
+  {
+    "name": "Welcia",
+    "path": "/company/welcia",
+    "id": "PT_02872"
+  },
+  {
+    "name": "Wellington Management",
+    "path": "/company/wellington-management",
+    "id": "PT_01916"
+  },
+  {
+    "name": "Wells Fargo",
+    "path": "/company/wells-fargo",
+    "id": "PT_01917"
+  },
+  {
+    "name": "Welltower",
+    "path": "/company/welltower",
+    "id": "PT_01918"
+  },
+  {
+    "name": "Wen's Foodstuff",
+    "path": "/company/wens-foodstuff",
+    "id": "PT_01920"
+  },
+  {
+    "name": "Wendy's",
+    "path": "/company/wendys",
+    "id": "PT_02806"
+  },
+  {
+    "name": "Wesfarmers",
+    "path": "/company/wesfarmers",
+    "id": "PT_02407"
+  },
+  {
+    "name": "West Bengal Transport Company",
+    "path": "/company/west-bengal-transport-company",
+    "id": "PT_02458"
+  },
+  {
+    "name": "West Fraser Timber",
+    "path": "/company/west-fraser-timber",
+    "id": "PT_01923"
+  },
+  {
+    "name": "Western Digital",
+    "path": "/company/western-digital",
+    "id": "PT_01925"
+  },
+  {
+    "name": "Westlake Chemical",
+    "path": "/company/westlake-chemical",
+    "id": "PT_01927"
+  },
+  {
+    "name": "Westpac",
+    "path": "/company/westpac",
+    "id": "PT_01928"
+  },
+  {
+    "name": "Weyerhaeuser",
+    "path": "/company/weyerhaeuser",
+    "id": "PT_01931"
+  },
+  {
+    "name": "WH Group",
+    "path": "/company/wh-group",
+    "id": "PT_01932"
+  },
+  {
+    "name": "Wheelock and Co",
+    "path": "/company/wheelock-and-co",
+    "id": "PT_01933"
+  },
+  {
+    "name": "Wienerberger",
+    "path": "/company/wienerberger",
+    "id": "PT_01937"
+  },
+  {
+    "name": "Wilbur-Ellis",
+    "path": "/company/wilbur-ellis",
+    "id": "PT_01938"
+  },
+  {
+    "name": "Williams-Sonoma",
+    "path": "/company/williams-sonoma",
+    "id": "PT_02891"
+  },
+  {
+    "name": "Willis Towers Watson",
+    "path": "/company/willis-towers-watson",
+    "id": "PT_01939"
+  },
+  {
+    "name": "Wilmar",
+    "path": "/company/wilmar",
+    "id": "PT_01940"
+  },
+  {
+    "name": "Wipro",
+    "path": "/company/wipro",
+    "id": "PT_02819"
+  },
+  {
+    "name": "WK Kellogg Co",
+    "path": "/company/wk-kellogg-co",
+    "id": "PT_02802"
+  },
+  {
+    "name": "Wm Morrison Supermarkets",
+    "path": "/company/wm-morrison-supermarkets",
+    "id": "PT_01946"
+  },
+  {
+    "name": "Wonderful Company",
+    "path": "/company/wonderful-company",
+    "id": "PT_01947"
+  },
+  {
+    "name": "Woodbois",
+    "path": "/company/woodbois",
+    "id": "PT_02213"
+  },
+  {
+    "name": "Woodside Energy",
+    "path": "/company/woodside-energy",
+    "id": "PT_01948"
+  },
+  {
+    "name": "Woolworths Group",
+    "path": "/company/woolworths-group",
+    "id": "PT_01949"
+  },
+  {
+    "name": "Woori Financial Group",
+    "path": "/company/woori-financial-group",
+    "id": "PT_01951"
+  },
+  {
+    "name": "WTK",
+    "path": "/company/wtk",
+    "id": "PT_02219"
+  },
+  {
+    "name": "Wuliangye Yibin",
+    "path": "/company/wuliangye-yibin",
+    "id": "PT_01955"
+  },
+  {
+    "name": "X",
+    "path": "/company/x",
+    "id": "PT_01828"
+  },
+  {
+    "name": "X5 Retail Group",
+    "path": "/company/x5-retail-group",
+    "id": "PT_01958"
+  },
+  {
+    "name": "Xcel Energy",
+    "path": "/company/xcel-energy",
+    "id": "PT_01959"
+  },
+  {
+    "name": "Xiaomi",
+    "path": "/company/xiaomi",
+    "id": "PT_01961"
+  },
+  {
+    "name": "Xinhua Metallurgical",
+    "path": "/company/xinhua-metallurgical",
+    "id": "PT_02583"
+  },
+  {
+    "name": "XPO",
+    "path": "/company/xpo",
+    "id": "PT_01964"
+  },
+  {
+    "name": "XXXLutz Group",
+    "path": "/company/xxxlutz-group",
+    "id": "PT_02885"
+  },
+  {
+    "name": "Xylem",
+    "path": "/company/xylem",
+    "id": "PT_01967"
+  },
+  {
+    "name": "Yakult",
+    "path": "/company/yakult",
+    "id": "PT_02833"
+  },
+  {
+    "name": "Yamada Holdings",
+    "path": "/company/yamada-holdings",
+    "id": "PT_02870"
+  },
+  {
+    "name": "Yamato Holdings",
+    "path": "/company/yamato-holdings",
+    "id": "PT_01968"
+  },
+  {
+    "name": "Yamazaki Baking",
+    "path": "/company/yamazaki-baking",
+    "id": "PT_01969"
+  },
+  {
+    "name": "Yanchang Petroleum International",
+    "path": "/company/yanchang-petroleum-international",
+    "id": "PT_01569"
+  },
+  {
+    "name": "Yandex",
+    "path": "/company/yandex",
+    "id": "PT_02917"
+  },
+  {
+    "name": "Yang Ming Marine",
+    "path": "/company/yang-ming-marine",
+    "id": "PT_01971"
+  },
+  {
+    "name": "Yara",
+    "path": "/company/yara",
+    "id": "PT_01974"
+  },
+  {
+    "name": "Yatai Building Materials",
+    "path": "/company/yatai-building-materials",
+    "id": "PT_02416"
+  },
+  {
+    "name": "Yildiz Holding",
+    "path": "/company/yildiz-holding",
+    "id": "PT_01975"
+  },
+  {
+    "name": "Yili",
+    "path": "/company/yili",
+    "id": "PT_01976"
+  },
+  {
+    "name": "Yokohama Rubber",
+    "path": "/company/yokohama-rubber",
+    "id": "PT_01978"
+  },
+  {
+    "name": "YPF",
+    "path": "/company/ypf",
+    "id": "PT_01981"
+  },
+  {
+    "name": "Yum China",
+    "path": "/company/yum-china",
+    "id": "PT_01982"
+  },
+  {
+    "name": "Yum! Brands",
+    "path": "/company/yum-brands",
+    "id": "PT_01983"
+  },
+  {
+    "name": "Yunji",
+    "path": "/company/yunji",
+    "id": "PT_01984"
+  },
+  {
+    "name": "Zain",
+    "path": "/company/zain",
+    "id": "PT_01986"
+  },
+  {
+    "name": "Zalando",
+    "path": "/company/zalando",
+    "id": "PT_01987"
+  },
+  {
+    "name": "ZEN-NOH",
+    "path": "/company/zen-noh",
+    "id": "PT_01988"
+  },
+  {
+    "name": "Zenith Bank",
+    "path": "/company/zenith-bank",
+    "id": "PT_02143"
+  },
+  {
+    "name": "Zenkyoren",
+    "path": "/company/zenkyoren",
+    "id": "PT_01231"
+  },
+  {
+    "name": "Zensho Holdings",
+    "path": "/company/zensho-holdings",
+    "id": "PT_01989"
+  },
+  {
+    "name": "Zespri",
+    "path": "/company/zespri",
+    "id": "PT_01990"
+  },
+  {
+    "name": "Zhongce Rubber Group",
+    "path": "/company/zhongce-rubber-group",
+    "id": "PT_01995"
+  },
+  {
+    "name": "Zijin Mining",
+    "path": "/company/zijin-mining",
+    "id": "PT_01997"
+  },
+  {
+    "name": "ZIM",
+    "path": "/company/zim",
+    "id": "PT_02256"
+  },
+  {
+    "name": "Zoom",
+    "path": "/company/zoom",
+    "id": "PT_02049"
+  },
+  {
+    "name": "ZTE",
+    "path": "/company/zte",
+    "id": "PT_01998"
+  },
+  {
+    "name": "ZTO Express",
+    "path": "/company/zto-express",
+    "id": "PT_02269"
+  },
+  {
+    "name": "Zuercher Kantonalbank",
+    "path": "/company/zuercher-kantonalbank",
+    "id": "PT_01999"
+  },
+  {
+    "name": "Zurich Insurance Group",
+    "path": "/company/zurich-insurance-group",
+    "id": "PT_02000"
+  }
+]

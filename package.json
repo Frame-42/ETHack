@@ -1,0 +1,13 @@
+{
+  "name": "transition-observatory",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build:data": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "devDependencies": { "@playwright/test": "1.55.1" }
+}
