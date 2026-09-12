@@ -37,9 +37,9 @@ const BASE: Col[] = [
   { key: "sector", label: "Branche", get: (r) => r.sector },
   { key: "n", label: "Werte", num: true, get: (r) => r.n },
   { key: "sources", label: "Quellen", num: true, get: (r) => r.sources },
-  { key: "rank", label: "Rangband", num: true, get: (r) => r.values.rank_p50 ?? null },
-  { key: "co2", label: "CO₂-Int.", num: true, get: (r) => r.values.co2_intensity ?? null },
-  { key: "dart", label: "DART", num: true, get: (r) => r.values.dart_rate ?? null },
+  { key: "scope1", label: "Scope 1", num: true, get: (r) => r.values.scope1_t ?? null },
+  { key: "tri", label: "TRI", num: true, get: (r) => r.values.tri_releases_lbs ?? null },
+  { key: "dafw", label: "Unfälle", num: true, get: (r) => r.values.osha_dafw_cases ?? null },
   { key: "sbti", label: "SBTi", num: true, get: (r) => r.values.sbti_validated ?? null },
 ];
 
@@ -237,13 +237,9 @@ export default function Browser({
                   )}
                 </td>
                 <td className="num">{r.n === 0 ? "–" : r.sources}</td>
-                <td className="num mono">
-                  {r.values.rank_p10 != null && r.values.rank_p90 != null
-                    ? `${Math.round(r.values.rank_p10)}–${Math.round(r.values.rank_p90)}`
-                    : "–"}
-                </td>
-                <td className="num">{fmt(r.values.co2_intensity ?? null)}</td>
-                <td className="num">{fmt(r.values.dart_rate ?? null)}</td>
+                <td className="num">{fmt(r.values.scope1_t ?? null, "t CO2e")}</td>
+                <td className="num">{fmt(r.values.tri_releases_lbs ?? null, "lbs")}</td>
+                <td className="num">{fmt(r.values.osha_dafw_cases ?? null)}</td>
                 <td>
                   {r.values.sbti_validated == null ? (
                     <span className="dim">–</span>

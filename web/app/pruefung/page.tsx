@@ -58,12 +58,15 @@ export default async function Page() {
       <p className="eyebrow">Prüfung</p>
       <h1>Auffällige Werte, geprüft von Regeln, KI und Mensch</h1>
       <p className="lede">
-        Die meisten Fehler waren systematisch: eine Null, die „nicht gemeldet“
-        heißt; ein Messprogramm ohne CO<sub>2</sub>-Pflicht; eine Anlage, die
-        beim Verbinden doppelt zählt; eine Tochter im falschen Jahr. Systematik
-        gehört repariert, nicht geprüft — deshalb sind diese Ursachen jetzt in
-        der Pipeline behoben. Was übrig bleibt, entscheiden Regeln und ein
-        Sprachmodell; an Menschen geht nur der Grenzfall.
+        Zwei Regeln stehen über allem. <b>Erstens:</b> Entweder eine
+        vertrauenswürdige Quelle veröffentlicht den Wert — oder es gibt keinen
+        Wert. Jede Zeile ist <i>gemeldet</i> (so veröffentlicht) oder{" "}
+        <i>aggregiert</i> (Summe der veröffentlichten Einzelwerte einer Firma);
+        selbstgerechnete Kennzahlen wie Intensität, Rate je MWh, Unfallrate,
+        Trend und Rangband gibt es hier nicht mehr. <b>Zweitens:</b>
+        systematische Fehler gehören repariert, nicht geprüft — deshalb sind
+        ihre Ursachen in der Pipeline behoben. Was übrig bleibt, kennzeichnen
+        Regeln und ein Sprachmodell; löschen darf nur ein Mensch.
       </p>
 
       <div className="stats">
@@ -127,11 +130,12 @@ export default async function Page() {
       </div>
 
       <div className="pipeline" aria-label="Prüfablauf">
-        <div className="step"><span className="n">1</span><b>Reparatur</b><span>systematische Ursachen in der Pipeline behoben</span></div>
-        <div className="step"><span className="n">2</span><b>Regeln</b><span>{de(s.flags)} Kandidaten, {de(s.fehler)} Fehler, {de(s.pruefen)} zu prüfen</span></div>
-        <div className="step"><span className="n">3</span><b>KI-Gutachten</b><span>{ki ? `${ki.modell}, unsichere Fälle an ${ki.eskalation}` : "nicht gelaufen"}</span></div>
-        <div className="step"><span className="n">4</span><b>Weiterleitung</b><span>{ki ? `${de(ki.routen.automatisch ?? 0)} automatisch, ${de(ki.routen.mensch ?? 0)} an Menschen` : "–"}</span></div>
-        <div className="step"><span className="n">5</span><b>Mensch</b><span>Entscheidet per Knopf an jedem Fall, hat beim nächsten Lauf Vorrang</span></div>
+        <div className="step"><span className="n">1</span><b>Nur Quellwerte</b><span>gemeldet oder aggregiert, nichts Gerechnetes</span></div>
+        <div className="step"><span className="n">2</span><b>Reparatur</b><span>systematische Ursachen in der Pipeline behoben</span></div>
+        <div className="step"><span className="n">3</span><b>Regeln</b><span>{de(s.flags)} Kandidaten, {de(s.fehler)} Fehler, {de(s.pruefen)} zu prüfen</span></div>
+        <div className="step"><span className="n">4</span><b>KI-Gutachten</b><span>{ki ? `${ki.modell}, unsichere Fälle an ${ki.eskalation}` : "nicht gelaufen"}</span></div>
+        <div className="step"><span className="n">5</span><b>Weiterleitung</b><span>{ki ? `${de(ki.routen.automatisch ?? 0)} automatisch, ${de(ki.routen.mensch ?? 0)} an Menschen` : "–"}</span></div>
+        <div className="step"><span className="n">6</span><b>Mensch</b><span>Entscheidet per Knopf an jedem Fall, hat beim nächsten Lauf Vorrang</span></div>
       </div>
 
       {ki && (
@@ -160,6 +164,9 @@ export default async function Page() {
       )}
 
       <div className="note">
+        <b>Löschen darf nur ein Mensch.</b> Eine automatische Entscheidung
+        kennzeichnet einen Wert, sie nimmt ihn nie aus dem Bestand. Dafür
+        braucht es eine Zeile mit Name, Datum und Begründung.{" "}
         <b>Wann ein Mensch drankommt.</b> Nur in vier Fällen: Regel und KI
         widersprechen sich; das Modell bleibt auch nach der Eskalation unsicher;
         ein Eingriff träfe das Ranking oder mehr als eine Megatonne; das Modell

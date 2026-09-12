@@ -41,20 +41,16 @@ def with_meta(df: pd.DataFrame) -> pd.DataFrame:
     return df.merge(MASTER[["ticker", "company", "gics_sector"]], on="ticker", how="left")
 
 
-# Die Stromrate beschreibt ein Geschaeftsmodell, kein Unternehmen: Wer ein
-# eigenes Blockheizkraftwerk betreibt, bekommt sonst eine "Kraftwerksnote".
-# Laut Quellen-Caveat ist die Kennzahl nur fuer Stromerzeuger aussagekraeftig.
-VERSORGER_BRANCHEN = ("Utilities",)
-# Die Branchenkennung allein reicht nicht: Berkshire Hathaway Energy betreibt
-# 113 Kraftwerke mit 83 TWh, GICS fuehrt den Konzern als Finanzwert. Wer eine
-# Flotte betreibt, ist Stromerzeuger -- unabhaengig von der Kennung. Ein
-# einzelnes Werk mit viel Strom ist dagegen eher ein Zuordnungsfehler.
-FLOTTE_TWH, FLOTTE_KRAFTWERKE = 1.0, 3
-# Physikalische Obergrenze: Braunkohle liegt bei rund 1,15 t CO2 je MWh.
-MAX_T_PRO_MWH = 1.3
-
-
 def egrid() -> None:
+    """Kraftwerksbilanz je Firma: Summe der von eGRID gemeldeten Zahlen.
+
+    Frueher stand hier eine Rate t CO2 je MWh. Die hat eGRID so nie
+    veroeffentlicht -- wir hatten sie gerechnet und mussten sie dann mit
+    selbstgesetzten Schwellen (Branche, Flottengroesse, physikalische
+    Obergrenze) wieder einfangen. Jetzt stehen Zaehler und Nenner einzeln da,
+    beide von der Quelle. Wer eine Rate braucht, bildet sie selbst und weiss,
+    woraus.
+    """
     eg = pd.read_parquet(RAW / "egrid_plant.parquet")
     eg = eg[eg["co2_t"].notna() & (eg["net_generation_mwh"] > 0)].copy()
     eg["ticker"] = eg["operator_name"].map(to_ticker).fillna(eg["utility_name"].map(to_ticker))
@@ -62,19 +58,8 @@ def egrid() -> None:
         kraftwerke=("plant_name", "nunique"), co2_t=("co2_t", "sum"),
         mwh=("net_generation_mwh", "sum"),
     )
-    agg["t_co2_pro_mwh"] = agg["co2_t"] / agg["mwh"]
-    voll = with_meta(agg)
-    flotte = (voll["mwh"] >= FLOTTE_TWH * 1e6) & (voll["kraftwerke"] >= FLOTTE_KRAFTWERKE)
-    ist_versorger = voll["gics_sector"].isin(VERSORGER_BRANCHEN) | flotte
-    # Nicht-Versorger behalten Kraftwerkszahl und Menge, aber keine Rate.
-    voll.loc[~ist_versorger, "t_co2_pro_mwh"] = np.nan
-    unmoeglich = voll["t_co2_pro_mwh"] > MAX_T_PRO_MWH
-    if unmoeglich.any():
-        print(f"eGRID: {int(unmoeglich.sum())} Raten ueber {MAX_T_PRO_MWH} t/MWh verworfen "
-              f"({', '.join(voll.loc[unmoeglich, 'ticker'])})")
-        voll.loc[unmoeglich, "t_co2_pro_mwh"] = np.nan
-    voll.to_csv(OUT / "egrid_je_firma.csv", index=False)
-    print(f"eGRID: {len(voll)} Firmen, davon {int(ist_versorger.sum())} mit Rate")
+    with_meta(agg).to_csv(OUT / "egrid_je_firma.csv", index=False)
+    print(f"eGRID: {len(agg)} Firmen")
 
 
 def tri() -> None:
@@ -92,25 +77,18 @@ def tri() -> None:
     print(f"TRI: {len(agg)} Firmen")
 
 
-# OSHA prueft die Meldungen nicht ("OSHA also does not validate the counts of
-# workers, hours, or injury and illness counts", ITA Data Users Guide). Eine
-# Unfallrate ist Faelle je Stunden -- ein falscher Nenner erzeugt jede
-# beliebige Rate. Vollzeit sind rund 2 000 Stunden im Jahr; ausserhalb dieses
-# Bandes ist die Meldung als Nenner unbrauchbar.
-STUNDEN_MIN, STUNDEN_MAX = 200, 4000
-
-
 def osha() -> None:
+    """Arbeitsschutz je Firma: Summen der gemeldeten Zahlen, keine Rate.
+
+    Die Unfallrate DART war unsere Rechnung aus Faellen und Stunden -- und
+    OSHA prueft beides nicht nach ("OSHA also does not validate the counts of
+    workers, hours, or injury and illness counts", ITA Data Users Guide). Eine
+    Rate aus ungeprueften Nennern ist keine Messung. Hier stehen deshalb die
+    gemeldeten Zahlen selbst.
+    """
     o = pd.read_parquet(RAW / "osha_ita.parquet")
     o["ticker"] = o["company_name"].map(to_ticker)
     hit = o.dropna(subset=["ticker"]).copy()
-    stunden = pd.to_numeric(hit["total_hours_worked"], errors="coerce")
-    koepfe = pd.to_numeric(hit["annual_average_employees"], errors="coerce")
-    je_kopf = stunden / koepfe.replace(0, np.nan)
-    brauchbar = je_kopf.between(STUNDEN_MIN, STUNDEN_MAX)
-    verworfen = int((~brauchbar).sum())
-    hit = hit[brauchbar]
-    print(f"OSHA: {verworfen} Meldungen mit unplausiblem Stundennenner verworfen")
     agg = hit.groupby("ticker", as_index=False).agg(
         betriebe=("establishment_name", "nunique"), stunden=("total_hours_worked", "sum"),
         dafw=("total_dafw_cases", "sum"), djtr=("total_djtr_cases", "sum"),
@@ -118,7 +96,6 @@ def osha() -> None:
     )
     for c in ("stunden", "dafw", "djtr", "tote"):
         agg[c] = pd.to_numeric(agg[c], errors="coerce")
-    agg["dart_rate"] = (agg["dafw"] + agg["djtr"]) * 200000 / agg["stunden"].replace(0, np.nan)
     with_meta(agg).to_csv(OUT / "osha_je_firma.csv", index=False)
     print(f"OSHA: {len(agg)} Firmen")
 
@@ -156,8 +133,9 @@ def echo() -> None:
         inspektionen=("fac_inspection_count", "sum"), verstossquartale=("vq", "sum"),
         schwere_verstoesse=("sv", "sum"),
     )
-    agg["verstossquartale_je_anlage"] = agg["verstossquartale"] / agg["anlagen"]
-    assert agg["verstossquartale_je_anlage"].max() <= 12, "mehr als 12 Quartale je Anlage"
+    # Keine Quartale je Anlage mehr: Das war unser Verhaeltnis. Quartale und
+    # Anlagenzahl stehen einzeln, beide aus der Konformitaetsakte.
+    assert (agg["verstossquartale"] <= 12 * agg["anlagen"]).all(), "mehr als 12 Quartale je Anlage"
     with_meta(agg).to_csv(OUT / "echo_je_firma.csv", index=False)
     print(f"ECHO: {len(agg)} Firmen")
 

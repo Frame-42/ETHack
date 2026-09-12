@@ -35,11 +35,18 @@ def pruefe_export() -> None:
             raise AssertionError(f"{metric}: {int((v < mindestens).sum())} Werte unter "
                                  f"{mindestens} -- {text}")
 
-    grenze("echo_nc_quarters_per_site", hoechstens=12, mindestens=0,
-           text="drei Jahre haben zwoelf Quartale")
-    grenze("t_co2_pro_mwh", hoechstens=1.3, text="Braunkohle liegt bei rund 1,15 t/MWh")
-    grenze("absolute_cagr", hoechstens=1.0, mindestens=-1.0, text="Trend als Anteil je Jahr")
-    grenze("intensity_cagr", hoechstens=1.0, mindestens=-1.0, text="Trend als Anteil je Jahr")
+    # Grenzen nur noch dort, wo die Quelle selbst eine kennt.
+    if {"echo_nc_quarters", "echo_facilities"} <= set(w.columns):
+        zuviel = w["echo_nc_quarters"] > 12 * w["echo_facilities"]
+        if zuviel.any():
+            raise AssertionError(f"{int(zuviel.sum())} Firmen mit mehr als 12 Verstoss"
+                                 "quartalen je Anlage -- drei Jahre haben zwoelf")
+    # Jeder Wert muss sagen, woher er kommt. Eine dritte Art gibt es nicht.
+    arten = set(long["wert_art"].dropna().unique())
+    if not arten <= {"gemeldet", "aggregiert"}:
+        raise AssertionError(f"Werte ohne belegte Herkunft im Bestand: {arten}")
+    if long["wert_art"].isna().any():
+        raise AssertionError("Werte ohne Herkunftsangabe im Bestand")
     for metric in ("scope1_t", "campd_co2_t"):
         if metric in w and (w[metric].dropna() <= 0).any():
             raise AssertionError(f"{metric}: exakte Null im Bestand -- fehlend statt 0 fuehren")

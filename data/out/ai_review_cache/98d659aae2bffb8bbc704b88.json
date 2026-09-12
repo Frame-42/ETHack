@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "echter_extremwert",
+ "explanation": "Der Wert liegt zwar am Branchenmaximum, ist aber in den Belegen nicht als Fehler erkennbar: Für Utilities ist der Median 0 und der Maximalwert 2, Duke Energy liegt damit im oberen Rand, aber noch im beobachteten Bereich. Laut allgemeinem Wissen können auch große Versorger einzelne Todesfälle haben; die Belege stützen daher eher einen echten Extremwert als einen Messfehler.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 622,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 129,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 751
+ }
+}

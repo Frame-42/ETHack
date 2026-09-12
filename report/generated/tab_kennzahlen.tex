@@ -1,110 +1,104 @@
-\textbf{Emissionsmengen} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Absolute Treibhausgasmengen, wie sie gemeldet oder gemessen wurden.}\\
+\textbf{Emissionsmengen} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Absolute Treibhausgasmengen, wie sie gemeldet oder gemessen wurden.}\\
 \addlinespace[2pt]
-Scope-1-Emissionen & \texttt{scope1\_t} & t CO2e & $\downarrow$ & 136 & 2018--2023 & EPA Greenhouse Gas Reporti \\
-CO2 gemessen (CEMS) & \texttt{campd\_co2\_t} & t CO2e & $\downarrow$ & 32 & 2019--2026 & EPA Clean Air Markets Prog \\
+Scope-1-Emissionen & \texttt{scope1\_t} & t CO2e & $\downarrow$ & aggregiert & 136 & 2018--2023 & EPA Greenhouse Gas Reporti \\
+CO2 gemessen (CEMS) & \texttt{campd\_co2\_t} & t CO2e & $\downarrow$ & aggregiert & 32 & 2019--2026 & EPA Clean Air Markets Prog \\
 \midrule
 \midrule
-\textbf{Intensitaeten und Trends} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Emissionen bezogen auf eine Aktivitaetsgroesse, und ihre Entwicklung. Hier entscheidet die Wahl des Nenners.}\\
+\textbf{Kraftwerksbilanz} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Menge und Erzeugung je Firma, beide von eGRID gemeldet. Eine Rate je MWh steht hier bewusst nicht: Die waere unsere Rechnung, nicht die der Quelle.}\\
 \addlinespace[2pt]
-CO2-Intensitaet & \texttt{co2\_intensity} & t CO2e je Mio. USD Umsatz & $\downarrow$ & 133 & 2018--2023 & Eigene Berechnung dieser P \\
-CO2 je erzeugter MWh & \texttt{t\_co2\_pro\_mwh} & t CO2e/MWh & $\downarrow$ & 26 & 2023--2023 & EPA eGRID \\
-Trend der Intensitaet & \texttt{intensity\_cagr} & \%/Jahr & $\downarrow$ & 119 & 2020--2023 & Eigene Berechnung dieser P \\
-Trend der absoluten Tonnen & \texttt{absolute\_cagr} & \%/Jahr & $\downarrow$ & 121 & 2020--2023 & Eigene Berechnung dieser P \\
+CO2 der Kraftwerke & \texttt{egrid\_co2\_t} & t CO2e & $\downarrow$ & aggregiert & 43 & 2023--2023 & EPA eGRID \\
+Nettoerzeugung & \texttt{egrid\_mwh} & MWh & -- & aggregiert & 43 & 2023--2023 & EPA eGRID \\
+eGRID-Kraftwerke & \texttt{egrid\_plants} & Anzahl & -- & aggregiert & 43 & 2023--2023 & EPA eGRID \\
 \midrule
 \midrule
-\textbf{Weitere Umweltwirkung} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Was neben CO2 in Luft, Wasser und Boden gelangt.}\\
+\textbf{Weitere Umweltwirkung} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Was neben CO2 in Luft, Wasser und Boden gelangt.}\\
 \addlinespace[2pt]
-Giftstofffreisetzung & \texttt{tri\_releases\_lbs} & lbs & $\downarrow$ & 194 & 2023--2023 & EPA Toxics Release Invento \\
-davon krebserregend & \texttt{tri\_carcinogen\_lbs} & lbs & $\downarrow$ & 194 & 2023--2023 & EPA Toxics Release Invento \\
+Giftstofffreisetzung & \texttt{tri\_releases\_lbs} & lbs & $\downarrow$ & aggregiert & 194 & 2023--2023 & EPA Toxics Release Invento \\
+davon krebserregend & \texttt{tri\_carcinogen\_lbs} & lbs & $\downarrow$ & aggregiert & 194 & 2023--2023 & EPA Toxics Release Invento \\
 \midrule
 \midrule
-\textbf{Arbeitssicherheit} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Die soziale Dimension als gemeldete Kennzahl statt als Selbstbeschreibung.}\\
+\textbf{Arbeitssicherheit} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Die soziale Dimension als gemeldete Kennzahl statt als Selbstbeschreibung.}\\
 \addlinespace[2pt]
-Unfallrate DART & \texttt{dart\_rate} & Faelle je 100 Vollzeitkraefte & $\downarrow$ & 313 & 2025--2025 & OSHA Injury Tracking Appli \\
-Todesfaelle & \texttt{osha\_deaths} & Anzahl & $\downarrow$ & 313 & 2025--2025 & OSHA Injury Tracking Appli \\
+Faelle mit Ausfalltagen & \texttt{osha\_dafw\_cases} & Anzahl & $\downarrow$ & aggregiert & 314 & 2025--2025 & OSHA Injury Tracking Appli \\
+Faelle mit Einschraenkung & \texttt{osha\_djtr\_cases} & Anzahl & $\downarrow$ & aggregiert & 314 & 2025--2025 & OSHA Injury Tracking Appli \\
+gemeldete Arbeitsstunden & \texttt{osha\_hours} & Stunden & -- & aggregiert & 314 & 2025--2025 & OSHA Injury Tracking Appli \\
+Todesfaelle & \texttt{osha\_deaths} & Anzahl & $\downarrow$ & aggregiert & 314 & 2025--2025 & OSHA Injury Tracking Appli \\
+gemeldete Betriebsstaetten & \texttt{osha\_sites} & Anzahl & -- & aggregiert & 314 & 2025--2025 & OSHA Injury Tracking Appli \\
 \midrule
 \midrule
-\textbf{Regeltreue} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Dokumentiertes Verhalten gegenueber Umweltauflagen. Die einzige Achse, die nachweislich unabhaengig von der CO2-Intensitaet ist.}\\
+\textbf{Regeltreue} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Dokumentiertes Verhalten gegenueber Umweltauflagen. Die einzige Achse, die nachweislich unabhaengig von der CO2-Intensitaet ist.}\\
 \addlinespace[2pt]
-Umweltstrafen & \texttt{echo\_penalties\_usd} & USD & $\downarrow$ & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
-Verstossquartale je Anlage & \texttt{echo\_nc\_quarters\_per\_site} & Quartale & $\downarrow$ & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
-Anlagen mit schwerem Verstoss & \texttt{echo\_significant} & Anzahl & $\downarrow$ & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
+Umweltstrafen & \texttt{echo\_penalties\_usd} & USD & $\downarrow$ & aggregiert & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
+Verstossquartale & \texttt{echo\_nc\_quarters} & Quartale & $\downarrow$ & aggregiert & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
+ECHO-Anlagen & \texttt{echo\_facilities} & Anzahl & -- & aggregiert & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
+Anlagen mit schwerem Verstoss & \texttt{echo\_significant} & Anzahl & $\downarrow$ & aggregiert & 134 & 2025--2025 & EPA ECHO Enforcement and C \\
 \midrule
 \midrule
-\textbf{Ziele und Glaubwuerdigkeit} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Achse B des Modells. Wird getrennt ausgewiesen und nie in die Kernnote eingerechnet.}\\
+\textbf{Ziele und Glaubwuerdigkeit} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Achse B des Modells. Wird getrennt ausgewiesen und nie in die Kernnote eingerechnet.}\\
 \addlinespace[2pt]
-SBTi-geprueftes Ziel & \texttt{sbti\_validated} & ja/nein & $\uparrow$ & 239 & 2026--2026 & Science Based Targets init \\
-Zwischenzieljahr & \texttt{sbti\_near\_term\_year} & Jahr & -- & 207 & 2026--2026 & Science Based Targets init \\
-Netto-null-Jahr & \texttt{sbti\_net\_zero\_year} & Jahr & -- & 65 & 2026--2026 & Science Based Targets init \\
-Nahziel-Zusage zurueckgezogen & \texttt{sbti\_commitment\_removed} & ja/nein & $\downarrow$ & 239 & 2026--2026 & Science Based Targets init \\
-Intensitaet faellt, Tonnen steigen & \texttt{intensity\_illusion} & ja/nein & $\downarrow$ & 127 & 2020--2023 & Eigene Berechnung dieser P \\
-Basisjahr-Bequemlichkeit & \texttt{base\_year\_ratio} & Verhaeltnis & $\downarrow$ & 121 & 2020--2023 & Eigene Berechnung dieser P \\
+SBTi-geprueftes Ziel & \texttt{sbti\_validated} & ja/nein & $\uparrow$ & gemeldet & 239 & 2026--2026 & Science Based Targets init \\
+Zwischenzieljahr & \texttt{sbti\_near\_term\_year} & Jahr & -- & gemeldet & 207 & 2026--2026 & Science Based Targets init \\
+Netto-null-Jahr & \texttt{sbti\_net\_zero\_year} & Jahr & -- & gemeldet & 65 & 2026--2026 & Science Based Targets init \\
+Nahziel-Zusage zurueckgezogen & \texttt{sbti\_commitment\_removed} & ja/nein & $\downarrow$ & gemeldet & 239 & 2026--2026 & Science Based Targets init \\
+Netto-null-Zusage zurueckgezogen & \texttt{sbti\_net\_zero\_removed} & ja/nein & $\downarrow$ & gemeldet & 239 & 2026--2026 & Science Based Targets init \\
+Zwischenziel abgelaufen & \texttt{sbti\_near\_term\_expired} & ja/nein & $\downarrow$ & gemeldet & 239 & 2026--2026 & Science Based Targets init \\
 \midrule
 \midrule
-\textbf{Arbeitsrecht} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Behoerdlich festgestellte Lohnverstoesse. Firmen ohne zuordenbaren Fall fehlen, statt als Null zu erscheinen.}\\
+\textbf{Arbeitsrecht} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Behoerdlich festgestellte Lohnverstoesse. Firmen ohne zuordenbaren Fall fehlen, statt als Null zu erscheinen.}\\
 \addlinespace[2pt]
-Lohnverfahren 2022-2024 & \texttt{whd\_cases} & Anzahl & $\downarrow$ & 139 & 2024--2024 & DOL Wage and Hour Division \\
-nachgezahlte Loehne & \texttt{whd\_backwages\_usd} & USD & $\downarrow$ & 139 & 2024--2024 & DOL Wage and Hour Division \\
-betroffene Beschaeftigte & \texttt{whd\_employees} & Anzahl & $\downarrow$ & 139 & 2024--2024 & DOL Wage and Hour Division \\
+Lohnverfahren 2022-2024 & \texttt{whd\_cases} & Anzahl & $\downarrow$ & aggregiert & 139 & 2024--2024 & DOL Wage and Hour Division \\
+festgestellte Verstoesse & \texttt{whd\_violations} & Anzahl & $\downarrow$ & aggregiert & 139 & 2024--2024 & DOL Wage and Hour Division \\
+nachgezahlte Loehne & \texttt{whd\_backwages\_usd} & USD & $\downarrow$ & aggregiert & 139 & 2024--2024 & DOL Wage and Hour Division \\
+betroffene Beschaeftigte & \texttt{whd\_employees} & Anzahl & $\downarrow$ & aggregiert & 139 & 2024--2024 & DOL Wage and Hour Division \\
+Geldbussen Lohnrecht & \texttt{whd\_penalties\_usd} & USD & $\downarrow$ & aggregiert & 139 & 2024--2024 & DOL Wage and Hour Division \\
 \midrule
 \midrule
-\textbf{Externe Bewertungen, offen lizenziert} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize WBA-Benchmarks unter CC BY 4.0. Anders als der kommerzielle Snapshot ist die Methodik einsehbar -- bewertet wird trotzdem Offenlegung, nicht Wirkung.}\\
+\textbf{Externe Bewertungen, offen lizenziert} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize WBA-Benchmarks unter CC BY 4.0. Anders als der kommerzielle Snapshot ist die Methodik einsehbar -- bewertet wird trotzdem Offenlegung, nicht Wirkung.}\\
 \addlinespace[2pt]
-WBA Qualitaet des Transitionsplans & \texttt{wba\_tpq} & 0-5 & $\uparrow$ & 217 & 2026--2026 & World Benchmarking Allianc \\
-WBA Beitrag zur Transition & \texttt{wba\_ctt} & 0-2 & $\uparrow$ & 217 & 2026--2026 & World Benchmarking Allianc \\
-WBA Social Benchmark & \texttt{wba\_social} & 0-100 & $\uparrow$ & 217 & 2026--2026 & World Benchmarking Allianc \\
-WBA Nature Benchmark & \texttt{wba\_nature} & 0-100 & $\uparrow$ & 71 & 2026--2026 & World Benchmarking Allianc \\
-WBA Just Transition & \texttt{wba\_just\_transition} & 0-100 & $\uparrow$ & 217 & 2026--2026 & World Benchmarking Allianc \\
+WBA Qualitaet des Transitionsplans & \texttt{wba\_tpq} & 0-5 & $\uparrow$ & gemeldet & 217 & 2026--2026 & World Benchmarking Allianc \\
+WBA Beitrag zur Transition & \texttt{wba\_ctt} & 0-2 & $\uparrow$ & gemeldet & 217 & 2026--2026 & World Benchmarking Allianc \\
+WBA Social Benchmark & \texttt{wba\_social} & 0-100 & $\uparrow$ & gemeldet & 217 & 2026--2026 & World Benchmarking Allianc \\
+WBA Nature Benchmark & \texttt{wba\_nature} & 0-100 & $\uparrow$ & gemeldet & 71 & 2026--2026 & World Benchmarking Allianc \\
+WBA Just Transition & \texttt{wba\_just\_transition} & 0-100 & $\uparrow$ & gemeldet & 217 & 2026--2026 & World Benchmarking Allianc \\
 \midrule
 \midrule
-\textbf{Finanzkennzahlen} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Aus den 10-K-Berichten, als Bezugsgroessen fuer Intensitaeten und fuer die Portfoliofrage -- keine Nachhaltigkeitsbewertung.}\\
+\textbf{Finanzkennzahlen} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Aus den 10-K-Berichten, als Bezugsgroessen fuer Intensitaeten und fuer die Portfoliofrage -- keine Nachhaltigkeitsbewertung.}\\
 \addlinespace[2pt]
-Nettogewinn & \texttt{net\_income\_usd} & USD & -- & 444 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
-Bilanzsumme & \texttt{total\_assets\_usd} & USD & -- & 495 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
-Finanzschulden & \texttt{total\_debt\_usd} & USD & -- & 391 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
-operativer Cashflow & \texttt{operating\_cf\_usd} & USD & -- & 479 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
-Sachinvestitionen & \texttt{capex\_usd} & USD & -- & 327 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
-Forschung und Entwicklung & \texttt{rnd\_usd} & USD & -- & 133 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
+Nettogewinn & \texttt{net\_income\_usd} & USD & -- & gemeldet & 444 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
+Bilanzsumme & \texttt{total\_assets\_usd} & USD & -- & gemeldet & 495 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
+Finanzschulden & \texttt{total\_debt\_usd} & USD & -- & gemeldet & 391 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
+operativer Cashflow & \texttt{operating\_cf\_usd} & USD & -- & gemeldet & 479 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
+Sachinvestitionen & \texttt{capex\_usd} & USD & -- & gemeldet & 327 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
+Forschung und Entwicklung & \texttt{rnd\_usd} & USD & -- & gemeldet & 133 & 2024--2024 & SEC 10-K-Finanzkennzahlen \\
 \midrule
 \midrule
-\textbf{Lieferkette} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Ob eine Firma Konfliktmineralien meldet. Die Meldepflicht allein ist noch kein Befund ueber die Herkunft.}\\
+\textbf{Lieferkette} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Ob eine Firma Konfliktmineralien meldet. Die Meldepflicht allein ist noch kein Befund ueber die Herkunft.}\\
 \addlinespace[2pt]
-meldet Konfliktmineralien (Form SD) & \texttt{sd\_conflict\_minerals\_filer} & ja/nein & -- & 500 & 2025--2025 & SEC Form SD, Konfliktminer \\
+meldet Konfliktmineralien (Form SD) & \texttt{sd\_conflict\_minerals\_filer} & ja/nein & -- & gemeldet & 500 & 2025--2025 & SEC Form SD, Konfliktminer \\
 \midrule
 \midrule
-\textbf{Ergebnis des Modells} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Kein Einzelplatz, sondern die Spanne ueber alle Methodenkombinationen.}\\
+\textbf{Vergleichsmassstab} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Fremdbewertung, ausschliesslich zum Gegenhalten. Fliesst in keine eigene Note ein.}\\
 \addlinespace[2pt]
-Rangband untere Grenze & \texttt{rank\_p10} & Perzentil & $\uparrow$ & 127 & 2023--2023 & Eigene Berechnung dieser P \\
-Rangband Median & \texttt{rank\_p50} & Perzentil & $\uparrow$ & 123 & 2023--2023 & Eigene Berechnung dieser P \\
-Rangband obere Grenze & \texttt{rank\_p90} & Perzentil & $\uparrow$ & 127 & 2023--2023 & Eigene Berechnung dieser P \\
+kommerzielles ESG-Risiko & \texttt{esg\_risk\_total} & Punkte & $\downarrow$ & gemeldet & 199 & 2021--2021 & Kommerzielle ESG-Risk-Rati \\
 \midrule
 \midrule
-\textbf{Vergleichsmassstab} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Fremdbewertung, ausschliesslich zum Gegenhalten. Fliesst in keine eigene Note ein.}\\
+\textbf{Bezugs- und Guetegroessen} & & & & & & & \\
+\multicolumn{8}{p{0.96\textwidth}}{\footnotesize Nenner, Zaehlwerte und Konfidenzangaben, die keine Bewertung sind.}\\
 \addlinespace[2pt]
-kommerzielles ESG-Risiko & \texttt{esg\_risk\_total} & Punkte & $\downarrow$ & 199 & 2021--2021 & Kommerzielle ESG-Risk-Rati \\
-\midrule
-\midrule
-\textbf{Bezugs- und Guetegroessen} & & & & & & \\
-\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Nenner, Zaehlwerte und Konfidenzangaben, die keine Bewertung sind.}\\
-\addlinespace[2pt]
-Umsatz & \texttt{revenue\_musd} & Mio. USD & -- & 133 & 2018--2023 & SEC EDGAR XBRL frames \\
-zugeordnete Anlagen & \texttt{n\_facilities} & Anzahl & -- & 127 & 2020--2023 & EPA Greenhouse Gas Reporti \\
-Zuordnungskonfidenz & \texttt{match\_confidence} & 0-1 & $\uparrow$ & 127 & 2020--2023 & Eigene Berechnung dieser P \\
-Kraftwerke mit Messung & \texttt{campd\_plants} & Anzahl & -- & 33 & 2019--2026 & EPA Clean Air Markets Prog \\
-eGRID-Kraftwerke & \texttt{egrid\_plants} & Anzahl & -- & 43 & 2023--2023 & EPA eGRID \\
-TRI-Anlagen & \texttt{tri\_facilities} & Anzahl & -- & 194 & 2023--2023 & EPA Toxics Release Invento \\
-gemeldete Betriebsstaetten & \texttt{osha\_sites} & Anzahl & -- & 313 & 2025--2025 & OSHA Injury Tracking Appli \\
+Umsatz & \texttt{revenue\_musd} & Mio. USD & -- & gemeldet & 133 & 2018--2023 & SEC EDGAR XBRL frames \\
+zugeordnete Anlagen & \texttt{n\_facilities} & Anzahl & -- & aggregiert & 136 & 2018--2023 & EPA Greenhouse Gas Reporti \\
+Kraftwerke mit Messung & \texttt{campd\_plants} & Anzahl & -- & aggregiert & 33 & 2019--2026 & EPA Clean Air Markets Prog \\
+TRI-Anlagen & \texttt{tri\_facilities} & Anzahl & -- & aggregiert & 194 & 2023--2023 & EPA Toxics Release Invento \\
 \midrule
 \bottomrule%

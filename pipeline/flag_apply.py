@@ -37,11 +37,12 @@ def status_of(row: pd.Series) -> str:
     # der Sinn der Weiterleitung. Alles Strittige ist vorher zu einem Menschen
     # gegangen, und jede Entscheidung lässt sich über entscheidungen.csv
     # zurücknehmen.
+    # Einen gemeldeten Wert aus dem Bestand nehmen darf nur ein Mensch. Das
+    # Modell kann ihn kennzeichnen -- mehr nicht: Die Quelle hat die Zahl
+    # veröffentlicht, unsere Software hat sie nicht zu überstimmen.
     if row.get("route") == "automatisch":
         aktion = str(row.get("ai_action", "") or "").strip().lower()
-        if aktion in ("unterdruecken", "korrigieren"):
-            return "fehler"
-        if aktion == "behalten":
+        if aktion == "behalten" and row.get("ai_verdict") == "plausibel":
             return "ok"
         return "pruefen"
     return str(row.get("severity", "pruefen"))

@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "echter_extremwert",
+ "explanation": "Der Wert liegt zwar am oberen Rand der Vergleichsgruppe, aber die Belege zeigen für Utilities einen Maximalwert von 2,0 bei n=27 und einen P90 von 1,4. Damit ist 2,0 ein echter Branchen-Extremwert, nicht ersichtlich falsch oder irreführend. Laut allgemeinem Wissen können in einer unfallträchtigen Branche einzelne Firmen höhere OSHA-Todeszahlen haben.",
+ "action": "behalten",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 622,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 132,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 754
+ }
+}

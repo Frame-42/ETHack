@@ -66,7 +66,13 @@ export default async function Page({
       <p className="lede">
         {c.metrics.length} Werte aus {sources.length}{" "}
         {sources.length === 1 ? "Quelle" : "Quellen"}. Jede Zeile nennt, woher
-        sie stammt und für welches Geschäftsjahr sie gilt.
+        sie stammt und für welches Geschäftsjahr sie gilt. <b>gemeldet</b> heißt:
+        genau diese Zahl hat die Quelle für diese Firma veröffentlicht.{" "}
+        <b>aggregiert</b> heißt: Summe der von der Quelle veröffentlichten
+        Einzelwerte über die Anlagen oder Betriebe der Firma. Etwas Drittes
+        steht hier nicht — Verhältnisse, Trends und Rangbänder wären unsere
+        Rechnung und gehören in die <Link href="/downloads">Analyse</Link>,
+        nicht in den Datensatz.
       </p>
 
       {order.map((axis) => {
@@ -93,6 +99,21 @@ export default async function Page({
                     <tr key={m.metric}>
                       <td>
                         {m.label}
+                        {m.wertArt && (
+                          <>
+                            {" "}
+                            <span
+                              className={`chip ${m.wertArt === "gemeldet" ? "good" : "a"}`}
+                              title={
+                                m.wertArt === "gemeldet"
+                                  ? "Diese Zahl hat die Quelle für diese Firma veröffentlicht."
+                                  : "Summe der von der Quelle veröffentlichten Einzelwerte über die Anlagen oder Betriebe dieser Firma."
+                              }
+                            >
+                              {m.wertArt}
+                            </span>
+                          </>
+                        )}
                         {m.qualityStatus && m.qualityStatus !== "ok" && (
                           <>
                             {" "}

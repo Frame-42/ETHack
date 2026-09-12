@@ -2,7 +2,7 @@
   "datenbasis": {
     "epa_facility_rows": 65155,
     "anlagenjahre_ohne_menge": 19155,
-    "firmenjahre_zuordnung_unvollstaendig": 7,
+    "firmenjahre_zuordnung_unvollstaendig": 0,
     "epa_emission_rows": 64881,
     "facilities_with_emissions": 8583,
     "total_epa_emissions_t": 16449708628.903194,
@@ -25,25 +25,25 @@
     ],
     "n_firmen": 127,
     "n_sektoren": 11,
-    "scope1_gesamt_mt": 1005.6547464769558
+    "scope1_gesamt_mt": 988.8323020921558
   },
   "monte_carlo": {
     "n_zuege": 1500,
     "kombinationsraum": 576,
-    "median_bandbreite": 28.888888888888886,
+    "median_bandbreite": 28.04232804232804,
     "p90_bandbreite": 50.0,
-    "anteil_band_ueber_40": 27.559055118110237,
-    "firmen_stabil_oben": 12,
-    "firmen_stabil_unten": 6
+    "anteil_band_ueber_40": 30.708661417322837,
+    "firmen_stabil_oben": 13,
+    "firmen_stabil_unten": 7
   },
   "unsicherheits_zerlegung": {
     "nur_methodenwahl": 20.0,
-    "nur_datenrauschen": 7.407407407407419,
-    "beides": 28.888888888888886,
+    "nur_datenrauschen": 11.1111111111111,
+    "beides": 28.04232804232804,
     "mittlere_gruppengroesse": 11.545454545454545,
     "kleinste_gruppe": 1,
     "perzentil_je_rangplatz": 8.661417322834646,
-    "median_band_in_rangplaetzen": 3.335353535353535,
+    "median_band_in_rangplaetzen": 3.2376142376142374,
     "sektoren_unter_6_firmen": {
       "Consumer Discretionary": 4,
       "Communication Services": 2,
@@ -53,17 +53,17 @@
   "kennzahlen_korrelation": {
     "co2_intensity": {
       "co2_intensity": 1.0,
-      "intensity_cagr": -0.063,
-      "absolute_cagr": 0.061
+      "intensity_cagr": -0.052,
+      "absolute_cagr": 0.085
     },
     "intensity_cagr": {
-      "co2_intensity": -0.063,
+      "co2_intensity": -0.052,
       "intensity_cagr": 1.0,
-      "absolute_cagr": 0.494
+      "absolute_cagr": 0.538
     },
     "absolute_cagr": {
-      "co2_intensity": 0.061,
-      "intensity_cagr": 0.494,
+      "co2_intensity": 0.085,
+      "intensity_cagr": 0.538,
       "absolute_cagr": 1.0
     }
   },
@@ -90,7 +90,7 @@
         "gics_sector": "Utilities",
         "firmen_gesamt": 31,
         "firmen_mit_daten": 27,
-        "scope1_t": 618417960.0112667,
+        "scope1_t": 601595515.6264666,
         "abdeckung_pct": 87.09677419354838
       },
       {
@@ -167,10 +167,10 @@
   },
   "vergleich_kommerziell": {
     "n": 59,
-    "spearman_gesamt": -0.13257049213974376,
-    "p_gesamt": 0.3168595113757,
-    "spearman_umwelt": -0.015134866583082255,
-    "p_umwelt": 0.909418361001119
+    "spearman_gesamt": -0.13912719043545677,
+    "p_gesamt": 0.2932987201805829,
+    "spearman_umwelt": 0.002842907405233494,
+    "p_umwelt": 0.9829508266290448
   },
   "vergleich_kommerziell_sektor": [
     {
@@ -181,22 +181,22 @@
     {
       "gics_sector": "Information Technology",
       "n": 8,
-      "spearman": -0.20359646452525404
+      "spearman": -0.1666666666666667
+    },
+    {
+      "gics_sector": "Utilities",
+      "n": 13,
+      "spearman": -0.10706306923398932
     },
     {
       "gics_sector": "Industrials",
       "n": 9,
       "spearman": -0.06329170264722847
-    },
-    {
-      "gics_sector": "Utilities",
-      "n": 13,
-      "spearman": 0.043670462450706174
     }
   ],
   "groessen_verzerrung": {
-    "eigene_note_vs_groesse": 0.19655926971036494,
-    "p_eigene": 0.026769507817030126,
+    "eigene_note_vs_groesse": 0.2088701343225495,
+    "p_eigene": 0.018441678127652017,
     "n_eigene": 127,
     "kommerzielle_note_vs_groesse": 0.08618204235099935,
     "p_kommerziell": 0.5163239605047489,
@@ -204,29 +204,29 @@
   },
   "aggregation": {
     "median_abs_differenz": 0.0,
-    "max_abs_differenz": 25.0,
-    "anteil_ueber_10_punkte": 11.811023622047244
+    "max_abs_differenz": 37.03703703703704,
+    "anteil_ueber_10_punkte": 15.748031496062993
   },
   "methoden_sensitivitaet": [
     {
       "dimension": "normalizer",
-      "mittlere_spannweite_perzentil": 5.776963689555301
+      "mittlere_spannweite_perzentil": 6.372084039483282
     },
     {
       "dimension": "peer_level",
-      "mittlere_spannweite_perzentil": 4.581151958895398
+      "mittlere_spannweite_perzentil": 4.356697681751429
     },
     {
       "dimension": "aggregator",
-      "mittlere_spannweite_perzentil": 3.2594189289589575
+      "mittlere_spannweite_perzentil": 3.329480800059235
     },
     {
       "dimension": "weighter",
-      "mittlere_spannweite_perzentil": 1.7691942191500947
+      "mittlere_spannweite_perzentil": 1.909725048802252
     },
     {
       "dimension": "winsor",
-      "mittlere_spannweite_perzentil": 1.2891799088393734
+      "mittlere_spannweite_perzentil": 1.260869251518145
     }
   ],
   "periode_b": {
@@ -237,11 +237,11 @@
     "fortschreibung": {
       "n": 131,
       "lag_jahre": 2,
-      "spearman": 0.7365931062854456,
-      "median_abweichung_perzentil": 9.0909090909091,
-      "p90_abweichung_perzentil": 33.33333333333332,
-      "anteil_ueber_10_perzentil": 45.80152671755725
+      "spearman": 0.7530807472331376,
+      "median_abweichung_perzentil": 10.0,
+      "p90_abweichung_perzentil": 34.48275862068965,
+      "anteil_ueber_10_perzentil": 48.854961832061065
     }
   },
-  "laufzeit_sekunden": 79.7
+  "laufzeit_sekunden": 79.4
 }

@@ -26,6 +26,8 @@ from dataclasses import dataclass
 
 import pandas as pd
 
+from .config import OUT
+
 PILLARS = {
     "E": "Umwelt",
     "S": "Soziales",
@@ -50,12 +52,10 @@ METRIC_EVIDENCE: dict[str, Evidence] = {
     # ---- E ---------------------------------------------------------------
     "campd_co2_t": Evidence("E", "ghg", "Treibhausgase", 1.0, "am Schornstein gemessen (CEMS)"),
     "scope1_t": Evidence("E", "ghg", "Treibhausgase", 0.8, "behördlich gemeldet (GHGRP)"),
-    "co2_intensity": Evidence("E", "ghg", "Treibhausgase", 0.8, "gemeldet, auf Umsatz bezogen"),
-    "t_co2_pro_mwh": Evidence("E", "effizienz", "Erzeugungseffizienz", 0.8, "gemessen und gemeldet, nur Stromerzeuger"),
+    "egrid_co2_t": Evidence("E", "effizienz", "Erzeugung", 0.8, "Kraftwerksbilanz gemeldet (eGRID)"),
+    "egrid_mwh": Evidence("E", "effizienz", "Erzeugung", 0.8, "Kraftwerksbilanz gemeldet (eGRID)"),
     "tri_releases_lbs": Evidence("E", "schadstoffe", "Schadstofffreisetzung", 0.8, "behördlich gemeldet (TRI)"),
     "tri_carcinogen_lbs": Evidence("E", "schadstoffe", "Schadstofffreisetzung", 0.8, "behördlich gemeldet (TRI)"),
-    "intensity_cagr": Evidence("E", "trend", "Emissionstrend", 0.5, "abgeleitet aus mindestens drei Jahren"),
-    "absolute_cagr": Evidence("E", "trend", "Emissionstrend", 0.5, "abgeleitet aus mindestens drei Jahren"),
     "wba_nature": Evidence("E", "natur", "Naturbewertung", 0.4, "Bewertung veröffentlichter Angaben (WBA)"),
     "sbti_validated": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Selbstauskunft, extern geprüft (SBTi)"),
     "sbti_near_term_year": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Selbstauskunft, extern geprüft (SBTi)"),
@@ -63,7 +63,8 @@ METRIC_EVIDENCE: dict[str, Evidence] = {
     "wba_tpq": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Bewertung des Transitionsplans (WBA)"),
     "wba_ctt": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Bewertung des Transitionsbeitrags (WBA)"),
     # ---- S ---------------------------------------------------------------
-    "dart_rate": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
+    "osha_dafw_cases": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
+    "osha_djtr_cases": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
     "osha_deaths": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
     "whd_cases": Evidence("S", "lohnrecht", "Lohnrecht", 0.7, "behördlich festgestellt, Namenszuordnung unsicher"),
     "whd_backwages_usd": Evidence("S", "lohnrecht", "Lohnrecht", 0.7, "behördlich festgestellt, Namenszuordnung unsicher"),
@@ -72,11 +73,11 @@ METRIC_EVIDENCE: dict[str, Evidence] = {
     "wba_just_transition": Evidence("S", "sozialbewertung", "Sozialbewertung", 0.4, "Bewertung veröffentlichter Angaben (WBA)"),
     # ---- G ---------------------------------------------------------------
     "echo_penalties_usd": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
-    "echo_nc_quarters_per_site": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
+    "echo_nc_quarters": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
     "echo_significant": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
     "sbti_commitment_removed": Evidence("G", "zusagen", "Umgang mit Zusagen", 0.5, "protokollierter Rückzug (SBTi)"),
-    "intensity_illusion": Evidence("G", "greenwashing", "Greenwashing-Signale", 0.4, "abgeleitet aus Emissionsreihe"),
-    "base_year_ratio": Evidence("G", "greenwashing", "Greenwashing-Signale", 0.4, "abgeleitet aus Emissionsreihe"),
+    "sbti_near_term_expired": Evidence("G", "zusagen", "Umgang mit Zusagen", 0.5, "Zieljahr verstrichen (SBTi)"),
+    "sbti_net_zero_removed": Evidence("G", "zusagen", "Umgang mit Zusagen", 0.5, "protokollierter Rückzug (SBTi)"),
     "sd_conflict_minerals_filer": Evidence("G", "lieferkette", "Lieferkettenpflicht", 0.2, "nur Meldestatus (Form SD)"),
 }
 
@@ -119,9 +120,11 @@ def assess(long: pd.DataFrame, master: pd.DataFrame) -> pd.DataFrame:
     """Eine Zeile je Firma: Punkte, Familien und Stufe je Bereich."""
     present = long.dropna(subset=["value"]).groupby("ticker")["metric"].apply(set)
     counts = long.dropna(subset=["value"]).groupby("ticker")["metric"].nunique()
-    bands = long[long["metric"].isin(["rank_p10", "rank_p90"])].pivot_table(
-        index="ticker", columns="metric", values="value", aggfunc="last"
-    )
+    # Das Rangband ist Analyse, kein Datenwert -- es steht deshalb nicht mehr
+    # im Datensatz, sondern nur in der Monte-Carlo-Auswertung.
+    band_path = OUT / "rangbaender_periode_a.csv"
+    bands = (pd.read_csv(band_path).set_index("ticker")[["p10", "p90"]]
+             if band_path.exists() else pd.DataFrame(columns=["p10", "p90"]))
     rows = []
     for r in master.itertuples(index=False):
         have = present.get(r.ticker, set())
@@ -144,9 +147,9 @@ def assess(long: pd.DataFrame, master: pd.DataFrame) -> pd.DataFrame:
             row[f"{p}_family_list"] = ", ".join(sorted(fam))
             row[f"{p}_anchor"] = anchor
             row[f"{p}_level"] = level(score, len(fam), anchor)
-        if r.ticker in bands.index and {"rank_p10", "rank_p90"} <= set(bands.columns):
+        if r.ticker in bands.index:
             b = bands.loc[r.ticker]
-            row["e_band_width"] = float(b["rank_p90"] - b["rank_p10"]) if b.notna().all() else None
+            row["e_band_width"] = float(b["p90"] - b["p10"]) if b.notna().all() else None
         else:
             row["e_band_width"] = None
         rows.append(row)

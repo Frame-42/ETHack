@@ -16,6 +16,8 @@ export type MetricValue = {
   /** Wahr, wenn der Wert aus dem laufenden, noch unvollstaendigen Jahr stammt. */
   partial?: boolean;
   /** ok | pruefen -- Werte mit Status "fehler" erscheinen gar nicht */
+  /** gemeldet = so veroeffentlicht; aggregiert = Summe gemeldeter Einzelwerte */
+  wertArt?: string;
   qualityStatus?: string;
   qualityRule?: string;
   qualityNote?: string;
@@ -48,6 +50,7 @@ export type MetricDef = {
   direction: number;
   axis: string;
   sourceId: string;
+  wert_art?: string;
 };
 
 export type Dataset = {

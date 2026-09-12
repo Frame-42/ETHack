@@ -177,60 +177,37 @@ def r_echo_quarters(c: Context) -> list[Flag]:
     if not p.exists():
         return out
     e = pd.read_csv(p)
-    col = "verstossquartale_je_anlage" if "verstossquartale_je_anlage" in e.columns else "vq_je_anlage"
-    for r in e[e[col] > 12].itertuples(index=False):
-        out.append(Flag("F04_echo_quartale_unmoeglich", "fehler", r.ticker, "echo_nc_quarters_per_site", 2025, float(getattr(r, col)),
+    e = e[e.verstossquartale > 12 * e.anlagen]
+    for r in e.itertuples(index=False):
+        out.append(Flag("F04_echo_quartale_unmoeglich", "fehler", r.ticker, "echo_nc_quarters", 2025, float(r.verstossquartale),
                         "Mehr als 12 Verstoßquartale je Anlage sind in einem 3-Jahres-Fenster unmöglich. Ursache: Anlage beim "
                         "Verbinden mit den EPA-Anlagen mehrfach gezählt (mehrere Schreibweisen des Konzernnamens).",
-                        evidence={"anlagen": int(r.anlagen), "verstossquartale_summe": float(r.verstossquartale),
+                        evidence={"anlagen": int(r.anlagen), "verstossquartale": float(r.verstossquartale),
                                   "hinweis": "Historie: 12 Zeichen, _ ok, V Verstoß, S schwer, U ungeklärt"}))
     return out
 
 
-def r_egrid(c: Context) -> list[Flag]:
-    """Stromrate: nur geprüft, was im Datensatz steht.
+def r_egrid_zuordnung(c: Context) -> list[Flag]:
+    """Kraftwerke, die einer Firma ohne Stromgeschäft zugerechnet sind.
 
-    Nicht-Versorger und physikalisch unmögliche Raten filtert
-    ``scripts/05b_firmenaggregate.py`` inzwischen heraus.
+    Geprüft wird die Zuordnung, nicht der Wert: eGRID meldet Menge und
+    Erzeugung je Kraftwerk, beide übernehmen wir unverändert. Auffällig ist,
+    wenn einer Firma ein einzelnes großes Kraftwerk zugerechnet wird -- das
+    war bei Linde und KLA ein Namenstreffer ohne Wortgrenze.
     """
     out = []
-    p = OUT / "egrid_je_firma.csv"
-    if not p.exists():
-        return out
-    e = pd.read_csv(p)
-    behalten = set(c.long[c.long.metric == "t_co2_pro_mwh"].ticker)
-    e = e[e.ticker.isin(behalten) & e.t_co2_pro_mwh.notna()]
+    e = pd.read_csv(OUT / "egrid_je_firma.csv") if (OUT / "egrid_je_firma.csv").exists() else pd.DataFrame()
+    im_bestand = set(c.long[c.long.metric == "egrid_mwh"].ticker)
     for r in e.itertuples(index=False):
-        sector = c.names.gics_sector.get(r.ticker)
-        if r.t_co2_pro_mwh > 1.3:
-            out.append(Flag("F05_egrid_physik", "fehler", r.ticker, "t_co2_pro_mwh", 2023, float(r.t_co2_pro_mwh),
-                            "Über 1,3 t CO2 je MWh liegt jenseits jeder Kraftwerkstechnik (Braunkohle rund 1,1). "
-                            "Typisch: Heizkraftwerk mit Wärmeauskopplung, Strom nur Nebenprodukt.",
-                            evidence={"kraftwerke": int(r.kraftwerke), "mwh": float(r.mwh), "co2_t": float(r.co2_t), "branche": sector}))
-        elif sector != "Utilities":
-            out.append(Flag("F06_egrid_nicht_versorger", "pruefen", r.ticker, "t_co2_pro_mwh", 2023, float(r.t_co2_pro_mwh),
-                            "Stromrate eines Nicht-Versorgers: beschreibt Eigenanlagen, nicht das Geschäftsmodell.",
-                            evidence={"kraftwerke": int(r.kraftwerke), "mwh": float(r.mwh), "branche": sector}))
-    return out
-
-
-def r_trend_base(c: Context) -> list[Flag]:
-    out = []
-    panel = pd.read_csv(OUT / "panel_periode_a.csv")
-    for r in panel.itertuples(index=False):
-        bad_trend = pd.notna(r.absolute_cagr) and abs(r.absolute_cagr) > 1.0
-        bad_base = pd.notna(r.base_year_ratio) and not (0.2 <= r.base_year_ratio <= 5.0)
-        if not (bad_trend or bad_base):
+        if r.ticker not in im_bestand or r.kraftwerke > 2 or r.mwh < 1e6:
             continue
-        facs = c.attrib[c.attrib.ticker == r.ticker].groupby("year").facility_id.nunique().to_dict()
-        out.append(Flag("F07_trend_basis_instabil", "fehler", r.ticker, "absolute_cagr", int(r.year_last),
-                        float(r.absolute_cagr) if pd.notna(r.absolute_cagr) else None,
-                        "Trend oder Basisjahr-Quote unplausibel: Die Anlagenbasis ändert sich über die Jahre "
-                        "(Zuordnung, Abspaltung, Zukauf), nicht die Emissionen.",
-                        ranking_relevant=r.ticker in c.ranked,
-                        evidence={"absolute_cagr": r.absolute_cagr, "base_year_ratio": r.base_year_ratio,
-                                  "scope1_je_jahr": c.series(r.ticker, "scope1_t"),
-                                  "anlagen_je_jahr": {int(k): int(v) for k, v in facs.items()}}))
+        if c.names.gics_sector.get(r.ticker) == "Utilities":
+            continue
+        out.append(Flag("F06_egrid_zuordnung", "pruefen", r.ticker, "egrid_mwh", 2023, float(r.mwh),
+                        f"Ein einzelnes Kraftwerk mit {r.mwh/1e6:.1f} TWh bei einer Firma ohne "
+                        "Stromgeschäft: Zuordnung über den Namen prüfen.",
+                        evidence={"kraftwerke": int(r.kraftwerke), "mwh": float(r.mwh),
+                                  "co2_t": float(r.co2_t), "branche": c.names.gics_sector.get(r.ticker)}))
     return out
 
 
@@ -264,6 +241,14 @@ def r_temporal(c: Context) -> list[Flag]:
 
 
 def r_osha_denominator(c: Context) -> list[Flag]:
+    """Unplausible Stundenangaben in der Quelle selbst.
+
+    Die Stunden übernehmen wir unverändert -- OSHA prüft sie nicht nach ("OSHA
+    also does not validate the counts of workers, hours, or injury and illness
+    counts"). Eine Firma, deren Meldungen im Median 50 Stunden je
+    Beschäftigtem im Jahr ausweisen, meldet etwas anderes als Arbeitszeit.
+    Deshalb keine Korrektur, sondern ein Hinweis am Wert.
+    """
     out = []
     o = pd.read_parquet(RAW / "osha_ita.parquet")
     o["ticker"] = o.company_name.map(c.to_ticker)
@@ -271,24 +256,21 @@ def r_osha_denominator(c: Context) -> list[Flag]:
     o["hours"] = pd.to_numeric(o.total_hours_worked, errors="coerce")
     o["emp"] = pd.to_numeric(o.annual_average_employees, errors="coerce")
     o["hpe"] = o.hours / o.emp
-    # Unbrauchbare Meldungen fliessen seit der Reparatur nicht mehr in die
-    # Rate ein (05b_firmenaggregate.py). Geprüft wird der Rest.
-    o = o[o.hpe.between(200, 4000)]
-    genutzt = set(c.long[c.long.metric == "dart_rate"].ticker)
+    genutzt = set(c.long[c.long.metric == "osha_hours"].ticker)
     for t, g in o.groupby("ticker"):
-        if t not in genutzt:
+        if t not in genutzt or g.hpe.notna().sum() == 0:
             continue
         med = float(g.hpe.median())
         implaus = float(((g.hpe < 200) | (g.hpe > 4000)).mean())
         if not (med < 500 or med > 3500 or implaus > 0.3):
             continue
-        dart = c.series(t, "dart_rate")
-        out.append(Flag("F09_osha_nenner_unplausibel", "fehler", t, "dart_rate", 2025,
-                        list(dart.values())[-1] if dart else None,
-                        f"Unfallrate beruht auf unplausiblen Stunden: Median {med:,.0f} h je Beschäftigtem "
-                        f"(normal rund 1.500-2.100), {implaus:.0%} der Meldungen außerhalb 200-4.000 h. OSHA prüft diese Angaben nicht.",
+        out.append(Flag("F09_osha_stunden_unplausibel", "pruefen", t, "osha_hours", 2025,
+                        float(g.hours.sum()),
+                        f"Gemeldete Arbeitszeit unplausibel: Median {med:,.0f} h je Beschäftigtem "
+                        f"(Vollzeit rund 2.000), {implaus:.0%} der Meldungen außerhalb 200-4.000 h.",
                         evidence={"meldungen": int(len(g)), "stunden_je_beschaeftigtem_median": med,
-                                  "anteil_unplausibel": implaus, "firmennamen": g.company_name.value_counts().head(3).to_dict()}))
+                                  "anteil_unplausibel": implaus,
+                                  "firmennamen": g.company_name.value_counts().head(3).to_dict()}))
     return out
 
 
@@ -350,7 +332,8 @@ def r_extremes(c: Context) -> list[Flag]:
     """Robuster Z-Wert je Branche. Nur Prüfhinweis -- echte Extreme gibt es."""
     out = []
     latest = c.long.sort_values("year").groupby(["ticker", "metric"]).last().reset_index()
-    for m in ["co2_intensity", "tri_releases_lbs", "dart_rate", "echo_penalties_usd", "whd_backwages_usd"]:
+    for m in ["scope1_t", "campd_co2_t", "tri_releases_lbs", "echo_penalties_usd",
+              "whd_backwages_usd", "osha_deaths"]:
         s = latest[latest.metric == m]
         for sector, g in s.groupby("gics_sector"):
             v = g.value[g.value > 0]
@@ -368,23 +351,8 @@ def r_extremes(c: Context) -> list[Flag]:
     return out
 
 
-def r_wide_bands(c: Context) -> list[Flag]:
-    """Breite Bänder ohne Aussage -- geprüft wird, was im Datensatz steht.
-
-    ``consolidate.py`` zeigt ab 70 Perzentilpunkten keinen Median mehr.
-    """
-    out = []
-    gezeigt = set(c.long[c.long.metric == "rank_p50"].ticker)
-    breit = c.bands[(c.bands.band_width >= 70) & c.bands.ticker.isin(gezeigt)]
-    for r in breit.itertuples(index=False):
-        out.append(Flag("P02_rangband_ohne_aussage", "pruefen", r.ticker, "rank_p50", 2023, float(r.p50),
-                        f"Rangband {r.p10:.0f}-{r.p90:.0f}: Der Median suggeriert eine Einordnung, die es nicht gibt.",
-                        ranking_relevant=True, evidence={"p10": r.p10, "p90": r.p90}))
-    return out
-
-
-RULES = [r_duplicate_cik, r_zero_emissions, r_campd_program, r_echo_quarters, r_egrid, r_trend_base,
-         r_temporal, r_osha_denominator, r_whd, r_sbti, r_extremes, r_wide_bands]
+RULES = [r_duplicate_cik, r_zero_emissions, r_campd_program, r_echo_quarters, r_egrid_zuordnung,
+         r_temporal, r_osha_denominator, r_whd, r_sbti, r_extremes]
 
 
 def run() -> pd.DataFrame:

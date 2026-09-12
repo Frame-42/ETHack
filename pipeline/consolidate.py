@@ -192,72 +192,80 @@ SOURCES: dict[str, dict] = {
         "measurement": "Stammdaten",
         "caveat": "nur fuer die Anzeige; Logos sind Favicons und Marken der jeweiligen Firmen",
     },
-    "eigene_berechnung": {
-        "name": "Eigene Berechnung dieser Pipeline",
-        "url": "scripts/02_analyse.py",
-        "access": "reproduzierbar",
-        "license": "-",
-        "coverage": "abgeleitet aus den oben genannten Quellen",
-        "measurement": "berechnet",
-        "caveat": "Herkunft der Eingangsgroessen steht jeweils beim Basiswert",
-    },
 }
 
 # ---------------------------------------------------------------------------
 # Kennzahlenregister: Einheit, Richtung, Achse und Quelle.
 # direction -1 = kleiner ist besser, +1 = groesser ist besser, 0 = neutral
 # ---------------------------------------------------------------------------
-METRICS: dict[str, dict] = {
-    "scope1_t": ("Scope-1-Emissionen", "t CO2e", -1, "A", "epa_ghgrp"),
-    "co2_intensity": ("CO2-Intensitaet", "t CO2e je Mio. USD Umsatz", -1, "A", "eigene_berechnung"),
-    "intensity_cagr": ("Trend der Intensitaet", "%/Jahr", -1, "A", "eigene_berechnung"),
-    "absolute_cagr": ("Trend der absoluten Tonnen", "%/Jahr", -1, "A", "eigene_berechnung"),
-    "n_facilities": ("zugeordnete Anlagen", "Anzahl", 0, "meta", "epa_ghgrp"),
-    "match_confidence": ("Zuordnungskonfidenz", "0-1", 1, "meta", "eigene_berechnung"),
-    "revenue_musd": ("Umsatz", "Mio. USD", 0, "meta", "sec_xbrl"),
-    "campd_co2_t": ("CO2 gemessen (CEMS)", "t CO2e", -1, "A", "epa_campd"),
-    "campd_plants": ("Kraftwerke mit Messung", "Anzahl", 0, "meta", "epa_campd"),
-    "t_co2_pro_mwh": ("CO2 je erzeugter MWh", "t CO2e/MWh", -1, "A", "egrid"),
-    "egrid_plants": ("eGRID-Kraftwerke", "Anzahl", 0, "meta", "egrid"),
-    "tri_releases_lbs": ("Giftstofffreisetzung", "lbs", -1, "A", "epa_tri"),
-    "tri_carcinogen_lbs": ("davon krebserregend", "lbs", -1, "A", "epa_tri"),
-    "tri_facilities": ("TRI-Anlagen", "Anzahl", 0, "meta", "epa_tri"),
-    "dart_rate": ("Unfallrate DART", "Faelle je 100 Vollzeitkraefte", -1, "S", "osha_ita"),
-    "osha_deaths": ("Todesfaelle", "Anzahl", -1, "S", "osha_ita"),
-    "osha_sites": ("gemeldete Betriebsstaetten", "Anzahl", 0, "meta", "osha_ita"),
-    "echo_penalties_usd": ("Umweltstrafen", "USD", -1, "G", "epa_echo"),
-    "echo_nc_quarters_per_site": ("Verstossquartale je Anlage", "Quartale", -1, "G", "epa_echo"),
-    "echo_significant": ("Anlagen mit schwerem Verstoss", "Anzahl", -1, "G", "epa_echo"),
-    "rank_band_width": ("Breite des Rangbands", "Perzentilpunkte", 0, "meta", "epa_ghgrp"),
-    "sbti_validated": ("SBTi-geprueftes Ziel", "ja/nein", 1, "B", "sbti"),
-    "sbti_near_term_year": ("Zwischenzieljahr", "Jahr", 0, "B", "sbti"),
-    "sbti_net_zero_year": ("Netto-null-Jahr", "Jahr", 0, "B", "sbti"),
-    "sbti_commitment_removed": ("Nahziel-Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti"),
-    "sbti_net_zero_removed": ("Netto-null-Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti"),
-    "sbti_near_term_expired": ("Zwischenziel abgelaufen", "ja/nein", -1, "B", "sbti"),
-    "intensity_illusion": ("Intensitaet faellt, Tonnen steigen", "ja/nein", -1, "B", "eigene_berechnung"),
-    "base_year_ratio": ("Basisjahr-Bequemlichkeit", "Verhaeltnis", -1, "B", "eigene_berechnung"),
-    "rank_p10": ("Rangband untere Grenze", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
-    "rank_p50": ("Rangband Median", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
-    "rank_p90": ("Rangband obere Grenze", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
-    "esg_risk_total": ("kommerzielles ESG-Risiko", "Punkte", -1, "vergleich", "esg_snapshot"),
-    "net_income_usd": ("Nettogewinn", "USD", 0, "meta", "sec_dera"),
-    "total_assets_usd": ("Bilanzsumme", "USD", 0, "meta", "sec_dera"),
-    "total_debt_usd": ("Finanzschulden", "USD", 0, "meta", "sec_dera"),
-    "operating_cf_usd": ("operativer Cashflow", "USD", 0, "meta", "sec_dera"),
-    "capex_usd": ("Sachinvestitionen", "USD", 0, "meta", "sec_dera"),
-    "rnd_usd": ("Forschung und Entwicklung", "USD", 0, "meta", "sec_dera"),
-    "whd_cases": ("Lohnverfahren 2022-2024", "Anzahl", -1, "S", "dol_whd"),
-    "whd_backwages_usd": ("nachgezahlte Loehne", "USD", -1, "S", "dol_whd"),
-    "whd_employees": ("betroffene Beschaeftigte", "Anzahl", -1, "S", "dol_whd"),
-    "whd_violations": ("festgestellte Verstoesse", "Anzahl", -1, "S", "dol_whd"),
-    "whd_penalties_usd": ("Geldbussen Lohnrecht", "USD", -1, "S", "dol_whd"),
-    "sd_conflict_minerals_filer": ("meldet Konfliktmineralien (Form SD)", "ja/nein", 0, "meta", "sec_sd"),
-    "wba_tpq": ("WBA Qualitaet des Transitionsplans", "0-5", 1, "B", "wba"),
-    "wba_ctt": ("WBA Beitrag zur Transition", "0-2", 1, "B", "wba"),
-    "wba_social": ("WBA Social Benchmark", "0-100", 1, "S", "wba"),
-    "wba_nature": ("WBA Nature Benchmark", "0-100", 1, "B", "wba"),
-    "wba_just_transition": ("WBA Just Transition", "0-100", 1, "S", "wba"),
+# Kennzahlenregister. Sechstes Feld: woher der Wert kommt.
+#
+#   "gemeldet"    Die Quelle veroeffentlicht genau diese Zahl fuer genau diese
+#                 Firma. Wir uebernehmen sie unveraendert.
+#   "aggregiert"  Summe oder Anzahl der von der Quelle veroeffentlichten Zahlen
+#                 ueber die Anlagen bzw. Betriebe einer Firma. Keine weitere
+#                 Rechnung: kein Verhaeltnis, kein Trend, keine Gewichtung.
+#
+# Eine dritte Art gibt es nicht mehr. Verhaeltnisse (Intensitaet, Rate je MWh,
+# Unfallrate), Trends und Rangbaender waren unsere Rechnung und stehen deshalb
+# nicht mehr im Datensatz. Wer sie braucht, rechnet sie aus den gemeldeten
+# Zaehlern und Nennern, die hier vollstaendig stehen -- die Analyse tut genau
+# das und ist als Analyse gekennzeichnet (report/, scripts/02_analyse.py).
+METRICS: dict[str, tuple] = {
+    # ---- EPA GHGRP: Anlagenmeldungen, nach Eigentuemerquote summiert -------
+    "scope1_t": ("Scope-1-Emissionen", "t CO2e", -1, "A", "epa_ghgrp", "aggregiert"),
+    "n_facilities": ("zugeordnete Anlagen", "Anzahl", 0, "meta", "epa_ghgrp", "aggregiert"),
+    # ---- EPA CAMPD: Schornsteinmessung je Block ----------------------------
+    "campd_co2_t": ("CO2 gemessen (CEMS)", "t CO2e", -1, "A", "epa_campd", "aggregiert"),
+    "campd_plants": ("Kraftwerke mit Messung", "Anzahl", 0, "meta", "epa_campd", "aggregiert"),
+    # ---- EPA eGRID: Kraftwerksbilanz. Zaehler und Nenner getrennt ----------
+    "egrid_co2_t": ("CO2 der Kraftwerke", "t CO2e", -1, "A", "egrid", "aggregiert"),
+    "egrid_mwh": ("Nettoerzeugung", "MWh", 0, "meta", "egrid", "aggregiert"),
+    "egrid_plants": ("eGRID-Kraftwerke", "Anzahl", 0, "meta", "egrid", "aggregiert"),
+    # ---- EPA TRI ----------------------------------------------------------
+    "tri_releases_lbs": ("Giftstofffreisetzung", "lbs", -1, "A", "epa_tri", "aggregiert"),
+    "tri_carcinogen_lbs": ("davon krebserregend", "lbs", -1, "A", "epa_tri", "aggregiert"),
+    "tri_facilities": ("TRI-Anlagen", "Anzahl", 0, "meta", "epa_tri", "aggregiert"),
+    # ---- OSHA: Formular 300A je Betriebsstaette ---------------------------
+    "osha_dafw_cases": ("Faelle mit Ausfalltagen", "Anzahl", -1, "S", "osha_ita", "aggregiert"),
+    "osha_djtr_cases": ("Faelle mit Einschraenkung", "Anzahl", -1, "S", "osha_ita", "aggregiert"),
+    "osha_hours": ("gemeldete Arbeitsstunden", "Stunden", 0, "meta", "osha_ita", "aggregiert"),
+    "osha_deaths": ("Todesfaelle", "Anzahl", -1, "S", "osha_ita", "aggregiert"),
+    "osha_sites": ("gemeldete Betriebsstaetten", "Anzahl", 0, "meta", "osha_ita", "aggregiert"),
+    # ---- EPA ECHO ---------------------------------------------------------
+    "echo_penalties_usd": ("Umweltstrafen", "USD", -1, "G", "epa_echo", "aggregiert"),
+    "echo_nc_quarters": ("Verstossquartale", "Quartale", -1, "G", "epa_echo", "aggregiert"),
+    "echo_facilities": ("ECHO-Anlagen", "Anzahl", 0, "meta", "epa_echo", "aggregiert"),
+    "echo_significant": ("Anlagen mit schwerem Verstoss", "Anzahl", -1, "G", "epa_echo", "aggregiert"),
+    # ---- DOL WHD ----------------------------------------------------------
+    "whd_cases": ("Lohnverfahren 2022-2024", "Anzahl", -1, "S", "dol_whd", "aggregiert"),
+    "whd_backwages_usd": ("nachgezahlte Loehne", "USD", -1, "S", "dol_whd", "aggregiert"),
+    "whd_employees": ("betroffene Beschaeftigte", "Anzahl", -1, "S", "dol_whd", "aggregiert"),
+    "whd_violations": ("festgestellte Verstoesse", "Anzahl", -1, "S", "dol_whd", "aggregiert"),
+    "whd_penalties_usd": ("Geldbussen Lohnrecht", "USD", -1, "S", "dol_whd", "aggregiert"),
+    # ---- SBTi: Status je Zieltyp, wie die Quelle ihn fuehrt ----------------
+    "sbti_validated": ("SBTi-geprueftes Ziel", "ja/nein", 1, "B", "sbti", "gemeldet"),
+    "sbti_near_term_year": ("Zwischenzieljahr", "Jahr", 0, "B", "sbti", "gemeldet"),
+    "sbti_net_zero_year": ("Netto-null-Jahr", "Jahr", 0, "B", "sbti", "gemeldet"),
+    "sbti_commitment_removed": ("Nahziel-Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti", "gemeldet"),
+    "sbti_net_zero_removed": ("Netto-null-Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti", "gemeldet"),
+    "sbti_near_term_expired": ("Zwischenziel abgelaufen", "ja/nein", -1, "B", "sbti", "gemeldet"),
+    # ---- SEC ---------------------------------------------------------------
+    "revenue_musd": ("Umsatz", "Mio. USD", 0, "meta", "sec_xbrl", "gemeldet"),
+    "net_income_usd": ("Nettogewinn", "USD", 0, "meta", "sec_dera", "gemeldet"),
+    "total_assets_usd": ("Bilanzsumme", "USD", 0, "meta", "sec_dera", "gemeldet"),
+    "total_debt_usd": ("Finanzschulden", "USD", 0, "meta", "sec_dera", "gemeldet"),
+    "operating_cf_usd": ("operativer Cashflow", "USD", 0, "meta", "sec_dera", "gemeldet"),
+    "capex_usd": ("Sachinvestitionen", "USD", 0, "meta", "sec_dera", "gemeldet"),
+    "rnd_usd": ("Forschung und Entwicklung", "USD", 0, "meta", "sec_dera", "gemeldet"),
+    "sd_conflict_minerals_filer": ("meldet Konfliktmineralien (Form SD)", "ja/nein", 0, "meta", "sec_sd", "gemeldet"),
+    # ---- Fremdbewertungen: Note der Quelle, unveraendert -------------------
+    "wba_tpq": ("WBA Qualitaet des Transitionsplans", "0-5", 1, "B", "wba", "gemeldet"),
+    "wba_ctt": ("WBA Beitrag zur Transition", "0-2", 1, "B", "wba", "gemeldet"),
+    "wba_social": ("WBA Social Benchmark", "0-100", 1, "S", "wba", "gemeldet"),
+    "wba_nature": ("WBA Nature Benchmark", "0-100", 1, "B", "wba", "gemeldet"),
+    "wba_just_transition": ("WBA Just Transition", "0-100", 1, "S", "wba", "gemeldet"),
+    "esg_risk_total": ("kommerzielles ESG-Risiko", "Punkte", -1, "vergleich", "esg_snapshot", "gemeldet"),
 }
 
 
@@ -319,37 +327,19 @@ def build() -> pd.DataFrame:
     master = pd.read_parquet(RAW / "sp500_master.parquet")
     rows: list[dict] = []
 
-    panel = _read(OUT / "panel_periode_a.csv")
-    if not panel.empty:
-        panel = panel.assign(year=panel["year_last"])
-        _add(rows, panel, {
-            "scope1_t": "scope1_t", "co2_intensity": "co2_intensity",
-            "intensity_cagr": "intensity_cagr", "absolute_cagr": "absolute_cagr",
-            "n_facilities": "n_facilities", "match_confidence": "match_confidence",
-            "revenue_musd": "revenue_musd", "base_year_ratio": "base_year_ratio",
-            "intensity_illusion": "intensity_illusion",
-        })
-
+    # Das Panel und die Rangbaender aus scripts/02_analyse.py sind Analyse,
+    # keine Daten: Intensitaeten, Trends und Simulationen rechnen *wir*. Sie
+    # stehen deshalb nicht mehr im Datensatz, sondern nur im Bericht.
     cy = _read(OUT / "company_year.csv")
     if not cy.empty:
         _add(rows, cy, {"scope1_t": "scope1_t", "revenue_musd": "revenue_musd",
-                        "co2_intensity": "co2_intensity"})
-
-    bands = _read(OUT / "rangbaender_periode_a.csv")
-    if not bands.empty:
-        bands = bands.assign(year=2023)
-        # Ein Band ueber 70 Perzentilpunkten sagt nichts ueber den Rang aus.
-        # Der Median suggeriert dann eine Einordnung, die es nicht gibt --
-        # also Band zeigen, Mittelwert weglassen.
-        breit = bands["band_width"] >= 70
-        bands.loc[breit, "p50"] = np.nan
-        _add(rows, bands, {"p10": "rank_p10", "p50": "rank_p50", "p90": "rank_p90",
-                           "band_width": "rank_band_width"})
+                        "n_facilities": "n_facilities"})
 
     egrid = _read(OUT / "egrid_je_firma.csv")
     if not egrid.empty:
+        # Zaehler und Nenner der Quelle, nicht unser Verhaeltnis daraus.
         _add(rows, egrid.assign(year=2023),
-             {"t_co2_pro_mwh": "t_co2_pro_mwh", "kraftwerke": "egrid_plants"})
+             {"co2_t": "egrid_co2_t", "mwh": "egrid_mwh", "kraftwerke": "egrid_plants"})
 
     tri = _read(OUT / "tri_je_firma.csv")
     if not tri.empty:
@@ -359,8 +349,10 @@ def build() -> pd.DataFrame:
 
     osha = _read(OUT / "osha_je_firma.csv")
     if not osha.empty:
-        _add(rows, osha.assign(year=2025),
-             {"dart_rate": "dart_rate", "tote": "osha_deaths", "betriebe": "osha_sites"})
+        _add(rows, osha.assign(year=2025), {
+            "dafw": "osha_dafw_cases", "djtr": "osha_djtr_cases", "stunden": "osha_hours",
+            "tote": "osha_deaths", "betriebe": "osha_sites",
+        })
 
     echo = _read(OUT / "echo_je_firma.csv")
     if not echo.empty:
@@ -369,8 +361,8 @@ def build() -> pd.DataFrame:
         _add(rows, echo.assign(year=2025), {
             "strafen": "echo_penalties_usd",
             "strafen_usd": "echo_penalties_usd",
-            "vq_je_anlage": "echo_nc_quarters_per_site",
-            "verstossquartale_je_anlage": "echo_nc_quarters_per_site",
+            "verstossquartale": "echo_nc_quarters",
+            "anlagen": "echo_facilities",
             "sv": "echo_significant",
             "schwere_verstoesse": "echo_significant",
         })
@@ -435,8 +427,8 @@ def build() -> pd.DataFrame:
 
     # ---- Provenienz und Stammdaten anhaengen --------------------------------
     meta = pd.DataFrame(
-        [(k, v[0], v[1], v[2], v[3], v[4]) for k, v in METRICS.items()],
-        columns=["metric", "metric_label", "unit", "direction", "axis", "source_id"],
+        [(k, *v) for k, v in METRICS.items()],
+        columns=["metric", "metric_label", "unit", "direction", "axis", "source_id", "wert_art"],
     )
     long = long.merge(meta, on="metric", how="left")
     long = long.merge(
@@ -610,7 +602,7 @@ def write_all() -> dict:
     (OUT / "metrics.json").write_text(
         json.dumps(
             {k: {"label": v[0], "unit": v[1], "direction": v[2], "axis": v[3],
-                 "source_id": v[4]} for k, v in METRICS.items()},
+                 "source_id": v[4], "wert_art": v[5]} for k, v in METRICS.items()},
             indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
@@ -651,6 +643,7 @@ def write_all() -> dict:
                         "sourceName": r["source_name"],
                         "sourceUrl": r["source_url"],
                         "partial": bool(r.get("partial_year", False)),
+                        "wertArt": r.get("wert_art", ""),
                         "qualityStatus": r.get("quality_status", "ok"),
                         "qualityRule": r.get("quality_rule", ""),
                         "qualityNote": r.get("quality_note", ""),

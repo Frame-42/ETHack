@@ -52,7 +52,7 @@
 
 \begin{abstract}
 \noindent
-Der Verbesserungsbericht hat 380 auffällige Werte beschrieben. Dieser Bericht fragt, \emph{warum} sie entstehen, prüft jede Vermutung an den Rohdaten und an der Dokumentation der Quellen, und repariert die Ursachen. Das Ergebnis ist unbequem und hilfreich zugleich: Fast nichts davon ist ein Tippfehler in einer Quelle. Die Fehler entstehen an wenigen Stellen, an denen die Pipeline eine Quelle anders liest, als sie gemeint ist -- eine Null, die „nicht gemeldet“ heißt; ein Messprogramm, das CO\textsubscript{2} gar nicht erfasst; eine Anlage, die beim Zusammenführen doppelt zählt; eine Tochterfirma, die zum falschen Jahr gehört; ein Firmenname, der als Wortanfang eines fremden Namens steckt. Zwei Diagnosen des Verbesserungsberichts halten der Prüfung nicht stand: Die CAMPD-Nullen sind keine Fehlzuordnungen, und die ECHO-Werte über 12 sind keine falsch gezählten Programme, sondern doppelt verbundene Zeilen. Nach der Reparatur finden dieselben Regeln statt \vorFlags{} nur noch \statFlags{} Fälle, und an Menschen gehen statt \vorMensch{} genau \kiMensch. Zehn Kontrollfälle mit belegter Antwort prüfen bei jedem Lauf, dass die Reparaturen halten -- alle \repBehoben{} bestehen. Die Lehre für den KI-Einsatz ist die unbequemste: Ein Sprachmodell, das jeden Einzelfall begutachtet, ist die teure Antwort auf eine Frage, die man meist im Code beantworten kann. Es ist stark dort, wo keine Regel greift -- Franchise oder eigener Betrieb, echter Extremwert oder Fehler.
+Der Verbesserungsbericht hat 380 auffällige Werte beschrieben. Dieser Bericht fragt, \emph{warum} sie entstehen, prüft jede Vermutung an den Rohdaten und an der Dokumentation der Quellen, und repariert die Ursachen. Das Ergebnis ist unbequem und hilfreich zugleich: Fast nichts davon ist ein Tippfehler in einer Quelle. Die Fehler entstehen an wenigen Stellen, an denen die Pipeline eine Quelle anders liest, als sie gemeint ist -- eine Null, die „nicht gemeldet“ heißt; ein Messprogramm, das CO\textsubscript{2} gar nicht erfasst; eine Anlage, die beim Zusammenführen doppelt zählt; eine Tochterfirma, die zum falschen Jahr gehört; ein Firmenname, der als Wortanfang eines fremden Namens steckt. Zwei Diagnosen des Verbesserungsberichts halten der Prüfung nicht stand: Die CAMPD-Nullen sind keine Fehlzuordnungen, und die ECHO-Werte über 12 sind keine falsch gezählten Programme, sondern doppelt verbundene Zeilen. Nach der Reparatur finden dieselben Regeln statt \vorFlags{} nur noch \statFlags{} Fälle, und an Menschen gehen statt \vorMensch{} genau \kiMensch. Zehn Kontrollfälle mit belegter Antwort prüfen bei jedem Lauf, dass die Reparaturen halten -- alle \repBehoben{} bestehen. Die schärfste Konsequenz steht in Abschnitt~\ref{sec:nurquelle}: Der Datensatz enthält nur noch Werte, die eine Quelle veröffentlicht hat -- entweder für die Firma selbst oder als Summe ihrer Anlagen. Jede Kennzahl, die \emph{wir} gerechnet hatten -- Intensität je Umsatz, Tonnen je MWh, Unfallrate, Trends, Rangbänder --, ist entfernt. Sie war der eigentliche Grund für die selbstgesetzten Schwellen, mit denen wir die eigenen Zahlen anschließend wieder einfangen mussten. Die Lehre für den KI-Einsatz ist ähnlich unbequem: Ein Sprachmodell, das jeden Einzelfall begutachtet, ist die teure Antwort auf eine Frage, die man meist im Code beantworten kann.
 \end{abstract}
 
 \tableofcontents
@@ -153,7 +153,27 @@ Definitionen vermischt & SBTi, eGRID, CIK & Status je Zieltyp; Kennzahl nur für
 \end{center}
 
 % ---------------------------------------------------------------------------
+\section{Nur was eine Quelle veröffentlicht}
+\label{sec:nurquelle}
+
+Die Reparaturen in Abschnitt~\ref{sec:reparatur} haben eine Gemeinsamkeit, die erst im Rückblick auffällt: Fast jede selbstgesetzte Schwelle -- 200 bis 4\,000 Stunden je Beschäftigtem, drei Kraftwerke und eine Terawattstunde, Basisquote zwischen 0{,}2 und 2{,}5, höchstens 1{,}3\,\tco{} je MWh -- war nötig, um eine Zahl einzufangen, \emph{die wir selbst gerechnet hatten}. Keine Quelle veröffentlicht eine Unfallrate je 100 Vollzeitkräfte für McDonald's, eine CO\textsubscript{2}-Intensität je Umsatz für PPL oder eine Tonne je MWh für General Electric. Diese Zahlen entstanden erst bei uns -- und mit ihnen die Notwendigkeit, sie zu verteidigen.
+
+\befund{\textbf{Die Regel lautet jetzt:} Entweder eine vertrauenswürdige Quelle veröffentlicht den Wert -- oder es gibt keinen Wert. Jede Zeile im Datensatz trägt dafür das Feld \texttt{wert\_art} mit genau zwei erlaubten Ausprägungen:
+\begin{itemize}
+\item \textbf{gemeldet} -- die Quelle veröffentlicht genau diese Zahl für genau diese Firma (SEC-Umsatz, SBTi-Status, WBA-Note).
+\item \textbf{aggregiert} -- Summe oder Anzahl der von der Quelle veröffentlichten Einzelwerte über die Anlagen oder Betriebe der Firma. Addition, mehr nicht.
+\end{itemize}
+Eine dritte Ausprägung ist nicht zugelassen; der Export bricht ab, wenn eine auftaucht.}
+
+\textbf{Was dadurch verschwunden ist.} Elf Kennzahlen: CO\textsubscript{2}-Intensität, Tonnen je MWh, Unfallrate DART, Verstoßquartale je Anlage, beide Trends, Basisjahr-Quote, Intensitäts-Illusion, Zuordnungskonfidenz und die drei Rangband-Werte. Der Datensatz hat 44 statt 50 Kennzahlen und 11\,425 statt 11\,819 Zeilen.
+
+\textbf{Was an ihre Stelle tritt.} Zähler und Nenner stehen jetzt einzeln da, beide von der Quelle: eGRID-Menge \emph{und} Nettoerzeugung, OSHA-Fälle \emph{und} gemeldete Arbeitsstunden \emph{und} Betriebsstätten, ECHO-Quartale \emph{und} Anlagenzahl, Scope-1-Tonnen \emph{und} Umsatz \emph{und} Anlagenzahl. Wer eine Rate braucht, bildet sie selbst -- und sieht dabei, woraus.
+
+\textbf{Was das kostet.} Die Analyse (Monte-Carlo-Rangbänder, Intensitäten, Trends) rechnet weiter, aber sie ist Analyse und steht im Bericht, nicht im Datensatz. In der Belastbarkeitsansicht fallen dadurch die Familien „Emissionstrend“ und „Greenwashing-Signale“ weg: In allen drei Bereichen belastbar sind noch 16 statt 42 Firmen, und keine Branche erreicht mehr sechs solcher Firmen. Das ist kein Rückschritt in der Datenlage, sondern deren ehrliche Anzeige -- die 42 beruhten zu einem Teil auf Kennzahlen, die wir selbst erzeugt hatten.
+
+% ---------------------------------------------------------------------------
 \section{Was repariert wurde}
+\label{sec:reparatur}
 
 KI war hier nicht der erste Hebel. Von \vorFlags{} Fällen stammten über neun Zehntel aus Mechanismen, die man im Code abstellen kann -- schneller, billiger und reproduzierbar als jedes Gutachten. Umgesetzt ist das in der Reihenfolge der Wirkung; die Spalte „vorher/heute“ in Abschnitt~\ref{sec:ueberblick} zeigt, was jede Reparatur gelöst hat.
 
@@ -161,18 +181,18 @@ KI war hier nicht der erste Hebel. Von \vorFlags{} Fällen stammten über neun Z
 \item \textbf{Fehlend ist nicht Null.} Wo die EPA keine Menge meldet, gibt es keinen Wert mehr (\texttt{canonical.py}). Das betrifft 19\,155 Anlagenjahre und löst 83 Fälle.
 \item \textbf{Messpflicht als Datenfeld.} CO\textsubscript{2} kommt nur noch aus Programmen, die es verlangen: ARP, RGGI, NSPS4T (\texttt{consolidate.py}). 99 Fälle.
 \item \textbf{Join entdoppeln, richtig zählen.} Eine Anlage kommt je Firma einmal vor, gezählt werden nur die Quartale mit V oder S -- nicht jeder Großbuchstabe der Historie (\texttt{05b\_firmenaggregate.py}). 639 doppelte Zeilen entfernt.
-\item \textbf{Nenner vor dem Zähler.} Unfallraten nur aus Meldungen mit 200 bis 4\,000 Stunden je Beschäftigtem; 1\,488 unbrauchbare Meldungen fallen heraus, darunter alle vier von McDonald's.
+\item \textbf{Keine Rate aus ungeprüften Angaben.} Die Unfallrate DART ist ersatzlos entfallen -- OSHA prüft weder Stunden noch Fallzahlen nach. Stattdessen stehen Fälle, Stunden und Betriebsstätten einzeln da; auffällige Stundenangaben (McDonald's: im Median 50 Stunden je Beschäftigtem) tragen einen Hinweis am Wert, werden aber nicht überschrieben.
 \item \textbf{Wortgrenze bei Namen.} Die Tochtertabelle trifft nur noch an der Wortgrenze (\texttt{resolve.py}); die Lohnverfahren kommen aus den Rohdaten statt aus der Team-Datei. Air Products verliert 212 fremde Verfahren, Linde ein fremdes Kraftwerk.
 \item \textbf{Gültigkeitszeiträume.} Jede strittige Zuordnung hat jetzt ein Von und ein Bis (\texttt{VALIDITY} in \texttt{resolve.py}): Talen gehört nie zu Vistra, WestRock erst ab 2024, Pioneer ab 2024, Exelon Generation bis 2021, danach Constellation.
-\item \textbf{Unvollständige Jahre erkennen.} Hat ein Firmenjahr weit weniger Anlagen \emph{und} einen Bruchteil der sonstigen Menge, misst es die Zuordnung statt der Firma und fällt heraus (PPL 2018). Trends gibt es erst ab drei Jahren mit stabiler Basis.
-\item \textbf{Geschäftsmodell statt Branchenkennung.} Die Stromrate gibt es für Kraftwerksflotten -- mindestens drei Anlagen und eine Terawattstunde --, nicht für die GICS-Zeile. Damit behält Berkshire Hathaway seine Rate (113 Kraftwerke, 83~TWh), das Heizkraftwerk von GE verliert seine.
+\item \textbf{Anlagenzahl neben die Menge.} PPL 2018 bleibt im Datensatz -- die Summe der gemeldeten Anlagenmengen ist richtig. Falsch war der Trend darauf, und Trends stehen nicht mehr im Datensatz. Die Anlagenzahl je Jahr steht daneben, damit jeder sieht, worauf die Summe beruht.
+\item \textbf{Keine Stromrate.} Statt zu entscheiden, für wen eine selbstgerechnete Rate gilt, gibt es keine: eGRID meldet Menge und Nettoerzeugung je Kraftwerk, beide stehen als Summe da. Berkshire Hathaway behält 83~TWh und 56~Mt, GE behält sein Kraftwerk -- die 4{,}44\,\tco{}/MWh gab es nur bei uns.
 \item \textbf{Definitionen trennen.} SBTi-Status je Zieltyp, abgelaufene Nahziele als eigene Kennzahl; Lohnverfahren getrennt nach Untersuchungen, festgestellten Verstößen, Nachzahlung und Bußgeld. Ein Verfahren ohne Nachzahlung ist damit kein Fehler mehr, sondern ein Befund.
 \item \textbf{Ein Emittent, eine Zeile.} Aktiengattungen mit gemeinsamer CIK werden zusammengeführt, die zweite Gattung wird zum Alias (GOOG, FOX, NWS).
-\item \textbf{Harte Grenzen beim Export.} \texttt{07\_dataset.py} bricht ab bei: ECHO über 12 Quartale, eGRID über 1{,}3\,\tco{}/MWh, Trend über 100\,\%, exakter Null in Mengen, doppelten Zeilen, doppelter CIK.
+\item \textbf{Harte Grenzen beim Export.} \texttt{07\_dataset.py} bricht ab bei: mehr als 12 Verstoßquartalen je Anlage, exakter Null in Mengen, doppelten Zeilen, doppelter CIK -- und bei jedem Wert ohne belegte Herkunft.
 \item \textbf{Flags reisen mit.} Was übrig bleibt, wird nicht gelöscht, sondern trägt \texttt{quality\_status}, Regel und Begründung bis in die Oberfläche.
 \end{enumerate}
 
-\befund{\textbf{Kontrolle statt Vertrauen.} Zehn Fälle mit belegter Antwort laufen bei jedem Durchgang mit: KHC~2022 ohne Wert, MPC ohne CO\textsubscript{2}-Menge, TSLA bei zwölf Quartalen, GE ohne Rate, Berkshire \emph{mit} Rate, MCD ohne Unfallrate, APD ohne Lohnverfahren, PPL~2018 entfernt, Vistra ohne Talen, GOOG nicht mehr im Bestand. Alle \repBehoben{} von \repGesamt{} bestehen (Abschnitt~\ref{sec:ergebnisse}). Kommt eine Ursache zurück, fällt sie hier auf, nicht erst im Ranking.}
+\befund{\textbf{Kontrolle statt Vertrauen.} Elf Fälle mit belegter Antwort laufen bei jedem Durchgang mit: KHC~2022 ohne Wert, MPC ohne CO\textsubscript{2}-Menge, TSLA bei zwölf Quartalen auf einer Anlage, keine gerechnete Rate im Bestand, Berkshires Menge und Erzeugung weiterhin gemeldet, MCD mit Stunden statt Unfallrate, APD ohne fremde Lohnverfahren, PPL ohne Trendwert, Vistra ohne Talen, GOOG nicht mehr im Bestand -- und die Kontrolle, dass jeder Wert im Bestand gemeldet oder aggregiert ist. Alle \repBehoben{} von \repGesamt{} bestehen (Abschnitt~\ref{sec:ergebnisse}). Kommt eine Ursache zurück, fällt sie hier auf, nicht erst im Ranking.}
 
 % ---------------------------------------------------------------------------
 \section{Wie man KI wirksam einbaut}
@@ -246,7 +266,9 @@ Tokens für die KI-Prüfung & 323\,000 & \kiTokens \\
 \end{tabular}
 \end{center}
 
-Die drei verbliebenen Fälle für Menschen sind genau die Sorte, für die dieser Weg gedacht ist: Berkshire Hathaway (zählt eine Kraftwerksflotte außerhalb der Versorgerbranche als Stromgeschäft?), FedEx (vier von fünf Lohnverfahren nur über den Handelsnamen -- Franchise oder Konzern?) und DTE Energy (100~Mio.~USD Umweltstrafen: echter Extremwert oder Zuordnungsfehler?). Das Modell hat die übrigen sieben entschieden, davon fünf mit einer Konfidenz über 0{,}9.
+Die verbliebenen Fälle für Menschen sind genau die Sorte, für die dieser Weg gedacht ist: Lohnverfahren, die nur über den Handelsnamen zugeordnet sind (Franchise oder Konzern?), auffällige Stundenangaben in den OSHA-Meldungen, ein einzelnes Großkraftwerk bei einer Firma ohne Stromgeschäft und Extremwerte im Branchenvergleich (DTE: 100~Mio.~USD Umweltstrafen -- echt oder falsch zugeordnet?).
+
+\befund{\textbf{Auch die KI darf nichts löschen.} Ein automatisch entschiedener Fall kennzeichnet den Wert, mehr nicht. Einen gemeldeten Wert aus dem Bestand nehmen darf nur ein Mensch mit Namen, Datum und Begründung -- die Quelle hat die Zahl veröffentlicht, unsere Software hat sie nicht zu überstimmen.}
 
 \subsection{Reparatur-Kontrolle}
 
@@ -295,8 +317,8 @@ Tokens & 322\,346 & 301\,086 & \kiTokens \\
 \section{Grenzen und nächste Schritte}
 
 \begin{itemize}
-\item Reparieren heißt auch wegnehmen. 906 Werte sind aus dem Datensatz verschwunden -- Nullen, die keine Messung waren, Raten ohne Stromgeschäft, Verfahren fremder Firmen. Eine Lücke ist ehrlicher als eine falsche Zahl, aber sie bleibt eine Lücke: Firmen ohne belastbare Werte müssen als nicht bewertbar erscheinen, nicht als sauber.
-\item Die Schwellen sind begründet, nicht kalibriert: 200 bis 4\,000 Stunden je Beschäftigtem, drei Anlagen und eine Terawattstunde, Basis zwischen 0{,}2 und 2{,}5 vom Median. Jede davon ist eine Entscheidung, die man sehen können muss -- sie stehen deshalb als benannte Konstanten im Code.
+\item Reparieren heißt auch wegnehmen. Rund 1\,300 Werte sind aus dem Datensatz verschwunden -- Nullen, die keine Messung waren, Raten ohne Stromgeschäft, Verfahren fremder Firmen. Eine Lücke ist ehrlicher als eine falsche Zahl, aber sie bleibt eine Lücke: Firmen ohne belastbare Werte müssen als nicht bewertbar erscheinen, nicht als sauber.
+\item Der Zuschnitt der Aggregation bleibt unsere Entscheidung: welche Anlage zu welcher Firma gehört, mit welcher Eigentümerquote und in welchem Jahr. Das ist der einzige Schritt zwischen Quelle und Datensatz, der Urteil enthält -- er steht in \texttt{resolve.py} und ist der nächste Kandidat für eine Kennung statt eines Namens (GLEIF, CC0).
 \item Die Regeln sind so gut wie die Mechanismen, die man kennt. Neue Fehlerarten fängt zuerst nur die Statistik -- und die meldet auch echte Extreme.
 \item Zehn Kontrollfälle sind wenig, und sie stammen von einer Person. Sie sollten aus menschlichen Entscheidungen wachsen, mit einer zweiten Person bei strittigen Fällen.
 \item Die Messung der KI-Trefferquote steht damit aus: Die alten Referenzfälle prüfen jetzt die Reparatur, neue Referenzfälle entstehen erst aus dem Prüfablauf.

@@ -6,9 +6,8 @@ export const AXES: Record<string, { label: string; hint: string }> = {
   S: { label: "Sozial", hint: "Arbeitssicherheit und Lohnverstöße" },
   G: { label: "Governance", hint: "dokumentierte Regeltreue" },
   B: { label: "Glaubwürdigkeit", hint: "getrennt von der Kernnote gerechnet" },
-  ergebnis: { label: "Ergebnis", hint: "Rangband über alle Methodenkombinationen" },
   vergleich: { label: "Vergleichsmaßstab", hint: "fremde Note, nur zum Gegenhalten" },
-  meta: { label: "Bezugsgrößen", hint: "Nenner, Finanzen und Gütewerte, keine Bewertung" },
+  meta: { label: "Bezugsgrößen", hint: "Nenner und Finanzen, keine Bewertung" },
 };
 
 /** Zahl mit deutscher Tausendertrennung, sinnvoll gerundet. */

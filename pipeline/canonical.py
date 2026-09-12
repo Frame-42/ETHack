@@ -81,19 +81,12 @@ def build_company_year(raw: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, dict
         )
     )
 
-    # Jahre mit erkennbar unvollstaendiger Zuordnung entfernen. PPL hatte 2018
-    # eine einzige zugeordnete Anlage mit 5 kt, ab 2019 neun Anlagen mit 28 Mt:
-    # Der Sprung misst die Zuordnung, nicht das Verhalten der Firma. Kriterium
-    # ist beides zusammen -- viel weniger Anlagen als sonst *und* ein Bruchteil
-    # der sonstigen Menge; echtes Wachstum trifft das nicht.
-    med = company_year.groupby("ticker")[["n_facilities", "scope1_t"]].transform("median")
-    luecke = (
-        (company_year["n_facilities"] <= 0.34 * med["n_facilities"])
-        & (company_year["scope1_t"] <= 0.2 * med["scope1_t"])
-        & (med["n_facilities"] >= 3)
-    )
-    n_luecke = int(luecke.sum())
-    company_year = company_year[~luecke].reset_index(drop=True)
+    # Frueher standen hier zwei selbstgesetzte Schwellen, die Firmenjahre mit
+    # wenig Anlagen geloescht haben (PPL 2018). Ein Firmenjahr ist aber die
+    # Summe der von der EPA gemeldeten Anlagenmengen -- die Zahl ist richtig,
+    # nur die Trendrechnung darauf war es nicht. Trends stehen nicht mehr im
+    # Datensatz; die Zahl bleibt, mit der Anlagenzahl daneben.
+    n_luecke = 0
 
     # Umsatz ueber die CIK anhaengen.
     rev_join = rev.merge(master[["ticker", "cik"]], on="cik", how="inner")

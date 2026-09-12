@@ -63,10 +63,10 @@ GROUPS: dict[str, tuple[str, str]] = {
         "Absolute Treibhausgasmengen, wie sie gemeldet oder gemessen wurden.",
         "scope1_t campd_co2_t",
     ),
-    "Intensitaeten und Trends": (
-        "Emissionen bezogen auf eine Aktivitaetsgroesse, und ihre Entwicklung. "
-        "Hier entscheidet die Wahl des Nenners.",
-        "co2_intensity t_co2_pro_mwh intensity_cagr absolute_cagr",
+    "Kraftwerksbilanz": (
+        "Menge und Erzeugung je Firma, beide von eGRID gemeldet. Eine Rate je MWh "
+        "steht hier bewusst nicht: Die waere unsere Rechnung, nicht die der Quelle.",
+        "egrid_co2_t egrid_mwh egrid_plants",
     ),
     "Weitere Umweltwirkung": (
         "Was neben CO2 in Luft, Wasser und Boden gelangt.",
@@ -74,23 +74,23 @@ GROUPS: dict[str, tuple[str, str]] = {
     ),
     "Arbeitssicherheit": (
         "Die soziale Dimension als gemeldete Kennzahl statt als Selbstbeschreibung.",
-        "dart_rate osha_deaths",
+        "osha_dafw_cases osha_djtr_cases osha_hours osha_deaths osha_sites",
     ),
     "Regeltreue": (
         "Dokumentiertes Verhalten gegenueber Umweltauflagen. Die einzige Achse, "
         "die nachweislich unabhaengig von der CO2-Intensitaet ist.",
-        "echo_penalties_usd echo_nc_quarters_per_site echo_significant",
+        "echo_penalties_usd echo_nc_quarters echo_facilities echo_significant",
     ),
     "Ziele und Glaubwuerdigkeit": (
         "Achse B des Modells. Wird getrennt ausgewiesen und nie in die Kernnote "
         "eingerechnet.",
         "sbti_validated sbti_near_term_year sbti_net_zero_year "
-        "sbti_commitment_removed intensity_illusion base_year_ratio",
+        "sbti_commitment_removed sbti_net_zero_removed sbti_near_term_expired",
     ),
     "Arbeitsrecht": (
         "Behoerdlich festgestellte Lohnverstoesse. Firmen ohne zuordenbaren Fall "
         "fehlen, statt als Null zu erscheinen.",
-        "whd_cases whd_backwages_usd whd_employees",
+        "whd_cases whd_violations whd_backwages_usd whd_employees whd_penalties_usd",
     ),
     "Externe Bewertungen, offen lizenziert": (
         "WBA-Benchmarks unter CC BY 4.0. Anders als der kommerzielle Snapshot ist "
@@ -107,10 +107,7 @@ GROUPS: dict[str, tuple[str, str]] = {
         "kein Befund ueber die Herkunft.",
         "sd_conflict_minerals_filer",
     ),
-    "Ergebnis des Modells": (
-        "Kein Einzelplatz, sondern die Spanne ueber alle Methodenkombinationen.",
-        "rank_p10 rank_p50 rank_p90",
-    ),
+
     "Vergleichsmassstab": (
         "Fremdbewertung, ausschliesslich zum Gegenhalten. Fliesst in keine "
         "eigene Note ein.",
@@ -118,8 +115,7 @@ GROUPS: dict[str, tuple[str, str]] = {
     ),
     "Bezugs- und Guetegroessen": (
         "Nenner, Zaehlwerte und Konfidenzangaben, die keine Bewertung sind.",
-        "revenue_musd n_facilities match_confidence campd_plants egrid_plants "
-        "tri_facilities osha_sites",
+        "revenue_musd n_facilities campd_plants tri_facilities",
     ),
 }
 
@@ -230,13 +226,13 @@ def main() -> None:
             if m not in METRICS:
                 continue
             seen.add(m)
-            label, unit, direction, axis, source_id = METRICS[m]
+            label, unit, direction, axis, source_id, wert_art = METRICS[m]
             c = cov[cov.metric == m]
             arrow = {-1: "$\\downarrow$", 1: "$\\uparrow$", 0: "--"}[direction]
             rows.append(
-                "%s & \\texttt{%s} & %s & %s & %s & %s & %s \\\\"
+                "%s & \\texttt{%s} & %s & %s & %s & %s & %s & %s \\\\"
                 % (
-                    tex(label), tex(m), tex(unit), arrow,
+                    tex(label), tex(m), tex(unit), arrow, tex(wert_art),
                     f"{int(c.firmen.iloc[0])}" if len(c) else "0",
                     f"{int(c.jahr_min.iloc[0])}--{int(c.jahr_max.iloc[0])}" if len(c) else "--",
                     tex(SOURCES[source_id]["name"].split(" (")[0][:26]),
@@ -244,8 +240,8 @@ def main() -> None:
             )
         if rows:
             blocks.append(
-                "\\textbf{%s} & & & & & & \\\\\n"
-                "\\multicolumn{7}{p{0.96\\textwidth}}{\\footnotesize %s}\\\\\n\\addlinespace[2pt]\n%s\n\\midrule"
+                "\\textbf{%s} & & & & & & & \\\\\n"
+                "\\multicolumn{8}{p{0.96\\textwidth}}{\\footnotesize %s}\\\\\n\\addlinespace[2pt]\n%s\n\\midrule"
                 % (tex(group), tex(desc), "\n".join(rows))
             )
     (GEN / "tab_kennzahlen.tex").write_text(

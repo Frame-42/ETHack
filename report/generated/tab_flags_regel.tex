@@ -3,15 +3,17 @@
 \texttt{F03} & 0 t CO2, Programm verlangt kein CO2 & 99 & 0 & CO2 nur aus ARP, RGGI, NSPS4T \\
 \texttt{F04} & Mehr als 12 Verstoßquartale je Anlage & 2 & 0 & Join entdoppelt, nur V und S gezählt \\
 \texttt{F05} & Mehr als 1,3 t CO2 je MWh & 1 & 0 & Grenze 1,3 t/MWh beim Export \\
-\texttt{F06} & Stromrate eines Nicht-Versorgers & 23 & 2 & Rate nur für Kraftwerksflotten \\
+\texttt{F06} & Stromrate eines Nicht-Versorgers & 23 & 0 & Rate nur für Kraftwerksflotten \\
+\texttt{F06} & F06\_\allowbreak{}egrid\_\allowbreak{}zuordnung & 0 & 1 & -- \\
 \texttt{F07} & Trend oder Basisjahr durch Anlagenbasis verzerrt & 7 & 0 & Trend erst ab drei Jahren mit stabiler Basis \\
 \texttt{F08} & Tochter vor oder ohne Konzernzugehörigkeit & 20 & 0 & Gültigkeitszeiträume in resolve.py \\
 \texttt{F09} & Unfallrate auf unplausiblen Stunden & 4 & 0 & Stundennenner 200-4.000 je Beschäftigtem \\
+\texttt{F09} & F09\_\allowbreak{}osha\_\allowbreak{}stunden\_\allowbreak{}unplausibel & 0 & 4 & -- \\
 \texttt{F10} & Lohnverfahren nur über den Handelsnamen & 0 & 7 & bleibt: Franchise ist ein Grenzfall \\
 \texttt{F10} & Lohnverfahren: Team-Zuordnung nicht nachvollziehbar & 35 & 0 & eigene Zuordnung statt Team-Datei \\
 \texttt{F11} & Lohnverfahren ohne Nachzahlung und Betroffene & 69 & 0 & Verstöße und Bußgelder als eigene Kennzahlen \\
 \texttt{F12} & SBTi: validiert und zurückgezogen vermischt & 25 & 0 & Status je Zieltyp getrennt \\
 \texttt{F13} & SBTi: Zieljahr vorbei & 4 & 0 & abgelaufenes Ziel als eigene Kennzahl \\
-\texttt{P01} & Extrem im Branchenvergleich & 1 & 1 & bleibt: echte Extreme sind kein Fehler \\
+\texttt{P01} & Extrem im Branchenvergleich & 1 & 6 & bleibt: echte Extreme sind kein Fehler \\
 \texttt{P02} & Rangband breiter als 70 Punkte & 6 & 0 & ab Band 70 kein Median mehr \\
 \bottomrule%

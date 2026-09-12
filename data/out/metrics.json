@@ -4,349 +4,351 @@
     "unit": "t CO2e",
     "direction": -1,
     "axis": "A",
-    "source_id": "epa_ghgrp"
-  },
-  "co2_intensity": {
-    "label": "CO2-Intensitaet",
-    "unit": "t CO2e je Mio. USD Umsatz",
-    "direction": -1,
-    "axis": "A",
-    "source_id": "eigene_berechnung"
-  },
-  "intensity_cagr": {
-    "label": "Trend der Intensitaet",
-    "unit": "%/Jahr",
-    "direction": -1,
-    "axis": "A",
-    "source_id": "eigene_berechnung"
-  },
-  "absolute_cagr": {
-    "label": "Trend der absoluten Tonnen",
-    "unit": "%/Jahr",
-    "direction": -1,
-    "axis": "A",
-    "source_id": "eigene_berechnung"
+    "source_id": "epa_ghgrp",
+    "wert_art": "aggregiert"
   },
   "n_facilities": {
     "label": "zugeordnete Anlagen",
     "unit": "Anzahl",
     "direction": 0,
     "axis": "meta",
-    "source_id": "epa_ghgrp"
-  },
-  "match_confidence": {
-    "label": "Zuordnungskonfidenz",
-    "unit": "0-1",
-    "direction": 1,
-    "axis": "meta",
-    "source_id": "eigene_berechnung"
-  },
-  "revenue_musd": {
-    "label": "Umsatz",
-    "unit": "Mio. USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_xbrl"
+    "source_id": "epa_ghgrp",
+    "wert_art": "aggregiert"
   },
   "campd_co2_t": {
     "label": "CO2 gemessen (CEMS)",
     "unit": "t CO2e",
     "direction": -1,
     "axis": "A",
-    "source_id": "epa_campd"
+    "source_id": "epa_campd",
+    "wert_art": "aggregiert"
   },
   "campd_plants": {
     "label": "Kraftwerke mit Messung",
     "unit": "Anzahl",
     "direction": 0,
     "axis": "meta",
-    "source_id": "epa_campd"
+    "source_id": "epa_campd",
+    "wert_art": "aggregiert"
   },
-  "t_co2_pro_mwh": {
-    "label": "CO2 je erzeugter MWh",
-    "unit": "t CO2e/MWh",
+  "egrid_co2_t": {
+    "label": "CO2 der Kraftwerke",
+    "unit": "t CO2e",
     "direction": -1,
     "axis": "A",
-    "source_id": "egrid"
+    "source_id": "egrid",
+    "wert_art": "aggregiert"
+  },
+  "egrid_mwh": {
+    "label": "Nettoerzeugung",
+    "unit": "MWh",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "egrid",
+    "wert_art": "aggregiert"
   },
   "egrid_plants": {
     "label": "eGRID-Kraftwerke",
     "unit": "Anzahl",
     "direction": 0,
     "axis": "meta",
-    "source_id": "egrid"
+    "source_id": "egrid",
+    "wert_art": "aggregiert"
   },
   "tri_releases_lbs": {
     "label": "Giftstofffreisetzung",
     "unit": "lbs",
     "direction": -1,
     "axis": "A",
-    "source_id": "epa_tri"
+    "source_id": "epa_tri",
+    "wert_art": "aggregiert"
   },
   "tri_carcinogen_lbs": {
     "label": "davon krebserregend",
     "unit": "lbs",
     "direction": -1,
     "axis": "A",
-    "source_id": "epa_tri"
+    "source_id": "epa_tri",
+    "wert_art": "aggregiert"
   },
   "tri_facilities": {
     "label": "TRI-Anlagen",
     "unit": "Anzahl",
     "direction": 0,
     "axis": "meta",
-    "source_id": "epa_tri"
+    "source_id": "epa_tri",
+    "wert_art": "aggregiert"
   },
-  "dart_rate": {
-    "label": "Unfallrate DART",
-    "unit": "Faelle je 100 Vollzeitkraefte",
+  "osha_dafw_cases": {
+    "label": "Faelle mit Ausfalltagen",
+    "unit": "Anzahl",
     "direction": -1,
     "axis": "S",
-    "source_id": "osha_ita"
+    "source_id": "osha_ita",
+    "wert_art": "aggregiert"
+  },
+  "osha_djtr_cases": {
+    "label": "Faelle mit Einschraenkung",
+    "unit": "Anzahl",
+    "direction": -1,
+    "axis": "S",
+    "source_id": "osha_ita",
+    "wert_art": "aggregiert"
+  },
+  "osha_hours": {
+    "label": "gemeldete Arbeitsstunden",
+    "unit": "Stunden",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "osha_ita",
+    "wert_art": "aggregiert"
   },
   "osha_deaths": {
     "label": "Todesfaelle",
     "unit": "Anzahl",
     "direction": -1,
     "axis": "S",
-    "source_id": "osha_ita"
+    "source_id": "osha_ita",
+    "wert_art": "aggregiert"
   },
   "osha_sites": {
     "label": "gemeldete Betriebsstaetten",
     "unit": "Anzahl",
     "direction": 0,
     "axis": "meta",
-    "source_id": "osha_ita"
+    "source_id": "osha_ita",
+    "wert_art": "aggregiert"
   },
   "echo_penalties_usd": {
     "label": "Umweltstrafen",
     "unit": "USD",
     "direction": -1,
     "axis": "G",
-    "source_id": "epa_echo"
+    "source_id": "epa_echo",
+    "wert_art": "aggregiert"
   },
-  "echo_nc_quarters_per_site": {
-    "label": "Verstossquartale je Anlage",
+  "echo_nc_quarters": {
+    "label": "Verstossquartale",
     "unit": "Quartale",
     "direction": -1,
     "axis": "G",
-    "source_id": "epa_echo"
+    "source_id": "epa_echo",
+    "wert_art": "aggregiert"
+  },
+  "echo_facilities": {
+    "label": "ECHO-Anlagen",
+    "unit": "Anzahl",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "epa_echo",
+    "wert_art": "aggregiert"
   },
   "echo_significant": {
     "label": "Anlagen mit schwerem Verstoss",
     "unit": "Anzahl",
     "direction": -1,
     "axis": "G",
-    "source_id": "epa_echo"
-  },
-  "rank_band_width": {
-    "label": "Breite des Rangbands",
-    "unit": "Perzentilpunkte",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "epa_ghgrp"
-  },
-  "sbti_validated": {
-    "label": "SBTi-geprueftes Ziel",
-    "unit": "ja/nein",
-    "direction": 1,
-    "axis": "B",
-    "source_id": "sbti"
-  },
-  "sbti_near_term_year": {
-    "label": "Zwischenzieljahr",
-    "unit": "Jahr",
-    "direction": 0,
-    "axis": "B",
-    "source_id": "sbti"
-  },
-  "sbti_net_zero_year": {
-    "label": "Netto-null-Jahr",
-    "unit": "Jahr",
-    "direction": 0,
-    "axis": "B",
-    "source_id": "sbti"
-  },
-  "sbti_commitment_removed": {
-    "label": "Nahziel-Zusage zurueckgezogen",
-    "unit": "ja/nein",
-    "direction": -1,
-    "axis": "B",
-    "source_id": "sbti"
-  },
-  "sbti_net_zero_removed": {
-    "label": "Netto-null-Zusage zurueckgezogen",
-    "unit": "ja/nein",
-    "direction": -1,
-    "axis": "B",
-    "source_id": "sbti"
-  },
-  "sbti_near_term_expired": {
-    "label": "Zwischenziel abgelaufen",
-    "unit": "ja/nein",
-    "direction": -1,
-    "axis": "B",
-    "source_id": "sbti"
-  },
-  "intensity_illusion": {
-    "label": "Intensitaet faellt, Tonnen steigen",
-    "unit": "ja/nein",
-    "direction": -1,
-    "axis": "B",
-    "source_id": "eigene_berechnung"
-  },
-  "base_year_ratio": {
-    "label": "Basisjahr-Bequemlichkeit",
-    "unit": "Verhaeltnis",
-    "direction": -1,
-    "axis": "B",
-    "source_id": "eigene_berechnung"
-  },
-  "rank_p10": {
-    "label": "Rangband untere Grenze",
-    "unit": "Perzentil",
-    "direction": 1,
-    "axis": "ergebnis",
-    "source_id": "eigene_berechnung"
-  },
-  "rank_p50": {
-    "label": "Rangband Median",
-    "unit": "Perzentil",
-    "direction": 1,
-    "axis": "ergebnis",
-    "source_id": "eigene_berechnung"
-  },
-  "rank_p90": {
-    "label": "Rangband obere Grenze",
-    "unit": "Perzentil",
-    "direction": 1,
-    "axis": "ergebnis",
-    "source_id": "eigene_berechnung"
-  },
-  "esg_risk_total": {
-    "label": "kommerzielles ESG-Risiko",
-    "unit": "Punkte",
-    "direction": -1,
-    "axis": "vergleich",
-    "source_id": "esg_snapshot"
-  },
-  "net_income_usd": {
-    "label": "Nettogewinn",
-    "unit": "USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_dera"
-  },
-  "total_assets_usd": {
-    "label": "Bilanzsumme",
-    "unit": "USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_dera"
-  },
-  "total_debt_usd": {
-    "label": "Finanzschulden",
-    "unit": "USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_dera"
-  },
-  "operating_cf_usd": {
-    "label": "operativer Cashflow",
-    "unit": "USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_dera"
-  },
-  "capex_usd": {
-    "label": "Sachinvestitionen",
-    "unit": "USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_dera"
-  },
-  "rnd_usd": {
-    "label": "Forschung und Entwicklung",
-    "unit": "USD",
-    "direction": 0,
-    "axis": "meta",
-    "source_id": "sec_dera"
+    "source_id": "epa_echo",
+    "wert_art": "aggregiert"
   },
   "whd_cases": {
     "label": "Lohnverfahren 2022-2024",
     "unit": "Anzahl",
     "direction": -1,
     "axis": "S",
-    "source_id": "dol_whd"
+    "source_id": "dol_whd",
+    "wert_art": "aggregiert"
   },
   "whd_backwages_usd": {
     "label": "nachgezahlte Loehne",
     "unit": "USD",
     "direction": -1,
     "axis": "S",
-    "source_id": "dol_whd"
+    "source_id": "dol_whd",
+    "wert_art": "aggregiert"
   },
   "whd_employees": {
     "label": "betroffene Beschaeftigte",
     "unit": "Anzahl",
     "direction": -1,
     "axis": "S",
-    "source_id": "dol_whd"
+    "source_id": "dol_whd",
+    "wert_art": "aggregiert"
   },
   "whd_violations": {
     "label": "festgestellte Verstoesse",
     "unit": "Anzahl",
     "direction": -1,
     "axis": "S",
-    "source_id": "dol_whd"
+    "source_id": "dol_whd",
+    "wert_art": "aggregiert"
   },
   "whd_penalties_usd": {
     "label": "Geldbussen Lohnrecht",
     "unit": "USD",
     "direction": -1,
     "axis": "S",
-    "source_id": "dol_whd"
+    "source_id": "dol_whd",
+    "wert_art": "aggregiert"
+  },
+  "sbti_validated": {
+    "label": "SBTi-geprueftes Ziel",
+    "unit": "ja/nein",
+    "direction": 1,
+    "axis": "B",
+    "source_id": "sbti",
+    "wert_art": "gemeldet"
+  },
+  "sbti_near_term_year": {
+    "label": "Zwischenzieljahr",
+    "unit": "Jahr",
+    "direction": 0,
+    "axis": "B",
+    "source_id": "sbti",
+    "wert_art": "gemeldet"
+  },
+  "sbti_net_zero_year": {
+    "label": "Netto-null-Jahr",
+    "unit": "Jahr",
+    "direction": 0,
+    "axis": "B",
+    "source_id": "sbti",
+    "wert_art": "gemeldet"
+  },
+  "sbti_commitment_removed": {
+    "label": "Nahziel-Zusage zurueckgezogen",
+    "unit": "ja/nein",
+    "direction": -1,
+    "axis": "B",
+    "source_id": "sbti",
+    "wert_art": "gemeldet"
+  },
+  "sbti_net_zero_removed": {
+    "label": "Netto-null-Zusage zurueckgezogen",
+    "unit": "ja/nein",
+    "direction": -1,
+    "axis": "B",
+    "source_id": "sbti",
+    "wert_art": "gemeldet"
+  },
+  "sbti_near_term_expired": {
+    "label": "Zwischenziel abgelaufen",
+    "unit": "ja/nein",
+    "direction": -1,
+    "axis": "B",
+    "source_id": "sbti",
+    "wert_art": "gemeldet"
+  },
+  "revenue_musd": {
+    "label": "Umsatz",
+    "unit": "Mio. USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_xbrl",
+    "wert_art": "gemeldet"
+  },
+  "net_income_usd": {
+    "label": "Nettogewinn",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera",
+    "wert_art": "gemeldet"
+  },
+  "total_assets_usd": {
+    "label": "Bilanzsumme",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera",
+    "wert_art": "gemeldet"
+  },
+  "total_debt_usd": {
+    "label": "Finanzschulden",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera",
+    "wert_art": "gemeldet"
+  },
+  "operating_cf_usd": {
+    "label": "operativer Cashflow",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera",
+    "wert_art": "gemeldet"
+  },
+  "capex_usd": {
+    "label": "Sachinvestitionen",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera",
+    "wert_art": "gemeldet"
+  },
+  "rnd_usd": {
+    "label": "Forschung und Entwicklung",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera",
+    "wert_art": "gemeldet"
   },
   "sd_conflict_minerals_filer": {
     "label": "meldet Konfliktmineralien (Form SD)",
     "unit": "ja/nein",
     "direction": 0,
     "axis": "meta",
-    "source_id": "sec_sd"
+    "source_id": "sec_sd",
+    "wert_art": "gemeldet"
   },
   "wba_tpq": {
     "label": "WBA Qualitaet des Transitionsplans",
     "unit": "0-5",
     "direction": 1,
     "axis": "B",
-    "source_id": "wba"
+    "source_id": "wba",
+    "wert_art": "gemeldet"
   },
   "wba_ctt": {
     "label": "WBA Beitrag zur Transition",
     "unit": "0-2",
     "direction": 1,
     "axis": "B",
-    "source_id": "wba"
+    "source_id": "wba",
+    "wert_art": "gemeldet"
   },
   "wba_social": {
     "label": "WBA Social Benchmark",
     "unit": "0-100",
     "direction": 1,
     "axis": "S",
-    "source_id": "wba"
+    "source_id": "wba",
+    "wert_art": "gemeldet"
   },
   "wba_nature": {
     "label": "WBA Nature Benchmark",
     "unit": "0-100",
     "direction": 1,
     "axis": "B",
-    "source_id": "wba"
+    "source_id": "wba",
+    "wert_art": "gemeldet"
   },
   "wba_just_transition": {
     "label": "WBA Just Transition",
     "unit": "0-100",
     "direction": 1,
     "axis": "S",
-    "source_id": "wba"
+    "source_id": "wba",
+    "wert_art": "gemeldet"
+  },
+  "esg_risk_total": {
+    "label": "kommerzielles ESG-Risiko",
+    "unit": "Punkte",
+    "direction": -1,
+    "axis": "vergleich",
+    "source_id": "esg_snapshot",
+    "wert_art": "gemeldet"
   }
 }

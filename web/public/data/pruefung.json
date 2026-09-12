@@ -1,5 +1,5 @@
 {
-  "flags": 10,
+  "flags": 18,
   "reparaturen": [
     {
       "thema": "Null statt fehlend",
@@ -20,28 +20,28 @@
       "ticker": "TSLA",
       "beleg": "1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen",
       "behoben": true,
-      "befund": "12 Quartale statt 24"
+      "befund": "12 Quartale auf 1 Anlage statt 24"
     },
     {
-      "thema": "Stromrate ohne Stromgeschaeft",
+      "thema": "Kein gerechnetes Verhaeltnis",
       "ticker": "GE",
-      "beleg": "4,44 t/MWh aus einem Heizkraftwerk",
+      "beleg": "4,44 t/MWh war unsere Rate, nicht die von eGRID",
       "behoben": true,
-      "befund": "keine Rate mehr"
+      "befund": "keine Rate im Bestand, nur gemeldete Menge und Erzeugung"
     },
     {
-      "thema": "Stromrate trotz falscher Branchenkennung",
+      "thema": "Zaehler und Nenner bleiben",
       "ticker": "BRK-B",
       "beleg": "113 Kraftwerke, 83 TWh -- GICS sagt Financials",
       "behoben": true,
-      "befund": "Rate bleibt: 0.68 t/MWh"
+      "befund": "82.7 TWh und 56.2 Mt gemeldet"
     },
     {
-      "thema": "Nenner unbrauchbar",
+      "thema": "Keine Unfallrate aus ungepruefter Angabe",
       "ticker": "MCD",
       "beleg": "4 Meldungen mit im Median 50 h je Beschaeftigtem",
       "behoben": true,
-      "befund": "keine Unfallrate auf falschem Nenner"
+      "befund": "gemeldete Stunden und Faelle statt gerechneter Rate"
     },
     {
       "thema": "Zuordnung ueber Namensteile",
@@ -51,11 +51,11 @@
       "befund": "keine Lohnverfahren mehr zugerechnet"
     },
     {
-      "thema": "Basisjahr unvollstaendig",
+      "thema": "Kein gerechneter Trend",
       "ticker": "PPL",
       "beleg": "2018 eine Anlage 5 kt, ab 2019 neun Anlagen 28 Mt",
       "behoben": true,
-      "befund": "2018 entfernt, Trend wieder lesbar"
+      "befund": "keine Trend- oder Intensitaetswerte im Bestand, Anlagenzahl steht daneben"
     },
     {
       "thema": "Zuordnung ohne Zeitraum",
@@ -70,38 +70,48 @@
       "beleg": "GOOG und GOOGL teilen CIK 1652044",
       "behoben": true,
       "befund": "nur noch GOOGL im Bestand"
+    },
+    {
+      "thema": "Nur Werte mit Quelle",
+      "ticker": "alle",
+      "beleg": "jeder Wert ist gemeldet oder eine Summe gemeldeter Werte",
+      "behoben": true,
+      "befund": "{'gemeldet': 5874, 'aggregiert': 5551}"
     }
   ],
-  "reparaturen_behoben": 10,
+  "reparaturen_behoben": 11,
   "fehler": 0,
-  "pruefen": 10,
+  "pruefen": 18,
   "je_regel": {
-    "F06_egrid_nicht_versorger": 2,
+    "F06_egrid_zuordnung": 1,
+    "F09_osha_stunden_unplausibel": 4,
     "F10_whd_franchise": 7,
-    "P01_branchenextrem": 1
+    "P01_branchenextrem": 6
   },
-  "firmen_betroffen": 10,
+  "firmen_betroffen": 17,
   "ranking_relevant": 0,
   "ki": {
     "modell": "gpt-5.4-mini",
     "eskalation": "gpt-5.5",
     "urteile": {
-      "fehler": 8,
-      "plausibel": 1,
-      "unklar": 1
+      "fehler": 11,
+      "plausibel": 5,
+      "unklar": 2
     },
     "ursachen": {
-      "zuordnung_falsch": 7,
-      "branchenstruktur_real": 2,
-      "sonstiges": 1
+      "zuordnung_falsch": 8,
+      "sonstiges": 3,
+      "echter_extremwert": 3,
+      "definition_oder_einheit": 2,
+      "branchenstruktur_real": 2
     },
     "routen": {
-      "automatisch": 7,
-      "mensch": 3
+      "automatisch": 13,
+      "mensch": 5
     },
-    "eskaliert": 1,
+    "eskaliert": 2,
     "regel_bestaetigt_fehler": 0,
     "regel_widersprochen_fehler": 0,
-    "tokens_gesamt": 8221
+    "tokens_gesamt": 14887
   }
 }

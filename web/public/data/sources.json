@@ -178,15 +178,5 @@
     "measurement": "Stammdaten",
     "caveat": "nur fuer die Anzeige; Logos sind Favicons und Marken der jeweiligen Firmen",
     "retrieved_at": "2026-09-13"
-  },
-  "eigene_berechnung": {
-    "name": "Eigene Berechnung dieser Pipeline",
-    "url": "scripts/02_analyse.py",
-    "access": "reproduzierbar",
-    "license": "-",
-    "coverage": "abgeleitet aus den oben genannten Quellen",
-    "measurement": "berechnet",
-    "caveat": "Herkunft der Eingangsgroessen steht jeweils beim Basiswert",
-    "retrieved_at": "2026-09-13"
   }
 }

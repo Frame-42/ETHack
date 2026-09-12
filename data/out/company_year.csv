@@ -295,6 +295,8 @@ EXC,2018,8698311.09,21,1.0,35978.0,241.7674993051309,Exelon,Utilities,Electric U
 EXC,2019,8591280.92364288,22,1.0,16725.0,513.6789789921004,Exelon,Utilities,Electric Utilities
 EXC,2020,7882591.443392,20,1.0,16663.0,473.0595597066555,Exelon,Utilities,Electric Utilities
 EXC,2021,8012958.8956,16,1.0,17938.0,446.70302684803215,Exelon,Utilities,Electric Utilities
+EXC,2022,322677.19279999996,4,1.0,19078.0,16.91357546912674,Exelon,Utilities,Electric Utilities
+EXC,2023,301249.6376,4,1.0,21727.0,13.865220122428315,Exelon,Utilities,Electric Utilities
 EXE,2018,2762293.89,9,0.9499999999999998,10030.0,275.4031794616152,Expand Energy,Energy,Oil & Gas Exploration & Production
 EXE,2019,3356093.1319999998,9,0.9499999999999998,8532.0,393.35362541022033,Expand Energy,Energy,Oil & Gas Exploration & Production
 EXE,2020,3160602.682,9,0.9499999999999998,5240.0,603.1684507633588,Expand Energy,Energy,Oil & Gas Exploration & Production
@@ -606,6 +608,8 @@ PEG,2018,13104714.8244936,14,1.0,9696.0,1351.5588721631188,Public Service Enterp
 PEG,2019,9210590.258,12,1.0,10076.0,914.111776300119,Public Service Enterprise Group,Utilities,Electric Utilities
 PEG,2020,9175809.344,12,1.0,9603.0,955.5148749349162,Public Service Enterprise Group,Utilities,Electric Utilities
 PEG,2021,9573770.4688,12,1.0,9722.0,984.7531854350957,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2022,514825.82560000004,3,1.0,9800.0,52.533247510204085,Public Service Enterprise Group,Utilities,Electric Utilities
+PEG,2023,463035.34199999995,2,1.0,11237.0,41.206313250867666,Public Service Enterprise Group,Utilities,Electric Utilities
 PEP,2018,400694.908,9,1.0,64661.0,6.196856033776156,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
 PEP,2019,404761.992,9,1.0,67161.0,6.026741591101979,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
 PEP,2020,469217.58,11,1.0,70372.0,6.667674359120105,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
@@ -648,6 +652,7 @@ PPG,2020,33155.306,2,1.0,13834.0,2.3966536070550815,PPG Industries,Materials,Spe
 PPG,2021,101330.31,2,1.0,16802.0,6.030848113319843,PPG Industries,Materials,Specialty Chemicals
 PPG,2022,109908.678,2,1.0,15614.0,7.039110926091968,PPG Industries,Materials,Specialty Chemicals
 PPG,2023,198602.998,3,1.0,16242.0,12.227742765669252,PPG Industries,Materials,Specialty Chemicals
+PPL,2018,5152.8,1,1.0,7779.0,0.6623987659082144,PPL Corporation,Utilities,Electric Utilities
 PPL,2019,28493455.24,9,1.0,5541.0,5142.294755459303,PPL Corporation,Utilities,Electric Utilities
 PPL,2020,26970181.802,9,1.0,5429.0,4967.79918990606,PPL Corporation,Utilities,Electric Utilities
 PPL,2021,28346504.8116,9,1.0,5838.0,4855.516411716341,PPL Corporation,Utilities,Electric Utilities
@@ -710,6 +715,8 @@ SWKS,2020,32848.104590999996,1,1.0,3355.7,9.78874887236642,Skyworks Solutions,In
 SWKS,2021,42201.42397,1,1.0,5109.1,8.26005049225891,Skyworks Solutions,Information Technology,Semiconductors
 SWKS,2022,35693.24597,1,1.0,5485.5,6.506835469875126,Skyworks Solutions,Information Technology,Semiconductors
 SWKS,2023,24116.71997,1,1.0,4772.4,5.053373558377336,Skyworks Solutions,Information Technology,Semiconductors
+TAP,2018,30258.136000000002,1,0.9,13338.0,2.2685662018293598,Molson Coors Beverage Company,Consumer Staples,Brewers
+TAP,2019,30167.336,1,1.0,13009.1,2.318941048958037,Molson Coors Beverage Company,Consumer Staples,Brewers
 TAP,2020,411297.402,6,1.0,11723.8,35.08226018867603,Molson Coors Beverage Company,Consumer Staples,Brewers
 TAP,2021,385290.02599999995,6,1.0,12449.9,30.94723861235833,Molson Coors Beverage Company,Consumer Staples,Brewers
 TAP,2022,372303.754,6,1.0,12807.5,29.06919804801874,Molson Coors Beverage Company,Consumer Staples,Brewers

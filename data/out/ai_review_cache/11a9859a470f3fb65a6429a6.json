@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "sonstiges",
+ "explanation": "Die gemeldeten OSHA-Stunden wirken als Firmenmesswert nicht belastbar: Der Median von 1.510 Stunden je Beschäftigtem liegt deutlich unter einer plausiblen Vollzeit-Jahresgröße, und ein Drittel der Meldungen liegt außerhalb des vorgegebenen Plausibilitätsbereichs. Die Belege zeigen zwar keine konkrete Fehlquelle, aber sie stützen klar, dass der Wert so nicht unverändert als Firmenwert verrechnet werden sollte.",
+ "action": "kennzeichnen",
+ "confidence": 0.86,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 662,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 797
+ }
+}

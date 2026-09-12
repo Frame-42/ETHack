@@ -22,7 +22,7 @@ export type CompareMetric = {
   source: string;
 };
 
-const START = ["dart_rate", "tri_releases_lbs", "sbti_validated"];
+const START = ["scope1_t", "tri_releases_lbs", "sbti_validated"];
 
 export default function Compare({
   rows,

@@ -28,7 +28,21 @@
 {\small ETHack 2026 · Stand 13.~September 2026\\ Details und Quellen im Ursachenbericht \texttt{qualitaetspruefung.pdf}}
 
 \vspace{4mm}
-\infobox{\textbf{Kurz.} Der Datensatz enthielt unglaubwürdige Werte. Wir haben jede Auffälligkeit auf ihre Ursache zurückgeführt, die systematischen Ursachen in der Pipeline \emph{repariert} statt sie zu markieren, und nur den Rest von Regeln, einem Sprachmodell und -- im Grenzfall -- einem Menschen prüfen lassen. Dieselben Regeln finden jetzt \statFlags{} statt \vorFlags{} Fälle; an Menschen gehen \kiMensch{} statt \vorMensch. Zehn Kontrollfälle mit belegter Antwort prüfen bei jedem Lauf, dass die Reparaturen halten.}
+\infobox{\textbf{Kurz.} Der Datensatz enthielt unglaubwürdige Werte. Zwei Konsequenzen: Erstens enthält er jetzt nur noch Werte, die eine Quelle veröffentlicht hat -- jede selbstgerechnete Kennzahl (Intensität, Rate je MWh, Unfallrate, Trend, Rangband) ist entfernt. Zweitens sind die verbliebenen Ursachen in der Pipeline repariert statt markiert. Dieselben Regeln finden jetzt \statFlags{} statt \vorFlags{} Fälle; an Menschen gehen \kiMensch{} statt \vorMensch. Elf Kontrollfälle prüfen bei jedem Lauf, dass es so bleibt.}
+
+\section*{0\quad Die Regel}
+Entweder eine vertrauenswürdige Quelle veröffentlicht den Wert -- oder es gibt keinen Wert. Jede Zeile trägt \texttt{wert\_art}:
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{P{2.6cm} X}
+\toprule
+\textbf{gemeldet} & Die Quelle veröffentlicht genau diese Zahl für genau diese Firma: SEC-Umsatz, SBTi-Status, WBA-Note, kommerzielle ESG-Note. \\
+\textbf{aggregiert} & Summe oder Anzahl der von der Quelle veröffentlichten Einzelwerte über die Anlagen oder Betriebe der Firma. Addition, keine weitere Rechnung. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Eine dritte Art ist nicht zugelassen -- \texttt{07\_dataset.py} bricht ab, wenn eine auftaucht. Entfallen sind dadurch: CO\textsubscript{2}-Intensität, Tonnen je MWh, Unfallrate DART, Verstoßquartale je Anlage, beide Trends, Basisjahr-Quote, Intensitäts-Illusion, Zuordnungskonfidenz und die drei Rangband-Werte. An ihrer Stelle stehen Zähler und Nenner einzeln: eGRID-Menge und Nettoerzeugung, OSHA-Fälle, Stunden und Betriebsstätten, ECHO-Quartale und Anlagenzahl. Die Monte-Carlo-Rangbänder und Intensitäten rechnet weiterhin \texttt{scripts/02\_analyse.py} -- als Analyse im Bericht, nicht als Datenwert.
 
 \section*{1\quad Ursachen finden}
 Ausgangspunkt war der Verbesserungsbericht des Teams. Jede Vermutung wurde an den Rohdaten nachgesehen und, wo es um die Bedeutung eines Feldes ging, an der Dokumentation der Quelle belegt (EPA-Meldeverordnung, CAMD-Datenleitfaden, OSHA-ITA-Leitfaden, ECHO-Feldbeschreibung, SBTi-Statusdefinitionen). Ergebnis: sieben Mechanismen, fast alle an der Nahtstelle zwischen Quelle und Pipeline -- nicht in den Quellen selbst. Zwei Diagnosen des Verbesserungsberichts wurden korrigiert (CAMPD-Nullen, ECHO-Werte über 12).
@@ -41,10 +55,10 @@ Zwölf Stellen im Code, in der Reihenfolge ihrer Wirkung:
 \toprule
 \textbf{Stelle} & \textbf{Reparatur} \\
 \midrule
-\texttt{canonical.py} & keine Menge gemeldet $\Rightarrow$ fehlend statt 0; Jahre mit unvollständiger Zuordnung entfernt; Trend erst ab drei Jahren mit stabiler Basis \\
-\texttt{consolidate.py} & CO\textsubscript{2} nur aus ARP, RGGI, NSPS4T; Lohnverfahren aus den Rohdaten statt aus der Team-Datei; SBTi-Status je Zieltyp; Aktiengattungen je CIK zusammengeführt; ab Bandbreite 70 kein Median \\
+\texttt{canonical.py} & keine Menge gemeldet $\Rightarrow$ fehlend statt 0; Anlagenzahl je Jahr steht neben der Menge \\
+\texttt{consolidate.py} & CO\textsubscript{2} nur aus ARP, RGGI, NSPS4T; Lohnverfahren aus den Rohdaten statt aus der Team-Datei; SBTi-Status je Zieltyp; Aktiengattungen je CIK zusammengeführt; \texttt{wert\_art} an jedem Wert \\
 \texttt{resolve.py} & Gültigkeitszeiträume je Zuordnung; Tochtertreffer nur an der Wortgrenze \\
-\texttt{05b\_firmenaggregate.py} & Join entdoppelt und nur V/S gezählt; Stundennenner 200--4\,000; Stromrate nur für Kraftwerksflotten \\
+\texttt{05b\_firmenaggregate.py} & Join entdoppelt und nur V/S gezählt; nur noch Summen der gemeldeten Zahlen, keine Raten \\
 \texttt{07\_dataset.py} & harte Grenzen beim Export -- der Lauf bricht ab statt auszuliefern \\
 \bottomrule
 \end{tabularx}
@@ -84,7 +98,7 @@ Sonst entscheidet die Weiterleitung automatisch nach dem Vorschlag des Modells. 
 \item Tab \textbf{Prüfung} öffnen, oben den eigenen Namen eintragen (bleibt im Browser gespeichert).
 \item Filter steht auf \emph{an Menschen} und \emph{offen}. Sortiert ist nach Rankingrelevanz, dann Wirkung in Tonnen, dann Unsicherheit der KI.
 \item Fall aufklappen, Regelmeldung, KI-Begründung und Belege lesen.
-\item Einen Satz Begründung schreiben und einen Knopf drücken: \textbf{Fehler bestätigen} (Wert wird nicht verrechnet), \textbf{Korrektur nötig} (Quelle oder Zuordnung anpassen) oder \textbf{Wert ist ok} (Fehlalarm).
+\item Einen Satz Begründung schreiben und einen Knopf drücken: \textbf{Fehler bestätigen} (Wert wird nicht verrechnet), \textbf{Korrektur nötig} (Quelle oder Zuordnung anpassen) oder \textbf{Wert ist ok} (Fehlalarm). Nur dieser Schritt kann einen gemeldeten Wert aus dem Bestand nehmen -- die automatische Prüfung kennzeichnet ihn höchstens.
 \item Die Entscheidung wird sofort gespeichert und lässt sich zurücknehmen; \emph{Entscheidungen als CSV} lädt sie herunter.
 \end{enumerate}
 

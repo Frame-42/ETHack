@@ -46,6 +46,7 @@ export default async function Page() {
                     <th>Einheit</th>
                     <th className="num">Richtung</th>
                     <th className="num">Firmen</th>
+                    <th>Herkunft</th>
                     <th>Quelle</th>
                   </tr>
                 </thead>
@@ -72,6 +73,18 @@ export default async function Page() {
                               : "–"}
                         </td>
                         <td className="num">{coverage.get(id)?.size ?? 0}</td>
+                        <td>
+                          <span
+                            className={`chip ${def.wert_art === "gemeldet" ? "good" : "a"}`}
+                            title={
+                              def.wert_art === "gemeldet"
+                                ? "Diese Zahl veröffentlicht die Quelle für die Firma."
+                                : "Summe der von der Quelle veröffentlichten Einzelwerte je Anlage oder Betrieb."
+                            }
+                          >
+                            {def.wert_art ?? "–"}
+                          </span>
+                        </td>
                         <td className="src">
                           {data.sources[def.sourceId]?.name ?? def.sourceId}
                         </td>

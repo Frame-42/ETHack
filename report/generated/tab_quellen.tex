@@ -1,4 +1,4 @@
-\textbf{EPA Greenhouse Gas Reporting Program} & nein & US-Regierungswerk, gemeinfrei & 130\,036 & 136 & 1\,017 \\
+\textbf{EPA Greenhouse Gas Reporting Program} & nein & US-Regierungswerk, gemeinfrei & 130\,036 & 136 & 1\,540 \\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}data.\allowbreak{}epa.\allowbreak{}gov/\allowbreak{}efservice/\allowbreak{}PUB\_DIM\_FACILITY/\allowbreak{}}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize US-Anlagen ueber 25 000 t CO2e, Berichtsjahre 2018-2023 \quad\textit{Grenze:} Reihe endet 2023; Direktemittenten von Lieferanten getrennt (sector\_type)}\\
 \addlinespace[3pt]
@@ -6,11 +6,11 @@
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}api.\allowbreak{}epa.\allowbreak{}gov/\allowbreak{}easey/\allowbreak{}emissions-\allowbreak{}mgmt/\allowbreak{}emissions/\allowbreak{}apportioned/\allowbreak{}annual}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize Kraftwerksbloecke der Handelsprogramme, 2019 bis laufendes Jahr \quad\textit{Grenze:} nur Stromerzeugung; laufendes Jahr unvollstaendig}\\
 \addlinespace[3pt]
-\textbf{EPA eGRID} & nein & US-Regierungswerk, gemeinfrei & 12\,239 & 43 & 69 \\
+\textbf{EPA eGRID} & nein & US-Regierungswerk, gemeinfrei & 12\,239 & 43 & 129 \\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}www.\allowbreak{}epa.\allowbreak{}gov/\allowbreak{}egrid/\allowbreak{}download-\allowbreak{}data}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize US-Kraftwerke, Berichtsjahr 2023 \quad\textit{Grenze:} nur aussagekraeftig fuer Firmen, deren Geschaeft Stromerzeugung ist}\\
 \addlinespace[3pt]
-\textbf{SEC EDGAR XBRL frames} & nein & oeffentlich & 53\,492 & 133 & 732 \\
+\textbf{SEC EDGAR XBRL frames} & nein & oeffentlich & 53\,492 & 133 & 739 \\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}data.\allowbreak{}sec.\allowbreak{}gov/\allowbreak{}api/\allowbreak{}xbrl/\allowbreak{}frames/\allowbreak{}}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize Geschaeftsjahre 2016-2025 \quad\textit{Grenze:} fuenf verschiedene Umsatz-Tags; Firmen taggen uneinheitlich}\\
 \addlinespace[3pt]
@@ -22,11 +22,11 @@
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}data.\allowbreak{}epa.\allowbreak{}gov/\allowbreak{}efservice/\allowbreak{}downloads/\allowbreak{}tri/\allowbreak{}mv\_tri\_basic\_download/\allowbreak{}2023\_US/\allowbreak{}csv/\allowbreak{}}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize US-Anlagen, Berichtsjahr 2023 \quad\textit{Grenze:} Gesamtmenge korreliert mit CO2 (rho 0,53); eigenstaendig ist der Krebserreger-Anteil}\\
 \addlinespace[3pt]
-\textbf{OSHA Injury Tracking Application, Formular 300A} & nein & US-Regierungswerk, gemeinfrei & 1\,176\,137 & 313 & 939 \\
+\textbf{OSHA Injury Tracking Application, Formular 300A} & nein & US-Regierungswerk, gemeinfrei & 1\,176\,137 & 314 & 1\,570 \\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}www.\allowbreak{}osha.\allowbreak{}gov/\allowbreak{}itadata}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize US-Betriebsstaetten, 2023-2025 \quad\textit{Grenze:} DART misst auch Branchenstruktur; branchenrelativ vergleichen}\\
 \addlinespace[3pt]
-\textbf{EPA ECHO Enforcement and Compliance History} & nein & US-Regierungswerk, gemeinfrei & 3\,178\,967 & 134 & 402 \\
+\textbf{EPA ECHO Enforcement and Compliance History} & nein & US-Regierungswerk, gemeinfrei & 3\,178\,967 & 134 & 536 \\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}echo.\allowbreak{}epa.\allowbreak{}gov/\allowbreak{}files/\allowbreak{}echodownloads/\allowbreak{}echo\_exporter.\allowbreak{}zip}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize US-Anlagen, Konformitaetshistorie drei Jahre \quad\textit{Grenze:} Zuordnung ueber FRS-Kennung, deshalb nur fuer Anlagen mit GHGRP-Eintrag}\\
 \addlinespace[3pt]
@@ -69,8 +69,4 @@
 \textbf{Wikidata, offizielle Websites (fuer Firmenlogos)} & nein & CC0 & -- & -- & -- \\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily https:/\allowbreak{}/\allowbreak{}query.\allowbreak{}wikidata.\allowbreak{}org/\allowbreak{}sparql}\\
 \multicolumn{6}{p{0.96\textwidth}}{\footnotesize Website ueber CIK (P5531 -> P856), Rest aus SEC Submissions \quad\textit{Grenze:} nur fuer die Anzeige; Logos sind Favicons und Marken der jeweiligen Firmen}\\
-\addlinespace[3pt]
-\textbf{Eigene Berechnung dieser Pipeline} & nein & - & -- & 133 & 1\,724 \\
-\multicolumn{6}{p{0.96\textwidth}}{\footnotesize\ttfamily scripts/\allowbreak{}02\_analyse.\allowbreak{}py}\\
-\multicolumn{6}{p{0.96\textwidth}}{\footnotesize abgeleitet aus den oben genannten Quellen \quad\textit{Grenze:} Herkunft der Eingangsgroessen steht jeweils beim Basiswert}\\
 \bottomrule%
