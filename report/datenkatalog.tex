@@ -166,6 +166,26 @@ Dieselben Werte, gruppiert nach dem, was sie messen. Der Pfeil gibt die Richtung
 \end{longtable}
 \end{center}
 
+\section{Belastbarkeit je Bereich}
+
+Nicht jede Zahl trägt ein Urteil. Je Firma und Bereich wird deshalb geprüft, ob das Material stark genug ist. Kennzahlen, die denselben Sachverhalt beschreiben, bilden eine \emph{Familie} und zählen einmal, mit dem Gewicht ihrer stärksten vorhandenen Kennzahl. Das Gewicht drückt Beweiskraft aus, nicht inhaltliche Wichtigkeit: 1{,}0 gemessen oder behördlich festgestellt, 0{,}8 gesetzlich gemeldet, 0{,}5 bis 0{,}7 abgeleitet oder unsicher zugeordnet, 0{,}3 bis 0{,}4 Bewertung von Offenlegung, 0{,}2 bloßer Meldestatus.
+
+\textbf{Belastbar} ist ein Bereich bei mindestens zwei unabhängigen Familien, davon einer mit Gewicht ab 0{,}8, und einer Summe ab 1{,}5. \textbf{Eingeschränkt} bei einem Anker oder einer Summe ab 1{,}0, sonst \textbf{dünn}. Ein gemeinsames Ranking verlangt Belastbarkeit in allen drei Bereichen und mindestens sechs solche Firmen je Branche. Regeln und Werte stehen in \texttt{pipeline/reliability.py}, das Ergebnis je Firma in \texttt{belastbarkeit.csv}.
+
+\begin{center}\footnotesize
+\begin{longtable}{P{4.6cm} c r P{8.6cm}}
+\toprule
+\textbf{Familie} & \textbf{Gewicht} & \textbf{Firmen} & \textbf{Beweisart} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Familie} & \textbf{Gewicht} & \textbf{Firmen} & \textbf{Beweisart} \\
+\midrule
+\endhead
+\input{generated/tab_belastbarkeit}
+\end{longtable}
+\end{center}
+
 \section{Was beim Weiterverwenden zu beachten ist}
 
 \subsection{Die Kennzahlen sind nicht gleichwertig}

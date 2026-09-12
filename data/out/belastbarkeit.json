@@ -1,0 +1,1128 @@
+{
+  "total": 503,
+  "rules": {
+    "anchorWeight": 0.8,
+    "minFamilies": 2,
+    "minScore": 1.5,
+    "partialScore": 1.0,
+    "minPeers": 6,
+    "narrowBand": 20.0,
+    "levels": {
+      "belastbar": "mindestens 2 unabhängige Familien, davon ein Anker (Gewicht ≥ 0.8), Summe ≥ 1.5",
+      "eingeschränkt": "ein Anker vorhanden oder Summe ≥ 1.0",
+      "dünn": "einzelne weiche Angaben",
+      "keine": "kein Wert in diesem Bereich"
+    }
+  },
+  "values": [
+    {
+      "n": 0,
+      "companies": 0
+    },
+    {
+      "n": 1,
+      "companies": 1
+    },
+    {
+      "n": 2,
+      "companies": 0
+    },
+    {
+      "n": 3,
+      "companies": 1
+    },
+    {
+      "n": 4,
+      "companies": 8
+    },
+    {
+      "n": 5,
+      "companies": 11
+    },
+    {
+      "n": 6,
+      "companies": 16
+    },
+    {
+      "n": 7,
+      "companies": 12
+    },
+    {
+      "n": 8,
+      "companies": 20
+    },
+    {
+      "n": 9,
+      "companies": 27
+    },
+    {
+      "n": 10,
+      "companies": 34
+    },
+    {
+      "n": 11,
+      "companies": 15
+    },
+    {
+      "n": 12,
+      "companies": 45
+    },
+    {
+      "n": 13,
+      "companies": 36
+    },
+    {
+      "n": 14,
+      "companies": 22
+    },
+    {
+      "n": 15,
+      "companies": 24
+    },
+    {
+      "n": 16,
+      "companies": 17
+    },
+    {
+      "n": 17,
+      "companies": 10
+    },
+    {
+      "n": 18,
+      "companies": 16
+    },
+    {
+      "n": 19,
+      "companies": 15
+    },
+    {
+      "n": 20,
+      "companies": 13
+    },
+    {
+      "n": 21,
+      "companies": 9
+    },
+    {
+      "n": 22,
+      "companies": 2
+    },
+    {
+      "n": 23,
+      "companies": 3
+    },
+    {
+      "n": 24,
+      "companies": 5
+    },
+    {
+      "n": 25,
+      "companies": 5
+    },
+    {
+      "n": 26,
+      "companies": 5
+    },
+    {
+      "n": 27,
+      "companies": 9
+    },
+    {
+      "n": 28,
+      "companies": 7
+    },
+    {
+      "n": 29,
+      "companies": 11
+    },
+    {
+      "n": 30,
+      "companies": 10
+    },
+    {
+      "n": 31,
+      "companies": 11
+    },
+    {
+      "n": 32,
+      "companies": 13
+    },
+    {
+      "n": 33,
+      "companies": 10
+    },
+    {
+      "n": 34,
+      "companies": 14
+    },
+    {
+      "n": 35,
+      "companies": 10
+    },
+    {
+      "n": 36,
+      "companies": 14
+    },
+    {
+      "n": 37,
+      "companies": 6
+    },
+    {
+      "n": 38,
+      "companies": 7
+    },
+    {
+      "n": 39,
+      "companies": 7
+    },
+    {
+      "n": 40,
+      "companies": 1
+    },
+    {
+      "n": 41,
+      "companies": 1
+    }
+  ],
+  "valuesMedian": 15.0,
+  "pillars": [
+    {
+      "id": "E",
+      "name": "Umwelt",
+      "maxScore": 3.8,
+      "levels": {
+        "belastbar": 156,
+        "eingeschränkt": 68,
+        "dünn": 181,
+        "keine": 98
+      },
+      "scoreHist": [
+        {
+          "from": 0.0,
+          "to": 0.25,
+          "companies": 98
+        },
+        {
+          "from": 0.25,
+          "to": 0.5,
+          "companies": 161
+        },
+        {
+          "from": 0.5,
+          "to": 0.75,
+          "companies": 20
+        },
+        {
+          "from": 0.75,
+          "to": 1.0,
+          "companies": 22
+        },
+        {
+          "from": 1.0,
+          "to": 1.25,
+          "companies": 42
+        },
+        {
+          "from": 1.25,
+          "to": 1.5,
+          "companies": 4
+        },
+        {
+          "from": 1.5,
+          "to": 1.75,
+          "companies": 28
+        },
+        {
+          "from": 1.75,
+          "to": 2.0,
+          "companies": 10
+        },
+        {
+          "from": 2.0,
+          "to": 2.25,
+          "companies": 18
+        },
+        {
+          "from": 2.25,
+          "to": 2.5,
+          "companies": 32
+        },
+        {
+          "from": 2.5,
+          "to": 2.75,
+          "companies": 7
+        },
+        {
+          "from": 2.75,
+          "to": 3.0,
+          "companies": 23
+        },
+        {
+          "from": 3.0,
+          "to": 3.25,
+          "companies": 16
+        },
+        {
+          "from": 3.25,
+          "to": 3.5,
+          "companies": 13
+        },
+        {
+          "from": 3.5,
+          "to": 3.75,
+          "companies": 6
+        },
+        {
+          "from": 3.75,
+          "to": 4.0,
+          "companies": 3
+        },
+        {
+          "from": 4.0,
+          "to": 4.25,
+          "companies": 0
+        }
+      ],
+      "families": [
+        {
+          "id": "ghg",
+          "label": "Treibhausgase",
+          "weight": 1.0,
+          "metrics": [
+            {
+              "id": "campd_co2_t",
+              "weight": 1.0,
+              "evidence": "am Schornstein gemessen (CEMS)"
+            },
+            {
+              "id": "scope1_t",
+              "weight": 0.8,
+              "evidence": "behördlich gemeldet (GHGRP)"
+            },
+            {
+              "id": "co2_intensity",
+              "weight": 0.8,
+              "evidence": "gemeldet, auf Umsatz bezogen"
+            }
+          ],
+          "companies": 149
+        },
+        {
+          "id": "effizienz",
+          "label": "Erzeugungseffizienz",
+          "weight": 0.8,
+          "metrics": [
+            {
+              "id": "t_co2_pro_mwh",
+              "weight": 0.8,
+              "evidence": "gemessen und gemeldet, nur Stromerzeuger"
+            }
+          ],
+          "companies": 45
+        },
+        {
+          "id": "schadstoffe",
+          "label": "Schadstofffreisetzung",
+          "weight": 0.8,
+          "metrics": [
+            {
+              "id": "tri_releases_lbs",
+              "weight": 0.8,
+              "evidence": "behördlich gemeldet (TRI)"
+            },
+            {
+              "id": "tri_carcinogen_lbs",
+              "weight": 0.8,
+              "evidence": "behördlich gemeldet (TRI)"
+            }
+          ],
+          "companies": 194
+        },
+        {
+          "id": "trend",
+          "label": "Emissionstrend",
+          "weight": 0.5,
+          "metrics": [
+            {
+              "id": "intensity_cagr",
+              "weight": 0.5,
+              "evidence": "abgeleitet aus mindestens drei Jahren"
+            },
+            {
+              "id": "absolute_cagr",
+              "weight": 0.5,
+              "evidence": "abgeleitet aus mindestens drei Jahren"
+            }
+          ],
+          "companies": 130
+        },
+        {
+          "id": "natur",
+          "label": "Naturbewertung",
+          "weight": 0.4,
+          "metrics": [
+            {
+              "id": "wba_nature",
+              "weight": 0.4,
+              "evidence": "Bewertung veröffentlichter Angaben (WBA)"
+            }
+          ],
+          "companies": 71
+        },
+        {
+          "id": "klimaziele",
+          "label": "Klimaziele",
+          "weight": 0.3,
+          "metrics": [
+            {
+              "id": "sbti_validated",
+              "weight": 0.3,
+              "evidence": "Selbstauskunft, extern geprüft (SBTi)"
+            },
+            {
+              "id": "sbti_near_term_year",
+              "weight": 0.3,
+              "evidence": "Selbstauskunft, extern geprüft (SBTi)"
+            },
+            {
+              "id": "sbti_net_zero_year",
+              "weight": 0.3,
+              "evidence": "Selbstauskunft, extern geprüft (SBTi)"
+            },
+            {
+              "id": "wba_tpq",
+              "weight": 0.3,
+              "evidence": "Bewertung des Transitionsplans (WBA)"
+            },
+            {
+              "id": "wba_ctt",
+              "weight": 0.3,
+              "evidence": "Bewertung des Transitionsbeitrags (WBA)"
+            }
+          ],
+          "companies": 345
+        }
+      ]
+    },
+    {
+      "id": "S",
+      "name": "Soziales",
+      "maxScore": 2.1,
+      "levels": {
+        "belastbar": 136,
+        "eingeschränkt": 213,
+        "dünn": 77,
+        "keine": 77
+      },
+      "scoreHist": [
+        {
+          "from": 0.0,
+          "to": 0.25,
+          "companies": 77
+        },
+        {
+          "from": 0.25,
+          "to": 0.5,
+          "companies": 35
+        },
+        {
+          "from": 0.5,
+          "to": 0.75,
+          "companies": 42
+        },
+        {
+          "from": 0.75,
+          "to": 1.0,
+          "companies": 0
+        },
+        {
+          "from": 1.0,
+          "to": 1.25,
+          "companies": 138
+        },
+        {
+          "from": 1.25,
+          "to": 1.5,
+          "companies": 75
+        },
+        {
+          "from": 1.5,
+          "to": 1.75,
+          "companies": 63
+        },
+        {
+          "from": 1.75,
+          "to": 2.0,
+          "companies": 0
+        },
+        {
+          "from": 2.0,
+          "to": 2.25,
+          "companies": 73
+        },
+        {
+          "from": 2.25,
+          "to": 2.5,
+          "companies": 0
+        }
+      ],
+      "families": [
+        {
+          "id": "arbeitssicherheit",
+          "label": "Arbeitssicherheit",
+          "weight": 1.0,
+          "metrics": [
+            {
+              "id": "dart_rate",
+              "weight": 1.0,
+              "evidence": "gesetzliche Meldung je Betrieb (OSHA)"
+            },
+            {
+              "id": "osha_deaths",
+              "weight": 1.0,
+              "evidence": "gesetzliche Meldung je Betrieb (OSHA)"
+            }
+          ],
+          "companies": 314
+        },
+        {
+          "id": "lohnrecht",
+          "label": "Lohnrecht",
+          "weight": 0.7,
+          "metrics": [
+            {
+              "id": "whd_cases",
+              "weight": 0.7,
+              "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
+            },
+            {
+              "id": "whd_backwages_usd",
+              "weight": 0.7,
+              "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
+            },
+            {
+              "id": "whd_employees",
+              "weight": 0.7,
+              "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
+            }
+          ],
+          "companies": 213
+        },
+        {
+          "id": "sozialbewertung",
+          "label": "Sozialbewertung",
+          "weight": 0.4,
+          "metrics": [
+            {
+              "id": "wba_social",
+              "weight": 0.4,
+              "evidence": "Bewertung veröffentlichter Angaben (WBA)"
+            },
+            {
+              "id": "wba_just_transition",
+              "weight": 0.4,
+              "evidence": "Bewertung veröffentlichter Angaben (WBA)"
+            }
+          ],
+          "companies": 218
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Unternehmensführung",
+      "maxScore": 2.1,
+      "levels": {
+        "belastbar": 132,
+        "eingeschränkt": 11,
+        "dünn": 360,
+        "keine": 0
+      },
+      "scoreHist": [
+        {
+          "from": 0.0,
+          "to": 0.25,
+          "companies": 177
+        },
+        {
+          "from": 0.25,
+          "to": 0.5,
+          "companies": 0
+        },
+        {
+          "from": 0.5,
+          "to": 0.75,
+          "companies": 183
+        },
+        {
+          "from": 0.75,
+          "to": 1.0,
+          "companies": 0
+        },
+        {
+          "from": 1.0,
+          "to": 1.25,
+          "companies": 11
+        },
+        {
+          "from": 1.25,
+          "to": 1.5,
+          "companies": 0
+        },
+        {
+          "from": 1.5,
+          "to": 1.75,
+          "companies": 77
+        },
+        {
+          "from": 1.75,
+          "to": 2.0,
+          "companies": 0
+        },
+        {
+          "from": 2.0,
+          "to": 2.25,
+          "companies": 55
+        },
+        {
+          "from": 2.25,
+          "to": 2.5,
+          "companies": 0
+        }
+      ],
+      "families": [
+        {
+          "id": "regeltreue",
+          "label": "Umweltregeltreue",
+          "weight": 1.0,
+          "metrics": [
+            {
+              "id": "echo_penalties_usd",
+              "weight": 1.0,
+              "evidence": "behördlich festgestellt (ECHO)"
+            },
+            {
+              "id": "echo_nc_quarters_per_site",
+              "weight": 1.0,
+              "evidence": "behördlich festgestellt (ECHO)"
+            },
+            {
+              "id": "echo_significant",
+              "weight": 1.0,
+              "evidence": "behördlich festgestellt (ECHO)"
+            }
+          ],
+          "companies": 136
+        },
+        {
+          "id": "zusagen",
+          "label": "Umgang mit Zusagen",
+          "weight": 0.5,
+          "metrics": [
+            {
+              "id": "sbti_commitment_removed",
+              "weight": 0.5,
+              "evidence": "protokollierter Rückzug (SBTi)"
+            }
+          ],
+          "companies": 241
+        },
+        {
+          "id": "greenwashing",
+          "label": "Greenwashing-Signale",
+          "weight": 0.4,
+          "metrics": [
+            {
+              "id": "intensity_illusion",
+              "weight": 0.4,
+              "evidence": "abgeleitet aus Emissionsreihe"
+            },
+            {
+              "id": "base_year_ratio",
+              "weight": 0.4,
+              "evidence": "abgeleitet aus Emissionsreihe"
+            }
+          ],
+          "companies": 143
+        },
+        {
+          "id": "lieferkette",
+          "label": "Lieferkettenpflicht",
+          "weight": 0.2,
+          "metrics": [
+            {
+              "id": "sd_conflict_minerals_filer",
+              "weight": 0.2,
+              "evidence": "nur Meldestatus (Form SD)"
+            }
+          ],
+          "companies": 503
+        }
+      ]
+    }
+  ],
+  "combos": [
+    {
+      "pattern": "···",
+      "companies": 274
+    },
+    {
+      "pattern": "E·G",
+      "companies": 77
+    },
+    {
+      "pattern": "·S·",
+      "companies": 66
+    },
+    {
+      "pattern": "ESG",
+      "companies": 48
+    },
+    {
+      "pattern": "ES·",
+      "companies": 17
+    },
+    {
+      "pattern": "E··",
+      "companies": 14
+    },
+    {
+      "pattern": "·SG",
+      "companies": 5
+    },
+    {
+      "pattern": "··G",
+      "companies": 2
+    }
+  ],
+  "sectors": [
+    {
+      "sector": "Industrials",
+      "companies": 83,
+      "E": 25,
+      "S": 35,
+      "G": 20,
+      "all3": 14,
+      "rankable": 14
+    },
+    {
+      "sector": "Utilities",
+      "companies": 31,
+      "E": 29,
+      "S": 9,
+      "G": 28,
+      "all3": 7,
+      "rankable": 7
+    },
+    {
+      "sector": "Consumer Staples",
+      "companies": 34,
+      "E": 25,
+      "S": 16,
+      "G": 14,
+      "all3": 6,
+      "rankable": 6
+    },
+    {
+      "sector": "Materials",
+      "companies": 25,
+      "E": 23,
+      "S": 11,
+      "G": 18,
+      "all3": 6,
+      "rankable": 6
+    },
+    {
+      "sector": "Energy",
+      "companies": 21,
+      "E": 17,
+      "S": 6,
+      "G": 16,
+      "all3": 5,
+      "rankable": 0
+    },
+    {
+      "sector": "Information Technology",
+      "companies": 73,
+      "E": 13,
+      "S": 10,
+      "G": 13,
+      "all3": 4,
+      "rankable": 0
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "companies": 47,
+      "E": 4,
+      "S": 16,
+      "G": 5,
+      "all3": 3,
+      "rankable": 0
+    },
+    {
+      "sector": "Health Care",
+      "companies": 59,
+      "E": 12,
+      "S": 17,
+      "G": 11,
+      "all3": 2,
+      "rankable": 0
+    },
+    {
+      "sector": "Financials",
+      "companies": 76,
+      "E": 5,
+      "S": 7,
+      "G": 4,
+      "all3": 1,
+      "rankable": 0
+    },
+    {
+      "sector": "Communication Services",
+      "companies": 24,
+      "E": 2,
+      "S": 5,
+      "G": 2,
+      "all3": 0,
+      "rankable": 0
+    },
+    {
+      "sector": "Real Estate",
+      "companies": 30,
+      "E": 1,
+      "S": 4,
+      "G": 1,
+      "all3": 0,
+      "rankable": 0
+    }
+  ],
+  "funnel": [
+    {
+      "label": "Indexmitglieder",
+      "companies": 503
+    },
+    {
+      "label": "mit mindestens einem Wert",
+      "companies": 503
+    },
+    {
+      "label": "in mindestens einem Bereich belastbar",
+      "companies": 229
+    },
+    {
+      "label": "in mindestens zwei Bereichen belastbar",
+      "companies": 147
+    },
+    {
+      "label": "in allen drei Bereichen belastbar",
+      "companies": 48
+    },
+    {
+      "label": "… und in einer Branche mit mindestens 6 solchen Firmen",
+      "companies": 33
+    },
+    {
+      "label": "… und Umwelt-Rangband höchstens 20 Perzentilpunkte breit",
+      "companies": 7
+    }
+  ],
+  "rankableList": [
+    {
+      "ticker": "GIS",
+      "company": "General Mills",
+      "gics_sector": "Consumer Staples",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 56.666666666666664
+    },
+    {
+      "ticker": "KHC",
+      "company": "Kraft Heinz",
+      "gics_sector": "Consumer Staples",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 26.66666666666667
+    },
+    {
+      "ticker": "TAP",
+      "company": "Molson Coors Beverage Company",
+      "gics_sector": "Consumer Staples",
+      "E_score": 3.6,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 15.555555555555554
+    },
+    {
+      "ticker": "MDLZ",
+      "company": "Mondelez International",
+      "gics_sector": "Consumer Staples",
+      "E_score": 2.3,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 80.0
+    },
+    {
+      "ticker": "PEP",
+      "company": "PepsiCo",
+      "gics_sector": "Consumer Staples",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 44.44444444444444
+    },
+    {
+      "ticker": "TSN",
+      "company": "Tyson Foods",
+      "gics_sector": "Consumer Staples",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 53.66666666666711
+    },
+    {
+      "ticker": "MMM",
+      "company": "3M",
+      "gics_sector": "Industrials",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 22.91666666666667
+    },
+    {
+      "ticker": "BA",
+      "company": "Boeing",
+      "gics_sector": "Industrials",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 49.99999999999999
+    },
+    {
+      "ticker": "CARR",
+      "company": "Carrier Global",
+      "gics_sector": "Industrials",
+      "E_score": 1.9,
+      "S_score": 1.7,
+      "G_score": 2.1,
+      "e_band_width": 62.5
+    },
+    {
+      "ticker": "CAT",
+      "company": "Caterpillar Inc.",
+      "gics_sector": "Industrials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 45.83333333333334
+    },
+    {
+      "ticker": "DE",
+      "company": "Deere & Company",
+      "gics_sector": "Industrials",
+      "E_score": 2.4,
+      "S_score": 1.7,
+      "G_score": 2.1,
+      "e_band_width": 41.66666666666666
+    },
+    {
+      "ticker": "DAL",
+      "company": "Delta Air Lines",
+      "gics_sector": "Industrials",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 31.25
+    },
+    {
+      "ticker": "DD",
+      "company": "DuPont",
+      "gics_sector": "Industrials",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 29.166666666666657
+    },
+    {
+      "ticker": "HWM",
+      "company": "Howmet Aerospace",
+      "gics_sector": "Industrials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 50.0
+    },
+    {
+      "ticker": "HII",
+      "company": "Huntington Ingalls Industries",
+      "gics_sector": "Industrials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 50.0
+    },
+    {
+      "ticker": "JCI",
+      "company": "Johnson Controls",
+      "gics_sector": "Industrials",
+      "E_score": 1.9,
+      "S_score": 1.7,
+      "G_score": 2.1,
+      "e_band_width": 62.5
+    },
+    {
+      "ticker": "LMT",
+      "company": "Lockheed Martin",
+      "gics_sector": "Industrials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 50.0
+    },
+    {
+      "ticker": "RSG",
+      "company": "Republic Services",
+      "gics_sector": "Industrials",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 20.833333333333336
+    },
+    {
+      "ticker": "TXT",
+      "company": "Textron",
+      "gics_sector": "Industrials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 33.33333333333333
+    },
+    {
+      "ticker": "WM",
+      "company": "Waste Management",
+      "gics_sector": "Industrials",
+      "E_score": 3.2,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 35.41666666666667
+    },
+    {
+      "ticker": "APD",
+      "company": "Air Products",
+      "gics_sector": "Materials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 21.052631578947366
+    },
+    {
+      "ticker": "ALB",
+      "company": "Albemarle Corporation",
+      "gics_sector": "Materials",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 15.789473684210535
+    },
+    {
+      "ticker": "CF",
+      "company": "CF Industries",
+      "gics_sector": "Materials",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 47.89473684210598
+    },
+    {
+      "ticker": "IFF",
+      "company": "International Flavors & Fragrances",
+      "gics_sector": "Materials",
+      "E_score": 2.4,
+      "S_score": 1.7,
+      "G_score": 2.1,
+      "e_band_width": 21.052631578947366
+    },
+    {
+      "ticker": "MOS",
+      "company": "Mosaic Company (The)",
+      "gics_sector": "Materials",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 15.789473684210527
+    },
+    {
+      "ticker": "PPG",
+      "company": "PPG Industries",
+      "gics_sector": "Materials",
+      "E_score": 2.8,
+      "S_score": 2.1,
+      "G_score": 2.1,
+      "e_band_width": 21.052631578947366
+    },
+    {
+      "ticker": "AES",
+      "company": "AES Corporation",
+      "gics_sector": "Utilities",
+      "E_score": 2.6,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 34.52380952380953
+    },
+    {
+      "ticker": "CMS",
+      "company": "CMS Energy",
+      "gics_sector": "Utilities",
+      "E_score": 3.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 15.0
+    },
+    {
+      "ticker": "CNP",
+      "company": "CenterPoint Energy",
+      "gics_sector": "Utilities",
+      "E_score": 2.9,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 17.857142857142858
+    },
+    {
+      "ticker": "DUK",
+      "company": "Duke Energy",
+      "gics_sector": "Utilities",
+      "E_score": 3.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 25.000000000000007
+    },
+    {
+      "ticker": "EIX",
+      "company": "Edison International",
+      "gics_sector": "Utilities",
+      "E_score": 3.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 51.42857142857143
+    },
+    {
+      "ticker": "EVRG",
+      "company": "Evergy",
+      "gics_sector": "Utilities",
+      "E_score": 3.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 12.857142857142858
+    },
+    {
+      "ticker": "EXC",
+      "company": "Exelon",
+      "gics_sector": "Utilities",
+      "E_score": 2.3,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 6.666666666666686
+    }
+  ]
+}

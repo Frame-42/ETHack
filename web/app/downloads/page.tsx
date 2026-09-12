@@ -33,6 +33,12 @@ const GROUPS: { title: string; hint: string; items: Item[] }[] = [
         what: "Eine Zeile je Firma, Jahr und Kennzahl. Jede Zeile nennt Quelle, Abrufadresse, Zugang, Lizenz und Abrufdatum.",
       },
       {
+        file: "belastbarkeit.csv",
+        title: "Belastbarkeit je Firma",
+        format: "CSV",
+        what: "Je Firma und Bereich E, S, G: Punkte, vorhandene Familien, Anker und Stufe (belastbar bis keine). Regeln in pipeline/reliability.py.",
+      },
+      {
         file: "dataset_long.parquet",
         title: "Gesammelter Datensatz",
         format: "Parquet",
