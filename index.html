@@ -1,56 +1,226 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="An evidence-led comparison of S&P 500 companies and a $1 billion net-zero investment scenario.">
-  <meta name="theme-color" content="#edf2f5"><title>After the Pledge — S&P 500 transition observatory</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%233159da'/%3E%3Cpath d='M9 28L20 9l11 19M14 22h12' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/src/style.css"><script type="module" src="/src/app.mjs"></script>
-</head>
-<body>
-<a href="#main" class="skip">Skip to analysis</a>
-<header class="masthead">
-  <a class="brand" href="#compare" aria-label="After the Pledge home"><span class="brand-mark" aria-hidden="true">↗</span><span>AFTER<br>THE PLEDGE<span class="brand-dot">.</span></span></a>
-  <nav aria-label="Main navigation"><a href="#compare" data-view="compare" class="active">Company observatory</a><a href="#portfolio" data-view="portfolio">The $1bn question</a><a href="#method" data-view="method">Method & sources</a></nav>
-  <div class="edition">S&P 500<br><span>Research edition / 2026</span></div>
-</header>
-<main id="main">
-  <div id="loading" role="status">Loading the frozen research dataset…</div>
-  <section id="view-compare" hidden>
-    <div class="intro"><div><p class="eyebrow">SUSTAINABILITY, WITH THE WORKINGS SHOWN</p><h1>A transition plan is<br>only half the story.</h1></div><p class="intro-note">Compare what companies plan, what their climate assessment supports, and how they treat people and nature. Every score has a source. Every gap stays a gap.</p></div>
-    <div class="snapshot-strip"><span><i class="status-dot"></i>Frozen snapshot <strong id="snapshot-date"></strong></span><span><strong id="universe-count"></strong> companies in scope</span><span><strong id="matched-count"></strong> matched assessments</span><span>Sources: WBA · DataHub constituents</span></div>
-    <div class="workbench">
-      <section class="matrix-panel" aria-labelledby="matrix-title">
-        <div class="panel-heading"><div><p class="eyebrow">THE EVIDENCE MATRIX</p><h2 id="matrix-title">Plans × contribution</h2></div><button class="text-button" id="clear-cell" hidden>Clear matrix filter ×</button></div>
-        <p class="small muted">All matched companies in the selected sector. Select a cell to inspect its companies.</p>
-        <div class="matrix-layout"><div class="vertical-label">Climate contribution · CTT ↑</div><div id="matrix"></div></div>
-        <div class="chart-caption"><span>Transition plan quality · TPQ →</span><span>Numbers = companies per cell</span></div>
-        <p class="chart-footnote">CTT combines alignment, targets and investment. It does not measure tonnes avoided. <a href="#method">Read the interpretation ↗</a></p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="An evidence-led comparison of S&P 500 companies and a $1 billion net-zero investment scenario."
+    />
+    <meta name="theme-color" content="#edf2f5" />
+    <title>After the Pledge — S&P 500 transition observatory</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%233159da'/%3E%3Cpath d='M9 28L20 9l11 19M14 22h12' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/app.mjs"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to analysis</a>
+    <header class="masthead">
+      <a class="brand" href="#compare" aria-label="After the Pledge home"
+        ><span class="brand-mark" aria-hidden="true">↗</span
+        ><span>AFTER<br />THE PLEDGE<span class="brand-dot">.</span></span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#compare" data-view="compare" class="active"
+          >Company observatory</a
+        ><a href="#portfolio" data-view="portfolio">The $1bn question</a
+        ><a href="#method" data-view="method">Method & sources</a>
+      </nav>
+      <div class="edition">
+        S&P 500<br /><span>Research edition / 2026</span>
+      </div>
+    </header>
+    <main id="main">
+      <div id="loading" role="status">Loading the frozen research dataset…</div>
+      <section id="view-compare" hidden>
+        <div class="intro">
+          <div>
+            <p class="eyebrow">SUSTAINABILITY, WITH THE WORKINGS SHOWN</p>
+            <h1>A transition plan is<br />only half the story.</h1>
+          </div>
+          <p class="intro-note">
+            Compare what companies plan, what their climate assessment supports,
+            and how they treat people and nature. Every score has a source.
+            Every gap stays a gap.
+          </p>
+        </div>
+        <div class="snapshot-strip">
+          <span
+            ><i class="status-dot"></i>Frozen snapshot
+            <strong id="snapshot-date"></strong></span
+          ><span><strong id="universe-count"></strong> companies in scope</span
+          ><span><strong id="matched-count"></strong> matched assessments</span
+          ><span>Sources: WBA · DataHub constituents</span>
+        </div>
+        <div class="workbench">
+          <section class="matrix-panel" aria-labelledby="matrix-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">THE EVIDENCE MATRIX</p>
+                <h2 id="matrix-title">Plans × contribution</h2>
+              </div>
+              <button class="text-button" id="clear-cell" hidden>
+                Clear matrix filter ×
+              </button>
+            </div>
+            <p class="small muted">
+              All matched companies in the selected sector. Select a cell to
+              inspect its companies.
+            </p>
+            <div class="matrix-layout">
+              <div class="vertical-label">Climate contribution · CTT ↑</div>
+              <div id="matrix"></div>
+            </div>
+            <div class="chart-caption">
+              <span>Transition plan quality · TPQ →</span
+              ><span>Numbers = companies per cell</span>
+            </div>
+            <p class="chart-footnote">
+              CTT combines alignment, targets and investment. It does not
+              measure tonnes avoided.
+              <a href="#method">Read the interpretation ↗</a>
+            </p>
+          </section>
+          <aside class="controls-panel" aria-labelledby="weights-title">
+            <p class="eyebrow">MAKE YOUR ASSUMPTIONS EXPLICIT</p>
+            <h2 id="weights-title">What matters to you?</h2>
+            <label class="field-label" for="lens">Comparison lens</label
+            ><select id="lens">
+              <option value="core">Climate + people · broader coverage</option>
+              <option value="extended">Add nature · narrower coverage</option>
+            </select>
+            <p id="lens-note" class="small muted"></p>
+            <div id="weights"></div>
+            <p id="weight-error" class="error" role="alert" hidden></p>
+            <div class="preset-row">
+              <button id="reset-weights" class="text-button">
+                Reset weights ↺</button
+              ><label class="small"
+                >CTT 1/2 maps to
+                <select id="ctt-map" aria-label="Middle contribution score">
+                  <option>25</option>
+                  <option selected>50</option>
+                  <option>75</option>
+                </select></label
+              >
+            </div>
+            <div class="coverage-note">
+              <span id="eligible-count"></span>
+              <p>
+                companies can be ranked in this lens.<br />Unassessed companies
+                remain in the table.
+              </p>
+            </div>
+          </aside>
+        </div>
+        <section class="ranking-section" aria-labelledby="ranking-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">OPEN THE EVIDENCE</p>
+              <h2 id="ranking-title">The company ledger</h2>
+            </div>
+            <button class="outline-button" id="export">
+              Download this view ↓
+            </button>
+          </div>
+          <div class="filters">
+            <label class="search-box"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Find a company or ticker"
+                aria-label="Find a company or ticker" /></label
+            ><select id="sector" aria-label="Filter by sector">
+              <option value="">All sectors</option></select
+            ><select id="coverage" aria-label="Filter by evidence coverage">
+              <option value="all">All evidence levels</option>
+              <option value="complete">Ranked in this lens</option>
+              <option value="partial">Partial evidence</option>
+              <option value="unmatched">Unmatched</option></select
+            ><select id="sort" aria-label="Sort companies">
+              <option value="score">Highest score first</option>
+              <option value="name">Company A–Z</option>
+              <option value="social">People score</option>
+            </select>
+          </div>
+          <div class="table-status">
+            <span id="row-count" aria-live="polite"></span
+            ><span
+              >Select up to 3 companies to compare · ranks refer to the full
+              eligible cohort</span
+            >
+          </div>
+          <div id="comparison" hidden></div>
+          <div class="table-wrap">
+            <table class="company-table">
+              <thead>
+                <tr>
+                  <th><span class="sr-only">Compare</span></th>
+                  <th>Rank</th>
+                  <th>Company</th>
+                  <th>Our score / 100</th>
+                  <th>Contribution</th>
+                  <th>Planning</th>
+                  <th>People</th>
+                  <th>Nature</th>
+                  <th>Evidence</th>
+                  <th><span class="sr-only">Details</span></th>
+                </tr>
+              </thead>
+              <tbody id="company-rows"></tbody>
+            </table>
+          </div>
+          <div id="empty" class="empty" hidden>
+            <h3>No companies match these filters.</h3>
+            <p>Clear the search or broaden the sector and evidence filters.</p>
+            <button id="clear-filters" class="outline-button">
+              Clear filters
+            </button>
+          </div>
+          <div class="table-footer">
+            <p>
+              “—” means unavailable. An unranked interval is a possible score
+              range, not an estimate.
+            </p>
+            <button class="outline-button" id="show-more">
+              Show more companies
+            </button>
+          </div>
+        </section>
+        <div class="closing-note">
+          <span class="note-symbol">↳</span>
+          <p>
+            A low-emissions portfolio can still finance very little change.<br /><a
+              href="#portfolio"
+              >Explore where a billion dollars could remove the bottlenecks →</a
+            >
+          </p>
+        </div>
       </section>
-      <aside class="controls-panel" aria-labelledby="weights-title">
-        <p class="eyebrow">MAKE YOUR ASSUMPTIONS EXPLICIT</p><h2 id="weights-title">What matters to you?</h2>
-        <label class="field-label" for="lens">Comparison lens</label><select id="lens"><option value="core">Climate + people · broader coverage</option><option value="extended">Add nature · narrower coverage</option></select>
-        <p id="lens-note" class="small muted"></p>
-        <div id="weights"></div><p id="weight-error" class="error" role="alert" hidden></p>
-        <div class="preset-row"><button id="reset-weights" class="text-button">Reset weights ↺</button><label class="small">CTT 1/2 maps to <select id="ctt-map" aria-label="Middle contribution score"><option>25</option><option selected>50</option><option>75</option></select></label></div>
-        <div class="coverage-note"><span id="eligible-count"></span><p>companies can be ranked in this lens.<br>Unassessed companies remain in the table.</p></div>
-      </aside>
-    </div>
-    <section class="ranking-section" aria-labelledby="ranking-title">
-      <div class="section-heading"><div><p class="eyebrow">OPEN THE EVIDENCE</p><h2 id="ranking-title">The company ledger</h2></div><button class="outline-button" id="export">Download this view ↓</button></div>
-      <div class="filters"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a company or ticker" aria-label="Find a company or ticker"></label><select id="sector" aria-label="Filter by sector"><option value="">All sectors</option></select><select id="coverage" aria-label="Filter by evidence coverage"><option value="all">All evidence levels</option><option value="complete">Ranked in this lens</option><option value="partial">Partial evidence</option><option value="unmatched">Unmatched</option></select><select id="sort" aria-label="Sort companies"><option value="score">Highest score first</option><option value="name">Company A–Z</option><option value="social">People score</option></select></div>
-      <div class="table-status"><span id="row-count" aria-live="polite"></span><span>Select up to 3 companies to compare · ranks refer to the full eligible cohort</span></div>
-      <div id="comparison" hidden></div>
-      <div class="table-wrap"><table class="company-table"><thead><tr><th><span class="sr-only">Compare</span></th><th>Rank</th><th>Company</th><th>Our score / 100</th><th>Contribution</th><th>Planning</th><th>People</th><th>Nature</th><th>Evidence</th><th><span class="sr-only">Details</span></th></tr></thead><tbody id="company-rows"></tbody></table></div>
-      <div id="empty" class="empty" hidden><h3>No companies match these filters.</h3><p>Clear the search or broaden the sector and evidence filters.</p><button id="clear-filters" class="outline-button">Clear filters</button></div>
-      <div class="table-footer"><p>“—” means unavailable. An unranked interval is a possible score range, not an estimate.</p><button class="outline-button" id="show-more">Show more companies</button></div>
-    </section>
-    <div class="closing-note"><span class="note-symbol">↳</span><p>A low-emissions portfolio can still finance very little change.<br><a href="#portfolio">Explore where a billion dollars could remove the bottlenecks →</a></p></div>
-  </section>
-  <section id="view-portfolio" hidden></section>
-  <section id="view-method" hidden></section>
-</main>
-<footer><span>AFTER THE PLEDGE / Independent challenge research</span><span>WBA data: CC BY 4.0 · Our transformations are identified · No live market feed</span></footer>
-<dialog id="company-dialog" aria-labelledby="dialog-title"><button id="close-dialog" class="dialog-close" aria-label="Close company details">×</button><div id="dialog-content"></div></dialog>
-<div id="toast" role="status" hidden></div>
-</body></html>
+      <section id="view-portfolio" hidden></section>
+      <section id="view-method" hidden></section>
+    </main>
+    <footer>
+      <span>AFTER THE PLEDGE / Independent challenge research</span
+      ><span
+        >WBA data: CC BY 4.0 · Our transformations are identified · No live
+        market feed</span
+      >
+    </footer>
+    <dialog id="company-dialog" aria-labelledby="dialog-title">
+      <button
+        id="close-dialog"
+        class="dialog-close"
+        aria-label="Close company details"
+      >
+        ×
+      </button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <div id="toast" role="status" hidden></div>
+  </body>
+</html>
