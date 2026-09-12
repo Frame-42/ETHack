@@ -208,5 +208,110 @@
     "direction": -1,
     "axis": "vergleich",
     "source_id": "esg_snapshot"
+  },
+  "net_income_usd": {
+    "label": "Nettogewinn",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera"
+  },
+  "total_assets_usd": {
+    "label": "Bilanzsumme",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera"
+  },
+  "total_debt_usd": {
+    "label": "Finanzschulden",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera"
+  },
+  "operating_cf_usd": {
+    "label": "operativer Cashflow",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera"
+  },
+  "capex_usd": {
+    "label": "Sachinvestitionen",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera"
+  },
+  "rnd_usd": {
+    "label": "Forschung und Entwicklung",
+    "unit": "USD",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_dera"
+  },
+  "whd_cases": {
+    "label": "Lohnverfahren 2022-2024",
+    "unit": "Anzahl",
+    "direction": -1,
+    "axis": "S",
+    "source_id": "dol_whd"
+  },
+  "whd_backwages_usd": {
+    "label": "nachgezahlte Loehne",
+    "unit": "USD",
+    "direction": -1,
+    "axis": "S",
+    "source_id": "dol_whd"
+  },
+  "whd_employees": {
+    "label": "betroffene Beschaeftigte",
+    "unit": "Anzahl",
+    "direction": -1,
+    "axis": "S",
+    "source_id": "dol_whd"
+  },
+  "sd_conflict_minerals_filer": {
+    "label": "meldet Konfliktmineralien (Form SD)",
+    "unit": "ja/nein",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "sec_sd"
+  },
+  "wba_tpq": {
+    "label": "WBA Qualitaet des Transitionsplans",
+    "unit": "0-5",
+    "direction": 1,
+    "axis": "B",
+    "source_id": "wba"
+  },
+  "wba_ctt": {
+    "label": "WBA Beitrag zur Transition",
+    "unit": "0-2",
+    "direction": 1,
+    "axis": "B",
+    "source_id": "wba"
+  },
+  "wba_social": {
+    "label": "WBA Social Benchmark",
+    "unit": "0-100",
+    "direction": 1,
+    "axis": "S",
+    "source_id": "wba"
+  },
+  "wba_nature": {
+    "label": "WBA Nature Benchmark",
+    "unit": "0-100",
+    "direction": 1,
+    "axis": "B",
+    "source_id": "wba"
+  },
+  "wba_just_transition": {
+    "label": "WBA Just Transition",
+    "unit": "0-100",
+    "direction": 1,
+    "axis": "S",
+    "source_id": "wba"
   }
 }

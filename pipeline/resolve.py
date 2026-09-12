@@ -76,6 +76,11 @@ def parse_owners(raw: str) -> list[tuple[str, float]]:
 
 
 # ---------------------------------------------------------------------------
+# Korrigiert am 12.09.2026 nach Gegenprobe mit der Team-Datei
+# sp500_harte_variablen.csv: National Grid und Avangrid standen faelschlich bei
+# Eversource (Faktor 25 zu hoch), Idaho Power bei Ameren, Tampa Electric bei
+# Sempra.
+# ---------------------------------------------------------------------------
 # Tochter -> Konzern. Ohne diese Tabelle verliert man die halbe Energiebranche,
 # weil die EPA operative Gesellschaften meldet, nicht die boersennotierte Mutter.
 # ---------------------------------------------------------------------------
@@ -111,12 +116,10 @@ OVERRIDES: dict[str, str] = {
     "berkshire hathaway energy": "BRK-B", "berkshire hathaway": "BRK-B",
     "kern river gas transmission": "BRK-B", "northern natural gas": "BRK-B",
     "burlington northern santa fe": "BRK-B",
-    "tampa electric": "SRE",
     "union electric": "AEE", "ameren illinois": "AEE", "ameren missouri": "AEE",
     "kansas city power light": "EVRG", "westar energy": "EVRG",
     "evergy metro": "EVRG", "evergy kansas central": "EVRG",
     "oklahoma gas electric": "OGE",
-    "idaho power": "AEE",
     "entergy arkansas": "ETR", "entergy louisiana": "ETR", "entergy mississippi": "ETR",
     "entergy texas": "ETR", "entergy new orleans": "ETR", "system energy resources": "ETR",
     "pplelectric utilities": "PPL", "louisville gas electric": "PPL",
@@ -137,10 +140,8 @@ OVERRIDES: dict[str, str] = {
     "nisource": "NI", "northern indiana public service": "NI",
     "consolidated edison": "ED", "orange rockland utilities": "ED",
     "eversource energy": "ES", "connecticut light power": "ES",
-    "national grid": "ES",
     "pinnacle west capital": "PNW",
     "portland general electric": "POR",
-    "avangrid": "ES",
     # Oel und Gas
     "exxon mobil": "XOM", "exxonmobil": "XOM", "mobil": "XOM",
     "exxonmobil oil": "XOM", "exxonmobil pipeline": "XOM",
@@ -244,6 +245,25 @@ OVERRIDES: dict[str, str] = {
 }
 
 
+# Woerter, die nach einem Konzernnamen stehen duerfen, ohne dass es eine andere
+# Firma wird: "Sempra Energy" ist Sempra. Bewusst nur ein einzelnes Wort --
+# "Southern California Gas" beginnt mit "Southern", gehoert aber zu Sempra und
+# nicht zur Southern Company.
+GENERIC_TAIL = {
+    "energy", "resources", "power", "holdings", "financial", "technologies",
+    "systems", "brands", "services", "communications", "entertainment",
+    "materials", "chemical", "chemicals", "pharmaceuticals", "petroleum",
+}
+
+
+def master_prefix(key: str, lookup: dict[str, str]) -> str | None:
+    """Konzernname plus genau ein allgemeines Wort, z. B. "sempra energy"."""
+    head, _, tail = key.rpartition(" ")
+    if head and tail in GENERIC_TAIL and " " not in tail:
+        return lookup.get(head)
+    return None
+
+
 def build_lookup(master: pd.DataFrame) -> dict[str, str]:
     """Normalisierter Firmenname -> Ticker, aus der Konstituentenliste."""
     lookup: dict[str, str] = {}
@@ -285,8 +305,13 @@ def resolve_owners(
             hit = next((t for k, t in OVERRIDES.items() if key.startswith(k)), None)
             if hit:
                 result = (hit, "override-praefix", 0.90)
+            elif master_prefix(key, lookup):
+                result = (master_prefix(key, lookup), "konzern-praefix", 0.85)
             else:
-                m = process.extractOne(key, choices, scorer=fuzz.token_set_ratio)
+                # token_sort statt token_set: token_set wertet eine Teilmenge als
+                # 100 %. Nach dem Streichen von Fuellwoertern wurde so aus
+                # "US STEEL CORP" das Wort "steel" -- und damit Steel Dynamics.
+                m = process.extractOne(key, choices, scorer=fuzz.token_sort_ratio)
                 if m and m[1] >= fuzzy_threshold:
                     result = (lookup[m[0]], "fuzzy", m[1] / 100.0)
                 else:

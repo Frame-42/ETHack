@@ -147,6 +147,51 @@ SOURCES: dict[str, dict] = {
         "measurement": "aus Pflichtanlagen der Boersenaufsicht",
         "caveat": "Namen in Kleinschreibung und teils abgeschnitten; Beteiligungsquote nur bei 99 117 Eintraegen",
     },
+    "sec_dera": {
+        "name": "SEC 10-K-Finanzkennzahlen (companyfacts, aufbereitet von Janis)",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/",
+        "access": "frei, User-Agent noetig",
+        "license": "oeffentlich",
+        "coverage": "Geschaeftsjahr 2024, 499 Indexfirmen",
+        "measurement": "aus Pflichtberichten",
+        "caveat": "Schulden uneinheitlich getaggt (debt_tag); F&E nur bei 135 Firmen berichtet",
+    },
+    "dol_whd": {
+        "name": "DOL Wage and Hour Division, Verfahren (aufbereitet von Janis)",
+        "url": "https://data.dol.gov/data-catalog/WHD/enforcement/WHD_enforcement.zip",
+        "access": "frei, ohne Anmeldung",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "Feststellungsende 2022-2024",
+        "measurement": "behoerdliche Feststellung",
+        "caveat": "kein CIK, Zuordnung ueber Namen; Firmen ohne Treffer fehlen statt als Null zu erscheinen. Gegenprobe mit eigenem exakten Abgleich: 127 statt 213 Firmen, Rangkorrelation der Fallzahlen 0,62 -- die Team-Zuordnung zaehlt vermutlich Franchise-Betriebe unter dem Markennamen mit (McDonald's 142 gegen 64 Faelle)",
+    },
+    "sec_sd": {
+        "name": "SEC Form SD, Konfliktmineralien (aufbereitet von Janis)",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=SD",
+        "access": "frei",
+        "license": "oeffentlich",
+        "coverage": "Meldungen 2022-2025",
+        "measurement": "Pflichtmeldung",
+        "caveat": "zeigt nur, dass gemeldet wird -- nicht, was die Meldung ueber Schmelzen und Herkunft sagt",
+    },
+    "wba": {
+        "name": "World Benchmarking Alliance, Unternehmensprofile 2026 (erhoben von Janis)",
+        "url": "https://www.worldbenchmarkingalliance.org/company-scoreboard",
+        "access": "frei, oeffentliche Profilseiten",
+        "license": "CC BY 4.0 -- Namensnennung: World Benchmarking Alliance",
+        "coverage": "217 Indexfirmen, Bewertungsrunde 2026",
+        "measurement": "Bewertung veroeffentlichter Angaben",
+        "caveat": "haengt an Offenlegung; Benchmarks nicht unabhaengig; CTT fast ohne Streuung (216 von 217 = 0)",
+    },
+    "wikidata": {
+        "name": "Wikidata, offizielle Websites (fuer Firmenlogos)",
+        "url": "https://query.wikidata.org/sparql",
+        "access": "frei, ohne Anmeldung",
+        "license": "CC0",
+        "coverage": "Website ueber CIK (P5531 -> P856), Rest aus SEC Submissions",
+        "measurement": "Stammdaten",
+        "caveat": "nur fuer die Anzeige; Logos sind Favicons und Marken der jeweiligen Firmen",
+    },
     "eigene_berechnung": {
         "name": "Eigene Berechnung dieser Pipeline",
         "url": "scripts/02_analyse.py",
@@ -193,6 +238,21 @@ METRICS: dict[str, dict] = {
     "rank_p50": ("Rangband Median", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
     "rank_p90": ("Rangband obere Grenze", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
     "esg_risk_total": ("kommerzielles ESG-Risiko", "Punkte", -1, "vergleich", "esg_snapshot"),
+    "net_income_usd": ("Nettogewinn", "USD", 0, "meta", "sec_dera"),
+    "total_assets_usd": ("Bilanzsumme", "USD", 0, "meta", "sec_dera"),
+    "total_debt_usd": ("Finanzschulden", "USD", 0, "meta", "sec_dera"),
+    "operating_cf_usd": ("operativer Cashflow", "USD", 0, "meta", "sec_dera"),
+    "capex_usd": ("Sachinvestitionen", "USD", 0, "meta", "sec_dera"),
+    "rnd_usd": ("Forschung und Entwicklung", "USD", 0, "meta", "sec_dera"),
+    "whd_cases": ("Lohnverfahren 2022-2024", "Anzahl", -1, "S", "dol_whd"),
+    "whd_backwages_usd": ("nachgezahlte Loehne", "USD", -1, "S", "dol_whd"),
+    "whd_employees": ("betroffene Beschaeftigte", "Anzahl", -1, "S", "dol_whd"),
+    "sd_conflict_minerals_filer": ("meldet Konfliktmineralien (Form SD)", "ja/nein", 0, "meta", "sec_sd"),
+    "wba_tpq": ("WBA Qualitaet des Transitionsplans", "0-5", 1, "B", "wba"),
+    "wba_ctt": ("WBA Beitrag zur Transition", "0-2", 1, "B", "wba"),
+    "wba_social": ("WBA Social Benchmark", "0-100", 1, "S", "wba"),
+    "wba_nature": ("WBA Nature Benchmark", "0-100", 1, "B", "wba"),
+    "wba_just_transition": ("WBA Just Transition", "0-100", 1, "S", "wba"),
 }
 
 
@@ -282,6 +342,34 @@ def build() -> pd.DataFrame:
             "sv": "echo_significant",
             "schwere_verstoesse": "echo_significant",
         })
+
+    # ---- Team: Janis' Querschnitt (SEC-Finanzen, DOL WHD, Form SD) --------
+    hv_path = RAW / "team_harte_variablen.parquet"
+    if hv_path.exists():
+        hv = pd.read_parquet(hv_path)
+        _add(rows, hv.assign(year=2024), {
+            "net_usd_fy24": "net_income_usd", "assets_usd_fy24": "total_assets_usd",
+            "debt_usd_fy24": "total_debt_usd", "ocf_usd_fy24": "operating_cf_usd",
+            "capex_usd_fy24": "capex_usd", "rnd_usd_fy24": "rnd_usd",
+        })
+        # Nur Firmen mit Treffer. "Keine Faelle gefunden" kann auch ein
+        # verfehlter Namensabgleich sein und wird deshalb nicht als Null gefuehrt.
+        whd = hv[hv["whd_conf"].isin(["high", "low"])].assign(year=2024)
+        _add(rows, whd, {"whd_cases_22_24": "whd_cases",
+                         "whd_backwages_usd": "whd_backwages_usd",
+                         "whd_employees": "whd_employees"})
+        sd = hv.assign(year=2025, sd_flag=(hv["sd_filer_22_25"] == "Ja").astype(float))
+        _add(rows, sd, {"sd_flag": "sd_conflict_minerals_filer"})
+
+    # ---- Team: WBA-Bewertungen (CC BY 4.0) --------------------------------
+    wba_path = RAW / "team_wba.parquet"
+    if wba_path.exists():
+        wba = pd.read_parquet(wba_path).assign(year=2026)
+        _add(rows, wba, {"tpq": "wba_tpq", "ctt": "wba_ctt", "social": "wba_social",
+                         "nature": "wba_nature", "just_transition": "wba_just_transition"})
+
+    # Mycelium bleibt bewusst draussen: Die Nutzungsbedingungen untersagen die
+    # Weitergabe als Datensatz (siehe sources/team.py, INTERNAL_ONLY).
 
     long = pd.DataFrame(rows)
 
@@ -450,10 +538,17 @@ def write_all() -> dict:
                 ],
             }
         )
+    # "Ohne Daten" heisst ohne Nachhaltigkeitsdaten. Seit die Finanzkennzahlen
+    # aus den 10-K-Berichten dabei sind, hat fast jede Firma irgendeinen Wert --
+    # ein Umsatz macht eine Firma aber nicht bewertbar.
+    bewertend = latest[~latest["axis"].isin(["meta", "vergleich"])]
+    assessed = set(bewertend["ticker"])
+    for c in companies:
+        c["assessed"] = c["ticker"] in assessed
     missing = [
         {"ticker": r.ticker, "company": r.company, "sector": r.gics_sector}
         for r in master.itertuples()
-        if r.ticker not in set(latest["ticker"])
+        if r.ticker not in assessed
     ]
     payload = {
         "generatedAt": HEUTE,

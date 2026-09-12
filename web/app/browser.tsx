@@ -2,41 +2,100 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { AXES, fmt } from "@/lib/format";
 
-type Row = {
+export type Row = {
   ticker: string;
   company: string;
   sector: string;
   n: number;
   sources: number;
-  rank: number | null;
-  band: [number, number] | null;
-  co2: number | null;
-  dart: number | null;
-  sbti: number | null;
+  assessed: boolean;
+  logo: boolean;
+  /** jüngster vollständiger Wert je Kennzahl */
+  values: Record<string, number | null>;
 };
 
-function fmtNum(v: number | null, digits = 1): string {
-  if (v === null || !Number.isFinite(v)) return "–";
-  return v.toLocaleString("de-DE", {
-    minimumFractionDigits: digits,
-    maximumFractionDigits: digits,
-  });
+export type MetricOption = {
+  id: string;
+  label: string;
+  unit: string;
+  axis: string;
+  direction: number;
+};
+
+type Col = {
+  key: string;
+  label: string;
+  num?: boolean;
+  get: (r: Row) => string | number | null;
+};
+
+const BASE: Col[] = [
+  { key: "ticker", label: "Kürzel", get: (r) => r.ticker },
+  { key: "company", label: "Firma", get: (r) => r.company },
+  { key: "sector", label: "Branche", get: (r) => r.sector },
+  { key: "n", label: "Werte", num: true, get: (r) => r.n },
+  { key: "sources", label: "Quellen", num: true, get: (r) => r.sources },
+  { key: "rank", label: "Rangband", num: true, get: (r) => r.values.rank_p50 ?? null },
+  { key: "co2", label: "CO₂-Int.", num: true, get: (r) => r.values.co2_intensity ?? null },
+  { key: "dart", label: "DART", num: true, get: (r) => r.values.dart_rate ?? null },
+  { key: "sbti", label: "SBTi", num: true, get: (r) => r.values.sbti_validated ?? null },
+];
+
+function Logo({ row }: { row: Row }) {
+  if (row.logo) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        className="logo"
+        src={`/logos/${row.ticker}.png`}
+        alt=""
+        width={18}
+        height={18}
+        loading="lazy"
+      />
+    );
+  }
+  return (
+    <span className="logo logo-empty" aria-hidden="true">
+      {row.company.charAt(0)}
+    </span>
+  );
 }
 
 export default function Browser({
   rows,
   sectors,
+  metrics,
 }: {
   rows: Row[];
   sectors: string[];
+  metrics: MetricOption[];
 }) {
   const [q, setQ] = useState("");
   const [sector, setSector] = useState("");
-  const [sort, setSort] = useState<keyof Row>("n");
+  const [extra, setExtra] = useState("whd_backwages_usd");
+  const [sortKey, setSortKey] = useState("n");
+  const [desc, setDesc] = useState(true);
+
+  const extraDef = metrics.find((m) => m.id === extra);
+  const cols: Col[] = useMemo(() => {
+    if (!extraDef) return BASE;
+    return [
+      ...BASE,
+      {
+        key: `m:${extraDef.id}`,
+        label: extraDef.label,
+        num: true,
+        get: (r) => r.values[extraDef.id] ?? null,
+      },
+    ];
+  }, [extraDef]);
 
   const shown = useMemo(() => {
     const needle = q.trim().toLowerCase();
+    const col = cols.find((c) => c.key === sortKey) ?? cols[3];
     const out = rows.filter(
       (r) =>
         (!sector || r.sector === sector) &&
@@ -45,15 +104,41 @@ export default function Browser({
           r.ticker.toLowerCase().includes(needle)),
     );
     return out.sort((a, b) => {
-      const av = a[sort];
-      const bv = b[sort];
-      if (typeof av === "string" || typeof bv === "string")
-        return String(av).localeCompare(String(bv));
-      const an = av === null ? -Infinity : (av as number);
-      const bn = bv === null ? -Infinity : (bv as number);
-      return bn - an;
+      const av = col.get(a);
+      const bv = col.get(b);
+      // Fehlende Werte stehen immer unten, egal in welche Richtung sortiert wird.
+      if (av === null && bv === null) return 0;
+      if (av === null) return 1;
+      if (bv === null) return -1;
+      const cmp =
+        typeof av === "string" || typeof bv === "string"
+          ? String(av).localeCompare(String(bv), "de")
+          : (av as number) - (bv as number);
+      return desc ? -cmp : cmp;
     });
-  }, [rows, q, sector, sort]);
+  }, [rows, q, sector, sortKey, desc, cols]);
+
+  function sortBy(key: string, num?: boolean) {
+    if (key === sortKey) {
+      setDesc(!desc);
+    } else {
+      setSortKey(key);
+      // Zahlen zuerst absteigend, Texte zuerst alphabetisch.
+      setDesc(Boolean(num));
+    }
+  }
+
+  function chooseExtra(id: string) {
+    setExtra(id);
+    setSortKey(`m:${id}`);
+    const def = metrics.find((m) => m.id === id);
+    // "Kleiner ist besser" zeigt zuerst die besten, sonst die höchsten Werte.
+    setDesc(def?.direction !== -1);
+  }
+
+  const byAxis = Object.keys(AXES)
+    .map((axis) => ({ axis, items: metrics.filter((m) => m.axis === axis) }))
+    .filter((g) => g.items.length);
 
   return (
     <>
@@ -77,17 +162,24 @@ export default function Browser({
             </option>
           ))}
         </select>
-        <select
-          value={sort}
-          onChange={(e) => setSort(e.target.value as keyof Row)}
-          aria-label="Sortieren nach"
-        >
-          <option value="n">nach Datenmenge</option>
-          <option value="rank">nach Rangband-Median</option>
-          <option value="co2">nach CO₂-Intensität</option>
-          <option value="dart">nach Unfallrate</option>
-          <option value="company">nach Name</option>
-        </select>
+        <label className="pick">
+          <span>Kennzahl-Spalte</span>
+          <select
+            value={extra}
+            onChange={(e) => chooseExtra(e.target.value)}
+            aria-label="Zusätzliche Kennzahl als Spalte"
+          >
+            {byAxis.map((g) => (
+              <optgroup key={g.axis} label={AXES[g.axis].label}>
+                {g.items.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.label}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+        </label>
         <span className="count">{shown.length} Firmen</span>
       </div>
 
@@ -95,47 +187,77 @@ export default function Browser({
         <table>
           <thead>
             <tr>
-              <th>Kürzel</th>
-              <th>Firma</th>
-              <th>Branche</th>
-              <th className="num">Werte</th>
-              <th className="num">Quellen</th>
-              <th className="num">Rangband</th>
-              <th className="num">CO₂-Int.</th>
-              <th className="num">DART</th>
-              <th>SBTi</th>
+              {cols.map((c) => {
+                const active = c.key === sortKey;
+                return (
+                  <th
+                    key={c.key}
+                    className={c.num ? "num" : undefined}
+                    aria-sort={active ? (desc ? "descending" : "ascending") : "none"}
+                  >
+                    <button
+                      type="button"
+                      className={active ? "sort on" : "sort"}
+                      onClick={() => sortBy(c.key, c.num)}
+                      title="Klicken zum Sortieren"
+                    >
+                      {c.label}
+                      <span className="arrow">{active ? (desc ? "↓" : "↑") : "↕"}</span>
+                    </button>
+                  </th>
+                );
+              })}
             </tr>
           </thead>
           <tbody>
             {shown.map((r) => (
               <tr key={r.ticker}>
                 <td className="tick">
-                  <Link href={`/firma/${r.ticker}`}>{r.ticker}</Link>
+                  <Link href={`/firma/${r.ticker}`} className="tickcell">
+                    <Logo row={r} />
+                    {r.ticker}
+                  </Link>
                 </td>
                 <td>
                   <Link href={`/firma/${r.ticker}`}>{r.company}</Link>
                 </td>
                 <td className="dim">{r.sector}</td>
                 <td className="num">
-                  {r.n === 0 ? <span className="chip">keine Daten</span> : r.n}
+                  {r.n === 0 ? (
+                    <span className="chip">keine Daten</span>
+                  ) : !r.assessed ? (
+                    <span
+                      className="chip"
+                      title="nur Finanzkennzahlen, keine Nachhaltigkeitswerte"
+                    >
+                      nur Finanzen · {r.n}
+                    </span>
+                  ) : (
+                    r.n
+                  )}
                 </td>
                 <td className="num">{r.n === 0 ? "–" : r.sources}</td>
                 <td className="num mono">
-                  {r.band
-                    ? `${Math.round(r.band[0])}–${Math.round(r.band[1])}`
+                  {r.values.rank_p10 != null && r.values.rank_p90 != null
+                    ? `${Math.round(r.values.rank_p10)}–${Math.round(r.values.rank_p90)}`
                     : "–"}
                 </td>
-                <td className="num">{fmtNum(r.co2, 0)}</td>
-                <td className="num">{fmtNum(r.dart, 2)}</td>
+                <td className="num">{fmt(r.values.co2_intensity ?? null)}</td>
+                <td className="num">{fmt(r.values.dart_rate ?? null)}</td>
                 <td>
-                  {r.sbti === null ? (
+                  {r.values.sbti_validated == null ? (
                     <span className="dim">–</span>
-                  ) : r.sbti ? (
+                  ) : r.values.sbti_validated ? (
                     <span className="chip good">geprüft</span>
                   ) : (
                     <span className="chip">kein Ziel</span>
                   )}
                 </td>
+                {extraDef && (
+                  <td className="num">
+                    {fmt(r.values[extraDef.id] ?? null, extraDef.unit)}
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

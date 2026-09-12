@@ -12,3 +12,6 @@ report/*.toc
 # Zugangsschluessel — niemals committen
 .env
 .env.local
+
+# Lizenzbeschraenkt (Mycelium-Nutzungsbedingungen): nur lokal zur Gegenprobe
+data/external/team/mycelium_constituents.xlsx

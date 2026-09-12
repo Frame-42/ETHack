@@ -7,6 +7,7 @@ const LINKS = [
   { href: "/", label: "Firmen" },
   { href: "/kennzahlen", label: "Kennzahlen" },
   { href: "/quellen", label: "Quellen" },
+  { href: "/downloads", label: "Downloads" },
 ];
 
 export default function Nav() {

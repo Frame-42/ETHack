@@ -7,7 +7,6 @@ ADM,33,9017486.859,91979.05,Archer Daniels Midland,Consumer Staples
 AEE,4,1246482.1509999998,14671.481,Ameren,Utilities
 AEP,9,2498580.59,126432.09,American Electric Power,Utilities
 AES,3,565807.9770000001,272.495,AES Corporation,Utilities
-AIG,27,57509.246,7643.319,American International Group,Financials
 ALB,7,297044.8,86522.0,Albemarle Corporation,Materials
 AMCR,6,895.0,0.0,Amcor,Materials
 AME,16,36304.529,26144.428,Ametek,Industrials
@@ -20,7 +19,7 @@ APTV,3,10.349,0.0,Aptiv,Consumer Discretionary
 AVGO,1,10809.4,0.0,Broadcom,Information Technology
 AVY,7,243424.1,8458.3,Avery Dennison,Materials
 BA,12,207398.827,46408.644,Boeing,Industrials
-BALL,19,1272620.36,4996.259999999999,Ball Corporation,Materials
+BALL,19,1272620.36,4996.26,Ball Corporation,Materials
 BAX,6,374268.9,41596.9,Baxter International,Health Care
 BDX,4,118411.6,106180.0,Becton Dickinson,Health Care
 BG,3,1489456.696,0.0,Bunge Global,Consumer Staples
@@ -31,8 +30,8 @@ BRK-B,171,8943174.688,166645.283,Berkshire Hathaway,Financials
 BSX,1,28.05,28.05,Boston Scientific,Health Care
 CAG,10,73639.16,0.0,,
 CARR,4,1.55,0.0,Carrier Global,Industrials
-CAT,25,38265.489,24739.097999999998,Caterpillar Inc.,Industrials
-CE,10,883446.59,376312.76999999996,,
+CAT,25,38265.489,24739.098,Caterpillar Inc.,Industrials
+CE,10,883446.59,376312.77,,
 CEG,5,52220.498,0.0,Constellation Energy,Utilities
 CF,6,13981273.86,16152.0,CF Industries,Materials
 CHD,4,45188.56,0.0,Church & Dwight,Consumer Staples
@@ -44,7 +43,7 @@ CNP,2,216625.754,17871.984,CenterPoint Energy,Utilities
 COST,1,0.0,0.0,Costco,Consumer Staples
 CPB,3,124750.072,163.58,,
 CTVA,6,177273.46,46520.479999999996,Corteva,Materials
-CVX,27,9984126.022,432708.47400000005,Chevron Corporation,Energy
+CVX,27,9984126.022,432708.474,Chevron Corporation,Energy
 D,15,907639.01,60360.31,Dominion Energy,Utilities
 DAL,1,144485.7,4531.0,Delta Air Lines,Industrials
 DD,21,2110857.404,1324060.96,DuPont,Industrials
@@ -62,7 +61,6 @@ EME,1,89.0,41.0,Emcor,Industrials
 EMN,12,3119306.112,124053.302,,
 EMR,14,31169.181,9667.576000000001,Emerson Electric,Industrials
 EOG,8,88480.0,7400.0,EOG Resources,Energy
-ES,4,74723.45,346.25,Eversource Energy,Utilities
 ETN,23,63296.3,21717.059999999998,Eaton Corporation,Industrials
 ETR,3,259156.247,3550.247,Entergy,Utilities
 EVRG,8,1478642.863,21881.263,Evergy,Utilities
@@ -74,8 +72,9 @@ FE,2,956516.9,206855.0,FirstEnergy,Utilities
 FMC,4,29090.181,194.5,,
 FSLR,2,138845.326,131961.53999999998,First Solar,Information Technology
 FTV,1,3.0,3.0,Fortive,Industrials
-GD,16,213768.459,40747.135,General Dynamics,Industrials
+GD,16,213768.459,40747.134999999995,General Dynamics,Industrials
 GE,15,62898.418,42275.518,GE Aerospace,Industrials
+GEHC,2,45249.1,128.1,GE HealthCare,Health Care
 GEV,6,51047.47,31277.0,GE Vernova,Industrials
 GIS,4,23125.0,0.0,General Mills,Consumer Staples
 GLW,5,3335.7,456.0,Corning Inc.,Information Technology
@@ -85,7 +84,7 @@ GOOG,1,2867.0,0.0,Alphabet Inc. (Class C),Communication Services
 HAL,34,484715.74,2364.34,Halliburton,Energy
 HES,1,3179.1679999999997,1479.168,,
 HII,1,23645.61,406.0,Huntington Ingalls Industries,Industrials
-HON,28,1022068.245,272651.3879999999,Honeywell Technologies,Industrials
+HON,28,1022068.245,272651.388,Honeywell Technologies,Industrials
 HPQ,8,37588.723,0.0,HP Inc.,Information Technology
 HRL,10,27703.0,0.0,Hormel Foods,Consumer Staples
 HSY,1,0.0,0.0,Hershey Company (The),Consumer Staples
@@ -94,10 +93,10 @@ HWM,21,440461.89400000003,8260.967,Howmet Aerospace,Industrials
 IEX,6,18120.513,15519.800000000001,IDEX Corporation,Industrials
 IFF,15,115904.363,2333.84,International Flavors & Fragrances,Materials
 INTC,7,151108.666,0.0,Intel,Information Technology
-IP,23,16051915.117,768925.2010000001,International Paper,Materials
+IP,23,16051915.117,768925.201,International Paper,Materials
 IR,8,96.541,1.419,Ingersoll Rand,Industrials
 ITW,23,48292.084,12967.630000000001,Illinois Tool Works,Industrials
-JBL,18,130151.395,20408.610999999997,Jabil,Information Technology
+JBL,18,130151.395,20408.611,Jabil,Information Technology
 JCI,8,1681.769,0.001,Johnson Controls,Industrials
 JNJ,3,18185.0,0.0,Johnson & Johnson,Health Care
 K,4,17676.0,15645.0,,
@@ -123,10 +122,10 @@ MDLZ,2,64086.0,0.0,Mondelez International,Consumer Staples
 MDT,3,13519.92,7173.92,Medtronic,Health Care
 MKC,1,0.0,0.0,McCormick & Company,Consumer Staples
 MLM,39,300096.701,7.26,Martin Marietta Materials,Materials
-MMM,30,878371.029,79573.44399999999,3M,Industrials
+MMM,30,878371.029,79573.444,3M,Industrials
 MO,6,258253.72,0.0,Altria,Consumer Staples
 MOS,4,692678.2,0.0,Mosaic Company (The),Materials
-MPC,103,4201277.378,308826.41000000003,Marathon Petroleum,Energy
+MPC,103,4201277.378,308826.41,Marathon Petroleum,Energy
 MRK,4,3993.4,23.8,Merck & Co.,Health Care
 MTD,1,0.0,0.0,Mettler Toledo,Health Care
 MU,2,38414.1,0.0,Micron Technology,Information Technology
@@ -145,7 +144,7 @@ PCG,1,31432.3,31028.2,PG&E Corporation,Utilities
 PEP,18,258179.5,0.0,PepsiCo,Consumer Staples
 PFE,2,165425.3,111978.0,Pfizer,Health Care
 PG,12,260856.802,70.388,Procter & Gamble,Consumer Staples
-PH,41,218539.146,5137.275000000001,Parker Hannifin,Industrials
+PH,41,218539.146,5137.275,Parker Hannifin,Industrials
 PKG,9,3971963.747,90781.707,Packaging Corporation of America,Materials
 PNR,7,3036.926,2586.0829999999996,Pentair,Industrials
 PNW,2,299254.7,37899.2,Pinnacle West Capital,Utilities
@@ -156,14 +155,14 @@ PSX,67,2179358.639,248725.619,Phillips 66,Energy
 PWR,1,2426.924,2120.213,Quanta Services,Industrials
 ROK,2,0.01,0.01,Rockwell Automation,Industrials
 ROP,1,8170.139999999999,6658.83,Roper Technologies,Information Technology
-RSG,18,19229351.908,4315908.224,Republic Services,Industrials
+RSG,18,19229351.908,4315908.223999999,Republic Services,Industrials
 RTX,26,98828.402,8062.442,RTX Corporation,Industrials
 SEE,3,187088.653,0.653,,
 SHW,43,425225.872,47963.682,Sherwin-Williams,Materials
 SJM,1,0.0,0.0,J.M. Smucker Company (The),Consumer Staples
 SLB,10,70479.408,24982.688,Schlumberger,Energy
 SNA,5,58086.573,3332.323,Snap-on,Industrials
-SO,11,1357371.337,27417.137000000002,Southern Company,Utilities
+SO,11,1357371.337,27417.137,Southern Company,Utilities
 SOLV,3,7252.0,2625.0,Solventum,Health Care
 STE,9,5925.49,253.01,Steris,Health Care
 STLD,15,565780.656,25237.599000000002,Steel Dynamics,Materials
@@ -180,7 +179,7 @@ TEL,8,1662.1,1226.1,TE Connectivity,Information Technology
 TMO,11,374807.504,6895.5599999999995,Thermo Fisher Scientific,Health Care
 TRGP,31,43299720.910000004,484837.76,Targa Resources,Energy
 TSLA,5,1532274.521,158881.311,"Tesla, Inc.",Consumer Discretionary
-TSN,78,10670854.32,4025.9399999999996,Tyson Foods,Consumer Staples
+TSN,78,10670854.32,4025.94,Tyson Foods,Consumer Staples
 TT,13,873.9639999999999,651.422,Trane Technologies,Industrials
 TXN,5,119992.58,0.0,Texas Instruments,Information Technology
 TXT,11,71457.325,20700.27,Textron,Industrials

@@ -51,6 +51,10 @@ RAW_TO_SOURCE = {
     "pudl/out_epacems__yearly_operational_characteristics": "pudl",
     "pudl/core_epa__assn_eia_epacamd": "pudl",
     "pudl/sec10k_ex21": "pudl_sec_ex21",
+    # Team-Datensaetze und frisch gezogene Behoerdendaten
+    "team_harte_variablen": "sec_dera",
+    "team_wba": "wba",
+    "dol_whd": "dol_whd",
 }
 
 # Gruppierung nach Datentyp -- die zweite Sicht des Katalogs.
@@ -82,6 +86,26 @@ GROUPS: dict[str, tuple[str, str]] = {
         "eingerechnet.",
         "sbti_validated sbti_near_term_year sbti_net_zero_year "
         "sbti_commitment_removed intensity_illusion base_year_ratio",
+    ),
+    "Arbeitsrecht": (
+        "Behoerdlich festgestellte Lohnverstoesse. Firmen ohne zuordenbaren Fall "
+        "fehlen, statt als Null zu erscheinen.",
+        "whd_cases whd_backwages_usd whd_employees",
+    ),
+    "Externe Bewertungen, offen lizenziert": (
+        "WBA-Benchmarks unter CC BY 4.0. Anders als der kommerzielle Snapshot ist "
+        "die Methodik einsehbar -- bewertet wird trotzdem Offenlegung, nicht Wirkung.",
+        "wba_tpq wba_ctt wba_social wba_nature wba_just_transition",
+    ),
+    "Finanzkennzahlen": (
+        "Aus den 10-K-Berichten, als Bezugsgroessen fuer Intensitaeten und fuer die "
+        "Portfoliofrage -- keine Nachhaltigkeitsbewertung.",
+        "net_income_usd total_assets_usd total_debt_usd operating_cf_usd capex_usd rnd_usd",
+    ),
+    "Lieferkette": (
+        "Ob eine Firma Konfliktmineralien meldet. Die Meldepflicht allein ist noch "
+        "kein Befund ueber die Herkunft.",
+        "sd_conflict_minerals_filer",
     ),
     "Ergebnis des Modells": (
         "Kein Einzelplatz, sondern die Spanne ueber alle Methodenkombinationen.",
