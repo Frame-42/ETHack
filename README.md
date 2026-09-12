@@ -1,5 +1,45 @@
 # ETHack — S&P-500-Nachhaltigkeitsranking
 
+## Dataset-Branch: hier anfangen
+
+- **[Fusionsbericht einfach erklärt](report/fusionsbericht.pdf)**: tatsächlicher Ablauf
+  dieses Branches, Bewertung, Datenbrowser, Unterschiede zum Original und konkrete
+  Verbesserungen nach Priorität. Bearbeitbare Quelle: [LaTeX](report/fusionsbericht.tex).
+- **[Original-Fusionsbericht aus main](<fusionsbericht (1).pdf>)**: unverändert aus
+  `origin/main` (`662d939`) übernommen. Er beschreibt eine andere Modellvariante;
+  seine `f01`- bis `f07`-Skripte sind in diesem Branch nicht enthalten.
+
+Der gespeicherte Dataset-Stand enthält **503 Firmen, 45 Kennzahlen und 11 798
+Datenzeilen**. **467 Firmen** haben mindestens einen Nachhaltigkeitswert, **36**
+keinen solchen Wert. Ein berechnetes Klimarangband gibt es für **143 Firmen**.
+Diese Zahlen bezeichnen verschiedene Arten von Abdeckung. Das Register enthält
+19 Quellen, davon liefern 14 Werte im Export. Stand der Bestandsprüfung:
+12.09.2026, Dataset-Ausgangscommit `aaf65d2`.
+
+Der Ablauf: Quellen laden → Anlagen Firmen zuordnen → Kennzahlen und Rangbänder
+berechnen → Zusatzdaten zusammenführen → CSV/Parquet und Web-JSON exportieren.
+Die Klimanote nutzt drei Emissionskennzahlen; weitere Umwelt-, Sozial- und
+Governance-Werte werden separat angezeigt. Die Web-App liest vorbereitete Daten
+und fragt keine Behörden live ab.
+
+Die wichtigsten offenen Arbeiten sind belegte Konzernzuordnungen, eindeutige
+Einheiten und Zeiträume, klare Regeln für fehlende Werte sowie reproduzierbare
+Datenläufe. Der neue Bericht erklärt die konkreten Fundstellen. Er dokumentiert
+den vorhandenen Code; die beschriebenen Verbesserungen sind noch nicht umgesetzt.
+
+PDF bauen (Tectonic 0.15.0, erster Lauf benötigt HTTPS für TeX-Pakete):
+
+```bash
+tectonic --untrusted --outdir report report/fusionsbericht.tex
+pdfinfo report/fusionsbericht.pdf
+pdftoppm -scale-to 1200 -png report/fusionsbericht.pdf /tmp/fusionsbericht
+```
+
+## Hintergrund der ursprünglichen Ranking-Pipeline
+
+Die folgenden Abschnitte und älteren Berichte enthalten frühere Ergebnisstände.
+Für die aktuelle Einordnung des Dataset-Branches gilt der Fusionsbericht oben.
+
 Ein branchenrelatives Ranking der 500 größten US-Börsenfirmen auf physisch
 gemessenen Emissionen, mit Unsicherheitsanalyse statt Schein-Präzision.
 
