@@ -1,0 +1,75 @@
+\textbf{Emissionsmengen} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Absolute Treibhausgasmengen, wie sie gemeldet oder gemessen wurden.}\\
+\addlinespace[2pt]
+Scope-1-Emissionen & \texttt{scope1\_t} & t CO2e & $\downarrow$ & 167 & 2018--2023 & EPA Greenhouse Gas Reporti \\
+CO2 gemessen (CEMS) & \texttt{campd\_co2\_t} & t CO2e & $\downarrow$ & 48 & 2019--2026 & EPA Clean Air Markets Prog \\
+\midrule
+\midrule
+\textbf{Intensitaeten und Trends} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Emissionen bezogen auf eine Aktivitaetsgroesse, und ihre Entwicklung. Hier entscheidet die Wahl des Nenners.}\\
+\addlinespace[2pt]
+CO2-Intensitaet & \texttt{co2\_intensity} & t CO2e je Mio. USD Umsatz & $\downarrow$ & 164 & 2018--2023 & Eigene Berechnung dieser P \\
+CO2 je erzeugter MWh & \texttt{t\_co2\_pro\_mwh} & t CO2e/MWh & $\downarrow$ & 45 & 2023--2023 & EPA eGRID \\
+Trend der Intensitaet & \texttt{intensity\_cagr} & \%/Jahr & $\downarrow$ & 139 & 2022--2023 & Eigene Berechnung dieser P \\
+Trend der absoluten Tonnen & \texttt{absolute\_cagr} & \%/Jahr & $\downarrow$ & 142 & 2022--2023 & Eigene Berechnung dieser P \\
+\midrule
+\midrule
+\textbf{Weitere Umweltwirkung} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Was neben CO2 in Luft, Wasser und Boden gelangt.}\\
+\addlinespace[2pt]
+Giftstofffreisetzung & \texttt{tri\_releases\_lbs} & lbs & $\downarrow$ & 195 & 2023--2023 & EPA Toxics Release Invento \\
+davon krebserregend & \texttt{tri\_carcinogen\_lbs} & lbs & $\downarrow$ & 195 & 2023--2023 & EPA Toxics Release Invento \\
+\midrule
+\midrule
+\textbf{Arbeitssicherheit} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Die soziale Dimension als gemeldete Kennzahl statt als Selbstbeschreibung.}\\
+\addlinespace[2pt]
+Unfallrate DART & \texttt{dart\_rate} & Faelle je 100 Vollzeitkraefte & $\downarrow$ & 310 & 2025--2025 & OSHA Injury Tracking Appli \\
+Todesfaelle & \texttt{osha\_deaths} & Anzahl & $\downarrow$ & 310 & 2025--2025 & OSHA Injury Tracking Appli \\
+\midrule
+\midrule
+\textbf{Regeltreue} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Dokumentiertes Verhalten gegenueber Umweltauflagen. Die einzige Achse, die nachweislich unabhaengig von der CO2-Intensitaet ist.}\\
+\addlinespace[2pt]
+Umweltstrafen & \texttt{echo\_penalties\_usd} & USD & $\downarrow$ & 130 & 2025--2025 & EPA ECHO Enforcement and C \\
+Verstossquartale je Anlage & \texttt{echo\_nc\_quarters\_per\_site} & Quartale & $\downarrow$ & 130 & 2025--2025 & EPA ECHO Enforcement and C \\
+Anlagen mit schwerem Verstoss & \texttt{echo\_significant} & Anzahl & $\downarrow$ & 130 & 2025--2025 & EPA ECHO Enforcement and C \\
+\midrule
+\midrule
+\textbf{Ziele und Glaubwuerdigkeit} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Achse B des Modells. Wird getrennt ausgewiesen und nie in die Kernnote eingerechnet.}\\
+\addlinespace[2pt]
+SBTi-geprueftes Ziel & \texttt{sbti\_validated} & ja/nein & $\uparrow$ & 241 & 2026--2026 & Science Based Targets init \\
+Zwischenzieljahr & \texttt{sbti\_near\_term\_year} & Jahr & -- & 209 & 2026--2026 & Science Based Targets init \\
+Netto-null-Jahr & \texttt{sbti\_net\_zero\_year} & Jahr & -- & 66 & 2026--2026 & Science Based Targets init \\
+Zusage zurueckgezogen & \texttt{sbti\_commitment\_removed} & ja/nein & $\downarrow$ & 241 & 2026--2026 & Science Based Targets init \\
+Intensitaet faellt, Tonnen steigen & \texttt{intensity\_illusion} & ja/nein & $\downarrow$ & 157 & 2022--2023 & Eigene Berechnung dieser P \\
+Basisjahr-Bequemlichkeit & \texttt{base\_year\_ratio} & Verhaeltnis & $\downarrow$ & 142 & 2022--2023 & Eigene Berechnung dieser P \\
+\midrule
+\midrule
+\textbf{Ergebnis des Modells} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Kein Einzelplatz, sondern die Spanne ueber alle Methodenkombinationen.}\\
+\addlinespace[2pt]
+Rangband untere Grenze & \texttt{rank\_p10} & Perzentil & $\uparrow$ & 157 & 2023--2023 & Eigene Berechnung dieser P \\
+Rangband Median & \texttt{rank\_p50} & Perzentil & $\uparrow$ & 157 & 2023--2023 & Eigene Berechnung dieser P \\
+Rangband obere Grenze & \texttt{rank\_p90} & Perzentil & $\uparrow$ & 157 & 2023--2023 & Eigene Berechnung dieser P \\
+\midrule
+\midrule
+\textbf{Vergleichsmassstab} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Fremdbewertung, ausschliesslich zum Gegenhalten. Fliesst in keine eigene Note ein.}\\
+\addlinespace[2pt]
+kommerzielles ESG-Risiko & \texttt{esg\_risk\_total} & Punkte & $\downarrow$ & 199 & 2021--2021 & Kommerzielle ESG-Risk-Rati \\
+\midrule
+\midrule
+\textbf{Bezugs- und Guetegroessen} & & & & & & \\
+\multicolumn{7}{p{0.96\textwidth}}{\footnotesize Nenner, Zaehlwerte und Konfidenzangaben, die keine Bewertung sind.}\\
+\addlinespace[2pt]
+Umsatz & \texttt{revenue\_musd} & Mio. USD & -- & 164 & 2018--2023 & SEC EDGAR XBRL frames \\
+zugeordnete Anlagen & \texttt{n\_facilities} & Anzahl & -- & 157 & 2022--2023 & EPA Greenhouse Gas Reporti \\
+Zuordnungskonfidenz & \texttt{match\_confidence} & 0-1 & $\uparrow$ & 157 & 2022--2023 & Eigene Berechnung dieser P \\
+Kraftwerke mit Messung & \texttt{campd\_plants} & Anzahl & -- & 48 & 2019--2026 & EPA Clean Air Markets Prog \\
+eGRID-Kraftwerke & \texttt{egrid\_plants} & Anzahl & -- & 45 & 2023--2023 & EPA eGRID \\
+TRI-Anlagen & \texttt{tri\_facilities} & Anzahl & -- & 195 & 2023--2023 & EPA Toxics Release Invento \\
+gemeldete Betriebsstaetten & \texttt{osha\_sites} & Anzahl & -- & 310 & 2025--2025 & OSHA Injury Tracking Appli \\
+\midrule
+\bottomrule%

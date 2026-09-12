@@ -1,0 +1,18 @@
+{
+  "quellen": 14,
+  "rohtabellen": 21,
+  "rohzeilen": 9852350,
+  "roh_mb": 253.7,
+  "werte": 7793,
+  "firmen": 436,
+  "kennzahlen": 30,
+  "jahre": [
+    2018,
+    2026
+  ],
+  "schluessel_noetig": [
+    "EPA Clean Air Markets Program Data",
+    "EIA Formular 923 (via PUDL und API)"
+  ],
+  "nicht_gruppiert": []
+}

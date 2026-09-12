@@ -8,3 +8,7 @@ report/*.aux
 report/*.log
 report/*.out
 report/*.toc
+
+# Zugangsschluessel — niemals committen
+.env
+.env.local

@@ -1,0 +1,480 @@
+"""Baut den gesammelten Datensatz -- mit einer Quelle an jedem einzelnen Wert.
+
+Die Form ist bewusst lang statt breit: eine Zeile je Firma, Jahr und Kennzahl.
+Nur so laesst sich die Herkunft an jedem *Wert* fuehren statt nur an der
+Spalte. Eine breite Tabelle wuerde die Provenienz auf Spaltenebene
+zusammenfassen und damit genau die Information verlieren, um die es geht --
+naemlich dass die CO2-Zahl einer Firma gemessen, die der naechsten aber
+selbstberichtet oder fortgeschrieben sein kann.
+
+Ausgabe:
+
+``dataset_long.parquet`` / ``.csv``   alle Werte mit Provenienz
+``sources.json``                      Quellenregister mit Lizenz und Abrufdatum
+``metrics.json``                      Kennzahlenregister mit Einheit und Richtung
+``companies.json``                    verdichtete Sicht je Firma fuer die Web-App
+"""
+from __future__ import annotations
+
+import json
+from datetime import date
+
+import numpy as np
+import pandas as pd
+
+from .config import OUT, RAW
+
+HEUTE = date.today().isoformat()
+
+# ---------------------------------------------------------------------------
+# Quellenregister. Jede Kennzahl verweist auf genau einen Eintrag hier.
+# ---------------------------------------------------------------------------
+SOURCES: dict[str, dict] = {
+    "epa_ghgrp": {
+        "name": "EPA Greenhouse Gas Reporting Program",
+        "url": "https://data.epa.gov/efservice/PUB_DIM_FACILITY/",
+        "access": "frei, ohne Anmeldung",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "US-Anlagen ueber 25 000 t CO2e, Berichtsjahre 2018-2023",
+        "measurement": "gemeldet, teils aus Brennstoffmengen gerechnet",
+        "caveat": "Reihe endet 2023; Direktemittenten von Lieferanten getrennt (sector_type)",
+    },
+    "epa_campd": {
+        "name": "EPA Clean Air Markets Program Data",
+        "url": "https://api.epa.gov/easey/emissions-mgmt/emissions/apportioned/annual",
+        "access": "kostenloser Schluessel noetig",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "Kraftwerksbloecke der Handelsprogramme, 2019 bis laufendes Jahr",
+        "measurement": "kontinuierliche Messung am Schornstein (CEMS)",
+        "caveat": "nur Stromerzeugung; laufendes Jahr unvollstaendig",
+    },
+    "egrid": {
+        "name": "EPA eGRID",
+        "url": "https://www.epa.gov/egrid/download-data",
+        "access": "frei",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "US-Kraftwerke, Berichtsjahr 2023",
+        "measurement": "Emissionen und Erzeugung bereits verknuepft",
+        "caveat": "nur aussagekraeftig fuer Firmen, deren Geschaeft Stromerzeugung ist",
+    },
+    "sec_xbrl": {
+        "name": "SEC EDGAR XBRL frames",
+        "url": "https://data.sec.gov/api/xbrl/frames/",
+        "access": "frei, User-Agent noetig",
+        "license": "oeffentlich",
+        "coverage": "Geschaeftsjahre 2016-2025",
+        "measurement": "aus Pflichtberichten",
+        "caveat": "fuenf verschiedene Umsatz-Tags; Firmen taggen uneinheitlich",
+    },
+    "sbti": {
+        "name": "Science Based Targets initiative",
+        "url": "https://sciencebasedtargets.org/download/excel",
+        "access": "frei, direkter xlsx-Download",
+        "license": "Nutzung mit Quellenangabe",
+        "coverage": "15 605 Organisationen weltweit, Stand laufend",
+        "measurement": "Selbstmeldung, von SBTi geprueft",
+        "caveat": "Selbstselektion: Firmen melden sich freiwillig; Energiebranche fehlt fast ganz",
+    },
+    "epa_tri": {
+        "name": "EPA Toxics Release Inventory",
+        "url": "https://data.epa.gov/efservice/downloads/tri/mv_tri_basic_download/2023_US/csv/",
+        "access": "frei",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "US-Anlagen, Berichtsjahr 2023",
+        "measurement": "gemeldet",
+        "caveat": "Gesamtmenge korreliert mit CO2 (rho 0,53); eigenstaendig ist der Krebserreger-Anteil",
+    },
+    "osha_ita": {
+        "name": "OSHA Injury Tracking Application, Formular 300A",
+        "url": "https://www.osha.gov/itadata",
+        "access": "frei, vollstaendige Browser-Kopfzeilen noetig",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "US-Betriebsstaetten, 2023-2025",
+        "measurement": "gemeldet, gesetzlich vorgeschrieben",
+        "caveat": "DART misst auch Branchenstruktur; branchenrelativ vergleichen",
+    },
+    "epa_echo": {
+        "name": "EPA ECHO Enforcement and Compliance History",
+        "url": "https://echo.epa.gov/files/echodownloads/echo_exporter.zip",
+        "access": "frei",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "US-Anlagen, Konformitaetshistorie drei Jahre",
+        "measurement": "behoerdliche Feststellung",
+        "caveat": "Zuordnung ueber FRS-Kennung, deshalb nur fuer Anlagen mit GHGRP-Eintrag",
+    },
+    "eia_923": {
+        "name": "EIA Formular 923 (via PUDL und API)",
+        "url": "https://www.eia.gov/electricity/data/eia923/",
+        "access": "PUDL frei, API mit kostenlosem Schluessel",
+        "license": "US-Regierungswerk, gemeinfrei",
+        "coverage": "US-Kraftwerke ab 1 MW, 2021-2025",
+        "measurement": "gemeldeter Brennstoffeinsatz und Erzeugung",
+        "caveat": "unabhaengige Gegenprobe zu CEMS, nicht dieselbe Messkette",
+    },
+    "esg_snapshot": {
+        "name": "Kommerzielle ESG-Risk-Ratings (Sustainalytics via Yahoo, gespiegelt)",
+        "url": "https://raw.githubusercontent.com/sburstein/ESG-Stock-Data/main/sp_esg_stock_data.csv",
+        "access": "frei gespiegelt",
+        "license": "unklar -- nur als Vergleichsmassstab verwendet, nie als Eingabe",
+        "coverage": "245 Firmen, Stand 2021",
+        "measurement": "Anbieterbewertung",
+        "caveat": "eingefroren 2021; fliesst in keine eigene Note ein",
+    },
+    "sp500_master": {
+        "name": "S&P-500-Konstituenten",
+        "url": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
+        "access": "frei",
+        "license": "CC BY-SA",
+        "coverage": "503 Mitglieder, heutiger Stand",
+        "measurement": "Stammdaten",
+        "caveat": "nur der heutige Stand -- fuer historische Jahre ueberlebensverzerrt",
+    },
+    "pudl": {
+        "name": "PUDL (Catalyst Cooperative) auf Zenodo",
+        "url": "https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/stable/",
+        "access": "frei, ohne Anmeldung",
+        "license": "Public Domain",
+        "coverage": "aufbereitete EIA-, EPA- und SEC-Daten, 1995 bis laufendes Jahr",
+        "measurement": "aufbereitet aus Behoerdenquellen",
+        "caveat": "Zwischenschicht: Aufbereitungsfehler sind moeglich, dafuer entfaellt eigene Bereinigung",
+    },
+    "pudl_sec_ex21": {
+        "name": "SEC 10-K Anlage 21 (Konzernstruktur, via PUDL)",
+        "url": "https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/stable/core_sec10k__quarterly_exhibit_21_company_ownership.parquet",
+        "access": "frei, ohne Anmeldung",
+        "license": "Public Domain",
+        "coverage": "3,8 Mio. Tochtereintraege, 478 von 500 Indexmuettern",
+        "measurement": "aus Pflichtanlagen der Boersenaufsicht",
+        "caveat": "Namen in Kleinschreibung und teils abgeschnitten; Beteiligungsquote nur bei 99 117 Eintraegen",
+    },
+    "eigene_berechnung": {
+        "name": "Eigene Berechnung dieser Pipeline",
+        "url": "scripts/02_analyse.py",
+        "access": "reproduzierbar",
+        "license": "-",
+        "coverage": "abgeleitet aus den oben genannten Quellen",
+        "measurement": "berechnet",
+        "caveat": "Herkunft der Eingangsgroessen steht jeweils beim Basiswert",
+    },
+}
+
+# ---------------------------------------------------------------------------
+# Kennzahlenregister: Einheit, Richtung, Achse und Quelle.
+# direction -1 = kleiner ist besser, +1 = groesser ist besser, 0 = neutral
+# ---------------------------------------------------------------------------
+METRICS: dict[str, dict] = {
+    "scope1_t": ("Scope-1-Emissionen", "t CO2e", -1, "A", "epa_ghgrp"),
+    "co2_intensity": ("CO2-Intensitaet", "t CO2e je Mio. USD Umsatz", -1, "A", "eigene_berechnung"),
+    "intensity_cagr": ("Trend der Intensitaet", "%/Jahr", -1, "A", "eigene_berechnung"),
+    "absolute_cagr": ("Trend der absoluten Tonnen", "%/Jahr", -1, "A", "eigene_berechnung"),
+    "n_facilities": ("zugeordnete Anlagen", "Anzahl", 0, "meta", "epa_ghgrp"),
+    "match_confidence": ("Zuordnungskonfidenz", "0-1", 1, "meta", "eigene_berechnung"),
+    "revenue_musd": ("Umsatz", "Mio. USD", 0, "meta", "sec_xbrl"),
+    "campd_co2_t": ("CO2 gemessen (CEMS)", "t CO2e", -1, "A", "epa_campd"),
+    "campd_plants": ("Kraftwerke mit Messung", "Anzahl", 0, "meta", "epa_campd"),
+    "t_co2_pro_mwh": ("CO2 je erzeugter MWh", "t CO2e/MWh", -1, "A", "egrid"),
+    "egrid_plants": ("eGRID-Kraftwerke", "Anzahl", 0, "meta", "egrid"),
+    "tri_releases_lbs": ("Giftstofffreisetzung", "lbs", -1, "A", "epa_tri"),
+    "tri_carcinogen_lbs": ("davon krebserregend", "lbs", -1, "A", "epa_tri"),
+    "tri_facilities": ("TRI-Anlagen", "Anzahl", 0, "meta", "epa_tri"),
+    "dart_rate": ("Unfallrate DART", "Faelle je 100 Vollzeitkraefte", -1, "S", "osha_ita"),
+    "osha_deaths": ("Todesfaelle", "Anzahl", -1, "S", "osha_ita"),
+    "osha_sites": ("gemeldete Betriebsstaetten", "Anzahl", 0, "meta", "osha_ita"),
+    "echo_penalties_usd": ("Umweltstrafen", "USD", -1, "G", "epa_echo"),
+    "echo_nc_quarters_per_site": ("Verstossquartale je Anlage", "Quartale", -1, "G", "epa_echo"),
+    "echo_significant": ("Anlagen mit schwerem Verstoss", "Anzahl", -1, "G", "epa_echo"),
+    "sbti_validated": ("SBTi-geprueftes Ziel", "ja/nein", 1, "B", "sbti"),
+    "sbti_near_term_year": ("Zwischenzieljahr", "Jahr", 0, "B", "sbti"),
+    "sbti_net_zero_year": ("Netto-null-Jahr", "Jahr", 0, "B", "sbti"),
+    "sbti_commitment_removed": ("Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti"),
+    "intensity_illusion": ("Intensitaet faellt, Tonnen steigen", "ja/nein", -1, "B", "eigene_berechnung"),
+    "base_year_ratio": ("Basisjahr-Bequemlichkeit", "Verhaeltnis", -1, "B", "eigene_berechnung"),
+    "rank_p10": ("Rangband untere Grenze", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
+    "rank_p50": ("Rangband Median", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
+    "rank_p90": ("Rangband obere Grenze", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
+    "esg_risk_total": ("kommerzielles ESG-Risiko", "Punkte", -1, "vergleich", "esg_snapshot"),
+}
+
+
+def _read(path, **kw) -> pd.DataFrame:
+    return pd.read_csv(path, **kw) if path.exists() else pd.DataFrame()
+
+
+def _add(rows: list, df: pd.DataFrame, mapping: dict[str, str], year=None) -> None:
+    """Haengt Werte im Langformat an, eine Zeile je Firma/Jahr/Kennzahl."""
+    if df.empty:
+        return
+    year_col = "year" if "year" in df.columns else None
+    for col, metric in mapping.items():
+        if col not in df.columns:
+            continue
+        sub = df[["ticker", col] + ([year_col] if year_col else [])].dropna(subset=[col])
+        for rec in sub.itertuples(index=False):
+            val = getattr(rec, col if col.isidentifier() else "_1")
+            if isinstance(val, (np.bool_, bool)):
+                val = float(bool(val))
+            try:
+                val = float(val)
+            except (TypeError, ValueError):
+                continue
+            if not np.isfinite(val):
+                continue
+            rows.append(
+                {
+                    "ticker": rec.ticker,
+                    "year": int(getattr(rec, year_col)) if year_col else year,
+                    "metric": metric,
+                    "value": val,
+                }
+            )
+
+
+def build() -> pd.DataFrame:
+    master = pd.read_parquet(RAW / "sp500_master.parquet")
+    rows: list[dict] = []
+
+    panel = _read(OUT / "panel_periode_a.csv")
+    if not panel.empty:
+        panel = panel.assign(year=panel["year_last"])
+        _add(rows, panel, {
+            "scope1_t": "scope1_t", "co2_intensity": "co2_intensity",
+            "intensity_cagr": "intensity_cagr", "absolute_cagr": "absolute_cagr",
+            "n_facilities": "n_facilities", "match_confidence": "match_confidence",
+            "revenue_musd": "revenue_musd", "base_year_ratio": "base_year_ratio",
+            "intensity_illusion": "intensity_illusion",
+        })
+
+    cy = _read(OUT / "company_year.csv")
+    if not cy.empty:
+        _add(rows, cy, {"scope1_t": "scope1_t", "revenue_musd": "revenue_musd",
+                        "co2_intensity": "co2_intensity"})
+
+    bands = _read(OUT / "rangbaender_periode_a.csv")
+    if not bands.empty:
+        _add(rows, bands.assign(year=2023),
+             {"p10": "rank_p10", "p50": "rank_p50", "p90": "rank_p90"})
+
+    egrid = _read(OUT / "egrid_je_firma.csv")
+    if not egrid.empty:
+        _add(rows, egrid.assign(year=2023),
+             {"t_co2_pro_mwh": "t_co2_pro_mwh", "kraftwerke": "egrid_plants"})
+
+    tri = _read(OUT / "tri_je_firma.csv")
+    if not tri.empty:
+        _add(rows, tri.assign(year=2023),
+             {"freisetzung_lbs": "tri_releases_lbs", "krebs_lbs": "tri_carcinogen_lbs",
+              "anlagen": "tri_facilities"})
+
+    osha = _read(OUT / "osha_je_firma.csv")
+    if not osha.empty:
+        _add(rows, osha.assign(year=2025),
+             {"dart_rate": "dart_rate", "tote": "osha_deaths", "betriebe": "osha_sites"})
+
+    echo = _read(OUT / "echo_je_firma.csv")
+    if not echo.empty:
+        # Die Spaltennamen der ECHO-Auswertung haben zwei Auspraegungen, je
+        # nachdem welches Skript sie zuletzt geschrieben hat.
+        _add(rows, echo.assign(year=2025), {
+            "strafen": "echo_penalties_usd",
+            "strafen_usd": "echo_penalties_usd",
+            "vq_je_anlage": "echo_nc_quarters_per_site",
+            "verstossquartale_je_anlage": "echo_nc_quarters_per_site",
+            "sv": "echo_significant",
+            "schwere_verstoesse": "echo_significant",
+        })
+
+    long = pd.DataFrame(rows)
+
+    # ---- CAMPD: die aktuellen Jahre, ueber ownerOperator zugeordnet ----------
+    campd = _campd_by_company(master)
+    if not campd.empty:
+        long = pd.concat([long, campd], ignore_index=True)
+
+    # ---- SBTi ---------------------------------------------------------------
+    sbti = _sbti_by_company(master)
+    if not sbti.empty:
+        long = pd.concat([long, sbti], ignore_index=True)
+
+    # ---- kommerzieller Vergleichsmassstab -----------------------------------
+    esg_path = RAW / "esg_snapshot.parquet"
+    if esg_path.exists():
+        esg = pd.read_parquet(esg_path)
+        e = pd.DataFrame({
+            "ticker": esg["ticker"], "year": 2021, "metric": "esg_risk_total",
+            "value": pd.to_numeric(esg["esg_risk_total"], errors="coerce"),
+        }).dropna()
+        long = pd.concat([long, e], ignore_index=True)
+
+    # ---- Provenienz und Stammdaten anhaengen --------------------------------
+    meta = pd.DataFrame(
+        [(k, v[0], v[1], v[2], v[3], v[4]) for k, v in METRICS.items()],
+        columns=["metric", "metric_label", "unit", "direction", "axis", "source_id"],
+    )
+    long = long.merge(meta, on="metric", how="left")
+    long = long.merge(
+        master[["ticker", "company", "gics_sector", "gics_sub_industry"]],
+        on="ticker", how="left",
+    )
+    src = pd.DataFrame(
+        [{"source_id": k, "source_name": v["name"], "source_url": v["url"],
+          "source_access": v["access"], "source_license": v["license"]}
+         for k, v in SOURCES.items()]
+    )
+    long = long.merge(src, on="source_id", how="left")
+    long["retrieved_at"] = HEUTE
+    # Das laufende Kalenderjahr ist bei fortlaufend gemeldeten Quellen nur
+    # teilweise erfasst. Ohne Kennzeichnung liest sich ein Fuenf-Monats-Wert
+    # wie ein Jahreswert.
+    laufend = date.today().year
+    long["partial_year"] = (long["year"] >= laufend) & long["source_id"].isin(
+        {"epa_campd"}
+    )
+    long = long.dropna(subset=["company", "source_id"])
+    long = long.drop_duplicates(["ticker", "year", "metric"])
+    return long.sort_values(["ticker", "metric", "year"]).reset_index(drop=True)
+
+
+def _campd_by_company(master: pd.DataFrame) -> pd.DataFrame:
+    """CAMPD-Emissionen ueber das Eigentuemerfeld auf Ticker verteilen."""
+    from .resolve import OVERRIDES, normalize
+    from .sources.epa_campd import split_owner_operator
+
+    ep, fp = RAW / "campd_emission.parquet", RAW / "campd_facility.parquet"
+    if not (ep.exists() and fp.exists()):
+        return pd.DataFrame()
+    emi, fac = pd.read_parquet(ep), pd.read_parquet(fp)
+    lookup = {normalize(r.company): r.ticker for r in master.itertuples()}
+
+    def to_ticker(name: str):
+        k = normalize(name)
+        if k in lookup:
+            return lookup[k]
+        if k in OVERRIDES:
+            return OVERRIDES[k]
+        return next((t for p, t in OVERRIDES.items() if k.startswith(p)), None)
+
+    own = fac[["facilityId", "year", "ownerOperator"]].drop_duplicates()
+    recs = []
+    for fid, yr, raw in own.itertuples(index=False):
+        for name, role in split_owner_operator(raw):
+            if role != "owner":
+                continue
+            t = to_ticker(name)
+            if t:
+                recs.append({"facilityId": fid, "year": yr, "ticker": t})
+    if not recs:
+        return pd.DataFrame()
+    link = pd.DataFrame(recs).drop_duplicates()
+    j = emi.merge(link, on=["facilityId", "year"], how="inner")
+    agg = j.groupby(["ticker", "year"], as_index=False).agg(
+        campd_co2_t=("co2_t", "sum"), campd_plants=("facilityId", "nunique")
+    )
+    out = agg.melt(id_vars=["ticker", "year"], var_name="metric", value_name="value")
+    return out.dropna(subset=["value"])
+
+
+def _sbti_by_company(master: pd.DataFrame) -> pd.DataFrame:
+    from .resolve import normalize
+
+    p = RAW / "sbti_targets.parquet"
+    if not p.exists():
+        return pd.DataFrame()
+    s = pd.read_parquet(p)
+    s["key"] = s["company_name"].map(normalize)
+    m = master.assign(key=master["company"].map(normalize)).merge(
+        s.drop_duplicates("key"), on="key", how="inner"
+    )
+    out = pd.DataFrame({
+        "ticker": m["ticker"],
+        "sbti_validated": m["has_validated_target"].astype(float),
+        "sbti_commitment_removed": m["commitment_removed"].astype(float),
+        "sbti_near_term_year": pd.to_numeric(m["near_term_year"], errors="coerce"),
+        "sbti_net_zero_year": pd.to_numeric(m["net_zero_year"], errors="coerce"),
+    })
+    long = out.melt(id_vars="ticker", var_name="metric", value_name="value").dropna()
+    long["year"] = 2026
+    return long
+
+
+def write_all() -> dict:
+    long = build()
+    long.to_parquet(OUT / "dataset_long.parquet", index=False)
+    long.to_csv(OUT / "dataset_long.csv", index=False)
+
+    (OUT / "sources.json").write_text(
+        json.dumps(
+            {k: {**v, "retrieved_at": HEUTE} for k, v in SOURCES.items()},
+            indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    (OUT / "metrics.json").write_text(
+        json.dumps(
+            {k: {"label": v[0], "unit": v[1], "direction": v[2], "axis": v[3],
+                 "source_id": v[4]} for k, v in METRICS.items()},
+            indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    # Verdichtete Sicht je Firma fuer die Web-App: neuester Wert je Kennzahl.
+    # Fuer die verdichtete Sicht das juengste *vollstaendige* Jahr nehmen und
+    # nur dann auf ein angebrochenes ausweichen, wenn es kein anderes gibt.
+    latest = (
+        long.sort_values(["partial_year", "year"], ascending=[False, True])
+        .groupby(["ticker", "metric"], as_index=False)
+        .last()
+    )
+    companies = []
+    master = pd.read_parquet(RAW / "sp500_master.parquet")
+    for ticker, g in latest.groupby("ticker"):
+        row = g.iloc[0]
+        companies.append(
+            {
+                "ticker": ticker,
+                "company": row["company"],
+                "sector": row["gics_sector"],
+                "subIndustry": row["gics_sub_industry"],
+                "metrics": [
+                    {
+                        "metric": r["metric"],
+                        "label": r["metric_label"],
+                        "value": None if pd.isna(r["value"]) else float(r["value"]),
+                        "unit": r["unit"],
+                        "year": int(r["year"]) if pd.notna(r["year"]) else None,
+                        "axis": r["axis"],
+                        "sourceId": r["source_id"],
+                        "sourceName": r["source_name"],
+                        "sourceUrl": r["source_url"],
+                        "partial": bool(r.get("partial_year", False)),
+                    }
+                    for _, r in g.iterrows()
+                ],
+            }
+        )
+    missing = [
+        {"ticker": r.ticker, "company": r.company, "sector": r.gics_sector}
+        for r in master.itertuples()
+        if r.ticker not in set(latest["ticker"])
+    ]
+    payload = {
+        "generatedAt": HEUTE,
+        "companies": sorted(companies, key=lambda c: -len(c["metrics"])),
+        "withoutData": missing,
+        "sources": {k: {**v, "retrieved_at": HEUTE} for k, v in SOURCES.items()},
+        "metrics": {
+            k: {"label": v[0], "unit": v[1], "direction": v[2], "axis": v[3],
+                "sourceId": v[4]}
+            for k, v in METRICS.items()
+        },
+    }
+    (OUT / "companies.json").write_text(
+        json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+    return {
+        "zeilen": len(long),
+        "firmen": int(long["ticker"].nunique()),
+        "kennzahlen": int(long["metric"].nunique()),
+        "quellen": int(long["source_id"].nunique()),
+        "jahre": [int(long["year"].min()), int(long["year"].max())],
+        "ohne_daten": len(missing),
+    }

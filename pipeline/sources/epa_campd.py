@@ -31,18 +31,20 @@ import time
 
 import pandas as pd
 
+from ..config import _load_env  # laedt .env beim Import
 from .base import DataSource, register, session
 
 BASE = "https://api.epa.gov/easey"
-PER_PAGE = 1000
+PER_PAGE = 500  # Obergrenze der API
 YEARS = range(2019, 2027)
 
 
 def api_key() -> str:
-    return os.environ.get("EPA_CAMD_API_KEY", "DEMO_KEY")
+    """Schluessel aus .env; ohne ihn greift DEMO_KEY mit 10 Anfragen je Stunde."""
+    return os.environ.get("EPA_CAMD_API_KEY") or "DEMO_KEY"
 
 
-def _paged(path: str, params: dict, max_pages: int = 20) -> list[dict]:
+def _paged(path: str, params: dict, max_pages: int = 40) -> list[dict]:
     """Holt alle Seiten eines CAMPD-Endpunkts."""
     out: list[dict] = []
     for page in range(1, max_pages + 1):
@@ -57,7 +59,10 @@ def _paged(path: str, params: dict, max_pages: int = 20) -> list[dict]:
                 "als EPA_CAMD_API_KEY setzen."
             )
         r.raise_for_status()
-        rows = r.json()
+        payload = r.json()
+        # Je nach Endpunkt kommt entweder eine blanke Liste oder ein Objekt
+        # mit dem Schluessel "items" zurueck.
+        rows = payload.get("items", []) if isinstance(payload, dict) else payload
         if not rows:
             break
         out.extend(rows)
