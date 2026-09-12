@@ -48,10 +48,12 @@ einmal nach Quelle, einmal nach Datentyp}
 \author{ETHack 2026}
 \date{Stand aller Abrufe: 12.~September 2026}
 
+\input{generated/stats}
+
 \begin{document}
 \maketitle
 
-\befund{\textbf{Wozu dieser Katalog.} Der Bestand ist an einem Tag aus zwölf Quellen zusammengetragen worden. Damit er später wiederverwendbar ist, braucht es zwei Dinge: eine Liste, woher jeder Wert stammt und was sein Abruf kostet, und eine Liste, was die Werte eigentlich messen. Beide Tabellen sind \emph{erzeugt}, nicht geschrieben -- \texttt{scripts/06\_katalog.py} liest sie aus den Daten. Kommt eine Quelle dazu, stimmt der Katalog beim nächsten Lauf von selbst.}
+\befund{\textbf{Wozu dieser Katalog.} Der Bestand ist an einem Tag aus \statQuellen{} Quellen zusammengetragen worden. Damit er später wiederverwendbar ist, braucht es zwei Dinge: eine Liste, woher jeder Wert stammt und was sein Abruf kostet, und eine Liste, was die Werte eigentlich messen. Beide Tabellen sind \emph{erzeugt}, nicht geschrieben -- \texttt{scripts/06\_katalog.py} liest sie aus den Daten. Kommt eine Quelle dazu, stimmt der Katalog beim nächsten Lauf von selbst.}
 
 \section*{Der Bestand in Zahlen}
 \addcontentsline{toc}{section}{Der Bestand in Zahlen}
@@ -59,18 +61,18 @@ einmal nach Quelle, einmal nach Datentyp}
 \begin{center}\small
 \begin{tabular}{lr}
 \toprule
-Quellen & 12 \\
-Rohtabellen im Zwischenspeicher & 21 \\
-Rohzeilen insgesamt & 9\,750\,265 \\
-Umfang der Rohdaten & 253{,}7 MB \\
+Quellen & \statQuellen \\
+Rohtabellen im Zwischenspeicher & \statRohtabellen \\
+Rohzeilen insgesamt & \statRohzeilen \\
+Umfang der Rohdaten & \statRohMB{} MB \\
 \midrule
-Werte im gesammelten Datensatz & 7\,403 \\
-davon Firmen & 436 von 503 \\
-davon Kennzahlen & 27 \\
-abgedeckte Geschäftsjahre & 2018--2026 \\
+Werte im gesammelten Datensatz & \statWerte \\
+davon Firmen & \statFirmen{} von 503 \\
+davon Kennzahlen & \statKennzahlen \\
+abgedeckte Geschäftsjahre & \statJahrVon--\statJahrBis \\
 \midrule
-Werte ohne Quellenangabe & \textbf{0} \\
-Quellen mit Schlüsselpflicht & 2 \\
+Werte ohne Quellenangabe & \textbf{\statOhneQuelle} \\
+Quellen mit Schlüsselpflicht & \statSchluessel \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -151,7 +153,7 @@ Alle Abrufe werden als Parquet zwischengespeichert. Das macht die Auswertung rep
 Dieselben Werte, gruppiert nach dem, was sie messen. Der Pfeil gibt die Richtung an: $\downarrow$ heißt, kleiner ist besser.
 
 \begin{center}\footnotesize
-\begin{longtable}{P{4.1cm} P{3.5cm} P{2.9cm} c r c P{2.7cm}}
+\begin{longtable}{P{3.6cm} P{4.0cm} P{2.5cm} c r c P{2.7cm}}
 \toprule
 \textbf{Kennzahl} & \textbf{technisch} & \textbf{Einheit} & \textbf{Richt.} & \textbf{Firmen} & \textbf{Jahre} & \textbf{Quelle} \\
 \midrule

@@ -257,6 +257,31 @@ def main() -> None:
         ],
         "nicht_gruppiert": sorted(set(METRICS) - seen),
     }
+    # Eckzahlen als LaTeX-Makros, damit im Dokument nichts fest eingetippt ist.
+    def de(n: int) -> str:
+        return f"{n:,}".replace(",", "\\,")
+
+    (GEN / "stats.tex").write_text(
+        "\n".join(
+            [
+                f"\\newcommand{{\\statQuellen}}{{{len(SOURCES)}}}",
+                f"\\newcommand{{\\statRohtabellen}}{{{len(inv)}}}",
+                f"\\newcommand{{\\statRohzeilen}}{{{de(int(inv.zeilen.sum()))}}}",
+                f"\\newcommand{{\\statRohMB}}{{{inv.mb.sum():.1f}}}".replace(".", "{,}"),
+                f"\\newcommand{{\\statWerte}}{{{de(len(long))}}}",
+                f"\\newcommand{{\\statFirmen}}{{{int(long.ticker.nunique())}}}",
+                f"\\newcommand{{\\statKennzahlen}}{{{int(long.metric.nunique())}}}",
+                f"\\newcommand{{\\statJahrVon}}{{{int(long.year.min())}}}",
+                f"\\newcommand{{\\statJahrBis}}{{{int(long.year.max())}}}",
+                f"\\newcommand{{\\statOhneQuelle}}{{{int(long.source_id.isna().sum())}}}",
+                "\\newcommand{\\statSchluessel}{%d}"
+                % sum("Schluessel" in v["access"] for v in SOURCES.values()),
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
     (OUT / "katalog_stats.json").write_text(
         json.dumps(stats, indent=2, ensure_ascii=False), encoding="utf-8"
     )
