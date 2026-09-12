@@ -1,0 +1,19 @@
+peer_group,n,label,archetype
+G01,21,Fossile Energiewirtschaft,A1
+G02,33,Versorger & Umweltinfrastruktur,A1
+G03,26,Rohstoff- & Prozessindustrie,A1
+G04,16,Transport & Logistik,A2
+G05,17,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3
+G06,48,Investitionsgüter & Bauwirtschaft,A3
+G07,45,Halbleiter & Elektronikfertigung,A4
+G08,19,"Nahrungsmittel, Getränke & Tabak",A4
+G09,14,Markenkonsumgüter (Non-Food),A4
+G10,31,"Handel, Distribution & Gastronomie",A4
+G11,42,"Pharma, Biotech & Medizintechnik",A4
+G12,12,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5
+G13,34,Software & digitale Plattformen,A5
+G14,19,"Rechenzentren, Netze & Funktürme",A5
+G15,21,Transaktions- & Informationsdienstleister,A5
+G16,52,"Banken, Versicherer & Vermögensverwalter",A6
+G17,28,Immobilien & Gebäudebetrieb,A5
+G18,25,Medien & unternehmensnahe Dienste,A5

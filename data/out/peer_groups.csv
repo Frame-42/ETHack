@@ -1,0 +1,504 @@
+ticker,company,gics_sector,gics_sub_industry,peer_group,assign_reason,peer_label,archetype,archetype_label,contested
+APA,APA Corporation,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+BKR,Baker Hughes,Energy,Oil & Gas Equipment & Services,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+COP,ConocoPhillips,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CVX,Chevron Corporation,Energy,Integrated Oil & Gas,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+DVN,Devon Energy,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+EOG,EOG Resources,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+EQT,EQT Corporation,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+EXE,Expand Energy,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+FANG,Diamondback Energy,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+HAL,Halliburton,Energy,Oil & Gas Equipment & Services,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+KMI,Kinder Morgan,Energy,Oil & Gas Storage & Transportation,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+MPC,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+OKE,Oneok,Energy,Oil & Gas Storage & Transportation,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+OXY,Occidental Petroleum,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+SLB,Schlumberger,Energy,Oil & Gas Equipment & Services,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+TPL,Texas Pacific Land Corporation,Energy,Oil & Gas Exploration & Production,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+TRGP,Targa Resources,Energy,Oil & Gas Storage & Transportation,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+VLO,Valero Energy,Energy,Oil & Gas Refining & Marketing,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+WMB,Williams Companies,Energy,Oil & Gas Storage & Transportation,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+XOM,ExxonMobil,Energy,Integrated Oil & Gas,G01,GICS Sub-Industry,Fossile Energiewirtschaft,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+AEE,Ameren,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+AEP,American Electric Power,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+AES,AES Corporation,Utilities,Independent Power Producers & Energy Traders,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+ATO,Atmos Energy,Utilities,Gas Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+AWK,American Water Works,Utilities,Water Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CEG,Constellation Energy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CMS,CMS Energy,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CNP,CenterPoint Energy,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+D,Dominion Energy,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+DTE,DTE Energy,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+DUK,Duke Energy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+ED,Consolidated Edison,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+EIX,Edison International,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+ES,Eversource Energy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+ETR,Entergy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+EVRG,Evergy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+EXC,Exelon,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+FE,FirstEnergy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+LNT,Alliant Energy,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+NEE,NextEra Energy,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+NI,NiSource,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+NRG,NRG Energy,Utilities,Independent Power Producers & Energy Traders,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PCG,PG&E Corporation,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PEG,Public Service Enterprise Group,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PNW,Pinnacle West Capital,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PPL,PPL Corporation,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+RSG,Republic Services,Industrials,Environmental & Facilities Services,G02,Deponiemethan und Sammelflotte: eigene Scope-1-Anlagen,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+SO,Southern Company,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+SRE,Sempra,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+VST,Vistra Corp.,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+WEC,WEC Energy Group,Utilities,Electric Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+WM,Waste Management,Industrials,Environmental & Facilities Services,G02,Deponiemethan und Sammelflotte: eigene Scope-1-Anlagen,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+XEL,Xcel Energy,Utilities,Multi-Utilities,G02,GICS Sub-Industry,Versorger & Umweltinfrastruktur,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+ALB,Albemarle Corporation,Materials,Specialty Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+AMCR,Amcor,Materials,Paper & Plastic Packaging Products & Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+APD,Air Products,Materials,Industrial Gases,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+AVY,Avery Dennison,Materials,Paper & Plastic Packaging Products & Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+BALL,Ball Corporation,Materials,"Metal, Glass & Plastic Containers",G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CF,CF Industries,Materials,Fertilizers & Agricultural Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CRH,CRH plc,Materials,Construction Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CTVA,Corteva,Materials,Fertilizers & Agricultural Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+DD,DuPont,Industrials,Industrial Conglomerates,G03,"Chemieproduktion, kein diversifizierter Industriebetrieb",Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,True
+DOW,Dow Inc.,Materials,Commodity Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+ECL,Ecolab,Materials,Specialty Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+FCX,Freeport-McMoRan,Materials,Copper,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+IFF,International Flavors & Fragrances,Materials,Specialty Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+IP,International Paper,Materials,Paper & Plastic Packaging Products & Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+LIN,Linde plc,Materials,Industrial Gases,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+LYB,LyondellBasell,Materials,Specialty Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+MLM,Martin Marietta Materials,Materials,Construction Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+MOS,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+NEM,Newmont,Materials,Gold,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+NUE,Nucor,Materials,Steel,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PKG,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+PPG,PPG Industries,Materials,Specialty Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+SHW,Sherwin-Williams,Materials,Specialty Chemicals,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+STLD,Steel Dynamics,Materials,Steel,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+SW,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+VMC,Vulcan Materials Company,Materials,Construction Materials,G03,GICS Sub-Industry,Rohstoff- & Prozessindustrie,A1,Prozess- und Verbrennungsemissionen vor Ort,False
+CCL,Carnival Corporation,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G04,"Kreuzfahrt: Schiffsdiesel, mobile Verbrennung statt Gebäude",Transport & Logistik,A2,Mobile Verbrennung,False
+CHRW,C.H. Robinson,Industrials,Air Freight & Logistics,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+CSX,CSX Corporation,Industrials,Rail Transportation,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+DAL,Delta Air Lines,Industrials,Passenger Airlines,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+EXPD,Expeditors International,Industrials,Air Freight & Logistics,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+FDX,FedEx,Industrials,Air Freight & Logistics,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+FDXF,FedEx Freight,Industrials,Cargo Ground Transportation,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+JBHT,J.B. Hunt,Industrials,Cargo Ground Transportation,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+LUV,Southwest Airlines,Industrials,Passenger Airlines,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G04,"Kreuzfahrt: Schiffsdiesel, mobile Verbrennung statt Gebäude",Transport & Logistik,A2,Mobile Verbrennung,False
+NSC,Norfolk Southern,Industrials,Rail Transportation,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+ODFL,Old Dominion,Industrials,Cargo Ground Transportation,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+RCL,Royal Caribbean Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G04,"Kreuzfahrt: Schiffsdiesel, mobile Verbrennung statt Gebäude",Transport & Logistik,A2,Mobile Verbrennung,False
+UAL,United Airlines Holdings,Industrials,Passenger Airlines,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+UNP,Union Pacific Corporation,Industrials,Rail Transportation,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+UPS,United Parcel Service,Industrials,Air Freight & Logistics,G04,GICS Sub-Industry,Transport & Logistik,A2,Mobile Verbrennung,False
+APTV,Aptiv,Consumer Discretionary,Automotive Parts & Equipment,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+AXON,Axon Enterprise,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+BA,Boeing,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+F,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+GD,General Dynamics,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+GE,GE Aerospace,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+GM,General Motors,Consumer Discretionary,Automobile Manufacturers,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+HII,Huntington Ingalls Industries,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+HONA,Honeywell Aerospace,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+HWM,Howmet Aerospace,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+LHX,L3Harris,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+LMT,Lockheed Martin,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+NOC,Northrop Grumman,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+RTX,RTX Corporation,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+TDG,TransDigm Group,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+TSLA,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+TXT,Textron,Industrials,Aerospace & Defense,G05,GICS Sub-Industry,"Fahrzeug-, Luftfahrt- & Wehrtechnik",A3,Nutzungsphase der verkauften Produkte,False
+ALLE,Allegion,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+AME,Ametek,Industrials,Electrical Components & Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+AOS,A. O. Smith,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+BLDR,Builders FirstSource,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+CARR,Carrier Global,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+CAT,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+CMI,Cummins,Industrials,Construction Machinery & Heavy Transportation Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+DE,Deere & Company,Industrials,Agricultural & Farm Machinery,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+DHI,D. R. Horton,Consumer Discretionary,Homebuilding,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+DOV,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+EME,Emcor,Industrials,Construction & Engineering,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+EMR,Emerson Electric,Industrials,Electrical Components & Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+ETN,Eaton Corporation,Industrials,Electrical Components & Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+FAST,Fastenal,Industrials,Trading Companies & Distributors,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+FERG,Ferguson Enterprises,Industrials,Trading Companies & Distributors,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+FIX,Comfort Systems USA,Industrials,Construction & Engineering,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+FTV,Fortive,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+GEV,GE Vernova,Industrials,Heavy Electrical Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+GNRC,Generac,Industrials,Heavy Electrical Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+GWW,W. W. Grainger,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+HON,Honeywell Technologies,Industrials,Industrial Conglomerates,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,True
+HUBB,Hubbell Incorporated,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+IEX,IDEX Corporation,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+IR,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+ITW,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+J,Jacobs Solutions,Industrials,Construction & Engineering,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+JCI,Johnson Controls,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+LEN,Lennar,Consumer Discretionary,Homebuilding,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+LII,Lennox International,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+MAS,Masco,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+MMM,3M,Industrials,Industrial Conglomerates,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,True
+NDSN,Nordson Corporation,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+NVR,"NVR, Inc.",Consumer Discretionary,Homebuilding,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+OTIS,Otis Worldwide,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+PCAR,Paccar,Industrials,Construction Machinery & Heavy Transportation Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+PH,Parker Hannifin,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+PHM,PulteGroup,Consumer Discretionary,Homebuilding,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+PNR,Pentair,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+PWR,Quanta Services,Industrials,Construction & Engineering,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+ROK,Rockwell Automation,Industrials,Electrical Components & Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+SNA,Snap-on,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+SWK,Stanley Black & Decker,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+TT,Trane Technologies,Industrials,Building Products,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+URI,United Rentals,Industrials,Trading Companies & Distributors,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+VLTO,Veralto,Industrials,Environmental & Facilities Services,G06,"Hersteller von Wasser- und Analysetechnik, kein Entsorger",Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+VRT,Vertiv,Industrials,Electrical Components & Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+WAB,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+XYL,Xylem Inc.,Industrials,Industrial Machinery & Supplies & Components,G06,GICS Sub-Industry,Investitionsgüter & Bauwirtschaft,A3,Nutzungsphase der verkauften Produkte,False
+AAPL,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+ADI,Analog Devices,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+AMAT,Applied Materials,Information Technology,Semiconductor Materials & Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+AMD,Advanced Micro Devices,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+ANET,Arista Networks,Information Technology,Communications Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+APH,Amphenol,Information Technology,Electronic Components,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+AVGO,Broadcom,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+CIEN,Ciena,Information Technology,Communications Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+COHR,Coherent Corp.,Information Technology,Electronic Components,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+CSCO,Cisco,Information Technology,Communications Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+DELL,Dell Technologies,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+FFIV,"F5, Inc.",Information Technology,Communications Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+FLEX,Flex Ltd.,Information Technology,Electronic Manufacturing Services,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+FSLR,First Solar,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,True
+GLW,Corning Inc.,Information Technology,Electronic Components,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+HPE,Hewlett Packard Enterprise,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+HPQ,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+INTC,Intel,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+JBL,Jabil,Information Technology,Electronic Manufacturing Services,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+KEYS,Keysight Technologies,Information Technology,Electronic Equipment & Instruments,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+KLAC,KLA Corporation,Information Technology,Semiconductor Materials & Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+LITE,Lumentum,Information Technology,Communications Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+LRCX,Lam Research,Information Technology,Semiconductor Materials & Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+MCHP,Microchip Technology,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+MPWR,Monolithic Power Systems,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+MRVL,Marvell Technology,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+MSI,Motorola Solutions,Information Technology,Communications Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+MU,Micron Technology,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+NTAP,NetApp,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+NVDA,Nvidia,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+NXPI,NXP Semiconductors,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+ON,ON Semiconductor,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+Q,Qnity Electronics,Information Technology,Semiconductor Materials & Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+QCOM,Qualcomm,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+ROP,Roper Technologies,Information Technology,Electronic Equipment & Instruments,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+SMCI,Supermicro,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+SNDK,Sandisk,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+STX,Seagate Technology,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+SWKS,Skyworks Solutions,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+TDY,Teledyne Technologies,Information Technology,Electronic Equipment & Instruments,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+TEL,TE Connectivity,Information Technology,Electronic Manufacturing Services,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+TER,Teradyne,Information Technology,Semiconductor Materials & Equipment,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+TXN,Texas Instruments,Information Technology,Semiconductors,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+WDC,Western Digital,Information Technology,"Technology Hardware, Storage & Peripherals",G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+ZBRA,Zebra Technologies,Information Technology,Electronic Equipment & Instruments,G07,GICS Sub-Industry,Halbleiter & Elektronikfertigung,A4,Vorgelagerte Lieferkette,False
+ADM,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+BF.B,Brown–Forman,Consumer Staples,Distillers & Vintners,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+BG,Bunge Global,Consumer Staples,Agricultural Products & Services,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+GIS,General Mills,Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+HRL,Hormel Foods,Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+HSY,Hershey Company (The),Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+KDP,Keurig Dr Pepper,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+KHC,Kraft Heinz,Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+KO,Coca-Cola Company (The),Consumer Staples,Soft Drinks & Non-alcoholic Beverages,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+MKC,McCormick & Company,Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+MNST,Monster Beverage,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+MO,Altria,Consumer Staples,Tobacco,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+PEP,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+PM,Philip Morris International,Consumer Staples,Tobacco,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+SJM,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+STZ,Constellation Brands,Consumer Staples,Distillers & Vintners,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+TAP,Molson Coors Beverage Company,Consumer Staples,Brewers,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+TSN,Tyson Foods,Consumer Staples,Packaged Foods & Meats,G08,GICS Sub-Industry,"Nahrungsmittel, Getränke & Tabak",A4,Vorgelagerte Lieferkette,False
+CHD,Church & Dwight,Consumer Staples,Household Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+CL,Colgate-Palmolive,Consumer Staples,Household Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+CLX,Clorox,Consumer Staples,Household Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+DECK,Deckers Brands,Consumer Discretionary,Footwear,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+EL,Estée Lauder Companies (The),Consumer Staples,Personal Care Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+GRMN,Garmin,Consumer Discretionary,Consumer Electronics,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+HAS,Hasbro,Consumer Discretionary,Leisure Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+KMB,Kimberly-Clark,Consumer Staples,Household Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+KVUE,Kenvue,Consumer Staples,Personal Care Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+LULU,Lululemon Athletica,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+NKE,"Nike, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods",G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+PG,Procter & Gamble,Consumer Staples,Personal Care Products,G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+RL,Ralph Lauren Corporation,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+TPR,"Tapestry, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods",G09,GICS Sub-Industry,Markenkonsumgüter (Non-Food),A4,Vorgelagerte Lieferkette,False
+AMZN,Amazon,Consumer Discretionary,Broadline Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,True
+AZO,AutoZone,Consumer Discretionary,Automotive Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+BBY,Best Buy,Consumer Discretionary,Computer & Electronics Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+CAH,Cardinal Health,Health Care,Health Care Distributors,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+CASY,Casey's,Consumer Staples,Food Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+CMG,Chipotle Mexican Grill,Consumer Discretionary,Restaurants,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+COR,Cencora,Health Care,Health Care Distributors,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+COST,Costco,Consumer Staples,Consumer Staples Merchandise Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+CVNA,Carvana,Consumer Discretionary,Automotive Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+DG,Dollar General,Consumer Staples,Consumer Staples Merchandise Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+DLTR,Dollar Tree,Consumer Staples,Consumer Staples Merchandise Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+DPZ,Domino's,Consumer Discretionary,Restaurants,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+DRI,Darden Restaurants,Consumer Discretionary,Restaurants,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+GPC,Genuine Parts Company,Consumer Discretionary,Distributors,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+HD,Home Depot (The),Consumer Discretionary,Home Improvement Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+HSIC,Henry Schein,Health Care,Health Care Distributors,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+KR,Kroger,Consumer Staples,Food Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+LOW,Lowe's,Consumer Discretionary,Home Improvement Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+MCD,McDonald's,Consumer Discretionary,Restaurants,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+MCK,McKesson Corporation,Health Care,Health Care Distributors,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+ORLY,O'Reilly Automotive,Consumer Discretionary,Automotive Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+ROST,Ross Stores,Consumer Discretionary,Apparel Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+SBUX,Starbucks,Consumer Discretionary,Restaurants,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+SYY,Sysco,Consumer Staples,Food Distributors,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+TGT,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+TJX,TJX Companies,Consumer Discretionary,Apparel Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+TSCO,Tractor Supply,Consumer Discretionary,Other Specialty Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+ULTA,Ulta Beauty,Consumer Discretionary,Other Specialty Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+WMT,Walmart,Consumer Staples,Consumer Staples Merchandise Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+WSM,"Williams-Sonoma, Inc.",Consumer Discretionary,Homefurnishing Retail,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+YUM,Yum! Brands,Consumer Discretionary,Restaurants,G10,GICS Sub-Industry,"Handel, Distribution & Gastronomie",A4,Vorgelagerte Lieferkette,False
+A,Agilent Technologies,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+ABBV,AbbVie,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+ABT,Abbott Laboratories,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+ALGN,Align Technology,Health Care,Health Care Supplies,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+AMGN,Amgen,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+BAX,Baxter International,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+BDX,Becton Dickinson,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+BIIB,Biogen,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+BMY,Bristol Myers Squibb,Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+BSX,Boston Scientific,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+COO,Cooper Companies (The),Health Care,Health Care Supplies,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+CRL,Charles River Laboratories,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+DHR,Danaher Corporation,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+DXCM,Dexcom,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+EW,Edwards Lifesciences,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+GEHC,GE HealthCare,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+GILD,Gilead Sciences,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+IDXX,Idexx Laboratories,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+INCY,Incyte,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+ISRG,Intuitive Surgical,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+JNJ,Johnson & Johnson,Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+LLY,Lilly (Eli),Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+MDT,Medtronic,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+MRK,Merck & Co.,Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+MRNA,Moderna,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+MTD,Mettler Toledo,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+PFE,Pfizer,Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+PODD,Insulet Corporation,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+REGN,Regeneron Pharmaceuticals,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+RMD,ResMed|,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+RVTY,Revvity,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+SOLV,Solventum,Health Care,Health Care Technology,G11,"Hersteller von Medizinprodukten, keine Software","Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+STE,Steris,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+SYK,Stryker Corporation,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+TECH,Bio-Techne,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+TMO,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+VRTX,Vertex Pharmaceuticals,Health Care,Biotechnology,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+VTRS,Viatris,Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+WAT,Waters Corporation,Health Care,Life Sciences Tools & Services,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+WST,West Pharmaceutical Services,Health Care,Health Care Supplies,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+ZBH,Zimmer Biomet,Health Care,Health Care Equipment,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+ZTS,Zoetis,Health Care,Pharmaceuticals,G11,GICS Sub-Industry,"Pharma, Biotech & Medizintechnik",A4,Vorgelagerte Lieferkette,False
+CI,Cigna,Health Care,Health Care Services,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CNC,Centene Corporation,Health Care,Managed Health Care,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CVS,CVS Health,Health Care,Health Care Services,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+DGX,Quest Diagnostics,Health Care,Health Care Services,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+DVA,DaVita,Health Care,Health Care Services,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ELV,Elevance Health,Health Care,Managed Health Care,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+HCA,HCA Healthcare,Health Care,Health Care Facilities,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+HUM,Humana,Health Care,Managed Health Care,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+IQV,IQVIA,Health Care,Life Sciences Tools & Services,G12,"Klinische Auftragsforschung und Gesundheitsdaten: Materialität ist Patientendatenschutz und Studienethik, nicht Produktion","Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+LH,Labcorp,Health Care,Health Care Services,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+UHS,Universal Health Services,Health Care,Health Care Facilities,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+UNH,UnitedHealth Group,Health Care,Managed Health Care,G12,GICS Sub-Industry,"Gesundheitsversorgung, Kostenträger & klinische Dienste",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ABNB,Airbnb,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G13,Plattform ohne eigene Immobilien,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ACN,Accenture,Information Technology,IT Consulting & Other Services,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ADBE,Adobe Inc.,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ADSK,Autodesk,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G13,Buchungsplattform ohne eigene Immobilien,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CDNS,Cadence Design Systems,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CDW,CDW Corporation,Information Technology,Technology Distributors,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CRM,Salesforce,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CRWD,CrowdStrike,Information Technology,Systems Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CSGP,CoStar Group,Real Estate,Real Estate Services,G13,"Datenplattform, kein Immobilienbestand",Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CTSH,Cognizant,Information Technology,IT Consulting & Other Services,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+DASH,DoorDash,Consumer Discretionary,Specialized Consumer Services,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+DDOG,Datadog,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+EBAY,eBay Inc.,Consumer Discretionary,Broadline Retail,G13,Marktplatz ohne eigenes Warenlager und Fuhrpark,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+EXPE,Expedia Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G13,Buchungsplattform ohne eigene Immobilien,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FICO,Fair Isaac,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FTNT,Fortinet,Information Technology,Systems Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+GEN,Gen Digital,Information Technology,Systems Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+IBM,IBM,Information Technology,IT Consulting & Other Services,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+INTU,Intuit,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+IT,Gartner,Information Technology,IT Consulting & Other Services,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+LDOS,Leidos,Industrials,Diversified Support Services,G13,"IT-Dienstleistung, keine Wehrtechnikfertigung",Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+NOW,ServiceNow,Information Technology,Systems Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PANW,Palo Alto Networks,Information Technology,Systems Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PLTR,Palantir Technologies,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PTC,PTC Inc.,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+RDDT,Reddit,Communication Services,Interactive Media & Services,G13,"Plattform auf eingekaufter Cloud, kein eigenes Rechenzentrum",Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+SNPS,Synopsys,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+TRMB,Trimble Inc.,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+TTWO,Take-Two Interactive,Communication Services,Interactive Home Entertainment,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+TYL,Tyler Technologies,Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+UBER,Uber,Industrials,Passenger Ground Transportation,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+VEEV,Veeva Systems,Health Care,Health Care Technology,G13,"Branchensoftware, kein Leistungserbringer",Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+WDAY,"Workday, Inc.",Information Technology,Application Software,G13,GICS Sub-Industry,Software & digitale Plattformen,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+AKAM,Akamai Technologies,Information Technology,Internet Services & Infrastructure,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+AMT,American Tower,Real Estate,Telecom Tower REITs,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CCI,Crown Castle,Real Estate,Telecom Tower REITs,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CHTR,Charter Communications,Communication Services,Cable & Satellite,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CMCSA,Comcast,Communication Services,Cable & Satellite,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+DLR,Digital Realty,Real Estate,Data Center REITs,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ECHO,EchoStar,Communication Services,Wireless Telecommunication Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+EQIX,Equinix,Real Estate,Data Center REITs,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+GDDY,GoDaddy,Information Technology,Internet Services & Infrastructure,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+GOOG,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+GOOGL,Alphabet Inc. (Class A),Communication Services,Interactive Media & Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+META,Meta Platforms,Communication Services,Interactive Media & Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MSFT,Microsoft,Information Technology,Systems Software,G14,Betreibt eigene Hyperscale-Rechenzentren,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+ORCL,Oracle Corporation,Information Technology,Application Software,G14,Betreibt eigene Cloud-Rechenzentren (OCI),"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+SBAC,SBA Communications,Real Estate,Telecom Tower REITs,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+T,AT&T,Communication Services,Integrated Telecommunication Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+TMUS,T-Mobile US,Communication Services,Wireless Telecommunication Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+VRSN,Verisign,Information Technology,Internet Services & Infrastructure,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+VZ,Verizon,Communication Services,Integrated Telecommunication Services,G14,GICS Sub-Industry,"Rechenzentren, Netze & Funktürme",A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+BR,Broadridge Financial Solutions,Industrials,Data Processing & Outsourced Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CBOE,Cboe Global Markets,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CME,CME Group,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+COIN,Coinbase,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CPAY,Corpay,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+EFX,Equifax,Industrials,Research & Consulting Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FDS,FactSet,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FIS,Fidelity National Information Services,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FISV,Fiserv,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+GPN,Global Payments,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ICE,Intercontinental Exchange,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+JKHY,Jack Henry & Associates,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MA,Mastercard,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MCO,Moody's Corporation,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MSCI,MSCI,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+NDAQ,"Nasdaq, Inc.",Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PYPL,PayPal,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+SPGI,S&P Global,Financials,Financial Exchanges & Data,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+V,Visa Inc.,Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+VRSK,Verisk Analytics,Industrials,Research & Consulting Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+XYZ,"Block, Inc.",Financials,Transaction & Payment Processing Services,G15,GICS Sub-Industry,Transaktions- & Informationsdienstleister,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ACGL,Arch Capital Group,Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+AFL,Aflac,Financials,Life & Health Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+AIG,American International Group,Financials,Multi-line Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+AIZ,Assurant,Financials,Multi-line Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+ALL,Allstate,Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+AMP,Ameriprise Financial,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+APO,Apollo Global Management,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+ARES,Ares Management,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+AXP,American Express,Financials,Consumer Finance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+BAC,Bank of America,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+BEN,Franklin Resources,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+BLK,BlackRock,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+BNY,BNY Mellon,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+BRK.B,Berkshire Hathaway,Financials,Multi-Sector Holdings,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,True
+BX,Blackstone Inc.,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+C,Citigroup,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+CB,Chubb Limited,Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+CFG,Citizens Financial Group,Financials,Regional Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+CINF,Cincinnati Financial,Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+COF,Capital One,Financials,Consumer Finance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+EG,Everest Group,Financials,Reinsurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+FITB,Fifth Third Bancorp,Financials,Regional Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+GL,Globe Life,Financials,Life & Health Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+GS,Goldman Sachs,Financials,Investment Banking & Brokerage,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+HBAN,Huntington Bancshares,Financials,Regional Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+HIG,Hartford (The),Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+HOOD,Robinhood Markets,Financials,Investment Banking & Brokerage,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+IBKR,Interactive Brokers,Financials,Investment Banking & Brokerage,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+IVZ,Invesco,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+JPM,JPMorgan Chase,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+KEY,KeyCorp,Financials,Regional Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+KKR,KKR & Co.,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+L,Loews Corporation,Financials,Multi-line Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+MET,MetLife,Financials,Life & Health Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+MS,Morgan Stanley,Financials,Investment Banking & Brokerage,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+MTB,M&T Bank,Financials,Regional Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+NTRS,Northern Trust,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+PFG,Principal Financial Group,Financials,Life & Health Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+PGR,Progressive Corporation,Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+PNC,PNC Financial Services,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+PRU,Prudential Financial,Financials,Life & Health Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+RF,Regions Financial Corporation,Financials,Regional Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+RJF,Raymond James Financial,Financials,Investment Banking & Brokerage,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+SCHW,Charles Schwab Corporation,Financials,Investment Banking & Brokerage,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+STT,State Street Corporation,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+SYF,Synchrony Financial,Financials,Consumer Finance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+TFC,Truist Financial,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+TROW,T. Rowe Price,Financials,Asset Management & Custody Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+TRV,Travelers Companies (The),Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+USB,U.S. Bancorp,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+WFC,Wells Fargo,Financials,Diversified Banks,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+WRB,W. R. Berkley Corporation,Financials,Property & Casualty Insurance,G16,GICS Sub-Industry,"Banken, Versicherer & Vermögensverwalter",A6,Finanzierte und versicherte Emissionen,False
+ARE,Alexandria Real Estate Equities,Real Estate,Office REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+BXP,"BXP, Inc.",Real Estate,Office REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CPT,Camden Property Trust,Real Estate,Multi-Family Residential REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+DOC,Healthpeak Properties,Real Estate,Health Care REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ESS,Essex Property Trust,Real Estate,Multi-Family Residential REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+EXR,Extra Space Storage,Real Estate,Self-Storage REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FRT,Federal Realty Investment Trust,Real Estate,Retail REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+HLT,Hilton Worldwide,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G17,Hotelbetrieb: Fußabdruck ist Gebäudeenergie je Zimmer,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+HST,Host Hotels & Resorts,Real Estate,Hotel & Resort REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+INVH,Invitation Homes,Real Estate,Single-Family Residential REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+IRM,Iron Mountain,Real Estate,Other Specialized REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+KIM,Kimco Realty,Real Estate,Retail REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+LVS,Las Vegas Sands,Consumer Discretionary,Casinos & Gaming,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MAA,Mid-America Apartment Communities,Real Estate,Multi-Family Residential REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",G17,Hotelbetrieb: Fußabdruck ist Gebäudeenergie je Zimmer,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MGM,MGM Resorts,Consumer Discretionary,Casinos & Gaming,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+O,Realty Income,Real Estate,Retail REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PLD,Prologis,Real Estate,Industrial REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PSA,Public Storage,Real Estate,Self-Storage REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+REG,Regency Centers,Real Estate,Retail REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+SPG,Simon Property Group,Real Estate,Retail REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+UDR,"UDR, Inc.",Real Estate,Multi-Family Residential REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+VICI,Vici Properties,Real Estate,Hotel & Resort REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+VMRK,Vivmark Residential,Real Estate,Multi-Family Residential REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+VTR,Ventas,Real Estate,Health Care REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+WELL,Welltower,Real Estate,Health Care REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+WY,Weyerhaeuser,Real Estate,Timber REITs,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+WYNN,Wynn Resorts,Consumer Discretionary,Casinos & Gaming,G17,GICS Sub-Industry,Immobilien & Gebäudebetrieb,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ADP,Automatic Data Processing,Industrials,Human Resource & Employment Services,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+AJG,Arthur J. Gallagher & Co.,Financials,Insurance Brokers,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+AON,Aon plc,Financials,Insurance Brokers,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+APP,AppLovin,Communication Services,Advertising,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+BRO,Brown & Brown,Financials,Insurance Brokers,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CBRE,CBRE Group,Real Estate,Real Estate Services,G18,Vermittlung und Verwaltung ohne eigenen Bestand,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CPRT,Copart,Industrials,Diversified Support Services,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+CTAS,Cintas,Industrials,Diversified Support Services,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,True
+DIS,Walt Disney Company (The),Communication Services,Movies & Entertainment,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ERIE,Erie Indemnity,Financials,Insurance Brokers,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FOX,Fox Corporation (Class B),Communication Services,Broadcasting,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+FOXA,Fox Corporation (Class A),Communication Services,Broadcasting,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+LYV,Live Nation Entertainment,Communication Services,Movies & Entertainment,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+MRSH,Marsh McLennan,Financials,Insurance Brokers,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+NFLX,Netflix,Communication Services,Movies & Entertainment,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+NWS,News Corp (Class B),Communication Services,Publishing,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+NWSA,News Corp (Class A),Communication Services,Publishing,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+OMC,Omnicom Group,Communication Services,Advertising,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PAYX,Paychex,Industrials,Human Resource & Employment Services,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+PSKY,Paramount Skydance Corporation,Communication Services,Movies & Entertainment,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+ROL,"Rollins, Inc.",Industrials,Environmental & Facilities Services,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+TKO,TKO Group Holdings,Communication Services,Movies & Entertainment,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+TTD,Trade Desk (The),Communication Services,Advertising,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+WBD,Warner Bros. Discovery,Communication Services,Broadcasting,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False
+WTW,Willis Towers Watson,Financials,Insurance Brokers,G18,GICS Sub-Industry,Medien & unternehmensnahe Dienste,A5,Eingekaufte Elektrizität für Anlagen und Flächen,False

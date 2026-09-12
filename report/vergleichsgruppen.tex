@@ -1,0 +1,244 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\else
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}
+\fi
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{navy}{HTML}{12334A}
+\definecolor{teal}{HTML}{146B75}
+\hypersetup{colorlinks=true,linkcolor=navy,citecolor=teal,urlcolor=teal,pdftitle={Vergleichsgruppen für den S\&P 500},pdfauthor={ETHack 2026 -- Methodenbaustein}}
+\urlstyle{same}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\coeq}{\ensuremath{\mathrm{CO}_{2}\mathrm{e}}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\tabcolsep}{4pt}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=4pt,leftmargin=*}
+\renewcommand{\arraystretch}{1.17}
+\setcounter{tocdepth}{2}
+
+\input{generated/stats}
+
+\title{\textcolor{navy}{Vergleichsgruppen für den S\&P~500}\\[3mm]
+\large Wie man \NFirms{} Unternehmen so einteilt, dass Nachhaltigkeit vergleichbar wird}
+\author{Methodenbaustein für ETHack 2026}
+\date{Stand: 12.\,September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Ein Stromversorger stößt pro Umsatzdollar rund hundertmal mehr \coeq{} aus als ein Softwarehaus. Eine gemeinsame Rangliste der \NFirms{} S\&P-500-Unternehmen misst deshalb vor allem das Geschäftsmodell und nicht die Anstrengung. Dieser Baustein liefert das Vergleichsraster, das dieses Problem auflöst: \NArchetypes{} \emph{Archetypen} nach dem Wirkungsort des dominanten Fußabdrucks, verfeinert auf \NGroups{} \emph{Vergleichsgruppen} mit mindestens \MinSize{} Mitgliedern, unterlegt mit den \NSubIndustries{} GICS-Sub-Industries als Ebene für die Sensitivitätsanalyse. Entscheidend ist das Einteilungskriterium: nicht der Absatzmarkt, sondern die Frage, \emph{wo} die Umweltwirkung physisch entsteht -- im eigenen Schornstein, in der Flotte, beim Kunden, in der Lieferkette, in der Stromrechnung oder im Kreditbuch. Das Raster bricht die GICS-Sektoren gezielt auf: der Industriesektor zerfällt in acht Gruppen, der Technologiesektor trennt Rechenzentrumsbetreiber von anlagenarmer Software. Jede der \NOverrides{} Einzelfallzuordnungen ist begründet, \NContested{} bleibende Streitfälle sind benannt und werden im Robustheitslauf variiert statt versteckt.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Die Antwort in drei Sätzen}
+
+\begin{enumerate}
+\item \textbf{Wonach einteilen?} Nach dem \emph{Wirkungsort} des dominanten Fußabdrucks -- eigene Anlage, Flotte, Produktnutzung, Lieferkette, Strombezug, Portfolio -- und nicht nach dem Absatzmarkt, den GICS beschreibt. Daraus folgen \NArchetypes{} Archetypen.
+\item \textbf{Wie fein?} \NGroups{} Vergleichsgruppen sind der Arbeitspunkt: fein genug, dass innerhalb einer Gruppe dieselben Kennzahlen materiell sind und dieselbe Bezugsgröße gilt; grob genug, dass jede Gruppe mit mindestens \MinSize{} Mitgliedern (Median \MedGroup{}, Maximum \MaxGroup{}) eine Rangnormalisierung trägt.
+\item \textbf{Und die Zweifelsfälle?} Sie werden nicht weggeräumt. \NOverrides{} Firmen werden abweichend von ihrer GICS-Sub-Industry zugeordnet, jede mit schriftlicher Begründung; \NContested{} Firmen bleiben strittig und wandern im Sensitivitätslauf durch mehrere Gruppen. Kippt eine Rangaussage an ihnen, ist sie eine Aussage über die Gruppenwahl, nicht über die Firma.
+\end{enumerate}
+
+\section{Warum die GICS-Sektoren als Vergleichsraster nicht genügen}
+
+GICS ist eine Klassifikation für Kapitalmärkte. Sie gruppiert Unternehmen nach dem Markt, auf dem sie ihren Umsatz erzielen -- eine sinnvolle Ordnung für Portfoliokonstruktion und eine irreführende für Umweltvergleiche, weil sie Firmen mit völlig verschiedenen physischen Fußabdrücken zusammenlegt und Firmen mit identischem Fußabdruck trennt. Drei Beispiele, alle aus dem aktuellen Index:
+
+\begin{itemize}
+\item \textbf{Ein Sektor, zwei Physiken.} Die Sub-Industry \emph{Semiconductors} enthält Betreiber eigener Halbleiterwerke und reine Chipentwickler ohne Fertigung. Die einen tragen Prozessgase mit hohem Treibhauspotenzial, enormen Strom- und Wasserbedarf in den eigenen Büchern; die anderen haben denselben Fußabdruck in der Auftragsfertigung. Wer beide auf einer Skala misst, belohnt Auslagerung.
+\item \textbf{Identische Physik, verschiedene Sektoren.} Ein Rechenzentrums-REIT (Sektor Immobilien), ein Hyperscaler (Technologie) und ein Kabelnetzbetreiber (Kommunikation) betreiben dasselbe Geschäft im Sinne der Umweltwirkung: sie wandeln Strom in Rechen- und Übertragungsleistung. Ihre materiellen Kennzahlen -- Energieeffizienz, Erneuerbaren-Beschaffung, Kühlwasser -- sind dieselben.
+\item \textbf{Eine Sub-Industry, drei Geschäftsmodelle.} \emph{Hotels, Resorts \& Cruise Lines} vereint Kreuzfahrtreedereien (schwimmende Verbrennungsmotoren), Hotelbetreiber (Gebäudeenergie je Zimmer) und Buchungsplattformen (Bürostrom und eingekaufte Cloud). Für diese Sub-Industry existiert keine sinnvolle Standardzuordnung; sie muss auf Firmenebene aufgelöst werden.
+\end{itemize}
+
+Wie stark das vorgeschlagene Raster die Sektorlogik aufbricht, zeigt Tabelle~\ref{tab:crosswalk}. Drei Sektoren bleiben unangetastet, weil sie physisch homogen sind (Energie, Materials, Utilities); Industrials zerfällt in acht Gruppen.
+
+\begin{table}[htbp]
+\caption{Wie sich die \NSectors{} GICS-Sektoren auf die \NGroups{} Vergleichsgruppen verteilen}
+\label{tab:crosswalk}
+\small
+\input{generated/crosswalk}
+\end{table}
+
+\section{Das Einteilungskriterium: Wirkungsort statt Absatzmarkt}
+
+Die Literatur gibt die Richtung vor. Khan, Serafeim \& Yoon (2016) zeigen, dass nur die für eine Branche \emph{materiellen} Nachhaltigkeitsthemen Aussagekraft haben -- Wasserverbrauch ist für einen Getränkehersteller existenziell und für ein Softwarehaus bedeutungslos. Zhang (2025) findet, dass die Branchenzugehörigkeit den größten Teil der Unterschiede in Emissionskennzahlen erklärt. Beides zusammen heißt: die Gruppe bestimmt, \emph{welche} Kennzahlen erhoben werden und \emph{gegen wen} normalisiert wird. Eine Gruppe ist deshalb nur dann gut geschnitten, wenn ihre Mitglieder sich in vier Punkten gleichen.
+
+\begin{enumerate}
+\item \textbf{Ein dominanter Wirkungsort.} Alle Mitglieder haben ihren Fußabdruck überwiegend an derselben Stelle der Wertschöpfungskette. Nur dann bedeutet eine hohe Kennzahl dasselbe.
+\item \textbf{Dieselbe Bezugsgröße.} Vergleichbarkeit entsteht erst mit einem gemeinsamen Nenner. Für Versorger ist das die erzeugte MWh, für Speditionen der Tonnenkilometer, für Immobilien der Quadratmeter, für anlagenarme Dienstleister die Zahl der Mitarbeitenden. Umsatz ist die schlechteste dieser Größen, weil er mit Preisen und Margen schwankt.
+\item \textbf{Vergleichbare Datenlage.} Eine Gruppe, in der die Hälfte der Mitglieder Anlagendaten aus Behördenregistern hat und die andere Hälfte gar nichts, lässt sich nicht ranken -- der Rang misst dann die Offenlegung. Das ist genau die Berichts-Verzerrung, die Christensen, Serafeim \& Sikochi (2022) beschreiben.
+\item \textbf{Genug Mitglieder.} Unter \MinSize{} Firmen wird eine Rangnormalisierung nicht interpretierbar: bei zwölf Mitgliedern beträgt schon der kleinste Rangunterschied acht Perzentilpunkte.
+\end{enumerate}
+
+\subsection{Die \NArchetypes{} Archetypen}
+
+Aus Punkt~1 folgt die oberste Ebene. Sie beantwortet für jedes Unternehmen die Frage: wo entsteht die Wirkung?
+
+\begin{table}[htbp]
+\caption{Die \NArchetypes{} Wirkungsort-Archetypen}
+\label{tab:archetypes}
+\small
+\input{generated/archetypes}
+\end{table}
+
+Diese Ebene ist mehr als eine Überschrift. Sie legt fest, welche Kennzahl überhaupt als Hauptmaß taugt:
+
+\begin{itemize}
+\item In \textbf{A1} ist die Scope-1-Intensität die Hauptkennzahl und unabhängig belegbar -- EPA GHGRP und Climate TRACE erfassen genau diese Anlagen.
+\item In \textbf{A2} ist sie es auch, aber nur mit physischem Nenner. \coeq{} je Umsatzdollar bestraft eine Fluggesellschaft mit günstigen Tarifen.
+\item In \textbf{A3} ist der eigene Ausstoß nahezu irrelevant. Ein Autohersteller mit sauberer Fabrik und Verbrennerflotte ist nicht nachhaltig. Hier zählen Produktflottenwerte.
+\item In \textbf{A4} sind die Werte unzuverlässig -- Scope~3 wird geschätzt, und das GHG-Protokoll verbietet ausdrücklich, ihn über Firmen zu addieren. Deshalb wird hier \emph{Abdeckung und Politik} gemessen, nicht der Wert.
+\item In \textbf{A5} entscheidet die Qualität der Strombeschaffung: stundenscharf gedeckter Verbrauch ist etwas anderes als bilanziell zugekaufte Zertifikate.
+\item In \textbf{A6} ist der eigene Betrieb Messrauschen. Laut CDP liegen bei Banken und Versicherern über 99\,\% des Fußabdrucks im Portfolio. Eine Bank nach ihrer Büroenergie zu ranken misst Klimaanlagen statt Kreditbücher.
+\end{itemize}
+
+\subsection{Warum nicht nach Größe, Emissionshöhe oder Datenverfügbarkeit clustern?}
+
+Drei naheliegende Alternativen, die aus jeweils einem klaren Grund ausfallen:
+
+\begin{itemize}
+\item \textbf{Nach Unternehmensgröße.} Drempetic et al.\ (2020) zeigen, dass große Firmen bessere ESG-Noten bekommen, weil sie sich eine Berichtsabteilung leisten. Größe als Gruppierungsmerkmal würde diese Verzerrung nicht beheben, sondern einbauen.
+\item \textbf{Nach gemessener Emissionshöhe (datengetriebenes Clustering).} Das klingt objektiv, ist aber zirkulär: die Gruppe wird aus derselben Zahl gebildet, nach der anschließend bewertet wird. Firmen mit Datenlücken landen automatisch in der ``sauberen'' Gruppe.
+\item \textbf{Nach Datenverfügbarkeit.} Praktisch, aber es macht die Offenlegungsbereitschaft zum Vergleichsmaßstab -- genau der Fehler, den die Berichts-Verzerrung beschreibt. Datenlage wird deshalb \emph{dokumentiert} (Spalte in Tabelle~\ref{tab:groups}), nicht zum Kriterium gemacht.
+\end{itemize}
+
+\section{Die \NGroups{} Vergleichsgruppen}
+
+\begin{table}[htbp]
+\caption{Die Ranking-Ebene: \NGroups{} Gruppen, \NFirms{} Firmen, $n_{\min}=\MinGroup$, Median $\MedGroup$, $n_{\max}=\MaxGroup$}
+\label{tab:groups}
+\small
+\input{generated/groups_overview}
+\end{table}
+
+Die Spalte ``Scope-1-Datenlage'' ist die ehrliche Einschränkung: nur in den drei A1-Gruppen und teilweise in G04, G06, G11, G14 und G17 gibt es kostenlos etwas, das unabhängig überprüfbar ist. In den übrigen Gruppen bleibt die Bewertung auf Selbstauskünfte, Governance-Merkmale und Behördenregister angewiesen. Das ist eine Aussage über die Datenwelt, nicht über die Firmen -- und es ist ein Argument dafür, in diesen Gruppen mit weniger Kennzahlen und breiteren Unsicherheitsbändern zu arbeiten statt mit erfundener Präzision.
+
+\subsection{Warum \NGroups{} und nicht \NArchetypes{} oder \NSubIndustries{}?}
+
+Die Feinheit der Einteilung ist ein Zielkonflikt, kein Sachverhalt. Je feiner, desto vergleichbarer die Mitglieder -- und desto dünner die Besetzung, desto grobkörniger die Ränge, desto stärker wirkt jede einzelne Zuordnungsentscheidung.
+
+\begin{table}[htbp]
+\caption{Der Zielkonflikt der Einteilungstiefe}
+\label{tab:tradeoff}
+\small
+\begin{tabularx}{\linewidth}{@{}l r X X@{}}
+\toprule
+Ebene & $n$ Gruppen & Stärke & Schwäche \\
+\midrule
+A: Archetypen & \NArchetypes{} & Robuste Ränge (16--151 Firmen je Gruppe), gut kommunizierbar, trägt auch bei dünnen Daten & Innerhalb A4 stehen Chipfertiger und Bekleidungsmarken nebeneinander; Kennzahlenwahl wird zum Kompromiss \\
+B: Vergleichsgruppen & \NGroups{} & Einheitliche Materialität und Bezugsgröße je Gruppe; $n \geq \MinSize{}$ trägt Rangnormalisierung & Zuordnungsentscheidungen an den Rändern wirken spürbar; \NContested{} Firmen bleiben strittig \\
+C: GICS Sub-Industry & \NSubIndustries{} & Maximale Homogenität, keine eigene Ermessensentscheidung & Median von drei Firmen, 94\,\% der Sub-Industries unter der Mindestbesetzung -- als Rangliste unbrauchbar \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Empfehlung: \textbf{auf Ebene~B ranken, auf Ebene~A berichten, über alle drei Ebenen die Robustheit prüfen}. Ebene~C ist als Ranking-Ebene unbrauchbar, als Sensitivitätsdimension aber wertvoll: wer auch bei Normalisierung innerhalb der Sub-Industry im oberen Drittel bleibt, steht dort nicht wegen des Gruppenschnitts.
+
+Die Gruppenzahl ist nicht auf einen runden Wert gedrückt worden. Jede weitere Zusammenlegung hätte zwei verschiedene Wirkungsorte vermischt: G04 und G05 unterscheiden mobile Verbrennung von Produktnutzung, G13 und G14 anlagenarme Software von Rechenzentrumsbetrieb, G15 und G16 dienstleistende Finanzinfrastruktur von bilanzieller Portfoliohaftung. Umgekehrt wären feinere Schnitte fachlich wünschenswert -- Fab gegen Fabless in G07, Bank gegen Versicherer in G16 --, scheitern aber an der Mindestbesetzung. Genau diese Schnitte sind als Untergruppen (Ebene~C) dokumentiert und im Robustheitslauf vorgesehen.
+
+\section{Zuordnungsregeln und ihre Ausnahmen}
+
+Die Zuordnung läuft in zwei Schritten: erst über die GICS-Sub-Industry, dann über eine begründete Ausnahmeliste auf Firmenebene. Die Ausnahmen sind der inhaltlich interessante Teil, denn sie markieren genau die Stellen, an denen die Kapitalmarktlogik und die physische Logik auseinanderfallen.
+
+\begin{table}[htbp]
+\caption{Die \NOverrides{} Einzelfallzuordnungen. ``--'' bedeutet: für diese Sub-Industry existiert keine Standardgruppe, sie wird ausschließlich firmenweise aufgelöst}
+\label{tab:overrides}
+\small
+\input{generated/overrides}
+\end{table}
+
+Zwei Regeln halten diese Liste ehrlich. Erstens: kein Override ohne Begründung im Quelltext. Zweitens: ein Override, der die Gruppe gar nicht ändert, wird von der Validierung als Fehler gemeldet -- solche Einträge sind keine Zuordnung, sondern nur der Anschein von Sorgfalt.
+
+Manche Firmen lassen sich nicht auflösen. Ein Konglomerat, das Versicherungen verkauft und gleichzeitig eine Güterbahn und Stromversorger besitzt, hat keinen dominanten Wirkungsort. Diese Fälle werden benannt und im Sensitivitätslauf über mehrere Gruppen variiert.
+
+\begin{table}[htbp]
+\caption{Die \NContested{} strittigen Zuordnungen}
+\label{tab:contested}
+\small
+\input{generated/contested}
+\end{table}
+
+\section{Was das für das Scoring bedeutet}
+
+Das Raster ist kein Selbstzweck; es greift an vier Stellen in die Bewertung ein.
+
+\paragraph{Normalisierung innerhalb der Gruppe.} Für Kennzahl $m$, Firma $i$ und Gruppe $g(i)$ wird nicht der Rohwert verwendet, sondern die Rangposition innerhalb der Gruppe:
+\[
+r_{i,m} \;=\; \frac{\operatorname{rank}_{j \in g(i)}\!\left(x_{j,m}\right) - 0{,}5}{\left|g(i)\right|}\;\in\;(0,1).
+\]
+Der Rang ist gegenüber Ausreißern robust -- und bei \coeq{}-Daten gibt es extreme Ausreißer, etwa einen einzelnen Kohlekraftwerksbetreiber innerhalb von G02. Ein gestutzter $z$-Wert ist die Alternative, die die Abstände erhält; beide gehören in den Robustheitslauf.
+
+\paragraph{Kennzahlenauswahl je Gruppe.} Jede Gruppe bringt ihre eigenen vier bis sechs materiellen Kennzahlen mit (Abschnitt~\ref{sec:details}). Es gibt keinen gemeinsamen Kennzahlenvektor über alle \NFirms{} Firmen -- der Versuch, einen zu bilden, ist die Ursache dafür, dass Gesamtscores Geschäftsmodelle messen.
+
+\paragraph{Multiplikative Aggregation.} Innerhalb der Gruppe werden die normalisierten Werte geometrisch zusammengefasst, nicht addiert. Addition bedeutet volle Kompensierbarkeit: eine gute Governance-Note kann einen katastrophalen Emissionswert vollständig ausgleichen. Genau das soll nicht passieren.
+
+\paragraph{Die Gruppenwahl ist selbst ein Robustheitsparameter.} Das OECD/JRC-Handbuch (Nardo et al.\ 2008) verlangt, jede Ermessensentscheidung eines zusammengesetzten Indikators durchzuvariieren. Normalisierung, Gewichtung und Aggregation werden dabei üblicherweise genannt -- die Gruppendefinition fast nie, obwohl sie das Ergebnis mindestens so stark bewegt. Konkret zu variieren sind: die Ebene (A/B/C), die \NContested{} strittigen Firmen über ihre Alternativgruppen, und die Untergruppen-Schnitte innerhalb G07 und G16. Das Ergebnis ist dann keine Platzziffer, sondern eine Aussage der Form: \emph{Firma~X liegt bei 90\,\% aller sinnvollen Methoden- und Gruppenkombinationen im obersten Zehntel ihrer Vergleichsgruppe.}
+
+\paragraph{Greenwashing bleibt eine eigene Achse.} Glaubwürdigkeitsmerkmale -- Lücke zwischen Versprechen und Ist-Entwicklung, Scope-3-Abdeckung, geprüfte Klimaziele -- werden gruppenintern erhoben, aber nicht in die Hauptnote eingerechnet. Eine Firma kann sauber und unglaubwürdig sein oder schmutzig und ehrlich; das sind zwei Informationen, und ihre Vermischung vernichtet beide.
+
+\section{Die Gruppen im Detail}
+\label{sec:details}
+
+Für jede Gruppe: die Begründung des Schnitts, die materiellen Kennzahlen, die Bezugsgröße, die realistische Datenlage, die vorgesehenen Untergruppen und die Mitglieder.
+
+\input{generated/group_details}
+
+\section{Grenzen}
+
+\begin{itemize}
+\item \textbf{Der dominante Wirkungsort ist eine Setzung, keine Messung.} Für Mischkonzerne ist er teils willkürlich. Deshalb die Streitfallliste -- aber sie löst das Problem nicht, sie macht es sichtbar.
+\item \textbf{Die Gruppen sind aus Sachkenntnis über Geschäftsmodelle gebildet, nicht empirisch aus Emissionsdaten validiert.} Eine nachgelagerte Prüfung ist möglich und sinnvoll: sobald Scope-1-Intensitäten vorliegen, lässt sich messen, ob die Streuung innerhalb der Gruppen tatsächlich kleiner ist als zwischen ihnen. Bis dahin ist die Einteilung theoretisch begründet, nicht statistisch belegt.
+\item \textbf{Die Mindestgröße von \MinSize{} ist eine Konvention.} Sie folgt aus der Überlegung zur Rangauflösung, nicht aus einem Test. Wer sie anders setzt, bekommt eine andere Gruppenzahl.
+\item \textbf{Die Materialitätslisten je Gruppe orientieren sich an der SASB-Logik, sind aber nicht der SASB-Standard.} Und die von Khan, Serafeim \& Yoon geprüfte Materialität ist \emph{finanzielle} Materialität: eine Studie von 2025 zeigt, dass Firmen dadurch Themen vernachlässigen, die für Investoren unwichtig, für die Gesellschaft aber relevant sind.
+\item \textbf{Der Index ist beweglich.} Die Zuordnung gilt für den Stand von \NFirms{} Konstituenten im September 2026. Neuzugänge brauchen eine Entscheidung; die Validierung erzwingt sie, indem sie unzugeordnete Sub-Industries als Fehler meldet.
+\end{itemize}
+
+\section{Reproduktion}
+
+\begin{verbatim}
+python scripts/build_peer_groups.py          # nutzt constituents.csv im Repo
+python scripts/build_peer_groups.py --refresh  # Konstituenten neu laden
+\end{verbatim}
+
+Erzeugt wird:
+
+\begin{itemize}[leftmargin=1.2em]
+\item \texttt{data/out/peer\_groups.csv} -- die Zuordnung je Firma, mit Spalte \texttt{assign\_reason}: entweder ``GICS Sub-Industry'' oder der Begründungstext des Overrides.
+\item \texttt{data/out/peer\_group\_sizes.csv} -- Gruppengrößen mit Archetyp.
+\item \texttt{report/generated/*.tex} -- alle Tabellen und Kennzahlen dieses Berichts. Keine Zahl im Text ist handgeschrieben.
+\end{itemize}
+
+Die Validierung bricht ab, wenn eine Firma unzugeordnet bleibt, eine Gruppe die Mindestgröße verfehlt, eine neue Sub-Industry auftaucht oder ein Override nichts ändert. Die Definitionen stehen in \texttt{pipeline/peers.py}.
+
+\section*{Quellen}
+\addcontentsline{toc}{section}{Quellen}
+\begin{itemize}[leftmargin=1.2em]
+\item Khan, Serafeim \& Yoon (2016): \emph{Corporate Sustainability: First Evidence on Materiality}, The Accounting Review 91(6) -- Materialität je Branche.
+\item Berg, Kölbel \& Rigobon (2022): \emph{Aggregate Confusion: The Divergence of ESG Ratings}, Review of Finance 26(6), 1315--1344.
+\item Christensen, Serafeim \& Sikochi (2022): \emph{Why is Corporate Virtue in the Eye of the Beholder?}, The Accounting Review 97(1), 147--175 -- Berichts-Verzerrung.
+\item Drempetic, Klein \& Zwergel (2020): Größenverzerrung in ESG-Ratings.
+\item Zhang (2025): \emph{Carbon Returns across the Globe}, Journal of Finance -- Branchenzugehörigkeit als dominanter Erklärungsfaktor.
+\item Nardo, Saisana, Saltelli \& Tarantola et al.\ (2008): \emph{OECD/JRC Handbook on Constructing Composite Indicators} -- Normalisierung, Aggregation, Unsicherheitsanalyse.
+\item GHG Protocol, Corporate Value Chain (Scope~3) Standard -- Verbot der firmenübergreifenden Aggregation von Scope~3.
+\item CDP: Anteil von Scope~3 am Gesamtfußabdruck, insbesondere im Finanzsektor.
+\item PCAF: \emph{Global GHG Accounting and Reporting Standard for the Financial Industry} -- finanzierte Emissionen.
+\end{itemize}
+
+\end{document}
