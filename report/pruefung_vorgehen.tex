@@ -28,75 +28,87 @@
 {\small ETHack 2026 · Stand 13.~September 2026\\ Details und Quellen im Ursachenbericht \texttt{qualitaetspruefung.pdf}}
 
 \vspace{4mm}
-\infobox{\textbf{Kurz.} Der Datensatz enthielt unglaubwürdige Werte. Wir haben jede Auffälligkeit auf ihre Ursache zurückgeführt, daraus \statFlags{} Prüffälle mit Regeln erzeugt, jeden Fall von einem Sprachmodell mit Belegen begutachten lassen und eine feste Regel festgelegt, wann ein Mensch entscheidet. Fehlerhafte Werte bleiben im Datensatz, tragen aber einen Status und erscheinen nicht mehr in der Firmenansicht.}
+\infobox{\textbf{Kurz.} Der Datensatz enthielt unglaubwürdige Werte. Wir haben jede Auffälligkeit auf ihre Ursache zurückgeführt, die systematischen Ursachen in der Pipeline \emph{repariert} statt sie zu markieren, und nur den Rest von Regeln, einem Sprachmodell und -- im Grenzfall -- einem Menschen prüfen lassen. Dieselben Regeln finden jetzt \statFlags{} statt \vorFlags{} Fälle; an Menschen gehen \kiMensch{} statt \vorMensch. Zehn Kontrollfälle mit belegter Antwort prüfen bei jedem Lauf, dass die Reparaturen halten.}
 
 \section*{1\quad Ursachen finden}
 Ausgangspunkt war der Verbesserungsbericht des Teams. Jede Vermutung wurde an den Rohdaten nachgesehen und, wo es um die Bedeutung eines Feldes ging, an der Dokumentation der Quelle belegt (EPA-Meldeverordnung, CAMD-Datenleitfaden, OSHA-ITA-Leitfaden, ECHO-Feldbeschreibung, SBTi-Statusdefinitionen). Ergebnis: sieben Mechanismen, fast alle an der Nahtstelle zwischen Quelle und Pipeline -- nicht in den Quellen selbst. Zwei Diagnosen des Verbesserungsberichts wurden korrigiert (CAMPD-Nullen, ECHO-Werte über 12).
 
-\section*{2\quad Regeln schreiben}
-Aus jedem Mechanismus wurde eine Regel in \texttt{pipeline/quality.py}. Jede Regel erzeugt Fälle mit Stufe (\emph{fehler} oder \emph{prüfen}), Wirkung in Tonnen, Rankingrelevanz und einem Belegpaket.
+\section*{2\quad Ursachen reparieren}
+Zwölf Stellen im Code, in der Reihenfolge ihrer Wirkung:
 
 \begin{center}\small
-\begin{tabularx}{\textwidth}{l X r}
+\begin{tabularx}{\textwidth}{P{5.4cm} X}
 \toprule
-\textbf{Ergebnis} & & \textbf{Anzahl} \\
+\textbf{Stelle} & \textbf{Reparatur} \\
 \midrule
-Fälle gesamt & aus 15 Regeln & \statFlags \\
-Stufe fehler & nachweislich falsch, wird nicht verrechnet & \statFehler \\
-Stufe prüfen & auffällig, braucht weiteren Beleg & \statPruefen \\
-betroffene Firmen & & \statFirmenBetr \\
-rankingrelevante Fälle & Firma steht im Umwelt-Ranking & \statRankRel \\
+\texttt{canonical.py} & keine Menge gemeldet $\Rightarrow$ fehlend statt 0; Jahre mit unvollständiger Zuordnung entfernt; Trend erst ab drei Jahren mit stabiler Basis \\
+\texttt{consolidate.py} & CO\textsubscript{2} nur aus ARP, RGGI, NSPS4T; Lohnverfahren aus den Rohdaten statt aus der Team-Datei; SBTi-Status je Zieltyp; Aktiengattungen je CIK zusammengeführt; ab Bandbreite 70 kein Median \\
+\texttt{resolve.py} & Gültigkeitszeiträume je Zuordnung; Tochtertreffer nur an der Wortgrenze \\
+\texttt{05b\_firmenaggregate.py} & Join entdoppelt und nur V/S gezählt; Stundennenner 200--4\,000; Stromrate nur für Kraftwerksflotten \\
+\texttt{07\_dataset.py} & harte Grenzen beim Export -- der Lauf bricht ab statt auszuliefern \\
 \bottomrule
 \end{tabularx}
 \end{center}
 
-\section*{3\quad KI-Gutachten}
-\texttt{pipeline/ai\_review.py} schickt jedes Belegpaket an \texttt{\kiModell}. Die Antwort hat eine feste Form: Urteil (fehler, plausibel, unklar), Ursache aus einer festen Liste, Vorschlag, Konfidenz, Bedarf an einem Menschen. Das Modell darf keine Firmenzahlen aus dem Gedächtnis ergänzen. Unsichere Antworten gehen an \texttt{\kiEskModell}. Alle Antworten liegen im Zwischenspeicher, ein zweiter Lauf ist kostenlos und liefert dasselbe.
+\infobox{\textbf{Kontrolle.} \texttt{scripts/10\_pruefung.py} prüft bei jedem Lauf zehn Fälle, deren richtige Behandlung aus den Rohdaten belegt ist (KHC, MPC, TSLA, GE, BRK-B, MCD, APD, PPL, VST, GOOG). Stand heute: \repBehoben{} von \repGesamt{} behoben. Kommt eine Ursache zurück, fällt sie hier auf.}
 
-Gemessen wird das Modell an zehn Referenzfällen, deren richtige Antwort aus den Rohdaten belegt ist: \refUrteil{} von \refN{} Urteilen und \refUrsache{} von \refN{} Ursachen richtig.
+\section*{3\quad Regeln für den Rest}
+15 Regeln in \texttt{pipeline/quality.py} suchen weiter -- sie sind jetzt die Kontrolle der Reparatur und der Fang für alles, was keine Reparatur abdeckt. Jede Regel erzeugt Fälle mit Stufe, Wirkung in Tonnen, Rankingrelevanz und einem Belegpaket.
 
-\infobox{\textbf{Was schiefging und behoben wurde.} Im ersten Durchgang hielt das Modell erklärbare Fehler für „plausibel“ -- \vEinsAutoFrei{} echte Fehler wären automatisch freigegeben worden. Die Frage wurde präzisiert, und eine feste Regel schickt jeden Widerspruch zwischen Regel und KI an einen Menschen. Im zweiten Durchgang folgt das Modell der Regel dafür fast immer. Deshalb entscheidet über Freigaben nie das Modell allein.}
+\begin{center}\small
+\begin{tabularx}{\textwidth}{X r r}
+\toprule
+\textbf{Ergebnis} & \textbf{vorher} & \textbf{heute} \\
+\midrule
+Fälle gesamt & \vorFlags & \statFlags \\
+davon Stufe \emph{fehler} & \vorFehler & \statFehler \\
+betroffene Firmen & \vorFirmen & \statFirmenBetr \\
+\bottomrule
+\end{tabularx}
+\end{center}
 
-\section*{4\quad Weiterleitung}
+\section*{4\quad KI-Gutachten}
+\texttt{pipeline/ai\_review.py} schickt jedes Belegpaket an \texttt{\kiModell}. Die Antwort hat eine feste Form: Urteil (fehler, plausibel, unklar), Ursache aus einer festen Liste, Vorschlag, Konfidenz, Bedarf an einem Menschen. Das Modell darf keine Firmenzahlen aus dem Gedächtnis ergänzen. Unsichere Antworten gehen an \texttt{\kiEskModell}. Alle Antworten liegen im Zwischenspeicher, ein zweiter Lauf ist kostenlos und liefert dasselbe. Dieser Lauf kostete \kiTokens{} Tokens -- vor der Reparatur waren es 322\,346.
+
+\section*{5\quad Weiterleitung: wann ein Mensch drankommt}
 \begin{itemize}
-\item \textbf{an Menschen}: KI unsicher auch nach Eskalation; KI widerspricht einer Fehler-Regel; KI verlangt Rohdaten- oder Dokumentenzugang; Unterdrücken oder Korrigieren bei Wirkung ab 1\,Mt oder Rankingrelevanz.
-\item \textbf{automatisch}: alle übrigen Fälle. Der Status folgt dann der Regel; nur wenn die KI sicher „plausibel“ sagt und keine Fehler-Regel widerspricht, wird der Wert freigegeben.
+\item Regel und KI widersprechen sich.
+\item Das Modell bleibt auch nach der Eskalation unsicher (Konfidenz unter 0{,}6 oder „unklar“).
+\item Ein Eingriff träfe das Ranking oder mehr als eine Megatonne.
+\item Das Modell verlangt Belege, die es nicht hat, \emph{und} ist sich nicht sicher (unter 0{,}85).
 \end{itemize}
-Dieser Lauf: \kiAuto{} automatisch, \kiMensch{} an Menschen, \kiEskaliert{} eskaliert.
+Sonst entscheidet die Weiterleitung automatisch nach dem Vorschlag des Modells. Der bloße Wunsch des Modells nach einem Menschen zählt nicht mehr: In der ersten Fassung setzte es ihn fast immer und schickte \vorMensch{} von \vorFlags{} Fällen an Menschen. Dieser Lauf: \kiAuto{} automatisch, \kiMensch{} an Menschen, \kiEskaliert{} eskaliert.
 
-\section*{5\quad Mensch entscheidet im Datenbrowser}
+\section*{6\quad Mensch entscheidet im Datenbrowser}
 \begin{enumerate}
 \item Tab \textbf{Prüfung} öffnen, oben den eigenen Namen eintragen (bleibt im Browser gespeichert).
 \item Filter steht auf \emph{an Menschen} und \emph{offen}. Sortiert ist nach Rankingrelevanz, dann Wirkung in Tonnen, dann Unsicherheit der KI.
 \item Fall aufklappen, Regelmeldung, KI-Begründung und Belege lesen.
-\item Einen Satz Begründung schreiben und einen Knopf drücken:
-  \begin{itemize}
-  \item \textbf{Fehler bestätigen} -- der Wert wird nicht verrechnet.
-  \item \textbf{Korrektur nötig} -- der Wert ist falsch, Quelle oder Zuordnung muss angepasst werden; bis dahin wird er nicht verrechnet.
-  \item \textbf{Wert ist ok} -- Fehlalarm, der Wert bleibt.
-  \end{itemize}
-\item Die Entscheidung wird sofort auf dem Server gespeichert und lässt sich zurücknehmen. Über \emph{Entscheidungen als CSV} lässt sie sich jederzeit herunterladen.
+\item Einen Satz Begründung schreiben und einen Knopf drücken: \textbf{Fehler bestätigen} (Wert wird nicht verrechnet), \textbf{Korrektur nötig} (Quelle oder Zuordnung anpassen) oder \textbf{Wert ist ok} (Fehlalarm).
+\item Die Entscheidung wird sofort gespeichert und lässt sich zurücknehmen; \emph{Entscheidungen als CSV} lädt sie herunter.
 \end{enumerate}
 
-\section*{6\quad Entscheidungen zurück in den Datensatz}
+\section*{7\quad Entscheidungen zurück in den Datensatz}
 \begin{center}\small
 \begin{tabularx}{\textwidth}{P{6.2cm} X}
 \toprule
 \textbf{Befehl} & \textbf{Wirkung} \\
 \midrule
 \texttt{scripts/entscheidungen\_holen.sh} & holt die Entscheidungen vom Server nach \texttt{data/review/entscheidungen.csv} \\
-\texttt{python scripts/10\_pruefung.py --ai} & Regeln und KI neu, menschliche Entscheidungen haben Vorrang \\
-\texttt{python scripts/07\_dataset.py} & schreibt \texttt{quality\_status} je Wert in den Datensatz \\
+\texttt{python scripts/10\_pruefung.py --ai} & Regeln, Reparatur-Kontrolle und KI neu; menschliche Entscheidungen haben Vorrang \\
+\texttt{python scripts/07\_dataset.py} & schreibt \texttt{quality\_status} je Wert und prüft die Export-Grenzen \\
 Web bauen und deployen & Firmenansicht ohne Fehlerwerte, Chip „prüfen“ an fraglichen Werten \\
 \bottomrule
 \end{tabularx}
 \end{center}
-Jede Entscheidung ist ein neuer Referenzfall für die Messung der KI; wiederkehrende Entscheidungen sind Kandidaten für neue Regeln.
+Jede Entscheidung ist ein neuer Referenzfall für die Messung der KI; wiederkehrende Entscheidungen sind Kandidaten für eine neue Reparatur.
 
 \section*{7\quad Dateien}
 \begin{center}\small
 \begin{tabularx}{\textwidth}{P{5.6cm} X}
 \toprule
+\texttt{pipeline/canonical.py} & Null als fehlend, Lückenjahre, Trendschutz \\
+\texttt{pipeline/resolve.py} & Gültigkeitszeiträume, Wortgrenze bei Tochternamen \\
 \texttt{pipeline/quality.py} & 15 Prüfregeln und Belegpakete \\
 \texttt{pipeline/ai\_review.py} & KI-Gutachten, Schema, Zwischenspeicher, Weiterleitung \\
 \texttt{pipeline/flag\_apply.py} & Status je Wert im Datensatz \\

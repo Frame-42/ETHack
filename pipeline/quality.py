@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 from .config import OUT, RAW
-from .resolve import OVERRIDES, master_prefix, normalize, resolve_owners
+from .resolve import OVERRIDES, master_prefix, normalize, override_prefix, resolve_owners
 
 CURRENT_YEAR = 2026
 CO2_PROGRAMS = {"ARP", "RGGI", "NSPS4T"}  # laut CAMD Power Sector Emissions Data Guide melden nur diese CO2; SIPNOX nur NOx
@@ -71,8 +71,7 @@ class Context:
             return self.lookup[k]
         if k in OVERRIDES:
             return OVERRIDES[k]
-        hit = next((t for p, t in OVERRIDES.items() if k.startswith(p)), None)
-        return hit or master_prefix(k, self.lookup)
+        return override_prefix(k) or master_prefix(k, self.lookup)
 
     def series(self, ticker: str, metric: str) -> dict:
         s = self.long[(self.long.ticker == ticker) & (self.long.metric == metric)]
@@ -93,11 +92,21 @@ class Context:
 # ---------------------------------------------------------------------------
 
 def r_duplicate_cik(c: Context) -> list[Flag]:
+    """Aktiengattungen derselben CIG doppelt im *Bestand*.
+
+    Die Indexliste führt beide Gattungen bewusst; ein Fehler ist es erst,
+    wenn beide mit Werten im Datensatz stehen. ``dedupe_cik`` in
+    ``consolidate.py`` führt sie zusammen -- diese Regel ist die Kontrolle.
+    """
     out = []
+    im_bestand = set(c.long.ticker)
     for cik, g in c.master.groupby("cik"):
         if len(g) < 2:
             continue
-        keep, *dups = sorted(g.ticker)
+        dabei = sorted(set(g.ticker) & im_bestand)
+        if len(dabei) < 2:
+            continue
+        keep, *dups = dabei
         for t in dups:
             out.append(Flag("F01_doppelte_cik", "fehler", t, "*", None, None,
                             f"Teilt CIK {cik} mit {keep}: alle Konzernwerte stehen doppelt im Bestand.",
@@ -142,8 +151,13 @@ def r_campd_program(c: Context) -> list[Flag]:
                 link.append((fid, yr, t, str(prog or ""), name))
     L = pd.DataFrame(link, columns=["facilityId", "year", "ticker", "programs", "facilityName"]).drop_duplicates()
     j = L.merge(emi, on=["facilityId", "year"], how="left")
+    # Der Programmfilter in consolidate.py nimmt Anlagen ohne CO2-Pflicht
+    # heraus; ihre Null steht gar nicht mehr im Datensatz. Geprüft wird
+    # deshalb nur, was exportiert wurde.
+    exportiert = c.long[c.long.metric == "campd_co2_t"]
+    vorhanden = {(r.ticker, int(r.year)) for r in exportiert.itertuples(index=False)}
     for (t, yr), g in j.groupby(["ticker", "year"]):
-        if g.co2_t.fillna(0).sum() > 0:
+        if g.co2_t.fillna(0).sum() > 0 or (t, int(yr)) not in vorhanden:
             continue
         progs = sorted({p.strip() for s in g.programs for p in s.split(",") if p.strip()})
         measures = bool(set(progs) & CO2_PROGRAMS)
@@ -174,11 +188,18 @@ def r_echo_quarters(c: Context) -> list[Flag]:
 
 
 def r_egrid(c: Context) -> list[Flag]:
+    """Stromrate: nur geprüft, was im Datensatz steht.
+
+    Nicht-Versorger und physikalisch unmögliche Raten filtert
+    ``scripts/05b_firmenaggregate.py`` inzwischen heraus.
+    """
     out = []
     p = OUT / "egrid_je_firma.csv"
     if not p.exists():
         return out
     e = pd.read_csv(p)
+    behalten = set(c.long[c.long.metric == "t_co2_pro_mwh"].ticker)
+    e = e[e.ticker.isin(behalten) & e.t_co2_pro_mwh.notna()]
     for r in e.itertuples(index=False):
         sector = c.names.gics_sector.get(r.ticker)
         if r.t_co2_pro_mwh > 1.3:
@@ -250,7 +271,13 @@ def r_osha_denominator(c: Context) -> list[Flag]:
     o["hours"] = pd.to_numeric(o.total_hours_worked, errors="coerce")
     o["emp"] = pd.to_numeric(o.annual_average_employees, errors="coerce")
     o["hpe"] = o.hours / o.emp
+    # Unbrauchbare Meldungen fliessen seit der Reparatur nicht mehr in die
+    # Rate ein (05b_firmenaggregate.py). Geprüft wird der Rest.
+    o = o[o.hpe.between(200, 4000)]
+    genutzt = set(c.long[c.long.metric == "dart_rate"].ticker)
     for t, g in o.groupby("ticker"):
+        if t not in genutzt:
+            continue
         med = float(g.hpe.median())
         implaus = float(((g.hpe < 200) | (g.hpe > 4000)).mean())
         if not (med < 500 or med > 3500 or implaus > 0.3):
@@ -266,29 +293,40 @@ def r_osha_denominator(c: Context) -> list[Flag]:
 
 
 def r_whd(c: Context) -> list[Flag]:
+    """Lohnverfahren, die über den Handelsnamen zugeordnet wurden.
+
+    Die Verfahren tragen keine Firmenkennung. Ein Treffer über den
+    *Rechtsnamen* ist belastbar; ein Treffer nur über den *Handelsnamen*
+    kann ein Franchisebetrieb sein, der unter der Marke firmiert, aber
+    eigenständiger Arbeitgeber ist (McDonald's: alle 64 Verfahren laufen
+    über den Handelsnamen). Ob die Verfahren dem Konzern zuzurechnen sind,
+    entscheidet die Franchise-Offenlegung -- ein Grenzfall für Menschen.
+    Die frühere Regel prüfte die Team-Datei; deren Zahlen sind seit der
+    eigenen Zuordnung aus den Rohdaten nicht mehr im Datensatz.
+    """
     out = []
-    hv = pd.read_parquet(RAW / "team_harte_variablen.parquet")
     w = pd.read_parquet(RAW / "dol_whd.parquet")
     w["t_legal"] = w.legal_name.map(c.to_ticker)
     w["t_trade"] = w.trade_nm.map(c.to_ticker)
-    own = w.assign(t=w.t_legal.fillna(w.t_trade)).dropna(subset=["t"]).groupby("t").case_id.nunique()
-    for r in hv[hv.whd_conf.isin(["high", "low"])].itertuples(index=False):
-        cases = float(r.whd_cases_22_24)
-        mine = int(own.get(r.ticker, 0))
-        bw = float(r.whd_backwages_usd or 0)
-        emp = float(r.whd_employees or 0)
-        if cases >= 10 and mine < cases * 0.2:
-            tick_hits = w[w.trade_nm.astype(str).str.upper().str.contains(rf"\b{r.ticker}", regex=True, na=False)]
-            out.append(Flag("F10_whd_zuordnung", "pruefen", r.ticker, "whd_cases", 2024, cases,
-                            f"Team-Datei nennt {cases:.0f} Verfahren, eigener Namensabgleich findet {mine}. "
-                            "Verdacht: Zuordnung über Namensteile oder Franchise-Betriebe.",
-                            evidence={"team_konfidenz": r.whd_conf, "eigene_faelle": mine,
-                                      "handelsnamen_mit_ticker": tick_hits.trade_nm.value_counts().head(4).to_dict(),
-                                      "firma": c.names.company.get(r.ticker)}))
-        elif cases > 0 and bw == 0 and emp == 0:
-            out.append(Flag("F11_whd_ohne_befund", "pruefen", r.ticker, "whd_cases", 2024, cases,
-                            "Verfahren ohne Nachzahlung und ohne Betroffene: entweder Verfahren ohne Feststellung oder Fehlzuordnung.",
-                            evidence={"team_konfidenz": r.whd_conf, "eigene_faelle": mine}))
+    w["t"] = w.t_legal.fillna(w.t_trade)
+    hit = w.dropna(subset=["t"])
+    im_bestand = set(c.long[c.long.metric == "whd_cases"].ticker)
+    for t, g in hit.groupby("t"):
+        if t not in im_bestand:
+            continue
+        faelle = int(g.case_id.nunique())
+        nur_handel = int(g.t_legal.isna().sum())
+        anteil = nur_handel / max(len(g), 1)
+        if faelle < 5 or anteil < 0.5:
+            continue
+        out.append(Flag("F10_whd_franchise", "pruefen", t, "whd_cases", 2024, float(faelle),
+                        f"{faelle} Verfahren, davon {nur_handel} nur über den Handelsnamen zugeordnet "
+                        f"({anteil:.0%}). Franchisebetriebe sind eigene Arbeitgeber -- ohne "
+                        "Franchise-Offenlegung nicht entscheidbar.",
+                        evidence={"faelle": faelle, "nur_handelsname": nur_handel,
+                                  "rechtsnamen": g.legal_name.value_counts().head(4).to_dict(),
+                                  "handelsnamen": g.trade_nm.value_counts().head(4).to_dict(),
+                                  "nachzahlung_usd": float(g.bw_atp_amt.fillna(0).sum())}))
     return out
 
 
@@ -302,11 +340,9 @@ def r_sbti(c: Context) -> list[Flag]:
                             "Validiert und zurückgezogen zugleich: Die Status gehören zu verschiedenen Zieltypen "
                             "(Nahziel gesetzt, Netto-null-Zusage zurückgezogen). Die Kennzahl vermischt beides.",
                             evidence={"regel": "Commitment removed = Ziel nicht binnen 24 Monaten eingereicht"}))
-    yr = c.long[c.long.metric == "sbti_near_term_year"]
-    for r in yr[yr.value < CURRENT_YEAR].itertuples(index=False):
-        out.append(Flag("F13_sbti_abgelaufen", "pruefen", r.ticker, "sbti_near_term_year", CURRENT_YEAR, float(r.value),
-                        "Zieljahr des Nahziels liegt in der Vergangenheit: erreicht, verfehlt oder nicht aktualisiert.",
-                        evidence={}))
+    # Abgelaufene Nahziele sind seit der Reparatur eine eigene Kennzahl
+    # (sbti_near_term_expired) und gelten nicht mehr als geprüftes Ziel --
+    # deshalb hier keine Flag mehr.
     return out
 
 
@@ -333,8 +369,14 @@ def r_extremes(c: Context) -> list[Flag]:
 
 
 def r_wide_bands(c: Context) -> list[Flag]:
+    """Breite Bänder ohne Aussage -- geprüft wird, was im Datensatz steht.
+
+    ``consolidate.py`` zeigt ab 70 Perzentilpunkten keinen Median mehr.
+    """
     out = []
-    for r in c.bands[c.bands.band_width >= 70].itertuples(index=False):
+    gezeigt = set(c.long[c.long.metric == "rank_p50"].ticker)
+    breit = c.bands[(c.bands.band_width >= 70) & c.bands.ticker.isin(gezeigt)]
+    for r in breit.itertuples(index=False):
         out.append(Flag("P02_rangband_ohne_aussage", "pruefen", r.ticker, "rank_p50", 2023, float(r.p50),
                         f"Rangband {r.p10:.0f}-{r.p90:.0f}: Der Median suggeriert eine Einordnung, die es nicht gibt.",
                         ranking_relevant=True, evidence={"p10": r.p10, "p90": r.p90}))

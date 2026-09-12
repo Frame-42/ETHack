@@ -1,19 +1,21 @@
 {
   "datenbasis": {
     "epa_facility_rows": 65155,
+    "anlagenjahre_ohne_menge": 19155,
+    "firmenjahre_zuordnung_unvollstaendig": 7,
     "epa_emission_rows": 64881,
-    "facilities_with_emissions": 11251,
-    "total_epa_emissions_t": 16449708628.903193,
-    "matched_emissions_t": 7387217983.23996,
-    "matched_share": 0.4490789563445607,
+    "facilities_with_emissions": 8583,
+    "total_epa_emissions_t": 16449708628.903194,
+    "matched_emissions_t": 7195551699.2801695,
+    "matched_share": 0.4374273041309147,
     "sp500_companies": 503,
-    "companies_matched": 157,
+    "companies_matched": 145,
     "owner_match_methods": {
-      "exakt": 16210,
-      "override": 3731,
-      "override-praefix": 877,
-      "konzern-praefix": 98,
-      "fuzzy": 68
+      "exakt": 12049,
+      "override": 1716,
+      "override-praefix": 642,
+      "konzern-praefix": 73,
+      "fuzzy": 25
     }
   },
   "periode_a": {
@@ -21,74 +23,75 @@
       2018,
       2023
     ],
-    "n_firmen": 143,
+    "n_firmen": 127,
     "n_sektoren": 11,
-    "scope1_gesamt_mt": 1014.6907499544775
+    "scope1_gesamt_mt": 1005.6547464769558
   },
   "monte_carlo": {
     "n_zuege": 1500,
     "kombinationsraum": 576,
-    "median_bandbreite": 34.52380952380953,
-    "p90_bandbreite": 62.5,
-    "anteil_band_ueber_40": 41.95804195804196,
-    "firmen_stabil_oben": 7,
-    "firmen_stabil_unten": 4
+    "median_bandbreite": 28.888888888888886,
+    "p90_bandbreite": 50.0,
+    "anteil_band_ueber_40": 27.559055118110237,
+    "firmen_stabil_oben": 12,
+    "firmen_stabil_unten": 6
   },
   "unsicherheits_zerlegung": {
-    "nur_methodenwahl": 20.714285714285715,
-    "nur_datenrauschen": 15.789473684210513,
-    "beides": 34.52380952380953,
-    "mittlere_gruppengroesse": 13.0,
-    "kleinste_gruppe": 2,
-    "perzentil_je_rangplatz": 7.6923076923076925,
-    "median_band_in_rangplaetzen": 4.488095238095239,
+    "nur_methodenwahl": 20.0,
+    "nur_datenrauschen": 7.407407407407419,
+    "beides": 28.888888888888886,
+    "mittlere_gruppengroesse": 11.545454545454545,
+    "kleinste_gruppe": 1,
+    "perzentil_je_rangplatz": 8.661417322834646,
+    "median_band_in_rangplaetzen": 3.335353535353535,
     "sektoren_unter_6_firmen": {
-      "Consumer Discretionary": 5,
-      "Communication Services": 3,
-      "Real Estate": 2
+      "Consumer Discretionary": 4,
+      "Communication Services": 2,
+      "Real Estate": 1
     }
   },
   "kennzahlen_korrelation": {
     "co2_intensity": {
       "co2_intensity": 1.0,
-      "intensity_cagr": 0.008,
-      "absolute_cagr": 0.116
+      "intensity_cagr": -0.063,
+      "absolute_cagr": 0.061
     },
     "intensity_cagr": {
-      "co2_intensity": 0.008,
+      "co2_intensity": -0.063,
       "intensity_cagr": 1.0,
-      "absolute_cagr": 0.592
+      "absolute_cagr": 0.494
     },
     "absolute_cagr": {
-      "co2_intensity": 0.116,
-      "intensity_cagr": 0.592,
+      "co2_intensity": 0.061,
+      "intensity_cagr": 0.494,
       "absolute_cagr": 1.0
     }
   },
   "greenwashing": {
-    "n_intensitaets_illusion": 34,
-    "n_bequemes_basisjahr": 42,
-    "n_mind_ein_flag": 75,
+    "n_intensitaets_illusion": 33,
+    "n_bequemes_basisjahr": 38,
+    "n_mind_ein_flag": 70,
     "n_beide_flags": 1,
-    "anteil_mind_ein_flag": 52.44755244755245
+    "anteil_mind_ein_flag": 55.118110236220474
   },
   "abdeckung": {
     "sektoren_ohne_daten": [],
     "sektoren_unter_25pct": [
+      "Industrials",
       "Health Care",
       "Information Technology",
-      "Communication Services",
-      "Consumer Discretionary",
       "Financials",
+      "Consumer Discretionary",
+      "Communication Services",
       "Real Estate"
     ],
     "tabelle": [
       {
         "gics_sector": "Utilities",
         "firmen_gesamt": 31,
-        "firmen_mit_daten": 28,
-        "scope1_t": 621015934.6335082,
-        "abdeckung_pct": 90.32258064516128
+        "firmen_mit_daten": 27,
+        "scope1_t": 618417960.0112667,
+        "abdeckung_pct": 87.09677419354838
       },
       {
         "gics_sector": "Energy",
@@ -100,135 +103,130 @@
       {
         "gics_sector": "Materials",
         "firmen_gesamt": 25,
-        "firmen_mit_daten": 19,
-        "scope1_t": 98290346.82852,
-        "abdeckung_pct": 76.0
+        "firmen_mit_daten": 18,
+        "scope1_t": 92384816.71364,
+        "abdeckung_pct": 72.0
       },
       {
         "gics_sector": "Consumer Staples",
         "firmen_gesamt": 34,
-        "firmen_mit_daten": 15,
-        "scope1_t": 16696651.594144002,
-        "abdeckung_pct": 44.11764705882353
+        "firmen_mit_daten": 13,
+        "scope1_t": 16764314.790144,
+        "abdeckung_pct": 38.23529411764706
       },
       {
         "gics_sector": "Industrials",
         "firmen_gesamt": 83,
-        "firmen_mit_daten": 24,
-        "scope1_t": 26763642.808764,
-        "abdeckung_pct": 28.915662650602407
+        "firmen_mit_daten": 18,
+        "scope1_t": 26775764.312764,
+        "abdeckung_pct": 21.686746987951807
       },
       {
         "gics_sector": "Health Care",
         "firmen_gesamt": 59,
-        "firmen_mit_daten": 11,
-        "scope1_t": 1155844.1739999999,
-        "abdeckung_pct": 18.64406779661017
+        "firmen_mit_daten": 10,
+        "scope1_t": 1112640.338,
+        "abdeckung_pct": 16.94915254237288
       },
       {
         "gics_sector": "Information Technology",
         "firmen_gesamt": 73,
-        "firmen_mit_daten": 12,
-        "scope1_t": 4081723.6811702,
-        "abdeckung_pct": 16.43835616438356
-      },
-      {
-        "gics_sector": "Communication Services",
-        "firmen_gesamt": 24,
-        "firmen_mit_daten": 3,
-        "scope1_t": 124123.35998000001,
-        "abdeckung_pct": 12.5
-      },
-      {
-        "gics_sector": "Consumer Discretionary",
-        "firmen_gesamt": 47,
-        "firmen_mit_daten": 5,
-        "scope1_t": 1260414.608,
-        "abdeckung_pct": 10.638297872340425
+        "firmen_mit_daten": 11,
+        "scope1_t": 3512644.0767702004,
+        "abdeckung_pct": 15.068493150684931
       },
       {
         "gics_sector": "Financials",
         "firmen_gesamt": 76,
-        "firmen_mit_daten": 8,
+        "firmen_mit_daten": 7,
         "scope1_t": 57515841.6879258,
-        "abdeckung_pct": 10.526315789473683
+        "abdeckung_pct": 9.210526315789473
+      },
+      {
+        "gics_sector": "Consumer Discretionary",
+        "firmen_gesamt": 47,
+        "firmen_mit_daten": 4,
+        "scope1_t": 1260414.608,
+        "abdeckung_pct": 8.51063829787234
+      },
+      {
+        "gics_sector": "Communication Services",
+        "firmen_gesamt": 24,
+        "firmen_mit_daten": 2,
+        "scope1_t": 124123.35998000001,
+        "abdeckung_pct": 8.333333333333332
       },
       {
         "gics_sector": "Real Estate",
         "firmen_gesamt": 30,
-        "firmen_mit_daten": 2,
+        "firmen_mit_daten": 1,
         "scope1_t": 41144.524,
-        "abdeckung_pct": 6.666666666666667
+        "abdeckung_pct": 3.3333333333333335
       }
     ]
   },
   "vergleich_kommerziell": {
-    "n": 64,
-    "spearman_gesamt": -0.09302098393106946,
-    "p_gesamt": 0.46472523188235826,
-    "spearman_umwelt": 0.02849307326567722,
-    "p_umwelt": 0.8231484672671099
+    "n": 59,
+    "spearman_gesamt": -0.13257049213974376,
+    "p_gesamt": 0.3168595113757,
+    "spearman_umwelt": -0.015134866583082255,
+    "p_umwelt": 0.909418361001119
   },
   "vergleich_kommerziell_sektor": [
     {
       "gics_sector": "Materials",
       "n": 8,
-      "spearman": -0.7771084337349397
+      "spearman": -0.7545045450053531
     },
     {
       "gics_sector": "Information Technology",
-      "n": 9,
-      "spearman": -0.3901297961725498
-    },
-    {
-      "gics_sector": "Consumer Staples",
-      "n": 6,
-      "spearman": 0.028571428571428574
+      "n": 8,
+      "spearman": -0.20359646452525404
     },
     {
       "gics_sector": "Industrials",
-      "n": 10,
-      "spearman": 0.05504818825631803
+      "n": 9,
+      "spearman": -0.06329170264722847
     },
     {
       "gics_sector": "Utilities",
       "n": 13,
-      "spearman": 0.4479744212685343
+      "spearman": 0.043670462450706174
     }
   ],
   "groessen_verzerrung": {
-    "eigene_note_vs_groesse": 0.17977317056652684,
-    "p_eigene": 0.03167865530582163,
-    "n_eigene": 143,
-    "kommerzielle_note_vs_groesse": 0.15739935266854044,
-    "p_kommerziell": 0.2141861070249829,
-    "n_kommerziell": 64
+    "eigene_note_vs_groesse": 0.19655926971036494,
+    "p_eigene": 0.026769507817030126,
+    "n_eigene": 127,
+    "kommerzielle_note_vs_groesse": 0.08618204235099935,
+    "p_kommerziell": 0.5163239605047489,
+    "n_kommerziell": 59
   },
   "aggregation": {
     "median_abs_differenz": 0.0,
-    "max_abs_differenz": 37.5,
-    "anteil_ueber_10_punkte": 6.993006993006993
+    "max_abs_differenz": 25.0,
+    "anteil_ueber_10_punkte": 11.811023622047244
   },
   "methoden_sensitivitaet": [
     {
       "dimension": "normalizer",
-      "mittlere_spannweite_perzentil": 7.118636743072689
+      "mittlere_spannweite_perzentil": 5.776963689555301
     },
     {
       "dimension": "peer_level",
-      "mittlere_spannweite_perzentil": 5.163700368859356
+      "mittlere_spannweite_perzentil": 4.581151958895398
     },
     {
       "dimension": "aggregator",
-      "mittlere_spannweite_perzentil": 2.5990872632293134
+      "mittlere_spannweite_perzentil": 3.2594189289589575
     },
     {
       "dimension": "weighter",
-      "mittlere_spannweite_perzentil": 2.0657721158472815
+      "mittlere_spannweite_perzentil": 1.7691942191500947
     },
     {
       "dimension": "winsor",
-      "mittlere_spannweite_perzentil": 1.2186905105515244
+      "mittlere_spannweite_perzentil": 1.2891799088393734
     }
   ],
   "periode_b": {
@@ -237,13 +235,13 @@
     "emissionsdaten_verfuegbar": false,
     "firmen_mit_umsatz_2025": 488,
     "fortschreibung": {
-      "n": 147,
+      "n": 131,
       "lag_jahre": 2,
-      "spearman": 0.8276352186015656,
-      "median_abweichung_perzentil": 8.333333333333329,
-      "p90_abweichung_perzentil": 31.33333333333336,
-      "anteil_ueber_10_perzentil": 38.775510204081634
+      "spearman": 0.7365931062854456,
+      "median_abweichung_perzentil": 9.0909090909091,
+      "p90_abweichung_perzentil": 33.33333333333332,
+      "anteil_ueber_10_perzentil": 45.80152671755725
     }
   },
-  "laufzeit_sekunden": 81.7
+  "laufzeit_sekunden": 79.7
 }

@@ -7,7 +7,7 @@
     "coverage": "US-Anlagen ueber 25 000 t CO2e, Berichtsjahre 2018-2023",
     "measurement": "gemeldet, teils aus Brennstoffmengen gerechnet",
     "caveat": "Reihe endet 2023; Direktemittenten von Lieferanten getrennt (sector_type)",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "epa_campd": {
     "name": "EPA Clean Air Markets Program Data",
@@ -17,7 +17,7 @@
     "coverage": "Kraftwerksbloecke der Handelsprogramme, 2019 bis laufendes Jahr",
     "measurement": "kontinuierliche Messung am Schornstein (CEMS)",
     "caveat": "nur Stromerzeugung; laufendes Jahr unvollstaendig",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "egrid": {
     "name": "EPA eGRID",
@@ -27,7 +27,7 @@
     "coverage": "US-Kraftwerke, Berichtsjahr 2023",
     "measurement": "Emissionen und Erzeugung bereits verknuepft",
     "caveat": "nur aussagekraeftig fuer Firmen, deren Geschaeft Stromerzeugung ist",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "sec_xbrl": {
     "name": "SEC EDGAR XBRL frames",
@@ -37,7 +37,7 @@
     "coverage": "Geschaeftsjahre 2016-2025",
     "measurement": "aus Pflichtberichten",
     "caveat": "fuenf verschiedene Umsatz-Tags; Firmen taggen uneinheitlich",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "sbti": {
     "name": "Science Based Targets initiative",
@@ -47,7 +47,7 @@
     "coverage": "15 605 Organisationen weltweit, Stand laufend",
     "measurement": "Selbstmeldung, von SBTi geprueft",
     "caveat": "Selbstselektion: Firmen melden sich freiwillig; Energiebranche fehlt fast ganz",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "epa_tri": {
     "name": "EPA Toxics Release Inventory",
@@ -57,7 +57,7 @@
     "coverage": "US-Anlagen, Berichtsjahr 2023",
     "measurement": "gemeldet",
     "caveat": "Gesamtmenge korreliert mit CO2 (rho 0,53); eigenstaendig ist der Krebserreger-Anteil",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "osha_ita": {
     "name": "OSHA Injury Tracking Application, Formular 300A",
@@ -67,7 +67,7 @@
     "coverage": "US-Betriebsstaetten, 2023-2025",
     "measurement": "gemeldet, gesetzlich vorgeschrieben",
     "caveat": "DART misst auch Branchenstruktur; branchenrelativ vergleichen",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "epa_echo": {
     "name": "EPA ECHO Enforcement and Compliance History",
@@ -77,7 +77,7 @@
     "coverage": "US-Anlagen, Konformitaetshistorie drei Jahre",
     "measurement": "behoerdliche Feststellung",
     "caveat": "Zuordnung ueber FRS-Kennung, deshalb nur fuer Anlagen mit GHGRP-Eintrag",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "eia_923": {
     "name": "EIA Formular 923 (via PUDL und API)",
@@ -87,7 +87,7 @@
     "coverage": "US-Kraftwerke ab 1 MW, 2021-2025",
     "measurement": "gemeldeter Brennstoffeinsatz und Erzeugung",
     "caveat": "unabhaengige Gegenprobe zu CEMS, nicht dieselbe Messkette",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "esg_snapshot": {
     "name": "Kommerzielle ESG-Risk-Ratings (Sustainalytics via Yahoo, gespiegelt)",
@@ -97,7 +97,7 @@
     "coverage": "245 Firmen, Stand 2021",
     "measurement": "Anbieterbewertung",
     "caveat": "eingefroren 2021; fliesst in keine eigene Note ein",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "sp500_master": {
     "name": "S&P-500-Konstituenten",
@@ -107,7 +107,7 @@
     "coverage": "503 Mitglieder, heutiger Stand",
     "measurement": "Stammdaten",
     "caveat": "nur der heutige Stand -- fuer historische Jahre ueberlebensverzerrt",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "pudl": {
     "name": "PUDL (Catalyst Cooperative) auf Zenodo",
@@ -117,7 +117,7 @@
     "coverage": "aufbereitete EIA-, EPA- und SEC-Daten, 1995 bis laufendes Jahr",
     "measurement": "aufbereitet aus Behoerdenquellen",
     "caveat": "Zwischenschicht: Aufbereitungsfehler sind moeglich, dafuer entfaellt eigene Bereinigung",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "pudl_sec_ex21": {
     "name": "SEC 10-K Anlage 21 (Konzernstruktur, via PUDL)",
@@ -127,7 +127,7 @@
     "coverage": "3,8 Mio. Tochtereintraege, 478 von 500 Indexmuettern",
     "measurement": "aus Pflichtanlagen der Boersenaufsicht",
     "caveat": "Namen in Kleinschreibung und teils abgeschnitten; Beteiligungsquote nur bei 99 117 Eintraegen",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "sec_dera": {
     "name": "SEC 10-K-Finanzkennzahlen (companyfacts, aufbereitet von Janis)",
@@ -137,7 +137,7 @@
     "coverage": "Geschaeftsjahr 2024, 499 Indexfirmen",
     "measurement": "aus Pflichtberichten",
     "caveat": "Schulden uneinheitlich getaggt (debt_tag); F&E nur bei 135 Firmen berichtet",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "dol_whd": {
     "name": "DOL Wage and Hour Division, Verfahren (aufbereitet von Janis)",
@@ -147,7 +147,7 @@
     "coverage": "Feststellungsende 2022-2024",
     "measurement": "behoerdliche Feststellung",
     "caveat": "kein CIK, Zuordnung ueber Namen; Firmen ohne Treffer fehlen statt als Null zu erscheinen. Gegenprobe mit eigenem exakten Abgleich: 127 statt 213 Firmen, Rangkorrelation der Fallzahlen 0,62 -- die Team-Zuordnung zaehlt vermutlich Franchise-Betriebe unter dem Markennamen mit (McDonald's 142 gegen 64 Faelle)",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "sec_sd": {
     "name": "SEC Form SD, Konfliktmineralien (aufbereitet von Janis)",
@@ -157,7 +157,7 @@
     "coverage": "Meldungen 2022-2025",
     "measurement": "Pflichtmeldung",
     "caveat": "zeigt nur, dass gemeldet wird -- nicht, was die Meldung ueber Schmelzen und Herkunft sagt",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "wba": {
     "name": "World Benchmarking Alliance, Unternehmensprofile 2026 (erhoben von Janis)",
@@ -167,7 +167,7 @@
     "coverage": "217 Indexfirmen, Bewertungsrunde 2026",
     "measurement": "Bewertung veroeffentlichter Angaben",
     "caveat": "haengt an Offenlegung; Benchmarks nicht unabhaengig; CTT fast ohne Streuung (216 von 217 = 0)",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "wikidata": {
     "name": "Wikidata, offizielle Websites (fuer Firmenlogos)",
@@ -177,7 +177,7 @@
     "coverage": "Website ueber CIK (P5531 -> P856), Rest aus SEC Submissions",
     "measurement": "Stammdaten",
     "caveat": "nur fuer die Anzeige; Logos sind Favicons und Marken der jeweiligen Firmen",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   },
   "eigene_berechnung": {
     "name": "Eigene Berechnung dieser Pipeline",
@@ -187,6 +187,6 @@
     "coverage": "abgeleitet aus den oben genannten Quellen",
     "measurement": "berechnet",
     "caveat": "Herkunft der Eingangsgroessen steht jeweils beim Basiswert",
-    "retrieved_at": "2026-09-12"
+    "retrieved_at": "2026-09-13"
   }
 }

@@ -1,16 +1,17 @@
-\texttt{F01} & Zwei Ticker teilen eine CIK: Konzernwerte doppelt & fehler & 3 & 3 & FOXA, GOOGL, NWSA \\
-\texttt{F02} & Exakt 0 t trotz zugeordneter Anlage & fehler & 83 & 18 & AZO, BAX, CARR, CEG, CSGP, DOV \\
-\texttt{F03} & 0 t CO2, Programm verlangt kein CO2 & fehler & 99 & 16 & ADM, CE, CTVA, EMN, GE, HON \\
-\texttt{F04} & Mehr als 12 Verstoßquartale je Anlage & fehler & 2 & 2 & NOC, TSLA \\
-\texttt{F05} & Mehr als 1,3 t CO2 je MWh & fehler & 1 & 1 & GE \\
-\texttt{F06} & Stromrate eines Nicht-Versorgers & pruefen & 23 & 23 & ABBV, ADM, BMY, BRK-B, DOW, ECL \\
-\texttt{F07} & Trend oder Basisjahr durch Anlagenbasis verzerrt & fehler & 7 & 7 & CEG, CNP, DD, KKR, NEE, PPL \\
-\texttt{F08} & Tochter vor oder ohne Konzernzugehörigkeit & fehler & 20 & 5 & CEG, OXY, SW, VST, XOM \\
-\texttt{F09} & Unfallrate auf unplausiblen Stunden & fehler & 4 & 4 & BR, MCD, NXPI, VTR \\
-\texttt{F10} & Lohnverfahren: Team-Zuordnung nicht nachvollziehbar & pruefen & 35 & 35 & AMT, AOS, APD, APO, AXP, BEN \\
-\texttt{F11} & Lohnverfahren ohne Nachzahlung und Betroffene & pruefen & 69 & 69 & ACN, AVY, AZO, BAX, BDX, BLK \\
-\texttt{F12} & SBTi: validiert und zurückgezogen vermischt & fehler & 25 & 25 & ADI, BXP, CLX, CRWD, F, FTNT \\
-\texttt{F13} & SBTi: Zieljahr vorbei & pruefen & 4 & 4 & AMD, NRG, PYPL, SPGI \\
-\texttt{P01} & Extrem im Branchenvergleich & pruefen & 1 & 1 & FSLR \\
-\texttt{P02} & Rangband breiter als 70 Punkte & pruefen & 6 & 6 & AAPL, AZO, BAX, F, MDLZ, TGT \\
+\texttt{F01} & Zwei Ticker teilen eine CIK: Konzernwerte doppelt & 3 & 0 & CIK-Deduplizierung in consolidate.py \\
+\texttt{F02} & Exakt 0 t trotz zugeordneter Anlage & 83 & 0 & fehlend statt 0 in canonical.py \\
+\texttt{F03} & 0 t CO2, Programm verlangt kein CO2 & 99 & 0 & CO2 nur aus ARP, RGGI, NSPS4T \\
+\texttt{F04} & Mehr als 12 Verstoßquartale je Anlage & 2 & 0 & Join entdoppelt, nur V und S gezählt \\
+\texttt{F05} & Mehr als 1,3 t CO2 je MWh & 1 & 0 & Grenze 1,3 t/MWh beim Export \\
+\texttt{F06} & Stromrate eines Nicht-Versorgers & 23 & 2 & Rate nur für Kraftwerksflotten \\
+\texttt{F07} & Trend oder Basisjahr durch Anlagenbasis verzerrt & 7 & 0 & Trend erst ab drei Jahren mit stabiler Basis \\
+\texttt{F08} & Tochter vor oder ohne Konzernzugehörigkeit & 20 & 0 & Gültigkeitszeiträume in resolve.py \\
+\texttt{F09} & Unfallrate auf unplausiblen Stunden & 4 & 0 & Stundennenner 200-4.000 je Beschäftigtem \\
+\texttt{F10} & Lohnverfahren nur über den Handelsnamen & 0 & 7 & bleibt: Franchise ist ein Grenzfall \\
+\texttt{F10} & Lohnverfahren: Team-Zuordnung nicht nachvollziehbar & 35 & 0 & eigene Zuordnung statt Team-Datei \\
+\texttt{F11} & Lohnverfahren ohne Nachzahlung und Betroffene & 69 & 0 & Verstöße und Bußgelder als eigene Kennzahlen \\
+\texttt{F12} & SBTi: validiert und zurückgezogen vermischt & 25 & 0 & Status je Zieltyp getrennt \\
+\texttt{F13} & SBTi: Zieljahr vorbei & 4 & 0 & abgelaufenes Ziel als eigene Kennzahl \\
+\texttt{P01} & Extrem im Branchenvergleich & 1 & 1 & bleibt: echte Extreme sind kein Fehler \\
+\texttt{P02} & Rangband breiter als 70 Punkte & 6 & 0 & ab Band 70 kein Median mehr \\
 \bottomrule%

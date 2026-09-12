@@ -1,504 +1,504 @@
 ticker,company,gics_sector,n_values,E_score,E_families,E_family_list,E_anchor,E_level,S_score,S_families,S_family_list,S_anchor,S_level,G_score,G_families,G_family_list,G_anchor,G_level,e_band_width,n_reliable
-MMM,3M,Industrials,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,22.91666666666667,3
-AOS,A. O. Smith,Industrials,15,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-ABT,Abbott Laboratories,Health Care,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,0.7,1,lohnrecht,False,dünn,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,45.45454545454545,2
-ABBV,AbbVie,Health Care,38,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,36.36363636363637,2
-ACN,Accenture,Information Technology,18,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ADBE,Adobe Inc.,Information Technology,18,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-AMD,Advanced Micro Devices,Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-AES,AES Corporation,Utilities,36,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,34.52380952380953,3
+MMM,3M,Industrials,44,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,29.41176470588236,3
+AOS,A. O. Smith,Industrials,17,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+ABT,Abbott Laboratories,Health Care,27,2.1,3,"ghg, schadstoffe, trend",True,belastbar,0.0,0,,False,keine,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,40.0,2
+ABBV,AbbVie,Health Care,40,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,30.0,2
+ACN,Accenture,Information Technology,22,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ADBE,Adobe Inc.,Information Technology,17,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+AMD,Advanced Micro Devices,Information Technology,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+AES,AES Corporation,Utilities,34,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,37.03703703703704,2
 AFL,Aflac,Financials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-A,Agilent Technologies,Health Care,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-APD,Air Products,Materials,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,21.052631578947366,3
-ABNB,Airbnb,Consumer Discretionary,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-AKAM,Akamai Technologies,Information Technology,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ALB,Albemarle Corporation,Materials,37,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,15.789473684210535,3
+A,Agilent Technologies,Health Care,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+APD,Air Products,Materials,28,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,16.666666666666668,2
+ABNB,Airbnb,Consumer Discretionary,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+AKAM,Akamai Technologies,Information Technology,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ALB,Albemarle Corporation,Materials,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,11.1111111111111,2
 ARE,Alexandria Real Estate Equities,Real Estate,8,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-ALGN,Align Technology,Health Care,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+ALGN,Align Technology,Health Care,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 ALLE,Allegion,Industrials,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-LNT,Alliant Energy,Utilities,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,0.7,1,lohnrecht,False,dünn,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,20.0,2
-ALL,Allstate,Financials,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-GOOGL,Alphabet Inc. (Class A),Communication Services,23,1.1,2,"ghg, klimaziele",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-GOOG,Alphabet Inc. (Class C),Communication Services,32,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,33.33333333333334,1
-MO,Altria,Consumer Staples,32,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,40.0,2
-AMZN,Amazon,Consumer Discretionary,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-AMCR,Amcor,Materials,21,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
-AEE,Ameren,Utilities,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.0,2
-AEP,American Electric Power,Utilities,30,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,27.380952380952372,2
-AXP,American Express,Financials,21,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-AIG,American International Group,Financials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-AMT,American Tower,Real Estate,19,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+LNT,Alliant Energy,Utilities,29,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,0.0,0,,False,keine,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,38.62433862433862,2
+ALL,Allstate,Financials,16,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+GOOGL,Alphabet Inc. (Class A),Communication Services,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,0.0,1
+GOOG,Alphabet Inc. (Class C),Communication Services,0,0.0,0,,False,keine,0.0,0,,False,keine,0.0,0,,False,keine,,0
+MO,Altria,Consumer Staples,35,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,23.07692307692308,2
+AMZN,Amazon,Consumer Discretionary,22,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+AMCR,Amcor,Materials,23,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+AEE,Ameren,Utilities,32,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.37037037037037,2
+AEP,American Electric Power,Utilities,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,33.86243386243386,2
+AXP,American Express,Financials,25,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+AIG,American International Group,Financials,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+AMT,American Tower,Real Estate,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 AWK,American Water Works,Utilities,14,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 AMP,Ameriprise Financial,Financials,8,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 AME,Ametek,Industrials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-AMGN,Amgen,Health Care,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,18.18181818181818,2
-APH,Amphenol,Information Technology,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-ADI,Analog Devices,Information Technology,35,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,16.666666666666668,2
-AON,Aon plc,Financials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-APA,APA Corporation,Energy,19,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,1
-APO,Apollo Global Management,Financials,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-AAPL,Apple Inc.,Information Technology,38,1.8,3,"ghg, klimaziele, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,75.0,3
-AMAT,Applied Materials,Information Technology,21,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+AMGN,Amgen,Health Care,38,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,10.0,2
+APH,Amphenol,Information Technology,21,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+ADI,Analog Devices,Information Technology,38,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,18.18181818181818,2
+AON,Aon plc,Financials,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+APA,APA Corporation,Energy,24,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,2
+APO,Apollo Global Management,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+AAPL,Apple Inc.,Information Technology,25,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+AMAT,Applied Materials,Information Technology,20,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 APP,AppLovin,Communication Services,7,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-APTV,Aptiv,Consumer Discretionary,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ACGL,Arch Capital Group,Financials,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-ADM,Archer Daniels Midland,Consumer Staples,34,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,26.66666666666666,2
-ARES,Ares Management,Financials,19,1.3,2,"ghg, trend",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.6,2,"greenwashing, lieferkette",False,dünn,12.5,0
-ANET,Arista Networks,Information Technology,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+APTV,Aptiv,Consumer Discretionary,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ACGL,Arch Capital Group,Financials,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+ADM,Archer Daniels Midland,Consumer Staples,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,7.692307692307691,2
+ARES,Ares Management,Financials,20,1.3,2,"ghg, trend",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.6,2,"greenwashing, lieferkette",False,dünn,2.3809523809523796,0
+ANET,Arista Networks,Information Technology,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 AJG,Arthur J. Gallagher & Co.,Financials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 AIZ,Assurant,Financials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-T,AT&T,Communication Services,30,1.1,2,"ghg, klimaziele",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,66.66666666666667,2
-ATO,Atmos Energy,Utilities,26,1.3,2,"ghg, trend",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,26.190476190476204,2
-ADSK,Autodesk,Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+T,AT&T,Communication Services,25,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,2
+ATO,Atmos Energy,Utilities,24,1.3,2,"ghg, trend",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,29.62962962962962,1
+ADSK,Autodesk,Information Technology,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 ADP,Automatic Data Processing,Industrials,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-AZO,AutoZone,Consumer Discretionary,29,1.1,2,"ghg, klimaziele",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,80.0,2
-AVY,Avery Dennison,Materials,24,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
+AZO,AutoZone,Consumer Discretionary,22,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,1
+AVY,Avery Dennison,Materials,28,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
 AXON,Axon Enterprise,Industrials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 BKR,Baker Hughes,Energy,11,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-BALL,Ball Corporation,Materials,34,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,31.578947368421048,2
+BALL,Ball Corporation,Materials,26,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
 BAC,Bank of America,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-BAX,Baxter International,Health Care,32,2.3,4,"ghg, klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,90.9090909090909,3
-BDX,Becton Dickinson,Health Care,15,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-BRK-B,Berkshire Hathaway,Financials,37,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,21.42857142857143,3
-BBY,Best Buy,Consumer Discretionary,14,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-TECH,Bio-Techne,Health Care,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-BIIB,Biogen,Health Care,33,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,45.45454545454545,2
-BLK,BlackRock,Financials,27,1.6,3,"ghg, klimaziele, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.6,2,"greenwashing, lieferkette",False,dünn,35.71428571428571,2
-BX,Blackstone Inc.,Financials,15,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-XYZ,"Block, Inc.",Financials,19,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+BAX,Baxter International,Health Care,28,2.3,4,"ghg, klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,2
+BDX,Becton Dickinson,Health Care,17,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+BRK-B,Berkshire Hathaway,Financials,40,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.571428571428584,3
+BBY,Best Buy,Consumer Discretionary,16,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+TECH,Bio-Techne,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+BIIB,Biogen,Health Care,36,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,40.0,2
+BLK,BlackRock,Financials,25,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.6,2,"greenwashing, lieferkette",False,dünn,40.476190476190496,1
+BX,Blackstone Inc.,Financials,12,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+XYZ,"Block, Inc.",Financials,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 BNY,BNY Mellon,Financials,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-BA,Boeing,Industrials,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,49.99999999999999,3
-BKNG,Booking Holdings,Consumer Discretionary,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-BSX,Boston Scientific,Health Care,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-BMY,Bristol Myers Squibb,Health Care,39,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,45.45454545454545,2
-AVGO,Broadcom,Information Technology,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,22.222222222222214,2
-BR,Broadridge Financial Solutions,Industrials,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-BRO,Brown & Brown,Financials,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-BF-B,Brown–Forman,Consumer Staples,29,2.0,4,"ghg, klimaziele, natur, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,35.55555555555556,2
-BLDR,Builders FirstSource,Industrials,17,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-BG,Bunge Global,Consumer Staples,30,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,60.0,2
-BXP,"BXP, Inc.",Real Estate,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CHRW,C.H. Robinson,Industrials,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-CDNS,Cadence Design Systems,Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CPT,Camden Property Trust,Real Estate,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-COF,Capital One,Financials,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-CAH,Cardinal Health,Health Care,16,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-CCL,Carnival Corporation,Consumer Discretionary,14,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-CARR,Carrier Global,Industrials,31,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,62.5,3
-CVNA,Carvana,Consumer Discretionary,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-CASY,Casey's,Consumer Staples,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-CAT,Caterpillar Inc.,Industrials,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,45.83333333333334,3
+BA,Boeing,Industrials,39,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,49.99999999999999,3
+BKNG,Booking Holdings,Consumer Discretionary,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+BSX,Boston Scientific,Health Care,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+BMY,Bristol Myers Squibb,Health Care,41,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,2
+AVGO,Broadcom,Information Technology,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,22.222222222222214,2
+BR,Broadridge Financial Solutions,Industrials,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+BRO,Brown & Brown,Financials,11,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+BF-B,Brown–Forman,Consumer Staples,30,2.0,4,"ghg, klimaziele, natur, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,7.692307692307691,2
+BLDR,Builders FirstSource,Industrials,19,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+BG,Bunge Global,Consumer Staples,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,46.153846153846146,2
+BXP,"BXP, Inc.",Real Estate,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CHRW,C.H. Robinson,Industrials,14,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+CDNS,Cadence Design Systems,Information Technology,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CPT,Camden Property Trust,Real Estate,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+COF,Capital One,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+CAH,Cardinal Health,Health Care,20,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+CCL,Carnival Corporation,Consumer Discretionary,11,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+CARR,Carrier Global,Industrials,26,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,2
+CVNA,Carvana,Consumer Discretionary,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+CASY,Casey's,Consumer Staples,14,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+CAT,Caterpillar Inc.,Industrials,33,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.88888888888888,3
 CBOE,Cboe Global Markets,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-CBRE,CBRE Group,Real Estate,16,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CDW,CDW Corporation,Information Technology,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-COR,Cencora,Health Care,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CNC,Centene Corporation,Health Care,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-CNP,CenterPoint Energy,Utilities,32,2.9,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,17.857142857142858,3
-CF,CF Industries,Materials,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,47.89473684210598,3
-CRL,Charles River Laboratories,Health Care,14,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-SCHW,Charles Schwab Corporation,Financials,13,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-CHTR,Charter Communications,Communication Services,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-CVX,Chevron Corporation,Energy,32,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,31.25,3
-CMG,Chipotle Mexican Grill,Consumer Discretionary,16,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CBRE,CBRE Group,Real Estate,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CDW,CDW Corporation,Information Technology,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+COR,Cencora,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CNC,Centene Corporation,Health Care,11,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+CNP,CenterPoint Energy,Utilities,32,2.4,3,"effizienz, ghg, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,18.51851851851852,3
+CF,CF Industries,Materials,38,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,44.44444444444444,3
+CRL,Charles River Laboratories,Health Care,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SCHW,Charles Schwab Corporation,Financials,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+CHTR,Charter Communications,Communication Services,14,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+CVX,Chevron Corporation,Energy,35,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,25.0,3
+CMG,Chipotle Mexican Grill,Consumer Discretionary,20,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 CB,Chubb Limited,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-CHD,Church & Dwight,Consumer Staples,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CIEN,Ciena,Information Technology,16,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-CI,Cigna,Health Care,7,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CINF,Cincinnati Financial,Financials,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+CHD,Church & Dwight,Consumer Staples,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CIEN,Ciena,Information Technology,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CI,Cigna,Health Care,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CINF,Cincinnati Financial,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 CTAS,Cintas,Industrials,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-CSCO,Cisco,Information Technology,15,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+CSCO,Cisco,Information Technology,12,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 C,Citigroup,Financials,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-CFG,Citizens Financial Group,Financials,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-CLX,Clorox,Consumer Staples,21,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+CFG,Citizens Financial Group,Financials,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+CLX,Clorox,Consumer Staples,23,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
 CME,CME Group,Financials,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-CMS,CMS Energy,Utilities,37,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,15.0,3
-KO,Coca-Cola Company (The),Consumer Staples,20,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,2
-CTSH,Cognizant,Information Technology,13,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+CMS,CMS Energy,Utilities,35,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,20.0,2
+KO,Coca-Cola Company (The),Consumer Staples,22,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,2
+CTSH,Cognizant,Information Technology,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 COHR,Coherent Corp.,Information Technology,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 COIN,Coinbase,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-CL,Colgate-Palmolive,Consumer Staples,20,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
-CMCSA,Comcast,Communication Services,14,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-FIX,Comfort Systems USA,Industrials,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-COP,ConocoPhillips,Energy,28,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,40.17857142857143,2
-ED,Consolidated Edison,Utilities,34,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,29.285714285714292,2
+CL,Colgate-Palmolive,Consumer Staples,22,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+CMCSA,Comcast,Communication Services,16,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+FIX,Comfort Systems USA,Industrials,14,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+COP,ConocoPhillips,Energy,29,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,31.25,2
+ED,Consolidated Edison,Utilities,35,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,18.51851851851852,2
 STZ,Constellation Brands,Consumer Staples,17,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,1
-CEG,Constellation Energy,Utilities,34,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,6.19047619047619,2
-COO,Cooper Companies (The),Health Care,13,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+CEG,Constellation Energy,Utilities,26,2.9,4,"effizienz, ghg, klimaziele, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,1
+COO,Cooper Companies (The),Health Care,15,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
 CPRT,Copart,Industrials,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-GLW,Corning Inc.,Information Technology,37,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,66.66666666666667,3
+GLW,Corning Inc.,Information Technology,37,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,54.54545454545455,2
 CPAY,Corpay,Financials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-CTVA,Corteva,Materials,29,2.3,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,5.26315789473685,2
-CSGP,CoStar Group,Real Estate,19,1.1,2,"ghg, klimaziele",True,eingeschränkt,0.0,0,,False,keine,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,50.0,0
-COST,Costco,Consumer Staples,20,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,2
-CRH,CRH plc,Materials,16,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CRWD,CrowdStrike,Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CCI,Crown Castle,Real Estate,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-CSX,CSX Corporation,Industrials,13,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-CMI,Cummins,Industrials,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-CVS,CVS Health,Health Care,17,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-DHR,Danaher Corporation,Health Care,21,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-DRI,Darden Restaurants,Consumer Discretionary,13,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+CTVA,Corteva,Materials,28,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,16.666666666666657,2
+CSGP,CoStar Group,Real Estate,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+COST,Costco,Consumer Staples,22,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,2
+CRH,CRH plc,Materials,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CRWD,CrowdStrike,Information Technology,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CCI,Crown Castle,Real Estate,10,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+CSX,CSX Corporation,Industrials,17,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+CMI,Cummins,Industrials,23,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+CVS,CVS Health,Health Care,21,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+DHR,Danaher Corporation,Health Care,25,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+DRI,Darden Restaurants,Consumer Discretionary,15,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 DDOG,Datadog,Information Technology,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-DVA,DaVita,Health Care,15,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-DECK,Deckers Brands,Consumer Discretionary,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-DE,Deere & Company,Industrials,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,41.66666666666666,3
-DELL,Dell Technologies,Information Technology,14,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-DAL,Delta Air Lines,Industrials,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,31.25,3
-DVN,Devon Energy,Energy,28,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,14.285714285714292,2
-DXCM,Dexcom,Health Care,11,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-FANG,Diamondback Energy,Energy,26,1.3,2,"ghg, trend",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,43.75,2
-DLR,Digital Realty,Real Estate,12,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-DG,Dollar General,Consumer Staples,13,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-DLTR,Dollar Tree,Consumer Staples,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-D,Dominion Energy,Utilities,34,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,24.285714285714285,2
-DPZ,Domino's,Consumer Discretionary,14,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-DASH,DoorDash,Consumer Discretionary,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-DOV,Dover Corporation,Industrials,26,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,58.33333333333333,2
-DOW,Dow Inc.,Materials,34,3.8,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,21.578947368421765,2
-DHI,D. R. Horton,Consumer Discretionary,15,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+DVA,DaVita,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+DECK,Deckers Brands,Consumer Discretionary,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+DE,Deere & Company,Industrials,39,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,20.0,3
+DELL,Dell Technologies,Information Technology,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+DAL,Delta Air Lines,Industrials,41,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,26.666666666666657,3
+DVN,Devon Energy,Energy,29,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,14.285714285714292,2
+DXCM,Dexcom,Health Care,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+FANG,Diamondback Energy,Energy,24,1.3,2,"ghg, trend",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,37.5,1
+DLR,Digital Realty,Real Estate,14,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+DG,Dollar General,Consumer Staples,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+DLTR,Dollar Tree,Consumer Staples,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+D,Dominion Energy,Utilities,40,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,20.0,3
+DPZ,Domino's,Consumer Discretionary,16,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+DASH,DoorDash,Consumer Discretionary,14,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+DOV,Dover Corporation,Industrials,21,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+DOW,Dow Inc.,Materials,34,3.0,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,22.22222222222223,2
+DHI,D. R. Horton,Consumer Discretionary,17,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
 DTE,DTE Energy,Utilities,20,2.6,3,"effizienz, ghg, schadstoffe",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,1
-DUK,Duke Energy,Utilities,39,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,25.000000000000007,3
-DD,DuPont,Industrials,34,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,29.166666666666657,3
-ETN,Eaton Corporation,Industrials,25,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-EBAY,eBay Inc.,Consumer Discretionary,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+DUK,Duke Energy,Utilities,37,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,23.28042328042328,2
+DD,DuPont,Industrials,33,2.3,4,"ghg, klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,70.0,3
+ETN,Eaton Corporation,Industrials,29,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+EBAY,eBay Inc.,Consumer Discretionary,20,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 ECHO,EchoStar,Communication Services,8,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-ECL,Ecolab,Materials,21,1.9,3,"effizienz, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
-EIX,Edison International,Utilities,33,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,51.42857142857143,3
-EW,Edwards Lifesciences,Health Care,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ELV,Elevance Health,Health Care,12,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-EME,Emcor,Industrials,12,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-EMR,Emerson Electric,Industrials,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-ETR,Entergy,Utilities,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,15.476190476190471,2
-EOG,EOG Resources,Energy,31,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,33.92857142857143,2
-EQT,EQT Corporation,Energy,27,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,31.25,2
-EFX,Equifax,Industrials,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-EQIX,Equinix,Real Estate,16,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ECL,Ecolab,Materials,24,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+EIX,Edison International,Utilities,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,38.35978835978837,2
+EW,Edwards Lifesciences,Health Care,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ELV,Elevance Health,Health Care,16,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+EME,Emcor,Industrials,14,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+EMR,Emerson Electric,Industrials,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ETR,Entergy,Utilities,32,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.30687830687831,2
+EOG,EOG Resources,Energy,32,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.571428571428584,2
+EQT,EQT Corporation,Energy,28,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,36.60714285714286,2
+EFX,Equifax,Industrials,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+EQIX,Equinix,Real Estate,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 ERIE,Erie Indemnity,Financials,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-ESS,Essex Property Trust,Real Estate,10,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-EL,Estée Lauder Companies (The),Consumer Staples,19,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
-EG,Everest Group,Financials,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-EVRG,Evergy,Utilities,34,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,12.857142857142858,3
-ES,Eversource Energy,Utilities,24,2.4,4,"effizienz, ghg, klimaziele, trend",True,belastbar,0.0,0,,False,keine,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,57.14285714285714,2
-EXC,Exelon,Utilities,29,2.3,3,"effizienz, ghg, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,6.666666666666686,3
-EXE,Expand Energy,Energy,28,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.89285714285715,2
-EXPE,Expedia Group,Consumer Discretionary,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ESS,Essex Property Trust,Real Estate,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+EL,Estée Lauder Companies (The),Consumer Staples,21,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+EG,Everest Group,Financials,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+EVRG,Evergy,Utilities,37,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,17.724867724867725,3
+ES,Eversource Energy,Utilities,27,2.4,4,"effizienz, ghg, klimaziele, trend",True,belastbar,0.0,0,,False,keine,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,42.857142857142854,2
+EXC,Exelon,Utilities,32,2.3,3,"effizienz, ghg, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,49.14285714285714,3
+EXE,Expand Energy,Energy,29,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,43.75,2
+EXPE,Expedia Group,Consumer Discretionary,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 EXPD,Expeditors International,Industrials,8,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 EXR,Extra Space Storage,Real Estate,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-XOM,ExxonMobil,Energy,25,2.9,4,"effizienz, ghg, klimaziele, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,1
-FFIV,"F5, Inc.",Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+XOM,ExxonMobil,Energy,29,2.1,3,"ghg, klimaziele, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,2
+FFIV,"F5, Inc.",Information Technology,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 FDS,FactSet,Financials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 FICO,Fair Isaac,Information Technology,7,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-FAST,Fastenal,Industrials,15,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-FRT,Federal Realty Investment Trust,Real Estate,11,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-FDX,FedEx,Industrials,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+FAST,Fastenal,Industrials,17,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+FRT,Federal Realty Investment Trust,Real Estate,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+FDX,FedEx,Industrials,22,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
 FDXF,FedEx Freight,Industrials,4,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-FERG,Ferguson Enterprises,Industrials,11,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+FERG,Ferguson Enterprises,Industrials,13,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
 FIS,Fidelity National Information Services,Financials,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 FITB,Fifth Third Bancorp,Financials,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-FSLR,First Solar,Information Technology,24,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-FE,FirstEnergy,Utilities,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,17.857142857142847,2
-FISV,Fiserv,Financials,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-FLEX,Flex Ltd.,Information Technology,15,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-F,Ford Motor Company,Consumer Discretionary,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,80.0,3
-FTNT,Fortinet,Information Technology,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+FSLR,First Solar,Information Technology,23,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+FE,FirstEnergy,Utilities,32,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,11.111111111111114,2
+FISV,Fiserv,Financials,16,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+FLEX,Flex Ltd.,Information Technology,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+F,Ford Motor Company,Consumer Discretionary,41,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,3
+FTNT,Fortinet,Information Technology,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 FTV,Fortive,Industrials,14,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-FOXA,Fox Corporation (Class A),Communication Services,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-FOX,Fox Corporation (Class B),Communication Services,11,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-BEN,Franklin Resources,Financials,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-FCX,Freeport-McMoRan,Materials,35,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,10.526315789473685,2
+FOXA,Fox Corporation (Class A),Communication Services,8,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+FOX,Fox Corporation (Class B),Communication Services,0,0.0,0,,False,keine,0.0,0,,False,keine,0.0,0,,False,keine,,0
+BEN,Franklin Resources,Financials,11,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+FCX,Freeport-McMoRan,Materials,37,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,11.1111111111111,2
 GRMN,Garmin,Consumer Discretionary,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-IT,Gartner,Information Technology,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-GE,GE Aerospace,Industrials,31,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,68.75,2
-GEHC,GE HealthCare,Health Care,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+IT,Gartner,Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+GE,GE Aerospace,Industrials,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,65.27777777777777,2
+GEHC,GE HealthCare,Health Care,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 GEV,GE Vernova,Industrials,16,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,1
-GEN,Gen Digital,Information Technology,10,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+GEN,Gen Digital,Information Technology,7,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 GNRC,Generac,Industrials,13,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-GD,General Dynamics,Industrials,13,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-GIS,General Mills,Consumer Staples,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,56.666666666666664,3
-GM,General Motors,Consumer Discretionary,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,60.0,2
+GD,General Dynamics,Industrials,18,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+GIS,General Mills,Consumer Staples,44,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,34.99999999999998,3
+GM,General Motors,Consumer Discretionary,41,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,75.0,3
 GPC,Genuine Parts Company,Consumer Discretionary,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-GILD,Gilead Sciences,Health Care,17,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-GPN,Global Payments,Financials,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+GILD,Gilead Sciences,Health Care,19,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+GPN,Global Payments,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 GL,Globe Life,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 GDDY,GoDaddy,Information Technology,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-GS,Goldman Sachs,Financials,21,1.6,3,"ghg, klimaziele, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,0.6,2,"greenwashing, lieferkette",False,dünn,12.5,1
-HAL,Halliburton,Energy,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,37.5,3
-HIG,Hartford (The),Financials,10,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-HAS,Hasbro,Consumer Discretionary,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-HCA,HCA Healthcare,Health Care,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-DOC,Healthpeak Properties,Real Estate,7,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-HSIC,Henry Schein,Health Care,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-HSY,Hershey Company (The),Consumer Staples,23,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
-HPE,Hewlett Packard Enterprise,Information Technology,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-HLT,Hilton Worldwide,Consumer Discretionary,13,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-HD,Home Depot (The),Consumer Discretionary,16,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+GS,Goldman Sachs,Financials,22,1.6,3,"ghg, klimaziele, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,0.6,2,"greenwashing, lieferkette",False,dünn,14.285714285714292,1
+HAL,Halliburton,Energy,32,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,33.33333333333334,3
+HIG,Hartford (The),Financials,7,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+HAS,Hasbro,Consumer Discretionary,14,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HCA,HCA Healthcare,Health Care,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+DOC,Healthpeak Properties,Real Estate,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HSIC,Henry Schein,Health Care,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HSY,Hershey Company (The),Consumer Staples,22,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+HPE,Hewlett Packard Enterprise,Information Technology,16,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HLT,Hilton Worldwide,Consumer Discretionary,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HD,Home Depot (The),Consumer Discretionary,23,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
 HONA,Honeywell Aerospace,Industrials,4,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-HON,Honeywell Technologies,Industrials,31,2.3,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,47.91666666666666,2
-HRL,Hormel Foods,Consumer Staples,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,63.333333333333336,2
-HST,Host Hotels & Resorts,Real Estate,14,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-HWM,Howmet Aerospace,Industrials,31,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.0,3
-HPQ,HP Inc.,Information Technology,41,3.2,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,49.99999999999999,3
+HON,Honeywell Technologies,Industrials,35,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,27.777777777777786,3
+HRL,Hormel Foods,Consumer Staples,38,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,38.46153846153846,2
+HST,Host Hotels & Resorts,Real Estate,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HWM,Howmet Aerospace,Industrials,34,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.27777777777777,3
+HPQ,HP Inc.,Information Technology,45,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,43.63636363636363,3
 HUBB,Hubbell Incorporated,Industrials,10,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-HUM,Humana,Health Care,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-HBAN,Huntington Bancshares,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-HII,Huntington Ingalls Industries,Industrials,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.0,3
+HUM,Humana,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+HBAN,Huntington Bancshares,Financials,11,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+HII,Huntington Ingalls Industries,Industrials,33,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.00000000000001,3
 IBM,IBM,Information Technology,12,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 IEX,IDEX Corporation,Industrials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 IDXX,Idexx Laboratories,Health Care,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-ITW,Illinois Tool Works,Industrials,24,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,0.6,2,"greenwashing, lieferkette",False,dünn,14.583333333333334,1
+ITW,Illinois Tool Works,Industrials,25,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,0.6,2,"greenwashing, lieferkette",False,dünn,16.666666666666664,1
 INCY,Incyte,Health Care,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-IR,Ingersoll Rand,Industrials,26,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,58.33333333333333,2
+IR,Ingersoll Rand,Industrials,21,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
 PODD,Insulet Corporation,Health Care,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-INTC,Intel,Information Technology,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,44.444444444444436,2
+INTC,Intel,Information Technology,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,44.444444444444436,2
 IBKR,Interactive Brokers,Financials,3,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 ICE,Intercontinental Exchange,Financials,7,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-IFF,International Flavors & Fragrances,Materials,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,21.052631578947366,3
-IP,International Paper,Materials,35,3.0,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,21.052631578947366,2
-INTU,Intuit,Information Technology,12,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+IFF,International Flavors & Fragrances,Materials,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,16.666666666666664,2
+IP,International Paper,Materials,41,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,11.666666666666636,3
+INTU,Intuit,Information Technology,16,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
 ISRG,Intuitive Surgical,Health Care,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 IVZ,Invesco,Financials,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 INVH,Invitation Homes,Real Estate,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-IQV,IQVIA,Health Care,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-IRM,Iron Mountain,Real Estate,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-JBHT,J.B. Hunt,Industrials,10,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-JBL,Jabil,Information Technology,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-JKHY,Jack Henry & Associates,Financials,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-J,Jacobs Solutions,Industrials,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-JNJ,Johnson & Johnson,Health Care,25,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
-JCI,Johnson Controls,Industrials,29,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,62.5,3
-JPM,JPMorgan Chase,Financials,11,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-KVUE,Kenvue,Consumer Staples,14,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-KDP,Keurig Dr Pepper,Consumer Staples,20,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+IQV,IQVIA,Health Care,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+IRM,Iron Mountain,Real Estate,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+JBHT,J.B. Hunt,Industrials,12,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+JBL,Jabil,Information Technology,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+JKHY,Jack Henry & Associates,Financials,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+J,Jacobs Solutions,Industrials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+JNJ,Johnson & Johnson,Health Care,24,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
+JCI,Johnson Controls,Industrials,27,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,3
+JPM,JPMorgan Chase,Financials,13,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+KVUE,Kenvue,Consumer Staples,16,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+KDP,Keurig Dr Pepper,Consumer Staples,24,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,1
 KEY,KeyCorp,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-KEYS,Keysight Technologies,Information Technology,16,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-KMB,Kimberly-Clark,Consumer Staples,36,3.0,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,39.999999999999986,2
-KIM,Kimco Realty,Real Estate,11,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-KMI,Kinder Morgan,Energy,28,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,4.861111111111111,2
-KKR,KKR & Co.,Financials,26,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,12.5,2
-KLAC,KLA Corporation,Information Technology,27,2.1,3,"effizienz, ghg, klimaziele",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,3
-KHC,Kraft Heinz,Consumer Staples,40,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,26.66666666666667,3
-KR,Kroger,Consumer Staples,20,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
-LHX,L3Harris,Industrials,15,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-LH,Labcorp,Health Care,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-LRCX,Lam Research,Information Technology,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-LVS,Las Vegas Sands,Consumer Discretionary,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-LDOS,Leidos,Industrials,11,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+KEYS,Keysight Technologies,Information Technology,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+KMB,Kimberly-Clark,Consumer Staples,37,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,23.076923076923073,2
+KIM,Kimco Realty,Real Estate,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+KMI,Kinder Morgan,Energy,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,6.25,2
+KKR,KKR & Co.,Financials,24,1.1,2,"ghg, klimaziele",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.57142857142857,1
+KLAC,KLA Corporation,Information Technology,21,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+KHC,Kraft Heinz,Consumer Staples,45,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,7.692307692307693,3
+KR,Kroger,Consumer Staples,24,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
+LHX,L3Harris,Industrials,17,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+LH,Labcorp,Health Care,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+LRCX,Lam Research,Information Technology,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+LVS,Las Vegas Sands,Consumer Discretionary,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+LDOS,Leidos,Industrials,13,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
 LEN,Lennar,Consumer Discretionary,12,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-LII,Lennox International,Industrials,27,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,62.5,2
-LLY,Lilly (Eli),Health Care,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,63.63636363636363,3
-LIN,Linde plc,Materials,38,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,21.05263157894737,2
+LII,Lennox International,Industrials,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,1
+LLY,Lilly (Eli),Health Care,29,1.6,2,"ghg, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,90.0,3
+LIN,Linde plc,Materials,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,16.66666666666668,2
 LYV,Live Nation Entertainment,Communication Services,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-LMT,Lockheed Martin,Industrials,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.0,3
-L,Loews Corporation,Financials,22,1.3,2,"ghg, trend",True,eingeschränkt,0.0,0,,False,keine,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,30.357142857142847,1
-LOW,Lowe's,Consumer Discretionary,19,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+LMT,Lockheed Martin,Industrials,32,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,37.5,3
+L,Loews Corporation,Financials,23,1.3,2,"ghg, trend",True,eingeschränkt,0.0,0,,False,keine,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,4.761904761904759,1
+LOW,Lowe's,Consumer Discretionary,23,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
 LULU,Lululemon Athletica,Consumer Discretionary,13,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-LITE,Lumentum,Information Technology,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-LYB,LyondellBasell,Materials,32,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,21.052631578947366,2
-MTB,M&T Bank,Financials,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-MPC,Marathon Petroleum,Energy,36,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,31.25,3
-MAR,Marriott International,Consumer Discretionary,16,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-MRSH,Marsh McLennan,Financials,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MLM,Martin Marietta Materials,Materials,36,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,21.05263157894737,2
-MRVL,Marvell Technology,Information Technology,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MAS,Masco,Industrials,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MA,Mastercard,Financials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MKC,McCormick & Company,Consumer Staples,23,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
-MCD,McDonald's,Consumer Discretionary,21,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-MCK,McKesson Corporation,Health Care,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MDT,Medtronic,Health Care,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MRK,Merck & Co.,Health Care,32,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,54.54545454545454,2
-META,Meta Platforms,Communication Services,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MET,MetLife,Financials,11,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MTD,Mettler Toledo,Health Care,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MGM,MGM Resorts,Consumer Discretionary,30,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,60.0,3
-MCHP,Microchip Technology,Information Technology,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,41.66666666666667,2
-MU,Micron Technology,Information Technology,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,41.66666666666667,2
-MSFT,Microsoft,Information Technology,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+LITE,Lumentum,Information Technology,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+LYB,LyondellBasell,Materials,33,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,16.66666666666667,2
+MTB,M&T Bank,Financials,10,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+MPC,Marathon Petroleum,Energy,37,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,31.25,3
+MAR,Marriott International,Consumer Discretionary,20,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+MRSH,Marsh McLennan,Financials,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MLM,Martin Marietta Materials,Materials,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,16.666666666666668,2
+MRVL,Marvell Technology,Information Technology,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MAS,Masco,Industrials,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MA,Mastercard,Financials,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MKC,McCormick & Company,Consumer Staples,27,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
+MCD,McDonald's,Consumer Discretionary,22,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MCK,McKesson Corporation,Health Care,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MDT,Medtronic,Health Care,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MRK,Merck & Co.,Health Care,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.0,2
+META,Meta Platforms,Communication Services,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MET,MetLife,Financials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MTD,Mettler Toledo,Health Care,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MGM,MGM Resorts,Consumer Discretionary,35,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,3
+MCHP,Microchip Technology,Information Technology,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,45.45454545454545,2
+MU,Micron Technology,Information Technology,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,45.64646464646478,2
+MSFT,Microsoft,Information Technology,17,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
 MAA,Mid-America Apartment Communities,Real Estate,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-MRNA,Moderna,Health Care,21,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-TAP,Molson Coors Beverage Company,Consumer Staples,37,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,15.555555555555554,3
-MDLZ,Mondelez International,Consumer Staples,36,2.3,4,"ghg, klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,80.0,3
+MRNA,Moderna,Health Care,20,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+TAP,Molson Coors Beverage Company,Consumer Staples,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,30.769230769230766,3
+MDLZ,Mondelez International,Consumer Staples,34,2.3,4,"ghg, klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,3
 MPWR,Monolithic Power Systems,Information Technology,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-MNST,Monster Beverage,Consumer Staples,15,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MCO,Moody's Corporation,Financials,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-MS,Morgan Stanley,Financials,24,1.1,2,"ghg, klimaziele",True,eingeschränkt,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,25.0,1
-MOS,Mosaic Company (The),Materials,36,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,15.789473684210527,3
+MNST,Monster Beverage,Consumer Staples,14,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MCO,Moody's Corporation,Financials,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+MS,Morgan Stanley,Financials,15,1.1,2,"ghg, klimaziele",True,eingeschränkt,0.4,1,sozialbewertung,False,dünn,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,0
+MOS,Mosaic Company (The),Materials,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,11.111111111111128,3
 MSI,Motorola Solutions,Information Technology,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-MSCI,MSCI,Financials,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NDAQ,"Nasdaq, Inc.",Financials,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NTAP,NetApp,Information Technology,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NFLX,Netflix,Communication Services,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NEM,Newmont,Materials,34,3.0,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,5.263157894736835,2
-NWSA,News Corp (Class A),Communication Services,13,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NWS,News Corp (Class B),Communication Services,13,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NEE,NextEra Energy,Utilities,34,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,20.0,2
-NKE,"Nike, Inc.",Consumer Discretionary,18,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NI,NiSource,Utilities,30,2.3,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.57142857142857,2
+MSCI,MSCI,Financials,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NDAQ,"Nasdaq, Inc.",Financials,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NTAP,NetApp,Information Technology,17,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NFLX,Netflix,Communication Services,20,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NEM,Newmont,Materials,37,3.0,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,5.555555555555557,2
+NWSA,News Corp (Class A),Communication Services,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NWS,News Corp (Class B),Communication Services,0,0.0,0,,False,keine,0.0,0,,False,keine,0.0,0,,False,keine,,0
+NEE,NextEra Energy,Utilities,32,2.9,4,"effizienz, ghg, klimaziele, schadstoffe",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,41.48148148148148,2
+NKE,"Nike, Inc.",Consumer Discretionary,20,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NI,NiSource,Utilities,31,2.3,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,10.0,2
 NDSN,Nordson Corporation,Industrials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-NSC,Norfolk Southern,Industrials,27,1.6,3,"ghg, klimaziele, trend",True,belastbar,0.7,1,lohnrecht,False,dünn,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,40.277777777777786,2
-NTRS,Northern Trust,Financials,14,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NOC,Northrop Grumman,Industrials,28,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,50.0,2
+NSC,Norfolk Southern,Industrials,32,1.6,3,"ghg, klimaziele, trend",True,belastbar,0.7,1,lohnrecht,False,dünn,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,33.33333333333333,2
+NTRS,Northern Trust,Financials,16,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NOC,Northrop Grumman,Industrials,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,43.05555555555556,2
 NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,11,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-NRG,NRG Energy,Utilities,36,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,32.14285714285714,2
-NUE,Nucor,Materials,33,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,15.789473684210527,2
-NVDA,Nvidia,Information Technology,17,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-NVR,"NVR, Inc.",Consumer Discretionary,15,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-NXPI,NXP Semiconductors,Information Technology,32,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,33.33333333333334,2
-ORLY,O'Reilly Automotive,Consumer Discretionary,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-OXY,Occidental Petroleum,Energy,32,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,28.571428571428562,2
-ODFL,Old Dominion,Industrials,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-OMC,Omnicom Group,Communication Services,9,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ON,ON Semiconductor,Information Technology,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-OKE,Oneok,Energy,27,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,35.41666666666666,2
+NRG,NRG Energy,Utilities,39,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,11.111111111111114,2
+NUE,Nucor,Materials,34,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,16.666666666666664,2
+NVDA,Nvidia,Information Technology,21,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+NVR,"NVR, Inc.",Consumer Discretionary,12,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+NXPI,NXP Semiconductors,Information Technology,31,1.1,2,"ghg, klimaziele",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,81.81818181818181,1
+ORLY,O'Reilly Automotive,Consumer Discretionary,16,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+OXY,Occidental Petroleum,Energy,33,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,8.035714285714285,2
+ODFL,Old Dominion,Industrials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+OMC,Omnicom Group,Communication Services,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ON,ON Semiconductor,Information Technology,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+OKE,Oneok,Energy,33,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,22.91666666666667,3
 ORCL,Oracle Corporation,Information Technology,14,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-OTIS,Otis Worldwide,Industrials,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PCAR,Paccar,Industrials,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PKG,Packaging Corporation of America,Materials,32,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,21.05263157894737,2
-PLTR,Palantir Technologies,Information Technology,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PANW,Palo Alto Networks,Information Technology,12,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+OTIS,Otis Worldwide,Industrials,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PCAR,Paccar,Industrials,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PKG,Packaging Corporation of America,Materials,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,11.111111111111121,2
+PLTR,Palantir Technologies,Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PANW,Palo Alto Networks,Information Technology,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 PSKY,Paramount Skydance Corporation,Communication Services,1,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-PH,Parker Hannifin,Industrials,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-PAYX,Paychex,Industrials,12,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-PYPL,PayPal,Financials,17,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PNR,Pentair,Industrials,17,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-PEP,PepsiCo,Consumer Staples,38,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,44.44444444444444,3
-PFE,Pfizer,Health Care,38,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,54.54545454545454,2
-PCG,PG&E Corporation,Utilities,33,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,32.14285714285714,2
-PM,Philip Morris International,Consumer Staples,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PSX,Phillips 66,Energy,38,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,33.33333333333333,3
-PNW,Pinnacle West Capital,Utilities,29,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,27.142857142857153,2
-PNC,PNC Financial Services,Financials,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-PPG,PPG Industries,Materials,38,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,21.052631578947366,3
-PPL,PPL Corporation,Utilities,39,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,3.095238095238096,2
-PFG,Principal Financial Group,Financials,14,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PG,Procter & Gamble,Consumer Staples,39,3.8,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,44.44444444444444,2
-PGR,Progressive Corporation,Financials,16,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-PLD,Prologis,Real Estate,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-PRU,Prudential Financial,Financials,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-PEG,Public Service Enterprise Group,Utilities,25,1.8,3,"ghg, klimaziele, trend",True,belastbar,0.0,0,,False,keine,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,6.666666666666686,2
-PTC,PTC Inc.,Information Technology,14,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PH,Parker Hannifin,Industrials,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+PAYX,Paychex,Industrials,14,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+PYPL,PayPal,Financials,16,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PNR,Pentair,Industrials,14,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+PEP,PepsiCo,Consumer Staples,43,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,23.07692307692308,3
+PFE,Pfizer,Health Care,40,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,2
+PCG,PG&E Corporation,Utilities,36,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,14.814814814814824,2
+PM,Philip Morris International,Consumer Staples,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PSX,Phillips 66,Energy,38,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,29.16666666666667,3
+PNW,Pinnacle West Capital,Utilities,30,3.1,4,"effizienz, ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,20.0,2
+PNC,PNC Financial Services,Financials,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+PPG,PPG Industries,Materials,43,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,22.22222222222222,3
+PPL,PPL Corporation,Utilities,42,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,31.216931216931215,2
+PFG,Principal Financial Group,Financials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PG,Procter & Gamble,Consumer Staples,40,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,38.46153846153847,2
+PGR,Progressive Corporation,Financials,13,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+PLD,Prologis,Real Estate,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+PRU,Prudential Financial,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+PEG,Public Service Enterprise Group,Utilities,28,1.8,3,"ghg, klimaziele, trend",True,belastbar,0.0,0,,False,keine,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,15.079365079365076,2
+PTC,PTC Inc.,Information Technology,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 PSA,Public Storage,Real Estate,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 PHM,PulteGroup,Consumer Discretionary,12,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 PWR,Quanta Services,Industrials,13,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-QCOM,Qualcomm,Information Technology,33,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,44.44444444444444,2
-DGX,Quest Diagnostics,Health Care,10,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+QCOM,Qualcomm,Information Technology,38,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,36.36363636363637,2
+DGX,Quest Diagnostics,Health Care,12,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
 Q,Qnity Electronics,Information Technology,4,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-RL,Ralph Lauren Corporation,Consumer Discretionary,17,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-RJF,Raymond James Financial,Financials,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+RL,Ralph Lauren Corporation,Consumer Discretionary,19,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+RJF,Raymond James Financial,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 RDDT,Reddit,Communication Services,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-RTX,RTX Corporation,Industrials,28,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,58.333333333333336,2
+RTX,RTX Corporation,Industrials,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,55.555555555555564,2
 O,Realty Income,Real Estate,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-REG,Regency Centers,Real Estate,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+REG,Regency Centers,Real Estate,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 REGN,Regeneron Pharmaceuticals,Health Care,9,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 RF,Regions Financial Corporation,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-RSG,Republic Services,Industrials,37,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,20.833333333333336,3
-RMD,ResMed|,Health Care,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-RVTY,Revvity,Health Care,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+RSG,Republic Services,Industrials,42,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,16.666666666666664,3
+RMD,ResMed|,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+RVTY,Revvity,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 HOOD,Robinhood Markets,Financials,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-ROK,Rockwell Automation,Industrials,15,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ROK,Rockwell Automation,Industrials,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 ROL,"Rollins, Inc.",Industrials,8,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-ROP,Roper Technologies,Information Technology,10,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ROST,Ross Stores,Consumer Discretionary,15,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-RCL,Royal Caribbean Group,Consumer Discretionary,14,0.7,2,"klimaziele, natur",False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-SPGI,S&P Global,Financials,16,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+ROP,Roper Technologies,Information Technology,12,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ROST,Ross Stores,Consumer Discretionary,12,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+RCL,Royal Caribbean Group,Consumer Discretionary,11,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+SPGI,S&P Global,Financials,20,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
 CRM,Salesforce,Information Technology,12,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-SNDK,Sandisk,Information Technology,6,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-SBAC,SBA Communications,Real Estate,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SNDK,Sandisk,Information Technology,8,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SBAC,SBA Communications,Real Estate,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 SLB,Schlumberger,Energy,13,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-STX,Seagate Technology,Information Technology,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-SRE,Sempra,Utilities,27,2.3,3,"effizienz, ghg, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,48.57142857142857,2
-NOW,ServiceNow,Information Technology,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-SHW,Sherwin-Williams,Materials,19,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,2
-SPG,Simon Property Group,Real Estate,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-SWKS,Skyworks Solutions,Information Technology,29,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,44.44444444444444,2
-SJM,J.M. Smucker Company (The),Consumer Staples,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,63.33333333333334,2
-SW,Smurfit Westrock,Materials,34,3.8,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,31.57894736842105,2
+STX,Seagate Technology,Information Technology,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SRE,Sempra,Utilities,28,2.3,3,"effizienz, ghg, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,29.629629629629633,2
+NOW,ServiceNow,Information Technology,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SHW,Sherwin-Williams,Materials,21,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,2
+SPG,Simon Property Group,Real Estate,17,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SWKS,Skyworks Solutions,Information Technology,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,45.45454545454545,2
+SJM,J.M. Smucker Company (The),Consumer Staples,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,46.15384615384616,1
+SW,Smurfit Westrock,Materials,33,3.6,6,"effizienz, ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,22.22222222222223,2
 SNA,Snap-on,Industrials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-SOLV,Solventum,Health Care,12,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-SO,Southern Company,Utilities,35,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,24.761904761904766,2
-LUV,Southwest Airlines,Industrials,16,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-SWK,Stanley Black & Decker,Industrials,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-SBUX,Starbucks,Consumer Discretionary,20,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-STT,State Street Corporation,Financials,12,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-STLD,Steel Dynamics,Materials,32,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,26.315789473684205,2
-STE,Steris,Health Care,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-SYK,Stryker Corporation,Health Care,16,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SOLV,Solventum,Health Care,14,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SO,Southern Company,Utilities,41,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,34.65608465608467,3
+LUV,Southwest Airlines,Industrials,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+SWK,Stanley Black & Decker,Industrials,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+SBUX,Starbucks,Consumer Discretionary,24,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+STT,State Street Corporation,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
+STLD,Steel Dynamics,Materials,33,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,22.222222222222214,2
+STE,Steris,Health Care,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+SYK,Stryker Corporation,Health Care,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 SMCI,Supermicro,Information Technology,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 SYF,Synchrony Financial,Financials,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-SNPS,Synopsys,Information Technology,11,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-SYY,Sysco,Consumer Staples,20,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-TMUS,T-Mobile US,Communication Services,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SNPS,Synopsys,Information Technology,13,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+SYY,Sysco,Consumer Staples,24,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+TMUS,T-Mobile US,Communication Services,17,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
 TROW,T. Rowe Price,Financials,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 TTWO,Take-Two Interactive,Communication Services,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-TPR,"Tapestry, Inc.",Consumer Discretionary,18,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-TRGP,Targa Resources,Energy,31,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,20.83333333333333,2
-TGT,Target Corporation,Consumer Staples,32,1.1,2,"ghg, klimaziele",True,eingeschränkt,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,73.33333333333333,2
-TEL,TE Connectivity,Information Technology,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+TPR,"Tapestry, Inc.",Consumer Discretionary,20,0.7,2,"klimaziele, natur",False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+TRGP,Targa Resources,Energy,34,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,14.583333333333329,2
+TGT,Target Corporation,Consumer Staples,27,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.7,3,"lieferkette, regeltreue, zusagen",True,belastbar,,2
+TEL,TE Connectivity,Information Technology,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 TDY,Teledyne Technologies,Information Technology,13,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-TER,Teradyne,Information Technology,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-TSLA,"Tesla, Inc.",Consumer Discretionary,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,40.0,3
-TXN,Texas Instruments,Information Technology,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,38.888888888888886,2
+TER,Teradyne,Information Technology,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+TSLA,"Tesla, Inc.",Consumer Discretionary,41,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,3
+TXN,Texas Instruments,Information Technology,39,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,44.44444444444444,2
 TPL,Texas Pacific Land Corporation,Energy,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-TXT,Textron,Industrials,30,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,33.33333333333333,3
-TMO,Thermo Fisher Scientific,Health Care,32,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,54.54545454545455,2
-TJX,TJX Companies,Consumer Discretionary,18,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-TKO,TKO Group Holdings,Communication Services,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+TXT,Textron,Industrials,33,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,25.0,3
+TMO,Thermo Fisher Scientific,Health Care,35,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,2
+TJX,TJX Companies,Consumer Discretionary,20,0.7,2,"klimaziele, natur",False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+TKO,TKO Group Holdings,Communication Services,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 TTD,Trade Desk (The),Communication Services,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-TSCO,Tractor Supply,Consumer Discretionary,15,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-TT,Trane Technologies,Industrials,27,1.9,3,"ghg, klimaziele, schadstoffe",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.1,3,"greenwashing, lieferkette, zusagen",False,eingeschränkt,62.5,2
+TSCO,Tractor Supply,Consumer Discretionary,19,0.3,1,klimaziele,False,dünn,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+TT,Trane Technologies,Industrials,17,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
 TDG,TransDigm Group,Industrials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-TRV,Travelers Companies (The),Financials,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-TRMB,Trimble Inc.,Information Technology,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-TFC,Truist Financial,Financials,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-TYL,Tyler Technologies,Information Technology,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-TSN,Tyson Foods,Consumer Staples,39,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,53.66666666666711,3
-USB,U.S. Bancorp,Financials,11,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+TRV,Travelers Companies (The),Financials,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+TRMB,Trimble Inc.,Information Technology,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+TFC,Truist Financial,Financials,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+TYL,Tyler Technologies,Information Technology,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+TSN,Tyson Foods,Consumer Staples,44,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,38.46153846153845,3
+USB,U.S. Bancorp,Financials,8,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
 UBER,Uber,Industrials,14,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-UDR,"UDR, Inc.",Real Estate,10,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ULTA,Ulta Beauty,Consumer Discretionary,16,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-UNP,Union Pacific Corporation,Industrials,12,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-UAL,United Airlines Holdings,Industrials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-UPS,United Parcel Service,Industrials,16,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-URI,United Rentals,Industrials,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-UNH,UnitedHealth Group,Health Care,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-UHS,Universal Health Services,Health Care,13,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-VLO,Valero Energy,Energy,35,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,37.5,3
-VEEV,Veeva Systems,Health Care,8,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-VTR,Ventas,Real Estate,10,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-VLTO,Veralto,Industrials,12,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+UDR,"UDR, Inc.",Real Estate,14,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ULTA,Ulta Beauty,Consumer Discretionary,20,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+UNP,Union Pacific Corporation,Industrials,16,0.3,1,klimaziele,False,dünn,0.7,1,lohnrecht,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+UAL,United Airlines Holdings,Industrials,20,0.3,1,klimaziele,False,dünn,1.1,2,"lohnrecht, sozialbewertung",False,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+UPS,United Parcel Service,Industrials,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+URI,United Rentals,Industrials,11,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+UNH,UnitedHealth Group,Health Care,14,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+UHS,Universal Health Services,Health Care,15,0.0,0,,False,keine,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
+VLO,Valero Energy,Energy,36,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,23.12500000000027,3
+VEEV,Veeva Systems,Health Care,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+VTR,Ventas,Real Estate,12,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+VLTO,Veralto,Industrials,14,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
 VRSN,Verisign,Information Technology,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-VRSK,Verisk Analytics,Industrials,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-VZ,Verizon,Communication Services,19,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-VRTX,Vertex Pharmaceuticals,Health Care,8,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+VRSK,Verisk Analytics,Industrials,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+VZ,Verizon,Communication Services,18,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+VRTX,Vertex Pharmaceuticals,Health Care,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 VRT,Vertiv,Industrials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-VTRS,Viatris,Health Care,29,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,45.45454545454547,2
+VTRS,Viatris,Health Care,32,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,2
 VICI,Vici Properties,Real Estate,5,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-V,Visa Inc.,Financials,13,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-VST,Vistra Corp.,Utilities,36,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,53.57142857142857,2
+V,Visa Inc.,Financials,15,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+VST,Vistra Corp.,Utilities,39,2.6,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,63.22751322751323,2
 VMRK,Vivmark Residential,Real Estate,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
-VMC,Vulcan Materials Company,Materials,15,0.8,1,schadstoffe,True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.2,1,lieferkette,False,dünn,,1
-WRB,W. R. Berkley Corporation,Financials,7,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
+VMC,Vulcan Materials Company,Materials,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
+WRB,W. R. Berkley Corporation,Financials,4,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
 GWW,W. W. Grainger,Industrials,10,0.0,0,,False,keine,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
 WAB,Wabtec,Industrials,13,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0
-WMT,Walmart,Consumer Staples,25,2.3,4,"effizienz, klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
-DIS,Walt Disney Company (The),Communication Services,31,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,33.33333333333333,2
+WMT,Walmart,Consumer Staples,28,1.5,3,"klimaziele, natur, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,2
+DIS,Walt Disney Company (The),Communication Services,34,1.6,3,"ghg, klimaziele, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,0.0,2
 WBD,Warner Bros. Discovery,Communication Services,10,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-WM,Waste Management,Industrials,36,3.2,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,35.41666666666667,3
-WAT,Waters Corporation,Health Care,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-WEC,WEC Energy Group,Utilities,34,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,19.76190476190476,2
-WFC,Wells Fargo,Financials,22,1.6,3,"ghg, klimaziele, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,0.6,2,"greenwashing, lieferkette",False,dünn,12.5,1
-WELL,Welltower,Real Estate,16,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-WST,West Pharmaceutical Services,Health Care,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-WDC,Western Digital,Information Technology,20,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-WY,Weyerhaeuser,Real Estate,35,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,50.0,2
-WSM,"Williams-Sonoma, Inc.",Consumer Discretionary,18,0.3,1,klimaziele,False,dünn,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
-WMB,Williams Companies,Energy,27,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.0,1,arbeitssicherheit,True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,43.05555555555556,2
+WM,Waste Management,Industrials,33,2.4,4,"ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,33.888888888889646,2
+WAT,Waters Corporation,Health Care,18,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+WEC,WEC Energy Group,Utilities,35,3.4,5,"effizienz, ghg, klimaziele, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,26.455026455026456,2
+WFC,Wells Fargo,Financials,23,1.6,3,"ghg, klimaziele, trend",True,belastbar,0.4,1,sozialbewertung,False,dünn,0.6,2,"greenwashing, lieferkette",False,dünn,14.285714285714292,1
+WELL,Welltower,Real Estate,15,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+WST,West Pharmaceutical Services,Health Care,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+WDC,Western Digital,Information Technology,22,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+WY,Weyerhaeuser,Real Estate,38,2.8,5,"ghg, klimaziele, natur, schadstoffe, trend",True,belastbar,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,2.1,4,"greenwashing, lieferkette, regeltreue, zusagen",True,belastbar,0.0,2
+WSM,"Williams-Sonoma, Inc.",Consumer Discretionary,17,0.3,1,klimaziele,False,dünn,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+WMB,Williams Companies,Energy,33,2.1,3,"ghg, schadstoffe, trend",True,belastbar,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,1.6,3,"greenwashing, lieferkette, regeltreue",True,belastbar,36.80555555555556,3
 WTW,Willis Towers Watson,Financials,9,0.3,1,klimaziele,False,dünn,0.4,1,sozialbewertung,False,dünn,0.2,1,lieferkette,False,dünn,,0
-WDAY,"Workday, Inc.",Information Technology,10,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
-WYNN,Wynn Resorts,Consumer Discretionary,9,0.0,0,,False,keine,0.7,1,lohnrecht,False,dünn,0.2,1,lieferkette,False,dünn,,0
-XEL,Xcel Energy,Utilities,28,2.9,4,"effizienz, ghg, klimaziele, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,2
-XYL,Xylem Inc.,Industrials,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-YUM,Yum! Brands,Consumer Discretionary,14,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ZBRA,Zebra Technologies,Information Technology,13,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
-ZBH,Zimmer Biomet,Health Care,19,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
+WDAY,"Workday, Inc.",Information Technology,12,0.3,1,klimaziele,False,dünn,0.0,0,,False,keine,0.7,2,"lieferkette, zusagen",False,dünn,,0
+WYNN,Wynn Resorts,Consumer Discretionary,6,0.0,0,,False,keine,0.0,0,,False,keine,0.2,1,lieferkette,False,dünn,,0
+XEL,Xcel Energy,Utilities,30,2.9,4,"effizienz, ghg, klimaziele, schadstoffe",True,belastbar,2.1,3,"arbeitssicherheit, lohnrecht, sozialbewertung",True,belastbar,1.2,2,"lieferkette, regeltreue",True,eingeschränkt,,2
+XYL,Xylem Inc.,Industrials,21,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.4,2,"arbeitssicherheit, sozialbewertung",True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+YUM,Yum! Brands,Consumer Discretionary,16,0.7,2,"klimaziele, natur",False,dünn,0.4,1,sozialbewertung,False,dünn,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ZBRA,Zebra Technologies,Information Technology,15,0.3,1,klimaziele,False,dünn,1.0,1,arbeitssicherheit,True,eingeschränkt,0.7,2,"lieferkette, zusagen",False,dünn,,0
+ZBH,Zimmer Biomet,Health Care,23,1.1,2,"klimaziele, schadstoffe",True,eingeschränkt,1.7,2,"arbeitssicherheit, lohnrecht",True,belastbar,0.7,2,"lieferkette, zusagen",False,dünn,,1
 ZTS,Zoetis,Health Care,12,0.8,1,schadstoffe,True,eingeschränkt,1.0,1,arbeitssicherheit,True,eingeschränkt,0.2,1,lieferkette,False,dünn,,0

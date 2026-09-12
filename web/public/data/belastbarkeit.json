@@ -17,7 +17,7 @@
   "values": [
     {
       "n": 0,
-      "companies": 0
+      "companies": 3
     },
     {
       "n": 1,
@@ -33,47 +33,47 @@
     },
     {
       "n": 4,
-      "companies": 8
+      "companies": 13
     },
     {
       "n": 5,
-      "companies": 11
-    },
-    {
-      "n": 6,
       "companies": 16
     },
     {
+      "n": 6,
+      "companies": 18
+    },
+    {
       "n": 7,
-      "companies": 12
+      "companies": 5
     },
     {
       "n": 8,
-      "companies": 20
+      "companies": 8
     },
     {
       "n": 9,
-      "companies": 27
+      "companies": 25
     },
     {
       "n": 10,
-      "companies": 34
+      "companies": 28
     },
     {
       "n": 11,
-      "companies": 15
+      "companies": 18
     },
     {
       "n": 12,
-      "companies": 45
+      "companies": 32
     },
     {
       "n": 13,
-      "companies": 36
+      "companies": 23
     },
     {
       "n": 14,
-      "companies": 22
+      "companies": 30
     },
     {
       "n": 15,
@@ -81,23 +81,23 @@
     },
     {
       "n": 16,
-      "companies": 17
-    },
-    {
-      "n": 17,
-      "companies": 10
-    },
-    {
-      "n": 18,
-      "companies": 16
-    },
-    {
-      "n": 19,
       "companies": 15
     },
     {
+      "n": 17,
+      "companies": 20
+    },
+    {
+      "n": 18,
+      "companies": 14
+    },
+    {
+      "n": 19,
+      "companies": 8
+    },
+    {
       "n": 20,
-      "companies": 13
+      "companies": 18
     },
     {
       "n": 21,
@@ -105,31 +105,31 @@
     },
     {
       "n": 22,
-      "companies": 2
+      "companies": 18
     },
     {
       "n": 23,
-      "companies": 3
-    },
-    {
-      "n": 24,
-      "companies": 5
-    },
-    {
-      "n": 25,
-      "companies": 5
-    },
-    {
-      "n": 26,
-      "companies": 5
-    },
-    {
-      "n": 27,
       "companies": 9
     },
     {
+      "n": 24,
+      "companies": 10
+    },
+    {
+      "n": 25,
+      "companies": 6
+    },
+    {
+      "n": 26,
+      "companies": 3
+    },
+    {
+      "n": 27,
+      "companies": 5
+    },
+    {
       "n": 28,
-      "companies": 7
+      "companies": 8
     },
     {
       "n": 29,
@@ -137,23 +137,23 @@
     },
     {
       "n": 30,
-      "companies": 10
+      "companies": 6
     },
     {
       "n": 31,
-      "companies": 11
+      "companies": 4
     },
     {
       "n": 32,
-      "companies": 13
+      "companies": 11
     },
     {
       "n": 33,
-      "companies": 10
+      "companies": 13
     },
     {
       "n": 34,
-      "companies": 14
+      "companies": 11
     },
     {
       "n": 35,
@@ -161,11 +161,11 @@
     },
     {
       "n": 36,
-      "companies": 14
+      "companies": 5
     },
     {
       "n": 37,
-      "companies": 6
+      "companies": 7
     },
     {
       "n": 38,
@@ -173,39 +173,55 @@
     },
     {
       "n": 39,
-      "companies": 7
+      "companies": 9
     },
     {
       "n": 40,
-      "companies": 1
+      "companies": 5
     },
     {
       "n": 41,
-      "companies": 1
+      "companies": 7
+    },
+    {
+      "n": 42,
+      "companies": 2
+    },
+    {
+      "n": 43,
+      "companies": 2
+    },
+    {
+      "n": 44,
+      "companies": 3
+    },
+    {
+      "n": 45,
+      "companies": 2
     }
   ],
-  "valuesMedian": 15.0,
+  "valuesMedian": 16.0,
   "pillars": [
     {
       "id": "E",
       "name": "Umwelt",
       "maxScore": 3.8,
       "levels": {
-        "belastbar": 156,
-        "eingeschränkt": 68,
-        "dünn": 181,
-        "keine": 98
+        "belastbar": 146,
+        "eingeschränkt": 71,
+        "dünn": 186,
+        "keine": 100
       },
       "scoreHist": [
         {
           "from": 0.0,
           "to": 0.25,
-          "companies": 98
+          "companies": 100
         },
         {
           "from": 0.25,
           "to": 0.5,
-          "companies": 161
+          "companies": 166
         },
         {
           "from": 0.5,
@@ -220,7 +236,7 @@
         {
           "from": 1.0,
           "to": 1.25,
-          "companies": 42
+          "companies": 45
         },
         {
           "from": 1.25,
@@ -230,52 +246,52 @@
         {
           "from": 1.5,
           "to": 1.75,
-          "companies": 28
+          "companies": 29
         },
         {
           "from": 1.75,
           "to": 2.0,
-          "companies": 10
+          "companies": 3
         },
         {
           "from": 2.0,
           "to": 2.25,
-          "companies": 18
+          "companies": 22
         },
         {
           "from": 2.25,
           "to": 2.5,
-          "companies": 32
+          "companies": 37
         },
         {
           "from": 2.5,
           "to": 2.75,
-          "companies": 7
+          "companies": 5
         },
         {
           "from": 2.75,
           "to": 3.0,
-          "companies": 23
+          "companies": 30
         },
         {
           "from": 3.0,
           "to": 3.25,
-          "companies": 16
+          "companies": 10
         },
         {
           "from": 3.25,
           "to": 3.5,
-          "companies": 13
+          "companies": 9
         },
         {
           "from": 3.5,
           "to": 3.75,
-          "companies": 6
+          "companies": 1
         },
         {
           "from": 3.75,
           "to": 4.0,
-          "companies": 3
+          "companies": 0
         },
         {
           "from": 4.0,
@@ -305,7 +321,7 @@
               "evidence": "gemeldet, auf Umsatz bezogen"
             }
           ],
-          "companies": 149
+          "companies": 136
         },
         {
           "id": "effizienz",
@@ -318,7 +334,7 @@
               "evidence": "gemessen und gemeldet, nur Stromerzeuger"
             }
           ],
-          "companies": 45
+          "companies": 26
         },
         {
           "id": "schadstoffe",
@@ -354,7 +370,7 @@
               "evidence": "abgeleitet aus mindestens drei Jahren"
             }
           ],
-          "companies": 130
+          "companies": 121
         },
         {
           "id": "natur",
@@ -400,7 +416,7 @@
               "evidence": "Bewertung des Transitionsbeitrags (WBA)"
             }
           ],
-          "companies": 345
+          "companies": 343
         }
       ]
     },
@@ -409,26 +425,26 @@
       "name": "Soziales",
       "maxScore": 2.1,
       "levels": {
-        "belastbar": 136,
-        "eingeschränkt": 213,
-        "dünn": 77,
-        "keine": 77
+        "belastbar": 104,
+        "eingeschränkt": 227,
+        "dünn": 69,
+        "keine": 103
       },
       "scoreHist": [
         {
           "from": 0.0,
           "to": 0.25,
-          "companies": 77
+          "companies": 103
         },
         {
           "from": 0.25,
           "to": 0.5,
-          "companies": 35
+          "companies": 52
         },
         {
           "from": 0.5,
           "to": 0.75,
-          "companies": 42
+          "companies": 17
         },
         {
           "from": 0.75,
@@ -438,17 +454,17 @@
         {
           "from": 1.0,
           "to": 1.25,
-          "companies": 138
+          "companies": 137
         },
         {
           "from": 1.25,
           "to": 1.5,
-          "companies": 75
+          "companies": 90
         },
         {
           "from": 1.5,
           "to": 1.75,
-          "companies": 63
+          "companies": 47
         },
         {
           "from": 1.75,
@@ -458,7 +474,7 @@
         {
           "from": 2.0,
           "to": 2.25,
-          "companies": 73
+          "companies": 57
         },
         {
           "from": 2.25,
@@ -483,7 +499,7 @@
               "evidence": "gesetzliche Meldung je Betrieb (OSHA)"
             }
           ],
-          "companies": 314
+          "companies": 313
         },
         {
           "id": "lohnrecht",
@@ -506,7 +522,7 @@
               "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
             }
           ],
-          "companies": 213
+          "companies": 139
         },
         {
           "id": "sozialbewertung",
@@ -524,7 +540,7 @@
               "evidence": "Bewertung veröffentlichter Angaben (WBA)"
             }
           ],
-          "companies": 218
+          "companies": 217
         }
       ]
     },
@@ -533,16 +549,16 @@
       "name": "Unternehmensführung",
       "maxScore": 2.1,
       "levels": {
-        "belastbar": 132,
-        "eingeschränkt": 11,
-        "dünn": 360,
-        "keine": 0
+        "belastbar": 126,
+        "eingeschränkt": 10,
+        "dünn": 364,
+        "keine": 3
       },
       "scoreHist": [
         {
           "from": 0.0,
           "to": 0.25,
-          "companies": 177
+          "companies": 179
         },
         {
           "from": 0.25,
@@ -552,7 +568,7 @@
         {
           "from": 0.5,
           "to": 0.75,
-          "companies": 183
+          "companies": 188
         },
         {
           "from": 0.75,
@@ -562,7 +578,7 @@
         {
           "from": 1.0,
           "to": 1.25,
-          "companies": 11
+          "companies": 10
         },
         {
           "from": 1.25,
@@ -572,7 +588,7 @@
         {
           "from": 1.5,
           "to": 1.75,
-          "companies": 77
+          "companies": 78
         },
         {
           "from": 1.75,
@@ -582,7 +598,7 @@
         {
           "from": 2.0,
           "to": 2.25,
-          "companies": 55
+          "companies": 48
         },
         {
           "from": 2.25,
@@ -612,7 +628,7 @@
               "evidence": "behördlich festgestellt (ECHO)"
             }
           ],
-          "companies": 136
+          "companies": 134
         },
         {
           "id": "zusagen",
@@ -625,7 +641,7 @@
               "evidence": "protokollierter Rückzug (SBTi)"
             }
           ],
-          "companies": 241
+          "companies": 239
         },
         {
           "id": "greenwashing",
@@ -643,7 +659,7 @@
               "evidence": "abgeleitet aus Emissionsreihe"
             }
           ],
-          "companies": 143
+          "companies": 127
         },
         {
           "id": "lieferkette",
@@ -656,7 +672,7 @@
               "evidence": "nur Meldestatus (Form SD)"
             }
           ],
-          "companies": 503
+          "companies": 500
         }
       ]
     }
@@ -664,53 +680,53 @@
   "combos": [
     {
       "pattern": "···",
-      "companies": 274
+      "companies": 301
     },
     {
       "pattern": "E·G",
-      "companies": 77
+      "companies": 75
     },
     {
       "pattern": "·S·",
-      "companies": 66
+      "companies": 47
     },
     {
       "pattern": "ESG",
-      "companies": 48
-    },
-    {
-      "pattern": "ES·",
-      "companies": 17
+      "companies": 42
     },
     {
       "pattern": "E··",
-      "companies": 14
+      "companies": 17
     },
     {
-      "pattern": "·SG",
-      "companies": 5
+      "pattern": "ES·",
+      "companies": 12
     },
     {
       "pattern": "··G",
-      "companies": 2
+      "companies": 6
+    },
+    {
+      "pattern": "·SG",
+      "companies": 3
     }
   ],
   "sectors": [
     {
       "sector": "Industrials",
       "companies": 83,
-      "E": 25,
-      "S": 35,
+      "E": 20,
+      "S": 33,
       "G": 20,
-      "all3": 14,
-      "rankable": 14
+      "all3": 13,
+      "rankable": 13
     },
     {
-      "sector": "Utilities",
-      "companies": 31,
-      "E": 29,
+      "sector": "Energy",
+      "companies": 21,
+      "E": 17,
       "S": 9,
-      "G": 28,
+      "G": 16,
       "all3": 7,
       "rankable": 7
     },
@@ -718,62 +734,62 @@
       "sector": "Consumer Staples",
       "companies": 34,
       "E": 25,
-      "S": 16,
+      "S": 15,
       "G": 14,
       "all3": 6,
       "rankable": 6
     },
     {
-      "sector": "Materials",
-      "companies": 25,
-      "E": 23,
-      "S": 11,
-      "G": 18,
-      "all3": 6,
-      "rankable": 6
-    },
-    {
-      "sector": "Energy",
-      "companies": 21,
-      "E": 17,
+      "sector": "Utilities",
+      "companies": 31,
+      "E": 29,
       "S": 6,
-      "G": 16,
+      "G": 27,
       "all3": 5,
-      "rankable": 0
-    },
-    {
-      "sector": "Information Technology",
-      "companies": 73,
-      "E": 13,
-      "S": 10,
-      "G": 13,
-      "all3": 4,
       "rankable": 0
     },
     {
       "sector": "Consumer Discretionary",
       "companies": 47,
       "E": 4,
-      "S": 16,
-      "G": 5,
-      "all3": 3,
+      "S": 14,
+      "G": 4,
+      "all3": 4,
+      "rankable": 0
+    },
+    {
+      "sector": "Materials",
+      "companies": 25,
+      "E": 22,
+      "S": 8,
+      "G": 18,
+      "all3": 4,
       "rankable": 0
     },
     {
       "sector": "Health Care",
       "companies": 59,
       "E": 12,
-      "S": 17,
+      "S": 9,
+      "G": 10,
+      "all3": 1,
+      "rankable": 0
+    },
+    {
+      "sector": "Information Technology",
+      "companies": 73,
+      "E": 10,
+      "S": 5,
       "G": 11,
-      "all3": 2,
+      "all3": 1,
       "rankable": 0
     },
     {
       "sector": "Financials",
       "companies": 76,
-      "E": 5,
-      "S": 7,
-      "G": 4,
+      "E": 4,
+      "S": 3,
+      "G": 3,
       "all3": 1,
       "rankable": 0
     },
@@ -781,7 +797,7 @@
       "sector": "Communication Services",
       "companies": 24,
       "E": 2,
-      "S": 5,
+      "S": 2,
       "G": 2,
       "all3": 0,
       "rankable": 0
@@ -790,7 +806,7 @@
       "sector": "Real Estate",
       "companies": 30,
       "E": 1,
-      "S": 4,
+      "S": 0,
       "G": 1,
       "all3": 0,
       "rankable": 0
@@ -803,27 +819,27 @@
     },
     {
       "label": "mit mindestens einem Wert",
-      "companies": 503
+      "companies": 500
     },
     {
       "label": "in mindestens einem Bereich belastbar",
-      "companies": 229
+      "companies": 202
     },
     {
       "label": "in mindestens zwei Bereichen belastbar",
-      "companies": 147
+      "companies": 132
     },
     {
       "label": "in allen drei Bereichen belastbar",
-      "companies": 48
+      "companies": 42
     },
     {
       "label": "… und in einer Branche mit mindestens 6 solchen Firmen",
-      "companies": 33
+      "companies": 26
     },
     {
       "label": "… und Umwelt-Rangband höchstens 20 Perzentilpunkte breit",
-      "companies": 7
+      "companies": 3
     }
   ],
   "rankableList": [
@@ -834,7 +850,7 @@
       "E_score": 2.8,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 56.666666666666664
+      "e_band_width": 34.99999999999998
     },
     {
       "ticker": "KHC",
@@ -843,16 +859,16 @@
       "E_score": 2.8,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 26.66666666666667
+      "e_band_width": 7.692307692307693
     },
     {
       "ticker": "TAP",
       "company": "Molson Coors Beverage Company",
       "gics_sector": "Consumer Staples",
-      "E_score": 3.6,
+      "E_score": 2.8,
       "S_score": 2.1,
       "G_score": 1.6,
-      "e_band_width": 15.555555555555554
+      "e_band_width": 30.769230769230766
     },
     {
       "ticker": "MDLZ",
@@ -860,8 +876,8 @@
       "gics_sector": "Consumer Staples",
       "E_score": 2.3,
       "S_score": 2.1,
-      "G_score": 2.1,
-      "e_band_width": 80.0
+      "G_score": 1.7,
+      "e_band_width": null
     },
     {
       "ticker": "PEP",
@@ -870,7 +886,7 @@
       "E_score": 2.8,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 44.44444444444444
+      "e_band_width": 23.07692307692308
     },
     {
       "ticker": "TSN",
@@ -879,7 +895,70 @@
       "E_score": 2.8,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 53.66666666666711
+      "e_band_width": 38.46153846153845
+    },
+    {
+      "ticker": "CVX",
+      "company": "Chevron Corporation",
+      "gics_sector": "Energy",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 25.0
+    },
+    {
+      "ticker": "HAL",
+      "company": "Halliburton",
+      "gics_sector": "Energy",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 33.33333333333334
+    },
+    {
+      "ticker": "MPC",
+      "company": "Marathon Petroleum",
+      "gics_sector": "Energy",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 31.25
+    },
+    {
+      "ticker": "OKE",
+      "company": "Oneok",
+      "gics_sector": "Energy",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 22.91666666666667
+    },
+    {
+      "ticker": "PSX",
+      "company": "Phillips 66",
+      "gics_sector": "Energy",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 29.16666666666667
+    },
+    {
+      "ticker": "VLO",
+      "company": "Valero Energy",
+      "gics_sector": "Energy",
+      "E_score": 2.4,
+      "S_score": 2.1,
+      "G_score": 1.6,
+      "e_band_width": 23.12500000000027
+    },
+    {
+      "ticker": "WMB",
+      "company": "Williams Companies",
+      "gics_sector": "Energy",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 36.80555555555556
     },
     {
       "ticker": "MMM",
@@ -888,7 +967,7 @@
       "E_score": 2.8,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 22.91666666666667
+      "e_band_width": 29.41176470588236
     },
     {
       "ticker": "BA",
@@ -900,22 +979,13 @@
       "e_band_width": 49.99999999999999
     },
     {
-      "ticker": "CARR",
-      "company": "Carrier Global",
-      "gics_sector": "Industrials",
-      "E_score": 1.9,
-      "S_score": 1.7,
-      "G_score": 2.1,
-      "e_band_width": 62.5
-    },
-    {
       "ticker": "CAT",
       "company": "Caterpillar Inc.",
       "gics_sector": "Industrials",
       "E_score": 2.1,
       "S_score": 1.7,
       "G_score": 1.6,
-      "e_band_width": 45.83333333333334
+      "e_band_width": 28.88888888888888
     },
     {
       "ticker": "DE",
@@ -924,7 +994,7 @@
       "E_score": 2.4,
       "S_score": 1.7,
       "G_score": 2.1,
-      "e_band_width": 41.66666666666666
+      "e_band_width": 20.0
     },
     {
       "ticker": "DAL",
@@ -933,16 +1003,25 @@
       "E_score": 2.4,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 31.25
+      "e_band_width": 26.666666666666657
     },
     {
       "ticker": "DD",
       "company": "DuPont",
       "gics_sector": "Industrials",
-      "E_score": 2.8,
+      "E_score": 2.3,
       "S_score": 2.1,
       "G_score": 1.6,
-      "e_band_width": 29.166666666666657
+      "e_band_width": 70.0
+    },
+    {
+      "ticker": "HON",
+      "company": "Honeywell Technologies",
+      "gics_sector": "Industrials",
+      "E_score": 2.1,
+      "S_score": 1.7,
+      "G_score": 1.6,
+      "e_band_width": 27.777777777777786
     },
     {
       "ticker": "HWM",
@@ -951,7 +1030,7 @@
       "E_score": 2.1,
       "S_score": 1.7,
       "G_score": 1.6,
-      "e_band_width": 50.0
+      "e_band_width": 50.27777777777777
     },
     {
       "ticker": "HII",
@@ -960,7 +1039,7 @@
       "E_score": 2.1,
       "S_score": 1.7,
       "G_score": 1.6,
-      "e_band_width": 50.0
+      "e_band_width": 50.00000000000001
     },
     {
       "ticker": "JCI",
@@ -968,8 +1047,8 @@
       "gics_sector": "Industrials",
       "E_score": 1.9,
       "S_score": 1.7,
-      "G_score": 2.1,
-      "e_band_width": 62.5
+      "G_score": 1.7,
+      "e_band_width": null
     },
     {
       "ticker": "LMT",
@@ -978,7 +1057,7 @@
       "E_score": 2.1,
       "S_score": 1.7,
       "G_score": 1.6,
-      "e_band_width": 50.0
+      "e_band_width": 37.5
     },
     {
       "ticker": "RSG",
@@ -987,7 +1066,7 @@
       "E_score": 2.4,
       "S_score": 2.1,
       "G_score": 2.1,
-      "e_band_width": 20.833333333333336
+      "e_band_width": 16.666666666666664
     },
     {
       "ticker": "TXT",
@@ -996,133 +1075,7 @@
       "E_score": 2.1,
       "S_score": 1.7,
       "G_score": 1.6,
-      "e_band_width": 33.33333333333333
-    },
-    {
-      "ticker": "WM",
-      "company": "Waste Management",
-      "gics_sector": "Industrials",
-      "E_score": 3.2,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 35.41666666666667
-    },
-    {
-      "ticker": "APD",
-      "company": "Air Products",
-      "gics_sector": "Materials",
-      "E_score": 2.1,
-      "S_score": 1.7,
-      "G_score": 1.6,
-      "e_band_width": 21.052631578947366
-    },
-    {
-      "ticker": "ALB",
-      "company": "Albemarle Corporation",
-      "gics_sector": "Materials",
-      "E_score": 2.8,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 15.789473684210535
-    },
-    {
-      "ticker": "CF",
-      "company": "CF Industries",
-      "gics_sector": "Materials",
-      "E_score": 2.8,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 47.89473684210598
-    },
-    {
-      "ticker": "IFF",
-      "company": "International Flavors & Fragrances",
-      "gics_sector": "Materials",
-      "E_score": 2.4,
-      "S_score": 1.7,
-      "G_score": 2.1,
-      "e_band_width": 21.052631578947366
-    },
-    {
-      "ticker": "MOS",
-      "company": "Mosaic Company (The)",
-      "gics_sector": "Materials",
-      "E_score": 2.8,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 15.789473684210527
-    },
-    {
-      "ticker": "PPG",
-      "company": "PPG Industries",
-      "gics_sector": "Materials",
-      "E_score": 2.8,
-      "S_score": 2.1,
-      "G_score": 2.1,
-      "e_band_width": 21.052631578947366
-    },
-    {
-      "ticker": "AES",
-      "company": "AES Corporation",
-      "gics_sector": "Utilities",
-      "E_score": 2.6,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 34.52380952380953
-    },
-    {
-      "ticker": "CMS",
-      "company": "CMS Energy",
-      "gics_sector": "Utilities",
-      "E_score": 3.4,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 15.0
-    },
-    {
-      "ticker": "CNP",
-      "company": "CenterPoint Energy",
-      "gics_sector": "Utilities",
-      "E_score": 2.9,
-      "S_score": 1.7,
-      "G_score": 1.6,
-      "e_band_width": 17.857142857142858
-    },
-    {
-      "ticker": "DUK",
-      "company": "Duke Energy",
-      "gics_sector": "Utilities",
-      "E_score": 3.4,
-      "S_score": 2.1,
-      "G_score": 1.6,
-      "e_band_width": 25.000000000000007
-    },
-    {
-      "ticker": "EIX",
-      "company": "Edison International",
-      "gics_sector": "Utilities",
-      "E_score": 3.1,
-      "S_score": 1.7,
-      "G_score": 1.6,
-      "e_band_width": 51.42857142857143
-    },
-    {
-      "ticker": "EVRG",
-      "company": "Evergy",
-      "gics_sector": "Utilities",
-      "E_score": 3.1,
-      "S_score": 1.7,
-      "G_score": 1.6,
-      "e_band_width": 12.857142857142858
-    },
-    {
-      "ticker": "EXC",
-      "company": "Exelon",
-      "gics_sector": "Utilities",
-      "E_score": 2.3,
-      "S_score": 1.7,
-      "G_score": 1.6,
-      "e_band_width": 6.666666666666686
+      "e_band_width": 25.0
     }
   ]
 }

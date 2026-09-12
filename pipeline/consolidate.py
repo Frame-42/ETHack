@@ -228,10 +228,13 @@ METRICS: dict[str, dict] = {
     "echo_penalties_usd": ("Umweltstrafen", "USD", -1, "G", "epa_echo"),
     "echo_nc_quarters_per_site": ("Verstossquartale je Anlage", "Quartale", -1, "G", "epa_echo"),
     "echo_significant": ("Anlagen mit schwerem Verstoss", "Anzahl", -1, "G", "epa_echo"),
+    "rank_band_width": ("Breite des Rangbands", "Perzentilpunkte", 0, "meta", "epa_ghgrp"),
     "sbti_validated": ("SBTi-geprueftes Ziel", "ja/nein", 1, "B", "sbti"),
     "sbti_near_term_year": ("Zwischenzieljahr", "Jahr", 0, "B", "sbti"),
     "sbti_net_zero_year": ("Netto-null-Jahr", "Jahr", 0, "B", "sbti"),
-    "sbti_commitment_removed": ("Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti"),
+    "sbti_commitment_removed": ("Nahziel-Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti"),
+    "sbti_net_zero_removed": ("Netto-null-Zusage zurueckgezogen", "ja/nein", -1, "B", "sbti"),
+    "sbti_near_term_expired": ("Zwischenziel abgelaufen", "ja/nein", -1, "B", "sbti"),
     "intensity_illusion": ("Intensitaet faellt, Tonnen steigen", "ja/nein", -1, "B", "eigene_berechnung"),
     "base_year_ratio": ("Basisjahr-Bequemlichkeit", "Verhaeltnis", -1, "B", "eigene_berechnung"),
     "rank_p10": ("Rangband untere Grenze", "Perzentil", 1, "ergebnis", "eigene_berechnung"),
@@ -247,6 +250,8 @@ METRICS: dict[str, dict] = {
     "whd_cases": ("Lohnverfahren 2022-2024", "Anzahl", -1, "S", "dol_whd"),
     "whd_backwages_usd": ("nachgezahlte Loehne", "USD", -1, "S", "dol_whd"),
     "whd_employees": ("betroffene Beschaeftigte", "Anzahl", -1, "S", "dol_whd"),
+    "whd_violations": ("festgestellte Verstoesse", "Anzahl", -1, "S", "dol_whd"),
+    "whd_penalties_usd": ("Geldbussen Lohnrecht", "USD", -1, "S", "dol_whd"),
     "sd_conflict_minerals_filer": ("meldet Konfliktmineralien (Form SD)", "ja/nein", 0, "meta", "sec_sd"),
     "wba_tpq": ("WBA Qualitaet des Transitionsplans", "0-5", 1, "B", "wba"),
     "wba_ctt": ("WBA Beitrag zur Transition", "0-2", 1, "B", "wba"),
@@ -289,6 +294,27 @@ def _add(rows: list, df: pd.DataFrame, mapping: dict[str, str], year=None) -> No
             )
 
 
+def dedupe_cik(master: pd.DataFrame) -> tuple[dict[str, str], dict[str, list[str]]]:
+    """Aktiengattungen derselben CIK auf einen Ticker zusammenfuehren.
+
+    Alphabet stand als GOOG und GOOGL mit identischen Konzernzahlen im
+    Bestand, ebenso Fox und News Corp. Ein Emittent ist eine Zeile; die
+    Klasse A (meist die stimmberechtigte, hier stets die laengere Schreibweise)
+    fuehrt, die andere wird zum Alias.
+    """
+    primaer: dict[str, str] = {}
+    alias: dict[str, list[str]] = {}
+    for cik, g in master.dropna(subset=["cik"]).groupby("cik"):
+        if len(g) < 2:
+            continue
+        tickers = sorted(g["ticker"], key=lambda t: (-len(t), t))
+        haupt, rest = tickers[0], tickers[1:]
+        alias[haupt] = rest
+        for t in rest:
+            primaer[t] = haupt
+    return primaer, alias
+
+
 def build() -> pd.DataFrame:
     master = pd.read_parquet(RAW / "sp500_master.parquet")
     rows: list[dict] = []
@@ -311,8 +337,14 @@ def build() -> pd.DataFrame:
 
     bands = _read(OUT / "rangbaender_periode_a.csv")
     if not bands.empty:
-        _add(rows, bands.assign(year=2023),
-             {"p10": "rank_p10", "p50": "rank_p50", "p90": "rank_p90"})
+        bands = bands.assign(year=2023)
+        # Ein Band ueber 70 Perzentilpunkten sagt nichts ueber den Rang aus.
+        # Der Median suggeriert dann eine Einordnung, die es nicht gibt --
+        # also Band zeigen, Mittelwert weglassen.
+        breit = bands["band_width"] >= 70
+        bands.loc[breit, "p50"] = np.nan
+        _add(rows, bands, {"p10": "rank_p10", "p50": "rank_p50", "p90": "rank_p90",
+                           "band_width": "rank_band_width"})
 
     egrid = _read(OUT / "egrid_je_firma.csv")
     if not egrid.empty:
@@ -352,14 +384,17 @@ def build() -> pd.DataFrame:
             "debt_usd_fy24": "total_debt_usd", "ocf_usd_fy24": "operating_cf_usd",
             "capex_usd_fy24": "capex_usd", "rnd_usd_fy24": "rnd_usd",
         })
-        # Nur Firmen mit Treffer. "Keine Faelle gefunden" kann auch ein
-        # verfehlter Namensabgleich sein und wird deshalb nicht als Null gefuehrt.
-        whd = hv[hv["whd_conf"].isin(["high", "low"])].assign(year=2024)
-        _add(rows, whd, {"whd_cases_22_24": "whd_cases",
-                         "whd_backwages_usd": "whd_backwages_usd",
-                         "whd_employees": "whd_employees"})
         sd = hv.assign(year=2025, sd_flag=(hv["sd_filer_22_25"] == "Ja").astype(float))
         _add(rows, sd, {"sd_flag": "sd_conflict_minerals_filer"})
+
+    # ---- Lohnverfahren des Arbeitsministeriums ----------------------------
+    whd = _whd_by_company(master)
+    if not whd.empty:
+        _add(rows, whd.assign(year=2024), {
+            "faelle": "whd_cases", "verstoesse": "whd_violations",
+            "nachzahlung_usd": "whd_backwages_usd", "beschaeftigte": "whd_employees",
+            "strafen_usd": "whd_penalties_usd",
+        })
 
     # ---- Team: WBA-Bewertungen (CC BY 4.0) --------------------------------
     wba_path = RAW / "team_wba.parquet"
@@ -393,6 +428,11 @@ def build() -> pd.DataFrame:
         }).dropna()
         long = pd.concat([long, e], ignore_index=True)
 
+    # ---- Aktiengattungen derselben CIK zusammenfuehren -----------------------
+    primaer, _ = dedupe_cik(master)
+    if primaer:
+        long["ticker"] = long["ticker"].replace(primaer)
+
     # ---- Provenienz und Stammdaten anhaengen --------------------------------
     meta = pd.DataFrame(
         [(k, v[0], v[1], v[2], v[3], v[4]) for k, v in METRICS.items()],
@@ -422,9 +462,14 @@ def build() -> pd.DataFrame:
     return long.sort_values(["ticker", "metric", "year"]).reset_index(drop=True)
 
 
+# Handelsprogramme mit CO2-Meldepflicht (CAMD Power Sector Emissions Data
+# Guide, Juli 2022): Acid Rain Program, RGGI, NSPS Subpart TTTT.
+CO2_PROGRAMME = ("ARP", "RGGI", "NSPS4T")
+
+
 def _campd_by_company(master: pd.DataFrame) -> pd.DataFrame:
     """CAMPD-Emissionen ueber das Eigentuemerfeld auf Ticker verteilen."""
-    from .resolve import OVERRIDES, normalize
+    from .resolve import OVERRIDES, normalize, override_prefix, owner_valid
     from .sources.epa_campd import split_owner_operator
 
     ep, fp = RAW / "campd_emission.parquet", RAW / "campd_facility.parquet"
@@ -439,8 +484,17 @@ def _campd_by_company(master: pd.DataFrame) -> pd.DataFrame:
             return lookup[k]
         if k in OVERRIDES:
             return OVERRIDES[k]
-        return next((t for p, t in OVERRIDES.items() if k.startswith(p)), None)
+        return override_prefix(k)
 
+    # CO2 melden nur bestimmte Programme. Der CAMD-Datenleitfaden nennt fuer
+    # SIPNOX "heat input and NOx", fuer RGGI "heat input and CO2". Eine Anlage,
+    # die nur im NOx-Programm steckt, meldet null CO2, weil niemand es misst --
+    # als Messwert waere diese Null falsch. Deshalb zaehlen hier nur Anlagen
+    # mit CO2-Pflicht; fuer alle anderen bleibt der Wert fehlend.
+    programme = fac["programCodeInfo"].astype(str).str.upper()
+    fac = fac[programme.str.contains("|".join(CO2_PROGRAMME), regex=True, na=False)]
+    if fac.empty:
+        return pd.DataFrame()
     own = fac[["facilityId", "year", "ownerOperator"]].drop_duplicates()
     recs = []
     for fid, yr, raw in own.itertuples(index=False):
@@ -448,17 +502,58 @@ def _campd_by_company(master: pd.DataFrame) -> pd.DataFrame:
             if role != "owner":
                 continue
             t = to_ticker(name)
-            if t:
+            if t and owner_valid(normalize(name), t, yr):
                 recs.append({"facilityId": fid, "year": yr, "ticker": t})
     if not recs:
         return pd.DataFrame()
     link = pd.DataFrame(recs).drop_duplicates()
     j = emi.merge(link, on=["facilityId", "year"], how="inner")
+    j = j.drop_duplicates(subset=["facilityId", "year", "ticker"])
     agg = j.groupby(["ticker", "year"], as_index=False).agg(
         campd_co2_t=("co2_t", "sum"), campd_plants=("facilityId", "nunique")
     )
+    # Bleibt nach dem Programmfilter nichts uebrig, ist die Menge fehlend --
+    # nicht null.
+    agg.loc[agg["campd_co2_t"] <= 0, "campd_co2_t"] = np.nan
     out = agg.melt(id_vars=["ticker", "year"], var_name="metric", value_name="value")
     return out.dropna(subset=["value"])
+
+
+def _whd_by_company(master: pd.DataFrame) -> pd.DataFrame:
+    """Lohnverfahren aus den Rohdaten des Arbeitsministeriums zuordnen.
+
+    Die Team-Datei hatte diese Zahlen ueber Namensbestandteile zugeordnet und
+    dabei "APDC Cleaning Services" Air Products zugeschlagen (212 Verfahren,
+    in den Rohdaten null). Die Verfahren tragen keine Firmenkennung, nur
+    Rechts- und Handelsnamen -- deshalb hier nur exakte Namen, die
+    Tochtertabelle und der Konzernpraefix, kein unscharfer Abgleich.
+    """
+    from .resolve import OVERRIDES, master_prefix, normalize, override_prefix
+
+    p = RAW / "dol_whd.parquet"
+    if not p.exists():
+        return pd.DataFrame()
+    w = pd.read_parquet(p)
+    lookup = {normalize(r.company): r.ticker for r in master.itertuples()}
+
+    def to_ticker(name):
+        k = normalize(name)
+        if not k:
+            return None
+        return lookup.get(k) or override_prefix(k) or master_prefix(k, lookup)
+
+    w["ticker"] = w["legal_name"].map(to_ticker).fillna(w["trade_nm"].map(to_ticker))
+    hit = w.dropna(subset=["ticker"])
+    if hit.empty:
+        return pd.DataFrame()
+    agg = hit.groupby("ticker", as_index=False).agg(
+        faelle=("case_id", "nunique"),
+        verstoesse=("case_violtn_cnt", "sum"),
+        nachzahlung_usd=("bw_atp_amt", "sum"),
+        beschaeftigte=("ee_atp_cnt", "sum"),
+        strafen_usd=("cmp_assd", "sum"),
+    )
+    return agg
 
 
 def _sbti_by_company(master: pd.DataFrame) -> pd.DataFrame:
@@ -472,12 +567,25 @@ def _sbti_by_company(master: pd.DataFrame) -> pd.DataFrame:
     m = master.assign(key=master["company"].map(normalize)).merge(
         s.drop_duplicates("key"), on="key", how="inner"
     )
+    # SBTi fuehrt den Status je Zieltyp. Ein gesetztes Nahziel und eine
+    # zurueckgezogene Netto-null-Zusage sind kein Widerspruch, sondern zwei
+    # Zeilen -- vorher wurden beide in ein Feld geworfen und 25 Firmen waren
+    # gleichzeitig "geprueft" und "zurueckgezogen".
+    nah = m["near_term_status"].astype(str)
+    netto = m["net_zero_status"].astype(str)
+    gesetzt = nah.str.contains("Targets set", case=False)
+    nah_jahr = pd.to_numeric(m["near_term_year"], errors="coerce")
+    abgelaufen = gesetzt & nah_jahr.notna() & (nah_jahr < date.today().year)
     out = pd.DataFrame({
         "ticker": m["ticker"],
-        "sbti_validated": m["has_validated_target"].astype(float),
-        "sbti_commitment_removed": m["commitment_removed"].astype(float),
-        "sbti_near_term_year": pd.to_numeric(m["near_term_year"], errors="coerce"),
-        "sbti_net_zero_year": pd.to_numeric(m["net_zero_year"], errors="coerce"),
+        # Geprueft ist nur, wer ein gesetztes und nicht abgelaufenes Nahziel hat.
+        "sbti_validated": (gesetzt & ~abgelaufen).astype(float),
+        "sbti_near_term_expired": abgelaufen.astype(float),
+        "sbti_commitment_removed": nah.str.contains("removed", case=False).astype(float),
+        "sbti_net_zero_removed": netto.str.contains("removed", case=False).astype(float),
+        "sbti_near_term_year": nah_jahr,
+        "sbti_net_zero_year": pd.to_numeric(m["net_zero_year"], errors="coerce")
+        .where(netto.str.contains("Targets set|Committed", case=False)),
     })
     long = out.melt(id_vars="ticker", var_name="metric", value_name="value").dropna()
     long["year"] = 2026
@@ -512,15 +620,16 @@ def write_all() -> dict:
     # nur dann auf ein angebrochenes ausweichen, wenn es kein anderes gibt.
     # Doppelte Aktiengattungen (gleiche CIK) nur einmal fuehren; als Fehler
     # gekennzeichnete Werte bleiben im Langformat, aber nicht in der Firmenansicht.
-    duplicate_tickers = set(long.loc[long["quality_rule"] == "F01_doppelte_cik", "ticker"])
-    shown = long[(long["quality_status"] != "fehler") & ~long["ticker"].isin(duplicate_tickers)]
+    master = pd.read_parquet(RAW / "sp500_master.parquet")
+    _, alias = dedupe_cik(master)
+    duplicate_tickers = {t for lst in alias.values() for t in lst}
+    shown = long[long["quality_status"] != "fehler"]
     latest = (
         shown.sort_values(["partial_year", "year"], ascending=[False, True])
         .groupby(["ticker", "metric"], as_index=False)
         .last()
     )
     companies = []
-    master = pd.read_parquet(RAW / "sp500_master.parquet")
     for ticker, g in latest.groupby("ticker"):
         row = g.iloc[0]
         companies.append(
@@ -529,6 +638,7 @@ def write_all() -> dict:
                 "company": row["company"],
                 "sector": row["gics_sector"],
                 "subIndustry": row["gics_sub_industry"],
+                "alias": alias.get(ticker, []),
                 "metrics": [
                     {
                         "metric": r["metric"],

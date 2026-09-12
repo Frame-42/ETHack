@@ -19,22 +19,21 @@ type Summary = {
     regel_bestaetigt_fehler: number;
     regel_widersprochen_fehler: number;
     tokens_gesamt: number;
-    referenz: { faelle: number; urteil_richtig: number; ursache_richtig: number };
   };
-  referenz_faelle?: {
-    regel: string;
+  reparaturen?: {
+    thema: string;
     ticker: string;
-    erwartet: string;
-    ki_urteil: string;
-    urteil_richtig: boolean;
-    erwartete_ursache: string;
-    ki_ursache: string;
-    ursache_richtig: boolean;
-    konfidenz: number;
-    route: string;
     beleg: string;
+    behoben: boolean;
+    befund: string;
   }[];
+  reparaturen_behoben?: number;
 };
+
+// Stand vor der Reparatur, aus data/out/flags_vor_reparatur.csv. Diese Zahlen
+// sind der Vergleichsmassstab: Dieselben Regeln fanden 382 Fälle, 246 davon
+// gingen an Menschen.
+const VORHER = { flags: 382, fehler: 239, firmen: 176, mensch: 246, automatisch: 136 };
 
 async function readJson<T>(name: string, fallback: T): Promise<T> {
   try {
@@ -59,12 +58,67 @@ export default async function Page() {
       <p className="eyebrow">Prüfung</p>
       <h1>Auffällige Werte, geprüft von Regeln, KI und Mensch</h1>
       <p className="lede">
-        Regeln finden Kandidaten und legen zu jedem ein Belegpaket an: Wert,
-        Zeitreihe, Branchenvergleich, Rohdaten-Auszug. Ein Sprachmodell
-        beurteilt jedes Paket und nennt die wahrscheinlichste Ursache. Wer
-        entscheidet, bestimmt eine feste Regel, nicht das Modell: Unsichere,
-        folgenreiche oder korrigierende Fälle gehen an einen Menschen.
+        Die meisten Fehler waren systematisch: eine Null, die „nicht gemeldet“
+        heißt; ein Messprogramm ohne CO<sub>2</sub>-Pflicht; eine Anlage, die
+        beim Verbinden doppelt zählt; eine Tochter im falschen Jahr. Systematik
+        gehört repariert, nicht geprüft — deshalb sind diese Ursachen jetzt in
+        der Pipeline behoben. Was übrig bleibt, entscheiden Regeln und ein
+        Sprachmodell; an Menschen geht nur der Grenzfall.
       </p>
+
+      <div className="stats">
+        <div className="stat">
+          <div className="k">Fälle aus den Regeln</div>
+          <div className="v">{de(s.flags)}</div>
+          <div className="s">vorher {de(VORHER.flags)}</div>
+        </div>
+        <div className="stat">
+          <div className="k">davon an Menschen</div>
+          <div className="v">{ki ? de(ki.routen.mensch ?? 0) : "–"}</div>
+          <div className="s">vorher {de(VORHER.mensch)}</div>
+        </div>
+        <div className="stat">
+          <div className="k">betroffene Firmen</div>
+          <div className="v">{de(s.firmen_betroffen)}</div>
+          <div className="s">vorher {de(VORHER.firmen)}</div>
+        </div>
+        <div className="stat">
+          <div className="k">Reparaturen belegt</div>
+          <div className="v">{de(s.reparaturen_behoben ?? 0)}/{de(s.reparaturen?.length ?? 0)}</div>
+          <div className="s">Kontrollfälle aus den Rohdaten</div>
+        </div>
+      </div>
+
+      {s.reparaturen && s.reparaturen.length > 0 && (
+        <>
+          <h2>Was repariert wurde — und der Beleg, dass es hält</h2>
+          <p className="lede small">
+            Jede Zeile ist ein Fall, dessen richtige Behandlung aus den
+            Rohdaten belegt ist. Die Prüfung läuft bei jedem Lauf mit: Kommt
+            eine Ursache zurück, fällt sie hier auf.
+          </p>
+          <div className="tablewrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ursache</th><th>Fall</th><th>Beleg aus den Rohdaten</th><th>Stand heute</th><th>behoben</th>
+                </tr>
+              </thead>
+              <tbody>
+                {s.reparaturen.map((r) => (
+                  <tr key={`${r.thema}-${r.ticker}`}>
+                    <td>{r.thema}</td>
+                    <td className="mono">{r.ticker}</td>
+                    <td className="dim">{r.beleg}</td>
+                    <td className="dim">{r.befund}</td>
+                    <td><span className={`chip ${r.behoben ? "good" : "warn"}`}>{r.behoben ? "ja" : "offen"}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
 
       <div className="docs">
         <a className="btn primary" href="/downloads/pruefung_vorgehen.pdf" download="ETHack-Pruefung-Vorgehen.pdf">Vorgehen als PDF ↓</a>
@@ -73,69 +127,47 @@ export default async function Page() {
       </div>
 
       <div className="pipeline" aria-label="Prüfablauf">
-        <div className="step"><span className="n">1</span><b>Regeln</b><span>{de(s.flags)} Kandidaten, {de(s.fehler)} Fehler, {de(s.pruefen)} zu prüfen</span></div>
-        <div className="step"><span className="n">2</span><b>KI-Gutachten</b><span>{ki ? `${ki.modell}, unsichere Fälle an ${ki.eskalation}` : "nicht gelaufen"}</span></div>
-        <div className="step"><span className="n">3</span><b>Weiterleitung</b><span>{ki ? `${de(ki.routen.automatisch ?? 0)} automatisch, ${de(ki.routen.mensch ?? 0)} an Menschen` : "–"}</span></div>
-        <div className="step"><span className="n">4</span><b>Mensch</b><span>Entscheidet per Knopf an jedem Fall, hat beim nächsten Lauf Vorrang</span></div>
+        <div className="step"><span className="n">1</span><b>Reparatur</b><span>systematische Ursachen in der Pipeline behoben</span></div>
+        <div className="step"><span className="n">2</span><b>Regeln</b><span>{de(s.flags)} Kandidaten, {de(s.fehler)} Fehler, {de(s.pruefen)} zu prüfen</span></div>
+        <div className="step"><span className="n">3</span><b>KI-Gutachten</b><span>{ki ? `${ki.modell}, unsichere Fälle an ${ki.eskalation}` : "nicht gelaufen"}</span></div>
+        <div className="step"><span className="n">4</span><b>Weiterleitung</b><span>{ki ? `${de(ki.routen.automatisch ?? 0)} automatisch, ${de(ki.routen.mensch ?? 0)} an Menschen` : "–"}</span></div>
+        <div className="step"><span className="n">5</span><b>Mensch</b><span>Entscheidet per Knopf an jedem Fall, hat beim nächsten Lauf Vorrang</span></div>
       </div>
 
       {ki && (
         <div className="stats">
           <div className="stat">
-            <div className="k">KI bestätigt Regel-Fehler</div>
-            <div className="v">{de(ki.regel_bestaetigt_fehler)}</div>
-            <div className="s">von {de(s.fehler)} Fehler-Flags</div>
+            <div className="k">KI-Urteil</div>
+            <div className="v">{de(ki.urteile.fehler ?? 0)}/{de(s.flags)}</div>
+            <div className="s">Fehler; {de(ki.urteile.plausibel ?? 0)} plausibel, {de(ki.urteile.unklar ?? 0)} unklar</div>
           </div>
           <div className="stat">
-            <div className="k">KI widerspricht Regel</div>
-            <div className="v">{de(ki.regel_widersprochen_fehler)}</div>
-            <div className="s">Fehler-Flag, KI hält plausibel</div>
+            <div className="k">automatisch entschieden</div>
+            <div className="v">{de(ki.routen.automatisch ?? 0)}</div>
+            <div className="s">{de(ki.eskaliert)} zuvor an {ki.eskalation} eskaliert</div>
           </div>
           <div className="stat">
-            <div className="k">Referenzfälle richtig</div>
-            <div className="v">{de(ki.referenz.urteil_richtig)}/{de(ki.referenz.faelle)}</div>
-            <div className="s">Ursache richtig: {de(ki.referenz.ursache_richtig)}/{de(ki.referenz.faelle)}</div>
+            <div className="k">an Menschen</div>
+            <div className="v">{de(ki.routen.mensch ?? 0)}</div>
+            <div className="s">Widerspruch, große Wirkung oder unsicher</div>
           </div>
           <div className="stat">
-            <div className="k">Tokens gesamt</div>
-            <div className="v">{de(ki.tokens_gesamt / 1000)}k</div>
-            <div className="s">{de(ki.eskaliert)} Fälle eskaliert</div>
+            <div className="k">Tokens</div>
+            <div className="v">{de(ki.tokens_gesamt / 1000, 1)}k</div>
+            <div className="s">{ki.modell}, Antworten zwischengespeichert</div>
           </div>
         </div>
       )}
 
-      {s.referenz_faelle && s.referenz_faelle.length > 0 && (
-        <>
-          <h2>Wie gut die KI ist — gemessen an belegten Fällen</h2>
-          <p className="lede small">
-            Für diese Fälle ist die richtige Antwort aus den Rohdaten bekannt,
-            unabhängig vom Modell. Nur so lässt sich sagen, ob man einem Urteil
-            trauen kann.
-          </p>
-          <div className="tablewrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Fall</th><th>Beleg</th><th>erwartet</th><th>KI</th><th>Ursache (KI)</th><th className="num">Konfidenz</th><th>Weg</th>
-                </tr>
-              </thead>
-              <tbody>
-                {s.referenz_faelle.map((r) => (
-                  <tr key={`${r.regel}-${r.ticker}`}>
-                    <td className="mono">{r.ticker}<br /><span className="dim">{r.regel}</span></td>
-                    <td className="dim">{r.beleg}</td>
-                    <td>{r.erwartet}</td>
-                    <td><span className={`chip ${r.urteil_richtig ? "good" : "warn"}`}>{r.ki_urteil}</span></td>
-                    <td><span className={`chip ${r.ursache_richtig ? "good" : ""}`}>{r.ki_ursache}</span></td>
-                    <td className="num">{de(r.konfidenz, 2)}</td>
-                    <td>{r.route}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
+      <div className="note">
+        <b>Wann ein Mensch drankommt.</b> Nur in vier Fällen: Regel und KI
+        widersprechen sich; das Modell bleibt auch nach der Eskalation unsicher;
+        ein Eingriff träfe das Ranking oder mehr als eine Megatonne; das Modell
+        braucht Belege, die es nicht hat, und ist sich nicht sicher. Der bloße
+        Wunsch des Modells nach einem Menschen genügt nicht — in der ersten
+        Fassung setzte es ihn fast immer und schickte {de(VORHER.mensch)} von{" "}
+        {de(VORHER.flags)} Fällen an Menschen.
+      </div>
 
       <h2>Alle Fälle</h2>
       <Review flags={flags} />

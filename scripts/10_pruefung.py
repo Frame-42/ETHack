@@ -31,38 +31,79 @@ from pipeline.config import DATA, OUT, ROOT
 REVIEW = DATA / "review"
 DECISIONS = REVIEW / "entscheidungen.csv"
 
-# Referenzmenge: Fälle, deren richtige Einordnung aus den Rohdaten belegt ist.
-# Schlüssel (Regel, Ticker, Kennzahl, Jahr oder None) -> (erwartetes Urteil, erwartete Ursache, Beleg)
-GOLD = {
-    ("F04_echo_quartale_unmoeglich", "TSLA", "echo_nc_quarters_per_site", None):
-        ("fehler", "doppelzaehlung", "1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen durch 2 Namensschreibweisen"),
-    ("F05_egrid_physik", "GE", "t_co2_pro_mwh", None):
-        ("fehler", "definition_oder_einheit", "4,44 t/MWh, ein Heizkraftwerk, physikalisch unmöglich als Stromrate"),
-    ("F10_whd_zuordnung", "APD", "whd_cases", None):
-        ("fehler", "zuordnung_falsch", "0 Rohfälle für Air Products, 15 Fälle 'APDC Cleaning Services'"),
-    ("F09_osha_nenner_unplausibel", "MCD", "dart_rate", None):
-        ("fehler", "meldefehler_quelle", "4 Meldungen, Median 50 h je Beschäftigtem"),
-    ("F02_null_statt_fehlend", "KHC", "scope1_t", 2022):
-        ("fehler", "null_statt_fehlend", "4 Anlagen gemeldet, keine Emissionszeile mit Menge"),
-    ("F03_campd_programm_ohne_co2", "MPC", "campd_co2_t", 2023):
-        ("fehler", "programm_misst_groesse_nicht", "Programm SIPNOX, CO2 nicht meldepflichtig"),
-    ("F07_trend_basis_instabil", "PPL", "absolute_cagr", None):
-        ("fehler", "zuordnung_falsch", "2018 1 Anlage 5 kt, ab 2019 9 Anlagen 28 Mt"),
-    ("F08_zuordnung_zeitlich", "VST", "scope1_t", 2023):
-        ("fehler", "zuordnung_falsch", "Talen Energy ist nicht Teil von Vistra"),
-    ("F01_doppelte_cik", "GOOGL", "*", None):
-        ("fehler", "doppelzaehlung", "GOOG und GOOGL teilen CIK 1652044"),
-    ("F06_egrid_nicht_versorger", "BRK-B", "t_co2_pro_mwh", None):
-        ("plausibel", "branchenstruktur_real", "Berkshire Hathaway Energy betreibt echte Versorger; nur GICS sagt Financials"),
+# ---------------------------------------------------------------------------
+# Reparatur-Kontrolle. Zehn Faelle, deren richtige Behandlung aus den Rohdaten
+# belegt ist. Frueher waren es Referenzfaelle fuer die KI-Messung -- inzwischen
+# sind ihre Ursachen in der Pipeline repariert, und dieselben Faelle pruefen,
+# ob die Reparatur haelt. Jeder Eintrag: (Beleg, Pruefung auf dem Datensatz).
+# ---------------------------------------------------------------------------
+def _werte(long: pd.DataFrame, ticker: str, metric: str, jahr: int | None = None):
+    s = long[(long.ticker == ticker) & (long.metric == metric)]
+    if jahr is not None:
+        s = s[s.year == jahr]
+    return [float(v) for v in s.value.dropna()]
+
+
+REPARATUREN = [
+    ("Null statt fehlend", "KHC", "EPA fuehrt 4 Anlagen, meldet 2022 keine Menge",
+     lambda l: (not _werte(l, "KHC", "scope1_t", 2022), "2022 ohne Wert statt 0 t")),
+    ("Programm misst CO2 nicht", "MPC", "Anlagen melden nur in SIPNOX (Waerme und NOx)",
+     lambda l: (not _werte(l, "MPC", "campd_co2_t"), "keine CO2-Menge statt 0 t")),
+    ("Join vervielfacht", "TSLA", "1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen",
+     lambda l: (all(v <= 12 for v in _werte(l, "TSLA", "echo_nc_quarters_per_site")),
+                f"{max(_werte(l, 'TSLA', 'echo_nc_quarters_per_site'), default=0):.0f} Quartale statt 24")),
+    ("Stromrate ohne Stromgeschaeft", "GE", "4,44 t/MWh aus einem Heizkraftwerk",
+     lambda l: (not _werte(l, "GE", "t_co2_pro_mwh"), "keine Rate mehr")),
+    ("Stromrate trotz falscher Branchenkennung", "BRK-B",
+     "113 Kraftwerke, 83 TWh -- GICS sagt Financials",
+     lambda l: (bool(_werte(l, "BRK-B", "t_co2_pro_mwh")),
+                f"Rate bleibt: {max(_werte(l, 'BRK-B', 't_co2_pro_mwh'), default=0):.2f} t/MWh")),
+    ("Nenner unbrauchbar", "MCD", "4 Meldungen mit im Median 50 h je Beschaeftigtem",
+     lambda l: (not _werte(l, "MCD", "dart_rate"), "keine Unfallrate auf falschem Nenner")),
+    ("Zuordnung ueber Namensteile", "APD", "0 Rohfaelle, 15 Faelle 'APDC Cleaning Services'",
+     lambda l: (not _werte(l, "APD", "whd_cases"), "keine Lohnverfahren mehr zugerechnet")),
+    ("Basisjahr unvollstaendig", "PPL", "2018 eine Anlage 5 kt, ab 2019 neun Anlagen 28 Mt",
+     lambda l: (not _werte(l, "PPL", "scope1_t", 2018)
+                and all(abs(v) <= 1 for v in _werte(l, "PPL", "absolute_cagr")),
+                "2018 entfernt, Trend wieder lesbar")),
+    ("Zuordnung ohne Zeitraum", "VST", "Talen Energy gehoert nicht zu Vistra",
+     lambda l: (all(v < 90e6 for v in _werte(l, "VST", "scope1_t", 2023)),
+                f"2023: {max(_werte(l, 'VST', 'scope1_t', 2023), default=0)/1e6:.1f} Mt statt 96,8")),
+    ("Aktiengattung doppelt", "GOOG", "GOOG und GOOGL teilen CIK 1652044",
+     lambda l: (not len(l[l.ticker == "GOOG"]), "nur noch GOOGL im Bestand")),
+]
+
+
+def pruefe_reparaturen(long: pd.DataFrame) -> list[dict]:
+    out = []
+    for thema, ticker, beleg, test in REPARATUREN:
+        try:
+            ok, befund = test(long)
+        except Exception as e:  # eine kaputte Pruefung ist auch ein Befund
+            ok, befund = False, f"Pruefung fehlgeschlagen: {e}"
+        out.append({"thema": thema, "ticker": ticker, "beleg": beleg,
+                    "behoben": bool(ok), "befund": befund})
+    return out
+
+
+REPARATUR_TEXT = {
+    "F01_doppelte_cik": "CIK-Deduplizierung in consolidate.py",
+    "F02_null_statt_fehlend": "fehlend statt 0 in canonical.py",
+    "F03_campd_programm_ohne_co2": "CO2 nur aus ARP, RGGI, NSPS4T",
+    "F04_echo_quartale_unmoeglich": "Join entdoppelt, nur V und S gezählt",
+    "F05_egrid_physik": "Grenze 1,3 t/MWh beim Export",
+    "F06_egrid_nicht_versorger": "Rate nur für Kraftwerksflotten",
+    "F07_trend_basis_instabil": "Trend erst ab drei Jahren mit stabiler Basis",
+    "F08_zuordnung_zeitlich": "Gültigkeitszeiträume in resolve.py",
+    "F09_osha_nenner_unplausibel": "Stundennenner 200-4.000 je Beschäftigtem",
+    "F10_whd_zuordnung": "eigene Zuordnung statt Team-Datei",
+    "F10_whd_franchise": "bleibt: Franchise ist ein Grenzfall",
+    "F11_whd_ohne_befund": "Verstöße und Bußgelder als eigene Kennzahlen",
+    "F12_sbti_zieltyp": "Status je Zieltyp getrennt",
+    "F13_sbti_abgelaufen": "abgelaufenes Ziel als eigene Kennzahl",
+    "P01_branchenextrem": "bleibt: echte Extreme sind kein Fehler",
+    "P02_rangband_ohne_aussage": "ab Band 70 kein Median mehr",
 }
-
-
-def gold_key(row: pd.Series):
-    for (rule, t, m, y), val in GOLD.items():
-        if row["rule"] == rule and row["ticker"] == t and row["metric"] == m and (y is None or row["year"] == y):
-            return (rule, t, m, y)
-    return None
-
 
 RULE_TEXT = {
     "F01_doppelte_cik": "Zwei Ticker teilen eine CIK: Konzernwerte doppelt",
@@ -75,6 +116,7 @@ RULE_TEXT = {
     "F08_zuordnung_zeitlich": "Tochter vor oder ohne Konzernzugehörigkeit",
     "F09_osha_nenner_unplausibel": "Unfallrate auf unplausiblen Stunden",
     "F10_whd_zuordnung": "Lohnverfahren: Team-Zuordnung nicht nachvollziehbar",
+    "F10_whd_franchise": "Lohnverfahren nur über den Handelsnamen",
     "F11_whd_ohne_befund": "Lohnverfahren ohne Nachzahlung und Betroffene",
     "F12_sbti_zieltyp": "SBTi: validiert und zurückgezogen vermischt",
     "F13_sbti_abgelaufen": "SBTi: Zieljahr vorbei",
@@ -95,67 +137,68 @@ def write_report_tables(flags: pd.DataFrame, summary: dict) -> None:
         return f"{int(n):,}".replace(",", r"\,")
 
     ki = summary.get("ki", {})
-    ref = ki.get("referenz", {})
     routes = ki.get("routen", {})
     verdicts = ki.get("urteile", {})
     macros = {
         "statFlags": de(summary["flags"]), "statFehler": de(summary["fehler"]),
         "statPruefen": de(summary["pruefen"]), "statFirmenBetr": de(summary["firmen_betroffen"]),
         "statRankRel": de(summary["ranking_relevant"]),
+        "repGesamt": de(len(summary.get("reparaturen", []))),
+        "repBehoben": de(summary.get("reparaturen_behoben", 0)),
         "kiModell": esc(ki.get("modell", "--")), "kiEskModell": esc(ki.get("eskalation", "--")),
-        "kiBestaetigt": de(ki.get("regel_bestaetigt_fehler", 0)),
-        "kiWiderspricht": de(ki.get("regel_widersprochen_fehler", 0)),
         "kiAuto": de(routes.get("automatisch", 0)), "kiMensch": de(routes.get("mensch", 0)),
         "kiEskaliert": de(ki.get("eskaliert", 0)), "kiTokens": de(ki.get("tokens_gesamt", 0)),
         "kiUrteilFehler": de(verdicts.get("fehler", 0)), "kiUrteilPlausibel": de(verdicts.get("plausibel", 0)),
         "kiUrteilUnklar": de(verdicts.get("unklar", 0)),
-        "refN": de(ref.get("faelle", 0)), "refUrteil": de(ref.get("urteil_richtig", 0)),
-        "refUrsache": de(ref.get("ursache_richtig", 0)),
     }
-    v1 = ROOT / "data" / "out" / "flags_gepruft_v1.csv"
-    if "ai_verdict" not in flags and (OUT / "flags_gepruft.csv").exists():
-        flags = pd.read_csv(OUT / "flags_gepruft.csv")
-    if v1.exists() and "ai_verdict" in flags:
-        a = pd.read_csv(v1)
-        contra1 = a[(a.severity == "fehler") & (a.ai_verdict == "plausibel")]
-        auto1 = contra1[contra1.route == "automatisch"]
-        contra2 = flags[(flags.severity == "fehler") & (flags.ai_verdict == "plausibel")]
-        auto2 = contra2[contra2.route == "automatisch"]
-        r1 = pd.read_csv(ROOT / "data" / "out" / "ki_bewertung_referenz_v1.csv")
+    vor = ROOT / "data" / "out" / "flags_vor_reparatur.csv"
+    if vor.exists():
+        a = pd.read_csv(vor)
         macros.update({
-            "vEinsWiderspruch": de(len(contra1)), "vEinsAutoFrei": de(len(auto1)),
-            "vZweiWiderspruch": de(len(contra2)), "vZweiAutoFrei": de(len(auto2)),
-            "vEinsRefUrteil": de(r1.urteil_richtig.sum()), "vEinsRefUrsache": de(r1.ursache_richtig.sum()),
-            "vEinsFehler": de((a.ai_verdict == "fehler").sum()), "vEinsPlausibel": de((a.ai_verdict == "plausibel").sum()),
-            "vEinsUnklar": de((a.ai_verdict == "unklar").sum()),
+            "vorFlags": de(len(a)), "vorFehler": de(int((a.severity == "fehler").sum())),
+            "vorFirmen": de(int(a.ticker.nunique())),
+            "vorMensch": de(int((a.route == "mensch").sum())) if "route" in a else "246",
+            "vorAuto": de(int((a.route == "automatisch").sum())) if "route" in a else "136",
         })
     (gen / "pruefung_stats.tex").write_text(
         "\n".join(f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in macros.items()) + "\n", encoding="utf-8")
 
-    rows = []
-    for rule, g in flags.groupby("rule"):
-        sev = g.severity.iloc[0]
-        ex = ", ".join(sorted(g.ticker.unique())[:6])
-        rows.append((rule, sev, len(g), g.ticker.nunique(), ex))
-    lines = ["\\texttt{%s} & %s & %s & %d & %d & %s \\\\" % (
-        esc(r.split("_")[0]), esc(RULE_TEXT.get(r, r)), sev, n, f, esc(ex)) for r, sev, n, f, ex in rows]
-    (gen / "tab_flags_regel.tex").write_text("\n".join(lines) + "\n\\bottomrule%", encoding="utf-8")
+    # Tabelle: was die Regeln vor und nach der Reparatur finden
+    vorher = pd.read_csv(vor) if vor.exists() else pd.DataFrame(columns=["rule", "ticker"])
+    zeilen = []
+    regeln = sorted(set(vorher.get("rule", pd.Series(dtype=str))) | set(flags.get("rule", pd.Series(dtype=str))))
+    for r in regeln:
+        n_vor = int((vorher.rule == r).sum()) if len(vorher) else 0
+        n_nach = int((flags.rule == r).sum()) if len(flags) else 0
+        zeilen.append("\\texttt{%s} & %s & %d & %d & %s \\\\" % (
+            esc(r.split("_")[0]), esc(RULE_TEXT.get(r, r)), n_vor, n_nach,
+            esc(REPARATUR_TEXT.get(r, "--"))))
+    (gen / "tab_flags_regel.tex").write_text("\n".join(zeilen) + "\n\\bottomrule%", encoding="utf-8")
 
-    lines = []
-    for r in summary.get("referenz_faelle", []):
-        ok = lambda b: "ja" if b else "\\textbf{nein}"
-        lines.append("%s & %s & %s & %s & %s & %.2f & %s \\\\" % (
-            esc(r["ticker"]), esc(r["beleg"]), esc(r["erwartet"]), f"{esc(r['ki_urteil'])} ({ok(r['urteil_richtig'])})",
-            f"{esc(r['ki_ursache'])} ({ok(r['ursache_richtig'])})", float(r["konfidenz"]), esc(r["route"])))
-    (gen / "tab_referenz.tex").write_text(("\n".join(lines) if lines else "-- & -- & -- & -- & -- & 0 & -- \\\\") + "\n\\bottomrule%", encoding="utf-8")
+    # Tabelle: Reparatur-Kontrolle
+    zeilen = ["%s & %s & %s & %s & %s \\\\" % (
+        esc(r["thema"]), esc(r["ticker"]), esc(r["beleg"]), esc(r["befund"]),
+        "ja" if r["behoben"] else "\\textbf{nein}") for r in summary.get("reparaturen", [])]
+    (gen / "tab_referenz.tex").write_text(
+        ("\n".join(zeilen) if zeilen else "-- & -- & -- & -- & -- \\\\") + "\n\\bottomrule%",
+        encoding="utf-8")
 
 
 def main(use_ai: bool) -> None:
     print("Regeln:")
     flags = Q.run()
     flags.to_csv(OUT / "flags.csv", index=False)
+    long = pd.read_parquet(OUT / "dataset_long.parquet")
+    rep = pruefe_reparaturen(long)
+    print("\nReparatur-Kontrolle:")
+    for r in rep:
+        print(f"  {'ok ' if r['behoben'] else 'OFFEN'} {r['ticker']:6s} {r['thema']:42s} {r['befund']}")
+    pd.DataFrame(rep).to_csv(OUT / "reparaturen.csv", index=False)
+
     summary: dict = {
         "flags": len(flags),
+        "reparaturen": rep,
+        "reparaturen_behoben": int(sum(r["behoben"] for r in rep)),
         "fehler": int((flags.severity == "fehler").sum()),
         "pruefen": int((flags.severity == "pruefen").sum()),
         "je_regel": flags.groupby("rule").size().to_dict(),
@@ -169,21 +212,6 @@ def main(use_ai: bool) -> None:
         items = [(row.to_dict(), Q.packet(row)) for _, row in flags.iterrows()]
         print(f"KI-Prüfung von {len(items)} Fällen mit {A.MODEL}, Eskalation {A.ESCALATION_MODEL} ...")
         reviewed = pd.DataFrame(A.review_many(items))
-        reviewed["gold"] = reviewed.apply(gold_key, axis=1)
-
-        # ---- Bewertung an der Referenzmenge
-        g = reviewed.dropna(subset=["gold"]).drop_duplicates("gold")
-        rows = []
-        for _, r in g.iterrows():
-            exp_verdict, exp_cause, beleg = GOLD[r["gold"]]
-            rows.append({"regel": r["rule"], "ticker": r["ticker"], "erwartet": exp_verdict,
-                         "ki_urteil": r["ai_verdict"], "urteil_richtig": r["ai_verdict"] == exp_verdict,
-                         "erwartete_ursache": exp_cause, "ki_ursache": r["ai_cause"],
-                         "ursache_richtig": r["ai_cause"] == exp_cause, "konfidenz": r["ai_confidence"],
-                         "route": r["route"], "beleg": beleg})
-        eval_df = pd.DataFrame(rows)
-        eval_df.to_csv(OUT / "ki_bewertung_referenz.csv", index=False)
-        summary["referenz_faelle"] = eval_df.to_dict("records")
 
         # ---- menschliche Entscheidungen haben Vorrang
         if DECISIONS.exists():
@@ -192,9 +220,9 @@ def main(use_ai: bool) -> None:
                                       on="flag_id", how="left")
         reviewed["final"] = reviewed.get("entscheidung", pd.Series(index=reviewed.index)).fillna(
             reviewed.apply(lambda r: r["ai_action"] if r["route"] == "automatisch" else "offen", axis=1))
-        reviewed.drop(columns=["gold"]).to_csv(OUT / "flags_gepruft.csv", index=False)
+        reviewed.to_csv(OUT / "flags_gepruft.csv", index=False)
         # Für die Oberfläche: Belege als Objekt statt als Zeichenkette.
-        recs = reviewed.drop(columns=["gold"]).assign(evidence=reviewed.evidence.map(json.loads))
+        recs = reviewed.assign(evidence=reviewed.evidence.map(json.loads))
         (OUT / "flags_gepruft.json").write_text(
             recs.to_json(orient="records", force_ascii=False, default_handler=str), encoding="utf-8")
 
@@ -208,11 +236,6 @@ def main(use_ai: bool) -> None:
             "regel_bestaetigt_fehler": int(((reviewed.severity == "fehler") & (reviewed.ai_verdict == "fehler")).sum()),
             "regel_widersprochen_fehler": int(((reviewed.severity == "fehler") & (reviewed.ai_verdict == "plausibel")).sum()),
             "tokens_gesamt": int(tokens),
-            "referenz": {
-                "faelle": int(len(eval_df)),
-                "urteil_richtig": int(eval_df.urteil_richtig.sum()) if len(eval_df) else 0,
-                "ursache_richtig": int(eval_df.ursache_richtig.sum()) if len(eval_df) else 0,
-            },
         }
 
     REVIEW.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,11 @@
+thema,ticker,beleg,behoben,befund
+Null statt fehlend,KHC,"EPA fuehrt 4 Anlagen, meldet 2022 keine Menge",True,2022 ohne Wert statt 0 t
+Programm misst CO2 nicht,MPC,Anlagen melden nur in SIPNOX (Waerme und NOx),True,keine CO2-Menge statt 0 t
+Join vervielfacht,TSLA,"1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen",True,12 Quartale statt 24
+Stromrate ohne Stromgeschaeft,GE,"4,44 t/MWh aus einem Heizkraftwerk",True,keine Rate mehr
+Stromrate trotz falscher Branchenkennung,BRK-B,"113 Kraftwerke, 83 TWh -- GICS sagt Financials",True,Rate bleibt: 0.68 t/MWh
+Nenner unbrauchbar,MCD,4 Meldungen mit im Median 50 h je Beschaeftigtem,True,keine Unfallrate auf falschem Nenner
+Zuordnung ueber Namensteile,APD,"0 Rohfaelle, 15 Faelle 'APDC Cleaning Services'",True,keine Lohnverfahren mehr zugerechnet
+Basisjahr unvollstaendig,PPL,"2018 eine Anlage 5 kt, ab 2019 neun Anlagen 28 Mt",True,"2018 entfernt, Trend wieder lesbar"
+Zuordnung ohne Zeitraum,VST,Talen Energy gehoert nicht zu Vistra,True,"2023: 86.3 Mt statt 96,8"
+Aktiengattung doppelt,GOOG,GOOG und GOOGL teilen CIK 1652044,True,nur noch GOOGL im Bestand

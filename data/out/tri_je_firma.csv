@@ -12,14 +12,14 @@ AMCR,6,895.0,0.0,Amcor,Materials
 AME,16,36304.529,26144.428,Ametek,Industrials
 AMGN,1,427.364,427.364,Amgen,Health Care
 AOS,6,59939.11,3558.4,A. O. Smith,Industrials
-APA,3,0.006,0.006,APA Corporation,Energy
+APA,2,0.0,0.0,APA Corporation,Energy
 APD,14,642325.361,482812.0,Air Products,Materials
 APH,8,82625.887,25812.227,Amphenol,Information Technology
 APTV,3,10.349,0.0,Aptiv,Consumer Discretionary
 AVGO,1,10809.4,0.0,Broadcom,Information Technology
 AVY,7,243424.1,8458.3,Avery Dennison,Materials
 BA,12,207398.827,46408.644,Boeing,Industrials
-BALL,19,1272620.36,4996.26,Ball Corporation,Materials
+BALL,18,1272618.56,4996.26,Ball Corporation,Materials
 BAX,6,374268.9,41596.9,Baxter International,Health Care
 BDX,4,118411.6,106180.0,Becton Dickinson,Health Care
 BG,3,1489456.696,0.0,Bunge Global,Consumer Staples
@@ -96,7 +96,7 @@ INTC,7,151108.666,0.0,Intel,Information Technology
 IP,23,16051915.117,768925.201,International Paper,Materials
 IR,8,96.541,1.419,Ingersoll Rand,Industrials
 ITW,23,48292.084,12967.630000000001,Illinois Tool Works,Industrials
-JBL,18,130151.395,20408.611,Jabil,Information Technology
+JBL,12,106671.313,13206.529,Jabil,Information Technology
 JCI,8,1681.769,0.001,Johnson Controls,Industrials
 JNJ,3,18185.0,0.0,Johnson & Johnson,Health Care
 K,4,17676.0,15645.0,,
@@ -199,7 +199,7 @@ WMB,20,225213.0,71521.3,Williams Companies,Energy
 WMT,1,8247.1,0.0,Walmart,Consumer Staples
 WY,17,637146.617,52146.849,Weyerhaeuser,Real Estate
 XEL,8,1380521.936,17063.171,Xcel Energy,Utilities
-XOM,30,4834381.552,258896.222,ExxonMobil,Energy
+XOM,29,4828325.552,252840.222,ExxonMobil,Energy
 XYL,5,18841.945,7.52,Xylem Inc.,Industrials
 ZBH,6,1722.83,331.579,Zimmer Biomet,Health Care
 ZTS,1,5.391,0.0,Zoetis,Health Care

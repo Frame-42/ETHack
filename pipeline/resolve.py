@@ -256,6 +256,65 @@ GENERIC_TAIL = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Gueltigkeitszeitraeume. Die Indexliste kennt nur den heutigen Stand, die
+# Tochtertabelle kannte bisher keine Zeit -- deshalb wurden Konzernumbauten
+# rueckwirkend auf alle Jahre projiziert (PPL-Sprung, Talen bei Vistra,
+# WestRock unter Smurfit). Ein Eintrag hier begrenzt eine Zuordnung auf die
+# Jahre, in denen sie tatsaechlich galt. Jahr = Berichtsjahr der Messung.
+# ``bis`` ist einschliesslich, ``None`` heisst offen.
+# ---------------------------------------------------------------------------
+VALIDITY: dict[tuple[str, str], tuple[int | None, int | None]] = {
+    # Vistra hat Talen Energy nie uebernommen -- 2023 wurden 10,5 Mt falsch
+    # zugerechnet. Der Kauf betraf nur einzelne Kraftwerke (2016, ERCOT).
+    ("talen energy", "VST"): (None, None),
+    # Smurfit Kappa und WestRock fusionierten im Juli 2024 zu Smurfit Westrock.
+    ("westrock", "SW"): (2024, None),
+    ("smurfit kappa", "SW"): (2024, None),
+    # ExxonMobil schloss die Uebernahme von Pioneer im Mai 2024 ab.
+    ("pioneer natural resources", "XOM"): (2024, None),
+    # Constellation kaufte Calpine, Abschluss 2026.
+    ("calpine", "CEG"): (2026, None),
+    # Exelon spaltete das Erzeugungsgeschaeft Anfang 2022 als Constellation ab:
+    # davor Exelon, danach Constellation.
+    ("exelon generation", "EXC"): (None, 2021),
+    ("exelon generation", "CEG"): (2022, None),
+    # Occidental schloss die Uebernahme von Anadarko im August 2019 ab.
+    ("anadarko petroleum", "OXY"): (2019, None),
+}
+
+
+def owner_valid(key: str, ticker: str, year: int | float | None) -> bool:
+    """Galt diese Zuordnung im Berichtsjahr? Ohne Eintrag gilt sie immer."""
+    rule = VALIDITY.get((key, ticker))
+    if rule is None:
+        return True
+    von, bis = rule
+    if von is None and bis is None:
+        return False
+    try:
+        y = int(year)
+    except (TypeError, ValueError):
+        return True
+    return (von is None or y >= von) and (bis is None or y <= bis)
+
+
+def override_prefix(key: str) -> str | None:
+    """Treffer der Tochtertabelle als Praefix -- aber nur an der Wortgrenze.
+
+    Ohne Wortgrenze zieht "linde" die "Linden Generating Station" an sich
+    (4,7 TWh fremder Strom bei Linde) und "kla" jede Firma, die mit diesen
+    Buchstaben beginnt. Erlaubt ist deshalb nur "georgia power" ->
+    "georgia power services", nicht "linde" -> "linden".
+    """
+    if not key:
+        return None
+    for k, t in OVERRIDES.items():
+        if key == k or key.startswith(k + " "):
+            return t
+    return None
+
+
 def master_prefix(key: str, lookup: dict[str, str]) -> str | None:
     """Konzernname plus genau ein allgemeines Wort, z. B. "sempra energy"."""
     head, _, tail = key.rpartition(" ")
@@ -302,7 +361,7 @@ def resolve_owners(
         else:
             # Override-Tabelle auch als Praefix pruefen: "georgia power" faengt
             # "georgia power services" mit ab.
-            hit = next((t for k, t in OVERRIDES.items() if key.startswith(k)), None)
+            hit = override_prefix(key)
             if hit:
                 result = (hit, "override-praefix", 0.90)
             elif master_prefix(key, lookup):
@@ -326,6 +385,8 @@ def resolve_owners(
         for owner, share in parse_owners(raw):
             ticker, method, conf = match_one(owner)
             if ticker is None:
+                continue
+            if not owner_valid(normalize(owner), ticker, year):
                 continue
             rows.append(
                 {

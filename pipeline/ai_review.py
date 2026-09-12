@@ -36,6 +36,10 @@ from .config import OUT, _load_env  # noqa: F401  (lädt .env)
 
 API = "https://api.openai.com/v1/responses"
 MODEL = os.environ.get("OPENAI_REVIEW_MODEL", "gpt-5.4-mini")
+# Schwellen der Weiterleitung. Startwerte, keine Kalibrierung -- sie werden
+# belastbar, sobald genug menschliche Entscheidungen als Referenz vorliegen.
+UNSICHER = 0.6   # darunter: an das staerkere Modell, danach an einen Menschen
+SICHER = 0.85    # darueber: Wunsch nach einem Menschen zaehlt nicht mehr
 ESCALATION_MODEL = os.environ.get("OPENAI_ESCALATION_MODEL", "gpt-5.5")
 CACHE = OUT / "ai_review_cache"
 
@@ -136,15 +140,44 @@ def review_one(packet: dict, model: str = MODEL, tries: int = 4) -> dict:
 
 
 def route(flag: dict, review: dict) -> str:
-    """Wer entscheidet: automatisch, Eskalation an ein stärkeres Modell oder ein Mensch."""
-    high_stakes = bool(flag.get("ranking_relevant")) or float(flag.get("impact_t") or 0) >= 1_000_000
+    """Wer entscheidet: automatisch, Eskalation an ein staerkeres Modell, Mensch.
+
+    Menschen sind teuer, deshalb bekommen sie nur Grenzfaelle. Drei Stufen
+    sorgen dafuer, dass wenige uebrig bleiben:
+
+    1. Systematische Fehler werden gar nicht erst weitergereicht, sondern in
+       der Pipeline repariert (Null statt fehlend, Programmfilter, Join-
+       Kardinalitaet, Nenner, Gueltigkeitszeitraeume). Was hier ankommt, ist
+       der Rest, den keine Regel entscheiden kann.
+    2. Unsicheres geht erst an das staerkere Modell, nicht an einen Menschen.
+    3. Ein Mensch kommt nur dran, wenn eine der vier Bedingungen unten gilt.
+
+    Der Wunsch des Modells nach einem Menschen (``needs_human``) allein
+    genuegt nicht mehr: Das Modell hat ihn in der ersten Fassung fast immer
+    gesetzt und damit 246 von 382 Faellen an Menschen geschickt. Er zaehlt
+    jetzt nur zusammen mit hoher Wirkung oder geringer Sicherheit.
+    """
     if review.get("error"):
         return "mensch"
-    if review["verdict"] == "unklar" or review["confidence"] < 0.6:
-        return "eskalation" if review.get("model") != ESCALATION_MODEL else "mensch"
-    if flag.get("severity") == "fehler" and review["verdict"] == "plausibel":
-        return "mensch"  # Regel und KI widersprechen sich: nie automatisch freigeben
-    if review["needs_human"] or (high_stakes and review["action"] in ("unterdruecken", "korrigieren")):
+    verdict, conf = review["verdict"], float(review.get("confidence") or 0)
+    ist_eskalation = review.get("model") == ESCALATION_MODEL
+
+    # (1) Unsicher: erst das staerkere Modell, dann erst ein Mensch.
+    if verdict == "unklar" or conf < UNSICHER:
+        return "mensch" if ist_eskalation else "eskalation"
+
+    hohe_wirkung = bool(flag.get("ranking_relevant")) or float(flag.get("impact_t") or 0) >= 1_000_000
+    greift_ein = review["action"] in ("unterdruecken", "korrigieren")
+    widerspruch = flag.get("severity") == "fehler" and verdict == "plausibel"
+
+    # (2) Regel und Modell widersprechen sich -- das wertvollste Signal.
+    if widerspruch:
+        return "mensch"
+    # (3) Eingriff mit grosser Wirkung: Rangfolge oder ab einer Megatonne.
+    if greift_ein and hohe_wirkung:
+        return "mensch"
+    # (4) Das Modell verlangt Belege, die es nicht hat, und ist nicht sicher.
+    if review.get("needs_human") and conf < SICHER:
         return "mensch"
     return "automatisch"
 

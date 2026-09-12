@@ -23,7 +23,7 @@
 \definecolor{teal}{HTML}{146B75}
 \definecolor{softgrey}{HTML}{F1F3F5}
 \hypersetup{colorlinks=true,linkcolor=navy,citecolor=teal,urlcolor=teal,
-  pdftitle={Warum die Daten Fehler enthalten -- und wie Regeln, KI und Mensch sie abfangen},
+  pdftitle={Warum die Daten Fehler enthielten -- Ursachen, Reparaturen und ein Pruefablauf},
   pdfauthor={ETHack 2026}}
 \urlstyle{same}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
@@ -42,17 +42,17 @@
 
 \input{generated/pruefung_stats}
 
-\title{\textcolor{navy}{Warum die Daten Fehler enthalten}\\[4mm]
-\large Ursachen, Belege und ein Prüfablauf aus Regeln, KI und Mensch}
+\title{\textcolor{navy}{Warum die Daten Fehler enthielten}\\[4mm]
+\large Ursachen, Reparaturen und ein Prüfablauf, der Menschen nur Grenzfälle vorlegt}
 \author{ETHack 2026 -- Folgebericht zum Verbesserungsbericht}
-\date{12.~September 2026}
+\date{13.~September 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 \noindent
-Der Verbesserungsbericht hat 380 auffällige Werte beschrieben. Dieser Bericht fragt, \emph{warum} sie entstehen, prüft jede Vermutung an den Rohdaten und an der Dokumentation der Quellen, und baut daraus einen Prüfablauf. Das Ergebnis ist unbequem und hilfreich zugleich: Die meisten Fehler sind keine Tippfehler, sondern entstehen an wenigen Stellen, an denen die Pipeline eine Quelle anders liest, als sie gemeint ist -- eine Null, die „nicht gemeldet“ heißt; ein Messprogramm, das CO\textsubscript{2} gar nicht erfasst; eine Anlage, die beim Zusammenführen doppelt zählt; eine Tochterfirma, die zum falschen Jahr gehört. Zwei Diagnosen des Verbesserungsberichts halten der Prüfung nicht stand: Die CAMPD-Nullen sind keine Fehlzuordnungen, und die ECHO-Werte über 12 sind keine falsch gezählten Programme, sondern doppelt verbundene Zeilen. Ein neues Regelwerk findet \statFlags{} Kandidaten. Ein Sprachmodell beurteilt jeden mit einem Belegpaket; an zehn Fällen mit belegter Antwort liegt es \refUrteil{} von \refN{} Mal richtig. Wer am Ende entscheidet, legt eine feste Regel fest und nicht das Modell.
+Der Verbesserungsbericht hat 380 auffällige Werte beschrieben. Dieser Bericht fragt, \emph{warum} sie entstehen, prüft jede Vermutung an den Rohdaten und an der Dokumentation der Quellen, und repariert die Ursachen. Das Ergebnis ist unbequem und hilfreich zugleich: Fast nichts davon ist ein Tippfehler in einer Quelle. Die Fehler entstehen an wenigen Stellen, an denen die Pipeline eine Quelle anders liest, als sie gemeint ist -- eine Null, die „nicht gemeldet“ heißt; ein Messprogramm, das CO\textsubscript{2} gar nicht erfasst; eine Anlage, die beim Zusammenführen doppelt zählt; eine Tochterfirma, die zum falschen Jahr gehört; ein Firmenname, der als Wortanfang eines fremden Namens steckt. Zwei Diagnosen des Verbesserungsberichts halten der Prüfung nicht stand: Die CAMPD-Nullen sind keine Fehlzuordnungen, und die ECHO-Werte über 12 sind keine falsch gezählten Programme, sondern doppelt verbundene Zeilen. Nach der Reparatur finden dieselben Regeln statt \vorFlags{} nur noch \statFlags{} Fälle, und an Menschen gehen statt \vorMensch{} genau \kiMensch. Zehn Kontrollfälle mit belegter Antwort prüfen bei jedem Lauf, dass die Reparaturen halten -- alle \repBehoben{} bestehen. Die Lehre für den KI-Einsatz ist die unbequemste: Ein Sprachmodell, das jeden Einzelfall begutachtet, ist die teure Antwort auf eine Frage, die man meist im Code beantworten kann. Es ist stark dort, wo keine Regel greift -- Franchise oder eigener Betrieb, echter Extremwert oder Fehler.
 \end{abstract}
 
 \tableofcontents
@@ -60,24 +60,25 @@ Der Verbesserungsbericht hat 380 auffällige Werte beschrieben. Dieser Bericht f
 
 % ---------------------------------------------------------------------------
 \section{Was geprüft wurde}
+\label{sec:ueberblick}
 
 Grundlage sind der gesammelte Datensatz (\texttt{dataset\_long.parquet}), die Firmen-Zwischentabellen und -- anders als beim Verbesserungsbericht -- die Rohdaten aller Quellen im Zwischenspeicher. Jede Ursache in Abschnitt~\ref{sec:ursachen} ist an mindestens einem konkreten Fall in den Rohdaten nachgesehen und, wo es um die Bedeutung eines Feldes geht, an der Dokumentation der Quelle belegt.
 
 \begin{center}\footnotesize
-\begin{longtable}{l P{5.2cm} c r r P{4.2cm}}
+\begin{longtable}{l P{5.0cm} r r P{4.8cm}}
 \toprule
-\textbf{Regel} & \textbf{Befund} & \textbf{Stufe} & \textbf{Fälle} & \textbf{Firmen} & \textbf{Beispiele} \\
+\textbf{Regel} & \textbf{Befund} & \textbf{vorher} & \textbf{heute} & \textbf{Reparatur} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Regel} & \textbf{Befund} & \textbf{Stufe} & \textbf{Fälle} & \textbf{Firmen} & \textbf{Beispiele} \\
+\textbf{Regel} & \textbf{Befund} & \textbf{vorher} & \textbf{heute} & \textbf{Reparatur} \\
 \midrule
 \endhead
 \input{generated/tab_flags_regel}
 \end{longtable}
 \end{center}
 
-\emph{Fehler} heißt: nachweislich falsch oder irreführend, nicht verrechnen. \emph{Prüfen} heißt: auffällig, aber ohne weiteren Beleg nicht entscheidbar. \statFirmenBetr{} Firmen sind betroffen, \statRankRel{} Fälle betreffen Firmen im Umwelt-Ranking.
+Von \vorFlags{} Fällen bei \vorFirmen{} Firmen bleiben \statFlags{} bei \statFirmenBetr{} Firmen. Keiner davon hat mehr die Stufe \emph{Fehler}: Was nachweisbar falsch war, ist repariert; was übrig ist, braucht einen Beleg, den die Daten nicht hergeben.
 
 % ---------------------------------------------------------------------------
 \section{Warum die Fehler entstehen}
@@ -121,6 +122,8 @@ Sieben Mechanismen erklären fast alles. Keiner davon ist ein Tippfehler in eine
 
 \textbf{Mechanismus.} Die Lohnverfahren tragen keine Firmenkennung, nur Rechts- und Handelsnamen, oft mit Filialzusatz. Ein Abgleich über Namensbestandteile findet das Börsenkürzel „APD“ in einem fremden Firmennamen. Dasselbe Muster zeigte sich bei der eigenen Zuordnung: US Steel wurde zu Steel Dynamics, Talen Energy zu Vistra (10{,}5~Mt 2023, noch im Bestand). Die Forschung zu Entity Matching kommt zu einem ähnlichen Bild: Regelbasierte Verfahren neigen zum Übermatching; auf 755\,540 von Fachleuten gelabelten Paaren erreichen Regeln 91{,}3\,\% F1, ein großes Sprachmodell 99{,}0\,\% \cite{opensanctions}.
 
+\textbf{Derselbe Mechanismus im eigenen Code.} Die Tochtertabelle wurde auch als Wortanfang geprüft, damit „Georgia Power Services“ bei Georgia Power landet. Ohne Wortgrenze zieht „linde“ aber die \emph{Linden Generating Station} an sich: 4,7~TWh fremder Strom bei Linde, dazu ein Kraftwerk bei KLA. Beide standen als Stromrate im Datensatz. Ein Leerzeichen in der Bedingung -- Treffer nur bei ``linde'' oder ``linde~\ldots'' -- beendet die ganze Fehlerklasse.
+
 \subsection{Zeit, die nicht mitgeführt wird}
 
 \textbf{Befund.} PPL wächst angeblich um 240\,\% im Jahr. Constellation hat 2019 bis 2021 exakt 0~t. WestRock erscheint 2023 unter Smurfit Westrock, Pioneer unter ExxonMobil.
@@ -150,20 +153,26 @@ Definitionen vermischt & SBTi, eGRID, CIK & Status je Zieltyp; Kennzahl nur für
 \end{center}
 
 % ---------------------------------------------------------------------------
-\section{Wie man es verbessert: zuerst ohne KI}
+\section{Was repariert wurde}
 
-KI ist nicht der erste Hebel. Die meisten Fehler oben lassen sich mit Regeln verhindern, die schneller, billiger und reproduzierbar sind. Die Reihenfolge folgt der verbreiteten Praxis von Datenverträgen: Prüfungen an jeder Stelle, an der Daten ihre Form ändern, auffällige Zeilen in Quarantäne statt stiller Löschung \cite{pandera,contracts}.
+KI war hier nicht der erste Hebel. Von \vorFlags{} Fällen stammten über neun Zehntel aus Mechanismen, die man im Code abstellen kann -- schneller, billiger und reproduzierbar als jedes Gutachten. Umgesetzt ist das in der Reihenfolge der Wirkung; die Spalte „vorher/heute“ in Abschnitt~\ref{sec:ueberblick} zeigt, was jede Reparatur gelöst hat.
 
 \begin{enumerate}
-\item \textbf{Fehlend ist nicht Null.} Wo eine Quelle keine Menge meldet, bleibt der Wert leer. Das betrifft die Summierung der EPA-Mengen und jede Aggregation danach.
-\item \textbf{Messpflicht als Datenfeld.} Das Programmfeld von CAMPD mitführen und CO\textsubscript{2} nur übernehmen, wo ein Programm es verlangt.
-\item \textbf{Kardinalitätstests.} Nach jedem Join prüfen, dass Schlüssel nicht vervielfacht werden. Ein einziges Assert hätte die ECHO-Werte über 12 verhindert.
-\item \textbf{Nenner vor dem Zähler prüfen.} Unfallraten nur aus Meldungen mit 500 bis 3\,500 Stunden je Beschäftigtem; unplausible Meldungen in Quarantäne.
-\item \textbf{Kennungen vor Namen.} CIK für SEC, FRS für EPA, ISIN für SBTi, LEI mit den Konzernbeziehungen von GLEIF -- diese stehen unter CC0 \cite{gleif} und beantworten „wem gehört wer“ ohne Namensabgleich.
-\item \textbf{Gültigkeitszeiträume.} Jede Zuordnung in der Tochtertabelle bekommt \texttt{gueltig\_von} und \texttt{gueltig\_bis}; die Indexliste wird historisch geführt.
-\item \textbf{Harte Grenzen als Export-Asserts.} ECHO $\leq 12$, eGRID $\leq 1{,}3$\,\tco{}/MWh, keine CIK doppelt, $|$Trend$| < 1$. Der Lauf bricht bei Verletzung ab.
-\item \textbf{Flags reisen mit.} Ein beanstandeter Wert wird nicht gelöscht, sondern trägt \texttt{quality\_status}, Regel und Begründung bis in die Oberfläche. Das ist inzwischen umgesetzt.
+\item \textbf{Fehlend ist nicht Null.} Wo die EPA keine Menge meldet, gibt es keinen Wert mehr (\texttt{canonical.py}). Das betrifft 19\,155 Anlagenjahre und löst 83 Fälle.
+\item \textbf{Messpflicht als Datenfeld.} CO\textsubscript{2} kommt nur noch aus Programmen, die es verlangen: ARP, RGGI, NSPS4T (\texttt{consolidate.py}). 99 Fälle.
+\item \textbf{Join entdoppeln, richtig zählen.} Eine Anlage kommt je Firma einmal vor, gezählt werden nur die Quartale mit V oder S -- nicht jeder Großbuchstabe der Historie (\texttt{05b\_firmenaggregate.py}). 639 doppelte Zeilen entfernt.
+\item \textbf{Nenner vor dem Zähler.} Unfallraten nur aus Meldungen mit 200 bis 4\,000 Stunden je Beschäftigtem; 1\,488 unbrauchbare Meldungen fallen heraus, darunter alle vier von McDonald's.
+\item \textbf{Wortgrenze bei Namen.} Die Tochtertabelle trifft nur noch an der Wortgrenze (\texttt{resolve.py}); die Lohnverfahren kommen aus den Rohdaten statt aus der Team-Datei. Air Products verliert 212 fremde Verfahren, Linde ein fremdes Kraftwerk.
+\item \textbf{Gültigkeitszeiträume.} Jede strittige Zuordnung hat jetzt ein Von und ein Bis (\texttt{VALIDITY} in \texttt{resolve.py}): Talen gehört nie zu Vistra, WestRock erst ab 2024, Pioneer ab 2024, Exelon Generation bis 2021, danach Constellation.
+\item \textbf{Unvollständige Jahre erkennen.} Hat ein Firmenjahr weit weniger Anlagen \emph{und} einen Bruchteil der sonstigen Menge, misst es die Zuordnung statt der Firma und fällt heraus (PPL 2018). Trends gibt es erst ab drei Jahren mit stabiler Basis.
+\item \textbf{Geschäftsmodell statt Branchenkennung.} Die Stromrate gibt es für Kraftwerksflotten -- mindestens drei Anlagen und eine Terawattstunde --, nicht für die GICS-Zeile. Damit behält Berkshire Hathaway seine Rate (113 Kraftwerke, 83~TWh), das Heizkraftwerk von GE verliert seine.
+\item \textbf{Definitionen trennen.} SBTi-Status je Zieltyp, abgelaufene Nahziele als eigene Kennzahl; Lohnverfahren getrennt nach Untersuchungen, festgestellten Verstößen, Nachzahlung und Bußgeld. Ein Verfahren ohne Nachzahlung ist damit kein Fehler mehr, sondern ein Befund.
+\item \textbf{Ein Emittent, eine Zeile.} Aktiengattungen mit gemeinsamer CIK werden zusammengeführt, die zweite Gattung wird zum Alias (GOOG, FOX, NWS).
+\item \textbf{Harte Grenzen beim Export.} \texttt{07\_dataset.py} bricht ab bei: ECHO über 12 Quartale, eGRID über 1{,}3\,\tco{}/MWh, Trend über 100\,\%, exakter Null in Mengen, doppelten Zeilen, doppelter CIK.
+\item \textbf{Flags reisen mit.} Was übrig bleibt, wird nicht gelöscht, sondern trägt \texttt{quality\_status}, Regel und Begründung bis in die Oberfläche.
 \end{enumerate}
+
+\befund{\textbf{Kontrolle statt Vertrauen.} Zehn Fälle mit belegter Antwort laufen bei jedem Durchgang mit: KHC~2022 ohne Wert, MPC ohne CO\textsubscript{2}-Menge, TSLA bei zwölf Quartalen, GE ohne Rate, Berkshire \emph{mit} Rate, MCD ohne Unfallrate, APD ohne Lohnverfahren, PPL~2018 entfernt, Vistra ohne Talen, GOOG nicht mehr im Bestand. Alle \repBehoben{} von \repGesamt{} bestehen (Abschnitt~\ref{sec:ergebnisse}). Kommt eine Ursache zurück, fällt sie hier auf, nicht erst im Ranking.}
 
 % ---------------------------------------------------------------------------
 \section{Wie man KI wirksam einbaut}
@@ -174,15 +183,17 @@ Regeln finden Kandidaten zuverlässig, können aber den Einzelfall nicht erklär
 
 Nicht geeignet ist ein Modell dafür, fehlende Zahlen zu liefern, Konzernbeziehungen aus dem Gedächtnis zu behaupten oder allein über Werte zu entscheiden, von denen ein Ranking abhängt.
 
+\befund{\textbf{Die wichtigste Einsicht dieses Berichts.} Ein Gutachten je Wert ist die teure Antwort auf eine Frage, die meist im Code steht. Von \vorFlags{} Fällen waren \vorFehler{} Stufe \emph{Fehler} -- und fast alle davon gingen auf zwölf Stellen im Code zurück. Nach der Reparatur begutachtet das Modell \statFlags{} Fälle statt \vorFlags{}, und die Kosten fallen von 323\,000 auf \kiTokens{} Tokens. KI gehört an das Ende der Kette, nicht an den Anfang: erst reparieren, dann prüfen, dann fragen.}
+
 \subsection{Der Aufbau}
 
 \begin{enumerate}
 \item \textbf{Regeln setzen die Schwere.} Das Modell kann einer Regel widersprechen, aber eine Regel-Stufe nicht selbst ändern.
 \item \textbf{Belegpaket statt Frage.} Jeder Fall geht mit Wert, Zeitreihe, Branchenvergleich und Rohdaten-Auszug an das Modell. Die Anweisung verbietet, Firmenzahlen aus eigenem Wissen zu ergänzen, und verlangt, allgemeines Wissen zu kennzeichnen.
 \item \textbf{Feste Antwortform.} Ein JSON-Schema erzwingt Urteil (fehler, plausibel, unklar), eine Ursache aus einer festen Liste, Handlungsvorschlag, Konfidenz und die Frage, ob ein Mensch nötig ist. „Unklar“ ist ausdrücklich eine gute Antwort.
-\item \textbf{Weiterleitung durch eine Regel, nicht durch das Modell.} Unsichere Fälle (Konfidenz unter 0{,}6 oder „unklar“) gehen an ein stärkeres Modell; bleiben sie unsicher, an einen Menschen. Korrekturen mit großer Wirkung -- ab einer Million Tonnen oder mit Einfluss auf das Ranking -- gehen immer an einen Menschen.
+\item \textbf{Weiterleitung durch eine Regel, nicht durch das Modell.} Unsichere Fälle (Konfidenz unter 0{,}6 oder „unklar“) gehen zuerst an ein stärkeres Modell, nicht an einen Menschen. Ein Mensch kommt nur in vier Fällen dran: Regel und KI widersprechen sich; das Modell bleibt auch nach der Eskalation unsicher; ein Eingriff träfe das Ranking oder mehr als eine Megatonne; das Modell verlangt Belege, die es nicht hat, \emph{und} ist sich nicht sicher (unter 0{,}85).
 \item \textbf{Zwischenspeicher.} Gleicher Fall, gleiche Anweisung, gleiches Modell ergibt dieselbe gespeicherte Antwort. Das macht den Lauf reproduzierbar und einen zweiten Lauf kostenlos.
-\item \textbf{Messung an belegten Fällen.} Ein Modellurteil ist nur so viel wert wie seine gemessene Trefferquote. Deshalb gibt es eine Referenzmenge mit Fällen, deren Antwort aus den Rohdaten bekannt ist.
+\item \textbf{Kontrolle an belegten Fällen.} Zehn Fälle mit bekannter Antwort laufen bei jedem Durchgang mit. Sie messen heute nicht mehr das Modell, sondern die Reparaturen -- das Modell kommt mit diesen Fällen gar nicht mehr in Berührung.
 \end{enumerate}
 
 \subsection{Warum die Konfidenz des Modells nicht reicht}
@@ -218,80 +229,80 @@ Lizenzfragen & Rechtliche Einordnung, nicht technische & Nutzungsbedingungen \\
 
 % ---------------------------------------------------------------------------
 \section{Ergebnisse dieses Laufs}
+\label{sec:ergebnisse}
 
 \begin{center}\small
-\begin{tabular}{lr}
+\begin{tabular}{P{7.4cm}rr}
 \toprule
-Kandidaten aus den Regeln & \statFlags \\
-\quad davon Stufe Fehler & \statFehler \\
-\quad davon Stufe Prüfen & \statPruefen \\
+ & \textbf{vor der Reparatur} & \textbf{heute} \\
 \midrule
-Modell (erster Durchgang) & \texttt{\kiModell} \\
-Modell (Eskalation) & \texttt{\kiEskModell} \\
-KI-Urteil fehler / plausibel / unklar & \kiUrteilFehler{} / \kiUrteilPlausibel{} / \kiUrteilUnklar \\
-KI bestätigt Regel-Fehler & \kiBestaetigt \\
-KI hält Regel-Fehler für plausibel & \kiWiderspricht \\
-eskaliert & \kiEskaliert \\
-automatisch entschieden & \kiAuto \\
-an Menschen weitergeleitet & \kiMensch \\
-Tokens insgesamt & \kiTokens \\
+Kandidaten aus den Regeln & \vorFlags & \statFlags \\
+\quad davon Stufe Fehler & \vorFehler & \statFehler \\
+betroffene Firmen & \vorFirmen & \statFirmenBetr \\
+automatisch entschieden & \vorAuto & \kiAuto \\
+an Menschen & \vorMensch & \kiMensch \\
+Tokens für die KI-Prüfung & 323\,000 & \kiTokens \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsection{Der erste Durchgang hatte einen Fehler -- in der Frage, nicht im Modell}
+Die drei verbliebenen Fälle für Menschen sind genau die Sorte, für die dieser Weg gedacht ist: Berkshire Hathaway (zählt eine Kraftwerksflotte außerhalb der Versorgerbranche als Stromgeschäft?), FedEx (vier von fünf Lohnverfahren nur über den Handelsnamen -- Franchise oder Konzern?) und DTE Energy (100~Mio.~USD Umweltstrafen: echter Extremwert oder Zuordnungsfehler?). Das Modell hat die übrigen sieben entschieden, davon fünf mit einer Konfidenz über 0{,}9.
 
-Im ersten Durchgang lautete die Definition: „plausibel: Der Wert ist ungewöhnlich, aber durch die Belege erklärt“. Das Modell hat sie wörtlich genommen. Bei den Nullen aus SIPNOX-Anlagen schrieb es sinngemäß: 0\,\tco{} ist plausibel, weil das Programm CO\textsubscript{2} nicht misst. Die Ursache stimmt, das Urteil ist trotzdem falsch -- die Null bleibt als Messwert unbrauchbar. So entstanden \vEinsWiderspruch{} Widersprüche zu Regel-Fehlern, und \vEinsAutoFrei{} davon wären ohne Mensch freigegeben worden, weil das Modell sich sicher war.
-
-Zwei Änderungen: Die Frage heißt jetzt ausdrücklich „Darf dieser Wert so als Messwert verrechnet werden?“, mit dem Hinweis, dass eine erklärte Ursache einen Wert nicht gültig macht. Und eine feste Regel: Widerspricht die KI einer Regel, die „Fehler“ sagt, entscheidet immer ein Mensch. Im zweiten Durchgang bleiben \vZweiWiderspruch{} Widersprüche, automatisch freigegeben werden \vZweiAutoFrei.
-
-\begin{center}\small
-\begin{tabular}{P{5.6cm}cc}
-\toprule
- & \textbf{Durchgang 1} & \textbf{Durchgang 2} \\
-\midrule
-KI-Urteil fehler / plausibel / unklar & \vEinsFehler{} / \vEinsPlausibel{} / \vEinsUnklar & \kiUrteilFehler{} / \kiUrteilPlausibel{} / \kiUrteilUnklar \\
-Widerspruch zu Regel-Fehler & \vEinsWiderspruch & \vZweiWiderspruch \\
-davon automatisch freigegeben & \vEinsAutoFrei & \vZweiAutoFrei \\
-Referenz: Urteil richtig & \vEinsRefUrteil{} von \refN & \refUrteil{} von \refN \\
-Referenz: Ursache richtig & \vEinsRefUrsache{} von \refN & \refUrsache{} von \refN \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\textbf{Der zweite Durchgang schlägt ins Gegenteil aus.} Die präzisere Frage hat die Freigaben beseitigt, aber das Modell folgt der Regel jetzt fast immer: \kiUrteilFehler{} von \statFlags{} Fällen nennt es Fehler. Darunter sind Fälle, die keine Fehler sind -- ein breites Rangband ist eine Unsicherheit, kein falscher Wert, und ein Lohnverfahren ohne Nachzahlung kann echt sein. Von 81 Fällen, die im ersten Durchgang „plausibel“ hießen, sind 64 jetzt „Fehler“. Die Referenzmenge zeigt das nicht, weil sie neun echte Fehler und nur einen echten Grenzfall enthält. Der Widerspruch zwischen Regel und KI fällt damit als Signal fast weg.
-
-\befund{\textbf{Lehre.} Die hohe Konfidenz des Modells hat den Fehler nicht angezeigt, sondern verdeckt -- genau das Muster aus der Literatur zur Überkonfidenz. Gefunden hat ihn erst der Abgleich mit der Regel. Deshalb gilt: Ein Widerspruch zwischen zwei unabhängigen Prüfern ist das wertvollste Signal für einen Menschen, und Freigaben dürfen nie allein am Modell hängen. Und: Das Belegpaket enthält die Regelmeldung. Ein Gutachter, der das Urteil der Regel sieht, ist nicht mehr unabhängig. Der nächste Schritt ist ein blinder Durchgang ohne Regeltext, dazu eine Referenzmenge mit ebenso vielen Fehlalarmen wie echten Fehlern.}
-
-\subsection{Referenzfälle (Durchgang 2)}
+\subsection{Reparatur-Kontrolle}
 
 \begin{center}\footnotesize
-\begin{longtable}{l P{3.9cm} P{1.2cm} P{2.3cm} P{3.3cm} r P{1.5cm}}
+\begin{longtable}{P{3.5cm} l P{4.6cm} P{4.2cm} l}
 \toprule
-\textbf{Firma} & \textbf{Beleg} & \textbf{erwartet} & \textbf{KI-Urteil} & \textbf{KI-Ursache} & \textbf{Konf.} & \textbf{Weg} \\
+\textbf{Ursache} & \textbf{Fall} & \textbf{Beleg aus den Rohdaten} & \textbf{Stand heute} & \textbf{behoben} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Firma} & \textbf{Beleg} & \textbf{erwartet} & \textbf{KI-Urteil} & \textbf{KI-Ursache} & \textbf{Konf.} & \textbf{Weg} \\
+\textbf{Ursache} & \textbf{Fall} & \textbf{Beleg aus den Rohdaten} & \textbf{Stand heute} & \textbf{behoben} \\
 \midrule
 \endhead
 \input{generated/tab_referenz}
 \end{longtable}
 \end{center}
 
-Zehn Fälle sind zu wenig, um eine Schwelle zu kalibrieren. Sie reichen, um grobe Fehlanreize zu sehen -- etwa ob das Modell reflexhaft der Regel folgt, ob es „unklar“ nutzt, und ob es die richtige Ursache benennt, nicht nur das richtige Urteil.
+\subsection{Drei Durchgänge mit dem Modell -- und was sie gezeigt haben}
+
+Die Zahlen der ersten beiden Durchgänge stammen aus dem Stand vor der Reparatur, als das Modell noch alle \vorFlags{} Fälle begutachtet hat.
+
+\begin{center}\small
+\begin{tabular}{P{5.2cm}ccc}
+\toprule
+ & \textbf{1: vor Reparatur} & \textbf{2: vor Reparatur} & \textbf{3: heute} \\
+\midrule
+begutachtete Fälle & 382 & 382 & \statFlags \\
+Urteil fehler / plausibel / unklar & 267 / 81 / 34 & 358 / 16 / 8 & \kiUrteilFehler{} / \kiUrteilPlausibel{} / \kiUrteilUnklar \\
+Widerspruch zu Regel-Fehler & 38 & 0 & 0 \\
+davon automatisch freigegeben & 33 & 0 & 0 \\
+an Menschen & 212 & 246 & \kiMensch \\
+Tokens & 322\,346 & 301\,086 & \kiTokens \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Durchgang 1 war zu nachgiebig.} Die Definition lautete: „plausibel: Der Wert ist ungewöhnlich, aber durch die Belege erklärt“. Das Modell nahm sie wörtlich und schrieb bei den Nullen aus SIPNOX-Anlagen sinngemäß: 0\,\tco{} ist plausibel, weil das Programm CO\textsubscript{2} nicht misst. Die Ursache stimmt, das Urteil nicht -- die Null bleibt als Messwert unbrauchbar. 33 echte Fehler wären ohne Mensch freigegeben worden, bei hoher Konfidenz.
+
+\textbf{Durchgang 2 schlug ins Gegenteil aus.} Die präzisere Frage („Darf dieser Wert so als Messwert verrechnet werden?“) beseitigte die Freigaben, aber das Modell folgte der Regel nun fast immer: 358 von 382 Fällen hießen Fehler, darunter breite Rangbänder, die nur unsicher sind. Ein Gutachter, der die Regelmeldung im Belegpaket liest, ist eben kein unabhängiger zweiter Prüfer.
+
+\textbf{Durchgang 3 ist der eigentliche Punkt.} Nicht das Modell wurde besser, sondern die Fragestellung kleiner: Was systematisch war, ist repariert; das Modell sieht nur noch, was keine Regel entscheiden kann. Es begutachtet \statFlags{} statt 382 Fälle, an Menschen gehen \kiMensch{} statt 246, und der Lauf kostet \kiTokens{} statt 322\,346 Tokens.
+
+\befund{\textbf{Lehre.} Die hohe Konfidenz des Modells hat den Fehler in Durchgang 1 nicht angezeigt, sondern verdeckt -- genau das Muster aus der Literatur zur Überkonfidenz \cite{overconf}. Gefunden hat ihn erst der Abgleich mit der Regel. Deshalb gilt weiter: Ein Widerspruch zwischen zwei Prüfern ist das wertvollste Signal für einen Menschen, und Freigaben hängen nie allein am Modell. Offen bleibt eine echte Messung der Trefferquote: Dafür braucht es eine Referenzmenge mit ebenso vielen Fehlalarmen wie echten Fehlern und ein Belegpaket ohne Regeltext.}
 
 % ---------------------------------------------------------------------------
 \section{Grenzen und nächste Schritte}
 
 \begin{itemize}
+\item Reparieren heißt auch wegnehmen. 906 Werte sind aus dem Datensatz verschwunden -- Nullen, die keine Messung waren, Raten ohne Stromgeschäft, Verfahren fremder Firmen. Eine Lücke ist ehrlicher als eine falsche Zahl, aber sie bleibt eine Lücke: Firmen ohne belastbare Werte müssen als nicht bewertbar erscheinen, nicht als sauber.
+\item Die Schwellen sind begründet, nicht kalibriert: 200 bis 4\,000 Stunden je Beschäftigtem, drei Anlagen und eine Terawattstunde, Basis zwischen 0{,}2 und 2{,}5 vom Median. Jede davon ist eine Entscheidung, die man sehen können muss -- sie stehen deshalb als benannte Konstanten im Code.
 \item Die Regeln sind so gut wie die Mechanismen, die man kennt. Neue Fehlerarten fängt zuerst nur die Statistik -- und die meldet auch echte Extreme.
-\item Die Referenzmenge ist klein und von einer Person zusammengestellt. Sie sollte aus menschlichen Entscheidungen wachsen, mit einer zweiten Person bei strittigen Fällen.
-\item Das Modell sieht nur die Belege im Paket. Wo ein Rohdaten-Auszug fehlt, kann es nur „unklar“ sagen -- das ist gewollt.
-\item Nächste Schritte in der Reihenfolge der Wirkung: fehlend statt Null in der EPA-Summierung, Programmfilter bei CAMPD, Kardinalitätstest bei ECHO, Nenner-Filter bei OSHA, Gültigkeitszeiträume und GLEIF-Beziehungen für die Zuordnung, danach die Kalibrierung der Weiterleitungsschwelle an einer größeren Referenzmenge.
+\item Zehn Kontrollfälle sind wenig, und sie stammen von einer Person. Sie sollten aus menschlichen Entscheidungen wachsen, mit einer zweiten Person bei strittigen Fällen.
+\item Die Messung der KI-Trefferquote steht damit aus: Die alten Referenzfälle prüfen jetzt die Reparatur, neue Referenzfälle entstehen erst aus dem Prüfablauf.
+\item Nächste Schritte in der Reihenfolge der Wirkung: die Konzernbeziehungen von GLEIF (CC0) für die Zuordnung statt Namensabgleich; eine historische Indexliste statt des heutigen Stands; Kardinalitätstests als Bibliothek statt einzelner Asserts; danach die Kalibrierung der Weiterleitungsschwelle an einer größeren Referenzmenge.
 \end{itemize}
 
-% ---------------------------------------------------------------------------
 \begin{thebibliography}{99}\small
 \bibitem{ecfr982} U.S. Government Publishing Office: 40 CFR 98.2 -- Who must report?, Absatz (i). \url{https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-98/subpart-A/section-98.2}
 \bibitem{camdguide} U.S. EPA, Clean Air Markets Division: CAMD's Power Sector Emissions Data Guide, Juli 2022. \url{https://www.epa.gov/system/files/documents/2022-07/CAMD's\%20Power\%20Sector\%20Emissions\%20Data\%20Guide\%20-\%2007182022.pdf}

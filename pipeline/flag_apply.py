@@ -33,8 +33,17 @@ def status_of(row: pd.Series) -> str:
         return "fehler"
     if decision in ("ok", "behalten", "plausibel"):
         return "ok"
-    if row.get("route") == "automatisch" and row.get("ai_verdict") == "plausibel":
-        return "ok"
+    # Automatisch entschiedene Fälle folgen dem Vorschlag des Modells: Das ist
+    # der Sinn der Weiterleitung. Alles Strittige ist vorher zu einem Menschen
+    # gegangen, und jede Entscheidung lässt sich über entscheidungen.csv
+    # zurücknehmen.
+    if row.get("route") == "automatisch":
+        aktion = str(row.get("ai_action", "") or "").strip().lower()
+        if aktion in ("unterdruecken", "korrigieren"):
+            return "fehler"
+        if aktion == "behalten":
+            return "ok"
+        return "pruefen"
     return str(row.get("severity", "pruefen"))
 
 

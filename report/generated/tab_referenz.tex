@@ -1,11 +1,11 @@
-GOOGL & GOOG und GOOGL teilen CIK 1652044 & fehler & fehler (ja) & doppelzaehlung (ja) & 0.92 & automatisch \\
-KHC & 4 Anlagen gemeldet, keine Emissionszeile mit Menge & fehler & fehler (ja) & null\_\allowbreak{}statt\_\allowbreak{}fehlend (ja) & 0.93 & mensch \\
-MPC & Programm SIPNOX, CO2 nicht meldepflichtig & fehler & fehler (ja) & programm\_\allowbreak{}misst\_\allowbreak{}groesse\_\allowbreak{}nicht (ja) & 0.93 & automatisch \\
-TSLA & 1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen durch 2 Namensschreibweisen & fehler & fehler (ja) & doppelzaehlung (ja) & 0.98 & mensch \\
-BRK-B & Berkshire Hathaway Energy betreibt echte Versorger; nur GICS sagt Financials & plausibel & plausibel (ja) & branchenstruktur\_\allowbreak{}real (ja) & 0.78 & automatisch \\
-GE & 4,44 t/MWh, ein Heizkraftwerk, physikalisch unmöglich als Stromrate & fehler & fehler (ja) & programm\_\allowbreak{}misst\_\allowbreak{}groesse\_\allowbreak{}nicht (\textbf{nein}) & 0.89 & mensch \\
-PPL & 2018 1 Anlage 5 kt, ab 2019 9 Anlagen 28 Mt & fehler & fehler (ja) & meldefehler\_\allowbreak{}quelle (\textbf{nein}) & 0.87 & mensch \\
-VST & Talen Energy ist nicht Teil von Vistra & fehler & fehler (ja) & zuordnung\_\allowbreak{}falsch (ja) & 0.95 & mensch \\
-MCD & 4 Meldungen, Median 50 h je Beschäftigtem & fehler & fehler (ja) & definition\_\allowbreak{}oder\_\allowbreak{}einheit (\textbf{nein}) & 0.94 & mensch \\
-APD & 0 Rohfälle für Air Products, 15 Fälle 'APDC Cleaning Services' & fehler & fehler (ja) & zuordnung\_\allowbreak{}falsch (ja) & 0.96 & automatisch \\
+Null statt fehlend & KHC & EPA fuehrt 4 Anlagen, meldet 2022 keine Menge & 2022 ohne Wert statt 0 t & ja \\
+Programm misst CO2 nicht & MPC & Anlagen melden nur in SIPNOX (Waerme und NOx) & keine CO2-Menge statt 0 t & ja \\
+Join vervielfacht & TSLA & 1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen & 12 Quartale statt 24 & ja \\
+Stromrate ohne Stromgeschaeft & GE & 4,44 t/MWh aus einem Heizkraftwerk & keine Rate mehr & ja \\
+Stromrate trotz falscher Branchenkennung & BRK-B & 113 Kraftwerke, 83 TWh -- GICS sagt Financials & Rate bleibt: 0.68 t/MWh & ja \\
+Nenner unbrauchbar & MCD & 4 Meldungen mit im Median 50 h je Beschaeftigtem & keine Unfallrate auf falschem Nenner & ja \\
+Zuordnung ueber Namensteile & APD & 0 Rohfaelle, 15 Faelle 'APDC Cleaning Services' & keine Lohnverfahren mehr zugerechnet & ja \\
+Basisjahr unvollstaendig & PPL & 2018 eine Anlage 5 kt, ab 2019 neun Anlagen 28 Mt & 2018 entfernt, Trend wieder lesbar & ja \\
+Zuordnung ohne Zeitraum & VST & Talen Energy gehoert nicht zu Vistra & 2023: 86.3 Mt statt 96,8 & ja \\
+Aktiengattung doppelt & GOOG & GOOG und GOOGL teilen CIK 1652044 & nur noch GOOGL im Bestand & ja \\
 \bottomrule%

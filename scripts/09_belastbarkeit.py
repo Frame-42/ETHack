@@ -9,6 +9,7 @@ und kopiert beides in die Web-App (public/data und public/downloads).
 from __future__ import annotations
 
 import json
+import math
 import shutil
 import sys
 from collections import Counter
@@ -26,6 +27,17 @@ def tex(s: str) -> str:
     for a, b in {"&": r"\&", "%": r"\%", "_": r"\_", "#": r"\#", "≥": r"$\geq$"}.items():
         s = s.replace(a, b)
     return s
+
+
+def sauber(x):
+    """NaN und Inf durch None ersetzen, rekursiv."""
+    if isinstance(x, dict):
+        return {k: sauber(v) for k, v in x.items()}
+    if isinstance(x, list):
+        return [sauber(v) for v in x]
+    if isinstance(x, float) and not math.isfinite(x):
+        return None
+    return x
 
 
 def main() -> None:
@@ -122,7 +134,9 @@ def main() -> None:
         ].to_dict("records"),
     }
     (OUT / "belastbarkeit.json").write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False, default=lambda x: None), encoding="utf-8"
+        # NaN ist in JSON kein gueltiger Wert -- der Browser bricht daran ab.
+        json.dumps(sauber(payload), indent=2, ensure_ascii=False, default=lambda x: None),
+        encoding="utf-8",
     )
 
     # --------------------------------------------------- Katalog-Tabelle

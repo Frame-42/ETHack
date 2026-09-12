@@ -3,9 +3,9 @@
   "rohtabellen": 24,
   "rohzeilen": 9882445,
   "roh_mb": 255.5,
-  "werte": 11798,
-  "firmen": 503,
-  "kennzahlen": 45,
+  "werte": 11794,
+  "firmen": 500,
+  "kennzahlen": 50,
   "jahre": [
     2018,
     2026
@@ -14,5 +14,11 @@
     "EPA Clean Air Markets Program Data",
     "EIA Formular 923 (via PUDL und API)"
   ],
-  "nicht_gruppiert": []
+  "nicht_gruppiert": [
+    "rank_band_width",
+    "sbti_near_term_expired",
+    "sbti_net_zero_removed",
+    "whd_penalties_usd",
+    "whd_violations"
+  ]
 }

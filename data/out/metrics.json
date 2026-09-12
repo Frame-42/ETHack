@@ -139,6 +139,13 @@
     "axis": "G",
     "source_id": "epa_echo"
   },
+  "rank_band_width": {
+    "label": "Breite des Rangbands",
+    "unit": "Perzentilpunkte",
+    "direction": 0,
+    "axis": "meta",
+    "source_id": "epa_ghgrp"
+  },
   "sbti_validated": {
     "label": "SBTi-geprueftes Ziel",
     "unit": "ja/nein",
@@ -161,7 +168,21 @@
     "source_id": "sbti"
   },
   "sbti_commitment_removed": {
-    "label": "Zusage zurueckgezogen",
+    "label": "Nahziel-Zusage zurueckgezogen",
+    "unit": "ja/nein",
+    "direction": -1,
+    "axis": "B",
+    "source_id": "sbti"
+  },
+  "sbti_net_zero_removed": {
+    "label": "Netto-null-Zusage zurueckgezogen",
+    "unit": "ja/nein",
+    "direction": -1,
+    "axis": "B",
+    "source_id": "sbti"
+  },
+  "sbti_near_term_expired": {
+    "label": "Zwischenziel abgelaufen",
     "unit": "ja/nein",
     "direction": -1,
     "axis": "B",
@@ -268,6 +289,20 @@
   "whd_employees": {
     "label": "betroffene Beschaeftigte",
     "unit": "Anzahl",
+    "direction": -1,
+    "axis": "S",
+    "source_id": "dol_whd"
+  },
+  "whd_violations": {
+    "label": "festgestellte Verstoesse",
+    "unit": "Anzahl",
+    "direction": -1,
+    "axis": "S",
+    "source_id": "dol_whd"
+  },
+  "whd_penalties_usd": {
+    "label": "Geldbussen Lohnrecht",
+    "unit": "USD",
     "direction": -1,
     "axis": "S",
     "source_id": "dol_whd"

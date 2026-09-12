@@ -1,190 +1,107 @@
 {
-  "flags": 382,
-  "fehler": 239,
-  "pruefen": 143,
-  "je_regel": {
-    "F01_doppelte_cik": 3,
-    "F02_null_statt_fehlend": 83,
-    "F03_campd_programm_ohne_co2": 99,
-    "F04_echo_quartale_unmoeglich": 2,
-    "F05_egrid_physik": 1,
-    "F06_egrid_nicht_versorger": 23,
-    "F07_trend_basis_instabil": 7,
-    "F08_zuordnung_zeitlich": 20,
-    "F09_osha_nenner_unplausibel": 4,
-    "F10_whd_zuordnung": 35,
-    "F11_whd_ohne_befund": 69,
-    "F12_sbti_zieltyp": 25,
-    "F13_sbti_abgelaufen": 4,
-    "P01_branchenextrem": 1,
-    "P02_rangband_ohne_aussage": 6
-  },
-  "firmen_betroffen": 176,
-  "ranking_relevant": 106,
-  "referenz_faelle": [
+  "flags": 10,
+  "reparaturen": [
     {
-      "regel": "F01_doppelte_cik",
-      "ticker": "GOOGL",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "doppelzaehlung",
-      "ki_ursache": "doppelzaehlung",
-      "ursache_richtig": true,
-      "konfidenz": 0.92,
-      "route": "automatisch",
-      "beleg": "GOOG und GOOGL teilen CIK 1652044"
-    },
-    {
-      "regel": "F02_null_statt_fehlend",
+      "thema": "Null statt fehlend",
       "ticker": "KHC",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "null_statt_fehlend",
-      "ki_ursache": "null_statt_fehlend",
-      "ursache_richtig": true,
-      "konfidenz": 0.93,
-      "route": "mensch",
-      "beleg": "4 Anlagen gemeldet, keine Emissionszeile mit Menge"
+      "beleg": "EPA fuehrt 4 Anlagen, meldet 2022 keine Menge",
+      "behoben": true,
+      "befund": "2022 ohne Wert statt 0 t"
     },
     {
-      "regel": "F03_campd_programm_ohne_co2",
+      "thema": "Programm misst CO2 nicht",
       "ticker": "MPC",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "programm_misst_groesse_nicht",
-      "ki_ursache": "programm_misst_groesse_nicht",
-      "ursache_richtig": true,
-      "konfidenz": 0.93,
-      "route": "automatisch",
-      "beleg": "Programm SIPNOX, CO2 nicht meldepflichtig"
+      "beleg": "Anlagen melden nur in SIPNOX (Waerme und NOx)",
+      "behoben": true,
+      "befund": "keine CO2-Menge statt 0 t"
     },
     {
-      "regel": "F04_echo_quartale_unmoeglich",
+      "thema": "Join vervielfacht",
       "ticker": "TSLA",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "doppelzaehlung",
-      "ki_ursache": "doppelzaehlung",
-      "ursache_richtig": true,
-      "konfidenz": 0.98,
-      "route": "mensch",
-      "beleg": "1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen durch 2 Namensschreibweisen"
+      "beleg": "1 Anlage, Historie SSSSSSSSSSSS, 2 Join-Zeilen",
+      "behoben": true,
+      "befund": "12 Quartale statt 24"
     },
     {
-      "regel": "F06_egrid_nicht_versorger",
-      "ticker": "BRK-B",
-      "erwartet": "plausibel",
-      "ki_urteil": "plausibel",
-      "urteil_richtig": true,
-      "erwartete_ursache": "branchenstruktur_real",
-      "ki_ursache": "branchenstruktur_real",
-      "ursache_richtig": true,
-      "konfidenz": 0.78,
-      "route": "automatisch",
-      "beleg": "Berkshire Hathaway Energy betreibt echte Versorger; nur GICS sagt Financials"
-    },
-    {
-      "regel": "F05_egrid_physik",
+      "thema": "Stromrate ohne Stromgeschaeft",
       "ticker": "GE",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "definition_oder_einheit",
-      "ki_ursache": "programm_misst_groesse_nicht",
-      "ursache_richtig": false,
-      "konfidenz": 0.89,
-      "route": "mensch",
-      "beleg": "4,44 t/MWh, ein Heizkraftwerk, physikalisch unmöglich als Stromrate"
+      "beleg": "4,44 t/MWh aus einem Heizkraftwerk",
+      "behoben": true,
+      "befund": "keine Rate mehr"
     },
     {
-      "regel": "F07_trend_basis_instabil",
-      "ticker": "PPL",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "zuordnung_falsch",
-      "ki_ursache": "meldefehler_quelle",
-      "ursache_richtig": false,
-      "konfidenz": 0.87,
-      "route": "mensch",
-      "beleg": "2018 1 Anlage 5 kt, ab 2019 9 Anlagen 28 Mt"
+      "thema": "Stromrate trotz falscher Branchenkennung",
+      "ticker": "BRK-B",
+      "beleg": "113 Kraftwerke, 83 TWh -- GICS sagt Financials",
+      "behoben": true,
+      "befund": "Rate bleibt: 0.68 t/MWh"
     },
     {
-      "regel": "F08_zuordnung_zeitlich",
-      "ticker": "VST",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "zuordnung_falsch",
-      "ki_ursache": "zuordnung_falsch",
-      "ursache_richtig": true,
-      "konfidenz": 0.95,
-      "route": "mensch",
-      "beleg": "Talen Energy ist nicht Teil von Vistra"
-    },
-    {
-      "regel": "F09_osha_nenner_unplausibel",
+      "thema": "Nenner unbrauchbar",
       "ticker": "MCD",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "meldefehler_quelle",
-      "ki_ursache": "definition_oder_einheit",
-      "ursache_richtig": false,
-      "konfidenz": 0.94,
-      "route": "mensch",
-      "beleg": "4 Meldungen, Median 50 h je Beschäftigtem"
+      "beleg": "4 Meldungen mit im Median 50 h je Beschaeftigtem",
+      "behoben": true,
+      "befund": "keine Unfallrate auf falschem Nenner"
     },
     {
-      "regel": "F10_whd_zuordnung",
+      "thema": "Zuordnung ueber Namensteile",
       "ticker": "APD",
-      "erwartet": "fehler",
-      "ki_urteil": "fehler",
-      "urteil_richtig": true,
-      "erwartete_ursache": "zuordnung_falsch",
-      "ki_ursache": "zuordnung_falsch",
-      "ursache_richtig": true,
-      "konfidenz": 0.96,
-      "route": "automatisch",
-      "beleg": "0 Rohfälle für Air Products, 15 Fälle 'APDC Cleaning Services'"
+      "beleg": "0 Rohfaelle, 15 Faelle 'APDC Cleaning Services'",
+      "behoben": true,
+      "befund": "keine Lohnverfahren mehr zugerechnet"
+    },
+    {
+      "thema": "Basisjahr unvollstaendig",
+      "ticker": "PPL",
+      "beleg": "2018 eine Anlage 5 kt, ab 2019 neun Anlagen 28 Mt",
+      "behoben": true,
+      "befund": "2018 entfernt, Trend wieder lesbar"
+    },
+    {
+      "thema": "Zuordnung ohne Zeitraum",
+      "ticker": "VST",
+      "beleg": "Talen Energy gehoert nicht zu Vistra",
+      "behoben": true,
+      "befund": "2023: 86.3 Mt statt 96,8"
+    },
+    {
+      "thema": "Aktiengattung doppelt",
+      "ticker": "GOOG",
+      "beleg": "GOOG und GOOGL teilen CIK 1652044",
+      "behoben": true,
+      "befund": "nur noch GOOGL im Bestand"
     }
   ],
+  "reparaturen_behoben": 10,
+  "fehler": 0,
+  "pruefen": 10,
+  "je_regel": {
+    "F06_egrid_nicht_versorger": 2,
+    "F10_whd_franchise": 7,
+    "P01_branchenextrem": 1
+  },
+  "firmen_betroffen": 10,
+  "ranking_relevant": 0,
   "ki": {
     "modell": "gpt-5.4-mini",
     "eskalation": "gpt-5.5",
     "urteile": {
-      "fehler": 358,
-      "plausibel": 16,
-      "unklar": 8
+      "fehler": 8,
+      "plausibel": 1,
+      "unklar": 1
     },
     "ursachen": {
-      "programm_misst_groesse_nicht": 125,
-      "zuordnung_falsch": 123,
-      "null_statt_fehlend": 64,
-      "definition_oder_einheit": 18,
-      "konzernumbau_zeitlich": 17,
-      "branchenstruktur_real": 16,
-      "sonstiges": 11,
-      "doppelzaehlung": 4,
-      "meldefehler_quelle": 3,
-      "echter_extremwert": 1
+      "zuordnung_falsch": 7,
+      "branchenstruktur_real": 2,
+      "sonstiges": 1
     },
     "routen": {
-      "mensch": 246,
-      "automatisch": 136
+      "automatisch": 7,
+      "mensch": 3
     },
-    "eskaliert": 23,
-    "regel_bestaetigt_fehler": 239,
+    "eskaliert": 1,
+    "regel_bestaetigt_fehler": 0,
     "regel_widersprochen_fehler": 0,
-    "tokens_gesamt": 301086,
-    "referenz": {
-      "faelle": 10,
-      "urteil_richtig": 10,
-      "ursache_richtig": 7
-    }
+    "tokens_gesamt": 8221
   }
 }
