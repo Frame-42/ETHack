@@ -8,7 +8,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline.sources import base
-from pipeline.sources import epa_ghgrp, esg_snapshot, sec_revenue, sp500  # noqa: F401
+from pipeline.sources import (  # noqa: F401
+    eia_generation, epa_campd, epa_echo, epa_ghgrp, epa_tri, esg_snapshot,
+    osha_ita, sbti, sec_revenue, sp500,
+)
 
 
 def main(only: list[str] | None = None, force: bool = False) -> None:

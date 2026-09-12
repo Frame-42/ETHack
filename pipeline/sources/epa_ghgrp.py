@@ -84,6 +84,9 @@ class EpaFacilitySource(DataSource):
             "city",
             "facility_types",
             "cems_used",
+            # FRS-Kennung: der Schluessel, ueber den sich ECHO- und
+            # TRI-Anlagen ohne Namensabgleich anhaengen lassen.
+            "frs_id",
         ]
         df = _fetch_table("PUB_DIM_FACILITY", keep)
         return df.drop_duplicates(["facility_id", "year"]).reset_index(drop=True)

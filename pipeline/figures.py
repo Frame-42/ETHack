@@ -431,3 +431,60 @@ def fig_datenart(stats: dict, n_total: int) -> str:
         ax.spines[side].set_visible(False)
     ax.spines["bottom"].set_color(GRID)
     return _save(fig, "datenart")
+
+
+def fig_dimensionen(dim: pd.DataFrame) -> str:
+    """Abdeckung und Unabhaengigkeit der vier neuen Dimensionen."""
+    d = dim.sort_values("indexfirmen")
+    fig, (ax1, ax2) = plt.subplots(
+        1, 2, figsize=(6.1, 2.9), gridspec_kw={"width_ratios": [1.35, 1]}
+    )
+    y = np.arange(len(d))
+    ax1.barh(y, d["indexfirmen"], height=0.5, color=C1, zorder=3, label="erreichte Firmen")
+    ax1.barh(y, d["neu"], height=0.5, color=C3, zorder=4, label="davon neu")
+    for i, (tot, neu) in enumerate(zip(d["indexfirmen"], d["neu"])):
+        ax1.text(tot + 6, i, f"{tot}", va="center", fontsize=7.5, color=INK_SOFT)
+    ax1.set_yticks(y)
+    ax1.set_yticklabels(d["quelle"], fontsize=8)
+    ax1.set_xlim(0, 380)
+    ax1.set_xlabel("Indexfirmen")
+    ax1.set_title("Reichweite")
+    ax1.legend(fontsize=7, loc="lower right")
+    _clean(ax1)
+
+    absr = d["rho_zu_co2"].abs()
+    colors = [C3 if v < 0.3 else C4 for v in absr]
+    ax2.barh(y, absr, height=0.5, color=colors, zorder=3)
+    for i, (v, raw) in enumerate(zip(absr, d["rho_zu_co2"])):
+        ax2.text(v + 0.015, i, f"{raw:+.2f}", va="center", fontsize=7.5, color=INK_SOFT)
+    ax2.axvline(0.3, color=INK_SOFT, linewidth=0.9, linestyle="--", zorder=4)
+    ax2.set_yticks(y)
+    ax2.set_yticklabels([])
+    ax2.set_xlim(0, 0.72)
+    ax2.set_xlabel("|Rangkorrelation| zur CO$_2$-Intensitaet")
+    ax2.set_title("Unabhaengigkeit")
+    _clean(ax2)
+    fig.subplots_adjust(wspace=0.12)
+    return _save(fig, "neue_dimensionen")
+
+
+def fig_dimension_abdeckung(cov: pd.DataFrame) -> str:
+    """Sektorabdeckung vor und nach den neuen Dimensionen."""
+    d = cov.sort_values("pct_neu")
+    y = np.arange(len(d))
+    fig, ax = plt.subplots(figsize=(5.8, 3.6))
+    ax.barh(y + 0.19, d["pct_neu"], height=0.36, color=C3, zorder=3,
+            label="mit neuen Dimensionen")
+    ax.barh(y - 0.19, d["pct_heute"], height=0.36, color=C1, zorder=3,
+            label="nur Emissionsdaten")
+    for i, (a, b) in enumerate(zip(d["pct_heute"], d["pct_neu"])):
+        ax.text(b + 1.5, i + 0.19, f"{b:.0f}", va="center", fontsize=7, color=INK_SOFT)
+        ax.text(a + 1.5, i - 0.19, f"{a:.0f}", va="center", fontsize=7, color=INK_SOFT)
+    ax.set_yticks(y)
+    ax.set_yticklabels(d["gics_sector"], fontsize=8)
+    ax.set_xlim(0, 112)
+    ax.set_xlabel("Anteil der Firmen mit mindestens einer Kennzahl (%)")
+    ax.set_title("Nur die Finanzbranche bleibt weitgehend blind")
+    ax.legend(loc="lower right", fontsize=7.5)
+    _clean(ax)
+    return _save(fig, "dimension_abdeckung")
