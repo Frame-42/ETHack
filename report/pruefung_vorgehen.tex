@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setmonofont{lmmono10-regular.otf}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref}
+\definecolor{navy}{HTML}{12334A}
+\definecolor{teal}{HTML}{146B75}
+\definecolor{softgrey}{HTML}{F1F3F5}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal,pdftitle={Prüfung: Vorgehen},pdfauthor={ETHack 2026}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{itemsep=2pt,topsep=3pt,leftmargin=*}
+\renewcommand{\arraystretch}{1.15}
+\newcommand{\infobox}[1]{\par\noindent\colorbox{softgrey}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep}\small\vspace{3pt}#1\vspace{3pt}\end{minipage}}\par}
+\input{generated/pruefung_stats}
+
+\begin{document}
+{\LARGE\bfseries\color{navy} Prüfung: Was gemacht wurde}\\[2mm]
+{\large Vorgehen, Werkzeuge und Bedienung des Tabs „Prüfung“}\\[1mm]
+{\small ETHack 2026 · Stand 13.~September 2026\\ Details und Quellen im Ursachenbericht \texttt{qualitaetspruefung.pdf}}
+
+\vspace{4mm}
+\infobox{\textbf{Kurz.} Der Datensatz enthielt unglaubwürdige Werte. Wir haben jede Auffälligkeit auf ihre Ursache zurückgeführt, daraus \statFlags{} Prüffälle mit Regeln erzeugt, jeden Fall von einem Sprachmodell mit Belegen begutachten lassen und eine feste Regel festgelegt, wann ein Mensch entscheidet. Fehlerhafte Werte bleiben im Datensatz, tragen aber einen Status und erscheinen nicht mehr in der Firmenansicht.}
+
+\section*{1\quad Ursachen finden}
+Ausgangspunkt war der Verbesserungsbericht des Teams. Jede Vermutung wurde an den Rohdaten nachgesehen und, wo es um die Bedeutung eines Feldes ging, an der Dokumentation der Quelle belegt (EPA-Meldeverordnung, CAMD-Datenleitfaden, OSHA-ITA-Leitfaden, ECHO-Feldbeschreibung, SBTi-Statusdefinitionen). Ergebnis: sieben Mechanismen, fast alle an der Nahtstelle zwischen Quelle und Pipeline -- nicht in den Quellen selbst. Zwei Diagnosen des Verbesserungsberichts wurden korrigiert (CAMPD-Nullen, ECHO-Werte über 12).
+
+\section*{2\quad Regeln schreiben}
+Aus jedem Mechanismus wurde eine Regel in \texttt{pipeline/quality.py}. Jede Regel erzeugt Fälle mit Stufe (\emph{fehler} oder \emph{prüfen}), Wirkung in Tonnen, Rankingrelevanz und einem Belegpaket.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{l X r}
+\toprule
+\textbf{Ergebnis} & & \textbf{Anzahl} \\
+\midrule
+Fälle gesamt & aus 15 Regeln & \statFlags \\
+Stufe fehler & nachweislich falsch, wird nicht verrechnet & \statFehler \\
+Stufe prüfen & auffällig, braucht weiteren Beleg & \statPruefen \\
+betroffene Firmen & & \statFirmenBetr \\
+rankingrelevante Fälle & Firma steht im Umwelt-Ranking & \statRankRel \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{3\quad KI-Gutachten}
+\texttt{pipeline/ai\_review.py} schickt jedes Belegpaket an \texttt{\kiModell}. Die Antwort hat eine feste Form: Urteil (fehler, plausibel, unklar), Ursache aus einer festen Liste, Vorschlag, Konfidenz, Bedarf an einem Menschen. Das Modell darf keine Firmenzahlen aus dem Gedächtnis ergänzen. Unsichere Antworten gehen an \texttt{\kiEskModell}. Alle Antworten liegen im Zwischenspeicher, ein zweiter Lauf ist kostenlos und liefert dasselbe.
+
+Gemessen wird das Modell an zehn Referenzfällen, deren richtige Antwort aus den Rohdaten belegt ist: \refUrteil{} von \refN{} Urteilen und \refUrsache{} von \refN{} Ursachen richtig.
+
+\infobox{\textbf{Was schiefging und behoben wurde.} Im ersten Durchgang hielt das Modell erklärbare Fehler für „plausibel“ -- \vEinsAutoFrei{} echte Fehler wären automatisch freigegeben worden. Die Frage wurde präzisiert, und eine feste Regel schickt jeden Widerspruch zwischen Regel und KI an einen Menschen. Im zweiten Durchgang folgt das Modell der Regel dafür fast immer. Deshalb entscheidet über Freigaben nie das Modell allein.}
+
+\section*{4\quad Weiterleitung}
+\begin{itemize}
+\item \textbf{an Menschen}: KI unsicher auch nach Eskalation; KI widerspricht einer Fehler-Regel; KI verlangt Rohdaten- oder Dokumentenzugang; Unterdrücken oder Korrigieren bei Wirkung ab 1\,Mt oder Rankingrelevanz.
+\item \textbf{automatisch}: alle übrigen Fälle. Der Status folgt dann der Regel; nur wenn die KI sicher „plausibel“ sagt und keine Fehler-Regel widerspricht, wird der Wert freigegeben.
+\end{itemize}
+Dieser Lauf: \kiAuto{} automatisch, \kiMensch{} an Menschen, \kiEskaliert{} eskaliert.
+
+\section*{5\quad Mensch entscheidet im Datenbrowser}
+\begin{enumerate}
+\item Tab \textbf{Prüfung} öffnen, oben den eigenen Namen eintragen (bleibt im Browser gespeichert).
+\item Filter steht auf \emph{an Menschen} und \emph{offen}. Sortiert ist nach Rankingrelevanz, dann Wirkung in Tonnen, dann Unsicherheit der KI.
+\item Fall aufklappen, Regelmeldung, KI-Begründung und Belege lesen.
+\item Einen Satz Begründung schreiben und einen Knopf drücken:
+  \begin{itemize}
+  \item \textbf{Fehler bestätigen} -- der Wert wird nicht verrechnet.
+  \item \textbf{Korrektur nötig} -- der Wert ist falsch, Quelle oder Zuordnung muss angepasst werden; bis dahin wird er nicht verrechnet.
+  \item \textbf{Wert ist ok} -- Fehlalarm, der Wert bleibt.
+  \end{itemize}
+\item Die Entscheidung wird sofort auf dem Server gespeichert und lässt sich zurücknehmen. Über \emph{Entscheidungen als CSV} lässt sie sich jederzeit herunterladen.
+\end{enumerate}
+
+\section*{6\quad Entscheidungen zurück in den Datensatz}
+\begin{center}\small
+\begin{tabularx}{\textwidth}{P{6.2cm} X}
+\toprule
+\textbf{Befehl} & \textbf{Wirkung} \\
+\midrule
+\texttt{scripts/entscheidungen\_holen.sh} & holt die Entscheidungen vom Server nach \texttt{data/review/entscheidungen.csv} \\
+\texttt{python scripts/10\_pruefung.py --ai} & Regeln und KI neu, menschliche Entscheidungen haben Vorrang \\
+\texttt{python scripts/07\_dataset.py} & schreibt \texttt{quality\_status} je Wert in den Datensatz \\
+Web bauen und deployen & Firmenansicht ohne Fehlerwerte, Chip „prüfen“ an fraglichen Werten \\
+\bottomrule
+\end{tabularx}
+\end{center}
+Jede Entscheidung ist ein neuer Referenzfall für die Messung der KI; wiederkehrende Entscheidungen sind Kandidaten für neue Regeln.
+
+\section*{7\quad Dateien}
+\begin{center}\small
+\begin{tabularx}{\textwidth}{P{5.6cm} X}
+\toprule
+\texttt{pipeline/quality.py} & 15 Prüfregeln und Belegpakete \\
+\texttt{pipeline/ai\_review.py} & KI-Gutachten, Schema, Zwischenspeicher, Weiterleitung \\
+\texttt{pipeline/flag\_apply.py} & Status je Wert im Datensatz \\
+\texttt{scripts/10\_pruefung.py} & Lauf, Referenzmessung, Berichtstabellen \\
+\texttt{web/app/pruefung/} & Tab mit Warteschlange und Entscheidungsknöpfen \\
+\texttt{web/app/api/entscheidungen/} & Speichern, Zurücknehmen, CSV-Export \\
+\texttt{data/out/flags\_gepruft.csv} & alle Fälle mit KI-Urteil und Weg \\
+\texttt{report/qualitaetspruefung.pdf} & Ursachen, Belege, Verbesserungen, Literatur \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{document}

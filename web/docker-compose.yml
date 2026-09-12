@@ -7,4 +7,9 @@ services:
     container_name: ethack-databrowser
     ports:
       - "3810:3000"
+    # Menschliche Entscheidungen aus dem Tab Prüfung überleben Neubauten.
+    environment:
+      DECISIONS_FILE: /review/entscheidungen.csv
+    volumes:
+      - ./review:/review
     restart: unless-stopped

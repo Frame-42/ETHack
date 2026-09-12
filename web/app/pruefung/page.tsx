@@ -66,11 +66,17 @@ export default async function Page() {
         folgenreiche oder korrigierende Fälle gehen an einen Menschen.
       </p>
 
+      <div className="docs">
+        <a className="btn primary" href="/downloads/pruefung_vorgehen.pdf" download="ETHack-Pruefung-Vorgehen.pdf">Vorgehen als PDF ↓</a>
+        <a className="btn" href="/downloads/qualitaetspruefung.pdf" download="ETHack-Qualitaetspruefung.pdf">Ursachenbericht als PDF ↓</a>
+        <a className="btn ghost" href="/downloads/flags_gepruft.csv" download>Alle Fälle als CSV ↓</a>
+      </div>
+
       <div className="pipeline" aria-label="Prüfablauf">
         <div className="step"><span className="n">1</span><b>Regeln</b><span>{de(s.flags)} Kandidaten, {de(s.fehler)} Fehler, {de(s.pruefen)} zu prüfen</span></div>
         <div className="step"><span className="n">2</span><b>KI-Gutachten</b><span>{ki ? `${ki.modell}, unsichere Fälle an ${ki.eskalation}` : "nicht gelaufen"}</span></div>
         <div className="step"><span className="n">3</span><b>Weiterleitung</b><span>{ki ? `${de(ki.routen.automatisch ?? 0)} automatisch, ${de(ki.routen.mensch ?? 0)} an Menschen` : "–"}</span></div>
-        <div className="step"><span className="n">4</span><b>Mensch</b><span>Entscheidung in data/review/entscheidungen.csv, hat Vorrang</span></div>
+        <div className="step"><span className="n">4</span><b>Mensch</b><span>Entscheidet per Knopf an jedem Fall, hat beim nächsten Lauf Vorrang</span></div>
       </div>
 
       {ki && (
@@ -135,12 +141,14 @@ export default async function Page() {
       <Review flags={flags} />
 
       <div className="note">
-        <b>So entscheidet ein Mensch.</b> Eine Zeile in{" "}
-        <code>data/review/entscheidungen.csv</code> mit <code>flag_id</code>,{" "}
-        <code>entscheidung</code> (fehler, ok, korrigieren), Name, Datum und
-        einem Satz Begründung. Beim nächsten Lauf von{" "}
-        <code>scripts/10_pruefung.py</code> hat diese Entscheidung Vorrang vor
-        Regel und KI und fließt mit Namen in den Datensatz.
+        <b>So entscheidet ein Mensch.</b> Namen eintragen, Fall aufklappen,
+        Belege lesen, einen Satz Begründung schreiben und einen der drei Knöpfe
+        drücken: <i>Fehler bestätigen</i>, <i>Korrektur nötig</i> oder{" "}
+        <i>Wert ist ok</i>. Die Entscheidung wird sofort gespeichert und lässt
+        sich zurücknehmen. <code>scripts/entscheidungen_holen.sh</code> holt
+        sie nach <code>data/review/entscheidungen.csv</code>; beim nächsten Lauf
+        von <code>scripts/10_pruefung.py</code> hat sie Vorrang vor Regel und KI
+        und fließt mit Namen in den Datensatz.
       </div>
 
       <footer>
