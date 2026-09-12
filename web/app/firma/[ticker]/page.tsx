@@ -4,7 +4,9 @@ import { AXES, fmt, getDataset } from "@/lib/data";
 
 export async function generateStaticParams() {
   const data = await getDataset();
-  return data.companies.map((c) => ({ ticker: c.ticker }));
+  return [...data.companies, ...data.withoutData].map((c) => ({
+    ticker: c.ticker,
+  }));
 }
 
 export default async function Page({
@@ -15,7 +17,33 @@ export default async function Page({
   const { ticker } = await params;
   const data = await getDataset();
   const c = data.companies.find((x) => x.ticker === ticker);
-  if (!c) notFound();
+  if (!c) {
+    const empty = data.withoutData.find((x) => x.ticker === ticker);
+    if (!empty) notFound();
+    return (
+      <main>
+        <p className="back">
+          <Link href="/">← alle Firmen</Link>
+        </p>
+        <p className="eyebrow">
+          {empty.ticker} · {empty.sector}
+        </p>
+        <h1>{empty.company}</h1>
+        <div className="note">
+          <b>Zu dieser Firma liegt kein einziger Wert vor.</b> Keine der{" "}
+          {Object.keys(data.sources).length} Quellen liefert etwas: keine
+          meldepflichtigen Anlagen bei der EPA, kein Eintrag bei SBTi, keine
+          zuordenbaren OSHA-Meldungen. Das ist typisch für Finanzdienstleister,
+          deren Fußabdruck in finanzierten Emissionen liegt, also in Scope 3.
+          Die Firma ist deshalb als nicht bewertbar gelistet, nicht mit null.
+        </div>
+        <footer>
+          <span>Stand {data.generatedAt}</span>
+          <span>{empty.ticker}</span>
+        </footer>
+      </main>
+    );
+  }
 
   const byAxis = new Map<string, typeof c.metrics>();
   for (const m of c.metrics) {

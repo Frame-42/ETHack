@@ -116,8 +116,10 @@ export default function Browser({
                   <Link href={`/firma/${r.ticker}`}>{r.company}</Link>
                 </td>
                 <td className="dim">{r.sector}</td>
-                <td className="num">{r.n}</td>
-                <td className="num">{r.sources}</td>
+                <td className="num">
+                  {r.n === 0 ? <span className="chip">keine Daten</span> : r.n}
+                </td>
+                <td className="num">{r.n === 0 ? "–" : r.sources}</td>
                 <td className="num mono">
                   {r.band
                     ? `${Math.round(r.band[0])}–${Math.round(r.band[1])}`
@@ -142,8 +144,8 @@ export default function Browser({
 
       {shown.length === 0 && (
         <div className="note">
-          Kein Treffer. Beachte: 67 der 503 Indexmitglieder haben zu keiner
-          Kennzahl einen Wert und erscheinen deshalb nicht in dieser Liste.
+          Kein Treffer. Die Liste enthält alle 503 Indexmitglieder, auch die
+          ohne jeden Wert.
         </div>
       )}
     </>

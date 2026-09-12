@@ -1,0 +1,10 @@
+# Datenbrowser auf sleepyserver.
+# Außen Port 3810, direkt neben swiss_wg_finder (3800); innen läuft Next.js auf 3000.
+services:
+  app:
+    build: .
+    image: ethack-databrowser:latest
+    container_name: ethack-databrowser
+    ports:
+      - "3810:3000"
+    restart: unless-stopped

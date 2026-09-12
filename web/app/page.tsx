@@ -30,7 +30,24 @@ export default async function Page() {
     };
   });
 
-  const sectors = [...new Set(data.companies.map((c) => c.sector))].sort();
+  // Firmen ohne jeden Wert trotzdem listen: Sie fehlen nicht aus Versehen,
+  // sondern weil keine freie Quelle etwas über sie hergibt.
+  for (const c of data.withoutData) {
+    rows.push({
+      ticker: c.ticker,
+      company: c.company,
+      sector: c.sector,
+      n: 0,
+      sources: 0,
+      rank: null,
+      band: null,
+      co2: null,
+      dart: null,
+      sbti: null,
+    });
+  }
+
+  const sectors = [...new Set(rows.map((r) => r.sector))].sort();
   const values = data.companies.reduce((s, c) => s + c.metrics.length, 0);
   const sourceCount = new Set(
     data.companies.flatMap((c) => c.metrics.map((m) => m.sourceId)),

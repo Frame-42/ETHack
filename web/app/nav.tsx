@@ -28,7 +28,13 @@ export default function Nav() {
             </Link>
           ))}
         </nav>
-        <span className="stamp">jeder Wert mit Quelle</span>
+        <a
+          className="stamp"
+          href="/datenkatalog.pdf"
+          download="ETHack-Datenkatalog.pdf"
+        >
+          Datenkatalog als PDF ↓
+        </a>
       </div>
     </header>
   );

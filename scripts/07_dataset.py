@@ -22,6 +22,10 @@ def main() -> None:
         web_public.mkdir(parents=True, exist_ok=True)
         for name in ("companies.json", "sources.json", "metrics.json"):
             shutil.copy2(OUT / name, web_public / name)
+        # Datenkatalog zum Herunterladen, falls er gebaut ist.
+        katalog = ROOT / "report" / "datenkatalog.pdf"
+        if katalog.exists():
+            shutil.copy2(katalog, web_public.parent / "datenkatalog.pdf")
         print(f"-> Web-Daten aktualisiert: {web_public}")
 
 
