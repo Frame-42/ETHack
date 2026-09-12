@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen einen Widerspruch: Die Team-Datei nennt 10 Verfahren, mein Namensabgleich findet 0 Fälle für Block, Inc. Das spricht für eine mögliche Fehlzuordnung über Namensteile oder eine andere Zuordnungslogik. Aus den vorliegenden Belegen lässt sich aber nicht sicher entscheiden, ob die 10 Fälle tatsächlich zu Block, Inc. gehören oder ob der Datensatz falsch ist.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 614,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 129,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 743
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die genannte Regel nicht: Als Anlage ist \"International Paper New Bern Mill\" genannt, nicht eine Weyerhaeuser-Anlage. Damit ist die Zuordnung zum Fall fraglich. Aus den Belegen folgt außerdem nicht, dass die Firma nur in einem Programm ohne CO2-Pflicht meldet oder dass CO2 deshalb nicht gemessen wird. Für einen CO2-Wert von 0 t reicht das nicht; laut allgemeinem Wissen wäre hier eine Rohdaten-/Zuordnungsprüfung nötig.",
+ "action": "kennzeichnen",
+ "confidence": 0.87,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 612,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 761
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2023 exakt 0 t bei gleichzeitig gemeldeten 2 Anlagen. Zudem ist die Scope-1-Zeitreihe ab 2019 durchgehend 0, obwohl 2018 noch ein positiver Wert vorlag. Das stützt die Interpretation, dass 0 hier eher ‚nicht gemessen/nicht berichtet‘ als echte Emissionsfreiheit bedeutet. Laut allgemeinem Wissen kann bei bestimmten Meldekonstellationen eine Anlage zwar zugeordnet sein, ohne dass eine Emissionsmenge ausgewiesen wird.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 634,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 789
+ }
+}

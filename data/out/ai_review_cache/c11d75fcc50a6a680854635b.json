@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Belege zeigen nur, dass für 2024 ein WHD-Fall gezählt wird und dass das Team selbst nur einen Fall sieht. Es fehlt aber der entscheidende Nachweis, ob dieser Fall ohne Nachzahlung und ohne Betroffene war oder ob die Zuordnung des Falls zur Firma falsch ist. Mit den vorliegenden Angaben lässt sich daher nicht sicher sagen, dass der Wert als Messwert über die Firma fehlerhaft ist.",
+ "action": "kennzeichnen",
+ "confidence": 0.61,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 587,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 129,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 716
+ }
+}

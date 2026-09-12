@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen zwar eine zugeordnete Anlage, aber die gemeldete Scope-1-Menge ist über mehrere Jahre durchgehend 0 t. Das passt eher zu einer Berichts-/Programmstruktur, die diese Größe nicht erfasst, als zu echten emissionsfreien 0 t. Laut allgemeinem Wissen kann ein 0-Wert in solchen Programmen auch 'nicht gemessen' bedeuten.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 694,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 131,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 825
+ }
+}

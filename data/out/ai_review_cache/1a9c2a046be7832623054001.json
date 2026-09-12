@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Es ist genau 1 Anlage zugeordnet, aber für 2020 werden 0 t Scope 1 geliefert. Zusammen mit der durchgehend 0 in der Zeitreihe spricht das dafür, dass die Größe im Programm nicht erfasst bzw. nicht gemeldet wird und die 0 nicht als echte Emissionsfreiheit zu lesen ist. Laut allgemeinem Wissen kann bei solchen Meldeprogrammen eine 0 auch 'nicht gemessen' bedeuten; als Messwert über die Firma ist das daher irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 694,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 153,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 847
+ }
+}

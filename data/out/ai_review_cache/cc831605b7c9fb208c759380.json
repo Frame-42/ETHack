@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen nur, dass für Packaging Corporation of America im Programm SIPNOX keine Last (0 MWh) vorliegt. Daraus folgt nicht sicher, dass CO2 überhaupt nicht gemessen oder berichtet wird. Die Regel könnte zutreffen, aber mit den vorliegenden Belegen ist der Wert 0 t CO2 nicht nachweislich falsch.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 118,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 670
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2020 liegt zwar ein gemeldeter Wert von 0 t bei zugeordneter Anlage vor, und die Zeitreihe zeigt über mehrere Jahre ebenfalls 0 bzw. erst ab 2022 positive Werte. Das passt zu „nicht gemessen“ oder zu einer lückenhaften/anders abgegrenzten Meldung, ist mit den vorliegenden Belegen aber nicht sicher als fehlerhaft nachweisbar. Laut allgemeinem Wissen kann 0 in solchen Programmen auch „nicht berichtet“ statt „emissionsfrei“ bedeuten, doch hier fehlt der direkte Nachweis aus den Rohdaten.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 175,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 813
+ }
+}

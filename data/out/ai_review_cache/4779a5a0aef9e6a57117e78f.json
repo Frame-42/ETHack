@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Belege zeigen eine Anlage mit Strombezug und Programmen (RGGI, SIPNOX), aber keine direkte CO2-Angabe. Aus den Angaben allein lässt sich nicht ableiten, ob 0 t CO2 korrekt ist, ob die Anlage stillgelegt wurde, Biomasse nutzt oder ob eine Fehlzuordnung vorliegt. Laut allgemeinem Wissen verlangen solche Programme zwar Emissionsangaben, die Rohdaten zum konkreten Anlagenbetrieb fehlen hier jedoch.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 687
+ }
+}

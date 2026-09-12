@@ -20,6 +20,12 @@ const GROUPS: { title: string; hint: string; items: Item[] }[] = [
         format: "PDF",
         what: "Alle Quellen mit Adresse, Schlüsselpflicht und Lizenz, dazu alle Kennzahlen nach Datentyp.",
       },
+      {
+        file: "qualitaetspruefung.pdf",
+        title: "Qualitätsprüfung",
+        format: "PDF",
+        what: "Warum Werte falsch sind, wie man es behebt und wie Regeln, KI und Mensch Fehler abfangen.",
+      },
     ],
   },
   {
@@ -37,6 +43,12 @@ const GROUPS: { title: string; hint: string; items: Item[] }[] = [
         title: "Belastbarkeit je Firma",
         format: "CSV",
         what: "Je Firma und Bereich E, S, G: Punkte, vorhandene Familien, Anker und Stufe (belastbar bis keine). Regeln in pipeline/reliability.py.",
+      },
+      {
+        file: "flags_gepruft.csv",
+        title: "Geprüfte Auffälligkeiten",
+        format: "CSV",
+        what: "Je Fall Regel, Stufe, Wert, Belege, KI-Urteil mit Ursache und Konfidenz sowie der Weg: automatisch oder an Menschen.",
       },
       {
         file: "dataset_long.parquet",

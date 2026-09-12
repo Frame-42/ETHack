@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "meldefehler_quelle",
+ "explanation": "Die Kennzahl basiert auf einer sehr instabilen Anlagenbasis: 2018 liegt die Anlagenzahl bei 1, ab 2019 bei 9 und ab 2022 bei 10. Dadurch ist ein CAGR über den Zeitraum nicht als sauberer Firmen-Messwert interpretierbar. Die Emissionen springen zudem von 5.152,8 auf rund 28,5 Mio. ohne passende stabile Basis; das spricht eher für einen Wechsel der gemeldeten Quelle/Zuordnung als für einen echten Emissionssprung. Laut allgemeinem Wissen können solche Trends durch Änderungen im Reporting oder in der berichteten Einheit/Basis entstehen, müssen aber mit Rohdaten geprüft werden. needs_human wäre daher sinnvoll.",
+ "action": "kennzeichnen",
+ "confidence": 0.87,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 737,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 189,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 926
+ }
+}

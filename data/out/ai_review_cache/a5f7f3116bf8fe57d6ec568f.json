@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für 2020 zwei zugeordnete Anlagen vom Typ „Supplier“, aber gelieferte Scope-1-Menge von 0 t. Laut der Fallbeschreibung kann 0 hier bedeuten, dass die Größe vom Programm nicht gemessen bzw. nicht berichtet wird, nicht dass die Firma emissionsfrei ist. Die durchgehend 0 in der Zeitreihe stützt eher ein Berichts-/Messproblem als einen echten Nullwert.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 695,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 140,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 835
+ }
+}

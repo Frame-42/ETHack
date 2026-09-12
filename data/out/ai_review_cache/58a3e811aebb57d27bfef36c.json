@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber in allen Jahren 2020–2023 exakt 0 t und 0 t geliefert. Bei Anlagentyp „Supplier“ spricht das dafür, dass keine Emissionsmenge für Scope 1 vorliegt bzw. gemessen wurde; die 0 ist daher als fehlender/nicht berichteter Wert zu behandeln, nicht als emissionsfrei. Laut allgemeinem Wissen können GHGRP-Off-Ramp-/Supplier-Konstellationen solche Nullwerte erzeugen.",
+ "action": "unterdruecken",
+ "confidence": 0.84,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 618,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 508,
+  "output_tokens_details": {
+   "reasoning_tokens": 355
+  },
+  "total_tokens": 1126
+ }
+}

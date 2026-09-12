@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2021 genau 0 t bei zugeordneter Anlage und auch eine durchgehend 0-zeitreihe. Nach der Regel ist das hier als fehlender bzw. nicht gemessener Wert zu werten, nicht als echte Emissionsfreiheit. Damit darf der Wert so nicht als Messwert über die Firma verrechnet werden. Laut allgemeinem Wissen kann ein Off-Ramp nach 40 CFR 98.2(i) zu solchen Nullwerten führen, wenn die Größe nicht mehr gemeldet wird.",
+ "action": "unterdruecken",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 676,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 156,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 832
+ }
+}

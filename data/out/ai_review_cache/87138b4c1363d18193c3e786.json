@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen nur das Programm SIPNOX und keine CO2-Pflicht; damit spricht viel dafür, dass CO2 in diesem Meldekontext nicht erhoben wird. Ein Wert von 0 t CO2 ist daher als Messwert über die Firma irreführend und nicht als echte Emission zu verrechnen. Laut allgemeinem Wissen können solche Programme nur Teilgrößen abdecken, aber hier reichen die Belege für die Nichtmessung aus.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 644,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 787
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Der Medianwert 60 liegt genau zwischen den belegten Bandgrenzen p10=20 und p90=100. Damit zeigt der Wert keine zusätzliche Rang- oder Einordnungsinformation über das Band hinaus; die Kennzahl wirkt hier wie eine missverständliche Einzelangabe innerhalb eines Intervalls. Laut allgemeinem Wissen ist ein Median in einem Rangband nur dann sinnvoll, wenn die zugrunde liegende Rangskala eindeutig definiert ist; das ist hier aus den Belegen nicht ersichtlich.",
+ "action": "kennzeichnen",
+ "confidence": 0.83,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 146,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 674
+ }
+}

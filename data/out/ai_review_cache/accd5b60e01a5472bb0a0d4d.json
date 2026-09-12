@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen nur, dass intern keine eigenen WHD-Fälle gefunden wurden, während der Datensatz 1 Fall ausweist; zugleich ist die Team-Konfidenz niedrig. Das stützt allenfalls den Verdacht auf Fehlzuordnung, beweist aber nicht, dass der Wert falsch ist oder dass es sich um ein Verfahren ohne Befund handelt.",
+ "action": "kennzeichnen",
+ "confidence": 0.62,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 531,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 341,
+  "output_tokens_details": {
+   "reasoning_tokens": 224
+  },
+  "total_tokens": 872
+ }
+}

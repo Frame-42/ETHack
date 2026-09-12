@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege nennen Talen Energy Corp als Eigentümer/Zuordnung, aber für 2018 ist laut Fallbeschreibung Talen eigenständig und nicht Teil von Vistra. Damit ist der Wert nicht als Messwert für VST verrechenbar, sondern einer falschen Zuordnung zugeordnet. Die Belege stützen keine andere Erklärung.",
+ "action": "korrigieren",
+ "confidence": 0.92,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 611,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 113,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 724
+ }
+}

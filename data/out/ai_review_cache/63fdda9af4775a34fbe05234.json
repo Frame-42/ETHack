@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege sprechen gegen eine saubere Zuordnung der 14 Verfahren zu Tyler Technologies: Der eigene Namensabgleich findet 0 passende Fälle, während die gefundenen Namensähnlichkeiten offenbar auf Ortsnamen/gleichlautende Handelsnamen wie 'Tyler' zurückgehen. Laut allgemeinem Wissen kann so eine Namensverwechslung bei Firmennamen und Franchise-/Ortsbezügen auftreten. Als Messwert über die Firma ist der Wert damit irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 649,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 792
+ }
+}

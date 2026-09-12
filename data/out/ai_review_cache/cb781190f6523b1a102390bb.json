@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Zuordnung wirkt zeitlich falsch: Die Belege nennen WestRock als Eigentümer/Anlagenbezug, aber der Falltext sagt, dass WestRock erst im Juli 2024 mit Smurfit zu Smurfit Westrock fusionierte. Für das Jahr 2020 passt die Zuordnung zu SW daher nicht. Laut allgemeinem Wissen muss eine Konzernzuordnung zum Berichtsjahr passen.",
+ "action": "korrigieren",
+ "confidence": 0.97,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 549,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 131,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 680
+ }
+}

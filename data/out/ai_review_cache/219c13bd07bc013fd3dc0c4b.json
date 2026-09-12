@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Das Belegpaket enthält keine konkreten WHD-Falldetails zu Nachzahlungen, betroffenen Beschäftigten oder zur Zuordnung zu KLA. Die Angaben „team_konfidenz: low“ und „eigene_faelle: 2“ stützen nur, dass die Prüfung unsicher ist, belegen aber weder ein Verfahren ohne Feststellung noch eine Fehlzuordnung.",
+ "action": "kennzeichnen",
+ "confidence": 0.82,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 297,
+  "output_tokens_details": {
+   "reasoning_tokens": 173
+  },
+  "total_tokens": 825
+ }
+}

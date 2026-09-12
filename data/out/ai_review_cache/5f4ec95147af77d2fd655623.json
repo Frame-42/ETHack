@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen für die Anlage nur das Programm SIPNOX und zeigen keine Last/MWh. Damit stützen die Unterlagen die Erklärung, dass hier keine CO2-relevante Messung vorliegt bzw. die Größe im Programm nicht erfasst wird. Nach allgemeinem Wissen sind Programme ohne CO2-Pflicht ein typischer Grund für Nullwerte in solchen Datensätzen.",
+ "action": "behalten",
+ "confidence": 0.83,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 125,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 677
+ }
+}

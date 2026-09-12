@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2023 zwar eine zugeordnete Anlage und einen gemeldeten Wert von 0 t sowie durchgehend 0 t seit 2019. Das passt grundsätzlich zu der Regel, dass 0 hier als 'nicht gemessen' statt als emissionsfrei zu lesen sein kann. Aus den Belegen geht aber nicht hervor, ob tatsächlich nur eine Nullmeldung vorliegt oder ob die Firma emissionsfrei berichtete. Daher ist die Datenlage unklar, die Null könnte aber fehlend statt echter Wert sein.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 152,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 790
+ }
+}

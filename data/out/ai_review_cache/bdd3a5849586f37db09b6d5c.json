@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2022 genau 0 t, obwohl 1 Anlage zugeordnet ist. Da gleichzeitig auch 2021 und 2023 mit 0 t geführt werden und zuvor positive Werte vorliegen, spricht das stark dafür, dass 0 hier 'nicht gemessen/nicht berichtet' statt 'emissionsfrei' bedeutet. Das passt zur beschriebenen Off-Ramp-Logik laut allgemeinem Wissen, ist aber aus dem Paket selbst nicht als echte Null belegbar.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 783
+ }
+}

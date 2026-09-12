@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "null_statt_fehlend",
+ "explanation": "Im Belegpaket fehlen konkrete Nachweise zum SBTi-Nahziel von NRG Energy. Der gemeldete Wert 2025 für das Jahr 2026 kann auf ein abgelaufenes, nicht aktualisiertes Ziel hindeuten, aber ohne Rohdaten oder Dokumente lässt sich nicht prüfen, ob das Ziel erreicht, verfehlt oder korrekt aktualisiert wurde. Der Fall ist daher nicht belastbar entscheidbar.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 510,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 133,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 643
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen den Verdacht einer falschen Zuordnung: Die Team-Datei nennt 14 WHD-Verfahren, der eigene Namensabgleich findet aber nur 2 Treffer. Weitere Belege für 14 Fälle fehlen. Das spricht dafür, dass über Namensteile oder Franchise-/Betriebszuordnungen zu viel zugerechnet wurde.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 555,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 118,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 673
+ }
+}

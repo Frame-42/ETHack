@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für 2018 eine zugeordnete Anlage vom Typ „Supplier“, aber gelieferte Scope-1-Tonnen von 0.0 und auch über die gesamte Zeitreihe hinweg 0.0. Das stützt laut allgemeinem Wissen zum Meldeprogramm eher, dass hier keine Emissionsmenge für diese Zuordnung gemessen/berichtigt wurde, nicht dass die Firma emissionsfrei war. Als Firmen-Messwert ist 0 daher irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 691,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 840
+ }
+}

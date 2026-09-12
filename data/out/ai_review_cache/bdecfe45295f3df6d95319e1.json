@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen den Verdacht einer falschen Zuordnung: Die Team-Datei nennt 14 WHD-Verfahren, aber der eigene Namensabgleich findet 0 direkte Fälle für Tyler Technologies. Die gefundenen Treffer sind offenbar Namensbestandteile/Ortsnamen (z. B. \"Tyler\" in externen Handelsnamen) und nicht eindeutig der Firma zuzuordnen. Damit ist der Wert wahrscheinlich irreführend und sollte nicht unverändert verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 591,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 144,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 735
+ }
+}

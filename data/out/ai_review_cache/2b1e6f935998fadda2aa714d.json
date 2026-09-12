@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für die Anlage nur das Programm „SIPNOX“ bei zugleich erheblicher Last von 289952,24 MWh. Laut allgemeinem Wissen ist SIPNOX ein NOx-orientiertes Programm und keine CO2-Meldepflicht. Der Wert 0 t CO2 belegt daher nicht emissionsfreien Betrieb, sondern dass CO2 in diesem Programmausschnitt nicht gemessen bzw. berichtet wird.",
+ "action": "unterdruecken",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 557,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 327,
+  "output_tokens_details": {
+   "reasoning_tokens": 189
+  },
+  "total_tokens": 884
+ }
+}

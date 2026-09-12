@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "doppelzaehlung",
+ "explanation": "Die Belege stützen, dass GOOG und GOOGL denselben CIK 1652044 teilen. Laut allgemeinem Wissen kann das bei zwei Aktiengattungen derselben Konzernmutter zu doppelter Erfassung derselben Konzernwerte führen. Aus den Belegen allein ist aber nicht ersichtlich, ob im konkreten Bestand بالفعل doppelt gezählt wurde; die Regel ist daher plausibel, aber nicht nachweislich belegt.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 665
+ }
+}

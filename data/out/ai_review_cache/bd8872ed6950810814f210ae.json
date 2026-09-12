@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Kennzahl zeigt 1 Verfahren, aber im Belegpaket steht nur 'eigene_faelle: 0'. Damit ist der Wert in dieser Zuordnung nicht als belastbarer Messwert über die Firma belegbar. Ob es sich um ein Verfahren ohne Feststellung oder um eine Fehlzuordnung handelt, lässt sich aus den Belegen nicht sicher trennen; die stützende Lesart ist daher eher eine falsche Zuordnung als ein echter Firmenwert. Laut allgemeinem Wissen können WHD-Verfahren zudem je nach Datenmodell Zählungen auf anderer Ebene auslösen, das ist hier aber nicht belegt.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 589,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 168,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 757
+ }
+}

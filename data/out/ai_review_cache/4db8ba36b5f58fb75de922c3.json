@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber für 2019 wird genau 0 t Scope 1 gemeldet. Zusammen mit der durchgehend 0 in der Zeitreihe passt das zu einem fehlenden oder nicht gemessenen Wert und nicht zu einer belastbaren Aussage 'emissionsfrei'. Laut allgemeinem Wissen kann bei bestimmten Meldekonstellationen 0 als Platzhalter für nicht berichtete Mengen verwendet werden.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 773
+ }
+}

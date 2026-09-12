@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für 2022 eine zugeordnete Anlage, aber einen Scope-1-Wert von exakt 0 t. Zusammen mit der durchgehend 0,0 verlaufenden Zeitreihe spricht das dafür, dass die Größe im Programm nicht erfasst bzw. nicht gemeldet wurde und 0 hier nicht als echte Emissionsfreiheit zu lesen ist. Laut allgemeinem Wissen kann ein Nullwert in solchen Meldekontexten auch „nicht gemessen/nicht berichtet“ bedeuten.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 676,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 151,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 827
+ }
+}

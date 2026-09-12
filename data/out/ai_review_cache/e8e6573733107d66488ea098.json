@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl wirkt plausibel, weil laut Beleg ein Energieunternehmen eigene Kraftwerke mit 639.915 MWh betreibt. Eine Strom- bzw. CO2-Rate pro MWh kann bei einem Nicht-Versorger also die Eigenanlagen abbilden und nicht das Kerngeschäft als Ganzes. Aus den Belegen ergibt sich kein klarer Fehler, nur eine ungewöhnliche, aber mögliche Branchenstruktur.",
+ "action": "behalten",
+ "confidence": 0.66,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 594,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 130,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 724
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage (1 Supplier), aber für Scope 1 wird durchgehend 0 t gemeldet, auch 2021. Das passt zur Regel F02: 0 steht hier eher für 'nicht gemessen' bzw. fehlende Angabe als für emissionsfrei. Die Zeitreihe stützt eher einen konstanten Missing-Wert als einen echten Nullwert.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 128,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 766
+ }
+}

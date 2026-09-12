@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege reichen nicht aus, um den einen gemeldeten Fall zu verifizieren oder als falsch zu widerlegen. Es gibt nur den Hinweis, dass keine eigenen Fälle vorliegen; ob der Wert 1.0 ein Verfahren ohne Feststellung, eine Fehlzuordnung oder ein anderes Meldeproblem ist, bleibt offen. Laut allgemeinem Wissen kann bei solchen Kennzahlen auch eine Meldung ohne Nachzahlung/Betroffene dennoch als Fall gezählt werden, aber das lässt sich hier nicht belegen.",
+ "action": "kennzeichnen",
+ "confidence": 0.8,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 673
+ }
+}

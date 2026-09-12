@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Kennzahl weist 1 Verfahren aus, obwohl im Belegpaket für die Firma keine eigenen Fälle vorliegen (eigene_faelle=0). Damit ist der Wert als Firmenmesswert nicht plausibel; am ehesten liegt eine Fehlzuordnung oder ein Zuordnungsfehler vor. Die Belege reichen nicht für eine inhaltliche Bestätigung des Falls, daher stützt sich die Bewertung nur auf das fehlende Fallmaterial.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 589,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 724
+ }
+}

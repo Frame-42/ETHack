@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2018 ist ein Scope-1-Wert von 0 t bei gemeldeter Anlage auffällig. Die Zeitreihe zeigt zudem von 2018 bis 2021 jeweils 0 t und erst ab 2022 substanzielle Emissionen. Das stützt die Deutung, dass 0 hier eher 'nicht gemessen/nicht berichtet' als 'emissionsfrei' bedeutet. Nach allgemeinem Wissen kann das mit Meldegrenzen oder einem Off-Ramp-Zustand zusammenhängen, aber als Messwert über die Firma ist 0 t dann irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.89,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 693,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 169,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 862
+ }
+}

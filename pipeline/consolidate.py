@@ -486,6 +486,10 @@ def _sbti_by_company(master: pd.DataFrame) -> pd.DataFrame:
 
 def write_all() -> dict:
     long = build()
+    # Prüfergebnisse anhängen, sofern eine Prüfung gelaufen ist. Werte werden
+    # dabei nicht geändert, nur gekennzeichnet (pipeline/flag_apply.py).
+    from .flag_apply import apply as apply_flags
+    long = apply_flags(long)
     long.to_parquet(OUT / "dataset_long.parquet", index=False)
     long.to_csv(OUT / "dataset_long.csv", index=False)
 
@@ -506,8 +510,12 @@ def write_all() -> dict:
     # Verdichtete Sicht je Firma fuer die Web-App: neuester Wert je Kennzahl.
     # Fuer die verdichtete Sicht das juengste *vollstaendige* Jahr nehmen und
     # nur dann auf ein angebrochenes ausweichen, wenn es kein anderes gibt.
+    # Doppelte Aktiengattungen (gleiche CIK) nur einmal fuehren; als Fehler
+    # gekennzeichnete Werte bleiben im Langformat, aber nicht in der Firmenansicht.
+    duplicate_tickers = set(long.loc[long["quality_rule"] == "F01_doppelte_cik", "ticker"])
+    shown = long[(long["quality_status"] != "fehler") & ~long["ticker"].isin(duplicate_tickers)]
     latest = (
-        long.sort_values(["partial_year", "year"], ascending=[False, True])
+        shown.sort_values(["partial_year", "year"], ascending=[False, True])
         .groupby(["ticker", "metric"], as_index=False)
         .last()
     )
@@ -533,6 +541,9 @@ def write_all() -> dict:
                         "sourceName": r["source_name"],
                         "sourceUrl": r["source_url"],
                         "partial": bool(r.get("partial_year", False)),
+                        "qualityStatus": r.get("quality_status", "ok"),
+                        "qualityRule": r.get("quality_rule", ""),
+                        "qualityNote": r.get("quality_note", ""),
                     }
                     for _, r in g.iterrows()
                 ],
@@ -548,7 +559,7 @@ def write_all() -> dict:
     missing = [
         {"ticker": r.ticker, "company": r.company, "sector": r.gics_sector}
         for r in master.itertuples()
-        if r.ticker not in assessed
+        if r.ticker not in assessed and r.ticker not in duplicate_tickers
     ]
     payload = {
         "generatedAt": HEUTE,

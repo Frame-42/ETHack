@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Der Fallbeleg nennt zwar 2 eigene WHD-Fälle, aber die Regel bezieht sich auf Verfahren ohne Nachzahlung und ohne Betroffene bzw. auf Verfahren ohne Feststellung. Damit ist der Wert nicht als sauberer Messwert für diese Zielgröße belegbar; die Belege stützen eher eine Fehlzuordnung als einen echten Messwert.",
+ "action": "korrigieren",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 115,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 701
+ }
+}

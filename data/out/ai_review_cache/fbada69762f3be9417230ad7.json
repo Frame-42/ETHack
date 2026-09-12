@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege sprechen gegen eine Vermischung verschiedener Zieltypen: Laut Regel bedeutet „Commitment removed“ schlicht, dass kein Ziel innerhalb von 24 Monaten eingereicht wurde. Das ist ein einzelner Status und nicht zugleich „validiert“ und „zurückgezogen“. Die behauptete Zuordnung wirkt daher definitionsseitig falsch bzw. irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.87,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 538,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 120,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 658
+ }
+}

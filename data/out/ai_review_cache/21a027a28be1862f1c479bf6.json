@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die Regel nicht als echten Firmenmesswert: Es gibt 5 eigene Fälle, aber die Kennzahl zeigt 4 Verfahren ohne Nachzahlung und ohne Betroffene. Das passt eher zu einer Fehlzuordnung oder zu einer anders definierten Teilmenge als zu einem korrekt über die Firma verrechneten Gesamtwert. Laut allgemeinem Wissen können WHD-Verfahrenskennzahlen je nach Quelle unterschiedliche Teilmengen abbilden; hier reichen die Angaben aber nicht, um die Zuordnung sauber zu bestätigen.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 587,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 735
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege sprechen gegen einen echten Firmenfall: Es werden keine eigenen Fälle angegeben (eigene_faelle = 0). Damit wirkt der Wert 1 für 'whd_cases' eher wie eine Fehlzuordnung bzw. ein nicht zur Firma passender Datensatz als ein plausibler Firmenmesswert. Für 'Verfahren ohne Nachzahlung und ohne Betroffene' liefern die Belege keinen stützenden Hinweis auf einen tatsächlich zu verrechnenden Fall.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 584,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 138,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 722
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Der Wert ist für einen Nicht-Versorger nicht automatisch ein Fehler. Die Belege zeigen, dass Phillips 66 im Datensatz mit 1 Kraftwerk und 384088 MWh geführt wird; damit kann die Stromrate aus Eigenanlagen stammen und nicht das operative Geschäftsmodell abbilden. Laut allgemeinem Wissen sind bei Energy-Unternehmen solche Eigen-/Nebenanlagen möglich, ohne dass die Kennzahl falsch sein muss.",
+ "action": "behalten",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 537,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 129,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 666
+ }
+}

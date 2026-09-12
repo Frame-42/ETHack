@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege nennen bei hoher Team-Konfidenz nur 2 eigene/zuordenbare WHD-Fälle, während der Datensatz 3 Fälle ausweist. Das stützt, dass mindestens ein Verfahren nicht korrekt Textron zugeordnet bzw. nicht als belastbarer Fall zu zählen ist. Für eine bloße Verfahren-ohne-Feststellung-Erklärung fehlen Details zu Nachzahlung/Betroffenen.",
+ "action": "korrigieren",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 526,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 485,
+  "output_tokens_details": {
+   "reasoning_tokens": 358
+  },
+  "total_tokens": 1011
+ }
+}

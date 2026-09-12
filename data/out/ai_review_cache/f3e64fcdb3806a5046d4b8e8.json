@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege stützen, dass der Nenner der OSHA-Unfallrate auffällig und teils unplausibel ist: Median 1.510 Stunden je Beschäftigtem und 33% der Meldungen außerhalb des plausiblen Bereichs. Laut allgemeinem Wissen prüft OSHA diese Angaben nicht, daher kann die Rate als Messwert über die Firma irreführend sein. Die Ursache betrifft hier eher eine problematische Nenner-Definition bzw. -Einheit als einen echten Firmenwert.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 676,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 824
+ }
+}

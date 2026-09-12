@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die Vermutung einer falschen Zuordnung: In der Team-Datei stehen 43 Verfahren, aber der eigene Namensabgleich findet für Old Dominion (ODFL) 0 Treffer. Damit ist der Wert als Firmenmesswert so nicht belastbar. Es gibt in den Belegen keinen Hinweis auf echte Verfahren bei der Firma, sondern eher auf eine Verwechslung über Namensteile oder eine falsche Zuordnung.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 612,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 134,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 746
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber für 2021 und die gesamte Zeitreihe 2018–2023 exakt 0 t gelieferte Scope-1-Emissionen; Anlagentypen fehlen ebenfalls. Das stützt die Regel: Der Wert wirkt nicht wie eine gemessene Emissionsfreiheit, sondern wie ein fehlender bzw. nicht gelieferter Emissionswert, der als 0 geführt wurde. Laut allgemeinem Wissen können GHGRP-Off-Ramp-/Schwellenregeln dazu führen, dass keine Emissionsmenge berichtet wird; eine Verrechnung als echte 0 t wäre daher irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 633,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 486,
+  "output_tokens_details": {
+   "reasoning_tokens": 302
+  },
+  "total_tokens": 1119
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Belege nennen nur eine hohe Team-Konfidenz und offenbar 1 eigener Fall, während der Datensatzwert 2 Fälle ausweist. Es fehlen jedoch die konkreten WHD-Falldetails, insbesondere ob die zwei Verfahren tatsächlich keine Nachzahlung und keine Betroffenen hatten und ob sie O'Reilly korrekt zugeordnet sind. Laut allgemeinem Wissen können WHD-Verfahren auch ohne monetäre Feststellung abgeschlossen werden; das macht den Fallzählwert allein nicht automatisch falsch.",
+ "action": "kennzeichnen",
+ "confidence": 0.67,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 531,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 657,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1188
+ }
+}

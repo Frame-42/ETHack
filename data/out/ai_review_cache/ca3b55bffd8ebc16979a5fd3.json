@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2021 eine zugeordnete Anlage, aber gelieferte Scope-1-Menge 0,0 t und eine durchgehend 0,0-Tonnen-Zeitreihe. Damit ist der Wert als Messwert über die Firma irreführend: Er kann hier laut Regel eher 'nicht gemessen/fehlend' als 'emissionsfrei' bedeuten. Ob dies aus einem Meldeausstieg oder einer Nichtmessung folgt, lässt sich aus dem Paket nicht genauer prüfen; für die Verrechnung als echte Emissionsmenge ist 0 hier nicht belastbar.",
+ "action": "kennzeichnen",
+ "confidence": 0.87,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 691,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 169,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 860
+ }
+}

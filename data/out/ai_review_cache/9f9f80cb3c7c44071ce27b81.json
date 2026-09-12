@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für ADM zwei Kraftwerke und 298003 MWh, aber nicht, ob die Kennzahl t_co2_pro_mwh hier das Geschäftsmodell der Firma oder nur Eigenanlagen abbildet. Laut allgemeinem Wissen werden solche Stromintensitätswerte bei Nicht-Versorgern oft aus firmeneigenen Anlagen berechnet; ob das hier zutrifft, lässt sich mit den Belegen allein nicht sicher sagen.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 595,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 134,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 729
+ }
+}

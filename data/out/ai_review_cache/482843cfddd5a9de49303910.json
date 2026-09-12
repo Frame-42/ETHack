@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2022 zwar eine zugeordnete Anlage, aber eine gemeldete Scope-1-Menge von exakt 0 t. Zusammen mit der Zeitreihe (ab 2019 durchgehend 0) spricht das dafür, dass hier nicht 'emissionsfrei', sondern 'nicht gemessen/nicht berichtet' abgebildet ist. Laut allgemeinem Wissen können solche Nullen in Berichtsprogrammen bei nicht erfassten Quellen vorkommen; als Firmenmesswert ist das irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.96,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 696,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 154,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 850
+ }
+}

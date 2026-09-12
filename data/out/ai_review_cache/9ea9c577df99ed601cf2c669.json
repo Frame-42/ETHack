@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Der Wert 60 liegt nur als Median innerhalb des Rangbands 20–100 vor. Ein Median in diesem Band suggeriert eine präzisere Einordnung, als die Belege hergeben; das ist eher eine Rang-/Skalenlogik als ein inhaltlicher Firmenbefund. Laut allgemeinem Wissen können solche Bandangaben nur eine grobe Lage, aber keine exakte Position belegen. Für die Verrechnung sollte der Wert daher nicht als exakte Kennzahl behandelt werden.",
+ "action": "kennzeichnen",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 677
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen keine Zuordnung von 90 Verfahren zu Capital One: Der eigene Namensabgleich findet 0 Fälle, und die genannten Handelsnamen passen eher zu anderen Geschäftsnamen bzw. Franchise-/Einzelhandelsbegriffen. Laut Belegen ist die Zuordnung damit sehr wahrscheinlich falsch.",
+ "action": "korrigieren",
+ "confidence": 0.96,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 643,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 107,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 750
+ }
+}

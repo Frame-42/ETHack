@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "doppelzaehlung",
+ "explanation": "Laut Beleg sind 24 Verstoßquartale bei nur 1 Anlage in einem 3-Jahres-Fenster angegeben. Mehr als 12 Quartale pro Anlage sind dort unmöglich. Die genannte Ursache mehrfaches Zählen derselben Anlage beim Verbinden mit EPA-Anlagen passt zu einer Doppelzählung. Als Messwert über die Firma darf der Wert so nicht stehen bleiben.",
+ "action": "korrigieren",
+ "confidence": 0.98,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 646,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 126,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 772
+ }
+}

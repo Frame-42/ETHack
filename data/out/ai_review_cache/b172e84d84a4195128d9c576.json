@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege stützen, dass die Anlage nur im Programm SIPNOX gemeldet wird. Dieses Programm ist hier ohne CO2-Pflicht angegeben; damit ist ein Wert von 0 t CO2 eher ein Folgeeffekt der Programmzuordnung und nicht ein echter Nullwert. Die Größe wird laut Regel nicht gemessen.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 549,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 115,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 664
+ }
+}

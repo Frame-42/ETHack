@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege nennen 2 eigene Fälle bei hoher Team-Konfidenz. Dass diese Verfahren offenbar ohne Nachzahlung und ohne Betroffene sind, belegt für sich keinen falschen Unternehmensbezug; es kann sich um WHD-Verfahren ohne Feststellung handeln. Für die Kennzahl „whd_cases“ als Fallanzahl ist der Wert daher plausibel, solange nicht nur Verfahren mit Befund gezählt werden sollen.",
+ "action": "behalten",
+ "confidence": 0.74,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 649,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1177
+ }
+}

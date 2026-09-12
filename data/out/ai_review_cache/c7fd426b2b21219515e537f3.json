@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen als Eigentümer/Zuordnung nur \"TALEN ENERGY CORP (100%)\" bzw. \"Talen Energy CORP (100%)\". Das stützt die Einordnung von Talen Energy zu Vistra nicht; vielmehr spricht es für eine falsche Zuordnung der Einheit. Für 2019 passt die Zuordnung daher nach den Belegen nicht.",
+ "action": "korrigieren",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 551,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 122,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 673
+ }
+}

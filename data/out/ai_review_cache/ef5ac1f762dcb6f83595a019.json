@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für die zugeordneten Anlagen nur das Programm „SIPNOX“ und keine Last. Laut allgemeinem Wissen zu CAMPD/SIP-NOx-Programmen betrifft SIPNOX NOx-Anforderungen; CO2 ist dort nicht zwingend die gemeldete Größe. Der Wert 0 t CO2 belegt daher nicht tatsächliche Null-Emissionen, sondern fehlende CO2-Erfassung in diesem Programmausschnitt und wäre als Unternehmens-CO2-Wert irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 363,
+  "output_tokens_details": {
+   "reasoning_tokens": 208
+  },
+  "total_tokens": 915
+ }
+}

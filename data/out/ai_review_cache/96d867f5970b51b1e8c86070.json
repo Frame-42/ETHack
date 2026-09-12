@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Im Belegpaket steht für 2024 nur der Hinweis 'eigene_faelle: 0'. Damit ist der gemeldete Wert 1 zwar auffällig, aber aus den vorliegenden Belegen nicht eindeutig als falsch belegt. Es könnte sich um eine Fehlzuordnung handeln, oder um einen Fall aus einer anderen Datenquelle/Definition. Für eine sichere Klärung wären Rohdaten bzw. der zugrunde liegende Verfahrensnachweis nötig.",
+ "action": "kennzeichnen",
+ "confidence": 0.66,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 530,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 138,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 668
+ }
+}

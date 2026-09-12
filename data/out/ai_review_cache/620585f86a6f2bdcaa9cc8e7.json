@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege definieren 'Commitment removed' als Ziel nicht binnen 24 Monaten eingereicht. Das spricht nicht für einen Messfehler, sondern dafür, dass die Kennzahl einem anderen Zieltyp oder Status zugeordnet wurde. Die im Falltext genannte Vermischung von Zieltypen ist damit die naheliegende Ursache; ob der konkrete Firmenwert inhaltlich falsch ist, lässt sich aus dem Paket nicht direkt belegen.",
+ "action": "korrigieren",
+ "confidence": 0.83,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 594,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 134,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 728
+ }
+}

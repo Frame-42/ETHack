@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen keine 35 Verfahren für A. O. Smith. Der eigene Namensabgleich findet nur 1 Treffer, und der einzige genannte Handelsname ('AOS at Home Care') passt offenbar nicht zur Industrie-Firma A. O. Smith. Das spricht für eine Fehlzuordnung über Namensteile oder fremde/franchise-nahe Betriebe. Laut allgemeinem Wissen muss ein WHD-Fall der Firma korrekt zugeordnet sein, sonst ist der Messwert irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 628,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 776
+ }
+}

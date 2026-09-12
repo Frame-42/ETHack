@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen, dass die Firma eigene Stromerzeugung hat (8 Kraftwerke, 11.030.586,996 MWh). Damit kann eine CO2-Rate pro MWh für die Eigenanlagen plausibel sein, auch wenn die Firma kein reiner Versorger ist. Aus den Belegen geht nicht hervor, dass die Kennzahl das Geschäftsmodell falsch abbildet; sie beschreibt offenbar die gemessene Stromerzeugung der Firma. Laut allgemeinem Wissen können Nicht-Versorger trotzdem eigene Kraftwerke betreiben.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 591,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 746
+ }
+}

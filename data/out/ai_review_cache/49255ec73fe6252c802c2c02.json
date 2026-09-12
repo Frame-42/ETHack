@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen nur das Programm SIPNOX und zeigen für 2021 keine CO2-Messung bzw. keinen Lastverbrauch (last_mwh = 0). Wenn das Programm CO2 nicht erfasst, ist ein eingetragener Wert von 0 t CO2 als Messwert über die Firma irreführend. Laut allgemeinem Wissen können solche Programme Größen nur für bestimmte Pflichtsegmente erfassen; hier stützen die Belege die Ursache, dass die Größe nicht gemessen wird.",
+ "action": "korrigieren",
+ "confidence": 0.87,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 610,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 151,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 761
+ }
+}

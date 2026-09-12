@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "meldefehler_quelle",
+ "explanation": "Die Belege zeigen für die Anlage „Procter & Gamble Paper Products“ eine relevante Last von 64.712 MWh und das Programm RGGI. Laut allgemeinem Wissen ist RGGI ein CO2-bezogenes Melde-/Cap-and-Trade-Programm; ein CO2-Wert von 0 t bei gleichzeitig ausgewiesener Last ist daher ohne weiteren Nachweis zu Stilllegung, Biomasse oder Ausnahme nicht plausibel. SIPNOX erklärt den Nullwert nicht, weil RGGI ebenfalls genannt ist.",
+ "action": "unterdruecken",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 671,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1223
+ }
+}

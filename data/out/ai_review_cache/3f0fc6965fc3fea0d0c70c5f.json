@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen nur, dass für die Firma Anlagen und das Programm SIPNOX vorliegen und dass im Datensatz 0 MWh vermerkt sind. Daraus folgt nicht nachweisbar, dass 0 t CO2 falsch sind. Es ist aber auch nicht belegt, dass CO2 in diesem Programm gemessen wird. Laut allgemeinem Wissen können in einzelnen Berichtsprogrammen bestimmte Emissionsgrößen fehlen oder nicht verpflichtend sein. Für eine sichere Korrektur fehlt Rohdaten- oder Programmdokumentation.",
+ "action": "kennzeichnen",
+ "confidence": 0.77,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 153,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 705
+ }
+}

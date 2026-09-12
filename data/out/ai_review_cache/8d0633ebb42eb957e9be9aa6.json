@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Belege zeigen nur, dass ein einzelner Fall erfasst wurde. Zur Regel „Verfahren ohne Nachzahlung und ohne Betroffene“ fehlen Angaben, ob es eine Feststellung gab, ob der Fall falsch zugeordnet ist oder ob eine andere Meldelogik greift. Mit den vorliegenden Belegen lässt sich der Wert weder als falsch noch als plausibel belegen.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 530,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 117,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 647
+ }
+}

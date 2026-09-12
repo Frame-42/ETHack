@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege stützen nur, dass für 2024 zwei WHD-Fälle gezählt wurden. Zur beanstandeten Regelabweichung („ohne Nachzahlung und ohne Betroffene“) fehlen im Paket aber die Fallbeschreibungen; daher ist nicht nachweisbar, dass die 2 Fälle falsch sind. Laut Belegen ist eher unklar, ob hier ein fehlender Befund/Nullfall statt eines echten Verfahrens vorliegt. Die Regel wirkt deshalb derzeit nicht widerlegt, aber auch nicht sicher als Fehler belegt.",
+ "action": "kennzeichnen",
+ "confidence": 0.61,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 683
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Kennzahl ist eine Stromrate pro MWh und bezieht sich hier offenbar auf Eigenanlagen mit 42.309 MWh, nicht auf das Geschäftsmodell der Firma als Nicht-Versorger. Laut allgemeinem Wissen ist so eine eGRID-/Versorger-Logik für Nicht-Versorger oft nur eine Aktivitäts- oder Anlagenkennzahl und darf nicht als Firmen-Emissionsintensität verrechnet werden.",
+ "action": "unterdruecken",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 597,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 734
+ }
+}

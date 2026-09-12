@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen zwar 3 zugeordnete Anlagen, aber nur den Anlagentyp „Supplier“, eine gelieferte Emissionsmenge von 0 t, im Vorjahr ebenfalls 0 t und keine belastbare Scope-1-Zeitreihe. Damit ist der Wert nicht als nachgewiesene emissionsfreie Scope-1-Menge belegt, sondern wirkt wie ein fehlender bzw. nicht nutzbarer Messwert, der als 0 übernommen wurde. Der Hinweis auf eine mögliche Off-Ramp passt dazu, ist durch die Belege aber nicht direkt dokumentiert.",
+ "action": "unterdruecken",
+ "confidence": 0.77,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 582,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 684,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1266
+ }
+}

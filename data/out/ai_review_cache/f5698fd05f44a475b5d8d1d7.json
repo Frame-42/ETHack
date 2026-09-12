@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel passt nicht zu den vorliegenden Belegen: Es ist nur ein eigener Fall mit dem Wert 1 genannt, aber kein Hinweis auf eine Nachzahlung, Betroffene oder eine Feststellung. Damit stützen die Belege eher, dass der Fall der Kennzahl falsch zugeordnet oder unzureichend spezifiziert ist. Ob das Verfahren tatsächlich ohne Befund war, lässt sich aus dem Paket nicht sicher belegen.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 127,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 712
+ }
+}

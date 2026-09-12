@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber für 2020 und die Folgejahre durchgehend exakt 0 t. Der Anlagentyp ist „Supplier“; damit ist nicht belegt, dass eigene Scope-1-Emissionen emissionsfrei waren. Der Nullwert wirkt daher wie ein Platzhalter für fehlende bzw. nicht gemessene Emissionsmenge und sollte nicht als echte 0 t verrechnet werden.",
+ "action": "unterdruecken",
+ "confidence": 0.82,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 615,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 630,
+  "output_tokens_details": {
+   "reasoning_tokens": 491
+  },
+  "total_tokens": 1245
+ }
+}

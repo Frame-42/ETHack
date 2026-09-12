@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl ist für eine Health-Care-Firma nicht automatisch falsch. Laut Beleg gibt es 1 Kraftwerk und einen Strombezug von 114.557,099 MWh; damit kann eine CO2-/MWh-Rate grundsätzlich die firmeneigenen Energieanlagen bzw. den Betriebsstrom abbilden. Ohne Hinweis, dass die Rate ein Versorger-Geschäftsmodell statt der Firma misst, ist der Wert als ungewöhnlich, aber plausibel zu behandeln.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 595,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 738
+ }
+}

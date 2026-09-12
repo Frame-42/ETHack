@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen für Smurfit Westrock eine Strom-/CO2-Rate mit 1.466.293,339 MWh und 5 Kraftwerken. Das spricht dafür, dass hier Eigenanlagen bzw. eigene Energieerzeugung erfasst werden und nicht das Geschäftsmodell eines Versorgers. Laut allgemeinem Wissen ist das bei Industrieunternehmen möglich und der Wert kann die Firma dann trotzdem richtig beschreiben, auch wenn er ungewöhnlich wirkt.",
+ "action": "behalten",
+ "confidence": 0.63,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 596,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 731
+ }
+}

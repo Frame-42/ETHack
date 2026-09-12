@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen nur Programme ohne CO2-Pflicht (CSOSG2, MATS, SIPNOX) für die genannten Anlagen. Damit ist ein Wert von 0 t CO2 zwar erklärbar, aber als firmierter Messwert irreführend, weil die Größe laut Fallbeschreibung nicht gemessen wird. Die Angabe darf so nicht als CO2-Messwert der Firma verrechnet werden.",
+ "action": "unterdruecken",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 634,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 133,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 767
+ }
+}

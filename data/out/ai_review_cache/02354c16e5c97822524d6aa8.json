@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für 2022 eine gemeldete Scope-1-Menge von 0 t und über mehrere Jahre durchgehend 0 t, obwohl Anlagen zugeordnet sind. Das kann auf eine Programmlogik hindeuten, die diese Größe hier nicht erfasst, oder auf eine zulässige Nullmeldung nach allgemeinem Wissen zu Ausnahmen wie 40 CFR 98.2(i). Aus den vorliegenden Belegen allein lässt sich aber nicht nachweisen, dass 0 hier ‚nicht gemessen‘ statt ‚tatsächlich 0‘ bedeutet.",
+ "action": "kennzeichnen",
+ "confidence": 0.76,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 637,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 169,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 806
+ }
+}

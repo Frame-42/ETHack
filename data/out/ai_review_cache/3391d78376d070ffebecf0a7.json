@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2023 ist exakt 0 t gemeldet, obwohl eine Anlage zugeordnet ist. Die Zeitreihe zeigt zudem ab 2021 dauerhaft 0, während 2018–2020 positive Scope‑1-Werte vorliegen. Das passt zu 'nicht gemessen' bzw. nicht berichtet statt zu emissionsfrei; laut allgemeinem Wissen kann ein solcher 0‑Wert in Meldeprogrammen ein Off-Ramp/fehlende Messung bedeuten.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 142,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 780
+ }
+}

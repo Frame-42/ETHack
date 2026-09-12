@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Der angegebene Wert 60 liegt nur innerhalb eines Rangbands von 20 bis 100. Laut Beleg wird damit keine eindeutige Einordnung über die Firma selbst gezeigt, sondern nur ein Bereich. Ein Median-/P50-Wert suggeriert hier mehr Genauigkeit, als die Quelle hergibt.",
+ "action": "kennzeichnen",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 108,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 694
+ }
+}

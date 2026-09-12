@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Zuordnung wirkt zeitlich falsch: Die Belege nennen WestRock als Eigentümer, die Firma ist aber hier Smurfit Westrock; laut allgemeinem Wissen entstand Smurfit Westrock erst 2024 aus einer Fusion. Ein Wert für 2019 darf daher nicht ohne Weiteres der heutigen Firma SW zugerechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 607,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 117,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 724
+ }
+}

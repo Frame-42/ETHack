@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen nur eine starke Abweichung zwischen Team-Datei (12 Verfahren) und eigenem Namensabgleich (1 Fall) bei niedriger Team-Konfidenz. Das spricht für ein mögliches Zuordnungsproblem, etwa durch Namensähnlichkeit oder Franchise-/Töchterzuordnung, beweist es aber nicht. Da keine Rohdaten oder Falllisten vorliegen, lässt sich nicht sicher sagen, ob die 12 falsch sind oder ob der eigene Abgleich Fälle verfehlt hat.",
+ "action": "kennzeichnen",
+ "confidence": 0.82,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 556,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 704
+ }
+}

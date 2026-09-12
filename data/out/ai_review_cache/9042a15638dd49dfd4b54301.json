@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2022 eine zugeordnete Anlage, aber keine gelieferte Scope‑1-Menge (0,0 t). Da die Kennzahl als Firmenmesswert verrechnet wird, ist ein exakter Nullwert hier nach der Regel eher ein Platzhalter für 'nicht gemessen/fehlend' als ein belastbarer Emissionswert. Die durchgehende 0,0‑Zeitreihe stützt zusätzlich, dass hier keine echte Emissionsmessung vorliegt. Laut allgemeinem Wissen kann so etwas bei Meldeprogrammen als Off-Ramp auftreten; als Messwert ist 0 dennoch irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 695,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 178,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 873
+ }
+}

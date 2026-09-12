@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Belege zeigen zwar, dass mehrere Pioneer-Gesellschaften vollständig im Datensatz der Firma XOM geführt werden. Der Fallhinweis nennt aber eine Zuordnung für 2021, obwohl die Übernahme von Pioneer durch ExxonMobil erst im Mai 2024 erfolgte. Laut allgemeinem Wissen ist diese zeitliche Zuordnung für 2021 daher irreführend; die Werte dürfen so nicht ExxonMobil zugerechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 573,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 710
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2021 ist exakt 0 t Scope 1 gemeldet, obwohl eine Anlage zugeordnet ist und im Vorjahr noch 12.121,504 t ausgewiesen wurden. Die anschließende Zeitreihe bleibt ebenfalls bei 0. Das passt zu 'nicht gemessen' bzw. fehlender Meldung und nicht zu echten emissionsfreien Aktivitäten. Laut allgemeinem Wissen kann so ein 0-Wert im Rahmen von Meldeprogrammen einen Off-Ramp/Reporting-Ausfall abbilden.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 639,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 788
+ }
+}

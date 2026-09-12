@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege stützen die Regel nicht: Es ist nur ein Programm ohne CO2-Pflicht genannt (SIPNOX), aber daraus folgt nicht, dass die CO2-Größe nicht gemessen oder zwingend 0 ist. Ein 0-Wert kann hier nicht allein mit den vorliegenden Angaben begründet werden; die Ursache \"Programm misst Größe nicht\" ist aus den Belegen nicht nachweisbar. Laut allgemeinem Wissen können Programme unterschiedliche Berichtspflichten haben, aber dafür braucht es die konkrete Programmlogik der Anlage bzw. Rohdaten.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 550,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 160,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 710
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen zugeordnete Anlagen, aber über alle Jahre exakt 0 t und keine gelieferte Emissionsmenge. Bei Anlagentyp „Supplier“ ist das kein belastbarer Nachweis für emissionsfreie Scope-1-Aktivität; laut allgemeinem Wissen zu GHGRP/40 CFR 98.2(i) können solche Nullwerte durch Off-Ramp/Nichtmeldung der Menge entstehen. Der Wert wäre daher als 0 irreführend und sollte nicht als echte Emissionsmenge verrechnet werden.",
+ "action": "unterdruecken",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 637,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 509,
+  "output_tokens_details": {
+   "reasoning_tokens": 351
+  },
+  "total_tokens": 1146
+ }
+}

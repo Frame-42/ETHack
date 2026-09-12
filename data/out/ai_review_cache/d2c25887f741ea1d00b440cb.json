@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Regel ist plausibel: Bei einem Nicht-Versorger wie Waste Management kann eine Stromrate aus Eigenanlagen stammen und das Geschäftsmodell nicht als Stromerzeuger abbilden. Die Belege zeigen 1 Kraftwerk und 43.996 MWh, also eine echte, wenn auch begrenzte Eigenanlage. Ein Wert von 0,0 t CO2 pro MWh ist dabei nicht automatisch falsch; ohne Emissionsbeleg bleibt unklar, ob es sich um emissionsfreien Strom, Rundung oder eine unvollständige Erfassung handelt.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 531,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 158,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 689
+ }
+}

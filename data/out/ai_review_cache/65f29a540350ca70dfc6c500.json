@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen zwar 3 zugeordnete Anlagen, aber nur den Typ „Supplier“ und eine gelieferte Menge von 0,0 t; eine berichtete Scope-1-Emissionsmenge ist nicht belegt. Die durchgehend 0,0 t in der Zeitreihe erklären den Wert nicht als emissionsfrei, sondern sprechen dafür, dass hier fehlende bzw. nicht gemessene Scope-1-Emissionen als 0 übernommen wurden. Laut allgemeinem Wissen messen Supplier-Meldungen in solchen Programmen nicht zwingend die direkten Standortemissionen der Firma.",
+ "action": "unterdruecken",
+ "confidence": 0.82,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 637,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 674,
+  "output_tokens_details": {
+   "reasoning_tokens": 504
+  },
+  "total_tokens": 1311
+ }
+}

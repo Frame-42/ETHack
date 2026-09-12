@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen nur, dass im Paket keine eigenen Fälle mit Nachzahlung oder Betroffenen erfasst sind (eigene_faelle = 0). Ein Wert von 1 bei whd_cases ist damit für diese Firma in diesem Datensatz nicht plausibel und spricht eher für eine Fehlzuordnung oder falsche Zuordnung der Kennzahl. Ob tatsächlich ein Verfahren existierte, lässt sich aus den Belegen nicht belegen.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 584,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 132,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 716
+ }
+}

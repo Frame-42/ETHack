@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2019 ist trotz zugeordneter Anlage ein exakter Wert von 0 t gemeldet, obwohl im Vorjahr 56.175,148 t und in den Folgejahren ebenfalls wieder 0 t bzw. keine abweichende Begründung sichtbar sind. Die Belege stützen damit die Deutung, dass 0 hier eher „nicht gemeldet/nicht gemessen“ als echte Emissionsfreiheit bedeutet. Laut allgemeinem Wissen kann in Meldeprogrammen ein Off-Ramp zu solchen Nullwerten führen, wenn keine Emissionsmenge geliefert wird.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 165,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 803
+ }
+}

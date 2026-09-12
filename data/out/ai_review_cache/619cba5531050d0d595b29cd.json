@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege stützen, dass die Anlagen nur in Programmen ohne CO2-Pflicht melden (CSOSG2E, MATS, SIPNOX). Laut allgemeinem Wissen messen solche Programme keine CO2-Emissionen als Pflichtgröße. Ein Wert von 0 t CO2 ist daher als Messwert über die Firma irreführend und nicht plausibel als echte Null zu verrechnen.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 636,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 131,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 767
+ }
+}

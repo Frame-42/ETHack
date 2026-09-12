@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen einen eigenen Fall bei hoher Team-Konfidenz. Damit ist die naheliegende Fehlzuordnung nicht belegt. Laut allgemeinem Wissen können WHD-/Enforcement-Daten auch abgeschlossene Verfahren ohne Nachzahlung oder Betroffene als Fall zählen; die Kennzahl misst die Fallanzahl, nicht zwingend einen festgestellten monetären Verstoß.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 642,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1171
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen den Verdacht auf eine falsche Zuordnung: Für United Rentals wurde im eigenen Namensabgleich nur 1 Fall gefunden, während die Team-Datei 20 Verfahren nennt. Die genannten Treffer wie „Uriah Food Mart“ oder „Uriah Hill Elementary School“ wirken nach allgemeinem Verständnis wie Namensähnlichkeiten ohne firmliche Verbindung. Damit spricht vieles dafür, dass hier Verfahren über Namensteile oder fremde Betriebe fälschlich zugeordnet wurden.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 582,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 147,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 729
+ }
+}

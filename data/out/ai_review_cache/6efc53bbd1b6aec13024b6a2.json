@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen nur, dass für Avery Dennison 2024 ein einzelner WHD-Fall erfasst wurde. Ob dieser Fall tatsächlich ohne Nachzahlung und ohne Betroffene war, geht daraus nicht hervor. Daher lässt sich nicht sicher sagen, ob die Regel zutrifft oder ob der Fall nur anders zugeordnet wurde.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 108,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 694
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege stützen die Regel nicht: Es ist nur eine Anlage genannt, aber keine direkte Zuordnung zur Firma Weyerhaeuser. Außerdem zeigt das Paket nur das Programm SIPNOX und 0 MWh Last; daraus folgt nicht, dass CO2 systematisch nicht gemessen wird. Nach allgemeinem Wissen können Programme ohne CO2-Pflicht zwar zu 0 gemeldeten Emissionen führen, hier reicht der Nachweis aber nicht aus. Der Wert sollte daher nicht allein auf dieser Basis als 0 t CO2 übernommen werden.",
+ "action": "kennzeichnen",
+ "confidence": 0.77,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 554,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 158,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 712
+ }
+}

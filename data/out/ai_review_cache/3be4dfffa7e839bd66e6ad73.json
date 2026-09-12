@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl ist bei einer Nicht-Versorger-Firma wie Ecolab plausibel, weil sie laut Fallregel die Emissionen bzw. Stromrate von Eigenanlagen abbilden kann und nicht das eigentliche Geschäftsmodell. Die Belege zeigen 1 Kraftwerk und 16.715 MWh, also ein reales, aber kleines Eigenanlagen-Set; ein Wert von 0,295 t CO2/MWh wirkt dafür nicht auffällig. Die Regel greift hier eher als Strukturhinweis als wegen eines Fehlers.",
+ "action": "behalten",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 536,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 153,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 689
+ }
+}

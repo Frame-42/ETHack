@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2019 eine zugeordnete Anlage, aber gelieferte Emissionsmenge 0, obwohl im Vorjahr 13.247,4 t angegeben wurden und die Folgejahre ebenfalls 0 sind. Das passt zu einem fehlenden bzw. nicht gemessenen Wert, nicht zu emissionsfrei. Laut allgemeinem Wissen kann ein 0-Wert in solchen Meldekontexten auch ein Platzhalter für nicht berichtete Mengen sein.",
+ "action": "korrigieren",
+ "confidence": 0.96,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 639,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 782
+ }
+}

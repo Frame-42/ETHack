@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Es liegen keine Belege vor, die klären, ob das SBTi-Nahziel mit Zieljahr 2020 für das Datenjahr 2026 erreicht, verfehlt, veraltet übernommen oder falsch erfasst wurde. Der Wert ist auffällig, aber ohne Quellnachweis nicht nachweislich falsch.",
+ "action": "kennzeichnen",
+ "confidence": 0.8,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 510,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 281,
+  "output_tokens_details": {
+   "reasoning_tokens": 172
+  },
+  "total_tokens": 791
+ }
+}

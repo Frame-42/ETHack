@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Es gibt nur die Angabe, dass ein Fall gezählt wurde. Die Regel behauptet, es handle sich entweder um ein Verfahren ohne Feststellung oder um eine Fehlzuordnung, aber die Belege enthalten weder Details zum Verfahren noch zur Frage, ob Nachzahlung oder Betroffene vorlagen. Damit lässt sich die Auffälligkeit nicht belastbar prüfen.",
+ "action": "kennzeichnen",
+ "confidence": 0.76,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 112,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 641
+ }
+}

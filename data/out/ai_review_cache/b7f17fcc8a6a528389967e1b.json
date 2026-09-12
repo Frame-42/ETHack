@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege zeigen nur ein Rangband von 20 bis 100 (P10/P90). Ein Medianwert von 73,33 kann daraus nicht als echte Einzelmessung über die Firma abgeleitet werden; er suggeriert eine Präzision bzw. Einordnung, die die Rangband-Information nicht trägt. Laut allgemeinem Wissen ist das ein Definitionsproblem des Kennwerts, nicht zwingend ein Firmenereignis.",
+ "action": "kennzeichnen",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 591,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 133,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 724
+ }
+}

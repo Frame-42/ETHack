@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen nicht, dass der Wert als Kombination verschiedener Zieltypen falsch zugeordnet ist. Laut Regel bedeutet \"Commitment removed\" nur, dass ein Ziel nicht binnen 24 Monaten eingereicht wurde. Der Wert 1.0 ist damit als Statuswert grundsätzlich plausibel; aus dem Paket geht nicht hervor, dass hier Validierung und Rückzug gleichzeitig in einer Kennzahl vermischt wurden. Die konkrete Ursache \"verschiedene Zieltypen\" ist mit den Belegen nicht belegt.",
+ "action": "behalten",
+ "confidence": 0.74,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 594,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 737
+ }
+}

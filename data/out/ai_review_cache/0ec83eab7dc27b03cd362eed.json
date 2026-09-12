@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen nicht, dass hier zwei Zieltypen vermischt werden. Laut Regel bedeutet „Commitment removed“ nur, dass ein Ziel/Commitment nicht innerhalb von 24 Monaten eingereicht wurde. Der Vorwurf „validiert und zurückgezogen zugleich“ ist mit dem Paket nicht belegt und spricht eher für eine falsche Zuordnung der Kennzahl als für einen inhaltlichen Messfehler. Die Zahl 1.0 kann daher nicht wegen der behaupteten Zieltyp-Mischung als fehlerhaft gelten.",
+ "action": "kennzeichnen",
+ "confidence": 0.83,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 538,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 150,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 688
+ }
+}

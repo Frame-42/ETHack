@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Der eigene Namensabgleich findet 0 passende WHD-Verfahren und es liegen keine Handelsnamen mit Ticker-Bezug vor; das stützt den Verdacht einer falschen Zuordnung über Namensteile oder nicht zurechenbare Betriebe. Da die Team-Datei aber 10 Fälle mit hoher Konfidenz nennt und keine Rohfallliste vorliegt, ist der Wert nicht nachweislich falsch.",
+ "action": "kennzeichnen",
+ "confidence": 0.62,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 556,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 409,
+  "output_tokens_details": {
+   "reasoning_tokens": 281
+  },
+  "total_tokens": 965
+ }
+}

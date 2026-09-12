@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Kennzahl ist laut Beleg eine Statusgröße: „Commitment removed“ bedeutet, dass ein Ziel nicht binnen 24 Monaten eingereicht wurde. Der Falltext nennt dagegen einen Mix aus verschiedenen Zieltypen („Nahziel gesetzt, Netto-null-Zusage zurückgezogen“). Das ist eine andere Zuordnung und wird durch den Beleg nicht gestützt. Auf Basis der Belege darf der Wert so nicht als vermischter Messwert verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 596,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 136,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 732
+ }
+}

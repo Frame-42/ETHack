@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege zeigen, dass für Pfizer als Health-Care-Firma ein Stromwert aus einem eigenen Kraftwerks-/Eigenanlagen-Kontext vorliegt (1 Kraftwerk, 72.836,877 MWh). Laut allgemeinem Wissen misst eine eGRID-basierte Stromrate typischerweise die Emissionsintensität des Strombezugs bzw. des Versorgungs-/Anlagentypus und nicht das eigentliche Geschäftsmodell eines Nicht-Versorgers. Daher ist der Wert nicht offensichtlich falsch, aber für die Branchenzuordnung potenziell irreführend und sollte gekennzeichnet werden.",
+ "action": "kennzeichnen",
+ "confidence": 0.79,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 536,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 168,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 704
+ }
+}

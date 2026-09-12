@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Anlage ist im Kontext von RGGI/SIPNOX auffällig, weil diese Programme laut allgemeinem Wissen CO2-relevante Meldungen bzw. Abdeckung betreffen. Ein Wert von 0 t CO2 bei gleichzeitig gemeldeter Last spricht eher für eine falsche Zuordnung oder fehlende Emissionszuweisung als für einen plausiblen Nullwert durch Stilllegung oder Biomasse. Die Belege nennen jedoch keine Stilllegung, keine Biomasse und keine belastbare Erklärung für 0 t.",
+ "action": "korrigieren",
+ "confidence": 0.8,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 552,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 700
+ }
+}

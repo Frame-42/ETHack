@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege stützen keinen eigenen Fall der Firma (eigene_faelle = 0). Ein Wert von 1 für Verfahren ohne Betroffene/Nachzahlung ist damit als Messwert über die Firma nicht sauber verrechenbar; wahrscheinlich steht hier eine nicht passende Zuordnung oder ein Platzhalterwert. Die Regel nennt zwar 'Verfahren ohne Feststellung oder Fehlzuordnung', aber aus dem Paket ist nur sicher: Es gibt keinen belegten eigenen Fall.",
+ "action": "korrigieren",
+ "confidence": 0.92,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 139,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 724
+ }
+}

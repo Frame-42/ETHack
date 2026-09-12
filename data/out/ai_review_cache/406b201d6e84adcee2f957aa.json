@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen eine Zuordnung von Pioneer Natural Resources (und Tochtergesellschaften) zu XOM. Laut allgemeinem Wissen erfolgte die Übernahme von Pioneer durch ExxonMobil aber erst im Mai 2024. Für das Berichtsjahr 2020 ist diese Zuordnung daher zeitlich nicht passend und kann den Wert irreführend ExxonMobil zuschreiben.",
+ "action": "korrigieren",
+ "confidence": 0.96,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 576,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 119,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 695
+ }
+}

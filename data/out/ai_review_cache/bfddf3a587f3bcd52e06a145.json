@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel passt nicht zu den Belegen: Es liegen keine firmenspezifischen Fälle vor (eigene_faelle=0), trotzdem ist für 2024 ein Wert von 3 bei whd_cases erfasst. Das spricht eher für eine Fehlzuordnung oder ein Zuordnungsproblem als für einen echten Firmenmesswert. Aus dem Paket geht nicht hervor, dass Emerson Electric drei solche Verfahren hatte.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 128,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 714
+ }
+}

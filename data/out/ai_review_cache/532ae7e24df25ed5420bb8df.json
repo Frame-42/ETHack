@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen nur, dass der eigene Namensabgleich 0 Treffer liefert, während die Team-Datei 88 Verfahren nennt. Das spricht für ein mögliches Zuordnungsproblem über Namensvarianten, Tochter-/Franchise-Strukturen oder einen falsch gemappten Datensatz, belegt es aber nicht eindeutig. Ohne Rohdaten oder die konkrete Zuordnungslogik bleibt offen, ob die 88 Fälle der Firma korrekt zugeordnet sind.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 556,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 691
+ }
+}

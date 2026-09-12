@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Es liegt nur ein eigener Fallwert von 1 vor. Die Belege nennen aber weder eine Feststellung/Nachzahlung noch Betroffene. Damit ist weder ein klarer Fehler noch eine sichere Plausibilisierung möglich. Laut Belegpaket kann die Abweichung auch einfach auf fehlende Detailangaben im Rohdatensatz beruhen.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 527,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 111,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 638
+ }
+}

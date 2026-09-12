@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Kennzahl ist eine Stromrate für eine Nicht-Versorger-Firma aus der Branche Materials. Laut allgemeinem Wissen misst eGRID bei solchen Firmen typischerweise die Emissionen der eigenen Strom-/Kraftwerksanlagen, nicht das Geschäftsmodell der Gesamtfirma. Die Belege zeigen zudem eigene Kraftwerke und eine Strommenge von 804533,03 MWh. Als Firmenmesswert ist der Wert damit irreführend bzw. nicht passend.",
+ "action": "kennzeichnen",
+ "confidence": 0.89,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 595,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 141,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 736
+ }
+}

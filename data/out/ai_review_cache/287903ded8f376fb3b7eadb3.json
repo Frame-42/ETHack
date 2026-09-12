@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel ist plausibel: Für 'Verfahren ohne Nachzahlung und ohne Betroffene' wäre ein Wert von 3 als Messwert über die Firma nur dann richtig, wenn es tatsächlich drei solche Fälle gab. Die Belege nennen aber nur 'eigene_faelle: 1' und liefern keinen Hinweis auf drei Verfahren. Damit spricht das Paket eher für eine Fehlzuordnung oder ein Zuordnungsproblem als für einen echten Wert.",
+ "action": "korrigieren",
+ "confidence": 0.84,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 133,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 718
+ }
+}

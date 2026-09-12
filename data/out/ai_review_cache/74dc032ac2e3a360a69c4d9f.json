@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen nur eine zugeordnete Anlage vom Typ „Supplier“ und für 2023 wie auch die Vorjahre jeweils 0,0 t. Es gibt keinen belegten positiven Emissionsmesswert; der Nullwert steht damit eher für keine verwertbare gemeldete Emissionsmenge als für nachweislich emissionsfreie Scope-1-Emissionen. Als Unternehmens-Scope-1-Wert wäre 0 t daher irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.82,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 636,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 660,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1296
+ }
+}

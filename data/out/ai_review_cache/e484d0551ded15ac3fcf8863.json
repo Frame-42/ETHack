@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen zwar eine zugeordnete Anlage und für 2019 einen Wert von 0 t, aber es gibt keine Angabe, ob 0 hier 'nicht gemessen' oder tatsächlich emissionsfrei bedeutet. Die durchgehende 0-Zeitreihe von 2018 bis 2023 spricht eher für ein Erfassungs- oder Zuordnungsproblem, beweist es aber nicht. Laut allgemeinem Wissen können Off-Ramp-/Ausnahmeregeln dazu führen, dass keine Menge gemeldet wird, wenn die Anlage im Programm nicht vollständig erfasst wird. Dafür reichen die Belege hier jedoch nicht aus.",
+ "action": "kennzeichnen",
+ "confidence": 0.7,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 633,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 175,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 808
+ }
+}

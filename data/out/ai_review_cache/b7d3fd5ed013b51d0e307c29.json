@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Basis ist instabil: Die Anlagenzahl springt von 60 (2018) auf 14 (2019–2021) und dann auf 24 (2022–2023), während die Scope-1-Werte teils auf 0 fallen und später wieder steigen. Das spricht laut allgemeinem Wissen bei Versorgern für einen Struktur- bzw. Konzernumbau oder eine veränderte Abgrenzung der berichteten Anlagen, nicht für einen reinen Emissionstrend. Die angegebene CAGR/Basisjahres-Quote ist daher als Trendkennzahl irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 673,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 173,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 846
+ }
+}

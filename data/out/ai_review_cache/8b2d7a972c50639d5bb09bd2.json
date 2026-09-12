@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen nur die Anlage \"Celanese Acetate LLC\" und das Programm \"SIPNOX\"; eine CO2-Pflicht ist damit laut Fallbeschreibung nicht gegeben. Wenn das Programm die Größe nicht misst bzw. keine CO2-Erfassung vorsieht, kann ein Wert von 0 t CO2 plausibel sein. Aus den Belegen allein ergibt sich kein klarer Fehler.",
+ "action": "behalten",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 550,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 129,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 679
+ }
+}

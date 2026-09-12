@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen, dass hier ein Nicht-Versorger aus der Branche Consumer Staples mit eigenen Kraftwerken und gemeldeter Strommenge erfasst ist. Laut allgemeinem Wissen misst eine solche Stromrate bei Nicht-Versorgern typischerweise Eigenanlagen bzw. betriebliche Energieerzeugung und nicht das eigentliche Geschäftsmodell. Der Wert kann daher als Messwert über die Firma ungewöhnlich, aber nicht automatisch falsch sein.",
+ "action": "kennzeichnen",
+ "confidence": 0.83,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 599,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 736
+ }
+}

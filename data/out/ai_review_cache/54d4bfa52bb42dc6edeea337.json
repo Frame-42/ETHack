@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Belege zeigen zwar eine Zuordnung von Pioneer Natural Resources zu XOM, aber für das Berichtsjahr 2020 ist diese Zuordnung laut Fallbeschreibung zeitlich falsch, weil die Übernahme erst 2024 erfolgte. Damit darf der Wert nicht so als Messwert für ExxonMobil 2020 verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 634,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 115,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 749
+ }
+}

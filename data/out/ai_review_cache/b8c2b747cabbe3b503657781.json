@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen, dass AbbVie als Health-Care-Unternehmen in der eGRID-Logik nur ein kleines eigenes Stromaufkommen aus 1 Anlage mit 114557,099 MWh hat. Für einen Nicht-Versorger kann eine Stromrate daher Eigenanlagen bzw. Standortbetrieb abbilden und nicht das eigentliche Geschäftsmodell. Das wirkt ungewöhnlich, ist aber durch die Branchenstruktur plausibel; aus den Belegen ergibt sich kein klarer Fehler.",
+ "action": "behalten",
+ "confidence": 0.82,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 537,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 140,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 677
+ }
+}

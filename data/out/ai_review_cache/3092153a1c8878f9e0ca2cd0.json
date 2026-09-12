@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl ist für ein Nicht-Versorgungsunternehmen grundsätzlich auffällig, aber die Belege nennen ein Kraftwerk und eine Strommenge von 4.689.366 MWh. Das spricht dafür, dass die Rate auf Eigenanlagen bzw. interne Energieerzeugung zurückgeht und nicht auf ein Versorger-Geschäftsmodell. Laut allgemeinem Wissen können Industrieunternehmen solche Anlagen betreiben; die Regel greift daher eher als Hinweis auf Branchenstruktur als auf einen Fehler.",
+ "action": "kennzeichnen",
+ "confidence": 0.84,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 536,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 679
+ }
+}

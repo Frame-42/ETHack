@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen zwar eine zugeordnete Anlage, aber nur als \"Supplier\" und mit gelieferter Menge 0 t; die Scope-1-Zeitreihe steht durchgehend auf 0. Das passt eher zu einer nicht gemessenen bzw. nicht relevanten Erfassung als zu einem echten emissionsfreien Messwert. Nach allgemeinem Wissen können solche Programme 0 als Platzhalter für nicht erhobene Werte verwenden; als Firmen-Messwert ist das hier irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 692,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 150,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 842
+ }
+}

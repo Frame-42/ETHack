@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen für OGE 14 Kraftwerke und eine gemeldete Strommenge von 16.398.581,289 MWh. Das passt zu einer eigenen Erzeugungs- bzw. Anlagenstruktur und nicht zwingend zu einer Versorgerrolle. Laut allgemeinem Wissen können solche Strom-/Emissionsraten bei Nicht-Versorgern reale Eigenanlagen abbilden und dann als Messwert über die Firma grundsätzlich plausibel sein. Die Regel allein beweist keinen Fehler; die Zahl ist nur für das Geschäftsmodell ungewöhnlich.",
+ "action": "behalten",
+ "confidence": 0.68,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 592,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 747
+ }
+}

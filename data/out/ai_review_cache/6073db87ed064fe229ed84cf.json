@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen für die Anlagen nur das Programm SIPNOX und keinen Stromverbrauch (last_mwh = 0,0). Das stützt die Annahme, dass die CO2-Größe in diesem Programm nicht gemessen bzw. nicht berichtet wird. Laut allgemeinem Wissen können solche Programme Datenfelder für CO2 leer lassen; als Firmen-Messwert ist 0 t CO2 dann irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 610,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 134,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 744
+ }
+}

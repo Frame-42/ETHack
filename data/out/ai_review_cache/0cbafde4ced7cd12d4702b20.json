@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Im Belegpaket steht nur, dass es 2024 vier WHD-Verfahren gibt und dass es eigene Fälle gibt. Daraus folgt weder, dass die vier Verfahren ohne Nachzahlung und ohne Betroffene tatsächlich ein Fehler sind, noch dass es sich um eine Fehlzuordnung handelt. Für die Regel F11 fehlt der direkte Nachweis, ob die Verfahren eine Feststellung hatten oder ob die Zuordnung auf Rohdatenebene falsch ist.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 131,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 660
+ }
+}

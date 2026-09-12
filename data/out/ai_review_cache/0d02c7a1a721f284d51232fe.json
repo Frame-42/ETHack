@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl bezieht sich auf eine Stromrate aus Eigenanlagen bzw. gemeldeter Stromerzeugung. Bei einer Firma aus der Branche Materials ist das grundsätzlich nicht automatisch ein Fehler: Solche Unternehmen können eigene Energieanlagen oder Kraft-Wärme-Kopplung betreiben, die in eGRID-/Emissionsdaten auftauchen, ohne dass sie ein Versorger sind. Die Belege zeigen nur 2 Kraftwerke und 804533,03 MWh, also eher einen operativen Eigenanlagenkontext als ein offensichtliches Fehlverhalten. Die Regel ist daher nicht eindeutig bestätigt.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 537,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 166,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 703
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Belege sprechen dafür, dass die Zuordnung zeitlich nicht passt: Im Rohmaterial taucht WestRock als eigener Eigentümer auf, die Firma ist aber als Smurfit Westrock bezeichnet. Laut allgemeinem Wissen entstand Smurfit Westrock erst 2024 durch die Fusion; ein Wert für 2020 darf daher nicht einfach der heutigen Einheit zugerechnet werden. Als Messwert über die Firma ist das so irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 607,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 139,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 746
+ }
+}

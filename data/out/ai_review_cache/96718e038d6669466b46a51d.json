@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für Carrier Global in 2021 einen Wert von 0 t bei zugeordneten Anlagen und eine durchgehend nullige Scope-1-Zeitreihe über 2018–2023. Das spricht eher für eine systematische Nichtmessung bzw. Nichtberichterstattung der Größe im Programm als für einen echten Emissionswert. Laut allgemeinem Wissen können in manchen Meldekontexten Nullwerte auch 'nicht gemessen' statt 'emissionsfrei' bedeuten. Ein Nachweis, dass der Wert zwingend falsch ist, liegt hier aber nicht vor.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 636,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 166,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 802
+ }
+}

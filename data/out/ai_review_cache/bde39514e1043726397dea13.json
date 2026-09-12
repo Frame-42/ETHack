@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen 2020 einen exakt null gesetzten Scope-1-Wert trotz zugeordneter Anlage; auch 2018–2021 stehen durchgehend 0 t, während ab 2022 deutliche Mengen gemeldet werden. Das spricht dafür, dass die früheren Nullen fehlende bzw. nicht gelieferte Emissionsmengen codieren und nicht emissionsfreie Tätigkeit. Laut allgemeinem Wissen können GHGRP-Off-Ramps dazu führen, dass Anlagen zeitweise nicht berichten; eine daraus abgeleitete 0 wäre für Berechnungen irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 632,
+  "output_tokens_details": {
+   "reasoning_tokens": 464
+  },
+  "total_tokens": 1270
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen keine Zuordnung von 48 Verfahren zu Southwest Airlines. Der eigene Namensabgleich findet nur 1 Treffer und die genannten Handelsnamen mit 'Luv' passen nicht eindeutig zur Firma; der Verdacht liegt daher auf einer falschen Zuordnung über Namensteile oder Franchise-/Namensähnlichkeiten. Als Messwert über die Firma ist der Wert so nicht belastbar.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 632,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 126,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 758
+ }
+}

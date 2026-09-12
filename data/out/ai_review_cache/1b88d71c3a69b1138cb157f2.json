@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage und dennoch exakt 0 t Scope 1 für 2019; auch die Zeitreihe bleibt durchgehend 0. Das passt zur beschriebenen Situation 'gemeldet, aber nicht gemessen' und ist als Firmen-Messwert irreführend, nicht als echte Emissionsfreiheit zu lesen. Laut allgemeinem Wissen kann ein Wert 0 in solchen Programmen auch bedeuten, dass die Größe nicht berichtet wird.",
+ "action": "kennzeichnen",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 696,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 140,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 836
+ }
+}

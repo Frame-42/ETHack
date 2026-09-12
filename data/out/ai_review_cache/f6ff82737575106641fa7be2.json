@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen zwar eine zugeordnete Anlage vom Typ „Supplier“ und durchgehend 0 t Scope 1 über 2018–2023. Das spricht laut allgemeinem Wissen eher für ein Melde-/Zuordnungsproblem oder dafür, dass das Programm diese Größe für die gemeldete Anlage nicht misst, nicht für emissionsfreie Firma. Als Firmenmesswert ist 0 t hier daher irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.86,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 694,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 136,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 830
+ }
+}

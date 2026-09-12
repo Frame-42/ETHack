@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl ist als Trendmaß auffällig, weil sich die Anlagenbasis im Zeitverlauf verändert (17 auf 34–35 Anlagen). Die Emissionen steigen zwar von 2018 bis 2023 deutlich, aber das Verhältnis zu einer wechselnden Anlagenzahl macht einen CAGR-/Basisjahresvergleich über die Jahre nur eingeschränkt als Firmenmesswert belastbar. Laut allgemeinem Wissen können bei Utilities Zu- und Abgänge von Anlagen die Zeitreihe stark verzerren. Als Messwert über die Firma ist der Wert daher irreführend.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 742,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 155,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 897
+ }
+}

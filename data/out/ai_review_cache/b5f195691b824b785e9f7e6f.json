@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Zuordnung von 'westrock' zu SW ist für 2022 zeitlich nicht plausibel: Im Falltext wird angegeben, dass die Fusion zu Smurfit Westrock erst im Juli 2024 erfolgte. Die Belege zeigen zwar WESTROCK CO/WestRock Corp als Eigentümer, aber keinen Hinweis darauf, dass diese Einheit bereits 2022 unter SW firmierte. Laut allgemeinem Wissen ist das ein zeitlicher Konzernumbau und spricht gegen eine 2022-Zuordnung zu Smurfit Westrock.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 550,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 158,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 708
+ }
+}

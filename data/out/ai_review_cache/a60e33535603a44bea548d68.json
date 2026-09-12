@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Regel sagt, dass ein Verfahren ohne Nachzahlung und ohne Betroffene entweder ein Verfahren ohne Feststellung oder eine Fehlzuordnung sein kann. Im Belegpaket steht nur, dass es einen eigenen Fall gibt (eigene_faelle=1) und die Konfidenz hoch ist. Es fehlen aber die Rohangaben dazu, ob tatsächlich keine Nachzahlung und keine Betroffenen vorliegen oder ob der Fall falsch zugeordnet wurde. Daher lässt sich nicht sicher entscheiden, ob der Wert fehlerhaft ist.",
+ "action": "kennzeichnen",
+ "confidence": 0.77,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 152,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 680
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber für 2023 und die gesamte Zeitreihe 2018–2023 exakt 0 t. Der Anlagentyp ist zudem „Supplier“; daraus ist in den Belegen keine gemessene Scope-1-Emissionsmenge ersichtlich. Damit ist der Wert 0 als Scope-1-Wert irreführend: Er steht hier eher für fehlende bzw. nicht erhobene Emissionsmenge als für nachgewiesene Emissionsfreiheit. Laut allgemeinem Wissen können GHGRP-/Part-98-Konstellationen wie Supplier-Meldungen oder Off-Ramp-Regeln dazu führen, dass keine direkte Emissionsmenge berichtet wird.",
+ "action": "unterdruecken",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 637,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 713,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1350
+ }
+}

@@ -15,6 +15,10 @@ export type MetricValue = {
   sourceUrl: string;
   /** Wahr, wenn der Wert aus dem laufenden, noch unvollstaendigen Jahr stammt. */
   partial?: boolean;
+  /** ok | pruefen -- Werte mit Status "fehler" erscheinen gar nicht */
+  qualityStatus?: string;
+  qualityRule?: string;
+  qualityNote?: string;
 };
 
 export type Company = {

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für die genannten Anlagen ausschließlich das Programm SIPNOX bei zugleich positiver Strom-/Lastangabe von 64.748,81 MWh. Laut allgemeinem Wissen ist SIPNOX ein NOx-bezogenes Meldeprogramm; CO2 ist dort nicht die berichtspflichtige Zielgröße. Ein Wert von 0 t CO2 ist daher nicht als echte Null-Emission zu interpretieren, sondern als nicht gemessene/nicht gemeldete Größe und wäre in Auswertungen irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 574,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 326,
+  "output_tokens_details": {
+   "reasoning_tokens": 168
+  },
+  "total_tokens": 900
+ }
+}

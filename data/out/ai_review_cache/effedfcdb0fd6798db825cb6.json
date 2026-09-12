@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen zwar eine zugeordnete Anlage (1 Supplier), aber für Scope-1 werden durchgehend 0 t ausgewiesen. Laut allgemeinem Wissen kann eine 0 in solchen Meldeprogrammen auch bedeuten, dass die Größe nicht gemessen oder nicht berichtspflichtig ist; als Firmen-Messwert ist das daher irreführend. Die Belege stützen eher ein Melde-/Erfassungsproblem als echte Emissionsfreiheit.",
+ "action": "unterdruecken",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 695,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 838
+ }
+}

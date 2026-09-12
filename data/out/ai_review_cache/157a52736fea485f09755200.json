@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Kennzahl ist laut Beleg als \"Commitment removed\" definiert, also als nicht binnen 24 Monaten eingereichtes Ziel. Der Falltext beschreibt jedoch eine Vermischung verschiedener Zieltypen (Nahziel vs. Netto-null-Zusage), was mit der Regeldefinition nicht übereinstimmt. Auf Basis der Belege ist die Zuordnung der Begründung falsch; der Messwert selbst ist so nicht plausibel belegt.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 599,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 134,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 733
+ }
+}

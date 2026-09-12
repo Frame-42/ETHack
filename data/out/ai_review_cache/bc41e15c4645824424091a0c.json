@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2020 ist für die Firma genau 0 t Scope 1 ausgewiesen, obwohl eine Anlage zugeordnet ist. Die Belege zeigen zugleich eine durchgehend 0,0 t umfassende Zeitreihe ab 2019. Das stützt, dass hier nicht eine echte emissionsfreie Firma gemessen wurde, sondern ein nicht gemeldeter bzw. nicht gemessener Wert vorliegt. Laut allgemeinem Wissen können solche Off-Ramp-/Berichtsgrenzen dazu führen, dass 0 statt fehlend erscheint; als Firmenmesswert ist das irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.96,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 695,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 163,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 858
+ }
+}

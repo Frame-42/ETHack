@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen für die Anlage nur das Programm SIPNOX und keinen CO2-pflichtigen Meldekontext. Damit stützt sich die Null offenbar darauf, dass die Größe dort nicht gemessen wird. Als Messwert über die Firma ist 0 t CO2 so nicht belastbar.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 608,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 110,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 718
+ }
+}

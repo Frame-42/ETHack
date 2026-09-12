@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege zeigen nur die verwendete Regel-Definition („Commitment removed = Ziel nicht binnen 24 Monaten eingereicht“). Daraus lässt sich nicht belegen, dass der Wert inhaltlich falsch ist oder dass hier tatsächlich verschiedene Zieltypen vermischt wurden. Es ist eher ein Definitions-/Zuordnungsproblem als ein nachweislicher Fehler. Laut allgemeinem Wissen können SBTi-Status und Zieltypen getrennte Felder sein, aber dafür fehlen hier die Rohdaten.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 539,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 682
+ }
+}

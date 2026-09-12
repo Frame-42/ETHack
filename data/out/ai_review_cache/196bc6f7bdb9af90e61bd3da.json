@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Regel markiert einen WHD-Fall ohne Nachzahlung und ohne Betroffene. Die Belege nennen aber einen eigenen Fall mit hoher Team-Konfidenz; damit ist keine Fehlzuordnung belegt. Laut allgemeinem Wissen können WHD-Fallzählungen auch Verfahren ohne festgestellte Nachzahlung/Betroffene enthalten. Der Wert ist daher auffällig, aber als Fallzählung plausibel.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 647,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1175
+ }
+}

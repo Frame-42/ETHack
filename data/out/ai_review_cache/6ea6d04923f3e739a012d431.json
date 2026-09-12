@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Regel weist auf ein mögliches Problem hin (Verfahren ohne Nachzahlung und ohne Betroffene = entweder kein Befund oder Fehlzuordnung). Im Belegpaket steht aber nur, dass es 1 eigenen Fall gibt; Angaben zu Nachzahlung, Betroffenen oder zum Inhalt des Verfahrens fehlen. Damit lässt sich nicht prüfen, ob der Wert falsch ist oder ob der Fall korrekt erfasst wurde.",
+ "action": "kennzeichnen",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 531,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 124,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 655
+ }
+}

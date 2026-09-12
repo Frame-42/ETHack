@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Der Wert 60 liegt nur als Median zwischen p10=20 und p90=100 vor. Ein Rangband ist keine einzelne Firmenmessung, sondern eine Verteilungsangabe; als Messwert über die Firma wäre 60 daher irreführend, weil es eine genaue Einordnung suggeriert, die die Belege nicht stützen. Laut allgemeinem Wissen kann ein Median in Rangdaten sinnvoll sein, hier fehlt aber die eindeutige Firmenzuordnung des konkreten Werts.",
+ "action": "kennzeichnen",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 144,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 730
+ }
+}

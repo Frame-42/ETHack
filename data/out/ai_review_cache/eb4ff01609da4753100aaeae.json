@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die Regel: Es gibt 2 WHD-Fälle, aber keine eigenen Fälle und damit keinen Hinweis auf Betroffene oder Nachzahlungen. Ohne weitere Rohdaten ist das als Firmenmesswert sehr wahrscheinlich falsch zugeordnet bzw. nicht sauber belegt. Nach dem Paket spricht eher für 'Verfahren ohne Feststellung' oder eine Fehlzuordnung als für echte betroffene Fälle. Laut allgemeinem Wissen können solche Kennzahlen aus Verfahrensmeldungen stammen, aber hier fehlt die belastbare Zuordnung zu einem echten Firmenfall.",
+ "action": "kennzeichnen",
+ "confidence": 0.86,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 587,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 152,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 739
+ }
+}

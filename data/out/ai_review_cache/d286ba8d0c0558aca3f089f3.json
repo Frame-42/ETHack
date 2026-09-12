@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber eine gelieferte Emissionsmenge von exakt 0 t; zudem ist die gesamte Zeitreihe 2018–2023 exakt 0. Das spricht nicht für tatsächlich emissionsfreie Scope-1-Aktivität, sondern dafür, dass ein fehlender bzw. nicht berichteter Anlagenwert als 0 in die Kennzahl gelangt ist. Laut allgemeinem Wissen können GHGRP/40-CFR-98-Konstellationen wie Off-Ramp-Regeln dazu führen, dass eine Anlage im Bestand erscheint, ohne dass eine aktuelle Emissionsmenge berichtet wird.",
+ "action": "unterdruecken",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 630,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 602,
+  "output_tokens_details": {
+   "reasoning_tokens": 427
+  },
+  "total_tokens": 1232
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "konzernumbau_zeitlich",
+ "explanation": "Die Emissionsreihe springt stark, während sich die Anlagenbasis ändert: von 1 Anlage in 2018–2020 auf 3 Anlagen in 2021–2022. Laut Belegen ist damit die Trend-/CAGR-Kennzahl über eine instabile Basis berechnet und so als Firmenmesswert irreführend. Die Werte können daher nicht ohne Weiteres als sauberer Trend der Firma verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 717,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 138,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 855
+ }
+}

@@ -126,9 +126,12 @@ class EpaCampdFacilitySource(DataSource):
             df = pd.DataFrame(rows)
             keep = [
                 c
+                # programCodeInfo sagt, welches Programm die Anlage meldet.
+                # Reine NOx-Programme (z. B. SIPNOX) verlangen kein CO2 --
+                # dort steht dann 0, obwohl die Anlage emittiert.
                 for c in ("facilityId", "facilityName", "year", "ownerOperator",
                           "sourceCategory", "primaryFuelInfo", "stateCode",
-                          "operatingStatus")
+                          "operatingStatus", "programCodeInfo")
                 if c in df.columns
             ]
             frames.append(df[keep])

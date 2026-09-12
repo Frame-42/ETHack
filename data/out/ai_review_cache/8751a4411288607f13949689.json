@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen nur eine Anlage und das Programm SIPNOX; außerdem ist der Strombezug mit 0 MWh angegeben. Daraus lässt sich nicht nachweisen, dass 0 t CO2 falsch sind. Es ist aber auch nicht belegt, dass die Größe im Programm tatsächlich nicht gemessen wird. Laut allgemeinem Wissen können Programme ohne CO2-Pflicht Emissionen nicht direkt melden, hier reichen die Unterlagen jedoch für eine sichere Zuordnung nicht aus.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 554,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 697
+ }
+}

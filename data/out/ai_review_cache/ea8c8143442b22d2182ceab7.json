@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "null_statt_fehlend",
+ "explanation": "Es liegen keine Belege vor, aus denen sich erkennen ließe, ob das Nahziel der Firma tatsächlich im Jahr 2025 endete, erreicht/verfehlt wurde oder nur nicht aktualisiert ist. Der Wert 2025 bei Berichtsjahr 2026 ist zwar auffällig, aber ohne Ziel- oder Update-Nachweis nicht belastbar prüfbar.",
+ "action": "kennzeichnen",
+ "confidence": 0.86,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 568,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 119,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 687
+ }
+}

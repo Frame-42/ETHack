@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage (1 Supplier), aber für Scope 1 wird exakt 0 t ausgewiesen. Laut Fallbeschreibung entspricht 0 hier eher 'nicht gemessen' als 'emissionsfrei'. Damit darf der Wert so nicht als echter Messwert über die Firma verrechnet werden.",
+ "action": "kennzeichnen",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 673,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 108,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 781
+ }
+}

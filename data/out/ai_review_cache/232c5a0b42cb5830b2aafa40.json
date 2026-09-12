@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für die zugeordnete Anlage nur das Programm SIPNOX und 0 MWh Last. Laut allgemeinem Wissen ist SIPNOX ein NOx-/SIP-Programm und keine CO2-Meldepflicht wie bei CO2-relevanten CAMPD-Programmen. Der Wert 0 t CO2 bedeutet daher nicht nachweislich emissionsfrei, sondern dass CO2 in diesem Programmkontext nicht gemessen bzw. nicht berichtet wird. Als Unternehmens-CO2-Wert wäre er irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 554,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 364,
+  "output_tokens_details": {
+   "reasoning_tokens": 204
+  },
+  "total_tokens": 918
+ }
+}

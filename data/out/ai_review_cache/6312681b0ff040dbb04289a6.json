@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2021 eine zugeordnete Anlage und zugleich exakt 0 t Scope-1 sowie eine durchgehend 0-t-Zeitreihe. Das passt zur Regel: 0 kann hier 'nicht gemessen' bzw. fehlend bedeuten und darf nicht als echter Firmenmesswert verrechnet werden. Laut allgemeinem Wissen kann das bei bestimmten Meldekonstellationen vorkommen, ändert aber nichts daran, dass der Wert als Messwert irreführend ist.",
+ "action": "unterdruecken",
+ "confidence": 0.96,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 684,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 832
+ }
+}

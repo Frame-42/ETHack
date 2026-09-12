@@ -93,6 +93,14 @@ export default async function Page({
                     <tr key={m.metric}>
                       <td>
                         {m.label}
+                        {m.qualityStatus && m.qualityStatus !== "ok" && (
+                          <>
+                            {" "}
+                            <Link href="/pruefung" className="chip warn" title={m.qualityNote}>
+                              prüfen
+                            </Link>
+                          </>
+                        )}
                         <br />
                         <code className="dim">{m.metric}</code>
                       </td>

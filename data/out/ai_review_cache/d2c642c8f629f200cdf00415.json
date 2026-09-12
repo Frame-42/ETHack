@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen zwar zugeordnete Anlagen, aber für 2020 wird exakt 0 t ausgewiesen; zugleich ist die Scope-1-Zeitreihe ab 2019 durchgehend 0. Das passt zu einem fehlenden bzw. nicht gemessenen Wert und nicht zu einer sicher emissionsfreien Situation. Laut allgemeinem Wissen kann bei solchen Meldefällen 0 als Platzhalter für nicht erhobene Emissionen auftreten.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 634,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 771
+ }
+}

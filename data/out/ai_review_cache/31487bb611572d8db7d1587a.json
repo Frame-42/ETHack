@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die Regel, dass hier zwei Verfahren ohne eigene Fälle/Beschäftigte bzw. ohne bestätigten Befund erfasst wurden. Ein Wert von 2 als Messwert über die Firma ist damit wahrscheinlich eine Fehlzuordnung oder Zählung von Verfahren statt von betroffenen Fällen. Laut Belegpaket gibt es keine eigenen Fälle; als Firmenmesswert ist 2 daher irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.84,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 129,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 714
+ }
+}

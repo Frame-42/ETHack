@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege zeigen zwar auffällige OSHA-Nenner: Der Median der Stunden je Beschäftigtem liegt mit 1.510 im unteren, aber noch plausiblen Bereich, und 33% der Meldungen liegen außerhalb des grob erwarteten Korridors. Das reicht allein nicht für einen nachweislich falschen Wert. Laut allgemeinem Wissen prüft OSHA diese Angaben nicht inhaltlich, daher können solche Auffälligkeiten auch aus Melde-/Definitionsunterschieden bei den Stunden resultieren.",
+ "action": "kennzeichnen",
+ "confidence": 0.68,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 618,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 767
+ }
+}

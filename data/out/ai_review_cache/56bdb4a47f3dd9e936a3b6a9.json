@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage vom Typ „Supplier“, aber für 2021 sowie in der gesamten Zeitreihe 2018–2023 exakt 0 t und keine gemeldete Emissionsmenge. Damit ist der Wert als Scope-1-Emissionswert irreführend: Er belegt nicht Emissionsfreiheit, sondern fehlende bzw. nicht verwertbare Mess-/Meldedaten. Laut allgemeinem Wissen können GHGRP-Supplier-/Off-Ramp-Konstellationen erfasst sein, ohne eine direkte Scope-1-Emissionsmenge zu liefern.",
+ "action": "unterdruecken",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 636,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 609,
+  "output_tokens_details": {
+   "reasoning_tokens": 437
+  },
+  "total_tokens": 1245
+ }
+}

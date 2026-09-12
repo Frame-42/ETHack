@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Es liegen nur die Angaben vor, dass ein Fallwert von 1 erfasst wurde und im Paket keine eigenen Fälle dokumentiert sind. Damit lässt sich nicht prüfen, ob es sich um ein Verfahren ohne Feststellung oder um eine Fehlzuordnung handelt. Der Wert ist daher nicht nachweislich falsch, aber auch nicht belegt.",
+ "action": "kennzeichnen",
+ "confidence": 0.67,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 532,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 108,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 640
+ }
+}

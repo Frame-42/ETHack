@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für die Anlage nur das Programm SIPNOX und keine Last (0 MWh). Damit ist der CO2-Wert von 0 t nicht als gemessene Null-Emission belegt, sondern entsteht plausibel daraus, dass in diesem Programmpaket keine CO2-Größe gemeldet bzw. ausgewertet wird. Der Wert wäre für eine CO2-Summe irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 550,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 305,
+  "output_tokens_details": {
+   "reasoning_tokens": 172
+  },
+  "total_tokens": 855
+ }
+}

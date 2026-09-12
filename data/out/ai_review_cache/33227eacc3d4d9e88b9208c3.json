@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl ist hier als Stromrate für eine Health-Care-Firma auffällig, weil sie nach den Belegen auf eigene Energieverwendung bzw. Eigenanlagen bezogen ist und nicht das Geschäftsmodell eines Versorgers beschreibt. Laut allgemeinem Wissen können Nicht-Versorger dennoch Strom- bzw. Emissionsintensitäten für ihre eigenen Standorte melden; als Firmenmesswert ist das daher nicht automatisch falsch, aber die Regel wirkt hier plausibel. Die Belege zeigen nur, dass es 2 Kraftwerke und 101689 MWh gibt; das passt eher zu eigener Betriebsenergie als zu einem Versorgergeschäft.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 599,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 171,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 770
+ }
+}

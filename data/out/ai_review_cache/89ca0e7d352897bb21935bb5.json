@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege sprechen gegen eine saubere Zuordnung: Die Team-Datei nennt 12 Verfahren, der Namensabgleich findet aber nur 1 passenden Fall für M&T Bank. Das ist ein starker Hinweis auf eine falsche Zuordnung, etwa durch Namensähnlichkeit oder fremde Franchise-/Tochterfälle. Als Messwert über die Firma sollte 12 daher nicht unverändert verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 614,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 128,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 742
+ }
+}

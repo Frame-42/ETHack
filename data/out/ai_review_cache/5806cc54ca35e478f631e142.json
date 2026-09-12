@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Kennzahl ist aus den Belegen rechnerisch 4,44 t CO2/MWh (12.479,0 t / 2.808,68 MWh) und liegt damit weit über dem plausiblen Bereich für reine Stromerzeugung. Da die Firma laut Belegpaket zur Branche Industrials gehört und nur ein Kraftwerk mit sehr wenig MWh ausgewiesen ist, spricht das eher dafür, dass das Programm nicht die eigentliche physische Größe misst, sondern eine ungeeignete oder falsch zugeordnete Aktivitätsgröße erfasst. Die Regel hat daher wahrscheinlich recht; ohne Rohdaten bleibt offen, welche konkrete Mess- oder Zuordnungslogik dahintersteht.",
+ "action": "korrigieren",
+ "confidence": 0.86,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 573,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 192,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 765
+ }
+}

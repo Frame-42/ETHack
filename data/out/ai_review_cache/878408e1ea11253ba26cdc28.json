@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege nennen 1 eigenen Fall bei hoher Team-Konfidenz. Dass dazu keine Nachzahlung und keine Betroffenen ausgewiesen sind, macht den Fall nicht automatisch falsch: Die Kennzahl zählt offenbar Verfahren/Fälle, nicht nur Verfahren mit Feststellung oder Zahlung. Eine Fehlzuordnung ist durch die vorliegenden Belege nicht gestützt.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 633,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1161
+ }
+}

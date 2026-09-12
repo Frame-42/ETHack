@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege nennen für die Anlage nur das Programm SIPNOX und keine CO2-Pflicht bzw. CO2-Messung. Damit ist ein Wert von 0 t CO2 als Firmenmesswert irreführend; laut allgemeinem Wissen sind solche Programme oft auf andere Luftschadstoffe ausgerichtet und erfassen CO2 nicht als Pflichtgröße. Als Messwert über die Firma darf 0 daher nicht so stehen bleiben.",
+ "action": "unterdruecken",
+ "confidence": 0.91,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 610,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 138,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 748
+ }
+}

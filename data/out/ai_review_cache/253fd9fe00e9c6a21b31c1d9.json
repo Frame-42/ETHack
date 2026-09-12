@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für Procter & Gamble als Nicht-Versorger eine gemeldete Strommenge von 847741 MWh; eine Stromrate bzw. t_CO2 pro MWh als Unternehmenskennzahl ist für das Geschäftsmodell so nicht sinnvoll interpretierbar. Laut allgemeinem Wissen messen solche Werte bei Nicht-Versorgern oft Eigenanlagen oder Energiebezug, nicht das Kerngeschäft. Ein Wert von 0.0 ist daher als Messwert über die Firma irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 591,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 153,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 744
+ }
+}

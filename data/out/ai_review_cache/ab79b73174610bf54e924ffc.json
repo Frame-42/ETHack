@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "sonstiges",
+ "explanation": "Die Belege stützen eine korrekte Zuordnung: Es gibt 1 eigenen WHD-Fall und die Team-Konfidenz ist hoch. Damit spricht das Paket nicht für eine Fehlzuordnung. Dass keine Nachzahlung und keine Betroffenen ausgewiesen sind, passt eher zu einem Verfahren ohne Feststellung bzw. ohne monetären Befund; als Zählwert für „whd_cases“ kann der Fall daher plausibel sein, solange die Kennzahl Fälle und nicht Verstöße misst.",
+ "action": "kennzeichnen",
+ "confidence": 0.7,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 660,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1245
+ }
+}

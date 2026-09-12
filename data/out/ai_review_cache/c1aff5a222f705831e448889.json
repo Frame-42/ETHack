@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel passt nicht zu den Belegen: Es sind keine eigenen Fälle angegeben, aber der Kennzahlwert ist 1. Das spricht eher für eine Fehlzuordnung bzw. einen falsch übernommenen Fall als für einen echten Einzelfall. Für 'Verfahren ohne Nachzahlung und ohne Betroffene' fehlen hier außerdem konkrete Fallangaben; laut Beleglage ist die Zählung nicht plausibel belegt.",
+ "action": "korrigieren",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 128,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 657
+ }
+}

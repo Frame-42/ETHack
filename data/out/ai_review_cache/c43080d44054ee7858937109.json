@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2019 eine zugeordnete Anlage vom Typ „Supplier“, aber eine gemeldete Emissionsmenge von 0 t sowie durchgehend 0 t in der Scope-1-Zeitreihe. Das passt grundsätzlich zu „0 bedeutet nicht gemessen“ nach der beschriebenen Regel. Aus den Belegen allein lässt sich aber nicht nachweisen, ob hier tatsächlich ein Off-Ramp-/Nichtmeldefall vorliegt oder ob 0 bewusst als echter Wert berichtet wurde.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 625,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 147,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 772
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel behauptet, dass ein Verfahren ohne Nachzahlung und ohne Betroffene entweder kein Befund oder falsch zugeordnet ist. Im Belegpaket steht nur, dass es 1 eigenen Fall gibt; Angaben zu Nachzahlung, Betroffenen oder zur konkreten Fallbeschreibung fehlen. Daher lässt sich nicht sicher prüfen, ob der Wert falsch ist oder ob die Zuordnung bloß unpassend wirkt.",
+ "action": "kennzeichnen",
+ "confidence": 0.76,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 123,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 651
+ }
+}

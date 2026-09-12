@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Kennzahl ist laut Beleg als „Commitment removed = Ziel nicht binnen 24 Monaten eingereicht“ definiert. Der Falltext vermischt dagegen unterschiedliche Zieltypen („Nahziel gesetzt, Netto-null-Zusage zurückgezogen“). Das stützt eher eine falsche Zuordnung der Statusbegriffe zur Kennzahl als einen echten Messwert. Auf Basis der Belege ist die Regelbegründung daher plausibel, der Eintrag wirkt aber als Zuordnungsfehler.",
+ "action": "korrigieren",
+ "confidence": 0.87,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 536,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 142,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 678
+ }
+}

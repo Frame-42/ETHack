@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Emissionen sinken über die Jahre deutlich, parallel verändert sich aber auch die Anlagenbasis von 19 auf 11 Anlagen. Damit ist ein CAGR/Trend über die Jahre grundsätzlich verzerrungsanfällig. Die Belege zeigen keinen klaren Fehler, sondern eine echte Veränderung der Basis; laut allgemeinem Wissen können bei Konzernen auch Zuordnungs- oder Portfolioeffekte solche Trends zusätzlich beeinflussen, dafür fehlt hier aber ein direkter Beleg. Daher ist der Wert eher auffällig, aber plausibel.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 673,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 822
+ }
+}

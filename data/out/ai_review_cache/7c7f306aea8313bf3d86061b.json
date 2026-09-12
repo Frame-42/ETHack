@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "sonstiges",
+ "explanation": "Die Belege nennen eine eigene Fallzahl von 1 bei hoher Team-Konfidenz. Damit ist die Zuordnung zur Firma eher gestützt. Dass ein Verfahren ohne Nachzahlung und ohne Betroffene vorliegt, kann ein Verfahren ohne Feststellung bedeuten; für die Kennzahl whd_cases als reine Fallzählung macht das den Wert nicht automatisch falsch. Für eine Aussage über Verstöße wäre er jedoch zu kennzeichnen.",
+ "action": "behalten",
+ "confidence": 0.68,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 646,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1231
+ }
+}

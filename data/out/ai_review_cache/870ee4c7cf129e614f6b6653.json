@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Belege reichen nicht aus, um die Regel zu bestätigen. Angegeben ist nur ein eigener Treffer mit niedriger Team-Konfidenz; es fehlen Rohangaben zum WHD-Verfahren, insbesondere ob tatsächlich keine Nachzahlung, keine betroffenen Beschäftigten oder eine Fehlzuordnung vorliegt. Daher ist weder ein Fehler noch ein plausibler echter Fall belegbar.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 530,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 306,
+  "output_tokens_details": {
+   "reasoning_tokens": 187
+  },
+  "total_tokens": 836
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Regel wird durch die Belege gestützt: Es ist zwar eine zugeordnete Anlage vorhanden, aber für 2019 und durchgehend 2020–2023 steht die Menge exakt bei 0. Der Anlagentyp ist zudem „Supplier“; laut allgemeinem Wissen erfassen solche GHGRP-Meldungen nicht zwingend direkte Anlagenemissionen im Sinne von Scope 1. Damit ist 0 hier eher ein Platzhalter für nicht vorhandene bzw. nicht gemessene Emissionsmenge als ein belastbarer Nachweis emissionsfreier Scope-1-Aktivität.",
+ "action": "unterdruecken",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 625,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 606,
+  "output_tokens_details": {
+   "reasoning_tokens": 436
+  },
+  "total_tokens": 1231
+ }
+}

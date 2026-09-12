@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen, dass für Berkshire Hathaway 113 Kraftwerke und 82.663.659 MWh angegeben sind, obwohl die Firma als Financials geführt wird. Das spricht dafür, dass die Stromkennzahl nicht das Kerngeschäft der Holding abbildet, sondern Eigenanlagen bzw. Beteiligungen mit Energieerzeugung. Laut allgemeinem Wissen kann das bei Konglomeraten mit Energie-Töchtern vorkommen. Als Messwert über die Gesamtfirma ist der Wert daher ungewöhnlich, aber nicht offensichtlich falsch.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 599,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 748
+ }
+}

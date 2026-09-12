@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Es ist eine zugeordnete Anlage gemeldet, aber die Emissionsmenge steht durchgehend auf 0 t. Nach der gegebenen Regel ist das eher als 'nicht gemessen/fehlend' zu werten und nicht als echte Emissionsfreiheit. Die Zeitreihe mit lauter 0 spricht zusätzlich für einen Berichts- oder Zuordnungsfall, nicht für einen belastbaren Messwert.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 691,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 130,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 821
+ }
+}

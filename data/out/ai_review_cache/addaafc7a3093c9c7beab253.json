@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege sprechen dafür, dass hier eine bestimmte SBTi-Statuslogik abgebildet wird: „Commitment removed = Ziel nicht binnen 24 Monaten eingereicht“. Das passt nicht zu einer Vermischung verschiedener Zieltypen, sondern zu einer Zuordnung/Interpretation des Status. Laut allgemeinem Wissen sind SBTi-Status, Near-term-Ziele und Net-zero-Zusagen unterschiedliche Kategorien; der vorliegende Wert kann daher so nicht als einheitlicher Messwert über die Firma verrechnet werden. Er ist als Kennzahl irreführend, auch wenn 1.0 als Statuswert plausibel sein kann.",
+ "action": "korrigieren",
+ "confidence": 0.77,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 595,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 175,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 770
+ }
+}

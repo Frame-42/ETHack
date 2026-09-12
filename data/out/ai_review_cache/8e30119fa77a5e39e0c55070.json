@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen für Procter & Gamble als Consumer-Staples-Firma einen Strombezug von 847.741 MWh und einen Wert von 0,0 bei t_co2_pro_mwh. Das ist für einen Nicht-Versorger nicht automatisch falsch: Laut allgemeinem Wissen kann eine solche Kennzahl bei Eigenanlagen, fehlender Emissionszuordnung oder einem sehr kleinen/fehlenden Nenner auch 0 ergeben. Aus den Belegen allein ist kein klarer Fehler erkennbar; die Regel weist eher auf eine mögliche Interpretationsfrage als auf eine falsche Messung hin.",
+ "action": "kennzeichnen",
+ "confidence": 0.73,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 533,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 166,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 699
+ }
+}

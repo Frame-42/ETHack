@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2019 eine zugeordnete Anlage und zugleich exakt 0 t Scope 1. Da in der Fallbeschreibung ausdrücklich darauf hingewiesen wird, dass 0 hier 'nicht gemessen' und nicht 'emissionsfrei' bedeuten kann, spricht das gegen einen echten Nullwert. Die konsistente 0er-Zeitreihe stützt eher einen Melde- oder Erfassungsfall als reale Emissionsfreiheit.",
+ "action": "korrigieren",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 638,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 139,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 777
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Kennzahl ist als 'Commitment removed = Ziel nicht binnen 24 Monaten eingereicht' definiert. Die Belege nennen jedoch einen Zieltypen-Mix aus 'Nahziel gesetzt' und 'Netto-null-Zusage zurückgezogen'. Das passt nicht zu einer bloßen Nicht-Einreichung binnen 24 Monaten, sondern deutet auf eine falsche Zuordnung der Status-/Zieltypen hin. Laut allgemeinem Wissen sind das unterschiedliche SBTi-Statuskategorien, die nicht vermischt werden sollten.",
+ "action": "korrigieren",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 594,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 150,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 744
+ }
+}

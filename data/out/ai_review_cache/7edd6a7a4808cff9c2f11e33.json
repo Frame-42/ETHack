@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Die Belege zeigen nur ein Rangband von 25 bis 100 (p10=25, p90=100). Ein Medianwert von 58,33 liegt darin zwar, suggeriert aber ohne weitere Verteilung keine echte Einordnung der Firma innerhalb des Bandes. Laut Regel ist das eine fragliche Kennzahlendarstellung, nicht ein belastbarer Mittelwert. Die Belege reichen jedoch nicht für einen Datenfehler im engen Sinn; es ist eher ein Definitions-/Darstellungsproblem.",
+ "action": "kennzeichnen",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 530,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 675
+ }
+}

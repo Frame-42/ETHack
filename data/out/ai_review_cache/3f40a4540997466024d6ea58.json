@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl ist bei einer Health-Care-Firma nicht automatisch ein Fehler: Die Belege zeigen eigene Kraftwerks-/Energieanlagen mit 101.689 MWh. Laut allgemeinem Wissen erfassen solche Stromraten bei Nicht-Versorgern oft Eigenanlagen bzw. Standortversorgung und nicht das Geschäftsmodell als Stromversorger. Das erklärt einen Wert in dieser Größenordnung plausibel.",
+ "action": "behalten",
+ "confidence": 0.82,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 541,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 124,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 665
+ }
+}

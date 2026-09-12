@@ -7,6 +7,7 @@ const LINKS = [
   { href: "/", label: "Firmen" },
   { href: "/vergleich", label: "Vergleich" },
   { href: "/belastbarkeit", label: "Belastbarkeit" },
+  { href: "/pruefung", label: "Prüfung" },
   { href: "/kennzahlen", label: "Kennzahlen" },
   { href: "/quellen", label: "Quellen" },
   { href: "/downloads", label: "Downloads" },

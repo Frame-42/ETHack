@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Es ist eine zugeordnete Anlage vorhanden, aber die gelieferte Scope-1-Menge steht für 2018 auf 0,0 t und die Zeitreihe zeigt über mehrere Jahre ebenfalls 0,0. Das passt eher zu einem Melde-/Programmmuster, bei dem die Größe für diese Zuordnung nicht gemessen oder nicht berichtet wird, als zu tatsächlich emissionsfrei. Nach allgemeinem Wissen können solche Off-Ramp-/Ausnahmeregeln dazu führen, dass 0 als Platzhalter für 'nicht gemessen' erscheint; als Messwert über die Firma ist das irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 693,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 174,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 867
+ }
+}

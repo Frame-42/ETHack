@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Kennzahl stammt offenbar aus Eigenanlagen bzw. Stromerzeugung und nicht aus dem Geschäftsmodell eines Versorgers. Für einen Materials-Konzern wie Dow ist eine solche Stromrate daher nicht automatisch ein Fehler; laut allgemeinem Wissen können Industriefirmen eigene Kraftwerke oder große Standorte mit eigener Energieerzeugung betreiben. Die Belege zeigen ein Kraftwerk und eine Strommenge von 1.856.617 MWh, was die Zuordnung zu Eigenanlagen stützt.",
+ "action": "behalten",
+ "confidence": 0.78,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 536,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 681
+ }
+}

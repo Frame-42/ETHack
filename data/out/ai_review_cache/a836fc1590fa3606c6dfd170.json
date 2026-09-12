@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen nur einen einzelnen WHD-Fall, aber keinen Befund, keine Nachzahlung und keine Betroffenen. Nach der Regel ist das eher ein Verfahren ohne Feststellung oder eine Fehlzuordnung; als belastbarer Messwert für 'whd_cases' ist 1 damit irreführend. Die Konfidenz ist jedoch niedrig, weil nur ein eigener Fall und keine Rohdokumente vorliegen.",
+ "action": "korrigieren",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 588,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 130,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 718
+ }
+}

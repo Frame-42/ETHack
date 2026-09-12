@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege sprechen klar für eine falsche Zuordnung: Der eigene Namensabgleich findet 0 Verfahren für Waters Corporation, während die 10 Verfahren offenbar aus Namensähnlichkeiten mit anderen Einheiten stammen (z. B. Wasser-/Waters-Begriffe in fremden Handelsnamen). Das passt zu einem Zuordnungsfehler, nicht zu einem echten Firmenwert.",
+ "action": "korrigieren",
+ "confidence": 0.96,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 598,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 123,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 721
+ }
+}

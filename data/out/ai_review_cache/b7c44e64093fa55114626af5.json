@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2020 eine zugeordnete Anlage, aber gelieferte Emissionsmenge 0,0 t; auch die Zeitreihe weist durchgehend 0,0 t aus. Damit spricht vieles dafür, dass hier ein Nullwert als Platzhalter für nicht gemeldete bzw. nicht erfasste Emissionen verwendet wurde und nicht eine tatsächlich emissionsfreie Scope-1-Menge. Laut allgemeinem Wissen kann ein solches 0 unter Off-Ramp-/Nichtmeldelogik irreführend sein.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 636,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 157,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 793
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen den Zuordnungsverdacht: In der Team-Datei stehen 26 WHD-Verfahren, der eigene Namensabgleich findet für Hilton Worldwide aber 0 Fälle und es sind keine passenden Handelsnamen mit Ticker belegt. Damit ist der Wert als Firmen-Messwert wahrscheinlich irreführend, etwa durch Treffer auf Namensteile oder rechtlich fremde Franchise-/Betriebsinhaber.",
+ "action": "unterdruecken",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 616,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 585,
+  "output_tokens_details": {
+   "reasoning_tokens": 451
+  },
+  "total_tokens": 1201
+ }
+}

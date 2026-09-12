@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Der Fall nennt nur, dass für 2024 ein WHD-Verfahren mit Wert 1 gemeldet wurde, obwohl laut Regel kein Befund, keine Nachzahlung und keine Betroffenen vorliegen sollen. Im Belegpaket fehlt jedoch die Rohquelle zum konkreten Verfahren; damit lässt sich nicht sicher sagen, ob es sich um ein Verfahren ohne Feststellung oder um eine Fehlzuordnung handelt. Die Kennzahl könnte also falsch zugeordnet sein, aber das ist nicht nachweisbar.",
+ "action": "kennzeichnen",
+ "confidence": 0.68,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 531,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 141,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 672
+ }
+}

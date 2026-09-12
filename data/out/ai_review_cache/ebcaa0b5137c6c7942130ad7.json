@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage vom Typ 'Supplier', aber für Scope 1 wird durchgehend 0 t berichtet. Das passt zu der Regel, dass hier vermutlich nicht gemessen bzw. nicht berichtspflichtig erfasst wurde; als Firmen-Messwert ist 0 t daher irreführend. Laut allgemeinem Wissen können Meldeprogramme bestimmte Anlagen/Quellen ausklammern oder mit Nullcodes abbilden, ohne dass dies Emissionsfreiheit bedeutet.",
+ "action": "korrigieren",
+ "confidence": 0.89,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 694,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 842
+ }
+}

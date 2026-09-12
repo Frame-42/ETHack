@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2023 steht exakt 0 t bei zugeordneter Anlage, während im Vorjahr noch 22.250,916 t Scope 1 gemeldet wurden. Die Zeitreihe zeigt damit einen abrupten Sprung auf Null ohne weitere Belege für echte Emissionsfreiheit. Das passt zu 'nicht gemessen/nicht gemeldet' statt zu einem belastbaren Messwert. Laut allgemeinem Wissen kann ein 0-Wert in solchen Fällen auch ein Reporting-Off-Ramp- oder Erfassungsfall sein, ist aber als Firmenmesswert irreführend.",
+ "action": "unterdruecken",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 704,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 164,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 868
+ }
+}

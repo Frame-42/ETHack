@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen keinen Bezug von 12 Verfahren zu Morgan Stanley. Der eigene Namensabgleich findet 0 passende Fälle; die genannten Handelsnamen mit „MS“ gehören offensichtlich zu anderen Einheiten und sind keine belastbare Zuordnung zu Morgan Stanley. Damit spricht alles für eine falsche Namenszuordnung bzw. ein bloßes Kürzel-Matching.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 588,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 119,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 707
+ }
+}

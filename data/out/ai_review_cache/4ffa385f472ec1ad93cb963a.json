@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Team-Datei weist 26 Verfahren der Firma zu, der eigene Namensabgleich findet aber nur 4 passende Fälle. Das spricht dafür, dass Fälle über unpassende Namensähnlichkeit oder eine falsche Zuordnung erfasst wurden. Nach den Belegen ist der Wert so nicht als Messwert über Charter Communications belastbar.",
+ "action": "korrigieren",
+ "confidence": 0.94,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 614,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 114,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 728
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen den Verdacht einer falschen Zuordnung: Der Namensabgleich findet für Capital One keine eigenen Fälle, während die Team-Datei 90 Verfahren ausweist. Die genannten Handelsnamen passen zudem nicht erkennbar zu Capital One; laut Beleglage spricht das eher für eine Verwechslung über Namensteile/Franchise-Bezüge als für echte Verfahren des Unternehmens. Das ist mit den vorliegenden Belegen nicht plausibel als echter Firmenwert erklärbar.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 585,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 143,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 728
+ }
+}

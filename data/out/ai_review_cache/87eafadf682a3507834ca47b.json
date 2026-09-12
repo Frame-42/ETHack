@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen zwar eine Zuordnung von 'TALEN ENERGY CORP (100%)' zu VST, aber der Falltext sagt ausdrücklich, dass Talen für 2020 eigenständig war und nicht zu Vistra gehörte. Damit wäre der Wert als Firmenmesswert falsch zugeordnet. Laut allgemeinem Wissen können solche Konzernzuordnungen zeitlich falsch sein, wenn alte Eigentümerdaten in ein späteres Jahr übernommen werden; hier stützen die Belege die falsche Zuordnung als wahrscheinlichste Ursache.",
+ "action": "korrigieren",
+ "confidence": 0.92,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 609,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 151,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 760
+ }
+}

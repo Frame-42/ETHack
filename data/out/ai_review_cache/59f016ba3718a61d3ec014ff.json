@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage, aber ausschließlich 0-Werte für 2019–2023 und 2020 auch 0 t geliefert. Der Anlagentyp ist nur „Supplier“; laut allgemeinem Wissen melden solche GHGRP-Supplier-Datensätze nicht zwingend direkte Scope-1-Emissionen einer Anlage. Damit ist 0 hier nicht belastbar als emissionsfrei, sondern wirkt wie fehlende/nicht gemessene Emissionsmenge.",
+ "action": "unterdruecken",
+ "confidence": 0.82,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 628,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 665,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1293
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen eine zugeordnete Anlage vom Typ „Supplier“, zugleich steht für 2020 ein Scope‑1-Wert von exakt 0 t und die Zeitreihe ist ab 2019 durchgehend 0. Das passt eher zu „nicht gemeldet/nicht gemessen“ als zu einer echten Emissionsfreiheit. Laut allgemeinem Wissen kann in Meldeprogrammen ein Nullwert auch eine Off-Ramp- bzw. Nichtberichts-Situation abbilden.",
+ "action": "korrigieren",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 637,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 782
+ }
+}

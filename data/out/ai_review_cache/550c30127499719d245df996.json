@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die Auffälligkeit: Für Carvana werden bei hoher Team-Konfidenz 0 eigene WHD-Fälle genannt, während die Kennzahl für 2024 einen Fall ausweist. Das spricht für eine Fehlzuordnung des Verfahrens zur Firma; der Wert 1 sollte so nicht verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 283,
+  "output_tokens_details": {
+   "reasoning_tokens": 168
+  },
+  "total_tokens": 812
+ }
+}

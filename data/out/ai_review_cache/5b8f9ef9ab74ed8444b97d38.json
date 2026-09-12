@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen nur einen eigenen Fall mit niedriger Team-Konsistenz, aber keinen Hinweis darauf, ob der gemeldete WHD-Fall tatsächlich ohne Nachzahlung und ohne Betroffene war. Damit ist die Regel nicht ausreichend belegt; eine Fehlzuordnung ist möglich, aber nicht nachweisbar. Laut allgemeinem Wissen können einzelne Verfahrenszähler in solchen Datensätzen auch abweichend zu den inhaltlichen Fallmerkmalen zugeordnet sein.",
+ "action": "kennzeichnen",
+ "confidence": 0.66,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 528,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 139,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 667
+ }
+}

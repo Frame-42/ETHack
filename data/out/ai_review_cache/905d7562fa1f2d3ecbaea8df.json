@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen nur eine Anlage und das Programm SIPNOX. Daraus folgt noch nicht sicher, dass CO2 nicht gemessen wird; es kann auch sein, dass für diese Anlage keine relevante CO2-Meldung im Belegpaket enthalten ist. Der Nullwert ist daher mit den vorliegenden Angaben nicht nachweislich richtig oder falsch.",
+ "action": "kennzeichnen",
+ "confidence": 0.68,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 555,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 118,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 673
+ }
+}

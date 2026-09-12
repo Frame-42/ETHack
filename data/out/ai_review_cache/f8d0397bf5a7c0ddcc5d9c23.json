@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Die Belege nennen nur 'eigene_faelle: 0' und eine niedrige Team-Konfidenz. Damit ist weder belegt, dass es tatsächlich ein Verfahren ohne Nachzahlung/Betroffene gab, noch dass die Kennzahl falsch zugeordnet ist. Ohne Rohdaten oder Fallbeschreibung bleibt offen, ob der Wert 1 hier ein echter Messwert oder ein Zuordnungsfehler ist.",
+ "action": "kennzeichnen",
+ "confidence": 0.72,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 587,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 124,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 711
+ }
+}

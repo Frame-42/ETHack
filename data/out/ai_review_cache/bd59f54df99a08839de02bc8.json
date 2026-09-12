@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2018 eine zugeordnete Anlage vom Typ „Supplier“, aber gelieferte Scope-1-Menge von 0 t. Zusammen mit der durchgehend 0 t umfassenden Zeitreihe spricht das dafür, dass hier eher „nicht gemessen/ नाहीt berichtet“ als tatsächliche Emissionsfreiheit abgebildet wurde. Laut allgemeinem Wissen kann bei solchen Meldeprogrammen ein Nullwert auch eine fehlende Erfassung bedeuten (z. B. Off-Ramp/Reporting-Ausnahme).",
+ "action": "korrigieren",
+ "confidence": 0.88,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 633,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 156,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 789
+ }
+}

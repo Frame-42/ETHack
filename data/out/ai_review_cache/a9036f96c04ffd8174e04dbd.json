@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "doppelzaehlung",
+ "explanation": "Die Belege stützen die Regel: 54 Verstoßquartale bei 4 Anlagen ergeben 13,5 Quartale je Anlage und liegen damit über dem in einem 3-Jahres-Fenster möglichen Maximum von 12. Das passt laut Fallbeschreibung zu einer mehrfachen Zählung derselben Anlage durch unterschiedliche Schreibweisen des Konzernnamens.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 646,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 119,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 765
+ }
+}

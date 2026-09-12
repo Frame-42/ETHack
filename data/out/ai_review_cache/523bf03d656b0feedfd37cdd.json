@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel sagt: Verfahren ohne Nachzahlung und ohne Betroffene deuten auf ein Verfahren ohne Feststellung oder eine Fehlzuordnung. Im Belegpaket steht nur, dass es eigene Fälle 0 gibt; ein Wert von 1 für whd_cases ist damit nicht gestützt. Nach den vorliegenden Belegen passt die Zuordnung der Kennzahl nicht zu den Fallangaben.",
+ "action": "korrigieren",
+ "confidence": 0.91,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 526,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 122,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 648
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege stützen nicht, dass die CO2-Menge tatsächlich 0 t beträgt. Es ist nur ersichtlich, dass die Anlagen im Programm SIPNOX gemeldet werden und eine Strom-/Energiegröße (last_mwh) vorliegt. Aus den Belegen folgt lediglich, dass die Größe in diesem Programm möglicherweise nicht gemessen wird; ein Nullwert wäre daher irreführend, wenn er als echte Emission interpretiert wird. Laut allgemeinem Wissen können Programme ohne CO2-Pflicht dazu führen, dass die Kennzahl nicht erhoben wird.",
+ "action": "korrigieren",
+ "confidence": 0.9,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 164,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 750
+ }
+}

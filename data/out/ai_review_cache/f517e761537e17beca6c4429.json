@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Belege zeigen für ein Unternehmen aus der Branche Information Technology eigene Stromerzeugung bzw. gemeldete Kraftwerksdaten (1 Kraftwerk, 2.881.065,91 MWh). Damit kann eine Stromrate aus Eigenanlagen auch bei einem Nicht-Versorger real entstehen. Laut allgemeinem Wissen messen solche eGRID-bezogenen Kennzahlen häufig gemeldete Anlagen- oder Standortdaten und nicht das eigentliche Geschäftsmodell. Die Regel ist hier daher nicht als Fehler belegt.",
+ "action": "behalten",
+ "confidence": 0.79,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 538,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 145,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 683
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "sonstiges",
+ "explanation": "Die Belege stützen keine Fehlzuordnung: Es wird ausdrücklich ein eigener Fall genannt und die Team-Konfidenz ist hoch. Dass ein WHD-Verfahren ohne Nachzahlung und ohne Betroffene auffällt, macht den Zählwert „1 Fall“ nicht automatisch falsch, sofern die Kennzahl Fälle und nicht Verstöße/Nachzahlungen misst. Die Regel ist daher hier nicht ausreichend belegt.",
+ "action": "behalten",
+ "confidence": 0.72,
+ "needs_human": false,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 586,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 641,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 1227
+ }
+}

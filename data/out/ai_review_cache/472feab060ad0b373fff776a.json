@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Regel passt hier: Für 2024 ist ein Wert von 1 bei 'whd_cases' gemeldet, obwohl im Belegpaket 'eigene_faelle' = 0 steht. Das spricht dafür, dass der Wert nicht zu diesem Unternehmen oder nicht zu dieser Kennzahl gehört, sondern eher eine Fehlzuordnung vorliegt. Nach den vorliegenden Belegen gibt es keinen Hinweis auf einen echten Fall oder auf eine Nachzahlung/Betroffene.",
+ "action": "korrigieren",
+ "confidence": 0.86,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 138,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 667
+ }
+}

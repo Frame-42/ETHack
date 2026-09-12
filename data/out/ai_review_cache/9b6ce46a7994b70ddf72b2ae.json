@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "definition_oder_einheit",
+ "explanation": "Der Wert ist ein Rang-/Perzentilwert, nicht ein inhaltlicher Messwert. Bei p10=9,09 und p90=100 ist ein Medianwert von 54,55 zwar rechnerisch möglich, kann aber in einem Rangband 9-100 eine falsche Präzision bzw. Einordnung suggerieren. Laut allgemeinem Wissen sind solche Rangangaben oft nur ordinal interpretierbar; die Belege stützen daher eher eine problematische Darstellung als eine echte inhaltliche Aussage.",
+ "action": "kennzeichnen",
+ "confidence": 0.9,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 536,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 149,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 685
+ }
+}

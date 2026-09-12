@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "meldefehler_quelle",
+ "explanation": "Die Belege nennen die Anlage im Programm RGGI; laut allgemeinem Wissen ist RGGI ein CO2-Programm. Gleichzeitig ist eine erhebliche Last von 184257,76 MWh ausgewiesen. Ein CO2-Wert von 0 t ist damit als Firmen-Messwert irreführend. Die Belege stützen keine Stilllegung oder reine Biomasse; eher liegt ein fehlender/fehlerhafter CO2-Eintrag in der Quelle oder Verarbeitung vor.",
+ "action": "unterdruecken",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.5",
+ "usage": {
+  "input_tokens": 610,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 488,
+  "output_tokens_details": {
+   "reasoning_tokens": 340
+  },
+  "total_tokens": 1098
+ }
+}

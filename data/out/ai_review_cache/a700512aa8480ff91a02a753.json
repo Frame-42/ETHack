@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Team-Datei weist 103 Verfahren aus, aber der eigene Namensabgleich findet nur 1 Fall für Universal Health Services. Das spricht stark dafür, dass Fälle über Namensähnlichkeiten oder Franchise-/Betriebszuordnungen der Firma zugerechnet wurden, obwohl sie nicht zur Berichtsfirma gehören. Damit darf der Wert so nicht als Firmenmesswert verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.94,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 614,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 124,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 738
+ }
+}

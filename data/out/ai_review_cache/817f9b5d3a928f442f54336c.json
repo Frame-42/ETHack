@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege zeigen eine Eigentümerzuordnung zu 'TALEN ENERGY CORP' bzw. 'Talen Energy CORP (100%)'. Wenn der Wert für 2022 bei Vistra erfasst wurde, spricht das für eine falsche Konzern-/Zuordnungsbasis; laut allgemeinem Wissen ist dafür die Firmenzuordnung zeitlich entscheidend. Die vorliegenden Belege stützen die Zuordnung zu Talen, nicht zu Vistra.",
+ "action": "korrigieren",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 551,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 688
+ }
+}

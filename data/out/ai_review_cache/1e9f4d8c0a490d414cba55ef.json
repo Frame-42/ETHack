@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2019 ist bei zugeordneten Anlagen ein Scope-1-Wert von exakt 0 t gemeldet, obwohl im Vorjahr 39.269.420,2669 t und in späteren Jahren wieder positive Werte vorliegen. Das spricht laut Belegpaket dafür, dass 0 hier eher 'nicht gemessen/fehlend' als 'emissionsfrei' bedeutet. Ein solches Nullsignal ist für die Verrechnung irreführend.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 644,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 141,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 785
+ }
+}

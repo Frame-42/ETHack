@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Die Belege zeigen für 2019 eine zugeordnete Anlage, aber gelieferte Emissionen von 0 t; zugleich fällt die Zeitreihe von 111479,898 t in 2018 auf 0 t ab und bleibt danach bei 0. Das stützt die Annahme, dass 0 hier eher 'nicht gemeldet/nicht gemessen' als 'emissionsfrei' bedeutet. Laut allgemeinem Wissen kann bei bestimmten Off-Ramp-Konstellationen nach 40 CFR 98.2(i) die Emissionsmenge entfallen, was dann eher als fehlender Wert zu behandeln ist.",
+ "action": "korrigieren",
+ "confidence": 0.93,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 635,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 175,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 810
+ }
+}

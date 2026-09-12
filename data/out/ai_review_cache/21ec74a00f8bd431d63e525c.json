@@ -1,0 +1,21 @@
+{
+ "verdict": "plausibel",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für die Anlage nur die Teilnahme am Programm SIPNOX und eine Strom-/Lastgröße, aber keinen CO2-Messwert. Wenn das Programm keine CO2-Pflicht hat, kann ein Wert von 0 t CO2 bedeuten, dass die Größe dort nicht erhoben wird. Aus den Belegen ergibt sich kein Nachweis, dass 0 ein echter Emissionswert ist; die Regel wirkt daher plausibel, aber nicht sicher fehlerhaft.",
+ "action": "kennzeichnen",
+ "confidence": 0.78,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 557,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 144,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 701
+ }
+}

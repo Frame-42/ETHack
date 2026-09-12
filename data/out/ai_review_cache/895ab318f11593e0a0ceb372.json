@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "sonstiges",
+ "explanation": "Der Datensatz meldet 1 Fall zu WHD cases, aber die Belege enthalten nur die Angabe 'eigene_faelle: 1' ohne Details zu Feststellung, Nachzahlung oder Betroffenen. Damit lässt sich nicht prüfen, ob es sich um ein Verfahren ohne Befund, eine Fehlzuordnung oder einen echten meldepflichtigen Fall handelt. Laut allgemeinem Wissen können solche Zählwerte je nach Meldeprogramm auch bereits eingeleitete Verfahren abbilden, aber das ist hier nicht belegt.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 529,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 148,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 677
+ }
+}

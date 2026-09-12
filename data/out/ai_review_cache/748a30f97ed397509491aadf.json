@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "branchenstruktur_real",
+ "explanation": "Die Emissionen springen ab 2020 stark an, während die Anlagenbasis gleichzeitig von 9 auf 14 und später auf 12 wechselt. Damit ist die Trend-/CAGR-Kennzahl über Jahre mit wechselnder Basis nicht stabil als reine Firmenentwicklung interpretierbar. Die Belege sprechen dafür, dass hier die Anlagenbasis bzw. Zuordnung über die Zeit verändert wurde; laut allgemeinem Wissen kann das bei Utilities durch Akquisitionen oder Umstrukturierungen passieren. Als Messwert über die Firma ist der Wert so nicht sauber vergleichbar.",
+ "action": "kennzeichnen",
+ "confidence": 0.92,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 738,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 154,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 892
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Beleglage stützt die Team-Zuordnung nicht: Eigener Namensabgleich findet 0 passende Fälle für First Solar, obwohl die Team-Datei 41 Verfahren nennt. Das spricht dafür, dass die Fälle einer falschen Firma zugeordnet wurden, vermutlich über Namensähnlichkeit oder einen anderen Zuordnungsfehler. Laut Belegen gibt es keinen Hinweis, dass 41 Verfahren als Messwert für diese Firma korrekt sind.",
+ "action": "korrigieren",
+ "confidence": 0.96,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 613,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 135,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 748
+ }
+}

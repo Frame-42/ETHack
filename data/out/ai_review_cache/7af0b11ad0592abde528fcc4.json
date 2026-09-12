@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "null_statt_fehlend",
+ "explanation": "Für 2019 ist bei zugeordneten Anlagen ein Scope-1-Wert von exakt 0 t angegeben, obwohl im Vorjahr noch 111479,898 t gemeldet wurden und eine Zeitreihe ab 2019 durchgehend 0 zeigt. Das spricht laut Beleglage eher dafür, dass die Größe 2019 nicht erfasst/übermittelt wurde als für echte Emissionsfreiheit. Damit darf der Wert so nicht als Messwert über die Firma verrechnet werden.",
+ "action": "korrigieren",
+ "confidence": 0.95,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 693,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 144,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 837
+ }
+}

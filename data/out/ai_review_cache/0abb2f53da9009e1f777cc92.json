@@ -1,0 +1,21 @@
+{
+ "verdict": "unklar",
+ "cause": "programm_misst_groesse_nicht",
+ "explanation": "Die Belege zeigen für 2021 zwar eine zugeordnete Anlage vom Typ „Supplier“ und zugleich 0 t Scope-1-Wert; außerdem ist die Zeitreihe 2018–2023 durchgängig 0. Das kann auf „nicht gemessen“ statt emissionsfrei hindeuten, aber aus dem Paket allein ist nicht belegbar, ob hier tatsächlich eine fehlende Messung, eine echte Null oder ein Zuordnungs-/Programmeffekt vorliegt. Laut allgemeinem Wissen können Off-Ramp-Regeln nach 40 CFR 98.2(i) dazu führen, dass 0 als Platzhalter für nicht berichtete Mengen genutzt wird.",
+ "action": "kennzeichnen",
+ "confidence": 0.74,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 636,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 182,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 818
+ }
+}

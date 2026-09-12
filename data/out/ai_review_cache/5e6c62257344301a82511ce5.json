@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "zuordnung_falsch",
+ "explanation": "Die Belege stützen die gegebene Definition nicht: \"Commitment removed\" bedeutet laut Paket, dass ein Ziel nicht binnen 24 Monaten eingereicht wurde. Der beschriebene Fall vermischt dagegen einen anderen Zielstatus (validiert) mit einer zurückgezogenen Netto-null-Zusage. Das passt nicht zur Kennzahl selbst, sondern deutet auf eine falsche Zuordnung bzw. Vermischung verschiedener Zieltypen hin. Laut allgemeinem Wissen zu SBTi-Statusfeldern sind Commitment, Validierung und Rückzug getrennte Statuskategorien.",
+ "action": "korrigieren",
+ "confidence": 0.85,
+ "needs_human": false,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 538,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 159,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 697
+ }
+}

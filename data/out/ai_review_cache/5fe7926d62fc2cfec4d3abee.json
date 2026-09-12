@@ -1,0 +1,21 @@
+{
+ "verdict": "fehler",
+ "cause": "doppelzaehlung",
+ "explanation": "Die Kennzahl ist nach der Regel unplausibel: 13,5 Verstoßquartale je Anlage in einem 3-Jahres-Fenster überschreitet das Maximum von 12. Die Belege stützen eine Doppelzählung bei der Zuordnung zu EPA-Anlagen, da mehrere Schreibweisen des Konzernnamens genannt werden. Mit 54 Verstoßquartalen über 4 Anlagen ergibt sich genau dieser auffällige Wert.",
+ "action": "korrigieren",
+ "confidence": 0.97,
+ "needs_human": true,
+ "model": "gpt-5.4-mini",
+ "usage": {
+  "input_tokens": 588,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 0
+  },
+  "output_tokens": 137,
+  "output_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "total_tokens": 725
+ }
+}
