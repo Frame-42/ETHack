@@ -26,6 +26,10 @@ web/node_modules/
 data/cache/
 data/raw/sec_facts/
 test-results/
+# Clean slim: nur Framework + clean data + docs — Rest in Historie
+# (report/*.tex/pdf, Web-App, alte Diagnostics; lokal vorhanden, nicht getrackt)
+report/
+web/
 presentation/  # lokale Vortrags-Entwuerfe, nicht Teil des Frameworks
 # Legacy aus main (altes f01-f07-Modell) — Historie behaelt es, clean nicht
 fusionsbericht (1).pdf
