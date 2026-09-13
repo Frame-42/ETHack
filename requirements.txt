@@ -1,0 +1,13 @@
+# ETHack clean framework — Python-Abhängigkeiten
+# Getestet mit Python 3.12. Installieren mit:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+pandas
+numpy
+scipy
+matplotlib
+requests
+rapidfuzz
+pyarrow
+lxml
+python-dotenv  # optional (config.py hat Fallback ohne Paket)
+openai  # nur für scripts/10_pruefung.py --ai (kostet API-Guthaben)
