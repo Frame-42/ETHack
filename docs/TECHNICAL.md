@@ -1,8 +1,33 @@
 # Technical explanation and reproducibility reference
 
-> **Dashboard 2:** [Open the dashboard](../dashboard.html). Ali’s supplied four-axis snapshot retains 503 securities, including share classes; 147 meet its comparison threshold and 129 have all four axes. Its one-year viability reconstruction and portfolio illustrations are separate from the reproducible climate/evidence/historical-viability pipeline documented here. The generating code was absent from main commit `b0692c4`; cleanup preserves all 22,050 numeric and boolean values rather than inventing a rebuild. Missing records are labeled as coverage gaps, and percentile ranges are not treated as confidence intervals.
+This guide follows the same journey as the [plain-language walkthrough](FRAMEWORK.md): source record → company attribution → company-year measures → peer comparison → repeated scoring → interpretable outputs. Each stage states what is calculated and why. Equations describe the executable climate pipeline; the supplied four-axis dashboard snapshot is distinguished below.
 
-This reference describes the executable framework and the retained snapshot. The [introductory explanation](FRAMEWORK.md) develops the motivation and practical examples. Code links below identify implementation choices; paper citations support the methodological rationale, not the validity of the project's numerical thresholds.
+## Read the pipeline in order
+
+| Stage | Input → transformation → output | Where to inspect it |
+|---|---|---|
+| Identify the study companies | 503 securities → group by CIK → 500 issuers | Section 1; `universe.py` |
+| Identify source observations | Source record → preserve year, metric, unit and provenance | Section 2; source connectors and `consolidate.py` |
+| Attribute facilities | Facility/year + owner names → match, check selected ownership dates, allocate shares → company-year totals | Section 3; `resolve.py` and `canonical.py` |
+| Construct climate measures | Attributed emissions + SEC revenue → intensity and two fitted trends | Section 4; `canonical.py` |
+| Compare peers | Three measures → orient, normalize, weight and aggregate → percentile in a selected peer group | Section 5; `scoring/` |
+| Explore uncertainty | Repeat with alternative methods and assumed input noise → P10, median, P90 and diagnostics | Section 6; `montecarlo.py` and `02_analyze.py` |
+| Retain other evidence | Source observations → family-based coverage labels, context signals and review findings | Sections 7–8; `reliability.py`, `analysis.py`, `quality.py` |
+| Assess financial capacity | SEC financial history → sufficiency thresholds and historical stress → separate viability assessment | Section 9; `economic_viability.py` |
+
+This is the conceptual data flow, not the shell execution order. The climate analysis and observation export share source inputs; the scorer does not read `dataset_long.csv`. The [README workflow](../README.md#refresh-from-sources) gives the actual command order. Review annotations are used by the final evidence calculation; they do not automatically rerun the climate bands.
+
+### Three numbers that must stay distinct
+
+- **Attribution coverage:** the emissions quantity assigned to study companies divided by the source emissions quantity considered. This has a physical-quantity denominator.
+- **Matching confidence:** a heuristic indicator assigned by the identity resolver. This is not a calibrated ownership probability.
+- **Peer percentile:** a company's position among the companies in a selected comparison group. This is not a percentage reduction in emissions.
+
+For example, a hypothetical 53% attributed share, a 0.95 subsidiary-match confidence, and a 26th-percentile score describe three different stages. None can substitute for another.
+
+### Dashboard 2 and the executable pipeline
+
+[Dashboard 2](../dashboard.html) retains Ali’s supplied four-axis snapshot from main commit `b0692c4`: 503 securities, 147 meeting its comparison threshold, and 129 with all four axes. Its one-year viability reconstruction and portfolio illustrations are separate from the climate/evidence/historical-viability pipeline described here. The generating code was absent from that commit. All 22,050 embedded numerical and boolean values were preserved during translation; the dashboard's results were not regenerated. Its sensitivity statistics must not be substituted for the diagnostics in Section 6.
 
 ## 1. Estimand and scope
 
@@ -49,6 +74,27 @@ E_{it}=\sum_f s_{fit}e_{ft},
 
 where \(s_{fit}\) is the parsed ownership share. Missing shares divide the residual equally among named owners; totals above 1.01 are rescaled. These are allocation assumptions, not verified legal ownership. Exact names, curated subsidiaries, and fuzzy matching are distinguished through `match_method` and heuristic `match_confidence`. The fuzzy cutoff is 92. Selected acquisitions and separations have inclusive year bounds.
 
+The matching sequence is explicit:
+
+| Resolver stage | Acceptance rule | Assigned confidence |
+|---|---|---:|
+| Normalized exact match | Name appears in the issuer lookup | 1.00 |
+| Curated subsidiary | Name appears in the override map | 0.95 |
+| Curated subsidiary prefix | Word-boundary prefix match | 0.90 |
+| Issuer-name prefix | Accepted issuer prefix match | 0.85 |
+| Fuzzy fallback | Token-sort similarity ≥ 92/100 | Similarity divided by 100 |
+| No accepted match | Omit from attributed company totals | No contribution |
+
+Selected ownership-period checks are applied after matching. The values in the last column encode resolver rules; even 1.00 is not a guarantee of correct historical ownership. Within a facility/ticker group the lowest confidence is retained, and the company-year aggregation then averages facility confidences. These assumptions feed the noise scenario in Section 6.
+
+**Worked allocation.** A fully owned facility emitting 100,000 tonnes and a half-owned facility emitting 200,000 tonnes contribute
+
+\[
+E_{it}=1.0(100{,}000)+0.5(200{,}000)=200{,}000\text{ tonnes}.
+\]
+
+This hypothetical total is attributed emissions, not an estimate of unobserved global emissions. In `canonical.py`, `matched_share` divides attributed tonnes by the positive source tonnes in the joined facility/year data. It does not measure the fraction of all worldwide corporate emissions captured.
+
 CAMPD parses owner and operator roles but its exported owner attribution does **not** apply ownership fractions: a jointly owned plant can be fully attributed to multiple matching owners. eGRID uses operator/utility names. ECHO links through FRS IDs and the first listed GHGRP parent. TRI, OSHA, and WHD use conservative name matching without the GHGRP fuzzy fallback. Consequently, boundaries differ between sources. Name matching also cannot by itself distinguish independent franchise employers.
 
 ECHO joins are deduplicated by facility and ticker. Only V and S history characters count as violations; at most twelve characters are examined per facility. Source quantities and denominators remain separate in the long table. [`canonical.py`](../pipeline/canonical.py), [`03_aggregate.py`](../scripts/03_aggregate.py), [`consolidate.py`](../pipeline/consolidate.py).
@@ -60,6 +106,8 @@ The configured core window is 2018-2023. This is a study cutoff, not a claim tha
 \[
 I_{it}=E_{it}/R_{it}.
 \]
+
+For the same illustrative company, revenue of USD 1,000 million gives \(I_{it}=200{,}000/1{,}000=200\) tonnes per USD million. The unit conversion matters: revenue in dollars would give a value one million times smaller.
 
 The latest available observation in the window supplies the intensity level. For either positive emissions or positive intensity observations, fit
 
@@ -102,6 +150,17 @@ G_i=\exp\left(\frac{\sum_{j\in O_i}w_j\log z_{ij}}{\sum_{j\in O_i}w_j}\right).
 The geometric mean limits compensation but does not prohibit it. The ensemble samples both aggregators; geometric aggregation with equal weights and winsorized z-scores is a reference configuration in separate diagnostics, not the sole model behind the saved band. [`scoring/`](../pipeline/scoring/).
 
 ## 6. Monte Carlo interpretation
+
+A draw is one complete alternative calculation, not a new observed company or a new year. Starting from the analysis panel:
+
+1. Select the peer definition, normalizer, weighting method, aggregator, extreme-value treatment, and optional omitted metric.
+2. Perturb the retained metrics with the configured noise model.
+3. Normalize within the chosen peer groups, estimate weights, and aggregate.
+4. Rank each company within its peer group and retain its percentile.
+5. Repeat, then summarize each company's percentile distribution.
+
+For an illustrative sequence of 1,500 draws with P10 = 18, P50 = 26 and P90 = 40, the displayed band is 18–40 and its width is 22 percentile points. Those numbers summarize model outcomes, not uncertainty in tonnes emitted.
+
 
 The main script requests 1,500 draws with seed `20260912`; the reusable configuration class defaults to 1,000 unless overridden. Each draw independently samples from:
 

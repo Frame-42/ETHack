@@ -1,69 +1,121 @@
-# Understanding the framework
+# From a factory record to a company assessment
 
-> **Dashboard 2:** [Open the dashboard](../dashboard.html). Ali’s supplied four-axis snapshot retains 503 securities, including share classes; 147 meet its comparison threshold and 129 have all four axes. Its one-year viability reconstruction and portfolio illustrations are separate from the reproducible climate/evidence/historical-viability pipeline documented here. The generating code was absent from main commit `b0692c4`; cleanup preserves all 22,050 numeric and boolean values rather than inventing a rebuild. Missing records are labeled as coverage gaps, and percentile ranges are not treated as confidence intervals.
+**We start with evidence about what companies do, establish which company each record belongs to, and compare the resulting measures with peers. Then we repeat the calculation under different assumptions to see how much the answer moves.**
 
-We built this framework to make a company's sustainability evidence easier to inspect and harder to hide behind one attractive score. It brings together public records, checks who those records actually belong to, and shows how the conclusion changes when reasonable scoring choices change.
+The difficult work comes before the score: identifying subsidiaries, assigning facilities to the right owner and year, reconciling units, avoiding duplicate records, and distinguishing missing data from zero impact. This walkthrough follows one fictional company through that process. **Every number in the worked example is illustrative.**
 
-The result has four parts: **operational climate performance, the strength of the available evidence, contextual warning signals, and economic viability**. Keeping these separate makes the result easier to explain. A company can be financially viable, have poor emissions performance, and still have too little social evidence for a confident assessment.
+## 1. Collect records: what do we actually know?
+
+A factory reports emissions. A workplace reports injuries. A regulator records a violation. A company files its revenue and cash flow. These records describe different things, so we preserve their source, reporting period, and unit.
+
+| Question | Data we use | What it tells us |
+|---|---|---|
+| What is emitted? | EPA GHGRP; power-sector CAMPD and eGRID records | Reported or calculated emissions, and power-sector monitoring data |
+| What happens at workplaces? | OSHA injury reports; DOL wage enforcement records | Recorded injuries, fatalities, wage cases, and back wages |
+| What environmental problems are recorded? | EPA TRI and ECHO | Toxic releases and regulatory compliance records |
+| What has the company committed to or disclosed? | SBTi and WBA | Target status and assessments of published information |
+| How large is the business, and can it fund its operations? | SEC financial filings | Revenue, operating cash flow, investment, debt, and interest |
+
+These sources do not form a complete worldwide footprint. Their coverage differs, and several emissions datasets describe the same facilities. **We do not add overlapping source totals together.** The reproducible climate calculation uses GHGRP emissions and SEC revenue; the other records provide additional evidence and context.
+
+## 2. Match the record: whose factory is it?
+
+A facility may report as “Example Manufacturing LLC,” while its listed parent is “Example Group.” Before counting its emissions, we need to connect those identities.
+
+The main emissions resolver works through increasingly uncertain matches:
+
+1. **Normalize the name and look for an exact match.** Differences in punctuation or legal suffixes should not create different companies.
+2. **Check known subsidiaries and controlled name prefixes.** A subsidiary can belong to a parent with a completely different name. Prefixes must end at word boundaries to avoid matching unrelated names.
+3. **Try name similarity if the earlier checks fail.** The GHGRP fallback requires a similarity score of at least 92 out of 100. Workplace and wage matching use more conservative rules without this fallback.
+4. **Check the reporting year against selected ownership periods.** A later acquisition should not automatically transfer earlier emissions to the new owner.
+
+We retain the matching method and a confidence indicator. **A similarity score of 92 is not a 92% probability that the owner is correct.** It is a name-comparison score. Unmatched records remain outside the attributed company total; they do not turn into zero emissions.
+
+## 3. Build the company total: how much belongs to it?
+
+For GHGRP, we multiply each facility’s emissions by the assigned ownership share, then add the contributions for the company and reporting year.
+
+| Facility | Reported emissions | Company share | Attributed emissions |
+|---|---:|---:|---:|
+| Factory A | 100,000 t CO2e | 100% | 100,000 t CO2e |
+| Factory B | 200,000 t CO2e | 50% | 100,000 t CO2e |
+| **Company total** | | | **200,000 t CO2e** |
+
+When ownership shares are absent, the parser allocates the remaining share equally among the named owners. That is an explicit assumption. Other source connectors use different attribution rules; the [technical guide](TECHNICAL.md#3-facility-attribution-and-observation-construction) explains them.
+
+We also measure how much of the source data we managed to assign. If the source contains 10 million tonnes and we attribute 5.3 million to the study companies, the **attributed share is 53%**. This describes coverage of that source, not coverage of every company’s global footprint and not a sustainability score.
+
+## 4. Turn totals into comparable questions
+
+A large business will often emit more than a small one. We therefore examine three climate measures together:
+
+| Measure | Question |
+|---|---|
+| Emissions per USD million of revenue | How emissions-intensive is the observed business activity? |
+| Change in emissions intensity | Is that intensity improving over time? |
+| Change in absolute emissions | Are the actual attributed tonnes falling? |
+
+For our example, 200,000 tonnes divided by USD 1,000 million of revenue gives **200 tonnes per USD million**. We compare this with companies in the same sector or, where enough observations exist, sub-industry.
+
+Why retain absolute emissions? If emissions rise 10% while revenue rises 25%, intensity improves 12% even though more is emitted. Both statements matter. For the actual trend measures, the model fits multiple years of data rather than relying on this simple two-year illustration.
+
+The comparison still has a boundary problem: matched US facility emissions are divided by company revenue that may be global. The result is a partial operational measure, not a complete carbon footprint.
+
+## 5. Repeat the calculation: does the conclusion hold?
+
+The indicators have different units. To combine them, we must choose how to put them on a common scale, how much weight each receives, and whether strong performance can compensate for a weak measure.
+
+We test alternative choices instead of hiding them:
+
+- Compare by sector or sub-industry.
+- Use different ways of scaling and weighting the three measures.
+- Change the treatment of extreme values and sometimes omit one measure.
+- Compare arithmetic and geometric aggregation; the geometric version penalizes an uneven profile more strongly.
+- Perturb inputs using an assumed noise rule that increases as matching confidence decreases.
+
+The configured main run samples **1,500 combinations of choices and input perturbations**. Each run produces a company percentile within its peer group. Higher percentiles mean better relative performance under that run’s assumptions.
+
+Suppose the resulting 10th, 50th, and 90th percentiles are **18, 26, and 40**. We show a median of 26 and a band from 18 to 40. A wide band means the modeled choices matter; a narrow band means less movement in those scenarios. Very small peer groups can also create deceptively narrow bands.
+
+**The band describes variation in the calculated peer position.** It is not an emissions error bar, a probability that the company is sustainable, or a statistical confidence interval. Separate runs vary only the scoring methods or only the assumed input noise to help explain the movement. Those diagnostics are not an additive decomposition of uncertainty.
+
+## 6. Read the result alongside the remaining evidence
+
+The reproducible pipeline gives us several distinct answers:
+
+| Output | How to read it |
+|---|---|
+| Climate band | Relative operational climate performance and its sensitivity to modeled choices |
+| E, S, and G evidence labels | How much relevant evidence is available under our coverage rules |
+| Context signals | Patterns worth inspecting, such as falling intensity alongside rising emissions |
+| Economic viability | Whether cash generation, historical stress capacity, and debt service meet chosen sufficiency thresholds |
+
+Several related emissions measures do not count as independent evidence families. Missing workplace records do not prove that a company has no injuries. A context flag does not establish deception. Financial capacity is assessed separately, and its component scores stop improving once “enough” is reached.
 
 ```mermaid
 flowchart TD
-    A[Public records and team snapshots] --> B[Issuer matching and data checks]
-    B --> C[Observations with sources and units]
-    C --> D[Climate metrics and sensitivity bands]
-    C --> E[Evidence available in E, S and G]
-    C --> F[Contextual warning signals]
-    G[SEC financial filings] --> H[Cash generation, stress and debt service]
-    H --> I[Separate economic viability assessment]
+    A[Source records: facilities, workplaces, filings] --> B[Match company and reporting year]
+    B --> C[Check units, ownership shares, duplicates and gaps]
+    C --> D[Company observations with source references]
+    D --> E[Emissions intensity and two trends]
+    E --> F[Compare peers under alternative assumptions]
+    F --> G[Median climate percentile and sensitivity band]
+    D --> H[Evidence coverage and context signals]
+    I[SEC cash-flow and debt history] --> J[Separate economic viability assessment]
 ```
 
-## Why build another approach?
+## How this connects to Dashboard 2
 
-Existing ESG ratings are useful, but they answer different questions and can disagree. Berg, Kölbel, and Rigobon studied six rating providers and found that differences in measurement and coverage explained more disagreement than differences in weights. That motivates our emphasis on showing the observations and their boundaries, rather than simply proposing another set of weights. Their paper supports that design choice; it does not validate our particular framework. [*Aggregate Confusion*, 2022](https://doi.org/10.1093/rof/rfac033).
+[Dashboard 2](../dashboard.html) presents four axes—environment, social, regulatory compliance, and disclosure/targets—alongside provisional viability. It lets readers inspect companies, compare ranges, explore gaps, and view a portfolio illustration.
 
-It is also important to compare fairly. MSCI already uses industry-relative ratings and describes its purpose in terms of resilience to financially material ESG risks. Sustainalytics measures unmanaged ESG risk. Neither should be described as a universal measurement of a company's harm to the planet. Our question is narrower: **what do the available operational records show, and how stable is our interpretation?** [MSCI methodology](https://www.msci.com/downloads/web/msci-com/legal/sustainability-and-climate-resources-and-disclosures/MSCI%20ESG%20Ratings%20Methodology.pdf), [Sustainalytics ESG Risk Ratings](https://www.sustainalytics.com/esg-data).
+Its embedded results are a **separate supplied snapshot**. It contains 503 securities, with 147 meeting its comparison threshold. The cleaned pipeline uses 500 issuers and retains 127 climate bands. The upload did not include the code generating the dashboard’s four-axis scores or portfolio results, so this walkthrough does not claim that the three-metric climate calculation reproduces them. The dashboard identifies that boundary in its methodology view.
 
-## Follow one company through the framework
+## Why design it this way?
 
-**1. Start with records that can be traced.** The inputs include EPA emissions, toxic releases and enforcement records; OSHA workplace reports; wage enforcement cases; SEC financial filings; and target or disclosure assessments from SBTi and WBA. A reported number, an official finding, and an assessment of company disclosures are different kinds of evidence. The dataset identifies their sources and units.
+Research shows why the steps above matter. Berg, Kölbel, and Rigobon trace ESG rating disagreement to differences in scope, measurement, and weighting. That supports exposing **which records enter a result and how they are transformed**. [*Aggregate Confusion*, 2022](https://doi.org/10.1093/rof/rfac033).
 
-**2. Establish which company the records belong to.** A power plant may report under a subsidiary's name. A branded store may be operated by an independent employer. An acquisition may have happened after the year being measured. These are not minor spelling problems: a wrong match can give one company another company's emissions or violations. Our resolver uses cleaned names, subsidiary mappings, selected ownership periods, and matching-confidence indicators.
+Khan, Serafeim, and Yoon show why industry-specific materiality deserves attention. Saisana, Saltelli, and Tarantola, and the OECD/JRC handbook explain the value of uncertainty and sensitivity analysis for composite indicators. These motivate our peer comparisons and repeated calculations; they do not validate our particular thresholds. [Khan et al., 2016](https://doi.org/10.2308/accr-51383), [Saisana et al., 2005](https://doi.org/10.1111/j.1467-985X.2005.00350.x), [OECD/JRC, 2008](https://doi.org/10.1787/9789264043466-en).
 
-**3. Compare climate performance among peers.** The climate analysis examines emissions per dollar of revenue, the change in that intensity, and the change in absolute emissions. Sector and sub-industry comparisons reduce obvious business-model differences. Research on materiality supports paying attention to industry context, although it does not prove that our GICS groups or three climate metrics are sufficient. [Khan, Serafeim, and Yoon, 2016](https://doi.org/10.2308/accr-51383).
+The practical advantage is that a reader can work backward from a result to the observations, allocation rules, and modeling choices. Conventional providers also publish methodologies and account for industry context: MSCI focuses on financially material ESG risks, while Sustainalytics measures unmanaged ESG risk. Our narrower operational question is different, so disagreement alone would not prove superiority. [MSCI methodology](https://www.msci.com/downloads/web/msci-com/legal/sustainability-and-climate-resources-and-disclosures/MSCI%20ESG%20Ratings%20Methodology.pdf), [Sustainalytics ESG Risk Ratings](https://www.sustainalytics.com/esg-data).
 
-Consider an invented example: emissions rise from 100 to 110 tonnes while revenue rises from 100 to 125 units. Emissions per revenue unit fall from 1.00 to 0.88: a 12% improvement in intensity alongside a 10% increase in emissions. Looking at both makes the trade-off visible. It does not establish deceptive intent.
-
-**4. Test the scoring choices.** We vary normalization, weights, aggregation, peer groups, extreme-value treatment, and selected missing-metric scenarios. We also test assumed noise related to attribution confidence. The main configured run uses 1,500 draws and reports the 10th, 50th, and 90th percentiles of the resulting peer positions.
-
-A hypothetical band from 35 to 75 means the company's relative position changes substantially across the sampled choices. It does **not** mean an 80% probability that the company is sustainable. This use of uncertainty and sensitivity analysis follows established composite-indicator research. [Saisana, Saltelli, and Tarantola, 2005](https://doi.org/10.1111/j.1467-985X.2005.00350.x).
-
-**5. Keep weak points visible.** With two normalized scores of 1.00 and 0.01, an equal-weight arithmetic mean is 0.505, while the geometric mean is 0.10. The geometric version penalizes an uneven profile more strongly. We include both in the sensitivity analysis rather than claiming one aggregation rule is objectively correct. Within the economic assessment, the weakest available dimension determines the category.
-
-**6. Ask whether the company can keep funding its operations.** The economic model examines cash generation, the ability to absorb a repeat of a historical cash-flow decline, and debt-service capacity. Its scores stop increasing once the chosen sufficiency thresholds are met. This avoids rewarding unlimited profit or company size by construction, although it does not prove the result is free of bias. It is a screening model, not a bankruptcy or payroll guarantee.
-
-## Where the design effort went
-
-The substantial work is in connecting and checking evidence, not just calculating an average. The retained code includes fixes for several concrete failure mechanisms:
-
-| Problem | Design response |
-|---|---|
-| Supplier fuel quantities mixed with a facility's own emissions | Separate GHGRP reporting categories before aggregation |
-| Zero in a program that does not measure CO2 | Check the reporting program; do not interpret that zero as clean operation |
-| Repeated facility joins multiplying violation histories | Deduplicate facility/company links and enforce the twelve-quarter limit |
-| Unrelated names matching through a short prefix | Require word boundaries and use conservative matching for workplace and wage records |
-| Corporate changes applied to earlier reporting years | Add selected ownership validity windows |
-| Multiple share classes duplicating company totals | Identify issuers by CIK and use one primary ticker |
-| Ratios presented as if the source reported them | Keep source quantities separate from calculated intensities, trends, and rankings |
-| Review decisions moving to another case after reordering | Bind finding IDs to their content and supporting evidence |
-
-The evidence assessment also groups related metrics into families. Several emissions measures do not count as several independent demonstrations of sustainability. The resulting labels describe the evidence available under our rules; they are not ratings of company behavior.
-
-## In what sense is this better?
-
-For **auditing a result and understanding its sensitivity**, this framework offers practical advantages over consuming a single top-line ESG score: accessible code, a traceable observation table, visible modeling alternatives, explicit gaps, and a separation between performance, commitments, and financial capacity.
-
-These strengths are a combination of established statistical ideas and project-specific data engineering. We have not demonstrated that the framework predicts sustainability outcomes better than commercial providers, and industry comparison or geometric aggregation are not inventions of this project. The OECD/JRC handbook provides the broader methodological foundation for examining composite indicators critically. [*Handbook on Constructing Composite Indicators*, 2008](https://doi.org/10.1787/9789264043466-en).
-
-The main limitation is coverage. The snapshot has 500 issuers with some data, but only 449 with sustainability-related observations and 127 with a saved climate band. US facility records miss much of global operations and Scope 2 and 3. Revenue is global, while the emissions numerator covers only matched US facilities. Small peer groups can produce impressive-looking percentiles with little comparative information. The Financials sector is excluded from the economic model, and evidence quality remains uneven.
-
-Use the framework to ask better, verifiable questions about a company. A favorable relative result alone does not establish that its activities meet an absolute sustainability standard. The [technical explanation](TECHNICAL.md) sets out exactly what is calculated and what remains unvalidated.
+We have built a more inspectable way to answer that question. We have not demonstrated better prediction of real-world sustainability outcomes. The [technical guide](TECHNICAL.md) follows the same data flow and specifies the equations, implementation choices, and limitations.
