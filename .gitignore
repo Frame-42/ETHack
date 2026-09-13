@@ -33,3 +33,6 @@ presentation/
 test-results/
 /*.pdf
 /data/external/team/mycelium_constituents.xlsx
+
+# macOS
+.DS_Store
