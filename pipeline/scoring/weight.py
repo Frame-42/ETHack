@@ -1,13 +1,4 @@
-"""Gewichtungs-Register.
-
-Eingabe ist die Matrix der bereits normalisierten Kennzahlen (Zeilen = Firmen,
-Spalten = Kennzahlen), Ausgabe ein Gewichtsvektor, der sich zu 1 summiert.
-
-Die Forschungsgrundlage ordnet den Beitrag der Gewichtung zur Uneinigkeit
-zwischen ESG-Anbietern mit rund 6 % als kleinsten der drei Faktoren ein. Das
-ist kein Grund, die Wahl wegzulassen -- aber ein Grund, sie nicht zu
-ueberhoehen. Gleichgewichtung ist die ehrliche Voreinstellung.
-"""
+"""Weighting registry. Input rows are companies and columns are normalized metrics; output weights sum to one. Equal weights provide a transparent reference, while entropy and CRITIC vary statistical emphasis in the sensitivity analysis."""
 from __future__ import annotations
 
 from typing import Callable
@@ -26,21 +17,16 @@ def register(name: str):
     return deco
 
 
-@register("gleich")
+@register("equal")
 def equal(X: pd.DataFrame) -> np.ndarray:
-    """Alles zaehlt gleich viel. Am haeufigsten verwendet, weil transparent."""
+    """Assign equal weight to each metric."""
     k = X.shape[1]
     return np.full(k, 1.0 / k)
 
 
-@register("entropie")
+@register("entropy")
 def entropy(X: pd.DataFrame) -> np.ndarray:
-    """Shannon-Entropie: Kennzahlen mit mehr Streuung bekommen mehr Gewicht.
-
-    Klingt objektiv, gewichtet aber nach statistischer Streuung, nicht nach
-    inhaltlicher Wichtigkeit -- deshalb gehoert das Verfahren in den
-    Unsicherheitsraum und nicht als alleinige Wahrheit ins Ergebnis.
-    """
+    """Shannon entropy weights emphasize dispersion. Statistical variation is not substantive materiality, so use this as a sensitivity alternative."""
     A = X.to_numpy(dtype=float)
     A = np.where(np.isfinite(A), A, np.nan)
     col_sum = np.nansum(A, axis=0)
@@ -57,11 +43,7 @@ def entropy(X: pd.DataFrame) -> np.ndarray:
 
 @register("critic")
 def critic(X: pd.DataFrame) -> np.ndarray:
-    """CRITIC: Streuung mal Gegensaetzlichkeit zu den anderen Kennzahlen.
-
-    Eine Kennzahl, die stark streut und sich von den uebrigen unterscheidet,
-    traegt mehr eigenstaendige Information.
-    """
+    """CRITIC weights combine dispersion with lack of correlation to other metrics. Distinct statistical information need not imply greater sustainability importance."""
     A = X.to_numpy(dtype=float)
     sd = np.nanstd(A, axis=0, ddof=0)
     if X.shape[1] < 2:

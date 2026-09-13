@@ -1,21 +1,4 @@
-"""EIA-923: erzeugte Megawattstunden je Kraftwerk -- der physische Nenner.
-
-Bisher wird jede Intensitaet auf den Umsatz bezogen: Tonnen je Million Dollar.
-Das hat zwei Probleme. Erstens haengt der Nenner am Strompreis, nicht an der
-Leistung -- ein Versorger sieht in einem Jahr mit hohen Grosshandelspreisen
-sauberer aus, ohne eine Tonne weniger auszustossen. Zweitens ist der Umsatz
-ueber Branchen hinweg nicht vergleichbar.
-
-Fuer Stromerzeuger gibt es einen besseren Nenner: die erzeugte Arbeit.
-**Tonnen CO2 je Megawattstunde** ist die Kennzahl, nach der Energiewirtschaft
-tatsaechlich beurteilt wird, und sie ist immun gegen Preisschwankungen.
-
-Bezogen ueber PUDL, das die EIA-Formulare 923 und 860 aufbereitet und als
-Parquet veroeffentlicht -- Public Domain, ohne Anmeldung. Die Verknuepfung zu
-den EPA-Anlagen laeuft ueber die Crosswalk-Tabelle
-``core_epa__assn_eia_epacamd``, die ``plant_id_eia`` und ``plant_id_epa``
-zusammenfuehrt.
-"""
+"""Retrieve EIA-923 plant generation via PUDL. Physical generation can support tonnes-per-MWh comparisons without electricity-price effects. The EPA/EIA crosswalk connects plant identifiers. The core climate ranking still uses revenue as its denominator."""
 from __future__ import annotations
 
 import io
@@ -37,7 +20,7 @@ def _pudl(table: str) -> pd.DataFrame:
 class EiaGenerationSource(DataSource):
     name = "eia_generation"
     endpoint = PUDL.format(table="out_eia923__yearly_generation_fuel_by_generator_energy_source")
-    description = "Nettostromerzeugung je Kraftwerk und Jahr aus EIA-923 (via PUDL)"
+    description = "Annual plant net generation from EIA-923 via PUDL"
 
     def _fetch(self) -> pd.DataFrame:
         df = _pudl("out_eia923__yearly_generation_fuel_by_generator_energy_source")
@@ -56,7 +39,7 @@ class EiaGenerationSource(DataSource):
 class EpaEiaCrosswalkSource(DataSource):
     name = "epa_eia_crosswalk"
     endpoint = PUDL.format(table="core_epa__assn_eia_epacamd")
-    description = "Zuordnung EPA-Anlagenkennung zu EIA-Kraftwerkskennung (ORIS)"
+    description = "EPA-to-EIA plant identifier crosswalk"
 
     def _fetch(self) -> pd.DataFrame:
         df = _pudl("core_epa__assn_eia_epacamd")

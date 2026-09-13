@@ -1,17 +1,4 @@
-"""Hängt Prüfergebnisse an die Werte des Datensatzes.
-
-Eine Flag ändert keinen Wert. Sie ergänzt drei Spalten, damit jede spätere
-Nutzung selbst entscheiden kann, was sie damit tut:
-
-``quality_status``  ok | fehler | pruefen
-``quality_rule``    Regelkennung, z. B. F02_null_statt_fehlend
-``quality_note``    Begründung in einem Satz, bei KI-Prüfung mit deren Urteil
-
-Rangfolge der Entscheidung: menschliche Entscheidung > automatisch
-übernommenes KI-Urteil > Regel. Ein Wert mit Status ``fehler`` bleibt im
-Langformat erhalten (nachvollziehbar), wird aber aus der verdichteten
-Firmenansicht genommen.
-"""
+"""Attach quality_status, quality_rule, and quality_note without changing values. Human decisions take precedence. Model advice may flag a value for review; only a human decision or a hard rule classifies it as an error."""
 from __future__ import annotations
 
 import pandas as pd
@@ -20,32 +7,29 @@ from .config import OUT
 
 
 def load_flags() -> pd.DataFrame:
-    p = OUT / "flags_gepruft.csv"
+    p = OUT / "reviewed_flags.csv"
     if not p.exists():
         p = OUT / "flags.csv"
     return pd.read_csv(p) if p.exists() else pd.DataFrame()
 
 
 def status_of(row: pd.Series) -> str:
-    """Endgültiger Status einer Flag."""
-    decision = str(row.get("entscheidung", "") or "").strip().lower()
-    if decision in ("fehler", "unterdruecken", "korrigieren"):
-        return "fehler"
-    if decision in ("ok", "behalten", "plausibel"):
+    """Resolve the final quality status of one flag."""
+    decision = str(row.get("decision", "") or "").strip().lower()
+    if decision in ("error", "suppress", "correct"):
+        return "error"
+    if decision in ("ok", "keep", "plausible"):
         return "ok"
-    # Automatisch entschiedene Fälle folgen dem Vorschlag des Modells: Das ist
-    # der Sinn der Weiterleitung. Alles Strittige ist vorher zu einem Menschen
-    # gegangen, und jede Entscheidung lässt sich über entscheidungen.csv
-    # zurücknehmen.
-    # Einen gemeldeten Wert aus dem Bestand nehmen darf nur ein Mensch. Das
-    # Modell kann ihn kennzeichnen -- mehr nicht: Die Quelle hat die Zahl
-    # veröffentlicht, unsere Software hat sie nicht zu überstimmen.
-    if row.get("route") == "automatisch":
-        aktion = str(row.get("ai_action", "") or "").strip().lower()
-        if aktion == "behalten" and row.get("ai_verdict") == "plausibel":
+    # Human decisions can override model advice.
+    # Automatic model recommendations can clear a
+    # plausible observation or request review, but
+    # cannot remove a reported value.
+    if row.get("route") == "automatic":
+        action = str(row.get("ai_action", "") or "").strip().lower()
+        if action == "keep" and row.get("ai_verdict") == "plausible":
             return "ok"
-        return "pruefen"
-    return str(row.get("severity", "pruefen"))
+        return "review"
+    return str(row.get("severity", "review"))
 
 
 def apply(long: pd.DataFrame) -> pd.DataFrame:
@@ -57,7 +41,7 @@ def apply(long: pd.DataFrame) -> pd.DataFrame:
     if flags.empty:
         return long
     flags["status"] = flags.apply(status_of, axis=1)
-    rank = {"fehler": 2, "pruefen": 1, "ok": 0}
+    rank = {"error": 2, "review": 1, "ok": 0}
     for f in flags.sort_values("status", key=lambda s: s.map(rank)).itertuples(index=False):
         if f.metric == "*":
             mask = long.ticker == f.ticker
@@ -67,7 +51,7 @@ def apply(long: pd.DataFrame) -> pd.DataFrame:
                 mask &= long.year == int(f.year)
         note = f.message
         if isinstance(getattr(f, "ai_explanation", None), str):
-            note = f"{f.message} KI: {f.ai_verdict} ({f.ai_confidence:.2f}) -- {f.ai_explanation}"
+            note = f"{f.message} AI: {f.ai_verdict} ({f.ai_confidence:.2f}) -- {f.ai_explanation}"
         long.loc[mask, "quality_status"] = f.status
         long.loc[mask, "quality_rule"] = f.rule
         long.loc[mask, "quality_note"] = note

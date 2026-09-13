@@ -1,14 +1,4 @@
-"""Aggregations-Register -- die folgenreichste der drei Entscheidungen.
-
-Additiv heisst volle Kompensierbarkeit: ein katastrophaler CO2-Wert laesst
-sich durch gute Werte anderswo vollstaendig zurueckkaufen. Geometrisch heisst
-begrenzte Kompensierbarkeit: ein sehr schlechter Wert zieht die Gesamtnote
-nach unten und bleibt sichtbar.
-
-Fuer eine Nachhaltigkeitsnote ist das der entscheidende Unterschied. Beide
-Verfahren sind trotzdem registriert -- der Bericht zeigt an den Daten, wie
-weit die Ranglisten auseinanderlaufen.
-"""
+"""Aggregation registry. Arithmetic means allow more compensation across dimensions; geometric means penalize low positive scores more strongly but do not prohibit compensation. Both are included in the climate sensitivity analysis."""
 from __future__ import annotations
 
 from typing import Callable
@@ -27,9 +17,9 @@ def register(name: str):
     return deco
 
 
-@register("geometrisch")
+@register("geometric")
 def geometric(X: pd.DataFrame, w: np.ndarray) -> pd.Series:
-    """Gewichtetes geometrisches Mittel."""
+    """Weighted geometric mean over observed metrics."""
     A = np.clip(X.to_numpy(dtype=float), 1e-6, None)
     with np.errstate(divide="ignore", invalid="ignore"):
         log_score = np.nansum(np.log(A) * w, axis=1)
@@ -38,9 +28,9 @@ def geometric(X: pd.DataFrame, w: np.ndarray) -> pd.Series:
     return pd.Series(np.exp(log_score / mask), index=X.index)
 
 
-@register("additiv")
+@register("arithmetic")
 def arithmetic(X: pd.DataFrame, w: np.ndarray) -> pd.Series:
-    """Gewichtete Summe -- der uebliche Weg, und der kompensierbare."""
+    """Weighted arithmetic mean over observed metrics."""
     A = X.to_numpy(dtype=float)
     num = np.nansum(A * w, axis=1)
     den = np.sum(np.where(np.isnan(A), 0.0, w), axis=1)

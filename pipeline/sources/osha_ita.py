@@ -1,25 +1,4 @@
-"""OSHA ITA: Arbeitsunfaelle -- das S in ESG, als harte Zahl.
-
-Die soziale Dimension wird in ESG-Bewertungen fast durchgaengig aus
-Selbstauskuenften und Richtlinientexten gebildet. Fuer US-Betriebsstaetten
-gibt es eine Alternative: die Meldungen nach OSHA-Formular 300A. Sie enthalten
-gearbeitete Stunden, Beschaeftigtenzahl und Faelle mit Arbeitsausfall.
-
-Daraus laesst sich die **DART-Rate** berechnen, die Standardkennzahl der
-US-Arbeitssicherheit::
-
-    DART = (Faelle mit Arbeitsausfall + Faelle mit Einschraenkung) * 200000
-           / gearbeitete Stunden
-
-Der Faktor 200 000 entspricht 100 Vollzeitkraeften in einem Jahr; die Rate ist
-damit zwischen Betrieben unterschiedlicher Groesse vergleichbar.
-
-Wichtig fuer die Zuordnung: die Datei enthaelt ``company_name`` neben dem
-Betriebsstaettennamen -- die Aggregation auf Konzernebene ist also vorgesehen.
-
-**Zugang.** Der Server lehnt Anfragen ohne vollstaendige Browser-Kopfzeilen mit
-403 ab; insbesondere ``Accept-Encoding`` muss gesetzt sein.
-"""
+"""Retrieve OSHA Form 300A establishment reports: hours, employee counts, injuries, and deaths. A DART rate can be derived as (days-away cases + restricted-duty/transfer cases) * 200000 / hours, but the observation table retains counts and hours separately. Company-name fields aid attribution but do not establish parent ownership. HTTP access may require browser-style headers."""
 from __future__ import annotations
 
 import io
@@ -46,7 +25,7 @@ BROWSER = {
 }
 
 KEEP = [
-    "establishment_name", "company_name", "ein", "state", "naics_code",
+    "establishment_name", "company_name", "one", "state", "naics_code",
     "industry_description", "size", "annual_average_employees",
     "total_hours_worked", "total_deaths", "total_dafw_cases",
     "total_djtr_cases", "total_other_cases", "total_injuries", "year_filing_for",
@@ -57,7 +36,7 @@ KEEP = [
 class OshaItaSource(DataSource):
     name = "osha_ita"
     endpoint = FILES[2025]
-    description = "OSHA-300A-Meldungen je Betriebsstaette (Unfallraten), 2023-2025"
+    description = "OSHA Form 300A establishment reports, 2023-2025"
 
     def _fetch(self) -> pd.DataFrame:
         frames = []
@@ -81,8 +60,8 @@ class OshaItaSource(DataSource):
             return pd.DataFrame()
         df = pd.concat(frames, ignore_index=True)
 
-        # Kennungsfelder kommen je nach Jahrgang als Zahl oder als Text.
-        for col in ("ein", "naics_code", "size", "state"):
+        # Normalize identifier types across annual releases.
+        for col in ("one", "naics_code", "size", "state"):
             if col in df.columns:
                 df[col] = df[col].astype(str)
 

@@ -1,13 +1,4 @@
-"""Jahresumsaetze aus SEC-XBRL -- der Nenner jeder Intensitaetskennzahl.
-
-Statt 500 Einzelabfragen nutzen wir die ``frames``-API: eine Anfrage je
-Konzept und Kalenderjahr liefert alle meldenden Firmen auf einmal. Die SEC
-ordnet dabei abweichende Geschaeftsjahre dem passenden Kalenderrahmen zu.
-
-Firmen taggen ihren Umsatz uneinheitlich, deshalb werden mehrere Konzepte in
-Prioritaetsreihenfolge abgefragt; je Firma und Jahr gewinnt das erste, das
-einen Wert liefert.
-"""
+"""Retrieve annual revenue through SEC XBRL frames. Query concepts in priority order and keep the first available value per CIK/year. Calendar frames can differ from companies' fiscal-year boundaries."""
 from __future__ import annotations
 
 import time
@@ -18,13 +9,13 @@ from .base import DataSource, get_json, register
 
 FRAME = "https://data.sec.gov/api/xbrl/frames/us-gaap/{concept}/USD/CY{year}.json"
 
-# Reihenfolge = Prioritaet. ASC-606-Tag zuerst, dann die aelteren Varianten.
+# Concept priority: ASC 606 first, then older revenue tags.
 CONCEPTS = [
     "RevenueFromContractWithCustomerExcludingAssessedTax",
     "Revenues",
     "RevenueFromContractWithCustomerIncludingAssessedTax",
     "SalesRevenueNet",
-    "RevenuesNetOfInterestExpense",  # Banken
+    "RevenuesNetOfInterestExpense",  # Bank revenue tags.
 ]
 
 YEARS = range(2016, 2026)
@@ -34,7 +25,7 @@ YEARS = range(2016, 2026)
 class SecRevenueSource(DataSource):
     name = "sec_revenue"
     endpoint = "https://data.sec.gov/api/xbrl/frames/"
-    description = "Jahresumsatz je CIK aus XBRL-Frames (FY2016-FY2025)"
+    description = "Annual revenue per CIK from XBRL frames, 2016-2025"
 
     def _fetch(self) -> pd.DataFrame:
         rows: list[dict] = []
@@ -58,7 +49,7 @@ class SecRevenueSource(DataSource):
         df = pd.DataFrame(rows)
         if df.empty:
             return df
-        # Je CIK/Jahr das hoechstpriorisierte Konzept behalten.
+        # Keep the highest-priority concept for each CIK and year.
         df = df.sort_values(["cik", "year", "prio"]).drop_duplicates(["cik", "year"])
         df["revenue_musd"] = df["revenue_usd"] / 1e6
         return df[["cik", "entity", "year", "revenue_musd", "concept"]].reset_index(drop=True)

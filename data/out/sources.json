@@ -2,181 +2,154 @@
   "epa_ghgrp": {
     "name": "EPA Greenhouse Gas Reporting Program",
     "url": "https://data.epa.gov/efservice/PUB_DIM_FACILITY/",
-    "access": "frei, ohne Anmeldung",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "US-Anlagen ueber 25 000 t CO2e, Berichtsjahre 2018-2023",
-    "measurement": "gemeldet, teils aus Brennstoffmengen gerechnet",
-    "caveat": "Reihe endet 2023; Direktemittenten von Lieferanten getrennt (sector_type)",
-    "retrieved_at": "2026-09-13"
+    "access": "Open, no account",
+    "license": "US government data",
+    "coverage": "US reporting facilities; study years 2018-2023",
+    "measurement": "Reported, including calculations from fuel use",
+    "caveat": "Partial US facility footprint. Keep direct emitters separate from suppliers and injection; 2023 is the configured study cutoff."
   },
   "epa_campd": {
     "name": "EPA Clean Air Markets Program Data",
     "url": "https://api.epa.gov/easey/emissions-mgmt/emissions/apportioned/annual",
-    "access": "kostenloser Schluessel noetig",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "Kraftwerksbloecke der Handelsprogramme, 2019 bis laufendes Jahr",
-    "measurement": "kontinuierliche Messung am Schornstein (CEMS)",
-    "caveat": "nur Stromerzeugung; laufendes Jahr unvollstaendig",
-    "retrieved_at": "2026-09-13"
+    "access": "Free API key",
+    "license": "US government data",
+    "coverage": "Participating US power facilities; 2019 onward",
+    "measurement": "Power-sector emissions reports, including continuous monitoring",
+    "caveat": "Power-sector coverage only. Current-year observations may be partial; the owner-name allocation does not apply equity shares."
   },
   "egrid": {
     "name": "EPA eGRID",
     "url": "https://www.epa.gov/egrid/download-data",
-    "access": "frei",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "US-Kraftwerke, Berichtsjahr 2023",
-    "measurement": "Emissionen und Erzeugung bereits verknuepft",
-    "caveat": "nur aussagekraeftig fuer Firmen, deren Geschaeft Stromerzeugung ist",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "US government data",
+    "coverage": "US power plants; retained snapshot labeled 2023",
+    "measurement": "Reported plant emissions and generation",
+    "caveat": "Only matched plants are included. Operator/utility attribution differs from equity ownership; do not add overlapping GHGRP and CAMPD totals."
   },
   "sec_xbrl": {
     "name": "SEC EDGAR XBRL frames",
     "url": "https://data.sec.gov/api/xbrl/frames/",
-    "access": "frei, User-Agent noetig",
-    "license": "oeffentlich",
-    "coverage": "Geschaeftsjahre 2016-2025",
-    "measurement": "aus Pflichtberichten",
-    "caveat": "fuenf verschiedene Umsatz-Tags; Firmen taggen uneinheitlich",
-    "retrieved_at": "2026-09-13"
+    "access": "Open; identifying User-Agent required",
+    "license": "Public filings",
+    "coverage": "Configured calendar frames 2016-2025",
+    "measurement": "Mandatory financial filings",
+    "caveat": "Revenue tags and fiscal periods differ. Revenue is global while the emissions numerator is a partial US footprint."
   },
   "sbti": {
     "name": "Science Based Targets initiative",
     "url": "https://sciencebasedtargets.org/download/excel",
-    "access": "frei, direkter xlsx-Download",
-    "license": "Nutzung mit Quellenangabe",
-    "coverage": "15 605 Organisationen weltweit, Stand laufend",
-    "measurement": "Selbstmeldung, von SBTi geprueft",
-    "caveat": "Selbstselektion: Firmen melden sich freiwillig; Energiebranche fehlt fast ganz",
-    "retrieved_at": "2026-09-13"
+    "access": "Published Excel download",
+    "license": "Attribution required; verify source terms for reuse",
+    "coverage": "Participating organizations; snapshot statuses",
+    "measurement": "Company commitments and externally validated targets",
+    "caveat": "A target is not an achieved reduction. Statuses are evaluated against the build year and differ by target type."
   },
   "epa_tri": {
     "name": "EPA Toxics Release Inventory",
     "url": "https://data.epa.gov/efservice/downloads/tri/mv_tri_basic_download/2023_US/csv/",
-    "access": "frei",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "US-Anlagen, Berichtsjahr 2023",
-    "measurement": "gemeldet",
-    "caveat": "Gesamtmenge korreliert mit CO2 (rho 0,53); eigenstaendig ist der Krebserreger-Anteil",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "US government data",
+    "coverage": "US reporting facilities; configured year 2023",
+    "measurement": "Reported releases",
+    "caveat": "Mass totals do not account for toxicity or exposure. Reporting thresholds and parent-name matching limit coverage."
   },
   "osha_ita": {
-    "name": "OSHA Injury Tracking Application, Formular 300A",
+    "name": "OSHA Injury Tracking Application, Form 300A",
     "url": "https://www.osha.gov/itadata",
-    "access": "frei, vollstaendige Browser-Kopfzeilen noetig",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "US-Betriebsstaetten, 2023-2025",
-    "measurement": "gemeldet, gesetzlich vorgeschrieben",
-    "caveat": "DART misst auch Branchenstruktur; branchenrelativ vergleichen",
-    "retrieved_at": "2026-09-13"
+    "access": "Open; HTTP headers may be required",
+    "license": "US government data",
+    "coverage": "US reporting establishments; configured 2023-2025 releases",
+    "measurement": "Mandatory employer reports",
+    "caveat": "Hours and cases can contain reporting errors. Retain denominators and review flags; industry exposure differs."
   },
   "epa_echo": {
     "name": "EPA ECHO Enforcement and Compliance History",
     "url": "https://echo.epa.gov/files/echodownloads/echo_exporter.zip",
-    "access": "frei",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "US-Anlagen, Konformitaetshistorie drei Jahre",
-    "measurement": "behoerdliche Feststellung",
-    "caveat": "Zuordnung ueber FRS-Kennung, deshalb nur fuer Anlagen mit GHGRP-Eintrag",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "US government data",
+    "coverage": "Matched US facilities; rolling three-year compliance history",
+    "measurement": "Official enforcement and compliance records",
+    "caveat": "Linked through GHGRP FRS IDs. Detection and enforcement differ; absence of a matched record does not establish compliance."
   },
   "eia_923": {
-    "name": "EIA Formular 923 (via PUDL und API)",
+    "name": "EIA Form 923, via PUDL and API",
     "url": "https://www.eia.gov/electricity/data/eia923/",
-    "access": "PUDL frei, API mit kostenlosem Schluessel",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "US-Kraftwerke ab 1 MW, 2021-2025",
-    "measurement": "gemeldeter Brennstoffeinsatz und Erzeugung",
-    "caveat": "unabhaengige Gegenprobe zu CEMS, nicht dieselbe Messkette",
-    "retrieved_at": "2026-09-13"
+    "access": "Open PUDL mirror; API key for EIA",
+    "license": "US government data",
+    "coverage": "US power plants; configured 2021-2025 window",
+    "measurement": "Reported fuel consumption and generation",
+    "caveat": "Useful for physical denominators and cross-checks. Boundaries and reporting periods must align."
   },
   "esg_snapshot": {
-    "name": "Kommerzielle ESG-Risk-Ratings (Sustainalytics via Yahoo, gespiegelt)",
+    "name": "Historical Sustainalytics ESG risk ratings via Yahoo mirror",
     "url": "https://raw.githubusercontent.com/sburstein/ESG-Stock-Data/main/sp_esg_stock_data.csv",
-    "access": "frei gespiegelt",
-    "license": "unklar -- nur als Vergleichsmassstab verwendet, nie als Eingabe",
-    "coverage": "245 Firmen, Stand 2021",
-    "measurement": "Anbieterbewertung",
-    "caveat": "eingefroren 2021; fliesst in keine eigene Note ein",
-    "retrieved_at": "2026-09-13"
+    "access": "Public mirror",
+    "license": "Unclear; historical comparison only",
+    "coverage": "Historical 2021 snapshot",
+    "measurement": "Third-party assessment",
+    "caveat": "Never used in the climate score. Not contemporaneous with 2023 results; its presence does not establish redistribution rights."
   },
   "sp500_master": {
-    "name": "S&P-500-Konstituenten",
+    "name": "S&P 500 constituents",
     "url": "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
-    "access": "frei",
+    "access": "Open",
     "license": "CC BY-SA",
-    "coverage": "503 Mitglieder, heutiger Stand",
-    "measurement": "Stammdaten",
-    "caveat": "nur der heutige Stand -- fuer historische Jahre ueberlebensverzerrt",
-    "retrieved_at": "2026-09-13"
+    "coverage": "503 securities / 500 CIKs in the retained snapshot",
+    "measurement": "Index membership and company metadata",
+    "caveat": "Membership is a snapshot, not a historical index universe. Multiple share classes share a CIK."
   },
   "pudl": {
-    "name": "PUDL (Catalyst Cooperative) auf Zenodo",
+    "name": "PUDL, Catalyst Cooperative",
     "url": "https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/stable/",
-    "access": "frei, ohne Anmeldung",
-    "license": "Public Domain",
-    "coverage": "aufbereitete EIA-, EPA- und SEC-Daten, 1995 bis laufendes Jahr",
-    "measurement": "aufbereitet aus Behoerdenquellen",
-    "caveat": "Zwischenschicht: Aufbereitungsfehler sind moeglich, dafuer entfaellt eigene Bereinigung",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "Public domain",
+    "coverage": "Processed EIA, EPA, and SEC data",
+    "measurement": "Processed official data",
+    "caveat": "An additional processing layer can introduce errors. Pin releases for reproducibility."
   },
   "pudl_sec_ex21": {
-    "name": "SEC 10-K Anlage 21 (Konzernstruktur, via PUDL)",
+    "name": "SEC 10-K Exhibit 21 ownership, via PUDL",
     "url": "https://s3.us-west-2.amazonaws.com/pudl.catalyst.coop/stable/core_sec10k__quarterly_exhibit_21_company_ownership.parquet",
-    "access": "frei, ohne Anmeldung",
-    "license": "Public Domain",
-    "coverage": "3,8 Mio. Tochtereintraege, 478 von 500 Indexmuettern",
-    "measurement": "aus Pflichtanlagen der Boersenaufsicht",
-    "caveat": "Namen in Kleinschreibung und teils abgeschnitten; Beteiligungsquote nur bei 99 117 Eintraegen",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "Public domain",
+    "coverage": "Subsidiary records in the configured PUDL release",
+    "measurement": "Subsidiary disclosures in mandatory filings",
+    "caveat": "Names may be abbreviated and ownership percentages incomplete. The active resolver uses curated mappings; this catalog entry is not proof of a complete historical crosswalk."
   },
   "sec_dera": {
-    "name": "SEC 10-K-Finanzkennzahlen (companyfacts, aufbereitet von Janis)",
+    "name": "SEC companyfacts FY2024, prepared by Janis",
     "url": "https://data.sec.gov/api/xbrl/companyfacts/",
-    "access": "frei, User-Agent noetig",
-    "license": "oeffentlich",
-    "coverage": "Geschaeftsjahr 2024, 499 Indexfirmen",
-    "measurement": "aus Pflichtberichten",
-    "caveat": "Schulden uneinheitlich getaggt (debt_tag); F&E nur bei 135 Firmen berichtet",
-    "retrieved_at": "2026-09-13"
+    "access": "Open; identifying User-Agent required",
+    "license": "Public filings",
+    "coverage": "Team FY2024 financial snapshot",
+    "measurement": "Mandatory financial filings",
+    "caveat": "Debt tags vary; missing research and development expense does not mean zero. Detailed filing references are retained in the team input."
   },
   "dol_whd": {
-    "name": "DOL Wage and Hour Division, Verfahren (aufbereitet von Janis)",
+    "name": "DOL Wage and Hour Division enforcement",
     "url": "https://data.dol.gov/data-catalog/WHD/enforcement/WHD_enforcement.zip",
-    "access": "frei, ohne Anmeldung",
-    "license": "US-Regierungswerk, gemeinfrei",
-    "coverage": "Feststellungsende 2022-2024",
-    "measurement": "behoerdliche Feststellung",
-    "caveat": "kein CIK, Zuordnung ueber Namen; Firmen ohne Treffer fehlen statt als Null zu erscheinen. Gegenprobe mit eigenem exakten Abgleich: 127 statt 213 Firmen, Rangkorrelation der Fallzahlen 0,62 -- die Team-Zuordnung zaehlt vermutlich Franchise-Betriebe unter dem Markennamen mit (McDonald's 142 gegen 64 Faelle)",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "US government data",
+    "coverage": "Cases with findings ending in 2022-2024",
+    "measurement": "Official enforcement findings",
+    "caveat": "No CIK. Legal/trade-name attribution can include independent franchises. No match is missing evidence, not zero violations."
   },
   "sec_sd": {
-    "name": "SEC Form SD, Konfliktmineralien (aufbereitet von Janis)",
+    "name": "SEC Form SD conflict-minerals filings, prepared by Janis",
     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=SD",
-    "access": "frei",
-    "license": "oeffentlich",
-    "coverage": "Meldungen 2022-2025",
-    "measurement": "Pflichtmeldung",
-    "caveat": "zeigt nur, dass gemeldet wird -- nicht, was die Meldung ueber Schmelzen und Herkunft sagt",
-    "retrieved_at": "2026-09-13"
+    "access": "Open",
+    "license": "Public filings",
+    "coverage": "Team filing-status snapshot; see original filing dates",
+    "measurement": "Mandatory filing status",
+    "caveat": "Filing alone says nothing about responsible sourcing. The historical 2025 output label covers an input window containing later filing dates."
   },
   "wba": {
-    "name": "World Benchmarking Alliance, Unternehmensprofile 2026 (erhoben von Janis)",
+    "name": "World Benchmarking Alliance company profiles, prepared by Janis",
     "url": "https://www.worldbenchmarkingalliance.org/company-scoreboard",
-    "access": "frei, oeffentliche Profilseiten",
-    "license": "CC BY 4.0 -- Namensnennung: World Benchmarking Alliance",
-    "coverage": "217 Indexfirmen, Bewertungsrunde 2026",
-    "measurement": "Bewertung veroeffentlichter Angaben",
-    "caveat": "haengt an Offenlegung; Benchmarks nicht unabhaengig; CTT fast ohne Streuung (216 von 217 = 0)",
-    "retrieved_at": "2026-09-13"
-  },
-  "wikidata": {
-    "name": "Wikidata, offizielle Websites (fuer Firmenlogos)",
-    "url": "https://query.wikidata.org/sparql",
-    "access": "frei, ohne Anmeldung",
-    "license": "CC0",
-    "coverage": "Website ueber CIK (P5531 -> P856), Rest aus SEC Submissions",
-    "measurement": "Stammdaten",
-    "caveat": "nur fuer die Anzeige; Logos sind Favicons und Marken der jeweiligen Firmen",
-    "retrieved_at": "2026-09-13"
+    "access": "Open public profiles",
+    "license": "CC BY 4.0; credit World Benchmarking Alliance",
+    "coverage": "Team 2026 assessment snapshot",
+    "measurement": "Assessment of disclosed company information",
+    "caveat": "Disclosure-dependent and not independent across benchmarks. Near-constant fields provide little ranking information."
   }
 }

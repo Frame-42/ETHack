@@ -1,28 +1,4 @@
-"""eGRID: CO2 je Megawattstunde, je Kraftwerk, mit Betreibernamen.
-
-Die Frage nach einem physischen Nenner laesst sich fuer den Stromsektor ohne
-eigene Rechnung beantworten. Die EPA fuehrt mit eGRID eine Datenbank, die
-Emissionen aus dem Messprogramm und Erzeugung aus den EIA-Formularen bereits
-auf Kraftwerksebene zusammenfuehrt -- einschliesslich Betreiber- und
-Versorgernamen.
-
-Damit entfaellt die Bruecke zwischen zwei Kennungssystemen, die sonst ueber
-ORIS-Codes gebaut werden muesste. Relevante Felder:
-
-``ORISPL``    ORIS-Kraftwerkskennung, der Schluessel zu EIA und CAMPD
-``OPRNAME``   Betreiber
-``UTLSRVNM``  Versorgungsunternehmen
-``PLNGENAN``  Nettoerzeugung im Jahr, MWh
-``PLCO2AN``   CO2 im Jahr, metrische Tonnen (in der metrischen Ausgabe)
-``PLCO2RTA``  CO2-Rate, kg je MWh
-
-Die Kennzahl ``t CO2 je MWh`` ist gegen Preisschwankungen immun -- anders als
-``t CO2 je Umsatzdollar``, wo ein Jahr mit hohen Grosshandelspreisen einen
-Versorger sauberer aussehen laesst, ohne dass sich physisch etwas aendert.
-
-Grenze: nur Stromerzeugung, und der Datensatz erscheint mit rund zwei Jahren
-Verzug. Fuer aktuellere Jahre ist CAMPD zusammen mit EIA-923 der Weg.
-"""
+"""Retrieve eGRID plant emissions, generation, and operator/utility names. ORISPL identifies the plant, OPRNAME the operator, UTLSRVNM the utility, and PLNGENAN generation. Check the file's unit convention before converting CO2. Physical intensity can be calculated separately from these source observations; publication lag remains relevant."""
 from __future__ import annotations
 
 import io
@@ -53,7 +29,7 @@ KEEP = {
 
 
 def _latest_url() -> str:
-    """Findet die neueste metrische Jahresdatei auf der Downloadseite."""
+    """Locate the latest metric annual workbook on the download page."""
     try:
         r = session().get(DOWNLOAD_PAGE, headers=BROWSER, timeout=90)
         links = re.findall(r'href="([^"]*egrid\d{4}_data_metric[^"]*\.xlsx)"', r.text, re.I)
@@ -68,7 +44,7 @@ def _latest_url() -> str:
 class EgridSource(DataSource):
     name = "egrid_plant"
     endpoint = DOWNLOAD_PAGE
-    description = "eGRID-Kraftwerksdaten: CO2, Erzeugung und Betreiber je Anlage"
+    description = "eGRID plant CO2, generation, and operator data"
 
     def _fetch(self) -> pd.DataFrame:
         url = _latest_url()

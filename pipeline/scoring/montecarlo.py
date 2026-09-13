@@ -1,27 +1,4 @@
-"""Stufe 05 A: branchenrelative Kernnote mit Unsicherheitsanalyse.
-
-Das OECD/JRC-Handbuch ist an diesem Punkt eindeutig: Normalisierung,
-Gewichtung und Aggregation sind Ermessensentscheidungen, also *muss* gezeigt
-werden, wie stark das Ergebnis von ihnen abhaengt. Genau das passiert hier.
-
-Ein Monte-Carlo-Zug zieht zufaellig
-
-* ein Normalisierungsverfahren,
-* ein Gewichtungsschema,
-* eine Aggregationsfunktion,
-* die Ebene der Vergleichsgruppe (Sektor oder Sub-Industry),
-* eine Trimmstufe fuer Extremwerte,
-* optional das Weglassen einer Kennzahl (Leave-one-out),
-* eine Stoerung der Eingangswerte, deren Breite von ``match_confidence``
-  abhaengt.
-
-Der letzte Punkt ist der Grund, warum die Unsicherheit aus Stufe 03 nicht
-unterwegs verloren geht: Eine Firma, deren Anlagen nur unsicher zugeordnet
-werden konnten, bekommt am Ende ein breiteres Rangband.
-
-Ergebnis ist kein Platz, sondern eine Verteilung von Perzentilen innerhalb
-der Vergleichsgruppe.
-"""
+"""Sample within-peer scoring choices and assumed input noise. Each draw selects normalization, weighting, aggregation, peer level, winsorization, and optional metric omission. Gaussian perturbations scale with matching confidence. Return a distribution of relative percentiles: these are sensitivity bands, not confidence intervals or absolute sustainability scores."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -36,16 +13,16 @@ from .weight import WEIGHTERS
 
 @dataclass(frozen=True)
 class Metric:
-    """Eine Kennzahl der Kernnote."""
+    """One climate metric, including direction and display label."""
 
     column: str
-    direction: int  # -1 = kleiner ist besser
+    direction: int  # -1 means lower is better.
     label: str
 
 
 @dataclass(frozen=True)
 class Draw:
-    """Eine gezogene Methodenkombination."""
+    """One sampled method configuration."""
 
     normalizer: str
     weighter: str
@@ -60,13 +37,13 @@ class MonteCarloConfig:
     n_draws: int = 1000
     peer_levels: tuple[str, ...] = ("gics_sector", "gics_sub_industry")
     winsor_levels: tuple[float, ...] = (0.0, 0.01, 0.05)
-    #: Mindestgroesse einer Vergleichsgruppe; kleinere fallen auf den Sektor zurueck.
+    # Minimum sub-industry size before falling back to sector.
     min_peers: int = 6
-    #: Grundrauschen auf den Eingangswerten, in Einheiten der Querschnittsstreuung.
+    # Base noise in units of cross-sectional standard deviation.
     base_noise: float = 0.05
-    #: Zusatzrauschen fuer unsicher zugeordnete Firmen.
+    # Additional assumed noise for uncertain attribution.
     match_noise: float = 0.35
-    #: Wahrscheinlichkeit, in einem Zug eine Kennzahl wegzulassen.
+    # Probability of omitting one metric in a draw.
     p_drop: float = 0.30
     seed: int = 20260912
     normalizers: tuple[str, ...] = field(default_factory=lambda: tuple(NORMALIZERS))
@@ -75,7 +52,7 @@ class MonteCarloConfig:
 
 
 def _peer_key(df: pd.DataFrame, level: str, min_peers: int) -> pd.Series:
-    """Vergleichsgruppe je Firma; zu duenne Gruppen fallen auf den Sektor zurueck."""
+    """Use sub-industries when large enough, otherwise case back to sectors. Sector groups themselves may still be small."""
     key = df[level].astype(str)
     if level == "gics_sector":
         return key
@@ -90,11 +67,7 @@ def score_once(
     rng: np.random.Generator | None = None,
     cfg: MonteCarloConfig | None = None,
 ) -> pd.DataFrame:
-    """Rechnet eine einzelne Rangliste fuer eine Methodenkombination.
-
-    Rueckgabe je Firma: ``score`` und ``percentile`` (0-100, hoeher = besser)
-    innerhalb der Vergleichsgruppe.
-    """
+    """Compute scores and within-peer percentiles for one method configuration. Higher percentiles mean better relative results."""
     cfg = cfg or MonteCarloConfig()
     used = [m for m in metrics if m.column != draw.dropped]
     if not used:
@@ -103,8 +76,7 @@ def score_once(
     work = df.copy()
     work["_peer"] = _peer_key(work, draw.peer_level, cfg.min_peers)
 
-    # Stoerung der Eingangswerte: additiv in Einheiten der Querschnittsstreuung,
-    # damit auch Trendkennzahlen mit negativem Vorzeichen sauber behandelt werden.
+    # Add Gaussian noise in cross-sectional standard- deviation units so signed trend metrics can also be perturbed.
     if rng is not None:
         conf = work.get("match_confidence", pd.Series(1.0, index=work.index)).fillna(0.0)
         sigma = cfg.base_noise + cfg.match_noise * (1.0 - conf).clip(0, 1)
@@ -114,7 +86,7 @@ def score_once(
             if np.isfinite(sd) and sd > 0:
                 work[m.column] = col + rng.normal(0.0, 1.0, len(col)) * sigma * sd
 
-    # Normalisierung innerhalb jeder Vergleichsgruppe.
+    # Normalize separately within each peer group.
     norm_fn = NORMALIZERS[draw.normalizer]
     normed = pd.DataFrame(index=work.index)
     for m in used:
@@ -154,14 +126,7 @@ def run(
     metrics: list[Metric],
     cfg: MonteCarloConfig | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Fuehrt die Unsicherheitsanalyse aus.
-
-    Rueckgabe:
-        ``bands``  -- je Firma p10/p50/p90 des Perzentils, Bandbreite, Anteil
-                      der Zuege im obersten und untersten Fuenftel
-        ``draws``  -- die Perzentile aller Zuege (Firmen x Zuege), fuer
-                      Sensitivitaetsauswertungen nach Methode
-    """
+    """Return p10/p50/p90 bands, widths, quintile shares, and draw-level percentile results with method metadata."""
     cfg = cfg or MonteCarloConfig()
     rng = np.random.default_rng(cfg.seed)
 

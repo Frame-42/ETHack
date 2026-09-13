@@ -28,7 +28,7 @@ Dimensions
   trailing twelve months)? A company that fails this lives on outside money;
   the recent part keeps an old cash-burn phase from outweighing years of
   self-funding since.
-- shock absorption: take the largest one-year fall in operating cash flow in
+- shock absorption: take the largest one-year case in operating cash flow in
   the company's own history (scaled by total assets, so it transfers to
   today's size). If it happened again now, would operating cash flow stay
   positive - and if not, how much of the gap does cash on hand cover?
@@ -55,12 +55,11 @@ import os
 import sys
 
 try:
-    from . import financial_health as fh
+    from . import sec_facts as fh
 except ImportError:  # allow running as script during development
-    import financial_health as fh
+    import sec_facts as fh
 
 OUT = "economic_viability.csv"
-HEALTH_CSV = "financial_health.csv"  # optional, only for the bias check
 HISTORY_YEARS = 10
 RECENT_YEARS = 3
 MIN_YEARS = 3
@@ -69,7 +68,7 @@ STALE_BEFORE = "2024-06-30"
 # (zero_at, full_at): linear in between, clamped to 0..1 outside
 THRESHOLDS = {
     "ocf_positive_share": (0.5, 1.0),   # cash-positive every year = full; half the years or fewer = zero
-    "reinvestment_share": (0.5, 0.9),   # one year in ten may fall short of depreciation
+    "reinvestment_share": (0.5, 0.9),   # one year in ten may case short of depreciation
     "shock_cash_coverage": (0.25, 1.0), # cash covers the whole gap of a repeated worst year = full
     "interest_share": (0.5, 0.1),       # interest up to 10% of operating cash = full; half = zero
     "due_to_available": (1.5, 0.5),     # maturities up to half of cash + a year's OCF = full
@@ -129,7 +128,7 @@ def ttm(data, tags, concept=""):
 
 
 def worst_cash_shortfall(ocf_hist, assets):
-    """Largest one-year fall in operating cash flow as a share of total assets at the start of that year.
+    """Largest one-year case in operating cash flow as a share of total assets at the start of that year.
 
     Returns ((fiscal year end, share), number of comparable year pairs)."""
     worst, pairs = None, 0
@@ -167,7 +166,7 @@ def analyse(member, data):
             "last_fy_end": last_fy}
     if member["GICS Sector"] == "Financials":
         return {**base, "viability_level": "not assessable",
-                "notes": "bank/insurer: needs regulatory capital data, cash-flow ratios do not apply"}
+                "notes": "Financials sector excluded by this model; sector-specific measures are needed"}
     if last_fy is None:
         return {**base, "viability_level": "not assessable", "notes": "no fiscal-year history yet (new registrant)"}
     if last_fy < STALE_BEFORE:
@@ -283,52 +282,10 @@ def analyse(member, data):
     }
 
 
-def ranks(values):
-    order = sorted(range(len(values)), key=lambda i: values[i])
-    out = [0.0] * len(values)
-    i = 0
-    while i < len(order):
-        j = i
-        while j + 1 < len(order) and values[order[j + 1]] == values[order[i]]:
-            j += 1
-        for k in range(i, j + 1):
-            out[order[k]] = (i + j) / 2
-        i = j + 1
-    return out
-
-
-def spearman(pairs):
-    pairs = [(a, b) for a, b in pairs if a is not None and b is not None]
-    if len(pairs) < 10:
-        return None, len(pairs)
-    ra, rb = ranks([a for a, _ in pairs]), ranks([b for _, b in pairs])
-    ma, mb = sum(ra) / len(ra), sum(rb) / len(rb)
-    cov = sum((x - ma) * (y - mb) for x, y in zip(ra, rb))
-    var = math.sqrt(sum((x - ma) ** 2 for x in ra) * sum((y - mb) ** 2 for y in rb))
-    return round(cov / var, 2), len(pairs)
-
-
-def bias_check(out):
-    """Does the index just re-measure size or profit? It should not."""
-    if not os.path.exists(HEALTH_CSV):
-        return
-    with open(HEALTH_CSV, newline="") as f:
-        health = {r["ticker"]: r for r in csv.DictReader(f)}
-
-    def num(ticker, key):
-        v = health.get(ticker, {}).get(key)
-        return float(v) if v not in (None, "") else None
-
-    for label, key in [("revenue (size)", "revenue_ttm_usd_bn"), ("net income (absolute profit)", "net_income_ttm_usd_bn"),
-                       ("net margin (profitability)", "net_margin_pct"), ("profit-weighted health score", "health_score")]:
-        rho, n = spearman([(r.get("viability_index"), num(r["ticker"], key)) for r in out])
-        print(f"Spearman viability_index vs {label}: rho={rho} (n={n})")
-
-
 def main():
     facts_dir = sys.argv[1]
-    with open(fh.CONSTITUENTS, newline="") as f:
-        members = list(csv.DictReader(f))
+    from ..universe import load_members
+    members = load_members()
 
     out = []
     for m in members:
@@ -338,21 +295,22 @@ def main():
             with open(path) as f:
                 data = json.load(f)
             for cik in fh.PREDECESSOR_CIKS.get(m["Symbol"], []):
-                with open(os.path.join(facts_dir, f"{cik}.json")) as f:
-                    fh.merge_facts(data, json.load(f))
+                predecessor = os.path.join(facts_dir, f"{cik}.json")
+                if os.path.exists(predecessor):
+                    with open(predecessor) as f:
+                        fh.merge_facts(data, json.load(f))
             row.update(analyse(m, data))
         else:
             row["viability_level"] = "no SEC data"
         out.append(row)
 
-    fields = list(max(out, key=len))
+    fields = list(dict.fromkeys(key for row in out for key in row))
     out.sort(key=lambda x: -(x.get("viability_index") if x.get("viability_index") is not None else -1))
     with open(OUT, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(out)
     print(f"{len(out)} constituents written to {OUT}")
-    bias_check(out)
 
 
 if __name__ == "__main__":

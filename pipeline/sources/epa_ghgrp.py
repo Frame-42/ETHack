@@ -1,15 +1,4 @@
-"""EPA GHGRP: Scope-1-Emissionen je US-Anlage, mit Konzernzuordnung.
-
-Die einzige unabhaengig ueberpruefte, kostenlose Emissionsquelle auf
-Anlagenebene. Zwei Tabellen aus Envirofacts:
-
-* ``PUB_DIM_FACILITY``            -- Stammdaten inkl. Freitextfeld ``parent_company``
-* ``PUB_FACTS_SECTOR_GHG_EMISSION`` -- CO2e je Anlage, Jahr, Sektor und Gas
-
-Wichtig fuer den Bericht: die oeffentlich abrufbare Reihe endet mit dem
-Berichtsjahr 2023. Berichtsjahr 2024 war im Mai 2025 einzureichen, ist aber
-bis heute nicht veroeffentlicht.
-"""
+"""Retrieve GHGRP facility metadata and emissions by facility, year, sector, and gas from Envirofacts. Separate direct emitters, suppliers, injection, and biogenic CO2. The study is configured through 2023; that cutoff is not a live claim about EPA publication availability."""
 from __future__ import annotations
 
 import io
@@ -21,19 +10,16 @@ from .base import DataSource, register, session
 
 BASE = "https://data.epa.gov/efservice/{table}/year/{year}/rows/{start}:{end}/CSV"
 CHUNK = 10000
-YEARS = range(2018, 2024)  # 2024 ist nicht veroeffentlicht
+YEARS = range(2018, 2024)  # Fixed study-window endpoint.
 
-# Die GHGRP-Tabelle mischt drei Arten von Meldern. ``sector_type`` trennt sie:
-#   E = Direktemittent   -> echtes Scope 1 der meldenden Anlage
-#   S = Lieferant        -> CO2, das *spaeter* beim Kunden entsteht
-#   I = CO2-Injektion    -> eingelagertes, nicht ausgestossenes CO2
-# Wer alles aufsummiert, verdreifacht die Zahl und rechnet einem Oelkonzern
-# die Emissionen seiner Kunden als eigene an -- genau die Doppelzaehlung, die
-# das GHG-Protokoll verbietet.
+# sector_type separates direct emitters (E),
+# suppliers (S), and injection (I). Summing all
+# three would mix operational emissions with
+# supplied fuels and injected CO2, creating
+# incompatible boundaries and double counting.
 EMITTER_SECTORS = {2, 3, 4, 5, 6, 7, 8, 14, 15}
 
-# Biogenes CO2 wird nach GHG-Protokoll getrennt ausgewiesen und nicht in die
-# Brutto-Scope-1-Bilanz eingerechnet.
+# Exclude biogenic CO2 from this direct- emissions total; it requires separate accounting.
 BIOGENIC_GAS_ID = 8
 
 
@@ -71,7 +57,7 @@ def _fetch_table(table: str, keep: list[str]) -> pd.DataFrame:
 class EpaFacilitySource(DataSource):
     name = "epa_facility"
     endpoint = "https://data.epa.gov/efservice/PUB_DIM_FACILITY/"
-    description = "EPA-GHGRP-Anlagenstammdaten inkl. parent_company (2018-2023)"
+    description = "GHGRP facility metadata including parent_company, 2018-2023"
 
     def _fetch(self) -> pd.DataFrame:
         keep = [
@@ -84,8 +70,8 @@ class EpaFacilitySource(DataSource):
             "city",
             "facility_types",
             "cems_used",
-            # FRS-Kennung: der Schluessel, ueber den sich ECHO- und
-            # TRI-Anlagen ohne Namensabgleich anhaengen lassen.
+            # FRS identifiers link ECHO/TRI records without
+            # another facility-name match.
             "frs_id",
         ]
         df = _fetch_table("PUB_DIM_FACILITY", keep)
@@ -96,7 +82,7 @@ class EpaFacilitySource(DataSource):
 class EpaEmissionSource(DataSource):
     name = "epa_emission"
     endpoint = "https://data.epa.gov/efservice/PUB_FACTS_SECTOR_GHG_EMISSION/"
-    description = "EPA-GHGRP-CO2e je Anlage und Jahr (2018-2023)"
+    description = "GHGRP annual facility CO2e, 2018-2023"
 
     def _fetch(self) -> pd.DataFrame:
         keep = ["facility_id", "year", "sector_id", "subsector_id", "gas_id", "co2e_emission"]

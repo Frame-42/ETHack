@@ -1,323 +1,323 @@
 {
   "scope1_t": {
-    "label": "Scope-1-Emissionen",
+    "label": "Attributed US facility greenhouse-gas emissions",
     "unit": "t CO2e",
     "direction": -1,
     "axis": "A",
     "source_id": "epa_ghgrp",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "n_facilities": {
-    "label": "zugeordnete Anlagen",
-    "unit": "Anzahl",
+    "label": "Matched GHGRP facilities",
+    "unit": "count",
     "direction": 0,
     "axis": "meta",
     "source_id": "epa_ghgrp",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "campd_co2_t": {
-    "label": "CO2 gemessen (CEMS)",
-    "unit": "t CO2e",
+    "label": "Attributed power-sector CO2 emissions",
+    "unit": "t CO2",
     "direction": -1,
     "axis": "A",
     "source_id": "epa_campd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "campd_plants": {
-    "label": "Kraftwerke mit Messung",
-    "unit": "Anzahl",
+    "label": "Matched CAMPD plants",
+    "unit": "count",
     "direction": 0,
     "axis": "meta",
     "source_id": "epa_campd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "egrid_co2_t": {
-    "label": "CO2 der Kraftwerke",
-    "unit": "t CO2e",
+    "label": "Matched eGRID plant CO2 emissions",
+    "unit": "t CO2",
     "direction": -1,
     "axis": "A",
     "source_id": "egrid",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "egrid_mwh": {
-    "label": "Nettoerzeugung",
+    "label": "Net electricity generation",
     "unit": "MWh",
     "direction": 0,
     "axis": "meta",
     "source_id": "egrid",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "egrid_plants": {
-    "label": "eGRID-Kraftwerke",
-    "unit": "Anzahl",
+    "label": "Matched eGRID plants",
+    "unit": "count",
     "direction": 0,
     "axis": "meta",
     "source_id": "egrid",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "tri_releases_lbs": {
-    "label": "Giftstofffreisetzung",
+    "label": "Reported toxic releases",
     "unit": "lbs",
     "direction": -1,
     "axis": "A",
     "source_id": "epa_tri",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "tri_carcinogen_lbs": {
-    "label": "davon krebserregend",
+    "label": "Releases classified as carcinogenic",
     "unit": "lbs",
     "direction": -1,
     "axis": "A",
     "source_id": "epa_tri",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "tri_facilities": {
-    "label": "TRI-Anlagen",
-    "unit": "Anzahl",
+    "label": "Matched TRI facilities",
+    "unit": "count",
     "direction": 0,
     "axis": "meta",
     "source_id": "epa_tri",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "osha_dafw_cases": {
-    "label": "Faelle mit Ausfalltagen",
-    "unit": "Anzahl",
+    "label": "Cases with days away from work",
+    "unit": "count",
     "direction": -1,
     "axis": "S",
     "source_id": "osha_ita",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "osha_djtr_cases": {
-    "label": "Faelle mit Einschraenkung",
-    "unit": "Anzahl",
+    "label": "Cases with job transfer or restriction",
+    "unit": "count",
     "direction": -1,
     "axis": "S",
     "source_id": "osha_ita",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "osha_hours": {
-    "label": "gemeldete Arbeitsstunden",
-    "unit": "Stunden",
+    "label": "Reported working hours",
+    "unit": "hours",
     "direction": 0,
     "axis": "meta",
     "source_id": "osha_ita",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "osha_deaths": {
-    "label": "Todesfaelle",
-    "unit": "Anzahl",
+    "label": "Reported workplace deaths",
+    "unit": "count",
     "direction": -1,
     "axis": "S",
     "source_id": "osha_ita",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "osha_sites": {
-    "label": "gemeldete Betriebsstaetten",
-    "unit": "Anzahl",
+    "label": "Matched reporting establishments",
+    "unit": "count",
     "direction": 0,
     "axis": "meta",
     "source_id": "osha_ita",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "echo_penalties_usd": {
-    "label": "Umweltstrafen",
+    "label": "Environmental penalties",
     "unit": "USD",
     "direction": -1,
     "axis": "G",
     "source_id": "epa_echo",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "echo_nc_quarters": {
-    "label": "Verstossquartale",
-    "unit": "Quartale",
+    "label": "Noncompliance facility-quarters",
+    "unit": "quarters",
     "direction": -1,
     "axis": "G",
     "source_id": "epa_echo",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "echo_facilities": {
-    "label": "ECHO-Anlagen",
-    "unit": "Anzahl",
+    "label": "Matched ECHO facilities",
+    "unit": "count",
     "direction": 0,
     "axis": "meta",
     "source_id": "epa_echo",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "echo_significant": {
-    "label": "Anlagen mit schwerem Verstoss",
-    "unit": "Anzahl",
+    "label": "Facilities with significant violations",
+    "unit": "count",
     "direction": -1,
     "axis": "G",
     "source_id": "epa_echo",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "whd_cases": {
-    "label": "Lohnverfahren 2022-2024",
-    "unit": "Anzahl",
+    "label": "Wage enforcement cases, 2022-2024",
+    "unit": "count",
     "direction": -1,
     "axis": "S",
     "source_id": "dol_whd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "whd_backwages_usd": {
-    "label": "nachgezahlte Loehne",
+    "label": "Back wages assessed",
     "unit": "USD",
     "direction": -1,
     "axis": "S",
     "source_id": "dol_whd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "whd_employees": {
-    "label": "betroffene Beschaeftigte",
-    "unit": "Anzahl",
+    "label": "Affected employees",
+    "unit": "count",
     "direction": -1,
     "axis": "S",
     "source_id": "dol_whd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "whd_violations": {
-    "label": "festgestellte Verstoesse",
-    "unit": "Anzahl",
+    "label": "Recorded wage-law violations",
+    "unit": "count",
     "direction": -1,
     "axis": "S",
     "source_id": "dol_whd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "whd_penalties_usd": {
-    "label": "Geldbussen Lohnrecht",
+    "label": "Wage-law penalties",
     "unit": "USD",
     "direction": -1,
     "axis": "S",
     "source_id": "dol_whd",
-    "wert_art": "aggregiert"
+    "value_type": "aggregated"
   },
   "sbti_validated": {
-    "label": "SBTi-geprueftes Ziel",
-    "unit": "ja/nein",
+    "label": "Set and unexpired near-term target",
+    "unit": "yes/no",
     "direction": 1,
     "axis": "B",
     "source_id": "sbti",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "sbti_near_term_year": {
-    "label": "Zwischenzieljahr",
-    "unit": "Jahr",
+    "label": "Near-term target year",
+    "unit": "year",
     "direction": 0,
     "axis": "B",
     "source_id": "sbti",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "sbti_net_zero_year": {
-    "label": "Netto-null-Jahr",
-    "unit": "Jahr",
+    "label": "Net-zero target year",
+    "unit": "year",
     "direction": 0,
     "axis": "B",
     "source_id": "sbti",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "sbti_commitment_removed": {
-    "label": "Nahziel-Zusage zurueckgezogen",
-    "unit": "ja/nein",
+    "label": "Near-term commitment removed",
+    "unit": "yes/no",
     "direction": -1,
     "axis": "B",
     "source_id": "sbti",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "sbti_net_zero_removed": {
-    "label": "Netto-null-Zusage zurueckgezogen",
-    "unit": "ja/nein",
+    "label": "Net-zero commitment removed",
+    "unit": "yes/no",
     "direction": -1,
     "axis": "B",
     "source_id": "sbti",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "sbti_near_term_expired": {
-    "label": "Zwischenziel abgelaufen",
-    "unit": "ja/nein",
+    "label": "Near-term target year elapsed",
+    "unit": "yes/no",
     "direction": -1,
     "axis": "B",
     "source_id": "sbti",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "revenue_musd": {
-    "label": "Umsatz",
-    "unit": "Mio. USD",
+    "label": "Revenue",
+    "unit": "million USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_xbrl",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "net_income_usd": {
-    "label": "Nettogewinn",
+    "label": "Net income",
     "unit": "USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_dera",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "total_assets_usd": {
-    "label": "Bilanzsumme",
+    "label": "Total assets",
     "unit": "USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_dera",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "total_debt_usd": {
-    "label": "Finanzschulden",
+    "label": "Financial debt",
     "unit": "USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_dera",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "operating_cf_usd": {
-    "label": "operativer Cashflow",
+    "label": "Operating cash flow",
     "unit": "USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_dera",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "capex_usd": {
-    "label": "Sachinvestitionen",
+    "label": "Capital expenditure",
     "unit": "USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_dera",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "rnd_usd": {
-    "label": "Forschung und Entwicklung",
+    "label": "Research and development expense",
     "unit": "USD",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_dera",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "sd_conflict_minerals_filer": {
-    "label": "meldet Konfliktmineralien (Form SD)",
-    "unit": "ja/nein",
+    "label": "Conflict-minerals filing status, Form SD",
+    "unit": "yes/no",
     "direction": 0,
     "axis": "meta",
     "source_id": "sec_sd",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "wba_tpq": {
-    "label": "WBA Qualitaet des Transitionsplans",
+    "label": "WBA transition plan quality",
     "unit": "0-5",
     "direction": 1,
     "axis": "B",
     "source_id": "wba",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "wba_ctt": {
-    "label": "WBA Beitrag zur Transition",
+    "label": "WBA contribution to transition",
     "unit": "0-2",
     "direction": 1,
     "axis": "B",
     "source_id": "wba",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "wba_social": {
     "label": "WBA Social Benchmark",
@@ -325,7 +325,7 @@
     "direction": 1,
     "axis": "S",
     "source_id": "wba",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "wba_nature": {
     "label": "WBA Nature Benchmark",
@@ -333,7 +333,7 @@
     "direction": 1,
     "axis": "B",
     "source_id": "wba",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "wba_just_transition": {
     "label": "WBA Just Transition",
@@ -341,14 +341,14 @@
     "direction": 1,
     "axis": "S",
     "source_id": "wba",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   },
   "esg_risk_total": {
-    "label": "kommerzielles ESG-Risiko",
-    "unit": "Punkte",
+    "label": "Historical commercial ESG risk",
+    "unit": "points",
     "direction": -1,
-    "axis": "vergleich",
+    "axis": "comparison",
     "source_id": "esg_snapshot",
-    "wert_art": "gemeldet"
+    "value_type": "reported"
   }
 }

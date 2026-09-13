@@ -15,9 +15,10 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{:010d}.json"
-USER_AGENT = os.environ.get("SEC_USER_AGENT", "ETHack research project admin@ethack-research.org")
+from ..config import USER_AGENT
+from ..universe import load_members
 MAX_PER_SECOND = 8
-PREDECESSOR_CIKS = [34088]  # ExxonMobil before its 2026 re-registration (see financial_health.py)
+PREDECESSOR_CIKS = [34088]  # ExxonMobil before its 2026 re-registration (see sec_facts.py)
 
 _lock = threading.Lock()
 _last = [0.0]
@@ -59,8 +60,7 @@ def fetch(cik, out_dir):
 def main():
     out_dir = sys.argv[1]
     os.makedirs(out_dir, exist_ok=True)
-    with open("constituents.csv", newline="") as f:
-        ciks = sorted({int(row["CIK"]) for row in csv.DictReader(f)} | set(PREDECESSOR_CIKS))
+    ciks = sorted({int(row["CIK"]) for row in load_members()} | set(PREDECESSOR_CIKS))
     results = {}
     with ThreadPoolExecutor(max_workers=6) as pool:
         for cik, status in pool.map(lambda c: fetch(c, out_dir), ciks):

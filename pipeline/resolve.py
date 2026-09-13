@@ -1,24 +1,6 @@
-"""Stufe 03: EPA-Konzernnamen auf S&P-500-Ticker aufloesen.
+"""Resolve EPA parent-company text to S&P 500 issuers.
 
-Das Feld ``parent_company`` der EPA ist Freitext und sieht real so aus::
-
-    Empeco IV, LLC and USPF II Ferndale Holdings, LLC (74.33298%);
-    Diamond Generating Corporation (14.00002%); Tenaska Energy, Inc. ... (11.667%)
-
-Drei Dinge passieren hier:
-
-1. **Parsen.** Der String wird in Eigentuemer plus Beteiligungsquote zerlegt.
-   Die Quote wird spaeter zur Zurechnung der Emissionen benutzt -- eine Anlage,
-   die zu 74 % einer Firma gehoert, zaehlt ihr auch nur zu 74 %
-   (Equity-Share-Ansatz des GHG-Protokolls).
-2. **Normalisieren.** Rechtsformzusaetze und Interpunktion fliegen raus.
-3. **Zuordnen.** Erst exakt, dann ueber eine handgepflegte Tochter-Konzern-Tabelle,
-   dann unscharf. Jede Zuordnung traegt ``match_confidence`` und
-   ``match_method`` mit -- bis in die Oberflaeche.
-
-Der dritte Schritt ist die groesste Fehlerquelle der ganzen Pipeline. Ein
-falsch zugeordnetes Kraftwerk verschiebt eine Firma um Dutzende Raenge.
-"""
+Parse owners and percentages, normalize legal names, then match exact names, known subsidiaries, and finally fuzzy names. Missing ownership shares are allocated equally among named owners. Carry the matching method and confidence into diagnostics. Ownership attribution is a major source of model error."""
 from __future__ import annotations
 
 import re
@@ -26,7 +8,7 @@ import re
 import pandas as pd
 from rapidfuzz import fuzz, process
 
-# Rechtsformen und Fuellwoerter, die fuer den Abgleich nichts beitragen.
+# Remove legal suffixes and generic words that add no matching information.
 _SUFFIXES = [
     "incorporated", "inc", "corporation", "corp", "company", "companies", "co",
     "limited", "ltd", "llc", "lllp", "llp", "lp", "plc", "holdings", "holding",
@@ -39,19 +21,16 @@ _SHARE_RE = re.compile(r"\(([\d.]+)\s*%\)")
 
 
 def normalize(name: str) -> str:
-    """Vergleichsform eines Firmennamens."""
+    """Normalize a company name for matching."""
     s = str(name).lower()
-    s = re.sub(r"\([^)]*\)", " ", s)          # Klammerinhalte (Quoten) weg
-    s = re.sub(r"[^a-z0-9\s]", " ", s)        # Interpunktion weg
+    s = re.sub(r"\([^)]*\)", " ", s)          # Remove parenthesized ownership shares.
+    s = re.sub(r"[^a-z0-9\s]", " ", s)        # Remove punctuation.
     s = _SUFFIX_RE.sub(" ", s)
     return re.sub(r"\s+", " ", s).strip()
 
 
 def parse_owners(raw: str) -> list[tuple[str, float]]:
-    """Zerlegt das Freitextfeld in ``[(Eigentuemer, Anteil), ...]``.
-
-    Ohne Quotenangabe wird gleichmaessig auf die genannten Eigentuemer verteilt.
-    """
+    """Parse owner text into (owner, share) pairs. Allocate equally when shares are absent and normalize totals above 100%."""
     if not isinstance(raw, str) or not raw.strip():
         return []
     parts = [p.strip() for p in raw.split(";") if p.strip()]
@@ -70,22 +49,20 @@ def parse_owners(raw: str) -> list[tuple[str, float]]:
         rest = max(0.0, 1.0 - known) / len(missing)
         owners = [(n, rest if s is None else s) for n, s in owners]
     total = sum(s for _, s in owners)
-    if total > 1.01:  # gelegentlich summieren die Quoten auf >100 %
+    if total > 1.01:  # Normalize reported ownership shares when their sum exceeds 100%.
         owners = [(n, s / total) for n, s in owners]
     return owners
 
 
-# ---------------------------------------------------------------------------
-# Korrigiert am 12.09.2026 nach Gegenprobe mit der Team-Datei
-# sp500_harte_variablen.csv: National Grid und Avangrid standen faelschlich bei
-# Eversource (Faktor 25 zu hoch), Idaho Power bei Ameren, Tampa Electric bei
-# Sempra.
-# ---------------------------------------------------------------------------
-# Tochter -> Konzern. Ohne diese Tabelle verliert man die halbe Energiebranche,
-# weil die EPA operative Gesellschaften meldet, nicht die boersennotierte Mutter.
-# ---------------------------------------------------------------------------
+# Subsidiary-to-parent mapping, reviewed
+# against the team snapshot on 2026-09-12.
+# Corrections addressed National Grid/Avangrid
+# attributed to Eversource, Idaho Power to
+# Ameren, and Tampa Electric to Sempra.
+# Facilities often report operating
+# subsidiaries rather than listed parents.
 OVERRIDES: dict[str, str] = {
-    # Versorger
+    # Utilities.
     "georgia power": "SO", "alabama power": "SO", "mississippi power": "SO",
     "southern power": "SO", "southern electric generating": "SO",
     "florida power light": "NEE", "nextera energy resources": "NEE",
@@ -142,7 +119,7 @@ OVERRIDES: dict[str, str] = {
     "eversource energy": "ES", "connecticut light power": "ES",
     "pinnacle west capital": "PNW",
     "portland general electric": "POR",
-    # Oel und Gas
+    # Oil and gas.
     "exxon mobil": "XOM", "exxonmobil": "XOM", "mobil": "XOM",
     "exxonmobil oil": "XOM", "exxonmobil pipeline": "XOM",
     "chevron usa": "CVX", "chevron phillips chemical": "CVX", "chevron": "CVX",
@@ -169,7 +146,7 @@ OVERRIDES: dict[str, str] = {
     "expand energy": "EXE", "chesapeake energy": "EXE", "southwestern energy": "EXE",
     "eqt": "EQT", "eqt production": "EQT", "equitrans midstream": "EQT",
     "texas pacific land": "TPL",
-    # Chemie und Grundstoffe
+    # Chemicals and materials.
     "dow chemical": "DOW", "dow silicones": "DOW", "union carbide": "DOW",
     "dupont": "DD", "e i du pont de nemours": "DD", "corteva": "CTVA",
     "linde": "LIN", "praxair": "LIN",
@@ -188,7 +165,7 @@ OVERRIDES: dict[str, str] = {
     "vulcan materials": "VMC", "martin marietta materials": "MLM",
     "smurfit westrock": "SW", "westrock": "SW", "smurfit kappa": "SW",
     "lennox": "LII",
-    # Industrie und Transport
+    # Industry and transport.
     "general electric": "GE", "ge aerospace": "GE", "ge vernova": "GEV",
     "boeing": "BA", "lockheed martin": "LMT", "rtx": "RTX", "raytheon": "RTX",
     "northrop grumman": "NOC", "general dynamics": "GD", "l3harris": "LHX",
@@ -208,7 +185,7 @@ OVERRIDES: dict[str, str] = {
     "masco": "MAS", "mohawk industries": "MHK", "builders firstsource": "BLDR",
     "stanley black decker": "SWK",
     "waste management": "WM", "republic services": "RSG",
-    # Konsum und Gesundheit
+    # Consumer businesses and health care.
     "procter gamble": "PG", "colgate palmolive": "CL", "kimberly clark": "KMB",
     "coca cola": "KO", "pepsico": "PEP", "frito lay": "PEP",
     "mondelez": "MDLZ", "kraft heinz": "KHC", "general mills": "GIS",
@@ -227,7 +204,7 @@ OVERRIDES: dict[str, str] = {
     "biogen": "BIIB", "moderna": "MRNA", "thermo fisher scientific": "TMO",
     "danaher": "DHR", "becton dickinson": "BDX", "baxter": "BAX",
     "corning": "GLW", "zoetis": "ZTS", "viatris": "VTRS", "organon": "OGN",
-    # Technologie
+    # Technology.
     "intel": "INTC", "micron technology": "MU", "texas instruments": "TXN",
     "analog devices": "ADI", "nvidia": "NVDA", "advanced micro devices": "AMD",
     "applied materials": "AMAT", "lam research": "LRCX", "kla": "KLAC",
@@ -245,10 +222,10 @@ OVERRIDES: dict[str, str] = {
 }
 
 
-# Woerter, die nach einem Konzernnamen stehen duerfen, ohne dass es eine andere
-# Firma wird: "Sempra Energy" ist Sempra. Bewusst nur ein einzelnes Wort --
-# "Southern California Gas" beginnt mit "Southern", gehoert aber zu Sempra und
-# nicht zur Southern Company.
+# Allow only one generic suffix after the
+# parent name. Southern California Gas must not
+# match Southern Company merely through the
+# word Southern.
 GENERIC_TAIL = {
     "energy", "resources", "power", "holdings", "financial", "technologies",
     "systems", "brands", "services", "communications", "entertainment",
@@ -256,57 +233,48 @@ GENERIC_TAIL = {
 }
 
 
-# ---------------------------------------------------------------------------
-# Gueltigkeitszeitraeume. Die Indexliste kennt nur den heutigen Stand, die
-# Tochtertabelle kannte bisher keine Zeit -- deshalb wurden Konzernumbauten
-# rueckwirkend auf alle Jahre projiziert (PPL-Sprung, Talen bei Vistra,
-# WestRock unter Smurfit). Ein Eintrag hier begrenzt eine Zuordnung auf die
-# Jahre, in denen sie tatsaechlich galt. Jahr = Berichtsjahr der Messung.
-# ``bis`` ist einschliesslich, ``None`` heisst offen.
-# ---------------------------------------------------------------------------
+# Selected historical ownership windows.
+# Reporting years are inclusive; None means an
+# open endpoint. These corrections reduce
+# retroactive attribution after acquisitions
+# and spin-offs, but are not a complete
+# historical ownership database.
 VALIDITY: dict[tuple[str, str], tuple[int | None, int | None]] = {
-    # Vistra hat Talen Energy nie uebernommen -- 2023 wurden 10,5 Mt falsch
-    # zugerechnet. Der Kauf betraf nur einzelne Kraftwerke (2016, ERCOT).
+    # Exclude Talen-to-Vistra parent attribution; the historical transaction concerned selected plants rather than acquisition of Talen itself.
     ("talen energy", "VST"): (None, None),
-    # Smurfit Kappa und WestRock fusionierten im Juli 2024 zu Smurfit Westrock.
+    # Apply the Smurfit Westrock mapping from the configured 2024 merger year.
     ("westrock", "SW"): (2024, None),
     ("smurfit kappa", "SW"): (2024, None),
-    # ExxonMobil schloss die Uebernahme von Pioneer im Mai 2024 ab.
+    # Apply the Pioneer-to-ExxonMobil mapping from 2024.
     ("pioneer natural resources", "XOM"): (2024, None),
-    # Constellation kaufte Calpine, Abschluss 2026.
+    # Apply the Calpine-to-Constellation mapping from 2026.
     ("calpine", "CEG"): (2026, None),
-    # Exelon spaltete das Erzeugungsgeschaeft Anfang 2022 als Constellation ab:
-    # davor Exelon, danach Constellation.
+    # Map Exelon generation assets before the 2022
+    # Constellation separation.
     ("exelon generation", "EXC"): (None, 2021),
     ("exelon generation", "CEG"): (2022, None),
-    # Occidental schloss die Uebernahme von Anadarko im August 2019 ab.
+    # Apply the Anadarko-to-Occidental mapping from 2019.
     ("anadarko petroleum", "OXY"): (2019, None),
 }
 
 
 def owner_valid(key: str, ticker: str, year: int | float | None) -> bool:
-    """Galt diese Zuordnung im Berichtsjahr? Ohne Eintrag gilt sie immer."""
+    """Check the selected ownership validity window; unmapped cases have no time restriction."""
     rule = VALIDITY.get((key, ticker))
     if rule is None:
         return True
-    von, bis = rule
-    if von is None and bis is None:
+    since, until = rule
+    if since is None and until is None:
         return False
     try:
         y = int(year)
     except (TypeError, ValueError):
         return True
-    return (von is None or y >= von) and (bis is None or y <= bis)
+    return (since is None or y >= since) and (until is None or y <= until)
 
 
 def override_prefix(key: str) -> str | None:
-    """Treffer der Tochtertabelle als Praefix -- aber nur an der Wortgrenze.
-
-    Ohne Wortgrenze zieht "linde" die "Linden Generating Station" an sich
-    (4,7 TWh fremder Strom bei Linde) und "kla" jede Firma, die mit diesen
-    Buchstaben beginnt. Erlaubt ist deshalb nur "georgia power" ->
-    "georgia power services", nicht "linde" -> "linden".
-    """
+    """Match subsidiary prefixes only at word boundaries. This prevents Linde from matching Linden and KLA from matching unrelated names that merely start with the same letters."""
     if not key:
         return None
     for k, t in OVERRIDES.items():
@@ -316,7 +284,7 @@ def override_prefix(key: str) -> str | None:
 
 
 def master_prefix(key: str, lookup: dict[str, str]) -> str | None:
-    """Konzernname plus genau ein allgemeines Wort, z. B. "sempra energy"."""
+    """Accept a company name followed by one permitted generic word, such as Sempra Energy."""
     head, _, tail = key.rpartition(" ")
     if head and tail in GENERIC_TAIL and " " not in tail:
         return lookup.get(head)
@@ -324,7 +292,7 @@ def master_prefix(key: str, lookup: dict[str, str]) -> str | None:
 
 
 def build_lookup(master: pd.DataFrame) -> dict[str, str]:
-    """Normalisierter Firmenname -> Ticker, aus der Konstituentenliste."""
+    """Map normalized company names to tickers from the index universe."""
     lookup: dict[str, str] = {}
     for _, row in master.iterrows():
         lookup[normalize(row["company"])] = row["ticker"]
@@ -336,15 +304,11 @@ def resolve_owners(
     master: pd.DataFrame,
     fuzzy_threshold: int = 92,
 ) -> pd.DataFrame:
-    """Loest jede Anlage/Jahr-Zeile in Eigentuemeranteile je Ticker auf.
-
-    Rueckgabe: eine Zeile je (facility_id, year, ticker) mit ``share``,
-    ``match_method`` und ``match_confidence``.
-    """
+    """Return one row per facility, year, and ticker with share, match_method, and match_confidence."""
     lookup = build_lookup(master)
     choices = list(lookup.keys())
 
-    # Cache, damit derselbe Konzernname nur einmal aufgeloest wird.
+    # Cache repeated owner-name lookups.
     cache: dict[str, tuple[str | None, str, float]] = {}
 
     def match_one(raw_name: str) -> tuple[str | None, str, float]:
@@ -353,28 +317,25 @@ def resolve_owners(
             return cache[key]
         result: tuple[str | None, str, float]
         if not key:
-            result = (None, "leer", 0.0)
+            result = (None, "empty", 0.0)
         elif key in lookup:
-            result = (lookup[key], "exakt", 1.0)
+            result = (lookup[key], "exact", 1.0)
         elif key in OVERRIDES:
             result = (OVERRIDES[key], "override", 0.95)
         else:
-            # Override-Tabelle auch als Praefix pruefen: "georgia power" faengt
-            # "georgia power services" mit ab.
+            # Check subsidiary prefixes with word boundaries, including suffixes such as services.
             hit = override_prefix(key)
             if hit:
                 result = (hit, "override-praefix", 0.90)
             elif master_prefix(key, lookup):
                 result = (master_prefix(key, lookup), "konzern-praefix", 0.85)
             else:
-                # token_sort statt token_set: token_set wertet eine Teilmenge als
-                # 100 %. Nach dem Streichen von Fuellwoertern wurde so aus
-                # "US STEEL CORP" das Wort "steel" -- und damit Steel Dynamics.
+                # Use token_sort instead of token_set: a subset can otherwise receive a perfect match, incorrectly linking US Steel to Steel Dynamics after normalization.
                 m = process.extractOne(key, choices, scorer=fuzz.token_sort_ratio)
                 if m and m[1] >= fuzzy_threshold:
                     result = (lookup[m[0]], "fuzzy", m[1] / 100.0)
                 else:
-                    result = (None, "kein-treffer", 0.0)
+                    result = (None, "unmatched", 0.0)
         cache[key] = result
         return result
 
@@ -402,7 +363,7 @@ def resolve_owners(
     out = pd.DataFrame(rows)
     if out.empty:
         return out
-    # Mehrere Eigentuemerzeilen auf denselben Ticker zusammenfassen.
+    # Combine owner rows resolving to the same ticker.
     agg = (
         out.groupby(["facility_id", "year", "ticker"], as_index=False)
         .agg(

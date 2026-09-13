@@ -1,4 +1,4 @@
-"""Stufe 01+02: alle registrierten Quellen ziehen und als Parquet cachen."""
+"""Fetch registered sources and cache them as Parquet."""
 from __future__ import annotations
 
 import sys
@@ -15,21 +15,28 @@ from pipeline.sources import (  # noqa: F401
 
 
 def main(only: list[str] | None = None, force: bool = False) -> None:
+    unknown = set(only or []) - set(base.available())
+    if unknown:
+        raise ValueError(f"Unknown sources: {sorted(unknown)}")
+    failures = []
     for name, cls in base.available().items():
         if only and name not in only:
             continue
         src = cls()
         t0 = time.time()
-        print(f"[{name}] laedt ...", flush=True)
+        print(f"[{name}] loading ...", flush=True)
         try:
             df = src.fetch(force=force)
             print(
-                f"[{name}] {len(df):,} Zeilen, {time.time() - t0:.1f}s "
+                f"[{name}] {len(df):,} rows, {time.time() - t0:.1f}s "
                 f"-> {src.cache_path.name}",
                 flush=True,
             )
         except Exception as exc:  # noqa: BLE001
-            print(f"[{name}] FEHLER: {exc}", flush=True)
+            print(f"[{name}] ERROR: {exc}", flush=True)
+            failures.append(name)
+    if failures:
+        raise SystemExit(f"Sources failed: {', '.join(failures)}. Re-run those sources before dependent stages.")
 
 
 if __name__ == "__main__":

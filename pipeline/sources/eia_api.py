@@ -1,16 +1,4 @@
-"""EIA-API: Brennstoffverbrauch je Kraftwerk -- die unabhaengige Gegenprobe.
-
-CAMPD misst am Schornstein, die EIA erhebt den Brennstoffeinsatz. Beide Wege
-fuehren zur selben Groesse, aber ueber voellig getrennte Meldeketten. Wo sie
-weit auseinanderliegen, stimmt etwas nicht -- entweder in den Daten oder in
-unserer Zurechnung.
-
-Das ist die einzige unabhaengige Kontrolle, die dieses Projekt hat. Alles
-andere ist Plausibilitaet.
-
-**Zugang.** Kostenloser Schluessel von https://www.eia.gov/opendata/register.php,
-gelesen aus ``EIA_API_KEY`` in der ``.env``.
-"""
+"""Retrieve EIA fuel and generation data for comparison with power-sector emissions. Differences can reflect reporting boundaries or attribution as well as errors. Read EIA_API_KEY from .env; registration is available at https://www.eia.gov/opendata/register.php."""
 from __future__ import annotations
 
 import time
@@ -29,7 +17,7 @@ PER_PAGE = 5000
 class EiaApiFacilityFuelSource(DataSource):
     name = "eia_api_facility_fuel"
     endpoint = BASE
-    description = "EIA-923 Brennstoffeinsatz und Erzeugung je Kraftwerk (API v2)"
+    description = "EIA-923 plant fuel use and generation, API v2"
 
     def _fetch(self) -> pd.DataFrame:
         key = require_key("EIA_API_KEY", "https://www.eia.gov/opendata/register.php")
@@ -62,9 +50,9 @@ class EiaApiFacilityFuelSource(DataSource):
         if not rows:
             return pd.DataFrame()
         df = pd.DataFrame(rows)
-        # Die API liefert je Kraftwerk sowohl Einzelzeilen je Brennstoff und
-        # Antriebsart als auch eine Summenzeile. Nur die Summe behalten, sonst
-        # wird jedes Kraftwerk mehrfach gezaehlt.
+        # Keep total rows rather than adding totals to
+        # fuel/technology subtotals and counting
+        # generation twice.
         if "fuel2002" in df.columns:
             df = df[df["fuel2002"].astype(str).str.upper() == "ALL"]
         if "primeMover" in df.columns:

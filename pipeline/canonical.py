@@ -1,22 +1,6 @@
-"""Stufe 04: der kanonische Datensatz -- eine Zeile je Firma und Jahr.
+"""Construct company-year observations and a climate analysis panel.
 
-Ab hier kennt die Bewertungslogik keine Datenquellen mehr, nur noch Spalten.
-Jede Kennzahl traegt ihre Herkunft und ihre Konfidenz mit.
-
-Die Kennzahlen der Kernnote (Achse A) messen ausschliesslich physische
-Ergebnisse:
-
-``co2_intensity``      Scope-1-Tonnen je Million USD Umsatz
-``intensity_cagr``     jaehrliche Veraenderung der Intensitaet
-``absolute_cagr``      jaehrliche Veraenderung der absoluten Tonnen
-
-Die dritte Kennzahl ist kein Beiwerk. Die UN kritisiert ausdruecklich, dass
-eine Firma ihre Intensitaet senken und trotzdem absolut mehr ausstossen kann,
-wenn sie schnell genug waechst. Wer nur Intensitaet misst, belohnt genau das.
-
-Achse B (Greenwashing) wird getrennt berechnet und nie in die Kernnote
-eingerechnet.
-"""
+The core metrics are attributed US facility emissions per million USD of revenue, the annual intensity trend, and the annual absolute-emissions trend. Absolute change matters because intensity can case while total emissions rise. Contextual warning signals are calculated separately. These are partial operational measures, not a complete global corporate footprint."""
 from __future__ import annotations
 
 import numpy as np
@@ -27,11 +11,7 @@ from .resolve import resolve_owners
 
 
 def _cagr(values: pd.Series, years: pd.Series) -> float:
-    """Jaehrliche Wachstumsrate ueber log-lineare Regression.
-
-    Robuster als Endpunkt-durch-Anfangspunkt, weil ein einzelnes Ausreisserjahr
-    das Ergebnis nicht allein bestimmt.
-    """
+    """Estimate annual growth as exp(log-linear OLS slope) - 1. Use at least three positive observations. Using all years avoids dependence on endpoints alone, but OLS is not an outlier-robust estimator."""
     v = pd.to_numeric(values, errors="coerce")
     y = pd.to_numeric(years, errors="coerce")
     mask = np.isfinite(v) & np.isfinite(y) & (v > 0)
@@ -50,18 +30,14 @@ def load_raw() -> dict[str, pd.DataFrame]:
 
 
 def build_company_year(raw: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, dict]:
-    """Baut die Firma-Jahr-Tabelle und gibt Diagnosekennzahlen zurueck."""
+    """Build attributed company-year observations and return matching diagnostics."""
     master = raw["sp500_master"]
     fac = raw["epa_facility"]
     emi = raw["epa_emission"]
     rev = raw["sec_revenue"]
 
     facilities = fac.merge(emi, on=["facility_id", "year"], how="inner")
-    # Eine gemeldete 0 heisst bei der EPA fast nie "emissionsfrei", sondern
-    # "keine Menge gemeldet": Die Anlage bleibt im Stammsatz stehen, auch wenn
-    # sie nach der Aussteigeregel (40 CFR 98.2(i), unter 25 kt) nicht mehr
-    # melden muss. Als 0 verrechnet macht das Firmen sauberer und erzeugt
-    # Trends, die nur das Meldeverhalten abbilden -- deshalb fehlend fuehren.
+    # A facility record with zero or missing quantity does not establish zero emissions. This pipeline excludes nonpositive quantities from the climate panel; it does not infer that an unmatched or nonreporting facility is emission- free.
     n_zero = int((facilities["scope1_t"].fillna(0) <= 0).sum())
     facilities = facilities[facilities["scope1_t"] > 0]
     total_emissions = facilities["scope1_t"].sum()
@@ -81,14 +57,14 @@ def build_company_year(raw: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, dict
         )
     )
 
-    # Frueher standen hier zwei selbstgesetzte Schwellen, die Firmenjahre mit
-    # wenig Anlagen geloescht haben (PPL 2018). Ein Firmenjahr ist aber die
-    # Summe der von der EPA gemeldeten Anlagenmengen -- die Zahl ist richtig,
-    # nur die Trendrechnung darauf war es nicht. Trends stehen nicht mehr im
-    # Datensatz; die Zahl bleibt, mit der Anlagenzahl daneben.
-    n_luecke = 0
+    # Keep company-year totals and facility counts
+    # even when the facility base changes. Guard
+    # the derived trend separately rather than
+    # deleting the underlying reported
+    # observations.
+    n_incomplete = 0
 
-    # Umsatz ueber die CIK anhaengen.
+    # Join revenue through the issuer CIK.
     rev_join = rev.merge(master[["ticker", "cik"]], on="cik", how="inner")
     company_year = company_year.merge(
         rev_join[["ticker", "year", "revenue_musd"]], on=["ticker", "year"], how="left"
@@ -105,8 +81,8 @@ def build_company_year(raw: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, dict
 
     diag = {
         "epa_facility_rows": len(fac),
-        "anlagenjahre_ohne_menge": n_zero,
-        "firmenjahre_zuordnung_unvollstaendig": n_luecke,
+        "facility_years_without_quantity": n_zero,
+        "company_years_incomplete_attribution": n_incomplete,
         "epa_emission_rows": len(emi),
         "facilities_with_emissions": facilities["facility_id"].nunique(),
         "total_epa_emissions_t": float(total_emissions),
@@ -122,7 +98,7 @@ def build_company_year(raw: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, dict
 
 
 def build_panel(company_year: pd.DataFrame, year_from: int, year_to: int) -> pd.DataFrame:
-    """Verdichtet die Jahresreihe eines Zeitfensters zu einer Zeile je Firma."""
+    """Reduce an observation window to one analysis row per company."""
     win = company_year[
         (company_year["year"] >= year_from) & (company_year["year"] <= year_to)
     ].copy()
@@ -136,17 +112,16 @@ def build_panel(company_year: pd.DataFrame, year_from: int, year_to: int) -> pd.
         intensity = g.dropna(subset=["co2_intensity"])
         base = g.iloc[0]["scope1_t"]
         median_t = g["scope1_t"].median()
-        # Schutz gegen instabile Basisjahre: Liegt das erste Jahr des Fensters
-        # weit weg vom Median, misst die Quote die Anlagenzuordnung, nicht das
-        # Verhalten der Firma (PPL 2018: eine Anlage statt neun). Dann keine
-        # Zahl ausweisen, sondern die Instabilitaet kennzeichnen.
+        # Guard against unstable starting years. A large difference
+        # from the period median can reflect a changing facility
+        # match, as in PPL's historical one-facility starting year.
+        # Withhold the derived ratio outside the configured bounds.
         ratio = float(base / median_t) if median_t and median_t > 0 else np.nan
-        basis_stabil = bool(np.isfinite(ratio) and 0.2 <= ratio <= 2.5)
-        # Ein Trend braucht mindestens drei gemessene Jahre. Raten jenseits von
-        # 100 % im Jahr sind Zuordnungssspruenge, keine Klimaentwicklung.
-        genug_jahre = int(g["year"].nunique()) >= 3
+        base_stable = bool(np.isfinite(ratio) and 0.2 <= ratio <= 2.5)
+        # Require at least three years and reject estimated annual changes beyond the configured absolute 100% bound. This is a screening assumption, not a physical law.
+        enough_years = int(g["year"].nunique()) >= 3
         def _guard(v: float) -> float:
-            return float(v) if (genug_jahre and basis_stabil
+            return float(v) if (enough_years and base_stable
                                 and np.isfinite(v) and abs(v) <= 1.0) else np.nan
         rows.append(
             {
@@ -167,17 +142,17 @@ def build_panel(company_year: pd.DataFrame, year_from: int, year_to: int) -> pd.
                 "match_confidence": float(g["match_confidence"].mean()),
                 "intensity_cagr": _guard(_cagr(intensity["co2_intensity"], intensity["year"])),
                 "absolute_cagr": _guard(_cagr(g["scope1_t"], g["year"])),
-                "trend_belastbar": genug_jahre and basis_stabil,
-                # Achse B: Basisjahr-Bequemlichkeit. Liegt das erste Jahr des
-                # Fensters deutlich ueber dem Median, sieht jede spaetere
-                # Reduktion beeindruckender aus, als sie ist.
-                "base_year_ratio": ratio if basis_stabil else np.nan,
-                "basis_stabil": basis_stabil,
+                "trend_eligible": enough_years and base_stable,
+                # A high starting year can make later
+                # reductions look unusually large. Keep this
+                # contextual signal separate from performance.
+                "base_year_ratio": ratio if base_stable else np.nan,
+                "base_stable": base_stable,
             }
         )
     panel = pd.DataFrame(rows)
 
-    # Achse B: Intensitaets-Illusion. Intensitaet faellt, absolut steigt.
+    # Intensity falls while absolute emissions rise.
     panel["intensity_illusion"] = (
         (panel["intensity_cagr"] < 0) & (panel["absolute_cagr"] > 0)
     )

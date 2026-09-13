@@ -1,5 +1,5 @@
 {
-  "total": 503,
+  "total": 500,
   "rules": {
     "anchorWeight": 0.8,
     "minFamilies": 2,
@@ -8,16 +8,16 @@
     "minPeers": 6,
     "narrowBand": 20.0,
     "levels": {
-      "belastbar": "mindestens 2 unabhängige Familien, davon ein Anker (Gewicht ≥ 0.8), Summe ≥ 1.5",
-      "eingeschränkt": "ein Anker vorhanden oder Summe ≥ 1.0",
-      "dünn": "einzelne weiche Angaben",
-      "keine": "kein Wert in diesem Bereich"
+      "strong": "at least 2 distinct families, including an anchor (weight >= 0.8), sum >= 1.5",
+      "partial": "one Anker present_keys oder Summe ≥ 1.0",
+      "thin": "Limited indirect evidence",
+      "none": "No evidence for this pillar"
     }
   },
   "values": [
     {
       "n": 0,
-      "companies": 3
+      "companies": 0
     },
     {
       "n": 1,
@@ -184,19 +184,19 @@
   "pillars": [
     {
       "id": "E",
-      "name": "Umwelt",
+      "name": "Environment",
       "maxScore": 3.3,
       "levels": {
-        "belastbar": 135,
-        "eingeschränkt": 82,
-        "dünn": 186,
-        "keine": 100
+        "strong": 135,
+        "partial": 82,
+        "thin": 186,
+        "none": 97
       },
       "scoreHist": [
         {
           "from": 0.0,
           "to": 0.25,
-          "companies": 100
+          "companies": 97
         },
         {
           "from": 0.25,
@@ -272,100 +272,100 @@
       "families": [
         {
           "id": "ghg",
-          "label": "Treibhausgase",
+          "label": "Greenhouse gases",
           "weight": 1.0,
           "metrics": [
             {
               "id": "campd_co2_t",
               "weight": 1.0,
-              "evidence": "am Schornstein gemessen (CEMS)"
+              "evidence": "Power-sector monitoring (CEMS)"
             },
             {
               "id": "scope1_t",
               "weight": 0.8,
-              "evidence": "behördlich gemeldet (GHGRP)"
+              "evidence": "Reported to regulator (GHGRP)"
             }
           ],
           "companies": 136
         },
         {
-          "id": "effizienz",
-          "label": "Erzeugung",
+          "id": "generation",
+          "label": "Generation",
           "weight": 0.8,
           "metrics": [
             {
               "id": "egrid_co2_t",
               "weight": 0.8,
-              "evidence": "Kraftwerksbilanz gemeldet (eGRID)"
+              "evidence": "Reported plant balance (eGRID)"
             },
             {
               "id": "egrid_mwh",
               "weight": 0.8,
-              "evidence": "Kraftwerksbilanz gemeldet (eGRID)"
+              "evidence": "Reported plant balance (eGRID)"
             }
           ],
           "companies": 43
         },
         {
-          "id": "schadstoffe",
-          "label": "Schadstofffreisetzung",
+          "id": "pollutants",
+          "label": "Pollutant releases",
           "weight": 0.8,
           "metrics": [
             {
               "id": "tri_releases_lbs",
               "weight": 0.8,
-              "evidence": "behördlich gemeldet (TRI)"
+              "evidence": "Reported to regulator (TRI)"
             },
             {
               "id": "tri_carcinogen_lbs",
               "weight": 0.8,
-              "evidence": "behördlich gemeldet (TRI)"
+              "evidence": "Reported to regulator (TRI)"
             }
           ],
           "companies": 194
         },
         {
-          "id": "natur",
-          "label": "Naturbewertung",
+          "id": "nature",
+          "label": "Nature assessment",
           "weight": 0.4,
           "metrics": [
             {
               "id": "wba_nature",
               "weight": 0.4,
-              "evidence": "Bewertung veröffentlichter Angaben (WBA)"
+              "evidence": "Assessment of disclosed information (WBA)"
             }
           ],
           "companies": 71
         },
         {
-          "id": "klimaziele",
-          "label": "Klimaziele",
+          "id": "climate_targets",
+          "label": "Climate targets",
           "weight": 0.3,
           "metrics": [
             {
               "id": "sbti_validated",
               "weight": 0.3,
-              "evidence": "Selbstauskunft, extern geprüft (SBTi)"
+              "evidence": "Company target, externally validated (SBTi)"
             },
             {
               "id": "sbti_near_term_year",
               "weight": 0.3,
-              "evidence": "Selbstauskunft, extern geprüft (SBTi)"
+              "evidence": "Company target, externally validated (SBTi)"
             },
             {
               "id": "sbti_net_zero_year",
               "weight": 0.3,
-              "evidence": "Selbstauskunft, extern geprüft (SBTi)"
+              "evidence": "Company target, externally validated (SBTi)"
             },
             {
               "id": "wba_tpq",
               "weight": 0.3,
-              "evidence": "Bewertung des Transitionsplans (WBA)"
+              "evidence": "Assessment of transition plan (WBA)"
             },
             {
               "id": "wba_ctt",
               "weight": 0.3,
-              "evidence": "Bewertung des Transitionsbeitrags (WBA)"
+              "evidence": "Assessment of contribution to transition (WBA)"
             }
           ],
           "companies": 343
@@ -374,19 +374,19 @@
     },
     {
       "id": "S",
-      "name": "Soziales",
+      "name": "Social",
       "maxScore": 2.1,
       "levels": {
-        "belastbar": 105,
-        "eingeschränkt": 226,
-        "dünn": 69,
-        "keine": 103
+        "strong": 105,
+        "partial": 226,
+        "thin": 69,
+        "none": 100
       },
       "scoreHist": [
         {
           "from": 0.0,
           "to": 0.25,
-          "companies": 103
+          "companies": 100
         },
         {
           "from": 0.25,
@@ -436,65 +436,65 @@
       ],
       "families": [
         {
-          "id": "arbeitssicherheit",
-          "label": "Arbeitssicherheit",
+          "id": "occupational_safety",
+          "label": "Occupational safety",
           "weight": 1.0,
           "metrics": [
             {
               "id": "osha_dafw_cases",
               "weight": 1.0,
-              "evidence": "gesetzliche Meldung je Betrieb (OSHA)"
+              "evidence": "Mandatory establishment report (OSHA)"
             },
             {
               "id": "osha_djtr_cases",
               "weight": 1.0,
-              "evidence": "gesetzliche Meldung je Betrieb (OSHA)"
+              "evidence": "Mandatory establishment report (OSHA)"
             },
             {
               "id": "osha_deaths",
               "weight": 1.0,
-              "evidence": "gesetzliche Meldung je Betrieb (OSHA)"
+              "evidence": "Mandatory establishment report (OSHA)"
             }
           ],
           "companies": 314
         },
         {
-          "id": "lohnrecht",
-          "label": "Lohnrecht",
+          "id": "wage_law",
+          "label": "Wage law",
           "weight": 0.7,
           "metrics": [
             {
               "id": "whd_cases",
               "weight": 0.7,
-              "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
+              "evidence": "Official finding, uncertain name attribution"
             },
             {
               "id": "whd_backwages_usd",
               "weight": 0.7,
-              "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
+              "evidence": "Official finding, uncertain name attribution"
             },
             {
               "id": "whd_employees",
               "weight": 0.7,
-              "evidence": "behördlich festgestellt, Namenszuordnung unsicher"
+              "evidence": "Official finding, uncertain name attribution"
             }
           ],
           "companies": 139
         },
         {
-          "id": "sozialbewertung",
-          "label": "Sozialbewertung",
+          "id": "social_assessment",
+          "label": "Social assessment",
           "weight": 0.4,
           "metrics": [
             {
               "id": "wba_social",
               "weight": 0.4,
-              "evidence": "Bewertung veröffentlichter Angaben (WBA)"
+              "evidence": "Assessment of disclosed information (WBA)"
             },
             {
               "id": "wba_just_transition",
               "weight": 0.4,
-              "evidence": "Bewertung veröffentlichter Angaben (WBA)"
+              "evidence": "Assessment of disclosed information (WBA)"
             }
           ],
           "companies": 217
@@ -503,19 +503,19 @@
     },
     {
       "id": "G",
-      "name": "Unternehmensführung",
+      "name": "Governance",
       "maxScore": 1.7,
       "levels": {
-        "belastbar": 54,
-        "eingeschränkt": 80,
-        "dünn": 366,
-        "keine": 3
+        "strong": 54,
+        "partial": 80,
+        "thin": 366,
+        "none": 0
       },
       "scoreHist": [
         {
           "from": 0.0,
           "to": 0.25,
-          "companies": 184
+          "companies": 181
         },
         {
           "from": 0.25,
@@ -555,60 +555,60 @@
       ],
       "families": [
         {
-          "id": "regeltreue",
-          "label": "Umweltregeltreue",
+          "id": "compliance",
+          "label": "Environmental compliance",
           "weight": 1.0,
           "metrics": [
             {
               "id": "echo_penalties_usd",
               "weight": 1.0,
-              "evidence": "behördlich festgestellt (ECHO)"
+              "evidence": "Official finding (ECHO)"
             },
             {
               "id": "echo_nc_quarters",
               "weight": 1.0,
-              "evidence": "behördlich festgestellt (ECHO)"
+              "evidence": "Official finding (ECHO)"
             },
             {
               "id": "echo_significant",
               "weight": 1.0,
-              "evidence": "behördlich festgestellt (ECHO)"
+              "evidence": "Official finding (ECHO)"
             }
           ],
           "companies": 134
         },
         {
-          "id": "zusagen",
-          "label": "Umgang mit Zusagen",
+          "id": "commitments",
+          "label": "Handling of commitments",
           "weight": 0.5,
           "metrics": [
             {
               "id": "sbti_commitment_removed",
               "weight": 0.5,
-              "evidence": "protokollierter Rückzug (SBTi)"
+              "evidence": "Recorded commitment removal (SBTi)"
             },
             {
               "id": "sbti_near_term_expired",
               "weight": 0.5,
-              "evidence": "Zieljahr verstrichen (SBTi)"
+              "evidence": "Target year elapsed (SBTi)"
             },
             {
               "id": "sbti_net_zero_removed",
               "weight": 0.5,
-              "evidence": "protokollierter Rückzug (SBTi)"
+              "evidence": "Recorded commitment removal (SBTi)"
             }
           ],
           "companies": 239
         },
         {
-          "id": "lieferkette",
-          "label": "Lieferkettenpflicht",
+          "id": "supply_chain",
+          "label": "Supply-chain filing obligations",
           "weight": 0.2,
           "metrics": [
             {
               "id": "sd_conflict_minerals_filer",
               "weight": 0.2,
-              "evidence": "nur Meldestatus (Form SD)"
+              "evidence": "Filing status only (Form SD)"
             }
           ],
           "companies": 500
@@ -619,7 +619,7 @@
   "combos": [
     {
       "pattern": "···",
-      "companies": 311
+      "companies": 308
     },
     {
       "pattern": "E··",
@@ -698,7 +698,7 @@
     },
     {
       "sector": "Communication Services",
-      "companies": 24,
+      "companies": 21,
       "E": 1,
       "S": 2,
       "G": 2,
@@ -753,31 +753,31 @@
   ],
   "funnel": [
     {
-      "label": "Indexmitglieder",
-      "companies": 503
-    },
-    {
-      "label": "mit mindestens einem Wert",
+      "label": "Index members",
       "companies": 500
     },
     {
-      "label": "in mindestens einem Bereich belastbar",
+      "label": "With at least one observation",
+      "companies": 500
+    },
+    {
+      "label": "Strong evidence in at least one pillar",
       "companies": 192
     },
     {
-      "label": "in mindestens zwei Bereichen belastbar",
+      "label": "Strong evidence in at least two pillars",
       "companies": 86
     },
     {
-      "label": "in allen drei Bereichen belastbar",
+      "label": "Strong evidence in all three pillars",
       "companies": 16
     },
     {
-      "label": "… und in einer Branche mit mindestens 6 solchen Firmen",
+      "label": "... and in a sector with at least 6 such companies",
       "companies": 0
     },
     {
-      "label": "… und Umwelt-Rangband höchstens 20 Perzentilpunkte breit",
+      "label": "... and climate band at most 20 percentile points wide",
       "companies": 0
     }
   ],

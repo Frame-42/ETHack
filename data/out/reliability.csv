@@ -1,0 +1,501 @@
+ticker,company,gics_sector,n_values,E_score,E_families,E_family_list,E_anchor,E_level,S_score,S_families,S_family_list,S_anchor,S_level,G_score,G_families,G_family_list,G_anchor,G_level,e_band_width,n_reliable
+A,Agilent Technologies,Health Care,22,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+AAPL,Apple Inc.,Information Technology,27,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+ABBV,AbbVie,Health Care,35,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,30.0,2
+ABNB,Airbnb,Consumer Discretionary,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+ABT,Abbott Laboratories,Health Care,18,1.6,2,"ghg, pollutants",True,strong,0.0,0,,False,none,1.2,2,"compliance, supply_chain",True,partial,40.0,1
+ACGL,Arch Capital Group,Financials,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+ACN,Accenture,Information Technology,22,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ADBE,Adobe Inc.,Information Technology,17,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+ADI,Analog Devices,Information Technology,31,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,18.18181818181818,2
+ADM,Archer Daniels Midland,Consumer Staples,29,2.7,4,"climate_targets, generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,8.974358974358971,2
+ADP,Automatic Data Processing,Industrials,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+ADSK,Autodesk,Information Technology,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+AEE,Ameren,Utilities,26,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,46.66666666666666,1
+AEP,American Electric Power,Utilities,25,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,28.571428571428584,1
+AES,AES Corporation,Utilities,27,2.1,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,33.33333333333333,1
+AFL,Aflac,Financials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+AIG,American International Group,Financials,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+AIZ,Assurant,Financials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+AJG,Arthur J. Gallagher & Co.,Financials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+AKAM,Akamai Technologies,Information Technology,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+ALB,Albemarle Corporation,Materials,28,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,11.1111111111111,1
+ALGN,Align Technology,Health Care,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+ALL,Allstate,Financials,16,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+ALLE,Allegion,Industrials,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+AMAT,Applied Materials,Information Technology,22,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+AMCR,Amcor,Materials,25,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+AMD,Advanced Micro Devices,Information Technology,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+AME,Ametek,Industrials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+AMGN,Amgen,Health Care,31,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,10.0,2
+AMP,Ameriprise Financial,Financials,8,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+AMT,American Tower,Real Estate,20,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+AMZN,Amazon,Consumer Discretionary,24,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+ANET,Arista Networks,Information Technology,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+AON,Aon plc,Financials,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+AOS,A. O. Smith,Industrials,19,0.8,1,pollutants,True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+APA,APA Corporation,Energy,28,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,,2
+APD,Air Products,Materials,21,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,16.666666666666668,1
+APH,Amphenol,Information Technology,23,1.1,2,"climate_targets, pollutants",True,partial,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+APO,Apollo Global Management,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+APP,AppLovin,Communication Services,7,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+APTV,Aptiv,Consumer Discretionary,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ARE,Alexandria Real Estate Equities,Real Estate,10,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+ARES,Ares Management,Financials,12,0.8,1,ghg,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,2.3809523809523796,0
+ATO,Atmos Energy,Utilities,17,0.8,1,ghg,True,partial,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,18.518518518518533,0
+AVGO,Broadcom,Information Technology,29,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,22.222222222222214,2
+AVY,Avery Dennison,Materials,30,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,2
+AWK,American Water Works,Utilities,16,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+AXON,Axon Enterprise,Industrials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+AXP,American Express,Financials,27,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+AZO,AutoZone,Consumer Discretionary,25,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,,1
+BA,Boeing,Industrials,32,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,49.99999999999999,2
+BAC,Bank of America,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+BALL,Ball Corporation,Materials,28,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,2
+BAX,Baxter International,Health Care,31,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,,2
+BBY,Best Buy,Consumer Discretionary,16,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+BDX,Becton Dickinson,Health Care,19,0.8,1,pollutants,True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+BEN,Franklin Resources,Financials,11,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+BF-B,Brown–Forman,Consumer Staples,23,1.5,3,"climate_targets, ghg, nature",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,15.384615384615387,1
+BG,Bunge Global,Consumer Staples,26,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,46.153846153846146,2
+BIIB,Biogen,Health Care,29,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,40.0,2
+BKNG,Booking Holdings,Consumer Discretionary,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+BKR,Baker Hughes,Energy,13,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+BLDR,Builders FirstSource,Industrials,21,0.7,2,"climate_targets, nature",False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+BLK,BlackRock,Financials,18,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,28.571428571428584,0
+BMY,Bristol Myers Squibb,Health Care,36,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,40.99999999999994,2
+BNY,BNY Mellon,Financials,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+BR,Broadridge Financial Solutions,Industrials,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+BRK-B,Berkshire Hathaway,Financials,34,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,28.571428571428584,2
+BRO,Brown & Brown,Financials,11,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+BSX,Boston Scientific,Health Care,20,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+BX,Blackstone Inc.,Financials,14,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+BXP,"BXP, Inc.",Real Estate,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+C,Citigroup,Financials,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+CAH,Cardinal Health,Health Care,22,0.3,1,climate_targets,False,thin,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+CARR,Carrier Global,Industrials,29,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,,2
+CASY,Casey's,Consumer Staples,16,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+CAT,Caterpillar Inc.,Industrials,26,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,28.006535947712393,2
+CB,Chubb Limited,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+CBOE,Cboe Global Markets,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+CBRE,CBRE Group,Real Estate,20,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CCI,Crown Castle,Real Estate,10,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+CCL,Carnival Corporation,Consumer Discretionary,11,0.7,2,"climate_targets, nature",False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+CDNS,Cadence Design Systems,Information Technology,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+CDW,CDW Corporation,Information Technology,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CEG,Constellation Energy,Utilities,30,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,,1
+CF,CF Industries,Materials,31,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,44.44444444444444,2
+CFG,Citizens Financial Group,Financials,14,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+CHD,Church & Dwight,Consumer Staples,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CHRW,C.H. Robinson,Industrials,16,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+CHTR,Charter Communications,Communication Services,16,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+CI,Cigna,Health Care,9,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+CIEN,Ciena,Information Technology,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CINF,Cincinnati Financial,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+CL,Colgate-Palmolive,Consumer Staples,24,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+CLX,Clorox,Consumer Staples,25,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+CMCSA,Comcast,Communication Services,16,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+CME,CME Group,Financials,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+CMG,Chipotle Mexican Grill,Consumer Discretionary,20,0.7,2,"climate_targets, nature",False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CMI,Cummins,Industrials,25,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+CMS,CMS Energy,Utilities,29,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,20.0,1
+CNC,Centene Corporation,Health Care,11,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+CNP,CenterPoint Energy,Utilities,29,2.4,3,"generation, ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,22.222222222222214,2
+COF,Capital One,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+COHR,Coherent Corp.,Information Technology,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+COIN,Coinbase,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+COO,Cooper Companies (The),Health Care,17,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+COP,ConocoPhillips,Energy,22,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,31.25,0
+COR,Cencora,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+COST,Costco,Consumer Staples,24,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,2
+CPAY,Corpay,Financials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+CPRT,Copart,Industrials,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+CPT,Camden Property Trust,Real Estate,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+CRH,CRH plc,Materials,20,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CRL,Charles River Laboratories,Health Care,15,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CRM,Salesforce,Information Technology,12,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+CRWD,CrowdStrike,Information Technology,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+CSCO,Cisco,Information Technology,12,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+CSGP,CoStar Group,Real Estate,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+CSX,CSX Corporation,Industrials,17,0.3,1,climate_targets,False,thin,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+CTAS,Cintas,Industrials,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+CTSH,Cognizant,Information Technology,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+CTVA,Corteva,Materials,21,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,16.666666666666657,1
+CVNA,Carvana,Consumer Discretionary,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+CVS,CVS Health,Health Care,21,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+CVX,Chevron Corporation,Energy,28,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,25.0,2
+D,Dominion Energy,Utilities,34,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,20.0,2
+DAL,Delta Air Lines,Industrials,34,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,26.666666666666657,3
+DASH,DoorDash,Consumer Discretionary,16,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+DD,DuPont,Industrials,30,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,70.0,2
+DDOG,Datadog,Information Technology,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+DE,Deere & Company,Industrials,32,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,20.0,3
+DECK,Deckers Brands,Consumer Discretionary,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+DELL,Dell Technologies,Information Technology,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+DG,Dollar General,Consumer Staples,20,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+DGX,Quest Diagnostics,Health Care,12,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+DHI,D. R. Horton,Consumer Discretionary,19,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+DHR,Danaher Corporation,Health Care,27,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+DIS,Walt Disney Company (The),Communication Services,27,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,0.0,1
+DLR,Digital Realty,Real Estate,14,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+DLTR,Dollar Tree,Consumer Staples,14,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+DOC,Healthpeak Properties,Real Estate,9,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+DOV,Dover Corporation,Industrials,23,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+DOW,Dow Inc.,Materials,29,3.3,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,22.22222222222223,1
+DPZ,Domino's,Consumer Discretionary,16,0.7,2,"climate_targets, nature",False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+DRI,Darden Restaurants,Consumer Discretionary,15,0.7,2,"climate_targets, nature",False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+DTE,DTE Energy,Utilities,25,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,,1
+DUK,Duke Energy,Utilities,31,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,23.54497354497355,1
+DVA,DaVita,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+DVN,Devon Energy,Energy,22,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,14.285714285714292,0
+DXCM,Dexcom,Health Care,15,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+EBAY,eBay Inc.,Consumer Discretionary,22,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ECHO,EchoStar,Communication Services,10,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+ECL,Ecolab,Materials,28,1.9,3,"climate_targets, generation, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,2
+ED,Consolidated Edison,Utilities,29,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,22.222222222222214,1
+EFX,Equifax,Industrials,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+EG,Everest Group,Financials,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+EIX,Edison International,Utilities,25,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,49.20634920634921,1
+EL,Estée Lauder Companies (The),Consumer Staples,23,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+ELV,Elevance Health,Health Care,16,0.3,1,climate_targets,False,thin,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+EME,Emcor,Industrials,16,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+EMR,Emerson Electric,Industrials,21,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+EOG,EOG Resources,Energy,25,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,28.571428571428584,1
+EQIX,Equinix,Real Estate,20,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+EQT,EQT Corporation,Energy,21,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,36.60714285714286,0
+ERIE,Erie Indemnity,Financials,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+ES,Eversource Energy,Utilities,19,1.9,3,"climate_targets, generation, ghg",True,strong,0.0,0,,False,none,1.7,3,"commitments, compliance, supply_chain",True,strong,50.00000000000001,2
+ESS,Essex Property Trust,Real Estate,9,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+ETN,Eaton Corporation,Industrials,31,1.1,2,"climate_targets, pollutants",True,partial,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+ETR,Entergy,Utilities,26,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,19.65811965811966,1
+EVRG,Evergy,Utilities,31,2.6,3,"generation, ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,7.407407407407407,2
+EW,Edwards Lifesciences,Health Care,21,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+EXC,Exelon,Utilities,26,1.8,2,"generation, ghg",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,7.142857142857139,2
+EXE,Expand Energy,Energy,22,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,43.75,0
+EXPD,Expeditors International,Industrials,10,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+EXPE,Expedia Group,Consumer Discretionary,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+EXR,Extra Space Storage,Real Estate,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+F,Ford Motor Company,Consumer Discretionary,34,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,50.0,3
+FANG,Diamondback Energy,Energy,17,0.8,1,ghg,True,partial,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,37.5,0
+FAST,Fastenal,Industrials,19,0.8,1,pollutants,True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+FCX,Freeport-McMoRan,Materials,32,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,11.1111111111111,2
+FDS,FactSet,Financials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+FDX,FedEx,Industrials,24,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+FDXF,FedEx Freight,Industrials,6,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+FE,FirstEnergy,Utilities,26,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,7.9365079365079225,1
+FERG,Ferguson Enterprises,Industrials,15,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+FFIV,"F5, Inc.",Information Technology,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+FICO,Fair Isaac,Information Technology,7,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+FIS,Fidelity National Information Services,Financials,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+FISV,Fiserv,Financials,16,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+FITB,Fifth Third Bancorp,Financials,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+FIX,Comfort Systems USA,Industrials,16,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+FLEX,Flex Ltd.,Information Technology,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+FOXA,Fox Corporation (Class A),Communication Services,10,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+FRT,Federal Realty Investment Trust,Real Estate,15,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+FSLR,First Solar,Information Technology,25,1.1,2,"climate_targets, pollutants",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+FTNT,Fortinet,Information Technology,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+FTV,Fortive,Industrials,16,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+GD,General Dynamics,Industrials,20,0.8,1,pollutants,True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+GDDY,GoDaddy,Information Technology,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+GE,GE Aerospace,Industrials,24,2.4,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,65.27777777777777,1
+GEHC,GE HealthCare,Health Care,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+GEN,Gen Digital,Information Technology,7,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+GEV,GE Vernova,Industrials,18,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,1
+GILD,Gilead Sciences,Health Care,21,0.7,2,"climate_targets, nature",False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+GIS,General Mills,Consumer Staples,37,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,38.46153846153845,3
+GL,Globe Life,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+GLW,Corning Inc.,Information Technology,30,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,54.54545454545455,2
+GM,General Motors,Consumer Discretionary,35,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,75.0,3
+GNRC,Generac,Industrials,15,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+GOOGL,Alphabet Inc. (Class A),Communication Services,28,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,0.0,1
+GPC,Genuine Parts Company,Consumer Discretionary,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+GPN,Global Payments,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+GRMN,Garmin,Consumer Discretionary,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+GS,Goldman Sachs,Financials,12,1.1,2,"climate_targets, ghg",True,partial,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,14.285714285714292,0
+GWW,W. W. Grainger,Industrials,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+HAL,Halliburton,Energy,25,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,33.33333333333334,2
+HAS,Hasbro,Consumer Discretionary,14,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+HBAN,Huntington Bancshares,Financials,11,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+HCA,HCA Healthcare,Health Care,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+HD,Home Depot (The),Consumer Discretionary,25,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+HIG,Hartford (The),Financials,7,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+HII,Huntington Ingalls Industries,Industrials,26,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,48.36601307189543,2
+HLT,Hilton Worldwide,Consumer Discretionary,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+HON,Honeywell Technologies,Industrials,28,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,27.777777777777786,2
+HONA,Honeywell Aerospace,Industrials,6,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+HOOD,Robinhood Markets,Financials,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+HPE,Hewlett Packard Enterprise,Information Technology,18,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+HPQ,HP Inc.,Information Technology,40,2.7,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,45.45454545454545,3
+HRL,Hormel Foods,Consumer Staples,31,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,44.230769230769226,2
+HSIC,Henry Schein,Health Care,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+HST,Host Hotels & Resorts,Real Estate,15,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+HSY,Hershey Company (The),Consumer Staples,24,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+HUBB,Hubbell Incorporated,Industrials,12,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+HUM,Humana,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+HWM,Howmet Aerospace,Industrials,27,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,50.00000000000001,2
+IBKR,Interactive Brokers,Financials,3,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+IBM,IBM,Information Technology,12,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+ICE,Intercontinental Exchange,Financials,7,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+IDXX,Idexx Laboratories,Health Care,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+IEX,IDEX Corporation,Industrials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+IFF,International Flavors & Fragrances,Materials,26,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,16.666666666666664,2
+INCY,Incyte,Health Care,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+INTC,Intel,Information Technology,27,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,44.444444444444436,1
+INTU,Intuit,Information Technology,16,0.3,1,climate_targets,False,thin,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+INVH,Invitation Homes,Real Estate,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+IP,International Paper,Materials,34,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,16.666666666666664,3
+IQV,IQVIA,Health Care,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+IR,Ingersoll Rand,Industrials,23,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+IRM,Iron Mountain,Real Estate,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ISRG,Intuitive Surgical,Health Care,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+IT,Gartner,Information Technology,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+ITW,Illinois Tool Works,Industrials,17,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,14.444444444444445,1
+IVZ,Invesco,Financials,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+J,Jacobs Solutions,Industrials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+JBHT,J.B. Hunt,Industrials,12,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+JBL,Jabil,Information Technology,24,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+JCI,Johnson Controls,Industrials,30,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,,3
+JKHY,Jack Henry & Associates,Financials,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+JNJ,Johnson & Johnson,Health Care,26,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+JPM,JPMorgan Chase,Financials,13,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+KDP,Keurig Dr Pepper,Consumer Staples,24,1.5,3,"climate_targets, nature, pollutants",True,strong,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,1
+KEY,KeyCorp,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+KEYS,Keysight Technologies,Information Technology,20,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+KHC,Kraft Heinz,Consumer Staples,38,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,7.692307692307693,3
+KIM,Kimco Realty,Real Estate,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+KKR,KKR & Co.,Financials,20,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,28.57142857142857,0
+KLAC,KLA Corporation,Information Technology,23,0.3,1,climate_targets,False,thin,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+KMB,Kimberly-Clark,Consumer Staples,30,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,26.92307692307692,2
+KMI,Kinder Morgan,Energy,22,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,6.25,1
+KO,Coca-Cola Company (The),Consumer Staples,24,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,2
+KR,Kroger,Consumer Staples,26,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,2
+KVUE,Kenvue,Consumer Staples,18,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+L,Loews Corporation,Financials,14,0.8,1,ghg,True,partial,0.0,0,,False,none,1.2,2,"compliance, supply_chain",True,partial,4.761904761904759,0
+LDOS,Leidos,Industrials,15,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+LEN,Lennar,Consumer Discretionary,14,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+LH,Labcorp,Health Care,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+LHX,L3Harris,Industrials,19,0.8,1,pollutants,True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+LII,Lennox International,Industrials,23,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,,1
+LIN,Linde plc,Materials,32,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,16.66666666666668,2
+LITE,Lumentum,Information Technology,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+LLY,Lilly (Eli),Health Care,26,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,90.0,2
+LMT,Lockheed Martin,Industrials,25,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,37.5,2
+LNT,Alliant Energy,Utilities,21,2.6,3,"generation, ghg, pollutants",True,strong,0.0,0,,False,none,1.2,2,"compliance, supply_chain",True,partial,28.042328042328037,1
+LOW,Lowe's,Consumer Discretionary,25,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+LRCX,Lam Research,Information Technology,24,1.1,2,"climate_targets, pollutants",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+LULU,Lululemon Athletica,Consumer Discretionary,15,0.7,2,"climate_targets, nature",False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+LUV,Southwest Airlines,Industrials,20,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+LVS,Las Vegas Sands,Consumer Discretionary,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+LYB,LyondellBasell,Materials,26,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,16.66666666666667,1
+LYV,Live Nation Entertainment,Communication Services,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+MA,Mastercard,Financials,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+MAA,Mid-America Apartment Communities,Real Estate,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+MAR,Marriott International,Consumer Discretionary,22,0.3,1,climate_targets,False,thin,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+MAS,Masco,Industrials,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+MCD,McDonald's,Consumer Discretionary,27,0.7,2,"climate_targets, nature",False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+MCHP,Microchip Technology,Information Technology,27,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,45.45454545454545,1
+MCK,McKesson Corporation,Health Care,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+MCO,Moody's Corporation,Financials,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+MDLZ,Mondelez International,Consumer Staples,37,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,,3
+MDT,Medtronic,Health Care,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+MET,MetLife,Financials,13,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+META,Meta Platforms,Communication Services,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+MGM,MGM Resorts,Consumer Discretionary,28,1.1,2,"climate_targets, ghg",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,50.0,2
+MKC,McCormick & Company,Consumer Staples,29,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,2
+MLM,Martin Marietta Materials,Materials,32,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,16.666666666666668,2
+MMM,3M,Industrials,37,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,32.02614379084967,3
+MNST,Monster Beverage,Consumer Staples,14,0.7,2,"climate_targets, nature",False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+MO,Altria,Consumer Staples,28,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,15.384615384615373,2
+MOS,Mosaic Company (The),Materials,32,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,11.111111111111128,2
+MPC,Marathon Petroleum,Energy,30,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,31.25,2
+MPWR,Monolithic Power Systems,Information Technology,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+MRK,Merck & Co.,Health Care,25,2.4,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,50.0,1
+MRNA,Moderna,Health Care,22,0.7,2,"climate_targets, nature",False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+MRSH,Marsh McLennan,Financials,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+MRVL,Marvell Technology,Information Technology,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+MS,Morgan Stanley,Financials,16,1.1,2,"climate_targets, ghg",True,partial,0.4,1,social_assessment,False,thin,1.2,2,"compliance, supply_chain",True,partial,,0
+MSCI,MSCI,Financials,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+MSFT,Microsoft,Information Technology,17,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+MSI,Motorola Solutions,Information Technology,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+MTB,M&T Bank,Financials,10,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+MTD,Mettler Toledo,Health Care,22,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+MU,Micron Technology,Information Technology,27,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,45.55555555555556,1
+NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,11,0.7,2,"climate_targets, nature",False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+NDAQ,"Nasdaq, Inc.",Financials,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+NDSN,Nordson Corporation,Industrials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+NEE,NextEra Energy,Utilities,29,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,48.888888888888886,1
+NEM,Newmont,Materials,28,2.5,4,"climate_targets, ghg, nature, pollutants",True,strong,0.4,1,social_assessment,False,thin,1.7,3,"commitments, compliance, supply_chain",True,strong,5.555555555555557,2
+NFLX,Netflix,Communication Services,22,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+NI,NiSource,Utilities,24,1.8,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,18.51851851851852,1
+NKE,"Nike, Inc.",Consumer Discretionary,22,0.7,2,"climate_targets, nature",False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+NOC,Northrop Grumman,Industrials,22,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,43.05555555555556,1
+NOW,ServiceNow,Information Technology,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+NRG,NRG Energy,Utilities,32,2.1,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,14.81481481481481,2
+NSC,Norfolk Southern,Industrials,23,1.1,2,"climate_targets, ghg",True,partial,0.7,1,wage_law,False,thin,1.7,3,"commitments, compliance, supply_chain",True,strong,33.33333333333333,1
+NTAP,NetApp,Information Technology,17,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+NTRS,Northern Trust,Financials,18,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+NUE,Nucor,Materials,27,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,16.666666666666664,1
+NVDA,Nvidia,Information Technology,21,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+NVR,"NVR, Inc.",Consumer Discretionary,14,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+NWSA,News Corp (Class A),Communication Services,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+NXPI,NXP Semiconductors,Information Technology,28,1.1,2,"climate_targets, ghg",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,81.81818181818181,1
+O,Realty Income,Real Estate,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+ODFL,Old Dominion,Industrials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+OKE,Oneok,Energy,26,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,29.16666666666667,2
+OMC,Omnicom Group,Communication Services,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+ON,ON Semiconductor,Information Technology,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+ORCL,Oracle Corporation,Information Technology,16,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+ORLY,O'Reilly Automotive,Consumer Discretionary,16,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.2,1,supply_chain,False,thin,,0
+OTIS,Otis Worldwide,Industrials,19,1.1,2,"climate_targets, pollutants",True,partial,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+OXY,Occidental Petroleum,Energy,26,2.1,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,8.035714285714285,1
+PANW,Palo Alto Networks,Information Technology,11,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+PAYX,Paychex,Industrials,16,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+PCAR,Paccar,Industrials,24,1.1,2,"climate_targets, pollutants",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+PCG,PG&E Corporation,Utilities,28,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,0.4,1,social_assessment,False,thin,1.7,3,"commitments, compliance, supply_chain",True,strong,17.824074074074055,2
+PEG,Public Service Enterprise Group,Utilities,19,1.3,2,"climate_targets, ghg",True,partial,0.0,0,,False,none,1.7,3,"commitments, compliance, supply_chain",True,strong,7.142857142857139,1
+PEP,PepsiCo,Consumer Staples,36,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,23.07692307692308,3
+PFE,Pfizer,Health Care,35,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,50.0,2
+PFG,Principal Financial Group,Financials,13,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+PG,Procter & Gamble,Consumer Staples,35,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,38.46153846153846,2
+PGR,Progressive Corporation,Financials,15,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+PH,Parker Hannifin,Industrials,24,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+PHM,PulteGroup,Consumer Discretionary,14,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+PKG,Packaging Corporation of America,Materials,25,2.4,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,11.111111111111121,1
+PLD,Prologis,Real Estate,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+PLTR,Palantir Technologies,Information Technology,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+PM,Philip Morris International,Consumer Staples,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+PNC,PNC Financial Services,Financials,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+PNR,Pentair,Industrials,16,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+PNW,Pinnacle West Capital,Utilities,24,2.6,3,"generation, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,26.66666666666667,1
+PODD,Insulet Corporation,Health Care,12,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+PPG,PPG Industries,Materials,36,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,22.22222222222222,3
+PPL,PPL Corporation,Utilities,36,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,67.46031746031746,2
+PRU,Prudential Financial,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+PSA,Public Storage,Real Estate,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+PSKY,Paramount Skydance Corporation,Communication Services,1,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+PSX,Phillips 66,Energy,33,2.7,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,33.33333333333333,2
+PTC,PTC Inc.,Information Technology,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+PWR,Quanta Services,Industrials,15,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+PYPL,PayPal,Financials,16,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+Q,Qnity Electronics,Information Technology,6,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+QCOM,Qualcomm,Information Technology,29,1.1,2,"climate_targets, ghg",True,partial,1.1,2,"social_assessment, wage_law",False,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,36.36363636363637,1
+RCL,Royal Caribbean Group,Consumer Discretionary,11,0.7,2,"climate_targets, nature",False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+RDDT,Reddit,Communication Services,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+REG,Regency Centers,Real Estate,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+REGN,Regeneron Pharmaceuticals,Health Care,11,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+RF,Regions Financial Corporation,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+RJF,Raymond James Financial,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+RL,Ralph Lauren Corporation,Consumer Discretionary,21,0.7,2,"climate_targets, nature",False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+RMD,ResMed|,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ROK,Rockwell Automation,Industrials,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ROL,"Rollins, Inc.",Industrials,10,0.0,0,,False,none,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+ROP,Roper Technologies,Information Technology,12,1.1,2,"climate_targets, pollutants",True,partial,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+ROST,Ross Stores,Consumer Discretionary,12,0.7,2,"climate_targets, nature",False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+RSG,Republic Services,Industrials,35,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,16.666666666666664,3
+RTX,RTX Corporation,Industrials,22,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,55.555555555555564,1
+RVTY,Revvity,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+SBAC,SBA Communications,Real Estate,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+SBUX,Starbucks,Consumer Discretionary,26,0.7,2,"climate_targets, nature",False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+SCHW,Charles Schwab Corporation,Financials,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+SHW,Sherwin-Williams,Materials,23,1.5,3,"climate_targets, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,2
+SJM,J.M. Smucker Company (The),Consumer Staples,27,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,46.15384615384616,1
+SLB,Schlumberger,Energy,15,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+SMCI,Supermicro,Information Technology,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+SNA,Snap-on,Industrials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+SNDK,Sandisk,Information Technology,10,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+SNPS,Synopsys,Information Technology,13,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+SO,Southern Company,Utilities,35,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,24.074074074074076,2
+SOLV,Solventum,Health Care,14,1.1,2,"climate_targets, pollutants",True,partial,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+SPG,Simon Property Group,Real Estate,19,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+SPGI,S&P Global,Financials,22,0.3,1,climate_targets,False,thin,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+SRE,Sempra,Utilities,22,1.8,2,"generation, ghg",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,40.74074074074074,1
+STE,Steris,Health Care,24,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+STLD,Steel Dynamics,Materials,26,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,22.222222222222214,1
+STT,State Street Corporation,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+STX,Seagate Technology,Information Technology,21,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+STZ,Constellation Brands,Consumer Staples,19,1.5,3,"climate_targets, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,1
+SW,Smurfit Westrock,Materials,28,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,27.777777777777786,1
+SWK,Stanley Black & Decker,Industrials,24,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+SWKS,Skyworks Solutions,Information Technology,23,1.6,2,"ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.2,2,"compliance, supply_chain",True,partial,45.45454545454545,1
+SYF,Synchrony Financial,Financials,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+SYK,Stryker Corporation,Health Care,20,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+SYY,Sysco,Consumer Staples,26,0.7,2,"climate_targets, nature",False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+T,AT&T,Communication Services,28,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,,2
+TAP,Molson Coors Beverage Company,Consumer Staples,34,3.1,5,"climate_targets, generation, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,76.92307692307692,2
+TDG,TransDigm Group,Industrials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+TDY,Teledyne Technologies,Information Technology,15,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+TECH,Bio-Techne,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+TEL,TE Connectivity,Information Technology,24,1.1,2,"climate_targets, pollutants",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+TER,Teradyne,Information Technology,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+TFC,Truist Financial,Financials,9,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+TGT,Target Corporation,Consumer Staples,30,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,,2
+TJX,TJX Companies,Consumer Discretionary,22,0.7,2,"climate_targets, nature",False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+TKO,TKO Group Holdings,Communication Services,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+TMO,Thermo Fisher Scientific,Health Care,28,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,50.0,2
+TMUS,T-Mobile US,Communication Services,17,0.3,1,climate_targets,False,thin,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+TPL,Texas Pacific Land Corporation,Energy,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+TPR,"Tapestry, Inc.",Consumer Discretionary,22,0.7,2,"climate_targets, nature",False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+TRGP,Targa Resources,Energy,25,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.1,2,"social_assessment, wage_law",False,partial,1.2,2,"compliance, supply_chain",True,partial,14.583333333333329,1
+TRMB,Trimble Inc.,Information Technology,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+TROW,T. Rowe Price,Financials,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+TRV,Travelers Companies (The),Financials,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+TSCO,Tractor Supply,Consumer Discretionary,21,0.3,1,climate_targets,False,thin,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+TSLA,"Tesla, Inc.",Consumer Discretionary,34,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,50.0,3
+TSN,Tyson Foods,Consumer Staples,37,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.7,3,"commitments, compliance, supply_chain",True,strong,46.15384615384616,3
+TT,Trane Technologies,Industrials,19,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+TTD,Trade Desk (The),Communication Services,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+TTWO,Take-Two Interactive,Communication Services,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+TXN,Texas Instruments,Information Technology,32,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,44.44444444444444,2
+TXT,Textron,Industrials,26,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,25.0,2
+TYL,Tyler Technologies,Information Technology,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+UAL,United Airlines Holdings,Industrials,20,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+UBER,Uber,Industrials,16,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.2,1,supply_chain,False,thin,,0
+UDR,"UDR, Inc.",Real Estate,14,0.3,1,climate_targets,False,thin,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+UHS,Universal Health Services,Health Care,17,0.0,0,,False,none,1.7,2,"occupational_safety, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+ULTA,Ulta Beauty,Consumer Discretionary,20,0.3,1,climate_targets,False,thin,1.1,2,"social_assessment, wage_law",False,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+UNH,UnitedHealth Group,Health Care,16,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+UNP,Union Pacific Corporation,Industrials,16,0.3,1,climate_targets,False,thin,0.7,1,wage_law,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+UPS,United Parcel Service,Industrials,20,0.3,1,climate_targets,False,thin,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.2,1,supply_chain,False,thin,,1
+URI,United Rentals,Industrials,11,0.0,0,,False,none,0.7,1,wage_law,False,thin,0.2,1,supply_chain,False,thin,,0
+USB,U.S. Bancorp,Financials,8,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+V,Visa Inc.,Financials,15,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+VEEV,Veeva Systems,Health Care,10,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+VICI,Vici Properties,Real Estate,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+VLO,Valero Energy,Energy,29,1.9,3,"climate_targets, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,25.0,2
+VLTO,Veralto,Industrials,14,1.1,2,"climate_targets, pollutants",True,partial,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+VMC,Vulcan Materials Company,Materials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+VMRK,Vivmark Residential,Real Estate,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+VRSK,Verisk Analytics,Industrials,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+VRSN,Verisign,Information Technology,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+VRT,Vertiv,Industrials,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+VRTX,Vertex Pharmaceuticals,Health Care,5,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+VST,Vistra Corp.,Utilities,32,2.1,3,"climate_targets, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,49.735449735449734,2
+VTR,Ventas,Real Estate,14,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+VTRS,Viatris,Health Care,25,1.9,3,"climate_targets, ghg, pollutants",True,strong,1.0,1,occupational_safety,True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,50.0,2
+VZ,Verizon,Communication Services,20,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+WAB,Wabtec,Industrials,15,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0
+WAT,Waters Corporation,Health Care,20,1.1,2,"climate_targets, pollutants",True,partial,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+WBD,Warner Bros. Discovery,Communication Services,10,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+WDAY,"Workday, Inc.",Information Technology,12,0.3,1,climate_targets,False,thin,0.0,0,,False,none,0.7,2,"commitments, supply_chain",False,thin,,0
+WDC,Western Digital,Information Technology,24,1.1,2,"climate_targets, pollutants",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+WEC,WEC Energy Group,Utilities,29,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,19.576719576719583,1
+WELL,Welltower,Real Estate,17,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+WFC,Wells Fargo,Financials,13,1.1,2,"climate_targets, ghg",True,partial,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,14.285714285714292,0
+WM,Waste Management,Industrials,28,2.7,4,"climate_targets, generation, ghg, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.2,2,"compliance, supply_chain",True,partial,33.888888888889646,1
+WMB,Williams Companies,Energy,26,1.6,2,"ghg, pollutants",True,strong,1.7,2,"occupational_safety, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,36.80555555555556,2
+WMT,Walmart,Consumer Staples,32,2.3,4,"climate_targets, generation, nature, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,2
+WRB,W. R. Berkley Corporation,Financials,4,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+WSM,"Williams-Sonoma, Inc.",Consumer Discretionary,19,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+WST,West Pharmaceutical Services,Health Care,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+WTW,Willis Towers Watson,Financials,9,0.3,1,climate_targets,False,thin,0.4,1,social_assessment,False,thin,0.2,1,supply_chain,False,thin,,0
+WY,Weyerhaeuser,Real Estate,31,2.3,4,"climate_targets, ghg, nature, pollutants",True,strong,1.4,2,"occupational_safety, social_assessment",True,partial,1.7,3,"commitments, compliance, supply_chain",True,strong,0.0,2
+WYNN,Wynn Resorts,Consumer Discretionary,6,0.0,0,,False,none,0.0,0,,False,none,0.2,1,supply_chain,False,thin,,0
+XEL,Xcel Energy,Utilities,34,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,,2
+XOM,ExxonMobil,Energy,35,2.9,4,"climate_targets, generation, ghg, pollutants",True,strong,2.1,3,"occupational_safety, social_assessment, wage_law",True,strong,1.2,2,"compliance, supply_chain",True,partial,,2
+XYL,Xylem Inc.,Industrials,23,1.1,2,"climate_targets, pollutants",True,partial,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+XYZ,"Block, Inc.",Financials,20,0.3,1,climate_targets,False,thin,1.4,2,"occupational_safety, social_assessment",True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+YUM,Yum! Brands,Consumer Discretionary,16,0.7,2,"climate_targets, nature",False,thin,0.4,1,social_assessment,False,thin,0.7,2,"commitments, supply_chain",False,thin,,0
+ZBH,Zimmer Biomet,Health Care,25,1.1,2,"climate_targets, pollutants",True,partial,1.7,2,"occupational_safety, wage_law",True,strong,0.7,2,"commitments, supply_chain",False,thin,,1
+ZBRA,Zebra Technologies,Information Technology,17,0.3,1,climate_targets,False,thin,1.0,1,occupational_safety,True,partial,0.7,2,"commitments, supply_chain",False,thin,,0
+ZTS,Zoetis,Health Care,14,0.8,1,pollutants,True,partial,1.0,1,occupational_safety,True,partial,0.2,1,supply_chain,False,thin,,0

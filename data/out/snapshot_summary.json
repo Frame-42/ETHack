@@ -1,0 +1,33 @@
+{
+  "securities": 503,
+  "issuers": 500,
+  "observations": 11425,
+  "metrics": 44,
+  "sources_with_observations": 13,
+  "issuers_with_observations": 500,
+  "issuers_with_sustainability_observations": 449,
+  "issuers_without_sustainability_observations": 51,
+  "years": [
+    2018,
+    2026
+  ],
+  "climate_bands": 127,
+  "median_band_width": 28.04232804232804,
+  "quality_status": {
+    "ok": 11412,
+    "review": 13
+  },
+  "review_findings": 18,
+  "viability_levels": {
+    "viable": 375,
+    "not assessable": 77,
+    "strained": 29,
+    "at risk": 19
+  },
+  "strong_evidence_by_pillar": {
+    "E": 135,
+    "S": 105,
+    "G": 54
+  },
+  "strong_evidence_all_pillars": 16
+}

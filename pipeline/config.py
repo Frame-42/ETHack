@@ -1,38 +1,34 @@
-"""Zentrale Pfade und Konstanten der Pipeline."""
+"""Shared repository paths, configured study periods, and environment loading."""
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 RAW = DATA / "raw"
 OUT = DATA / "out"
-REPORT = ROOT / "report"
-FIGURES = REPORT / "figures"
 
-for _p in (RAW, OUT, FIGURES):
+for _p in (RAW, OUT):
     _p.mkdir(parents=True, exist_ok=True)
 
-# Die SEC verlangt einen identifizierenden User-Agent, sonst 403.
-USER_AGENT = "ETHack S&P500 Sustainability Research (noah.schittenhelm@pm.me)"
+# SEC access requires an identifying User-Agent.
 
-# Periodengrenze: bis einschliesslich dieses Geschaeftsjahres reicht der
-# kommerzielle ESG-Snapshot (Kaggle/Yahoo-Stand 2023/24). Danach faellt er weg.
+
+# Fixed study-period boundary. The separate commercial snapshot is historical and is not a time-matched 2023 observation.
 PERIOD_A_END = 2023
 PERIOD_B_START = 2024
 
-# Letztes Jahr, fuer das die EPA Anlagendaten veroeffentlicht hat.
+# Final GHGRP year configured for this study, not a live availability claim.
 EPA_LAST_PUBLISHED_YEAR = 2023
 
 
-# ---------------------------------------------------------------------------
-# Zugangsschluessel aus .env laden. Die Datei steht in .gitignore; eine
-# Vorlage ohne Werte liegt als .env.example bei.
-# ---------------------------------------------------------------------------
+# Load access keys from ignored .env;
+# .env.example contains placeholders.
 def _load_env() -> None:
     try:
         from dotenv import load_dotenv
-    except ImportError:  # Fallback ohne zusaetzliche Abhaengigkeit
+    except ImportError:  # Fallback without the optional dependency.
         env = ROOT / ".env"
         if not env.exists():
             return
@@ -49,16 +45,17 @@ def _load_env() -> None:
 
 
 _load_env()
+USER_AGENT = os.environ.get("SEC_USER_AGENT", "ETHack sustainability research")
 
 
 def require_key(name: str, where: str) -> str:
-    """Holt einen Schluessel oder erklaert verstaendlich, wo er herkommt."""
+    """Read a required API key and explain where to obtain it."""
     import os
 
     val = os.environ.get(name, "")
     if not val:
         raise RuntimeError(
-            f"{name} fehlt. Kostenlos anfordern unter {where}, dann in .env "
-            f"eintragen (Vorlage: .env.example)."
+            f"{name} is missing. Register at {where}, then add the key to .env "
+            f"(template: .env.example)."
         )
     return val

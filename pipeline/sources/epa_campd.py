@@ -1,29 +1,4 @@
-"""EPA CAMPD: die Antwort auf die Datenluecke nach 2023.
-
-Das GHGRP-Programm (siehe ``epa_ghgrp``) veroeffentlicht mit jahrelanger
-Verzoegerung -- Berichtsjahr 2024 ist bis heute nicht draussen. Die Clean Air
-Markets Program Data stammen aus einem voellig anderen Meldeweg: kontinuierliche
-Emissionsmessung (CEMS) an Kraftwerksbloecken, quartalsweise veroeffentlicht
-mit zwei bis drei Monaten Verzug. Damit reicht die Reihe bis ins laufende Jahr.
-
-Zwei Dinge machen diese Quelle ueber die Aktualitaet hinaus wertvoll:
-
-1. **Gemessen statt gerechnet.** CEMS misst am Schornstein, statt Emissionen
-   aus Brennstoffmengen hochzurechnen.
-2. **Eigentuemer und Betreiber getrennt.** Das Feld ``ownerOperator`` nennt
-   beide Rollen einzeln. Damit laesst sich die Zurechnung nach Equity Share
-   *und* nach operativer Kontrolle rechnen -- bisher steckte diese
-   Ermessensentscheidung unsichtbar im Code.
-
-Die Grenze: nur Stromerzeugung. Anlagen ausserhalb der Handelsprogramme
-(Raffinerien, Zementwerke, Chemie) fehlen vollstaendig.
-
-**Zugang.** Die API verlangt einen kostenlosen Schluessel von
-https://www.epa.gov/power-sector/cam-api-portal. Ohne Schluessel greift
-``DEMO_KEY`` mit rund 30 Anfragen je Stunde -- genug fuer einen Durchlauf,
-zu wenig fuer regelmaessigen Betrieb. Der Schluessel wird aus der
-Umgebungsvariable ``EPA_CAMD_API_KEY`` gelesen.
-"""
+"""Retrieve EPA CAMPD power-sector emissions and ownership/operator metadata. Its reporting cadence supplements the fixed GHGRP study window, but its coverage is limited to participating power facilities. Owner/operator roles permit different attribution approaches; this implementation must not be mistaken for a full equity-share allocation. Access uses EPA_CAMD_API_KEY or the limited DEMO_KEY fallback."""
 from __future__ import annotations
 
 import os
@@ -31,21 +6,21 @@ import time
 
 import pandas as pd
 
-from ..config import _load_env  # laedt .env beim Import
+from ..config import _load_env  # Load .env during configuration import.
 from .base import DataSource, register, session
 
 BASE = "https://api.epa.gov/easey"
-PER_PAGE = 500  # Obergrenze der API
+PER_PAGE = 500  # API page-size limit.
 YEARS = range(2019, 2027)
 
 
 def api_key() -> str:
-    """Schluessel aus .env; ohne ihn greift DEMO_KEY mit 10 Anfragen je Stunde."""
+    """Read the EPA key, falling back to a rate-limited demo key."""
     return os.environ.get("EPA_CAMD_API_KEY") or "DEMO_KEY"
 
 
 def _paged(path: str, params: dict, max_pages: int = 40) -> list[dict]:
-    """Holt alle Seiten eines CAMPD-Endpunkts."""
+    """Retrieve all pages of a CAMPD endpoint."""
     out: list[dict] = []
     for page in range(1, max_pages + 1):
         q = {**params, "page": page, "perPage": PER_PAGE}
@@ -54,14 +29,14 @@ def _paged(path: str, params: dict, max_pages: int = 40) -> list[dict]:
         )
         if r.status_code == 429:
             raise RuntimeError(
-                "CAMPD-Kontingent erschoepft. Eigenen Schluessel unter "
-                "https://www.epa.gov/power-sector/cam-api-portal anfordern und "
-                "als EPA_CAMD_API_KEY setzen."
+                "CAMPD rate limit reached. Register for a key at "
+                "https://www.epa.gov/power-sector/cam-api-portal and "
+                "set EPA_CAMD_API_KEY."
             )
         r.raise_for_status()
         payload = r.json()
-        # Je nach Endpunkt kommt entweder eine blanke Liste oder ein Objekt
-        # mit dem Schluessel "items" zurueck.
+        # Handle either a plain list or an object
+        # containing items.
         rows = payload.get("items", []) if isinstance(payload, dict) else payload
         if not rows:
             break
@@ -77,7 +52,7 @@ def _paged(path: str, params: dict, max_pages: int = 40) -> list[dict]:
 class EpaCampdEmissionSource(DataSource):
     name = "campd_emission"
     endpoint = f"{BASE}/emissions-mgmt/emissions/apportioned/annual"
-    description = "CEMS-gemessenes CO2 je Kraftwerksblock und Jahr (2019 bis heute)"
+    description = "Annual power-unit CO2 reports, 2019 onward"
 
     def _fetch(self) -> pd.DataFrame:
         frames = []
@@ -97,7 +72,7 @@ class EpaCampdEmissionSource(DataSource):
         if not frames:
             return pd.DataFrame()
         df = pd.concat(frames, ignore_index=True)
-        # co2Mass kommt in short tons -> in metrische Tonnen umrechnen.
+        # Convert co2Mass from US short tons to metric tonnes.
         df["co2_t"] = pd.to_numeric(df["co2Mass"], errors="coerce") * 0.90718474
         return (
             df.groupby(["facilityId", "year"], as_index=False)
@@ -115,7 +90,7 @@ class EpaCampdEmissionSource(DataSource):
 class EpaCampdFacilitySource(DataSource):
     name = "campd_facility"
     endpoint = f"{BASE}/facilities-mgmt/facilities/attributes"
-    description = "Kraftwerks-Stammdaten inkl. getrennter Eigentuemer- und Betreiberangabe"
+    description = "Plant metadata with separate owners and operators"
 
     def _fetch(self) -> pd.DataFrame:
         frames = []
@@ -126,9 +101,9 @@ class EpaCampdFacilitySource(DataSource):
             df = pd.DataFrame(rows)
             keep = [
                 c
-                # programCodeInfo sagt, welches Programm die Anlage meldet.
-                # Reine NOx-Programme (z. B. SIPNOX) verlangen kein CO2 --
-                # dort steht dann 0, obwohl die Anlage emittiert.
+                # programCodeInfo distinguishes CO2-reporting
+                # programs from NOx-only programs whose zero
+                # CO2 field is not a measured zero.
                 for c in ("facilityId", "facilityName", "year", "ownerOperator",
                           "sourceCategory", "primaryFuelInfo", "stateCode",
                           "operatingStatus", "programCodeInfo")
@@ -142,16 +117,7 @@ class EpaCampdFacilitySource(DataSource):
 
 
 def split_owner_operator(raw: str) -> list[tuple[str, str]]:
-    """Zerlegt ``ownerOperator`` in ``[(Name, Rolle), ...]``.
-
-    Das Feld sieht so aus::
-
-        Alabama Power Company (Owner)|Alabama Power Company (Operator)
-
-    Rollen sind ``Owner``, ``Operator`` und gelegentlich beides. Die Trennung
-    erlaubt beide Zurechnungsregeln des GHG-Protokolls: Equity Share folgt den
-    Eigentuemern, operative Kontrolle folgt dem Betreiber.
-    """
+    """Parse ownerOperator into (name, role) pairs. Owner and operator are distinct roles; fractional ownership is not inferred here."""
     if not isinstance(raw, str) or not raw.strip():
         return []
     out: list[tuple[str, str]] = []

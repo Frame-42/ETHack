@@ -1,36 +1,20 @@
-"""S&P-500-Konstituenten: Ticker, Name, GICS-Branche, CIK.
-
-Diese Quelle ist das Rueckgrat der Pipeline. Sie definiert die Grundgesamtheit,
-die Branchengruppe fuer den relativen Vergleich und ueber die CIK die Bruecke
-zur SEC.
-"""
+"""Read the retained S&P 500 membership snapshot, shared with the economic model. Update constituents.csv deliberately to change the study universe."""
 from __future__ import annotations
-
-import io
 
 import pandas as pd
 
-from .base import DataSource, register, session
-
-WIKI = (
-    "https://en.wikipedia.org/w/api.php?action=parse"
-    "&page=List_of_S%26P_500_companies&prop=text&format=json"
-)
+from .base import DataSource, register
 
 
 @register
 class Sp500MasterSource(DataSource):
     name = "sp500_master"
-    endpoint = WIKI
-    description = "S&P-500-Konstituenten mit GICS-Sektor, Sub-Industry und CIK"
+    endpoint = "constituents.csv"
+    description = "S&P 500 constituents with GICS sector, sub-industry, and CIK"
 
     def _fetch(self) -> pd.DataFrame:
-        r = session().get(WIKI, timeout=60)
-        r.raise_for_status()
-        html = r.json()["parse"]["text"]["*"]
-        tables = pd.read_html(io.StringIO(html))
-        # Die Konstituenten-Tabelle ist die einzige mit einer CIK-Spalte.
-        df = next(t for t in tables if "CIK" in t.columns and "Symbol" in t.columns)
+        from ..config import ROOT
+        df = pd.read_csv(ROOT / "constituents.csv")
         df = df.rename(
             columns={
                 "Symbol": "ticker",

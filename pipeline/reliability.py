@@ -1,25 +1,6 @@
-"""Wie belastbar ist das, was wir über eine Firma wissen -- getrennt nach E, S und G.
+"""Assess available evidence separately for E, S, and G.
 
-Die Frage ist nicht "wie gut ist die Firma", sondern "reicht das Material, um
-das überhaupt zu beurteilen". Drei Grundsätze bestimmen die Regeln:
-
-1. **Nicht jede Zahl zählt gleich.** Am Schornstein Gemessenes wiegt mehr als
-   behördlich Gemeldetes, das mehr als eine Bewertung von Offenlegung, das
-   mehr als eine Selbstauskunft. Das Gewicht drückt Beweiskraft aus, keine
-   inhaltliche Wichtigkeit.
-
-2. **Abgeleitetes zählt nicht doppelt.** CO2-Menge, CO2-Intensität und
-   Messung am Schornstein beschreiben denselben Sachverhalt. Kennzahlen
-   werden deshalb zu *Familien* zusammengefasst; eine Familie zählt einmal,
-   mit dem Gewicht ihrer stärksten vorhandenen Kennzahl.
-
-3. **Eine Quelle allein trägt kein Urteil.** Die ESG-Forschung zeigt, dass
-   Einzelmessungen stark streuen. "Belastbar" verlangt deshalb mindestens zwei
-   unabhängige Familien, davon mindestens einen harten Anker.
-
-Die Werte unten sind gesetzt, nicht geschätzt. Sie stehen hier, damit sie
-diskutiert und geändert werden können.
-"""
+Group related metrics into evidence families and count each family's largest weight once. Strong evidence requires multiple families and an anchor. Weights and thresholds are explicit design assumptions; family separation does not prove statistical independence. This measures available evidence, not sustainability performance or calibrated certainty."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -29,9 +10,9 @@ import pandas as pd
 from .config import OUT
 
 PILLARS = {
-    "E": "Umwelt",
-    "S": "Soziales",
-    "G": "Unternehmensführung",
+    "E": "Environment",
+    "S": "Social",
+    "G": "Governance",
 }
 
 
@@ -44,57 +25,54 @@ class Evidence:
     evidence: str
 
 
-# Beweiskraft je Kennzahl. 1,0 gemessen oder behördlich festgestellt;
-# 0,8 gesetzlich gemeldet; 0,5 bis 0,7 abgeleitet oder mit unsicherer
-# Zuordnung; 0,3 bis 0,4 Bewertung von Offenlegung oder geprüfte
-# Selbstauskunft; 0,2 bloßer Meldestatus.
+# Evidence weights range from 1.0 for selected official measurements or findings through 0.8 for reports, 0.5-0.7 for uncertain attribution, 0.3-0.4 for assessments or target validation, to 0.2 for filing status. Consult each entry for its actual weight.
 METRIC_EVIDENCE: dict[str, Evidence] = {
-    # ---- E ---------------------------------------------------------------
-    "campd_co2_t": Evidence("E", "ghg", "Treibhausgase", 1.0, "am Schornstein gemessen (CEMS)"),
-    "scope1_t": Evidence("E", "ghg", "Treibhausgase", 0.8, "behördlich gemeldet (GHGRP)"),
-    "egrid_co2_t": Evidence("E", "effizienz", "Erzeugung", 0.8, "Kraftwerksbilanz gemeldet (eGRID)"),
-    "egrid_mwh": Evidence("E", "effizienz", "Erzeugung", 0.8, "Kraftwerksbilanz gemeldet (eGRID)"),
-    "tri_releases_lbs": Evidence("E", "schadstoffe", "Schadstofffreisetzung", 0.8, "behördlich gemeldet (TRI)"),
-    "tri_carcinogen_lbs": Evidence("E", "schadstoffe", "Schadstofffreisetzung", 0.8, "behördlich gemeldet (TRI)"),
-    "wba_nature": Evidence("E", "natur", "Naturbewertung", 0.4, "Bewertung veröffentlichter Angaben (WBA)"),
-    "sbti_validated": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Selbstauskunft, extern geprüft (SBTi)"),
-    "sbti_near_term_year": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Selbstauskunft, extern geprüft (SBTi)"),
-    "sbti_net_zero_year": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Selbstauskunft, extern geprüft (SBTi)"),
-    "wba_tpq": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Bewertung des Transitionsplans (WBA)"),
-    "wba_ctt": Evidence("E", "klimaziele", "Klimaziele", 0.3, "Bewertung des Transitionsbeitrags (WBA)"),
-    # ---- S ---------------------------------------------------------------
-    "osha_dafw_cases": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
-    "osha_djtr_cases": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
-    "osha_deaths": Evidence("S", "arbeitssicherheit", "Arbeitssicherheit", 1.0, "gesetzliche Meldung je Betrieb (OSHA)"),
-    "whd_cases": Evidence("S", "lohnrecht", "Lohnrecht", 0.7, "behördlich festgestellt, Namenszuordnung unsicher"),
-    "whd_backwages_usd": Evidence("S", "lohnrecht", "Lohnrecht", 0.7, "behördlich festgestellt, Namenszuordnung unsicher"),
-    "whd_employees": Evidence("S", "lohnrecht", "Lohnrecht", 0.7, "behördlich festgestellt, Namenszuordnung unsicher"),
-    "wba_social": Evidence("S", "sozialbewertung", "Sozialbewertung", 0.4, "Bewertung veröffentlichter Angaben (WBA)"),
-    "wba_just_transition": Evidence("S", "sozialbewertung", "Sozialbewertung", 0.4, "Bewertung veröffentlichter Angaben (WBA)"),
-    # ---- G ---------------------------------------------------------------
-    "echo_penalties_usd": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
-    "echo_nc_quarters": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
-    "echo_significant": Evidence("G", "regeltreue", "Umweltregeltreue", 1.0, "behördlich festgestellt (ECHO)"),
-    "sbti_commitment_removed": Evidence("G", "zusagen", "Umgang mit Zusagen", 0.5, "protokollierter Rückzug (SBTi)"),
-    "sbti_near_term_expired": Evidence("G", "zusagen", "Umgang mit Zusagen", 0.5, "Zieljahr verstrichen (SBTi)"),
-    "sbti_net_zero_removed": Evidence("G", "zusagen", "Umgang mit Zusagen", 0.5, "protokollierter Rückzug (SBTi)"),
-    "sd_conflict_minerals_filer": Evidence("G", "lieferkette", "Lieferkettenpflicht", 0.2, "nur Meldestatus (Form SD)"),
+    # Environment.
+    "campd_co2_t": Evidence("E", "ghg", "Greenhouse gases", 1.0, "Power-sector monitoring (CEMS)"),
+    "scope1_t": Evidence("E", "ghg", "Greenhouse gases", 0.8, "Reported to regulator (GHGRP)"),
+    "egrid_co2_t": Evidence("E", "generation", "Generation", 0.8, "Reported plant balance (eGRID)"),
+    "egrid_mwh": Evidence("E", "generation", "Generation", 0.8, "Reported plant balance (eGRID)"),
+    "tri_releases_lbs": Evidence("E", "pollutants", "Pollutant releases", 0.8, "Reported to regulator (TRI)"),
+    "tri_carcinogen_lbs": Evidence("E", "pollutants", "Pollutant releases", 0.8, "Reported to regulator (TRI)"),
+    "wba_nature": Evidence("E", "nature", "Nature assessment", 0.4, "Assessment of disclosed information (WBA)"),
+    "sbti_validated": Evidence("E", "climate_targets", "Climate targets", 0.3, "Company target, externally validated (SBTi)"),
+    "sbti_near_term_year": Evidence("E", "climate_targets", "Climate targets", 0.3, "Company target, externally validated (SBTi)"),
+    "sbti_net_zero_year": Evidence("E", "climate_targets", "Climate targets", 0.3, "Company target, externally validated (SBTi)"),
+    "wba_tpq": Evidence("E", "climate_targets", "Climate targets", 0.3, "Assessment of transition plan (WBA)"),
+    "wba_ctt": Evidence("E", "climate_targets", "Climate targets", 0.3, "Assessment of contribution to transition (WBA)"),
+    # Social.
+    "osha_dafw_cases": Evidence("S", "occupational_safety", "Occupational safety", 1.0, "Mandatory establishment report (OSHA)"),
+    "osha_djtr_cases": Evidence("S", "occupational_safety", "Occupational safety", 1.0, "Mandatory establishment report (OSHA)"),
+    "osha_deaths": Evidence("S", "occupational_safety", "Occupational safety", 1.0, "Mandatory establishment report (OSHA)"),
+    "whd_cases": Evidence("S", "wage_law", "Wage law", 0.7, "Official finding, uncertain name attribution"),
+    "whd_backwages_usd": Evidence("S", "wage_law", "Wage law", 0.7, "Official finding, uncertain name attribution"),
+    "whd_employees": Evidence("S", "wage_law", "Wage law", 0.7, "Official finding, uncertain name attribution"),
+    "wba_social": Evidence("S", "social_assessment", "Social assessment", 0.4, "Assessment of disclosed information (WBA)"),
+    "wba_just_transition": Evidence("S", "social_assessment", "Social assessment", 0.4, "Assessment of disclosed information (WBA)"),
+    # Governance.
+    "echo_penalties_usd": Evidence("G", "compliance", "Environmental compliance", 1.0, "Official finding (ECHO)"),
+    "echo_nc_quarters": Evidence("G", "compliance", "Environmental compliance", 1.0, "Official finding (ECHO)"),
+    "echo_significant": Evidence("G", "compliance", "Environmental compliance", 1.0, "Official finding (ECHO)"),
+    "sbti_commitment_removed": Evidence("G", "commitments", "Handling of commitments", 0.5, "Recorded commitment removal (SBTi)"),
+    "sbti_near_term_expired": Evidence("G", "commitments", "Handling of commitments", 0.5, "Target year elapsed (SBTi)"),
+    "sbti_net_zero_removed": Evidence("G", "commitments", "Handling of commitments", 0.5, "Recorded commitment removal (SBTi)"),
+    "sd_conflict_minerals_filer": Evidence("G", "supply_chain", "Supply-chain filing obligations", 0.2, "Filing status only (Form SD)"),
 }
 
-# Schwellen je Bereich.
-ANCHOR_WEIGHT = 0.8     # ab diesem Gewicht gilt eine Familie als harter Anker
-MIN_FAMILIES = 2        # unabhängige Familien für "belastbar"
-MIN_SCORE = 1.5         # Summe der Familiengewichte für "belastbar"
-PARTIAL_SCORE = 1.0     # darunter und ohne Anker: "dünn"
-MIN_PEERS = 6           # Firmen je Branche, ab denen ein Branchenvergleich trägt
-NARROW_BAND = 20.0      # Rangband (p90 - p10) in Perzentilpunkten, ab dem ein Platz eindeutig ist
+# Pillar thresholds.
+ANCHOR_WEIGHT = 0.8     # Minimum anchor weight.
+MIN_FAMILIES = 2        # Minimum distinct evidence families.
+MIN_SCORE = 1.5         # Minimum sum of family weights.
+PARTIAL_SCORE = 1.0     # Partial-evidence score threshold.
+MIN_PEERS = 6           # Minimum sector size for comparison.
+NARROW_BAND = 20.0      # Descriptive narrow-band cutoff; not statistical certainty.
 
-LEVELS = ["belastbar", "eingeschränkt", "dünn", "keine"]
+LEVELS = ["strong", "partial", "thin", "none"]
 LEVEL_RULES = {
-    "belastbar": f"mindestens {MIN_FAMILIES} unabhängige Familien, davon ein Anker (Gewicht ≥ {ANCHOR_WEIGHT:.1f}), Summe ≥ {MIN_SCORE:.1f}",
-    "eingeschränkt": f"ein Anker vorhanden oder Summe ≥ {PARTIAL_SCORE:.1f}",
-    "dünn": "einzelne weiche Angaben",
-    "keine": "kein Wert in diesem Bereich",
+    "strong": f"at least {MIN_FAMILIES} distinct families, including an anchor (weight >= {ANCHOR_WEIGHT:.1f}), sum >= {MIN_SCORE:.1f}",
+    "partial": f"one Anker present_keys oder Summe ≥ {PARTIAL_SCORE:.1f}",
+    "thin": "Limited indirect evidence",
+    "none": "No evidence for this pillar",
 }
 
 
@@ -108,21 +86,22 @@ def max_score(pillar: str) -> float:
 
 def level(score: float, families: int, anchor: bool) -> str:
     if score <= 0:
-        return "keine"
+        return "none"
     if anchor and families >= MIN_FAMILIES and score >= MIN_SCORE:
-        return "belastbar"
+        return "strong"
     if anchor or score >= PARTIAL_SCORE:
-        return "eingeschränkt"
-    return "dünn"
+        return "partial"
+    return "thin"
 
 
 def assess(long: pd.DataFrame, master: pd.DataFrame) -> pd.DataFrame:
-    """Eine Zeile je Firma: Punkte, Familien und Stufe je Bereich."""
+    """Return company-level evidence scores, family counts, and levels by pillar."""
+    long = long[long["quality_status"] != "error"] if "quality_status" in long else long
     present = long.dropna(subset=["value"]).groupby("ticker")["metric"].apply(set)
     counts = long.dropna(subset=["value"]).groupby("ticker")["metric"].nunique()
-    # Das Rangband ist Analyse, kein Datenwert -- es steht deshalb nicht mehr
-    # im Datensatz, sondern nur in der Monte-Carlo-Auswertung.
-    band_path = OUT / "rangbaender_periode_a.csv"
+    # Ranking bands are derived analysis and are
+    # stored separately from observations.
+    band_path = OUT / "climate_bands.csv"
     bands = (pd.read_csv(band_path).set_index("ticker")[["p10", "p90"]]
              if band_path.exists() else pd.DataFrame(columns=["p10", "p90"]))
     rows = []
@@ -154,5 +133,5 @@ def assess(long: pd.DataFrame, master: pd.DataFrame) -> pd.DataFrame:
             row["e_band_width"] = None
         rows.append(row)
     df = pd.DataFrame(rows)
-    df["n_reliable"] = sum((df[f"{p}_level"] == "belastbar").astype(int) for p in PILLARS)
+    df["n_reliable"] = sum((df[f"{p}_level"] == "strong").astype(int) for p in PILLARS)
     return df

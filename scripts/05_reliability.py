@@ -1,16 +1,8 @@
-"""Bewertet, wie belastbar die Daten je Firma und Bereich sind.
-
-Schreibt:
-  data/out/belastbarkeit.csv            eine Zeile je Firma
-  data/out/belastbarkeit.json           Kennzahlen und Verteilungen für den Browser
-  report/generated/tab_belastbarkeit.tex   Gewichtstabelle für den Katalog
-und kopiert beides in die Web-App (public/data und public/downloads).
-"""
+"""Assess evidence availability by company and pillar and export the results and summary distributions."""
 from __future__ import annotations
 
 import json
 import math
-import shutil
 import sys
 from collections import Counter
 from pathlib import Path
@@ -20,38 +12,33 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import pandas as pd
 
 from pipeline import reliability as R
-from pipeline.config import OUT, RAW, REPORT, ROOT
+from pipeline.universe import primary_master
+from pipeline.config import OUT, RAW, ROOT
 
 
-def tex(s: str) -> str:
-    for a, b in {"&": r"\&", "%": r"\%", "_": r"\_", "#": r"\#", "≥": r"$\geq$"}.items():
-        s = s.replace(a, b)
-    return s
-
-
-def sauber(x):
-    """NaN und Inf durch None ersetzen, rekursiv."""
+def json_safe(x):
+    """Recursively replace non-finite numbers with None for valid JSON."""
     if isinstance(x, dict):
-        return {k: sauber(v) for k, v in x.items()}
+        return {k: json_safe(v) for k, v in x.items()}
     if isinstance(x, list):
-        return [sauber(v) for v in x]
+        return [json_safe(v) for v in x]
     if isinstance(x, float) and not math.isfinite(x):
         return None
     return x
 
 
 def main() -> None:
-    long = pd.read_parquet(OUT / "dataset_long.parquet")
-    master = pd.read_parquet(RAW / "sp500_master.parquet")
+    long = pd.read_csv(OUT / "dataset_long.csv")
+    master = primary_master()
     df = R.assess(long, master)
-    df.to_csv(OUT / "belastbarkeit.csv", index=False)
+    df.to_csv(OUT / "reliability.csv", index=False)
 
     total = len(df)
-    # ------------------------------------------------ Verteilung Werte je Firma
+    # Distribution of metrics per company.
     value_hist = Counter(df["n_values"])
     values = [{"n": n, "companies": value_hist.get(n, 0)} for n in range(0, int(df["n_values"].max()) + 1)]
 
-    # ------------------------------------------------------------ je Bereich
+    # Pillar summaries.
     pillars = []
     for p, name in R.PILLARS.items():
         mx = R.max_score(p)
@@ -80,7 +67,7 @@ def main() -> None:
             "families": sorted(fam_def.values(), key=lambda f: -f["weight"]),
         })
 
-    # --------------------------------------------------- alle drei zusammen
+    # Combined evidence across pillars.
     all3 = df[df["n_reliable"] == 3]
     sector_rows = []
     for sector, g in df.groupby("gics_sector"):
@@ -88,7 +75,7 @@ def main() -> None:
         sector_rows.append({
             "sector": sector,
             "companies": len(g),
-            **{p: int((g[f"{p}_level"] == "belastbar").sum()) for p in R.PILLARS},
+            **{p: int((g[f"{p}_level"] == "strong").sum()) for p in R.PILLARS},
             "all3": len(a),
             "rankable": len(a) if len(a) >= R.MIN_PEERS else 0,
         })
@@ -98,18 +85,18 @@ def main() -> None:
     narrow = in_peer[in_peer["e_band_width"].notna() & (in_peer["e_band_width"] <= R.NARROW_BAND)]
 
     combos = Counter(
-        "".join(p if lv == "belastbar" else "·" for p, lv in zip(R.PILLARS, row))
+        "".join(p if lv == "strong" else "·" for p, lv in zip(R.PILLARS, row))
         for row in df[[f"{p}_level" for p in R.PILLARS]].itertuples(index=False)
     )
 
     funnel = [
-        {"label": "Indexmitglieder", "companies": total},
-        {"label": "mit mindestens einem Wert", "companies": int((df["n_values"] > 0).sum())},
-        {"label": "in mindestens einem Bereich belastbar", "companies": int((df["n_reliable"] >= 1).sum())},
-        {"label": "in mindestens zwei Bereichen belastbar", "companies": int((df["n_reliable"] >= 2).sum())},
-        {"label": "in allen drei Bereichen belastbar", "companies": len(all3)},
-        {"label": f"… und in einer Branche mit mindestens {R.MIN_PEERS} solchen Firmen", "companies": len(in_peer)},
-        {"label": f"… und Umwelt-Rangband höchstens {R.NARROW_BAND:.0f} Perzentilpunkte breit", "companies": len(narrow)},
+        {"label": "Index members", "companies": total},
+        {"label": "With at least one observation", "companies": int((df["n_values"] > 0).sum())},
+        {"label": "Strong evidence in at least one pillar", "companies": int((df["n_reliable"] >= 1).sum())},
+        {"label": "Strong evidence in at least two pillars", "companies": int((df["n_reliable"] >= 2).sum())},
+        {"label": "Strong evidence in all three pillars", "companies": len(all3)},
+        {"label": f"... and in a sector with at least {R.MIN_PEERS} such companies", "companies": len(in_peer)},
+        {"label": f"... and climate band at most {R.NARROW_BAND:.0f} percentile points wide", "companies": len(narrow)},
     ]
 
     payload = {
@@ -133,35 +120,18 @@ def main() -> None:
             ["ticker", "company", "gics_sector", "E_score", "S_score", "G_score", "e_band_width"]
         ].to_dict("records"),
     }
-    (OUT / "belastbarkeit.json").write_text(
-        # NaN ist in JSON kein gueltiger Wert -- der Browser bricht daran ab.
-        json.dumps(sauber(payload), indent=2, ensure_ascii=False, default=lambda x: None),
+    (OUT / "reliability.json").write_text(
+        # JSON must use null for non-finite values.
+        json.dumps(json_safe(payload), indent=2, ensure_ascii=False, default=lambda x: None),
         encoding="utf-8",
     )
 
-    # --------------------------------------------------- Katalog-Tabelle
-    lines = []
-    for p in pillars:
-        lines.append(r"\textbf{%s -- %s} & & & \\" % (p["id"], tex(p["name"])))
-        for f in p["families"]:
-            ev = "; ".join(sorted({m["evidence"] for m in f["metrics"]}))
-            lines.append("\\quad %s & %s & %d & %s \\\\" % (
-                tex(f["label"]), f"{f['weight']:.1f}".replace(".", "{,}"), f["companies"], tex(ev)))
-    (REPORT / "generated" / "tab_belastbarkeit.tex").write_text("\n".join(lines) + "\n\\bottomrule%", encoding="utf-8")
-
-    # --------------------------------------------------- in die Web-App
-    web = ROOT / "web" / "public"
-    for sub in ("data", "downloads"):
-        (web / sub).mkdir(parents=True, exist_ok=True)
-    shutil.copy2(OUT / "belastbarkeit.json", web / "data" / "belastbarkeit.json")
-    shutil.copy2(OUT / "belastbarkeit.csv", web / "downloads" / "belastbarkeit.csv")
-
-    print(f"Werte je Firma: Median {payload['valuesMedian']:.0f}")
+    print(f"Metrics per company: median {payload['valuesMedian']:.0f}")
     for p in pillars:
         print(f"{p['id']}: " + " | ".join(f"{k} {v}" for k, v in p["levels"].items()))
     for f in funnel:
         print(f"  {f['companies']:4d}  {f['label']}")
-    print("Muster:", payload["combos"][:6])
+    print("Patterns:", payload["combos"][:6])
 
 
 if __name__ == "__main__":

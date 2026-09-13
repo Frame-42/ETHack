@@ -1,35 +1,35 @@
+# Local environments and credentials
 .venv/
+.env
+.env.local
 .claude/
 __pycache__/
 *.pyc
-data/raw/
-data/out/*.parquet
-report/*.aux
-report/*.log
-report/*.out
-report/*.toc
 
-# Zugangsschluessel — niemals committen
-.env
-.env.local
+# Regenerable source caches and intermediate analysis
+/data/raw/
+/data/cache/
+/data/out/*.parquet
+/data/out/ai_review_cache/
+/data/out/company_year.csv
+/data/out/climate_panel.csv
+/data/out/*_by_company.csv
+/data/out/analysis_summary.json
+/data/out/metric_correlations.csv
+/data/out/context_signals.csv
+/data/out/sector_coverage.csv
+/data/out/commercial_comparison_sector.csv
+/data/out/aggregation_comparison.csv
+/data/out/method_sensitivity.csv
+/data/out/staleness_backtest.csv
+/data/out/flags.csv
+/data/out/repairs.csv
 
-# Lizenzbeschraenkt (Mycelium-Nutzungsbedingungen): nur lokal zur Gegenprobe
-data/external/team/mycelium_constituents.xlsx
-
-# Clean-framework: generiert / lokal — niemals committen (via 06/07/08/09 regenerierbar)
-data/out/ai_review_cache/
-web/public/logos/
-web/public/data/
-web/public/downloads/
+# Untracked local artifacts from earlier applications and presentations
 node_modules/
-web/node_modules/
-data/cache/
-data/raw/sec_facts/
-test-results/
-# Clean slim: nur Framework + clean data + docs — Rest in Historie
-# (report/*.tex/pdf, Web-App, alte Diagnostics; lokal vorhanden, nicht getrackt)
-report/
 web/
-presentation/  # lokale Vortrags-Entwuerfe, nicht Teil des Frameworks
-# Legacy aus main (altes f01-f07-Modell) — Historie behaelt es, clean nicht
-fusionsbericht (1).pdf
+report/
+presentation/
+test-results/
+/*.pdf
+/data/external/team/mycelium_constituents.xlsx

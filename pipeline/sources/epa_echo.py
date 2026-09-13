@@ -1,30 +1,4 @@
-"""EPA ECHO: Verstoesse und Strafen -- Governance, gemessen statt behauptet.
-
-Governance ist der Teilbereich, bei dem sich kommerzielle ESG-Anbieter am
-staerksten widersprechen: Ihre Noten korrelieren dort nur mit etwa 0,30. Ein
-Grund ist, dass sie ueberwiegend Strukturen bewerten -- Ausschuesse,
-Richtlinien, Verguetungsregeln -- statt Verhalten.
-
-ECHO fuehrt das Gegenteil: dokumentiertes Verhalten gegenueber
-Umweltauflagen, je Anlage. Drei Rechtsgebiete auf einmal:
-
-* **CAA** -- Luftreinhaltung
-* **CWA** -- Gewaesserschutz, inklusive Einleitungsmessungen
-* **RCRA** -- Abfall und Gefahrstoffe
-
-Nutzbare Felder: ``FAC_TOTAL_PENALTIES`` (Strafsumme), ``FAC_PENALTY_COUNT``,
-``FAC_INSPECTION_COUNT`` und ``FAC_QTRS_IN_NC`` -- die Zahl der Quartale in
-Nichteinhaltung innerhalb der letzten drei Jahre. Letztere ist die
-interessanteste: Sie misst Dauer statt Einzelereignis und laesst sich nicht
-durch eine einmalige Zahlung bereinigen.
-
-**Zuordnung.** ECHO fuehrt kein Konzernfeld, aber jede Anlage traegt ihre
-FRS-Kennung (``REGISTRY_ID``). Dieselbe Kennung steht im GHGRP-Datensatz als
-``frs_id``. Damit lassen sich ECHO-Anlagen ohne Namensabgleich an bereits
-zugeordnete Konzerne haengen -- der praeziseste Weg, den dieses Projekt hat.
-
-Die Bulk-Datei ist rund 408 MB gepackt.
-"""
+"""Retrieve EPA ECHO enforcement/compliance records for air, water, and waste regulations. Match facilities through FRS registry IDs. Penalties and noncompliance histories provide a narrow governance-related signal, not a comprehensive measure of governance quality. The compliance window spans up to twelve quarters per facility."""
 from __future__ import annotations
 
 import io
@@ -49,7 +23,7 @@ KEEP = [
 class EpaEchoSource(DataSource):
     name = "epa_echo"
     endpoint = EXPORTER
-    description = "ECHO-Konformitaetsakte je Anlage: Strafen, Inspektionen, Verstossquartale"
+    description = "ECHO facility compliance: penalties, inspections, noncompliance quarters"
 
     def _fetch(self) -> pd.DataFrame:
         r = session().get(EXPORTER, timeout=1800, stream=False)

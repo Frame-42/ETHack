@@ -1,16 +1,4 @@
-"""Kommerzieller ESG-Snapshot als Vergleichsmassstab fuer Periode A.
-
-Sustainalytics-ESG-Risk-Ratings, ueber Yahoo Finance abgegriffen und als CSV
-oeffentlich gespiegelt. Genau die Sorte Datensatz, die auf Kaggle unter
-verschiedenen Namen kursiert: eingefroren, abgeschrieben, ohne Lizenz.
-
-Wir nutzen ihn ausschliesslich als *Vergleichsmassstab* -- nie als Eingabe in
-die eigene Note. Die Frage, die er beantwortet: Wie stark stimmt eine
-kommerzielle Note mit einer physisch gemessenen Rangliste ueberein?
-
-Achtung bei der Richtung: ``esgScore.tot`` ist ein Risiko-Score.
-Hoeher = schlechter.
-"""
+"""Read the historical Sustainalytics/Yahoo risk-score mirror as a comparison benchmark. Its redistribution terms are unclear and its date differs from the climate panel. It never enters the framework's own score. Higher risk scores mean worse results."""
 from __future__ import annotations
 
 import io

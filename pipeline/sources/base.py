@@ -1,10 +1,4 @@
-"""Connector-Schicht: die Plug-in-Grenze der Pipeline.
-
-Jede Datenquelle erbt von :class:`DataSource` und implementiert genau eine
-Methode, ``_fetch``. Alles andere -- Caching, Provenienz, Registrierung --
-passiert hier. Eine neue Quelle anzubinden heisst: eine Klasse schreiben und
-mit ``@register`` versehen. Stufen 03 bis 07 der Pipeline aendern sich nicht.
-"""
+"""Source connector registry. Implement _fetch in a DataSource subclass and register it; common code handles caching and fetch metadata."""
 from __future__ import annotations
 
 import time
@@ -21,7 +15,7 @@ _REGISTRY: dict[str, type["DataSource"]] = {}
 
 
 def register(cls: type["DataSource"]) -> type["DataSource"]:
-    """Traegt eine Quelle in die Registry ein."""
+    """Register a source class."""
     _REGISTRY[cls.name] = cls
     return cls
 
@@ -36,7 +30,7 @@ def get(name: str) -> "DataSource":
 
 @dataclass
 class Provenance:
-    """Woher ein Datensatz stammt -- wandert bis in die Oberflaeche mit."""
+    """Record source endpoint, retrieval metadata, and row count."""
 
     source: str
     endpoint: str
@@ -46,16 +40,11 @@ class Provenance:
 
 
 class DataSource(ABC):
-    """Gemeinsames Interface aller Quellen.
-
-    ``fetch()`` liefert einen DataFrame und cacht ihn als Parquet. Der Cache
-    macht die Pipeline reproduzierbar und schont die APIs; ``force=True``
-    erzwingt einen Neuabruf.
-    """
+    """Shared source interface. fetch returns a DataFrame, reuses a Parquet cache by default, and refreshes when force=True."""
 
     name: str = "unnamed"
     endpoint: str = ""
-    #: Kurzbeschreibung fuer die Provenienz-Tabelle im Bericht.
+    # Short source description for provenance.
     description: str = ""
 
     def __init__(self) -> None:
@@ -67,13 +56,13 @@ class DataSource(ABC):
 
     @abstractmethod
     def _fetch(self) -> pd.DataFrame:
-        """Holt die Rohdaten. Einzige Methode, die eine neue Quelle braucht."""
+        """Retrieve source data; implement this method in each connector."""
 
     def fetch(self, force: bool = False) -> pd.DataFrame:
         if self.cache_path.exists() and not force:
             df = pd.read_parquet(self.cache_path)
             self.provenance = Provenance(
-                self.name, self.endpoint, "cache", len(df), "aus Parquet-Cache"
+                self.name, self.endpoint, "cache", len(df), "From Parquet cache"
             )
             return df
         df = self._fetch()
@@ -87,9 +76,7 @@ class DataSource(ABC):
         return df
 
 
-# --------------------------------------------------------------------------
-# gemeinsamer HTTP-Helfer
-# --------------------------------------------------------------------------
+# Shared HTTP helpers.
 
 _session: requests.Session | None = None
 
@@ -103,7 +90,7 @@ def session() -> requests.Session:
 
 
 def get_json(url: str, tries: int = 4, timeout: int = 60, pause: float = 0.0):
-    """GET mit Retry. Gibt ``None`` zurueck, wenn alle Versuche scheitern."""
+    """GET with retries; return None after unsuccessful attempts."""
     for attempt in range(tries):
         try:
             r = session().get(url, timeout=timeout)

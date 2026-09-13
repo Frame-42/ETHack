@@ -1,22 +1,4 @@
-"""DOL Wage and Hour Division: Lohnverstöße -- das S in ESG, als Behördenakte.
-
-Die Arbeitsschutzbehörde OSHA misst Unfälle. Die Wage and Hour Division misst
-etwas anderes: ob Beschäftigte korrekt bezahlt wurden -- Mindestlohn,
-Überstunden, Kinderarbeit, Saisonarbeitsvisa. Jeder abgeschlossene Fall nennt
-den Arbeitgeber, die nachzuzahlende Lohnsumme und die Zahl der betroffenen
-Beschäftigten.
-
-Die Quelle hat Janis im Team gefunden; hier wird sie frisch aus der
-Bulk-Datei gezogen, damit Stand und Filter nachvollziehbar bleiben.
-
-**Zuordnung.** Die Datei trägt keinen CIK. Zugeordnet wird über den
-bereinigten Rechts- und Handelsnamen, exakt oder über die Tochtertabelle --
-bewusst ohne unscharfen Abgleich, weil Filialnamen wie "Walmart Supercenter
-#1234" sonst beliebige Treffer erzeugen.
-
-**Filter.** Fälle mit Feststellungsende 2022 bis 2024, wie in der
-Team-Auswertung, damit beide Zahlenreihen vergleichbar sind.
-"""
+"""Retrieve DOL Wage and Hour Division enforcement cases with findings ending in 2022-2024. Records identify employers by legal/trade name rather than CIK. Use conservative matching and retain uncertainty about franchise employers. This source was identified in the team's work by Janis."""
 from __future__ import annotations
 
 import io
@@ -40,7 +22,7 @@ KEEP = [
 class DolWhdSource(DataSource):
     name = "dol_whd"
     endpoint = BULK
-    description = "DOL-WHD-Verfahren mit Nachzahlungen, Feststellungsende 2022-2024"
+    description = "DOL-WHD-Verfahren with Nachzahlungen, Feststellungsende 2022-2024"
 
     def _fetch(self) -> pd.DataFrame:
         if not LOCAL.exists():

@@ -1,0 +1,106 @@
+{
+  "review_origin": "Archived model advice translated into English summaries; no new model review performed",
+  "flags": 18,
+  "repairs": [
+    {
+      "topic": "Zero instead of missing",
+      "ticker": "KHC",
+      "evidence": "EPA lists four facilities but no 2022 quantity",
+      "resolved": true,
+      "finding": "No 2022 value rather than zero tonnes"
+    },
+    {
+      "topic": "Program does not measure CO2",
+      "ticker": "MPC",
+      "evidence": "Facilities report only in SIPNOX (heat input and NOx)",
+      "resolved": true,
+      "finding": "No CO2 quantity rather than zero tonnes"
+    },
+    {
+      "topic": "Join multiplication",
+      "ticker": "TSLA",
+      "evidence": "One facility, history SSSSSSSSSSSS, two join rows",
+      "resolved": true,
+      "finding": "12 quarters across 1 facilities, rather than 24 quarters"
+    },
+    {
+      "topic": "Derived ratio kept separate",
+      "ticker": "GE",
+      "evidence": "4.44 t/MWh was our derived rate, not a source observation",
+      "resolved": true,
+      "finding": "Only reported quantities and generation, no derived rate"
+    },
+    {
+      "topic": "Numerator and denominator retained",
+      "ticker": "BRK-B",
+      "evidence": "113 plants and 83 TWh in a Financials issuer",
+      "resolved": true,
+      "finding": "82.7 TWh and 56.2 Mt reported"
+    },
+    {
+      "topic": "No injury rate from an unchecked denominator",
+      "ticker": "MCD",
+      "evidence": "Four reports with median 50 hours per employee",
+      "resolved": true,
+      "finding": "Reported hours and cases retained separately"
+    },
+    {
+      "topic": "Substring attribution",
+      "ticker": "APD",
+      "evidence": "No matching raw cases; 15 APDC Cleaning Services cases in the earlier check",
+      "resolved": true,
+      "finding": "none Lohnverfahren mehr zugerechnet"
+    },
+    {
+      "topic": "Derived trend kept separate",
+      "ticker": "PPL",
+      "evidence": "One facility and 5 kt in 2018; nine facilities and 28 Mt from 2019",
+      "resolved": true,
+      "finding": "Derived trends and intensities kept separate; facility counts retained"
+    },
+    {
+      "topic": "Attribution without a validity window",
+      "ticker": "VST",
+      "evidence": "Talen Energy is not part of Vistra",
+      "resolved": true,
+      "finding": "2023: 86.3 Mt rather than 96.8"
+    },
+    {
+      "topic": "Duplicate share class",
+      "ticker": "GOOG",
+      "evidence": "GOOG and GOOGL share CIK 1652044",
+      "resolved": true,
+      "finding": "Only primary ticker GOOGL retained"
+    },
+    {
+      "topic": "All observations carry provenance",
+      "ticker": "all",
+      "evidence": "Each observation is source-reported or aggregated from source records",
+      "resolved": true,
+      "finding": "{'reported': 5874, 'aggregated': 5551}"
+    }
+  ],
+  "repairs_passed": 11,
+  "error": 0,
+  "review": 18,
+  "by_rule": {
+    "F06_egrid_attribution": 1,
+    "F09_osha_implausible_hours": 4,
+    "F10_whd_franchise": 7,
+    "P01_sector_extreme": 6
+  },
+  "companies_affected": 17,
+  "ranking_relevant": 0,
+  "ai": {
+    "verdicts": {
+      "error": 11,
+      "plausible": 5,
+      "unclear": 2
+    },
+    "routes": {
+      "automatic": 13,
+      "human": 5
+    }
+  },
+  "human_decisions": 0
+}

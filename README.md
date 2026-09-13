@@ -1,44 +1,64 @@
-# ETHack — Clean Framework (S&P-500-Nachhaltigkeit)
+# ETHack sustainability framework
 
-> 503 Ticker (= 500 Firmen) → 467 mit ≥1 Wert → 143 mit Klimaband P10–P90 →
-> 378 wirtschaftlich tragfähig. Sagt nicht „wer ist nachhaltig“, sondern
-> „große Schornsteine, wie effizient — und kann die Firma weiterzahlen?“
+A transparent way to examine sustainability evidence for S&P 500 companies: trace the observations, compare operational climate performance, see how much the result depends on modeling choices, and assess economic viability separately.
 
-![Framework](framework_einfach.png)
+Start with **[the plain-language explanation](docs/FRAMEWORK.md)** for the purpose, design work, examples, and research-backed comparison with existing approaches. Read **[the technical explanation](docs/TECHNICAL.md)** for equations, assumptions, data definitions, and the complete workflow.
 
-**Leseroute (neu, ohne Vorkenntnisse):**
-`README (du bist hier)` → `docs/FRAMEWORK.md` (was + warum) →
-`docs/WALKTHROUGH.md` (wie es läuft + was wir dachten) →
-`docs/COMPARISON.md` (vs MSCI & Co, Limits).
+The retained snapshot contains **11,425 observations across 500 issuers and 44 metrics**. Of those issuers, **449** have sustainability-related observations and **127** have a saved climate percentile band. These figures describe this repository's snapshot, not current index coverage. The framework does not establish that a company is sustainable in an absolute sense.
 
-## Schnellstart
+## Open Dashboard 2
+
+Open **[dashboard.html](dashboard.html)** in a browser; it works offline. This is the English version of Ali’s `dashboard (2).html` from main (`b0692c4`). Its embedded four-axis results cover 503 securities and retain all original numerical values. The upload did not include their generating code. They are a separate supplied snapshot, not a rebuild of the cleaned pipeline outputs below. The dashboard preserves company views, rankings, comparisons, portfolio illustrations, patterns, and methodology notes.
+
+## Use the saved data
+
+Python 3.12 is the tested runtime. From the repository root:
 
 ```bash
-python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-cp .env.example .env   # Keys nur nach Bedarf (Tabelle in WALKTHROUGH)
-
-.venv/bin/python scripts/01_fetch.py   # Quellen → data/raw/
-.venv/bin/python scripts/02_analyse.py # Ranking-Bänder
-.venv/bin/python scripts/05b_firmenaggregate.py  # Pflicht vor 07!
-.venv/bin/python scripts/07_dataset.py # dataset_long.csv (die Wahrheit)
-.venv/bin/python scripts/09_belastbarkeit.py
-.venv/bin/python scripts/10_pruefung.py          # ohne --ai kostenlos
-.venv/bin/python scripts/11_economy.py fetch data/raw/sec_facts
-.venv/bin/python scripts/11_economy.py score data/raw/sec_facts
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python scripts/08_validate.py
+.venv/bin/python -m unittest discover -s tests -v
 ```
 
-## Was hier liegt
+Validation is offline and leaves the data unchanged. No API keys are needed to read or validate the snapshot.
 
-```
-pipeline/      Framework (sources/ als Plug-in, scoring/, quality, reliability, economy)
-scripts/       01,02,03,05b,07,09,10,11 in genau dieser Reihenfolge
-data/          constituents.csv + external/team/ (Inputs) +
-               out/dataset_long.csv, rangbaender, belastbarkeit,
-               economic_viability, flags_gepruft, pruefung, Katalog (clean data)
-               Rest wird regeneriert (siehe .gitignore)
-docs/          FRAMEWORK.md + WALKTHROUGH.md + COMPARISON.md — das ist die ganze Doku
-requirements.txt, .env.example, framework_einfach.png
+## Repository contents
+
+| Location | Purpose |
+|---|---|
+| `dashboard.html` | English Dashboard 2, with embedded snapshot and provenance |
+| `pipeline/` | Source connectors, attribution, climate scoring, quality review, evidence assessment, and economic viability |
+| `scripts/` | Numbered entry points and offline validation |
+| `constituents.csv` | Membership snapshot: 503 securities representing 500 CIKs |
+| `data/external/team/` | Team source snapshots and an English input dictionary |
+| `data/out/dataset_long.csv` | Source observations and aggregates, with units, provenance, and review annotations |
+| `data/out/climate_bands.csv` | Saved derived climate percentiles |
+| `data/out/economic_viability.csv` | Separate derived cash-flow capacity assessment |
+| `data/out/reliability.csv` | Evidence availability by issuer and pillar |
+| `data/out/reviewed_flags.csv` | Findings, evidence, archived model advice, and final review status |
+| `data/out/metrics.json`, `sources.json` | Metric and source dictionaries |
+| `data/out/snapshot_summary.json` | Counts reproduced by the validator |
+| `data/review/decisions.csv` | Human decisions keyed to a finding's evidence |
+| `docs/` | The accessible explanation and technical reference |
+| `tests/` | Framework regression checks |
+
+## Refresh from sources
+
+The source caches and SEC companyfacts files are **not included**. A fresh download is a new data build; it cannot guarantee identical historical results. API access, source formats, and available releases may have changed. Membership stays fixed to constituents.csv unless you deliberately update it.
+
+```bash
+cp .env.example .env
+# Enter your own SEC contact information and any required API keys.
+.venv/bin/python scripts/01_fetch.py
+.venv/bin/python scripts/02_analyze.py
+.venv/bin/python scripts/03_aggregate.py
+.venv/bin/python scripts/04_dataset.py
+.venv/bin/python scripts/06_review.py
+.venv/bin/python scripts/05_reliability.py
+.venv/bin/python scripts/07_economy.py fetch data/raw/sec_facts
+.venv/bin/python scripts/07_economy.py score data/raw/sec_facts
+.venv/bin/python scripts/08_validate.py --write-summary
 ```
 
-Historie (`dataset`, Reports mit 10 PDFs, Web-App, Peer-Raster, Observatory)
-bleibt in Git-Historie, ist aber bewusst nicht mehr in diesem Branch.
+Review precedes the final reliability calculation so the evidence summary sees current quality annotations. `scripts/06_review.py --ai` optionally requests paid model advice; ordinary review uses deterministic rules. See the technical reference before interpreting or rebuilding the historical outputs.
