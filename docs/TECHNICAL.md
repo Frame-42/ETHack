@@ -2,6 +2,14 @@
 
 This guide follows the same journey as the [plain-language walkthrough](FRAMEWORK.md): source record → company attribution → company-year measures → peer comparison → repeated scoring → interpretable outputs. Each stage states what is calculated and why. Equations describe the executable climate pipeline; the supplied four-axis dashboard snapshot is distinguished below.
 
+## The problem before the procedure
+
+Company disclosures are legitimate inputs, but a cross-company comparison also requires a defined estimand, compatible reporting boundaries, explicit attribution, and a scoring rule. A reported reduction in intensity and a reduction in absolute emissions are different outcomes. Even inventories prepared under the GHG Protocol can consolidate joint operations by equity share or control. Source values cannot be treated as comparable merely because both are labeled emissions. [GHG Protocol Corporate Standard, Chapter 3](https://ghgprotocol.org/sites/default/files/ghgp/standards/ghg-protocol-revised.pdf).
+
+Facility-level regulatory submissions provide structured observations from which to construct a partial operational measure. They also introduce an entity-resolution problem: the reporting facility or subsidiary must be connected to the study issuer for the relevant year. GHGRP remains a company-reported source; regulatory publication is not equivalent to independent measurement or complete global coverage. [EPA reported-data description](https://www.epa.gov/ghgreporting/ghgrp-reported-data).
+
+The methodological sequence follows from these problems: define the observation boundary → identify the issuer → allocate the quantity → construct comparable measures → expose sensitivity to analytical choices. This implementation does not comprehensively extract and reconcile corporate sustainability reports, nor establish that its reconstructed totals are more accurate than a company's global inventory. Its contribution is an inspectable operational comparison with explicit limitations.
+
 ## Read the pipeline in order
 
 | Stage | Input → transformation → output | Where to inspect it |

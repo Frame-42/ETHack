@@ -1,12 +1,38 @@
-# From a factory record to a company assessment
+# Why we need a framework—and how it works
 
-**We start with evidence about what companies do, establish which company each record belongs to, and compare the resulting measures with peers. Then we repeat the calculation under different assumptions to see how much the answer moves.**
+We want to compare S&P 500 companies on observable sustainability outcomes and explain how dependable that comparison is. The natural starting point is to ask the companies themselves: **they operate the facilities, keep the records, and publish reports. Why do anything more?**
 
-The difficult work comes before the score: identifying subsidiaries, assigning facilities to the right owner and year, reconciling units, avoiding duplicate records, and distinguishing missing data from zero impact. This walkthrough follows one fictional company through that process. **Every number in the worked example is illustrative.**
+## Why not just use the company’s report?
+
+We should use company information. A company report can provide global coverage, operational context, and explanations of changes that a US facility database cannot. Our framework already uses company information through SEC filings, regulatory submissions, and target or disclosure assessments.
+
+But **having a reported number does not yet give us a fair comparison**. Before comparing two numbers, we need to establish that they describe comparable activities, periods, and measures.
+
+Imagine two fictional companies both announcing a 20% emissions improvement. One means 20% fewer tonnes emitted. The other means 20% fewer tonnes per dollar of revenue, while its total emissions have risen. Both statements could be accurate, but they answer different questions. We need the underlying quantities to distinguish them.
+
+Even corporate inventories prepared under a recognized standard can use different ownership boundaries. The GHG Protocol allows consolidation by equity share or control; a jointly owned facility can therefore contribute different amounts depending on the chosen approach. We must understand that choice before comparing totals. [GHG Protocol Corporate Standard, Chapter 3](https://ghgprotocol.org/sites/default/files/ghgp/standards/ghg-protocol-revised.pdf).
+
+This gives us three tasks that a collection of reports alone does not complete:
+
+1. **Establish what each number covers.** Which operations, owner, year, unit, and emissions category does it describe?
+2. **Apply an explicit comparison rule.** How do we account for business size, industry, improvements over time, and weak performance on another measure?
+3. **Show what remains uncertain.** Which records are missing, which company matches are tentative, and would another reasonable scoring method change the result?
+
+The need for these tasks does not depend on assuming that companies are dishonest. A fully accurate report still needs interpretation before it can be compared with another company’s report.
+
+## Why use facility and regulatory records as well?
+
+They give us another way to inspect the evidence: records tied to particular facilities, reporting years, and program definitions, alongside regulatory findings. We can apply explicit matching and allocation rules and retain the source of each observation.
+
+**Publicly available does not mean independently measured.** GHGRP emissions are reported to EPA by facilities and suppliers. Much of the information still originates with companies. Access through a regulator gives us a structured reporting source; it does not eliminate reporting errors or make every source an independent confirmation. [EPA: GHGRP Reported Data](https://www.epa.gov/ghgreporting/ghgrp-reported-data).
+
+There is also a cost: facility records usually identify a plant or subsidiary, while our question concerns a listed company. We therefore have to reconstruct that connection. Their US coverage also cannot replace a complete global corporate inventory. Our current implementation uses these records for a narrower operational comparison; it does not yet reconcile every company’s sustainability report with its facility records.
+
+That is why the framework exists: **to turn available reports and records into an explicit, inspectable comparison, while keeping the gaps and assumptions visible.** The following steps show how. Every number in the worked example is illustrative.
 
 ## 1. Collect records: what do we actually know?
 
-A factory reports emissions. A workplace reports injuries. A regulator records a violation. A company files its revenue and cash flow. These records describe different things, so we preserve their source, reporting period, and unit.
+The first task is to collect evidence for the questions we want to answer. Emissions alone cannot tell us about workplace harm; a target cannot tell us whether emissions have already fallen. We therefore bring together different record types and preserve their source, reporting period, and unit.
 
 | Question | Data we use | What it tells us |
 |---|---|---|
@@ -20,7 +46,7 @@ These sources do not form a complete worldwide footprint. Their coverage differs
 
 ## 2. Match the record: whose factory is it?
 
-A facility may report as “Example Manufacturing LLC,” while its listed parent is “Example Group.” Before counting its emissions, we need to connect those identities.
+The sources do not all name the listed parent. A facility may report as “Example Manufacturing LLC,” while investors know its owner as “Example Group.” Without connecting those identities, we could omit the factory or give its emissions to the wrong company. Matching solves that problem.
 
 The main emissions resolver works through increasingly uncertain matches:
 
@@ -33,7 +59,7 @@ We retain the matching method and a confidence indicator. **A similarity score o
 
 ## 3. Build the company total: how much belongs to it?
 
-For GHGRP, we multiply each facility’s emissions by the assigned ownership share, then add the contributions for the company and reporting year.
+Finding the parent is not enough when a facility has several owners: assigning the full total to each would count the same emissions more than once. For GHGRP, we multiply each facility’s emissions by the assigned ownership share, then add the contributions for the company and reporting year.
 
 | Facility | Reported emissions | Company share | Attributed emissions |
 |---|---:|---:|---:|
@@ -47,7 +73,7 @@ We also measure how much of the source data we managed to assign. If the source 
 
 ## 4. Turn totals into comparable questions
 
-A large business will often emit more than a small one. We therefore examine three climate measures together:
+We now have an attributed total, but a total alone does not tell us how the company compares. A large business will often emit more than a small one, and a growing company can improve efficiency while increasing its emissions. We therefore examine three climate measures together:
 
 | Measure | Question |
 |---|---|
@@ -63,7 +89,7 @@ The comparison still has a boundary problem: matched US facility emissions are d
 
 ## 5. Repeat the calculation: does the conclusion hold?
 
-The indicators have different units. To combine them, we must choose how to put them on a common scale, how much weight each receives, and whether strong performance can compensate for a weak measure.
+Even with the same observations, two analysts can reach different rankings: one may emphasize current intensity, another the rate of improvement. The indicators also have different units. Combining them requires choices about a common scale, weights, and whether a strong measure can compensate for a weak one. A single calculation would hide the effect of those choices.
 
 We test alternative choices instead of hiding them:
 
@@ -81,7 +107,7 @@ Suppose the resulting 10th, 50th, and 90th percentiles are **18, 26, and 40**. W
 
 ## 6. Read the result alongside the remaining evidence
 
-The reproducible pipeline gives us several distinct answers:
+A stable climate ranking would still answer only the climate question. It would not establish good working conditions, complete evidence, or the ability to fund future operations. The reproducible pipeline therefore keeps these answers separate:
 
 | Output | How to read it |
 |---|---|
