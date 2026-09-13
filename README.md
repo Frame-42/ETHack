@@ -28,8 +28,10 @@ Validation is offline and leaves the data unchanged. No API keys are needed to r
 | Location | Purpose |
 |---|---|
 | `dashboard.html` | English Dashboard 2, with embedded snapshot and provenance |
+| `dashboard_v11.html` | Dashboard 11, with embedded company data and illustrative portfolios rebuilt by `scripts/rebuild_dashboard11_portfolios.py` |
 | `pipeline/` | Source connectors, attribution, climate scoring, quality review, evidence assessment, and economic viability |
 | `scripts/` | Numbered entry points and offline validation |
+| `fusion_pipeline/` | A separate, self-contained fusion pipeline (German-language stage scripts `f01`-`f18` plus helpers) supplied by a teammate; not wired into `pipeline/` or `scripts/` |
 | `constituents.csv` | Membership snapshot: 503 securities representing 500 CIKs |
 | `data/external/team/` | Team source snapshots and an English input dictionary |
 | `data/out/dataset_long.csv` | Source observations and aggregates, with units, provenance, and review annotations |

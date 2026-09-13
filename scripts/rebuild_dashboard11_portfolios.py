@@ -19,7 +19,7 @@ import numpy as np
 from scipy.optimize import minimize
 
 ROOT = Path(__file__).resolve().parents[1]
-DASHBOARD = ROOT / "dashboard (11).html"
+DASHBOARD = ROOT / "dashboard_v11.html"
 DATA = re.compile(r'(<script id="data" type="application/json">)(.*?)(</script>)', re.S)
 AXES = ("A", "S", "G", "B", "ALL")
 
@@ -143,7 +143,7 @@ def main():
     if args.write:
         data["portfolio"] = portfolio
         new_line = match[1] + json.dumps(data, ensure_ascii=False) + match[3]
-        patch = ("*** Begin Patch\n*** Update File: dashboard (11).html\n@@\n-" + match[0]
+        patch = ("*** Begin Patch\n*** Update File: dashboard_v11.html\n@@\n-" + match[0]
                  + "\n+" + new_line + "\n*** End Patch\n")
         subprocess.run(["apply_patch"], input=patch, text=True, cwd=ROOT, check=True)
 
