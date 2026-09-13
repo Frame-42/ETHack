@@ -2,7 +2,7 @@
 
 A transparent way to examine sustainability evidence for S&P 500 companies: trace the observations, compare operational climate performance, see how much the result depends on modeling choices, and assess economic viability separately.
 
-Start with **[the plain-language explanation](docs/FRAMEWORK.md)** for the purpose, design work, examples, and research-backed comparison with existing approaches. Read **[the technical explanation](docs/TECHNICAL.md)** for equations, assumptions, data definitions, and the complete workflow.
+Start with **[the plain-language explanation](docs/FRAMEWORK.md)** to follow a facility record through company matching, ownership allocation, peer comparison, and uncertainty—with a worked example and research-backed rationale. Read **[the technical explanation](docs/TECHNICAL.md)** for equations, assumptions, data definitions, and the complete workflow.
 
 The retained snapshot contains **11,425 observations across 500 issuers and 44 metrics**. Of those issuers, **449** have sustainability-related observations and **127** have a saved climate percentile band. These figures describe this repository's snapshot, not current index coverage. The framework does not establish that a company is sustainable in an absolute sense.
 
